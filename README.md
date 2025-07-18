@@ -10,3 +10,11 @@
 Goal: http://system.un.org/
 
 ![UN System](docs/chart.png)
+
+## TODO
+
+
+- [ ] add next.js boilerplate, shadcn, tailwinds (-> create UN Website Starter)
+- [ ] use color pallette and styling from slides
+- [ ] try to quickly recreate this slide in interactive 
+- [ ] 
