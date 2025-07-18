@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.datawrangler",
+        "ms-python.vscode-python-envs",
+        "posit.air-vscode", // https://posit-dev.github.io/air/
+        "eamodio.gitlens", // https://www.gitkraken.com/gitlens
+        "knisterpeter.vscode-commitizen", // https://www.conventionalcommits.org/
+        "pkief.material-icon-theme",
+        "gruntfuggly.todo-tree",
+        "github.vscode-pull-request-github",
+        "github.remotehub",
+        "charliermarsh.vscode-ruff", // https://docs.astral.sh/ruff/
+        "mechatroner.rainbow-csv",
+        "mtxr.sqltools",
+        "ckolkman.vscode-postgres",
+        "quarto.quarto" // https://quarto.org/
+    ]
+}
