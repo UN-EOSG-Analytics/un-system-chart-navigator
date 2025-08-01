@@ -17,6 +17,11 @@ df.columns = df.columns.str.lower().str.replace(r"[ -]", "_", regex=True)
 
 df = df.sort_values("entity")
 
+len(df)
+
+# Filter out rows where the entity column matches "Other"
+df = df[df["entity"] != "Other"]
+
 
 # Export ------------------------------------------------------
 
