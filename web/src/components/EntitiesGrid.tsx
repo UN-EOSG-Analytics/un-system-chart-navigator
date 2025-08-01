@@ -4,6 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import { useEntities } from '@/hooks/useEntities';
 import { Entity } from '@/types/entity';
 import Legend from './Legend';
+import { useState } from 'react';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order
 const groupStyles: Record<string, { bgColor: string; textColor: string; order: number; label: string }> = {
@@ -108,7 +109,19 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
 };
 
 export default function EntitiesGrid() {
-    const { data, loading, error } = useEntities({ limit: 1000 }); // Limit to 60 entities for better display
+    const { data, loading, error } = useEntities({ limit: 1000 });
+    const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
+
+    const toggleGroup = (groupKey: string) => {
+        setActiveGroups(prev => {
+            // If this group is the only active one, show all groups
+            if (prev.size === 1 && prev.has(groupKey)) {
+                return new Set(Object.keys(groupStyles));
+            }
+            // Otherwise, show only this group
+            return new Set([groupKey]);
+        });
+    };
 
     if (loading) {
         return (
@@ -136,6 +149,7 @@ export default function EntitiesGrid() {
 
     // Show all entities and sort by group first, then alphabetically
     const visibleEntities = data.entities
+        .filter((entity: Entity) => activeGroups.has(entity.group))
         .sort((a: Entity, b: Entity) => {
             // First sort by group order defined in groupStyles
             if (a.group !== b.group) {
@@ -157,7 +171,12 @@ export default function EntitiesGrid() {
     return (
         <div className="w-full">
             {/* Legend */}
-            <Legend groupStyles={groupStyles} />
+            <Legend 
+                groupStyles={groupStyles} 
+                activeGroups={activeGroups}
+                onToggleGroup={toggleGroup}
+                entities={data.entities}
+            />
 
             {/* Entities Grid */}
             <div className="flex flex-wrap gap-3 justify-start w-full">
