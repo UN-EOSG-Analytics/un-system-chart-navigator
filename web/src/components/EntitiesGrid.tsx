@@ -5,6 +5,7 @@ import { useEntities } from '@/hooks/useEntities';
 import { Entity } from '@/types/entity';
 import Legend from './Legend';
 import { useState } from 'react';
+import Link from 'next/link';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order
 const groupStyles: Record<string, { bgColor: string; textColor: string; order: number; label: string }> = {
@@ -78,30 +79,25 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
 
 const EntityCard = ({ entity }: { entity: Entity }) => {
     const styles = groupStyles[entity.group] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.group };
-
-    const handleClick = () => {
-        if (entity.entity_url) {
-            window.open(entity.entity_url, '_blank', 'noopener,noreferrer');
-        }
-    };
+    
+    // Create URL-friendly slug from entity name
+    const entitySlug = entity.entity.toLowerCase().replace(/\s+/g, '-');
 
     return (
         <Tooltip>
             <TooltipTrigger asChild>
-                <div
-                    className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center shadow-md hover:shadow-lg transition-all duration-200 ${entity.entity_url ? 'cursor-pointer hover:scale-105' : 'cursor-default'
-                        }`}
-                    onClick={handleClick}
-                >
-                    <span className="font-medium text-base leading-tight">{entity.entity}</span>
-                </div>
+                <Link href={`/entity/${entitySlug}`}>
+                    <div
+                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-105`}
+                    >
+                        <span className="font-medium text-base leading-tight">{entity.entity}</span>
+                    </div>
+                </Link>
             </TooltipTrigger>
             <TooltipContent side="top" className="bg-white text-slate-800 border border-slate-200 shadow-lg" hideWhenDetached>
                 <div className="text-center max-w-xs">
                     <p className="font-medium text-sm leading-tight">{entity.combined}</p>
-                    {entity.entity_url && (
-                        <p className="text-xs text-slate-500 mt-1"></p>
-                    )}
+                    <p className="text-xs text-slate-500 mt-1">Click to view details</p>
                 </div>
             </TooltipContent>
         </Tooltip>
