@@ -96,7 +96,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
       <div className="w-1/3 min-w-[400px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out overflow-y-auto">
         {/* Header */}
         <div className="p-6 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white">
-          <h2 className="text-xl font-semibold text-gray-900">{entity.entity}</h2>
+          <h2 className="text-xl font-semibold text-gray-900">{entity.combined}</h2>
           <button
             onClick={onClose}
             className="p-1 hover:bg-gray-100 rounded-full transition-colors"
@@ -111,11 +111,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
           <div>
             <h3 className="text-lg font-medium text-gray-900 mb-3">Overview</h3>
             <div className="space-y-2">
-              <p><span className="font-medium">Full Name:</span> {entity.entity_long}</p>
-              <p><span className="font-medium">Group:</span> {entity.group}</p>
-              {entity.sub_group && (
-                <p><span className="font-medium">Sub Group:</span> {entity.sub_group}</p>
-              )}
               <p><span className="font-medium">Category:</span> {entity.category}</p>
               <p><span className="font-medium">UN Principal Organ:</span> {entity.un_principal_organ}</p>
             </div>
@@ -190,7 +185,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             </div>
           </div>
 
-          {/* Additional Info */}
+          {/* Additional Info
           {(entity.budget || entity.comment) && (
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">Additional Information</h3>
@@ -204,7 +199,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <p><span className="font-medium">CEB Member:</span> {entity["ceb_member?"]}</p>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

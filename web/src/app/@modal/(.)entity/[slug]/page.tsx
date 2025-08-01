@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Entity } from '@/types/entity';
 import EntityModal from '@/components/EntityModal';
+import { findEntityBySlug } from '@/lib/utils';
 
 interface Props {
   params: { slug: string };
@@ -19,15 +20,11 @@ export default function InterceptedEntityPage({ params }: Props) {
       try {
         // Await params before accessing slug
         const { slug } = await params;
-        // Decode the slug to get the entity name
-        const entityName = decodeURIComponent(slug);
         const response = await fetch(`/api/entities`);
         const data = await response.json();
         
-        // Find entity by name
-        const foundEntity = data.entities.find((e: Entity) => 
-          e.entity.toLowerCase().replace(/\s+/g, '-') === entityName.toLowerCase()
-        );
+        // Use the utility function for consistent matching
+        const foundEntity = findEntityBySlug(data.entities, slug);
         
         setEntity(foundEntity || null);
       } catch (error) {

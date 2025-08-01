@@ -66,16 +66,8 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Pagination
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = parseInt(searchParams.get('limit') || '50');
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-    
-    const paginatedEntities = filteredEntities.slice(startIndex, endIndex);
-
     const response: EntitiesResponse = {
-      entities: paginatedEntities,
+      entities: filteredEntities,
       total: filteredEntities.length,
     };
 

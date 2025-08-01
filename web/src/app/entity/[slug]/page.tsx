@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { Entity } from '@/types/entity';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { findEntityBySlug } from '@/lib/utils';
 
 interface Props {
   params: { slug: string };
@@ -19,11 +20,9 @@ async function getEntity(slug: string): Promise<Entity | null> {
     }
     
     const data = await response.json();
-    const entityName = decodeURIComponent(slug);
     
-    return data.entities.find((e: Entity) => 
-      e.entity.toLowerCase().replace(/\s+/g, '-') === entityName.toLowerCase()
-    ) || null;
+    // Use the utility function for consistent matching
+    return findEntityBySlug(data.entities, slug);
   } catch (error) {
     console.error('Error fetching entity:', error);
     return null;

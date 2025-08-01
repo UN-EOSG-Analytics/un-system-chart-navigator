@@ -6,6 +6,7 @@ import { Entity } from '@/types/entity';
 import Legend from './Legend';
 import { useState } from 'react';
 import Link from 'next/link';
+import { createEntitySlug } from '@/lib/utils';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order
 const groupStyles: Record<string, { bgColor: string; textColor: string; order: number; label: string }> = {
@@ -80,8 +81,8 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
 const EntityCard = ({ entity }: { entity: Entity }) => {
     const styles = groupStyles[entity.group] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.group };
     
-    // Create URL-friendly slug from entity name
-    const entitySlug = entity.entity.toLowerCase().replace(/\s+/g, '-');
+    // Create URL-friendly slug from entity name using utility function
+    const entitySlug = createEntitySlug(entity.entity);
 
     return (
         <Tooltip>
