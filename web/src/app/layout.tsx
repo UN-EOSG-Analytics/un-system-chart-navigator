@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "UN System Chart Navigator",
+  title: "The United Nations System",
   description: "Navigate the United Nations System organizational chart",
 };
 

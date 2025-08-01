@@ -20,8 +20,8 @@ df = df.sort_values("entity")
 
 # Export ------------------------------------------------------
 
-output_path = data_folder / "input" / "entities.csv"
-df.to_csv(output_path)
+# output_path = data_folder / "input" / "entities.csv"
+# df.to_csv(output_path)
 
 # output_path = data_folder / "input" / "entities.json"
 output_path = Path("web") / "public" / "entities.json"
