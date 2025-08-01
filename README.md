@@ -18,3 +18,9 @@ Goal: http://system.un.org/
 - [ ] use color pallette and styling from slides
 - [ ] try to quickly recreate this slide in interactive 
 - [ ] 
+
+
+## Maintenance 
+
+- `npx shadcn --version` –– 2.10.0
+- `npx next --version` –– Next.js v15.4.1
