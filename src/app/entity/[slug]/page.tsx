@@ -20,13 +20,13 @@ export default async function EntityPage({ params }: Props) {
       <div className="w-full max-w-4xl mx-auto">
         <Link 
           href="/"
-          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6"
+          className="inline-flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity mb-6"
         >
           <ArrowLeft size={16} />
           Back to UN System Chart
         </Link>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div>
           {/* Header */}
           <div className="border-b border-gray-200 pb-6 mb-6">
             <h1 className="text-3xl font-bold text-gray-900">{entity.entity}</h1>
@@ -80,7 +80,7 @@ export default async function EntityPage({ params }: Props) {
                     href={entity.entity_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-800 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
+                    className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
                   >
                     <ExternalLink size={20} />
                     Official Website
@@ -91,7 +91,7 @@ export default async function EntityPage({ params }: Props) {
                     href={entity.annual_report_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-800 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
+                    className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
                   >
                     <ExternalLink size={20} />
                     Annual Report
@@ -102,7 +102,7 @@ export default async function EntityPage({ params }: Props) {
                     href={entity.transparency_portal_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-800 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
+                    className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
                   >
                     <ExternalLink size={20} />
                     Transparency Portal
@@ -113,7 +113,7 @@ export default async function EntityPage({ params }: Props) {
                     href={entity.organizational_chart}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-blue-600 hover:text-blue-800 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
+                    className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
                   >
                     <ExternalLink size={20} />
                     Organizational Chart

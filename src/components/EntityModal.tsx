@@ -44,7 +44,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         className="fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-500 ease-out"
         onClick={handleBackdropClick}
       >
-        <div className="w-1/3 min-w-[400px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out">
+        <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out">
           <div className="p-6 border-b border-gray-200 flex items-center justify-between">
             <div className="h-6 bg-gray-200 rounded w-48 animate-pulse"></div>
             <button
@@ -70,7 +70,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         className="fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-500 ease-out"
         onClick={handleBackdropClick}
       >
-        <div className="w-1/3 min-w-[400px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out">
+        <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out">
           <div className="p-6 border-b border-gray-200 flex items-center justify-between">
             <h2 className="text-xl font-semibold text-gray-900">Entity Not Found</h2>
             <button
@@ -93,7 +93,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
       className="fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-500 ease-out"
       onClick={handleBackdropClick}
     >
-      <div className="w-1/3 min-w-[400px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out overflow-y-auto">
+      <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out overflow-y-auto">
         {/* Header */}
         <div className="p-6 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white">
           <h2 className="text-xl font-semibold text-gray-900">{entity.combined}</h2>
@@ -143,7 +143,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                   href={entity.entity_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                  className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
                 >
                   <ExternalLink size={16} />
                   Official Website
@@ -154,7 +154,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                   href={entity.annual_report_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                  className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
                 >
                   <ExternalLink size={16} />
                   Annual Report
@@ -165,7 +165,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                   href={entity.transparency_portal_link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                  className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
                 >
                   <ExternalLink size={16} />
                   Transparency Portal
@@ -176,7 +176,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                   href={entity.organizational_chart}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
+                  className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
                 >
                   <ExternalLink size={16} />
                   Organizational Chart
