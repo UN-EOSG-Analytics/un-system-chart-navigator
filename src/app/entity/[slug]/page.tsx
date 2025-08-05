@@ -1,37 +1,15 @@
 import { notFound } from 'next/navigation';
-import { Entity } from '@/types/entity';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { findEntityBySlug } from '@/lib/utils';
+import { getEntityBySlug } from '@/data/entities';
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-async function getEntity(slug: string): Promise<Entity | null> {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/api/entities`, {
-      cache: 'no-store' // For demo purposes, in production you might want caching
-    });
-    
-    if (!response.ok) {
-      throw new Error('Failed to fetch entities');
-    }
-    
-    const data = await response.json();
-    
-    // Use the utility function for consistent matching
-    return findEntityBySlug(data.entities, slug);
-  } catch (error) {
-    console.error('Error fetching entity:', error);
-    return null;
-  }
-}
-
 export default async function EntityPage({ params }: Props) {
   const { slug } = await params;
-  const entity = await getEntity(slug);
+  const entity = getEntityBySlug(slug);
 
   if (!entity) {
     notFound();

@@ -1,10 +1,10 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Entity } from '@/types/entity';
 import EntityModal from '@/components/EntityModal';
-import { findEntityBySlug } from '@/lib/utils';
+import { getEntityBySlug } from '@/data/entities';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -16,26 +16,20 @@ export default function InterceptedEntityPage({ params }: Props) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchEntity = async () => {
+    const loadEntity = async () => {
       try {
-        // Await params before accessing slug
         const { slug } = await params;
-        const response = await fetch(`/api/entities`);
-        const data = await response.json();
-        
-        // Use the utility function for consistent matching
-        const foundEntity = findEntityBySlug(data.entities, slug);
-        
-        setEntity(foundEntity || null);
+        const foundEntity = getEntityBySlug(slug);
+        setEntity(foundEntity);
       } catch (error) {
-        console.error('Error fetching entity:', error);
+        console.error('Error loading entity:', error);
         setEntity(null);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchEntity();
+    loadEntity();
   }, [params]);
 
   const handleClose = () => {

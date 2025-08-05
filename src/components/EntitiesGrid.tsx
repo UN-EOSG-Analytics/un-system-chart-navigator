@@ -1,11 +1,11 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { useEntities } from '@/hooks/useEntities';
 import { Entity } from '@/types/entity';
 import Legend from './Legend';
 import { useState } from 'react';
 import Link from 'next/link';
+import { getAllEntities } from '@/data/entities';
 import { createEntitySlug } from '@/lib/utils';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order
@@ -106,7 +106,7 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
 };
 
 export default function EntitiesGrid() {
-    const { data, loading, error } = useEntities({ limit: 1000 });
+    const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
 
     const toggleGroup = (groupKey: string) => {
@@ -120,32 +120,8 @@ export default function EntitiesGrid() {
         });
     };
 
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center p-8">
-                <div className="text-lg">Loading entities...</div>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center p-8">
-                <div className="text-lg text-red-600">Error loading entities: {error}</div>
-            </div>
-        );
-    }
-
-    if (!data) {
-        return (
-            <div className="flex items-center justify-center p-8">
-                <div className="text-lg">No data available</div>
-            </div>
-        );
-    }
-
-    // Show all entities and sort by group first, then alphabetically
-    const visibleEntities = data.entities
+    // Filter and sort entities
+    const visibleEntities = entities
         .filter((entity: Entity) => activeGroups.has(entity.group))
         .sort((a: Entity, b: Entity) => {
             // First sort by group order defined in groupStyles
@@ -172,7 +148,7 @@ export default function EntitiesGrid() {
                 groupStyles={groupStyles} 
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}
-                entities={data.entities}
+                entities={entities}
             />
 
             {/* Entities Grid */}

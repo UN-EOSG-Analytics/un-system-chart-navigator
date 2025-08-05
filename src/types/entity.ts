@@ -22,16 +22,3 @@ export interface Entity {
   transparency_portal_link: string | null;
   organizational_chart: string | null;
 }
-
-export interface EntitiesResponse {
-  entities: Entity[];
-  total: number;
-}
-
-export interface EntityFilters {
-  group?: string;
-  category?: string;
-  show?: "Yes" | "No";
-  ceb_member?: "Yes" | "No";
-  head_of_entity_level?: string;
-}

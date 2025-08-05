@@ -1,7 +1,5 @@
 import { Entity, EntitiesResponse, EntityFilters } from '@/types/entity';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
-
 export class EntitiesAPI {
   static async getEntities(
     filters?: EntityFilters & {
@@ -20,7 +18,7 @@ export class EntitiesAPI {
       });
     }
     
-    const url = `${API_BASE_URL}/api/entities${params.toString() ? `?${params.toString()}` : ''}`;
+    const url = `/api/entities${params.toString() ? `?${params.toString()}` : ''}`;
     const response = await fetch(url);
     
     if (!response.ok) {
@@ -31,7 +29,7 @@ export class EntitiesAPI {
   }
   
   static async getEntity(id: string): Promise<Entity> {
-    const url = `${API_BASE_URL}/api/entities/${encodeURIComponent(id)}`;
+    const url = `/api/entities/${encodeURIComponent(id)}`;
     const response = await fetch(url);
     
     if (!response.ok) {
@@ -45,7 +43,7 @@ export class EntitiesAPI {
   }
   
   static async getUniqueValues(field: keyof Entity): Promise<string[]> {
-    const { entities } = await this.getEntities({ limit: 1000 }); // Get all entities
+    const { entities } = await this.getEntities({ limit: 1000 });
     const values = entities
       .map(entity => entity[field])
       .filter(value => value !== null && value !== undefined)

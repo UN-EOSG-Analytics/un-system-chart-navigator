@@ -1,70 +1,59 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Entity, EntitiesResponse, EntityFilters } from '@/types/entity';
-import { EntitiesAPI } from '@/lib/api';
+import { useEffect, useState } from 'react';
+import { Entity } from '@/types/entity';
+import { fetchEntities } from '@/lib/entities';
+import { findEntityBySlug } from '@/lib/utils';
 
-export function useEntities(
-  filters?: EntityFilters & {
-    search?: string;
-    page?: number;
-    limit?: number;
-  }
-) {
-  const [data, setData] = useState<EntitiesResponse | null>(null);
+interface UseEntitiesOptions {
+  limit?: number;
+}
+
+interface UseEntitiesResult {
+  data: { entities: Entity[] } | null;
+  loading: boolean;
+  error: string | null;
+}
+
+export function useEntities(options: UseEntitiesOptions = {}): UseEntitiesResult {
+  const { limit } = options;
+  const [data, setData] = useState<{ entities: Entity[] } | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    let isMounted = true;
-
-    const fetchEntities = async () => {
+    const loadEntities = async () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await EntitiesAPI.getEntities(filters);
         
-        if (isMounted) {
-          setData(response);
-        }
+        const entities = await fetchEntities();
+        
+        // Apply limit if specified
+        const limitedEntities = limit ? entities.slice(0, limit) : entities;
+        
+        setData({ entities: limitedEntities });
       } catch (err) {
-        if (isMounted) {
-          setError(err instanceof Error ? err.message : 'Failed to fetch entities');
-        }
+        console.error('Error loading entities:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load entities');
       } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+        setLoading(false);
       }
     };
 
-    fetchEntities();
+    loadEntities();
+  }, [limit]);
 
-    return () => {
-      isMounted = false;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    filters?.search,
-    filters?.page,
-    filters?.limit,
-    filters?.group,
-    filters?.category,
-    filters?.show,
-    filters?.ceb_member,
-    filters?.head_of_entity_level,
-  ]);
-
-  return { data, loading, error, refetch: () => setLoading(true) };
+  return { data, loading, error };
 }
 
-export function useEntity(id: string | null) {
+export function useEntity(slug: string | null) {
   const [entity, setEntity] = useState<Entity | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!id) {
+    if (!slug) {
       setEntity(null);
       setLoading(false);
       return;
@@ -76,10 +65,12 @@ export function useEntity(id: string | null) {
       try {
         setLoading(true);
         setError(null);
-        const response = await EntitiesAPI.getEntity(id);
+        
+        const entities = await fetchEntities();
+        const foundEntity = findEntityBySlug(entities, slug);
         
         if (isMounted) {
-          setEntity(response);
+          setEntity(foundEntity);
         }
       } catch (err) {
         if (isMounted) {
@@ -97,38 +88,7 @@ export function useEntity(id: string | null) {
     return () => {
       isMounted = false;
     };
-  }, [id]);
+  }, [slug]);
 
   return { entity, loading, error };
-}
-
-export function useEntityFilters() {
-  const [groups, setGroups] = useState<string[]>([]);
-  const [categories, setCategories] = useState<string[]>([]);
-  const [headLevels, setHeadLevels] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchFilters = async () => {
-      try {
-        const [groupsData, categoriesData, headLevelsData] = await Promise.all([
-          EntitiesAPI.getUniqueValues('group'),
-          EntitiesAPI.getUniqueValues('category'),
-          EntitiesAPI.getUniqueValues('head_of_entity_level'),
-        ]);
-
-        setGroups(groupsData);
-        setCategories(categoriesData);
-        setHeadLevels(headLevelsData);
-      } catch (error) {
-        console.error('Failed to fetch filter options:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchFilters();
-  }, []);
-
-  return { groups, categories, headLevels, loading };
 }
