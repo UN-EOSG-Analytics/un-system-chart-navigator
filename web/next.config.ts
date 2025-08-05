@@ -1,10 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    // Ensure TypeScript path mapping works correctly
-    typedRoutes: true,
-  },
+  /* config options here */
 };
 
 export default nextConfig;
