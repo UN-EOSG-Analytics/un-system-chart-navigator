@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { findEntityBySlug } from '@/lib/utils';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 async function getEntity(slug: string): Promise<Entity | null> {

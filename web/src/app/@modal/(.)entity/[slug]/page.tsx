@@ -7,7 +7,7 @@ import EntityModal from '@/components/EntityModal';
 import { findEntityBySlug } from '@/lib/utils';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default function InterceptedEntityPage({ params }: Props) {
