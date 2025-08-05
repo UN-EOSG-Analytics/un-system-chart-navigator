@@ -1,0 +1,1 @@
+- [ ] add a folder with named logos for each entity (svg files)
