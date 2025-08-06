@@ -20,25 +20,32 @@ export default function InterceptedEntityPage({ params }: Props) {
     const loadEntity = async () => {
       try {
         const { slug } = await params;
+        
+        // Add a small delay to ensure proper hydration
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
         const foundEntity = getEntityBySlug(slug);
         
         if (!foundEntity) {
-          setError(`Entity "${slug}" not found`);
-          // Fallback to regular page on error
-          setTimeout(() => {
-            router.push(`/entity/${slug}`);
-          }, 1000);
-        } else {
-          setEntity(foundEntity);
-        }
+          console.warn(`Entity "${slug}" not found, redirecting to full page`);
+          // Use replace instead of push to avoid navigation issues
+          router.replace(`/entity/${slug}`);
+          return;
+        } 
+        
+        setEntity(foundEntity);
       } catch (error) {
         console.error('Error loading entity:', error);
         setError('Failed to load entity');
-        // Fallback to regular page on error
-        const { slug } = await params;
-        setTimeout(() => {
-          router.push(`/entity/${slug}`);
-        }, 1000);
+        
+        // Fallback to regular page on any error
+        try {
+          const { slug } = await params;
+          router.replace(`/entity/${slug}`);
+        } catch (e) {
+          console.error('Failed to get slug for fallback:', e);
+          router.replace('/');
+        }
       } finally {
         setLoading(false);
       }
@@ -48,14 +55,26 @@ export default function InterceptedEntityPage({ params }: Props) {
   }, [params, router]);
 
   const handleClose = () => {
-    router.back();
+    // Use router.back() but with fallback to home page
+    try {
+      if (window.history.length > 1) {
+        router.back();
+      } else {
+        router.push('/');
+      }
+    } catch (error) {
+      console.error('Navigation error:', error);
+      router.push('/');
+    }
   };
 
+  // Show loading state
   if (loading) {
     return <EntityModal entity={null} onClose={handleClose} loading={true} />;
   }
 
-  if (error) {
+  // Show error state or entity not found
+  if (error || !entity) {
     return <EntityModal entity={null} onClose={handleClose} loading={false} />;
   }
 
