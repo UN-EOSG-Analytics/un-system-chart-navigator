@@ -5,6 +5,7 @@ import { Entity } from '@/types/entity';
 import Legend from './Legend';
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { getAllEntities } from '@/data/entities';
 import { createEntitySlug } from '@/lib/utils';
 
@@ -79,15 +80,27 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
 };
 
 const EntityCard = ({ entity }: { entity: Entity }) => {
+    const router = useRouter();
     const styles = groupStyles[entity.group] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.group };
     
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
 
+    const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        try {
+            router.push(`/entity/${entitySlug}`);
+        } catch (error) {
+            console.error('Navigation error:', error);
+            // Fallback to regular navigation
+            window.location.href = `/entity/${entitySlug}`;
+        }
+    };
+
     return (
         <Tooltip>
             <TooltipTrigger asChild>
-                <Link href={`/entity/${entitySlug}`}>
+                <Link href={`/entity/${entitySlug}`} onClick={handleClick}>
                     <div
                         className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-105`}
                     >

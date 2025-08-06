@@ -14,23 +14,38 @@ export default function InterceptedEntityPage({ params }: Props) {
   const router = useRouter();
   const [entity, setEntity] = useState<Entity | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const loadEntity = async () => {
       try {
         const { slug } = await params;
         const foundEntity = getEntityBySlug(slug);
-        setEntity(foundEntity);
+        
+        if (!foundEntity) {
+          setError(`Entity "${slug}" not found`);
+          // Fallback to regular page on error
+          setTimeout(() => {
+            router.push(`/entity/${slug}`);
+          }, 1000);
+        } else {
+          setEntity(foundEntity);
+        }
       } catch (error) {
         console.error('Error loading entity:', error);
-        setEntity(null);
+        setError('Failed to load entity');
+        // Fallback to regular page on error
+        const { slug } = await params;
+        setTimeout(() => {
+          router.push(`/entity/${slug}`);
+        }, 1000);
       } finally {
         setLoading(false);
       }
     };
 
     loadEntity();
-  }, [params]);
+  }, [params, router]);
 
   const handleClose = () => {
     router.back();
@@ -38,6 +53,10 @@ export default function InterceptedEntityPage({ params }: Props) {
 
   if (loading) {
     return <EntityModal entity={null} onClose={handleClose} loading={true} />;
+  }
+
+  if (error) {
+    return <EntityModal entity={null} onClose={handleClose} loading={false} />;
   }
 
   return <EntityModal entity={entity} onClose={handleClose} loading={false} />;
