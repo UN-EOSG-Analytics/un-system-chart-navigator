@@ -2,6 +2,10 @@ import { notFound } from 'next/navigation';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { getEntityBySlug } from '@/data/entities';
+import OrgChart from '../../../components/OrgChart';
+import { promises as fs } from 'fs';
+import path from 'path';
+
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -13,6 +17,18 @@ export default async function EntityPage({ params }: Props) {
 
   if (!entity) {
     notFound();
+  }
+
+  const orgChartPath = `/org-charts/${slug}.jsonld`;
+  
+  // Check if org chart file exists using filesystem
+  let orgChartExists = false;
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'org-charts', `${slug}.jsonld`);
+    await fs.access(filePath);
+    orgChartExists = true;
+  } catch {
+    orgChartExists = false;
   }
 
   return (
@@ -134,6 +150,14 @@ export default async function EntityPage({ params }: Props) {
                     <p><span className="font-medium">Notes:</span> {entity.comment}</p>
                   )}
                 </div>
+              </div>
+            )}
+
+            {/* Organizational Chart */}
+            {orgChartExists && (
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">Organizational Chart</h2>
+                <OrgChart src={orgChartPath} height={900} />
               </div>
             )}
           </div>

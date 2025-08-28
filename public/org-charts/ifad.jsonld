@@ -1,0 +1,671 @@
+{
+    "@context": {
+        "org": "http://www.w3.org/ns/org#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "dct": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@id": "https://data.example.org/org/IFAD",
+            "@type": "org:Organization",
+            "skos:prefLabel": {
+                "@value": "International Fund for Agricultural Development (IFAD)",
+                "@language": "en"
+            },
+            "skos:notation": "IFAD",
+            "dct:source": "IFAD organizational chart (image provided)"
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/Governing_Council",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Governing Council",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/Executive_Board",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Executive Board",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/OPV",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of the President and Vice-President (OPV)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/President",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "President",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/OPV"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/person/Alvaro_Lario",
+            "@type": "foaf:Person",
+            "foaf:name": "Alvaro Lario"
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/membership/President",
+            "@type": "org:Membership",
+            "org:member": {
+                "@id": "https://data.example.org/org/IFAD/person/Alvaro_Lario"
+            },
+            "org:organization": {
+                "@id": "https://data.example.org/org/IFAD"
+            },
+            "org:role": {
+                "@id": "https://data.example.org/org/IFAD/post/President"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Vice_President",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Vice-President",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/OPV"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/person/Gerardine_Mukeshimana",
+            "@type": "foaf:Person",
+            "foaf:name": "Gérardine Mukeshimana"
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/membership/Vice_President",
+            "@type": "org:Membership",
+            "org:member": {
+                "@id": "https://data.example.org/org/IFAD/person/Gerardine_Mukeshimana"
+            },
+            "org:organization": {
+                "@id": "https://data.example.org/org/IFAD"
+            },
+            "org:role": {
+                "@id": "https://data.example.org/org/IFAD/post/Vice_President"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Chief_of_Staff_Managing_Director",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Chief of Staff, Managing Director",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/OPV"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/person/Dina_Saleh",
+            "@type": "foaf:Person",
+            "foaf:name": "Dina Saleh"
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/membership/Chief_of_Staff",
+            "@type": "org:Membership",
+            "org:member": {
+                "@id": "https://data.example.org/org/IFAD/person/Dina_Saleh"
+            },
+            "org:organization": {
+                "@id": "https://data.example.org/org/IFAD"
+            },
+            "org:role": {
+                "@id": "https://data.example.org/org/IFAD/post/Chief_of_Staff_Managing_Director"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/RMO",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of Enterprise Risk Management (RMO)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Chief_Risk_Officer",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Chief Risk Officer",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/RMO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/OLG",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of Legal and Governance (OLG)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Chief_Legal_and_Governance_Officer",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Chief Legal and Governance Officer",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/OLG"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/person/Katherine_Meighan",
+            "@type": "foaf:Person",
+            "foaf:name": "Katherine Meighan"
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/membership/CLGO",
+            "@type": "org:Membership",
+            "org:member": {
+                "@id": "https://data.example.org/org/IFAD/person/Katherine_Meighan"
+            },
+            "org:organization": {
+                "@id": "https://data.example.org/org/IFAD"
+            },
+            "org:role": {
+                "@id": "https://data.example.org/org/IFAD/post/Chief_Legal_and_Governance_Officer"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/SEC",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of the Secretary (SEC)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Director_and_Secretary_of_IFAD",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Director and Secretary of IFAD",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/SEC"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/LEG",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of the General Counsel (LEG)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/General_Counsel",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "General Counsel",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/LEG"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/IOE",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Independent Office of Evaluation of IFAD (IOE)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Director_IOE",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Director, IOE",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/IOE"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/person/Indran_Naidoo",
+            "@type": "foaf:Person",
+            "foaf:name": "Indran Naidoo"
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/membership/IOE_Director",
+            "@type": "org:Membership",
+            "org:member": {
+                "@id": "https://data.example.org/org/IFAD/person/Indran_Naidoo"
+            },
+            "org:organization": {
+                "@id": "https://data.example.org/org/IFAD"
+            },
+            "org:role": {
+                "@id": "https://data.example.org/org/IFAD/post/Director_IOE"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/ETH",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Ethics Office (ETH)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Chief_Ethics_Officer",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Chief, Ethics Office",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/ETH"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/IOO",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of Audit and Oversight (IOO)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Director_IOO",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Director, Office of Audit and Oversight",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/IOO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/POB",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Planning, Organizational Development and Budget Division (POB)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Director_POB",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Director, POB",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/POB"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/ERD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "External Relations Department (ERD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Associate_Vice_President_ERD",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Associate Vice-President, ERD",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/ERD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/FOD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Financial Operations Department (FOD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Associate_Vice_President_CFO",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Associate Vice-President & Chief Financial Officer",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/FOD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/DCO",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Department for Country Operations (DCO)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Associate_Vice_President_DCO",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Associate Vice-President, DCO",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/OTD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of Technical Delivery (OTD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Managing_Director_OTD",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Managing Director, OTD",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/OTD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/ODE",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of Development Effectiveness (ODE)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Managing_Director_ODE",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Managing Director, ODE",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/ODE"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/CSD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Corporate Services Department (CSD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/post/Associate_Vice_President_CSD",
+            "@type": "org:Post",
+            "skos:prefLabel": {
+                "@value": "Associate Vice-President, CSD",
+                "@language": "en"
+            },
+            "org:postIn": {
+                "@id": "https://data.example.org/org/IFAD/unit/CSD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/COM",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Communications Division (COM)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/ERD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/GPR",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Global Engagement, Partnership and Resource Mobilization Division (GPR)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/ERD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/FSC",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Food Systems Coordination",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/ERD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/FCD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Financial Controller’s Division (FCD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/FOD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/PFM",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Procurement and Financial Management Division (PFM)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/FOD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/TRE",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Treasury Services Division (TRE)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/FOD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/APR",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Asia and the Pacific Division (APR)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/ESA",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "East and Southern Africa Division (ESA)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/LAC",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Latin America and the Caribbean Division (LAC)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/NEN",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Near East, North Africa and Europe Division (NEN)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/WCA",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "West and Central Africa Division (WCA)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/PSP",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Private Sector Operations Division (PSP)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/DCO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/PMI",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Sustainable Production, Markets and Institutions Division (PMI)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/OTD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/ECG",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Environment, Climate, Gender and Social Inclusion Division (ECG)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/OTD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/MSD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Management Services Division (MSD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/CSD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/PCD",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "People and Culture Division (PCD)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/CSD"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/IFAD/unit/ICT",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Information and Communications Technology Division (ICT)",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/IFAD/unit/CSD"
+            }
+        }
+    ]
+}
