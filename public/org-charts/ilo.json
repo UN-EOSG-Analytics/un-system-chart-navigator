@@ -1,0 +1,548 @@
+{
+    "@context": {
+        "org": "http://www.w3.org/ns/org#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "dct": "http://purl.org/dc/terms/"
+    },
+    "@graph": [
+        {
+            "@id": "https://data.example.org/org/ILO",
+            "@type": "org:Organization",
+            "skos:prefLabel": {
+                "@value": "International Labour Organization (ILO) — Secretariat",
+                "@language": "en"
+            },
+            "skos:notation": "ILO",
+            "dct:issued": "2025-01-29",
+            "dct:source": "ILO organizational chart (as of 29 January 2025)"
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Director_General",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Director-General",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Directors_Office",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Director-General’s Office",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Director_General"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Deputy_Director_General",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Deputy Director-General",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Regional_Offices",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Regional Offices",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Regional_Offices/Africa",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Africa",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Regional_Offices"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Regional_Offices/Arab_States",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Arab States",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Regional_Offices"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Regional_Offices/Asia_and_the_Pacific",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Asia and the Pacific",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Regional_Offices"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Regional_Offices/Europe_and_Central_Asia",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Europe and Central Asia",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Regional_Offices"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Regional_Offices/Latin_America_and_the_Caribbean",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Latin America and the Caribbean",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Regional_Offices"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Research_and_Publications",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Research and Publications",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Statistics",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Statistics",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/International_Training_Centre_of_the_ILO",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "International Training Centre of the ILO",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Priority action programmes",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes/Transition_from_informal_to_formal_economy",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Transition from the informal to the formal economy",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes/Just_transitions_environmentally_sustainable_societies",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Just transitions towards environmentally sustainable economies and societies",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes/Decent_work_outcomes_in_supply_chains",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Decent work outcomes in supply chains",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes/Decent_work_in_crisis_and_post-crisis_situations",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Decent work in crisis and post-crisis situations",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Priority_Action_Programmes"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Governance, Rights and Dialogue",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue/International_Labour_Standards",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "International Labour Standards",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue/Governance_and_Tripartism",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Governance and Tripartism",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue/Conditions_of_Work_and_Equality",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Conditions of Work and Equality",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue/Sectoral_Policies",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Sectoral Policies",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Governance_Rights_and_Dialogue"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Jobs and Social Protection",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection/Employment_Policy_Job_Creation_and_Livelihoods",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Employment Policy, Job Creation and Livelihoods",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection/Universal_Social_Protection",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Universal Social Protection",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection/Sustainable_Enterprises_Productivity_Just_Transition",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Sustainable Enterprises, Productivity and Just Transition",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Jobs_and_Social_Protection"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "External and Corporate Relations",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations/Multilateral_Partnerships_and_Development_Cooperation",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Multilateral Partnerships and Development Cooperation",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations/Official_Meetings_Documents_and_Relations",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Official Meetings, Documents and Relations",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations/Communication_and_Public_Information",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Communication and Public Information",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/External_and_Corporate_Relations"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Corporate_Services",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Corporate Services",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Corporate_Services/Human_Resources_Development",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Human Resources Development",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Corporate_Services"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Corporate_Services/Financial_Management",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Financial Management",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Corporate_Services"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Corporate_Services/Strategic_Programming_and_Management",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Strategic Programming and Management",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Corporate_Services"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Corporate_Services/Internal_Services_and_Administration",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Internal Services and Administration",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Corporate_Services"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Corporate_Services/Information_and_Technology_Management",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Information and Technology Management",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO/unit/Corporate_Services"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Bureau_for_Employers_Activities",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Bureau for Employers’ Activities",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Bureau_for_Workers_Activities",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Bureau for Workers’ Activities",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Treasurer_and_Financial_Comptroller",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Treasurer and Financial Comptroller",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/ILO_Office_USA_and_Canada",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "ILO Office for the United States of America and Canada",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/ILO_Office_Japan",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "ILO Office for Japan",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Office_of_Internal_Audit_and_Oversight",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of Internal Audit and Oversight",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Evaluation_Office",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Evaluation Office",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Office_of_the_Legal_Adviser",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Office of the Legal Adviser",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Ethics_Officer",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Ethics Officer",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Prevention_and_Response_to_SEA_Officer",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Prevention and Response to Sexual Exploitation and Abuse Officer",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/ILO_Administrative_Tribunal",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "ILO Administrative Tribunal",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        },
+        {
+            "@id": "https://data.example.org/org/ILO/unit/Decent_Work_Technical_Support_Teams_and_Country_Offices",
+            "@type": "org:OrganizationalUnit",
+            "skos:prefLabel": {
+                "@value": "Decent Work Technical Support Teams and Country Offices",
+                "@language": "en"
+            },
+            "org:unitOf": {
+                "@id": "https://data.example.org/org/ILO"
+            }
+        }
+    ]
+}
