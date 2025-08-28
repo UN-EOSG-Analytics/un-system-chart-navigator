@@ -1,12 +1,48 @@
 "use client"
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import dynamic from 'next/dynamic';
+import React, { useEffect, useRef, useState } from "react";
 
-// Minimal types for compacted JSON-LD (rdflib output)
+// Types for JSON-LD structure
+interface JsonLdNode {
+  "@id": string;
+  "@type": string | string[];
+  [key: string]: unknown; // JSON-LD structure is dynamic but we use unknown for type safety
+}
+
 interface JsonLd {
-  [k: string]: any;
-  "@context"?: any;
-  "@graph"?: any[];
+  [k: string]: unknown;
+  "@context"?: Record<string, unknown>;
+  "@graph"?: JsonLdNode[];
+}
+
+// Node structure for d3-org-chart
+interface OrgChartNode {
+  id: string;
+  parentId: string | null;
+  name: string;
+  title: string;
+}
+
+// D3 org chart types
+interface D3NodeData {
+  data: OrgChartNode;
+}
+
+interface OrgChartInstance {
+  container: (element: HTMLElement) => OrgChartInstance;
+  data: (nodes: OrgChartNode[]) => OrgChartInstance;
+  nodeWidth: (fn: () => number) => OrgChartInstance;
+  nodeHeight: (fn: () => number) => OrgChartInstance;
+  childrenMargin: (fn: () => number) => OrgChartInstance;
+  compact: (value: boolean) => OrgChartInstance;
+  initialExpandLevel: (level: number) => OrgChartInstance;
+  nodeContent: (fn: (d: D3NodeData) => string) => OrgChartInstance;
+  onNodeClick: (fn: (d: D3NodeData) => void) => OrgChartInstance;
+  render: () => OrgChartInstance;
+  fit?: () => void;
+}
+
+interface OrgChartConstructor {
+  new (): OrgChartInstance;
 }
 
 export interface OrgChartProps {
@@ -17,16 +53,30 @@ export interface OrgChartProps {
 }
 
 // Helper to read a value that might be an object with @id/@value or a plain string
-function getIdish(v: any): string | undefined {
+function getIdish(v: unknown): string | undefined {
   if (!v) return undefined;
   if (typeof v === "string") return v;
-  if (v["@id"]) return v["@id"]; // JSON-LD object reference
+  if (Array.isArray(v)) {
+    // Try first element if it's an array
+    return getIdish(v[0]);
+  }
+  if (typeof v === "object" && v !== null && "@id" in v) {
+    const obj = v as Record<string, unknown>;
+    return typeof obj["@id"] === "string" ? obj["@id"] : undefined;
+  }
   return undefined;
 }
-function getLabelish(v: any): string | undefined {
+function getLabelish(v: unknown): string | undefined {
   if (!v) return undefined;
   if (typeof v === "string") return v;
-  if (v["@value"]) return v["@value"];
+  if (Array.isArray(v)) {
+    // Try first element if it's an array
+    return getLabelish(v[0]);
+  }
+  if (typeof v === "object" && v !== null && "@value" in v) {
+    const obj = v as Record<string, unknown>;
+    return typeof obj["@value"] === "string" ? obj["@value"] : undefined;
+  }
   return undefined;
 }
 
@@ -36,11 +86,11 @@ function iri(v: string) {
 }
 
 // Transform ORG JSON-LD → flat nodes for d3-org-chart
-function jsonldToOrgChartNodes(jsonld: JsonLd) {
-  const g = (jsonld["@graph"] || []) as any[];
-  const nodes: any[] = [];
-  const byId = new Map<string, any>();
-  const add = (n: any) => {
+function jsonldToOrgChartNodes(jsonld: JsonLd): OrgChartNode[] {
+  const g = (jsonld["@graph"] || []) as JsonLdNode[];
+  const nodes: OrgChartNode[] = [];
+  const byId = new Map<string, OrgChartNode>();
+  const add = (n: OrgChartNode) => {
     if (!byId.has(n.id)) {
       byId.set(n.id, n);
       nodes.push(n);
@@ -56,7 +106,7 @@ function jsonldToOrgChartNodes(jsonld: JsonLd) {
   console.log("JSON-LD graph has", g.length, "items");
   
   // Check @type handling - might be string or array
-  const isType = (o: any, t: string) => {
+  const isType = (o: JsonLdNode, t: string) => {
     const type = o["@type"];
     if (Array.isArray(type)) {
       return type.includes(t);
@@ -66,8 +116,8 @@ function jsonldToOrgChartNodes(jsonld: JsonLd) {
     return false;
   };
   
-  const getId = (o: any) => o["@id"] as string;
-  const label = (o: any) => getLabelish(o["skos:prefLabel"]) || getId(o);
+  const getId = (o: JsonLdNode) => o["@id"];
+  const label = (o: JsonLdNode) => getLabelish(o["skos:prefLabel"]) || getId(o);
 
   // Find all organizations
   const orgs = g.filter((o) => isType(o, ORG_ORG));
@@ -103,7 +153,7 @@ function jsonldToOrgChartNodes(jsonld: JsonLd) {
   }
 
   // Persons via Memberships (member → role(Post))
-  const persons = new Map<string, any>(
+  const persons = new Map<string, JsonLdNode>(
     g.filter((o) => isType(o, FOAF_PERS)).map((o) => [getId(o), o])
   );
   const memberships = g.filter((o) => isType(o, ORG_MEMB));
@@ -122,7 +172,7 @@ function jsonldToOrgChartNodes(jsonld: JsonLd) {
 // Internal component that does the actual chart rendering
 function OrgChartInternal({ src, data, height = 700, className }: OrgChartProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [nodes, setNodes] = useState<any[] | null>(null);
+  const [nodes, setNodes] = useState<OrgChartNode[] | null>(null);
 
   // Load JSON-LD if we have a URL
   useEffect(() => {
@@ -130,7 +180,7 @@ function OrgChartInternal({ src, data, height = 700, className }: OrgChartProps)
     async function load() {
       try {
         console.log("OrgChart loading data:", { src, data });
-        const jsonld: JsonLd = data || (src ? await (await fetch(src)).json() : ({} as any));
+        const jsonld: JsonLd = data || (src ? await (await fetch(src)).json() : {});
         if (!jsonld || cancel) return;
         
         console.log("Loaded JSON-LD:", jsonld);
@@ -162,13 +212,15 @@ function OrgChartInternal({ src, data, height = 700, className }: OrgChartProps)
     (async () => {
       try {
         console.log("Starting OrgChart render with nodes:", nodes);
-        const d3 = await import("d3");
+        await import("d3");
         const { OrgChart } = await import("d3-org-chart");
 
         // Clear container (hot reload safety)
         containerRef.current!.innerHTML = "";
 
-        const chart = new (OrgChart as any)()
+        if (!containerRef.current) return;
+        
+        const chart = new (OrgChart as unknown as OrgChartConstructor)()
           .container(containerRef.current)
           .data(nodes)
           .nodeWidth(() => 150)
@@ -176,7 +228,7 @@ function OrgChartInternal({ src, data, height = 700, className }: OrgChartProps)
           .childrenMargin(() => 60)
           .compact(true)
           .initialExpandLevel(2)
-          .nodeContent((d: any) => {
+          .nodeContent((d: D3NodeData) => {
             const n = d.data;
             return `
               <div style="padding:10px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06);">
@@ -186,7 +238,7 @@ function OrgChartInternal({ src, data, height = 700, className }: OrgChartProps)
               </div>
             `;
           })
-          .onNodeClick((d: any) => console.log("clicked", d.data))
+          .onNodeClick((d: D3NodeData) => console.log("clicked", d.data))
           .render()
 
         console.log("OrgChart rendered successfully:", chart);
@@ -222,7 +274,19 @@ function OrgChartInternal({ src, data, height = 700, className }: OrgChartProps)
   );
 }
 
-// Main component with dynamic import
-const OrgChart = dynamic(() => Promise.resolve(OrgChartInternal), { ssr: false });
+// Main component that only renders on client
+function OrgChart(props: OrgChartProps) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <div>Loading organizational chart...</div>;
+  }
+
+  return <OrgChartInternal {...props} />;
+}
 
 export default OrgChart;
