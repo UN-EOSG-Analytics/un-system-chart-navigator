@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import ModalHandler from "@/components/ModalHandler";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "The United Nations System",
@@ -9,17 +11,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className="font-sans antialiased">
         <ErrorBoundary>
           {children}
-          {modal}
+          <Suspense fallback={null}>
+            <ModalHandler />
+          </Suspense>
         </ErrorBoundary>
       </body>
     </html>

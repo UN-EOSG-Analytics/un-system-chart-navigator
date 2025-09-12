@@ -87,7 +87,7 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
     return (
         <Tooltip>
             <TooltipTrigger asChild>
-                <Link href={`/entity/${entitySlug}`} prefetch={false}>
+                <Link href={`/?entity=${entitySlug}`} prefetch={false}>
                     <div
                         className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-105`}
                     >
