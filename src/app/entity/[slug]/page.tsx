@@ -56,10 +56,7 @@ export default async function EntityPage({ params }: Props) {
               <h2 className="text-xl font-semibold text-gray-900 mb-4">Overview</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <p><span className="font-medium">Group:</span> {entity.group}</p>
-                  {entity.sub_group && (
-                    <p><span className="font-medium">Sub Group:</span> {entity.sub_group}</p>
-                  )}
+                  <p><span className="font-medium">System Grouping:</span> {entity.system_grouping}</p>
                   <p><span className="font-medium">Category:</span> {entity.category}</p>
                 </div>
                 <div>
@@ -70,10 +67,10 @@ export default async function EntityPage({ params }: Props) {
             </div>
 
             {/* Description */}
-            {entity.description && (
+            {entity.entity_description && (
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Description</h2>
-                <p className="text-gray-700 leading-relaxed">{entity.description}</p>
+                <p className="text-gray-700 leading-relaxed">{entity.entity_description}</p>
               </div>
             )}
 
@@ -91,9 +88,9 @@ export default async function EntityPage({ params }: Props) {
             <div>
               <h2 className="text-xl font-semibold text-gray-900 mb-4">Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {entity.entity_url && (
+                {entity.entity_link && (
                   <a
-                    href={entity.entity_url}
+                    href={entity.entity_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
@@ -102,9 +99,9 @@ export default async function EntityPage({ params }: Props) {
                     Official Website
                   </a>
                 )}
-                {entity.annual_report_link && (
+                {entity.annual_reports_link && (
                   <a
-                    href={entity.annual_report_link}
+                    href={entity.annual_reports_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
@@ -124,9 +121,9 @@ export default async function EntityPage({ params }: Props) {
                     Transparency Portal
                   </a>
                 )}
-                {entity.organizational_chart && (
+                {entity.organizational_chart_link && (
                   <a
-                    href={entity.organizational_chart}
+                    href={entity.organizational_chart_link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-un-blue hover:opacity-80 p-3 border border-gray-200 rounded-lg hover:bg-gray-50"
@@ -139,12 +136,16 @@ export default async function EntityPage({ params }: Props) {
             </div>
 
             {/* Additional Info */}
-            {(entity.budget || entity.comment) && (
+            {(entity.budget_financial_reporting_link || entity.comment) && (
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 mb-4">Additional Information</h2>
                 <div className="space-y-2">
-                  {entity.budget && (
-                    <p><span className="font-medium">Budget:</span> {entity.budget}</p>
+                  {entity.budget_financial_reporting_link && (
+                    <p><span className="font-medium">Budget/Financial Reporting:</span> 
+                      <a href={entity.budget_financial_reporting_link} target="_blank" rel="noopener noreferrer" className="text-un-blue hover:opacity-80 ml-2">
+                        View Link
+                      </a>
+                    </p>
                   )}
                   {entity.comment && (
                     <p><span className="font-medium">Notes:</span> {entity.comment}</p>

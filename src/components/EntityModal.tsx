@@ -96,7 +96,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
       <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out overflow-y-auto">
         {/* Header */}
         <div className="p-6 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white">
-          <h2 className="text-xl font-semibold text-gray-900">{entity.combined}</h2>
+          <h2 className="text-xl font-semibold text-gray-900">{entity.entity_long}</h2>
           <button
             onClick={onClose}
             className="p-1 hover:bg-gray-100 rounded-full transition-colors"
@@ -117,10 +117,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
           </div>
 
           {/* Description */}
-          {entity.description && (
+          {entity.entity_description && (
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">Description</h3>
-              <p className="text-gray-700 leading-relaxed">{entity.description}</p>
+              <p className="text-gray-700 leading-relaxed">{entity.entity_description}</p>
             </div>
           )}
 
@@ -128,9 +128,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
           <div>
             <h3 className="text-xl font-medium text-gray-900 mb-3">Links</h3>
             <div className="space-y-3">
-              {entity.entity_url && (
+              {entity.entity_link && (
                 <a
-                  href={entity.entity_url}
+                  href={entity.entity_link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
@@ -139,9 +139,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                   Official Website
                 </a>
               )}
-              {entity.annual_report_link && (
+              {entity.annual_reports_link && (
                 <a
-                  href={entity.annual_report_link}
+                  href={entity.annual_reports_link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
@@ -161,9 +161,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                   Transparency Portal
                 </a>
               )}
-              {entity.organizational_chart && (
+              {entity.organizational_chart_link && (
                 <a
-                  href={entity.organizational_chart}
+                  href={entity.organizational_chart_link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
@@ -175,13 +175,17 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             </div>
           </div>
 
-          {/* Additional Info
-          {(entity.budget || entity.comment) && (
+          {/* Additional Info */}
+          {(entity.budget_financial_reporting_link || entity.comment) && (
             <div>
               <h3 className="text-lg font-medium text-gray-900 mb-3">Additional Information</h3>
               <div className="space-y-2">
-                {entity.budget && (
-                  <p><span className="font-medium">Budget:</span> {entity.budget}</p>
+                {entity.budget_financial_reporting_link && (
+                  <p><span className="font-medium">Budget/Financial Reporting:</span> 
+                    <a href={entity.budget_financial_reporting_link} target="_blank" rel="noopener noreferrer" className="text-un-blue hover:opacity-80 ml-2">
+                      View Link
+                    </a>
+                  </p>
                 )}
                 {entity.comment && (
                   <p><span className="font-medium">Notes:</span> {entity.comment}</p>
@@ -189,7 +193,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <p><span className="font-medium">CEB Member:</span> {entity["ceb_member?"]}</p>
               </div>
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </div>

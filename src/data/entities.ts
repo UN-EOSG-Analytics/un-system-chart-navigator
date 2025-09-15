@@ -6,7 +6,7 @@ export const entities: Entity[] = entitiesData as Entity[];
 
 // Utility functions for data access
 export function getAllEntities(): Entity[] {
-  return entities.filter(entity => entity.show === 'Yes');
+  return entities.filter(entity => entity.on_display === true);
 }
 
 export function getEntityBySlug(slug: string): Entity | null {
@@ -23,7 +23,7 @@ export function getEntityBySlug(slug: string): Entity | null {
 }
 
 export function getEntitiesByGroup(group: string): Entity[] {
-  return getAllEntities().filter(entity => entity.group === group);
+  return getAllEntities().filter(entity => entity.system_grouping === group);
 }
 
 export function searchEntities(query: string): Entity[] {
@@ -31,6 +31,6 @@ export function searchEntities(query: string): Entity[] {
   return getAllEntities().filter(entity => 
     entity.entity.toLowerCase().includes(searchTerm) ||
     entity.entity_long.toLowerCase().includes(searchTerm) ||
-    entity.description?.toLowerCase().includes(searchTerm)
+    entity.entity_description?.toLowerCase().includes(searchTerm)
   );
 }

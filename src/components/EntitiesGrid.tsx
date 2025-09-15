@@ -79,7 +79,7 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
 };
 
 const EntityCard = ({ entity }: { entity: Entity }) => {
-    const styles = groupStyles[entity.group] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.group };
+    const styles = groupStyles[entity.system_grouping] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.system_grouping };
     
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
@@ -97,7 +97,7 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
             </TooltipTrigger>
             <TooltipContent side="top" className="bg-white text-slate-800 border border-slate-200 shadow-lg" hideWhenDetached>
                 <div className="text-center max-w-xs">
-                    <p className="font-medium text-sm leading-tight">{entity.combined}</p>
+                    <p className="font-medium text-sm leading-tight">{entity.entity_long}</p>
                     <p className="text-xs text-slate-500 mt-1">Click to view details</p>
                 </div>
             </TooltipContent>
@@ -122,12 +122,12 @@ export default function EntitiesGrid() {
 
     // Filter and sort entities
     const visibleEntities = entities
-        .filter((entity: Entity) => activeGroups.has(entity.group))
+        .filter((entity: Entity) => activeGroups.has(entity.system_grouping))
         .sort((a: Entity, b: Entity) => {
             // First sort by group order defined in groupStyles
-            if (a.group !== b.group) {
-                const orderA = groupStyles[a.group]?.order || 999;
-                const orderB = groupStyles[b.group]?.order || 999;
+            if (a.system_grouping !== b.system_grouping) {
+                const orderA = groupStyles[a.system_grouping]?.order || 999;
+                const orderB = groupStyles[b.system_grouping]?.order || 999;
                 return orderA - orderB;
             }
             // Within the same group, sort alphabetically but put "Other" at the end
