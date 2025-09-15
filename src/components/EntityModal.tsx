@@ -109,7 +109,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         <div className="p-6 space-y-6">
           {/* Basic Info */}
           <div>
-            <h3 className="text-lg font-medium text-gray-900 mb-3">Overview</h3>
+            <h3 className="text-xl font-medium text-gray-900 mb-3">Overview</h3>
             <div className="space-y-2">
               <p><span className="font-medium">Category:</span> {entity.category}</p>
               <p><span className="font-medium">UN Principal Organ:</span> {entity.un_principal_organ}</p>
@@ -124,19 +124,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             </div>
           )}
 
-          {/* Leadership */}
-          <div>
-            <h3 className="text-lg font-medium text-gray-900 mb-3">Leadership</h3>
-            <div className="space-y-2">
-              <p><span className="font-medium">Head of Entity:</span> {entity.head_of_entity_name}</p>
-              <p><span className="font-medium">Title:</span> {entity.head_of_entity_title}</p>
-              <p><span className="font-medium">Level:</span> {entity.head_of_entity_level}</p>
-            </div>
-          </div>
-
           {/* Links */}
           <div>
-            <h3 className="text-lg font-medium text-gray-900 mb-3">Resources</h3>
+            <h3 className="text-xl font-medium text-gray-900 mb-3">Links</h3>
             <div className="space-y-3">
               {entity.entity_url && (
                 <a
