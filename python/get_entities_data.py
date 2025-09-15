@@ -4,12 +4,10 @@ import pandas as pd
 
 data_folder = Path("data")
 
+# Load data from CSV file (exported from Airtable)
+csv_path = data_folder / "input" / "un_entities.csv"
+df = pd.read_csv(csv_path)
 
-# Load Data ------------------------------------------------------
-
-# https://docs.google.com/spreadsheets/d/1OZw5VdCeYwju4Y19W9nuQJXF-u0f5BhYIZpeEdmBDyY/edit?gid=431089069#gid=431089069
-URL = "https://docs.google.com/spreadsheets/d/1OZw5VdCeYwju4Y19W9nuQJXF-u0f5BhYIZpeEdmBDyY/export?format=csv&gid=431089069"
-df = pd.read_csv(URL)
 
 # Wrangle ------------------------------------------------------
 
@@ -25,9 +23,8 @@ df = df[df["entity"] != "Other"]
 
 # Export ------------------------------------------------------
 
-# output_path = data_folder / "input" / "entities.csv"
-# df.to_csv(output_path)
+output_path = data_folder / "input" / "entities.csv"
+df.to_csv(output_path)
 
-# output_path = data_folder / "input" / "entities.json"
-output_path = Path("web") / "public" / "entities.json"
+output_path = Path("public") / "entities.json"
 df.to_json(output_path, orient="records", indent=2)
