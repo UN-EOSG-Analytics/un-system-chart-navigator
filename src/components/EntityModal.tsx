@@ -23,11 +23,23 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
     return () => document.removeEventListener('keydown', handleEscape);
   }, [onClose]);
 
-  // Prevent body scroll when modal is open
+  // Prevent body scroll when modal is open while maintaining scrollbar space
   useEffect(() => {
+    // Get the current scrollbar width
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    
+    // Store original values
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+    
+    // Apply styles to prevent scrolling while maintaining layout
     document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    
     return () => {
-      document.body.style.overflow = 'unset';
+      // Restore original values
+      document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
     };
   }, []);
 

@@ -7,7 +7,7 @@ We use **static data imports** instead of APIs for our 150KB JSON file. This is 
 ## How It Works
 
 ### Data Source
-- **File:** `public/entities.json` (150KB, ~80 UN entities)
+- **File:** `public/entities.json` (150KB, ~140 UN entities)
 - **Access:** `src/data/entities.ts` (typed functions)
 - **No APIs needed** - direct file imports
 
@@ -26,7 +26,7 @@ searchEntities()        // Search functionality
 
 ## Pages
 - **Main grid:** Loads all entities instantly
-- **Entity pages:** Direct data lookup by slug
+- **Entity pages:** Direct data lookup by url param
 - **Modal overlay:** Same data, no network calls
 
 ## Why This Works

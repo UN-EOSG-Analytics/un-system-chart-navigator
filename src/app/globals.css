@@ -22,3 +22,8 @@
   --color-un-system-aubergine: #a79ab3;
   --color-un-system-green: #7d8471;
 }
+
+/* Prevent layout shifts by always showing scrollbar */
+html {
+  overflow-y: scroll;
+}

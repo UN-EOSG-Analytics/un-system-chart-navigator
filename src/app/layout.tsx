@@ -5,8 +5,8 @@ import ModalHandler from "@/components/ModalHandler";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "The United Nations System",
-  description: "Navigate the United Nations System organizational chart",
+  title: "UN System Chart",
+  description: "Interactively navigate the United Nations System",
 };
 
 export default function RootLayout({
