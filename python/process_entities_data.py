@@ -5,7 +5,7 @@ import pandas as pd
 data_folder = Path("data")
 
 # Load data from CSV file (exported from Airtable)
-csv_path = data_folder / "input" / "un_entities.csv"
+csv_path = data_folder / "input" / "input_entities.csv"
 df = pd.read_csv(csv_path)
 
 
@@ -20,11 +20,14 @@ len(df)
 # Filter out rows where the entity column matches "Other"
 df = df[df["entity"] != "Other"]
 
+# Filter out rows where the on_display column is False
+df = df[df["on_display"] != False]
+
 
 # Export ------------------------------------------------------
 
-output_path = data_folder / "input" / "entities.csv"
-df.to_csv(output_path)
+# output_path = data_folder / "output" / "entities.csv"
+# df.to_csv(output_path)
 
 output_path = Path("public") / "entities.json"
 df.to_json(output_path, orient="records", indent=2)

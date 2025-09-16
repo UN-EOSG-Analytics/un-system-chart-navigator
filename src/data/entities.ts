@@ -1,12 +1,12 @@
 import { Entity } from '@/types/entity';
 import entitiesData from '../../public/entities.json';
 
-// Type-safe export of entities data
-export const entities: Entity[] = entitiesData as Entity[];
+// Direct raw export (Python pre-processing handles any filtering / cleaning)
+export const entities = entitiesData as Entity[];
 
-// Utility functions for data access
+// Utility functions for data access (no additional filtering)
 export function getAllEntities(): Entity[] {
-  return entities.filter(entity => entity.on_display === true);
+  return entities;
 }
 
 export function getEntityBySlug(slug: string): Entity | null {
