@@ -25,21 +25,15 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
   // Prevent body scroll when modal is open while maintaining scrollbar space
   useEffect(() => {
-    // Get the current scrollbar width
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    
     // Store original values
-    const originalOverflow = document.body.style.overflow;
-    const originalPaddingRight = document.body.style.paddingRight;
+    const originalOverflow = document.documentElement.style.overflow;
     
-    // Apply styles to prevent scrolling while maintaining layout
-    document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    // Prevent scrolling on the html element instead of body to preserve scrollbar
+    document.documentElement.style.overflow = 'hidden';
     
     return () => {
       // Restore original values
-      document.body.style.overflow = originalOverflow;
-      document.body.style.paddingRight = originalPaddingRight;
+      document.documentElement.style.overflow = originalOverflow;
     };
   }, []);
 

@@ -2,7 +2,7 @@
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Entity } from '@/types/entity';
-import Legend from './Legend';
+import DropdownFilter from './DropdownFilter';
 import { useState } from 'react';
 import Link from 'next/link';
 import { getAllEntities } from '@/data/entities';
@@ -143,8 +143,8 @@ export default function EntitiesGrid() {
 
     return (
         <div className="w-full">
-            {/* Legend */}
-            <Legend 
+            {/* Filter Dropdown */}
+            <DropdownFilter 
                 groupStyles={groupStyles} 
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}

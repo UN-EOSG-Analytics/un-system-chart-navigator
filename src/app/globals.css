@@ -26,4 +26,11 @@
 /* Prevent layout shifts by always showing scrollbar */
 html {
   overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* Force scrollbar space to always be reserved */
+body {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
