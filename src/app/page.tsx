@@ -8,7 +8,7 @@ export default function Home() {
                     UN System Chart (alpha)
                 </h1>
                 <p className="text-gray-600 text-lg leading-relaxed -mt-2">
-                    Interactive overview of the United Nations System entities. For informational purposes only.
+                    Interactive overview of United Nations System entities. For informational purposes only.
                     You can find the print version <a href="https://www.un.org/en/delegate/page/un-system-chart" target="_blank" rel="noopener noreferrer" className="text-un-blue hover:font-bold underline">here</a>.
                 </p>
                 <EntitiesGrid />
