@@ -85,7 +85,7 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
     const entitySlug = createEntitySlug(entity.entity);
 
     return (
-        <Tooltip>
+        <Tooltip disableHoverableContent delayDuration={150}>
             <TooltipTrigger asChild>
                 <Link href={`/?entity=${entitySlug}`} prefetch={false}>
                     <div
@@ -95,10 +95,10 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
                     </div>
                 </Link>
             </TooltipTrigger>
-            <TooltipContent side="top" className="bg-white text-slate-800 border border-slate-200" hideWhenDetached>
+            <TooltipContent side="top" sideOffset={8} className="bg-white text-slate-800 border border-slate-200" hideWhenDetached>
                 <div className="text-center max-w-xs">
                     <p className="font-medium text-sm leading-tight">{entity.entity_long}</p>
-                    <p className="text-xs text-slate-500 mt-1">Click to view details</p>
+                    <p className="text-xs text-slate-500 mt-1">Click to view entity details</p>
                 </div>
             </TooltipContent>
         </Tooltip>
