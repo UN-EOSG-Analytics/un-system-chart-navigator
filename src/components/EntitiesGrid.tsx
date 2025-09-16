@@ -2,10 +2,10 @@
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Entity } from '@/types/entity';
-import DropdownFilter from './DropdownFilter';
+import FilterControls from './FilterControls';
 import { useState } from 'react';
 import Link from 'next/link';
-import { getAllEntities } from '@/data/entities';
+import { getAllEntities, searchEntities } from '@/data/entities';
 import { createEntitySlug } from '@/lib/utils';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order
@@ -108,6 +108,7 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
 export default function EntitiesGrid() {
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
+    const [searchQuery, setSearchQuery] = useState<string>('');
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
@@ -121,7 +122,7 @@ export default function EntitiesGrid() {
     };
 
     // Filter and sort entities
-    const visibleEntities = entities
+    const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
         .filter((entity: Entity) => activeGroups.has(entity.system_grouping))
         .sort((a: Entity, b: Entity) => {
             // First sort by group order defined in groupStyles
@@ -143,12 +144,14 @@ export default function EntitiesGrid() {
 
     return (
         <div className="w-full">
-            {/* Filter Dropdown */}
-            <DropdownFilter 
-                groupStyles={groupStyles} 
+            {/* Search and Filter Controls */}
+            <FilterControls
+                groupStyles={groupStyles}
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}
                 entities={entities}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
             />
 
             {/* Entities Grid */}
