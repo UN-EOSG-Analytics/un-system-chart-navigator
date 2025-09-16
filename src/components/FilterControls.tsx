@@ -98,17 +98,17 @@ export default function FilterControls({
   };
 
   return (
-    <div className="flex gap-2 mb-6 items-center">
+    <div className="flex gap-2 mb-6 items-end">
       {/* Filter Dropdown */}
       <div className="relative w-[320px]">
         <Select value={getSelectedValue()} onValueChange={handleValueChange}>
-          <SelectTrigger className="w-full h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-blue-500" id="category-filter">
+          <SelectTrigger className="w-full h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2" id="category-filter">
             <SelectValue asChild>
               <span className="flex items-center">{getDisplayText()}</span>
             </SelectValue>
           </SelectTrigger>
           <SelectContent 
-            className="w-[320px] bg-white z-50" 
+            className="w-[320px] bg-white border-gray-300 z-50" 
             position="popper"
             side="bottom"
             align="start"
@@ -148,7 +148,7 @@ export default function FilterControls({
           placeholder="Search for entities..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="block w-full h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-0 text-sm rounded-none"
+          className="block w-full h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-sm rounded-none"
         />
       </div>
     </div>

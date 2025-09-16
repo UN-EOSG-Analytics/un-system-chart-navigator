@@ -89,13 +89,13 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
             <TooltipTrigger asChild>
                 <Link href={`/?entity=${entitySlug}`} prefetch={false}>
                     <div
-                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-105`}
+                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-200 cursor-pointer hover:scale-105`}
                     >
                         <span className="font-medium text-base leading-tight">{entity.entity}</span>
                     </div>
                 </Link>
             </TooltipTrigger>
-            <TooltipContent side="top" className="bg-white text-slate-800 border border-slate-200 shadow-lg" hideWhenDetached>
+            <TooltipContent side="top" className="bg-white text-slate-800 border border-slate-200" hideWhenDetached>
                 <div className="text-center max-w-xs">
                     <p className="font-medium text-sm leading-tight">{entity.entity_long}</p>
                     <p className="text-xs text-slate-500 mt-1">Click to view details</p>
