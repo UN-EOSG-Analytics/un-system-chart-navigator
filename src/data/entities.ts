@@ -30,7 +30,7 @@ export function searchEntities(query: string): Entity[] {
   const searchTerm = query.toLowerCase();
   return getAllEntities().filter(entity => 
     entity.entity.toLowerCase().includes(searchTerm) ||
-    entity.entity_long.toLowerCase().includes(searchTerm) ||
-    entity.entity_description?.toLowerCase().includes(searchTerm)
+    entity.entity_long.toLowerCase().includes(searchTerm)
+    // FIXME: what else to search for?
   );
 }
