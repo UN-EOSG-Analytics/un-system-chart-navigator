@@ -29,8 +29,4 @@ html {
   scrollbar-gutter: stable;
 }
 
-/* Force scrollbar space to always be reserved */
-body {
-  overflow-y: scroll;
-  scrollbar-gutter: stable;
-}
+
