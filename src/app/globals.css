@@ -30,7 +30,11 @@ html {
   scrollbar-gutter: stable;
 }
 
-/* Force scrollbar space to always be reserved */
 body {
   overflow-y: scroll;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  display: none;
 }
