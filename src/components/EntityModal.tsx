@@ -135,7 +135,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         <h3 className="text-xl font-medium text-gray-900 mb-3">Links</h3>
                         <div className="space-y-3">
                             {/* Website */}
-                            {entity.entity_link && entity.entity_link.startsWith('https') ? (
+                            {entity.entity_link && entity.entity_link.startsWith('https') && (
                                 <a
                                     href={entity.entity_link}
                                     target="_blank"
@@ -145,15 +145,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <ExternalLink size={16} />
                                     Website
                                 </a>
-                            ) : (
-                                <div className="flex items-center gap-2 text-gray-400">
-                                    <ExternalLink size={16} />
-                                    Website
-                                </div>
                             )}
 
                             {/* Annual Report */}
-                            {entity.annual_reports_link && entity.annual_reports_link.startsWith('https') ? (
+                            {entity.annual_reports_link && entity.annual_reports_link.startsWith('https') && (
                                 <a
                                     href={entity.annual_reports_link}
                                     target="_blank"
@@ -163,15 +158,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <ExternalLink size={16} />
                                     Annual Report
                                 </a>
-                            ) : (
-                                <div className="flex items-center gap-2 text-gray-400">
-                                    <ExternalLink size={16} />
-                                    Annual Report
-                                </div>
                             )}
 
                             {/* Financials */}
-                            {entity.budget_financial_reporting_link && entity.budget_financial_reporting_link.startsWith('https') ? (
+                            {entity.budget_financial_reporting_link && entity.budget_financial_reporting_link.startsWith('https') && (
                                 <a
                                     href={entity.budget_financial_reporting_link}
                                     target="_blank"
@@ -181,15 +171,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <ExternalLink size={16} />
                                     Financial Reporting
                                 </a>
-                            ) : (
-                                <div className="flex items-center gap-2 text-gray-400">
-                                    <ExternalLink size={16} />
-                                    Financial Reporting
-                                </div>
                             )}
 
                             {/* Transparency Portal */}
-                            {entity.transparency_portal_link && entity.transparency_portal_link.startsWith('https') ? (
+                            {entity.transparency_portal_link && entity.transparency_portal_link.startsWith('https') && (
                                 <a
                                     href={entity.transparency_portal_link}
                                     target="_blank"
@@ -199,15 +184,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <ExternalLink size={16} />
                                     Transparency Portal
                                 </a>
-                            ) : (
-                                <div className="flex items-center gap-2 text-gray-400">
-                                    <ExternalLink size={16} />
-                                    Transparency Portal
-                                </div>
                             )}
 
                             {/* Strategic Plan */}
-                            {entity.strategic_plan_link && entity.strategic_plan_link.startsWith('https') ? (
+                            {entity.strategic_plan_link && entity.strategic_plan_link.startsWith('https') && (
                                 <a
                                     href={entity.strategic_plan_link}
                                     target="_blank"
@@ -217,15 +197,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <ExternalLink size={16} />
                                     Strategic Plan
                                 </a>
-                            ) : (
-                                <div className="flex items-center gap-2 text-gray-400">
-                                    <ExternalLink size={16} />
-                                    Strategic Plan
-                                </div>
                             )}
 
                             {/* Results Framework */}
-                            {entity.results_framework_link && entity.results_framework_link.startsWith('https') ? (
+                            {entity.results_framework_link && entity.results_framework_link.startsWith('https') && (
                                 <a
                                     href={entity.results_framework_link}
                                     target="_blank"
@@ -235,11 +210,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <ExternalLink size={16} />
                                     Results Framework
                                 </a>
-                            ) : (
-                                <div className="flex items-center gap-2 text-gray-400">
-                                    <ExternalLink size={16} />
-                                    Results Framework
-                                </div>
                             )}
                         </div>
                     </div>
