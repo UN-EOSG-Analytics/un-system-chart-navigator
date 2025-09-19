@@ -4,7 +4,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip
 import { Entity } from '@/types/entity';
 import FilterControls from './FilterControls';
 import { useState } from 'react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/data/entities';
 import { createEntitySlug } from '@/lib/utils';
 
@@ -78,22 +78,25 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
     },
 };
 
-const EntityCard = ({ entity }: { entity: Entity }) => {
+const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = groupStyles[entity.system_grouping] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.system_grouping };
     
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
 
+    const handleClick = () => {
+        onEntityClick(entitySlug);
+    };
+
     return (
         <Tooltip disableHoverableContent delayDuration={150}>
             <TooltipTrigger asChild>
-                <Link href={`/?entity=${entitySlug}`} prefetch={false}>
-                    <div
-                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-700 ease-out cursor-pointer hover:scale-105 animate-in fade-in slide-in-from-bottom-4`}
-                    >
-                        <span className="font-medium text-base leading-tight">{entity.entity}</span>
-                    </div>
-                </Link>
+                <div
+                    onClick={handleClick}
+                    className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-700 ease-out cursor-pointer hover:scale-105 active:scale-95 animate-in fade-in slide-in-from-bottom-4`}
+                >
+                    <span className="font-medium text-base leading-tight">{entity.entity}</span>
+                </div>
             </TooltipTrigger>
             <TooltipContent side="top" sideOffset={8} className="bg-white text-slate-800 border border-slate-200" hideWhenDetached>
                 <div className="text-center max-w-xs">
@@ -109,6 +112,7 @@ export default function EntitiesGrid() {
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
+    const router = useRouter();
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
@@ -119,6 +123,11 @@ export default function EntitiesGrid() {
             // Otherwise, show only this group
             return new Set([groupKey]);
         });
+    };
+
+    const handleEntityClick = (entitySlug: string) => {
+        // Update URL without navigation to prevent page jumping
+        router.replace(`/?entity=${entitySlug}`, { scroll: false });
     };
 
     // Filter and sort entities
@@ -157,7 +166,7 @@ export default function EntitiesGrid() {
             {/* Entities Grid */}
             <div className="flex flex-wrap gap-3 justify-start w-full transition-all duration-1000 ease-out">
                 {visibleEntities.map((entity: Entity) => (
-                    <EntityCard key={entity.entity} entity={entity} />
+                    <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
                 ))}
             </div>
 

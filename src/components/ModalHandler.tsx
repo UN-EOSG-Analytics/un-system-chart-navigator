@@ -42,7 +42,7 @@ export default function ModalHandler() {
   }, [entitySlug]);
 
   const handleClose = () => {
-    router.push('/'); // Remove query param, return to home
+    router.replace('/', { scroll: false }); // Remove query param, return to home without jumping
   };
 
   // Don't render anything if no entity slug

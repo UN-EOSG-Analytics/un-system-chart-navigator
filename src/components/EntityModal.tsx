@@ -2,7 +2,7 @@
 
 import { Entity } from '@/types/entity';
 import { X, ExternalLink } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface EntityModalProps {
     entity: Entity | null;
@@ -11,17 +11,35 @@ interface EntityModalProps {
 }
 
 export default function EntityModal({ entity, onClose, loading }: EntityModalProps) {
+    const [isVisible, setIsVisible] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+
+    // Animation state management
+    useEffect(() => {
+        // Trigger entrance animation after mount
+        const timer = setTimeout(() => setIsVisible(true), 10);
+        return () => clearTimeout(timer);
+    }, []);
+
     // Close modal on escape key
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
             if (e.key === 'Escape') {
-                onClose();
+                handleClose();
             }
         };
 
         document.addEventListener('keydown', handleEscape);
         return () => document.removeEventListener('keydown', handleEscape);
-    }, [onClose]);
+    }, []);
+
+    const handleClose = () => {
+        setIsClosing(true);
+        // Wait for exit animation before actually closing
+        setTimeout(() => {
+            onClose();
+        }, 300);
+    };
 
     // Prevent body scroll when modal is open while maintaining scrollbar space
     useEffect(() => {
@@ -40,22 +58,26 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
     // Handle click outside to close
     const handleBackdropClick = (e: React.MouseEvent) => {
         if (e.target === e.currentTarget) {
-            onClose();
+            handleClose();
         }
     };
 
     if (loading) {
         return (
             <div
-                className="fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-500 ease-out"
+                className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
+                    isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
+                }`}
                 onClick={handleBackdropClick}
             >
-                <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out">
+                <div className={`w-1/3 min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
+                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                }`}>
                     <div className="p-6 border-b border-gray-200 flex items-center justify-between">
                         <div className="h-6 bg-gray-200 rounded w-48 animate-pulse"></div>
                         <button
-                            onClick={onClose}
-                            className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                            onClick={handleClose}
+                            className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
                         >
                             <X size={24} />
                         </button>
@@ -73,15 +95,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
     if (!entity) {
         return (
             <div
-                className="fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-500 ease-out"
+                className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
+                    isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
+                }`}
                 onClick={handleBackdropClick}
             >
-                <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out">
+                <div className={`w-1/3 min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
+                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                }`}>
                     <div className="p-6 border-b border-gray-200 flex items-center justify-between">
                         <h2 className="text-xl font-semibold text-gray-900">Entity Not Found</h2>
                         <button
-                            onClick={onClose}
-                            className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                            onClick={handleClose}
+                            className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
                         >
                             <X size={24} />
                         </button>
@@ -96,16 +122,20 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
     return (
         <div
-            className="fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-500 ease-out"
+            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
+                isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
+            }`}
             onClick={handleBackdropClick}
         >
-            <div className="w-1/3 min-w-[500px] h-full bg-white shadow-2xl transform translate-x-0 transition-transform duration-500 ease-out overflow-y-auto">
+            <div className={`w-1/3 min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
+                isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+            }`}>
                 {/* Header */}
                 <div className="p-6 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white">
                     <h2 className="text-xl font-semibold text-gray-900">{entity.entity_long}</h2>
                     <button
-                        onClick={onClose}
-                        className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                        onClick={handleClose}
+                        className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
                     >
                         <X size={24} />
                     </button>
@@ -140,7 +170,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.entity_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
+                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
                                 >
                                     <ExternalLink size={16} />
                                     Website
@@ -153,7 +183,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.annual_reports_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
+                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
                                 >
                                     <ExternalLink size={16} />
                                     Annual Report
@@ -166,7 +196,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.budget_financial_reporting_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
+                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
                                 >
                                     <ExternalLink size={16} />
                                     Financial Reporting
@@ -179,7 +209,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.transparency_portal_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
+                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
                                 >
                                     <ExternalLink size={16} />
                                     Transparency Portal
@@ -192,7 +222,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.strategic_plan_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
+                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
                                 >
                                     <ExternalLink size={16} />
                                     Strategic Plan
@@ -205,7 +235,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.results_framework_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity"
+                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
                                 >
                                     <ExternalLink size={16} />
                                     Results Framework
