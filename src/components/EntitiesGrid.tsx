@@ -89,7 +89,7 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
             <TooltipTrigger asChild>
                 <Link href={`/?entity=${entitySlug}`} prefetch={false}>
                     <div
-                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-200 cursor-pointer hover:scale-105`}
+                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-700 ease-out cursor-pointer hover:scale-105 animate-in fade-in slide-in-from-bottom-4`}
                     >
                         <span className="font-medium text-base leading-tight">{entity.entity}</span>
                     </div>
@@ -155,13 +155,13 @@ export default function EntitiesGrid() {
             />
 
             {/* Entities Grid */}
-            <div className="flex flex-wrap gap-3 justify-start w-full">
+            <div className="flex flex-wrap gap-3 justify-start w-full transition-all duration-1000 ease-out">
                 {visibleEntities.map((entity: Entity) => (
                     <EntityCard key={entity.entity} entity={entity} />
                 ))}
             </div>
 
-            <div className="mt-6 text-gray-600 text-left">
+            <div className="mt-6 text-gray-600 text-left transition-opacity duration-500">
                 Showing {visibleEntities.length} entities
             </div>
         </div>

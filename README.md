@@ -1,6 +1,6 @@
 # un-system-chart-navigator
 
-Dev link: https://unsystem-dev-czarbaardrbedmcs.eastus2-01.azurewebsites.net/
+Dev link: https://unsystem-devczarbaardrbedmcs.eastus2-01.azurewebsites.net
 
 
 ## Resources

@@ -1,11 +1,22 @@
 import { notFound } from 'next/navigation';
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
-import { getEntityBySlug } from '@/data/entities';
+import { getEntityBySlug, getAllEntities } from '@/data/entities';
 import OrgChart from '../../../components/OrgChart';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+export async function generateStaticParams() {
+  const entities = getAllEntities();
+  
+  return entities.map((entity) => ({
+    slug: entity.entity
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '-')
+      .replace(/[\s-]+/g, '-')
+      .replace(/^-+|-+$/g, ''),
+  }));
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
