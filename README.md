@@ -1,8 +1,5 @@
 # un-system-chart-navigator
 
-Dev link: https://unsystem-devczarbaardrbedmcs.eastus2-01.azurewebsites.net
-
-
 ## Resources
 
 - https://www.un.org/en/delegate/page/un-system-chart
@@ -13,13 +10,6 @@ Dev link: https://unsystem-devczarbaardrbedmcs.eastus2-01.azurewebsites.net
 Goal: http://system.un.org/
 
 ![UN System](docs/chart.png)
-
-## TODO
-
-- [ ] add next.js boilerplate, shadcn, tailwinds (-> create UN Website Starter)
-- [ ] use color pallette and styling from slides
-- [ ] try to quickly recreate this slide in interactive
-- [ ]
 
 ## Maintenance
 
