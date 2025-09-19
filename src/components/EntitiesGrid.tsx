@@ -1,11 +1,11 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { useEntities } from '@/hooks/useEntities';
 import { Entity } from '@/types/entity';
-import Legend from './Legend';
+import FilterControls from './FilterControls';
 import { useState } from 'react';
 import Link from 'next/link';
+import { getAllEntities, searchEntities } from '@/data/entities';
 import { createEntitySlug } from '@/lib/utils';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order
@@ -79,26 +79,26 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
 };
 
 const EntityCard = ({ entity }: { entity: Entity }) => {
-    const styles = groupStyles[entity.group] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.group };
+    const styles = groupStyles[entity.system_grouping] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.system_grouping };
     
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
 
     return (
-        <Tooltip>
+        <Tooltip disableHoverableContent delayDuration={150}>
             <TooltipTrigger asChild>
-                <Link href={`/entity/${entitySlug}`}>
+                <Link href={`/?entity=${entitySlug}`} prefetch={false}>
                     <div
-                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer hover:scale-105`}
+                        className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-700 ease-out cursor-pointer hover:scale-105 animate-in fade-in slide-in-from-bottom-4`}
                     >
                         <span className="font-medium text-base leading-tight">{entity.entity}</span>
                     </div>
                 </Link>
             </TooltipTrigger>
-            <TooltipContent side="top" className="bg-white text-slate-800 border border-slate-200 shadow-lg" hideWhenDetached>
+            <TooltipContent side="top" sideOffset={8} className="bg-white text-slate-800 border border-slate-200" hideWhenDetached>
                 <div className="text-center max-w-xs">
-                    <p className="font-medium text-sm leading-tight">{entity.combined}</p>
-                    <p className="text-xs text-slate-500 mt-1">Click to view details</p>
+                    <p className="font-medium text-sm leading-tight">{entity.entity_long}</p>
+                    <p className="text-xs text-slate-500 mt-1">Click to view entity details</p>
                 </div>
             </TooltipContent>
         </Tooltip>
@@ -106,8 +106,9 @@ const EntityCard = ({ entity }: { entity: Entity }) => {
 };
 
 export default function EntitiesGrid() {
-    const { data, loading, error } = useEntities({ limit: 1000 });
+    const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
+    const [searchQuery, setSearchQuery] = useState<string>('');
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
@@ -120,38 +121,14 @@ export default function EntitiesGrid() {
         });
     };
 
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center p-8">
-                <div className="text-lg">Loading entities...</div>
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center p-8">
-                <div className="text-lg text-red-600">Error loading entities: {error}</div>
-            </div>
-        );
-    }
-
-    if (!data) {
-        return (
-            <div className="flex items-center justify-center p-8">
-                <div className="text-lg">No data available</div>
-            </div>
-        );
-    }
-
-    // Show all entities and sort by group first, then alphabetically
-    const visibleEntities = data.entities
-        .filter((entity: Entity) => activeGroups.has(entity.group))
+    // Filter and sort entities
+    const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
+        .filter((entity: Entity) => activeGroups.has(entity.system_grouping))
         .sort((a: Entity, b: Entity) => {
             // First sort by group order defined in groupStyles
-            if (a.group !== b.group) {
-                const orderA = groupStyles[a.group]?.order || 999;
-                const orderB = groupStyles[b.group]?.order || 999;
+            if (a.system_grouping !== b.system_grouping) {
+                const orderA = groupStyles[a.system_grouping]?.order || 999;
+                const orderB = groupStyles[b.system_grouping]?.order || 999;
                 return orderA - orderB;
             }
             // Within the same group, sort alphabetically but put "Other" at the end
@@ -167,22 +144,24 @@ export default function EntitiesGrid() {
 
     return (
         <div className="w-full">
-            {/* Legend */}
-            <Legend 
-                groupStyles={groupStyles} 
+            {/* Search and Filter Controls */}
+            <FilterControls
+                groupStyles={groupStyles}
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}
-                entities={data.entities}
+                entities={entities}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
             />
 
             {/* Entities Grid */}
-            <div className="flex flex-wrap gap-3 justify-start w-full">
+            <div className="flex flex-wrap gap-3 justify-start w-full transition-all duration-1000 ease-out">
                 {visibleEntities.map((entity: Entity) => (
                     <EntityCard key={entity.entity} entity={entity} />
                 ))}
             </div>
 
-            <div className="mt-6 text-gray-600 text-left">
+            <div className="mt-6 text-gray-600 text-left transition-opacity duration-500">
                 Showing {visibleEntities.length} entities
             </div>
         </div>

@@ -2,13 +2,13 @@ interface LegendProps {
   groupStyles: Record<string, { bgColor: string; textColor: string; order: number; label: string }>;
   activeGroups: Set<string>;
   onToggleGroup: (groupKey: string) => void;
-  entities: { group: string }[];
+  entities: { system_grouping: string }[];
 }
 
 export default function Legend({ groupStyles, activeGroups, onToggleGroup, entities }: LegendProps) {
   // Count entities for each group
   const groupCounts = entities.reduce((acc, entity) => {
-    acc[entity.group] = (acc[entity.group] || 0) + 1;
+    acc[entity.system_grouping] = (acc[entity.system_grouping] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
 

@@ -1,23 +1,28 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import ModalHandler from "@/components/ModalHandler";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "The United Nations System",
-  description: "Navigate the United Nations System organizational chart",
+  title: "UN System Chart",
+  description: "Interactively navigate the United Nations System",
 };
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className="font-sans antialiased">
-        {children}
-        {modal}
+        <ErrorBoundary>
+          {children}
+          <Suspense fallback={null}>
+            <ModalHandler />
+          </Suspense>
+        </ErrorBoundary>
       </body>
     </html>
   );

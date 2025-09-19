@@ -1,0 +1,404 @@
+{
+  "@context": {
+    "dct": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "org": "http://www.w3.org/ns/org#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "_:Na945def4703b4e68b5dfeda4024dd5fa",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Maximo_Torero_Cullen"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Chief_Economist"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Beth_Bechdol",
+      "@type": "foaf:Person",
+      "dct:identifier": "https://www.fao.org/about/leadership/Beth-Bechdol/",
+      "foaf:name": "Beth Bechdol"
+    },
+    {
+      "@id": "_:Ne32e08bd572a42a0952468f8fe9ead0f",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Beth_Crawford"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Chief_Scientist_ad_interim"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Godfrey_Magwenzi",
+      "@type": "foaf:Person",
+      "dct:identifier": "https://www.fao.org/about/leadership/Magwenzi/",
+      "foaf:name": "Godfrey Magwenzi"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Deputy_Director-General_Director_of_Cabinet",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/CORE_LEADERSHIP"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Deputy Director-General Director of Cabinet"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/DIRECTOR-GENERAL/Director-General",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/DIRECTOR-GENERAL"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Director-General"
+      }
+    },
+    {
+      "@id": "_:N9db9890e241f4ccd8fc3b25be95f53e0",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Godfrey_Magwenzi"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Deputy_Director-General_Director_of_Cabinet"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/unit/GOVERNING_BODIES",
+      "@type": "org:OrganizationalUnit",
+      "org:unitOf": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "GOVERNING BODIES"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Maarten_de_Groot",
+      "@type": "foaf:Person",
+      "foaf:name": "Maarten de Groot"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/Legal_Office_LEG/Legal_Counsel",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/Legal_Office_LEG"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Legal Counsel"
+      }
+    },
+    {
+      "@id": "_:N578d14592248439880f83b1be0e32bcc",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/QU_Dongyu"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/DIRECTOR-GENERAL/Director-General"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Donata_Mary_Rugarabamu",
+      "@type": "foaf:Person",
+      "foaf:name": "Donata Mary Rugarabamu"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/unit/Legal_Office_LEG",
+      "@type": "org:OrganizationalUnit",
+      "dct:identifier": "https://www.fao.org/legal/home/legal-office",
+      "org:unitOf": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Legal Office (LEG)"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Andreas_von_Brandt",
+      "@type": "foaf:Person",
+      "foaf:name": "Andreas von Brandt"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/Office_of_Evaluation_OED/Director",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/Office_of_Evaluation_OED"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Director"
+      }
+    },
+    {
+      "@id": "_:Nbfc8243d85c049f2a160dc20ab2d83ac",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Donata_Mary_Rugarabamu"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/Legal_Office_LEG/Legal_Counsel"
+      }
+    },
+    {
+      "@id": "_:N36d5cbb99a174427b73740e99d2c4d0b",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Maurizio_Martina"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Deputy_Director-General"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/GOVERNING_BODIES/Chairperson",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/GOVERNING_BODIES"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Chairperson"
+      }
+    },
+    {
+      "@id": "_:N4f50162a65ff4051b4a815cc167540ac",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Jujjavarapu_Balaji"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/GOVERNING_BODIES/Chairperson"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/unit/DIRECTOR-GENERAL",
+      "@type": "org:OrganizationalUnit",
+      "dct:identifier": "https://www.fao.org/director-general",
+      "org:unitOf": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "DIRECTOR-GENERAL"
+      }
+    },
+    {
+      "@id": "_:N23f819887a9a49388f2fdabbf916ae45",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Mina_Rizk"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/GOVERNING_BODIES/Independent_Chairperson_of_the_Council"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Chief_Economist",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/CORE_LEADERSHIP"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Chief Economist"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Mina_Rizk",
+      "@type": "foaf:Person",
+      "foaf:name": "Mina Rizk"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Chief_Scientist_ad_interim",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/CORE_LEADERSHIP"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Chief Scientist (ad interim)"
+      }
+    },
+    {
+      "@id": "_:Ndf0fd3f62ead46fda744f61cc3c20265",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Andreas_von_Brandt"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/GOVERNING_BODIES/Chairperson"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/QU_Dongyu",
+      "@type": "foaf:Person",
+      "dct:identifier": "https://www.fao.org/director-general/biography/",
+      "foaf:name": "QU Dongyu"
+    },
+    {
+      "@id": "_:N940fe5586769461a85eb788a815932b4",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Maarten_de_Groot"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/GOVERNING_BODIES/Chairperson"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Maximo_Torero_Cullen",
+      "@type": "foaf:Person",
+      "dct:identifier": "https://www.fao.org/about/leadership/Torero/",
+      "foaf:name": "Maximo Torero Cullen"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Jujjavarapu_Balaji",
+      "@type": "foaf:Person",
+      "foaf:name": "Jujjavarapu Balaji"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Beth_Crawford",
+      "@type": "foaf:Person",
+      "dct:identifier": "https://www.fao.org/about/leadership/beth-crawford/",
+      "foaf:name": "Beth Crawford"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/GOVERNING_BODIES/Independent_Chairperson_of_the_Council",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/GOVERNING_BODIES"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Independent Chairperson of the Council"
+      }
+    },
+    {
+      "@id": "_:N2803c0a4768941bbb5140d60cfe6b643",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Clemencia_Cosentino"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/Office_of_Evaluation_OED/Director"
+      }
+    },
+    {
+      "@id": "_:N87aad872d7ed4c8d906a0d497e510b1a",
+      "@type": "org:Membership",
+      "org:member": {
+        "@id": "https://data.example.org/org/FAO/person/Beth_Bechdol"
+      },
+      "org:organization": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "org:role": {
+        "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Deputy_Director-General"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Clemencia_Cosentino",
+      "@type": "foaf:Person",
+      "foaf:name": "Clemencia Cosentino"
+    },
+    {
+      "@id": "https://data.example.org/org/FAO",
+      "@type": "org:Organization",
+      "dct:source": {
+        "@id": "https://www.fao.org/about/org-chart/en/"
+      },
+      "skos:notation": "FAO",
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Food and Agriculture Organization of the United Nations"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/unit/Office_of_Evaluation_OED",
+      "@type": "org:OrganizationalUnit",
+      "dct:identifier": "https://www.fao.org/evaluation/about-us/background",
+      "org:unitOf": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Office of Evaluation (OED)"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/unit/CORE_LEADERSHIP",
+      "@type": "org:OrganizationalUnit",
+      "org:unitOf": {
+        "@id": "https://data.example.org/org/FAO"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "CORE LEADERSHIP"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/post/CORE_LEADERSHIP/Deputy_Director-General",
+      "@type": "org:Post",
+      "org:postIn": {
+        "@id": "https://data.example.org/org/FAO/unit/CORE_LEADERSHIP"
+      },
+      "skos:prefLabel": {
+        "@language": "en",
+        "@value": "Deputy Director-General"
+      }
+    },
+    {
+      "@id": "https://data.example.org/org/FAO/person/Maurizio_Martina",
+      "@type": "foaf:Person",
+      "dct:identifier": "https://www.fao.org/about/leadership/martina/",
+      "foaf:name": "Maurizio Martina"
+    }
+  ]
+}
