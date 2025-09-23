@@ -5,7 +5,7 @@ import { Entity } from '@/types/entity';
 import FilterControls from './FilterControls';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getAllEntities, searchEntities } from '@/data/entities';
+import { getAllEntities, searchEntities } from '@/lib/entities';
 import { createEntitySlug } from '@/lib/utils';
 
 // Color mapping for different groups with box colors, text colors, display labels, and order

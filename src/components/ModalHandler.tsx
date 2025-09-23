@@ -3,7 +3,7 @@
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import EntityModal from './EntityModal';
-import { getEntityBySlug } from '@/data/entities';
+import { getEntityBySlug } from '@/lib/entities';
 import { Entity } from '@/types/entity';
 
 export default function ModalHandler() {

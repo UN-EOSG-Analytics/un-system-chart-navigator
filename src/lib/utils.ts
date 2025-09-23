@@ -6,6 +6,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+// FIXME: standardize with a variable instead of creating here, to make URLs safe and consistent
 // Create a safe, consistent slug from entity names
 export function createEntitySlug(entityName: string): string {
   return entityName

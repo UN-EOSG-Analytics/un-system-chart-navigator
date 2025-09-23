@@ -9,8 +9,7 @@ export default function Home() {
                     <sup className="text-lg text-gray-500 font-normal ml-1.5">alpha</sup>
                 </h1>
                 <p className="text-gray-600 text-lg leading-relaxed -mt-2">
-                    Interactive overview of United Nations System entities. For informational purposes only.
-                    You can find the print version <a href="https://www.un.org/en/delegate/page/un-system-chart" target="_blank" rel="noopener noreferrer" className="text-un-blue hover:font-bold underline">here</a>.
+                    Interactive overview of United Nations System entities. For informational purposes only and subject to official review. You can find the print version <a href="https://www.un.org/en/delegate/page/un-system-chart" target="_blank" rel="noopener noreferrer" className="text-un-blue hover:font-bold underline">here</a>.
                 </p>
                 <EntitiesGrid />
             </div>
