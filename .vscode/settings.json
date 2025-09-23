@@ -18,10 +18,6 @@
     "editor.wrappingIndent": "indent",
     // "editor.renderWhitespace": "all",
 
-    "[r]": {
-        "editor.defaultFormatter": "posit.air-vscode"
-    },
-
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff"
     },
@@ -29,13 +25,12 @@
     // Hide from the Explorer
     "files.exclude": {
         "**/__pycache__": true,
-        ".Rproj.user": true,
         "src/*.egg-info": true,
         ".ruff_cache": true,
         ".pytest_cache": true
     },
 
-    // "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "material-icon-theme",
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "interactiveWindow.executeWithShiftEnter": true,
 }

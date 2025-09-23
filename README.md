@@ -3,34 +3,43 @@
 ## Resources
 
 - https://www.un.org/en/delegate/page/un-system-chart
-- https://www.un.org/two-zero/sites/default/files/2025-06/un80_ms-brief_20250624_4.1.pdf
+- https://www.un.org/un80-initiative/en/shifting-paradigms-1
 
 ## Idea
 
-![UN System](docs/chart.png)
+> Make the UN System interactively discoverable and navigate to all available resources.
 
-## Maintenance
-
-- `npx shadcn --version` –– 2.10.0
-- `npx next --version` –– Next.js v15.4.1
+![UN System](docs/annex_un_system.png)
 
 ## Dev & Deploy
 
 1. **Install Dependencies**  
-    Run the following command to install all required dependencies:
-    ```bash
-    npm install
-    ```
+   Run the following command to install all required dependencies:
+
+   ```bash
+   npm install
+   ```
 
 2. **Run Development Server**  
-    Start the development server with:
-    ```bash
-    npm run dev
-    ```
-    The application will be available at `http://localhost:3000`.
+   Start the development server with:
+
+   ```bash
+   npm run dev
+   ```
+
+   The application will be available at `http://localhost:3000`.
 
 3. **Build for Production**  
-    To create a production build, use:
-    ```bash
-    npm run build
-    ```
+   To create a production build, use:
+   ```bash
+   npm run build
+   ```
+
+## Data
+
+- minimal data wrangling in Python from CSV
+
+## Maintenance
+
+- `npx shadcn --version`
+- `npx next --version`

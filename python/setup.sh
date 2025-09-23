@@ -4,4 +4,3 @@
 
 uv sync
 cp .env.example .env
-

@@ -1,7 +1,7 @@
 [project]
-name = "un-noon-briefings"
+name = "un-system-chart-navigator"
 version = "0.1.0"
-description = "Add your description here"
+description = "Interactively navigate the United Nations System"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
