@@ -98,17 +98,17 @@ export default function FilterControls({
   };
 
   return (
-    <div className="flex gap-2 mb-6 items-end">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 mb-4 sm:mb-6 sm:items-end">
       {/* Filter Dropdown */}
-      <div className="relative w-[320px]">
+      <div className="relative w-full sm:w-[320px]">
         <Select value={getSelectedValue()} onValueChange={handleValueChange}>
-          <SelectTrigger className="w-full h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2 transition-all duration-500 ease-out" id="category-filter">
+          <SelectTrigger className="w-full h-12 sm:h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2 transition-all duration-500 ease-out touch-manipulation" id="category-filter">
             <SelectValue asChild>
               <span className="flex items-center transition-all duration-500 ease-out">{getDisplayText()}</span>
             </SelectValue>
           </SelectTrigger>
           <SelectContent 
-            className="w-[320px] bg-white border-gray-300 z-50 animate-in fade-in slide-in-from-top-2 duration-500" 
+            className="w-full sm:w-[320px] bg-white border-gray-300 z-50 animate-in fade-in slide-in-from-top-2 duration-500" 
             position="popper"
             side="bottom"
             align="start"
@@ -137,7 +137,7 @@ export default function FilterControls({
       </div>
 
       {/* Search Input */}
-      <div className="relative w-80">
+      <div className="relative w-full sm:w-80">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -148,7 +148,7 @@ export default function FilterControls({
           placeholder="Search for entities..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="block w-full h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-sm rounded-none"
+          className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-sm sm:text-sm rounded-none touch-manipulation"
         />
       </div>
     </div>

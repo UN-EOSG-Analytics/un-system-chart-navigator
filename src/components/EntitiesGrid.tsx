@@ -84,6 +84,8 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
 
+    // All cards take exactly 1 grid cell for uniform appearance
+
     const handleClick = () => {
         onEntityClick(entitySlug);
     };
@@ -93,22 +95,23 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
             <TooltipTrigger asChild>
                 <div
                     onClick={handleClick}
-                    className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-transform duration-200 ease-out cursor-pointer hover:scale-105 active:scale-95 animate-in fade-in slide-in-from-bottom-4`}
+                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] p-2 rounded-lg flex items-center justify-center text-center transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation`}
                 >
-                    <span className="font-medium text-base leading-tight">{entity.entity}</span>
+                    <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
                 </div>
             </TooltipTrigger>
             <TooltipContent 
                 side="top" 
-                sideOffset={12} 
-                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs" 
+                sideOffset={8} 
+                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs sm:max-w-sm" 
                 hideWhenDetached
                 avoidCollisions={true}
-                collisionPadding={8}
+                collisionPadding={12}
             >
-                <div className="text-center max-w-xs">
-                    <p className="font-medium text-sm leading-tight">{entity.entity_long}</p>
-                    <p className="text-xs text-slate-500 mt-1">Click to view entity details</p>
+                <div className="text-center max-w-xs sm:max-w-sm p-1">
+                    <p className="font-medium text-xs sm:text-sm leading-tight">{entity.entity_long}</p>
+                    <p className="text-xs text-slate-500 mt-1 hidden sm:block">Click to view entity details</p>
+                    <p className="text-xs text-slate-500 mt-1 sm:hidden">Tap to view details</p>
                 </div>
             </TooltipContent>
         </Tooltip>
@@ -171,13 +174,13 @@ export default function EntitiesGrid() {
             />
 
             {/* Entities Grid */}
-            <div className="flex flex-wrap gap-3 justify-start w-full transition-all duration-1000 ease-out">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full transition-all duration-1000 ease-out">
                 {visibleEntities.map((entity: Entity) => (
                     <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
                 ))}
             </div>
 
-            <div className="mt-6 text-gray-600 text-left transition-opacity duration-500">
+            <div className="mt-4 sm:mt-6 text-gray-600 text-left transition-opacity duration-500 text-sm sm:text-base">
                 Showing {visibleEntities.length} entities
             </div>
         </div>
