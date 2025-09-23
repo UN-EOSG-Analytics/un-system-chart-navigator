@@ -2,7 +2,7 @@
 
 import { Entity } from '@/types/entity';
 import { X, ExternalLink } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface EntityModalProps {
     entity: Entity | null;
@@ -13,6 +13,9 @@ interface EntityModalProps {
 export default function EntityModal({ entity, onClose, loading }: EntityModalProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
+    const modalRef = useRef<HTMLDivElement>(null);
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
     // Animation state management
     useEffect(() => {
@@ -39,6 +42,30 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         setTimeout(() => {
             onClose();
         }, 300);
+    };
+
+    // Swipe handling
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(null);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+        
+        // Close on right swipe (swipe to dismiss)
+        if (isRightSwipe) {
+            handleClose();
+        }
     };
 
     // Prevent body scroll when modal is open while maintaining scrollbar space
@@ -70,19 +97,27 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 }`}
                 onClick={handleBackdropClick}
             >
-                <div className={`w-1/3 min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
-                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-                }`}>
-                    <div className="p-6 border-b border-gray-200 flex items-center justify-between">
-                        <div className="h-6 bg-gray-200 rounded w-48 animate-pulse"></div>
-                        <button
-                            onClick={handleClose}
-                            className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
-                        >
-                            <X size={24} />
-                        </button>
+                <div 
+                    ref={modalRef}
+                    className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
+                        isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                    }`}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                >
+                    <div className="p-4 sm:p-6 border-b border-gray-200">
+                        <div className="flex items-center justify-between">
+                            <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
+                            <button
+                                onClick={handleClose}
+                                className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 touch-manipulation flex-shrink-0"
+                            >
+                                <X size={24} />
+                            </button>
+                        </div>
                     </div>
-                    <div className="p-6 space-y-4">
+                    <div className="p-4 sm:p-6 space-y-4">
                         <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
                         <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
                         <div className="h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
@@ -100,19 +135,27 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 }`}
                 onClick={handleBackdropClick}
             >
-                <div className={`w-1/3 min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
-                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-                }`}>
-                    <div className="p-6 border-b border-gray-200 flex items-center justify-between">
-                        <h2 className="text-xl font-semibold text-gray-900">Entity Not Found</h2>
-                        <button
-                            onClick={handleClose}
-                            className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
-                        >
-                            <X size={24} />
-                        </button>
+                <div 
+                    ref={modalRef}
+                    className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
+                        isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                    }`}
+                    onTouchStart={onTouchStart}
+                    onTouchMove={onTouchMove}
+                    onTouchEnd={onTouchEnd}
+                >
+                    <div className="p-4 sm:p-6 border-b border-gray-200">
+                        <div className="flex items-center justify-between">
+                            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Entity Not Found</h2>
+                            <button
+                                onClick={handleClose}
+                                className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 touch-manipulation flex-shrink-0"
+                            >
+                                <X size={24} />
+                            </button>
+                        </div>
                     </div>
-                    <div className="p-6">
+                    <div className="p-4 sm:p-6">
                         <p className="text-gray-600">The requested entity could not be found.</p>
                     </div>
                 </div>
@@ -127,53 +170,67 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             }`}
             onClick={handleBackdropClick}
         >
-            <div className={`w-1/3 min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
-                isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-            }`}>
+            <div 
+                ref={modalRef}
+                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
+                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                }`}
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+            >
                 {/* Header */}
-                <div className="p-6 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white">
-                    <h2 className="text-xl font-semibold text-gray-900">{entity.entity_long}</h2>
-                    <button
-                        onClick={handleClose}
-                        className="p-1 hover:bg-gray-100 rounded-full transition-colors duration-200"
-                    >
-                        <X size={24} />
-                    </button>
+                <div className="p-4 sm:p-6 border-b border-gray-200 sticky top-0 bg-white">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-lg sm:text-xl font-semibold text-gray-900 pr-4 leading-tight flex-1">{entity.entity_long}</h2>
+                        <button
+                            onClick={handleClose}
+                            className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 touch-manipulation flex-shrink-0"
+                        >
+                            <X size={24} />
+                        </button>
+                    </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-6">
+                <div className="p-4 sm:p-6 space-y-6">
                     {/* Basic Info */}
                     <div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3">Overview</h3>
-                        <div className="space-y-2">
-                            <p><span className="font-medium">Category:</span> {entity.category}</p>
-                            <p><span className="font-medium">UN Principal Organ:</span> {entity.un_principal_organ}</p>
+                        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Overview</h3>
+                        <div className="space-y-3">
+                            <div>
+                                <span className="font-medium text-sm sm:text-base block sm:inline">Category:</span>
+                                <span className="text-sm sm:text-base block sm:inline sm:ml-2">{entity.category}</span>
+                            </div>
+                            <div>
+                                <span className="font-medium text-sm sm:text-base block sm:inline">UN Principal Organ:</span>
+                                <span className="text-sm sm:text-base block sm:inline sm:ml-2">{entity.un_principal_organ}</span>
+                            </div>
                         </div>
                     </div>
 
                     {/* Description */}
                     {entity.entity_description && (
                         <div>
-                            <h3 className="text-lg font-medium text-gray-900 mb-3">Description</h3>
-                            <p className="text-gray-700 leading-relaxed">{entity.entity_description}</p>
+                            <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Description</h3>
+                            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{entity.entity_description}</p>
                         </div>
                     )}
 
                     {/* Links */}
                     <div>
-                        <h3 className="text-xl font-medium text-gray-900 mb-3">Links</h3>
-                        <div className="space-y-3">
+                        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Links</h3>
+                        <div className="space-y-4">
                             {/* Website */}
                             {entity.entity_link && entity.entity_link.startsWith('https') && (
                                 <a
                                     href={entity.entity_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
+                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                                 >
-                                    <ExternalLink size={16} />
-                                    Website
+                                    <ExternalLink size={18} className="flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">Website</span>
                                 </a>
                             )}
 
@@ -183,10 +240,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.annual_reports_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
+                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                                 >
-                                    <ExternalLink size={16} />
-                                    Annual Report
+                                    <ExternalLink size={18} className="flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">Annual Report</span>
                                 </a>
                             )}
 
@@ -196,10 +253,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.budget_financial_reporting_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
+                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                                 >
-                                    <ExternalLink size={16} />
-                                    Financial Reporting
+                                    <ExternalLink size={18} className="flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">Financial Reporting</span>
                                 </a>
                             )}
 
@@ -209,10 +266,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.transparency_portal_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
+                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                                 >
-                                    <ExternalLink size={16} />
-                                    Transparency Portal
+                                    <ExternalLink size={18} className="flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">Transparency Portal</span>
                                 </a>
                             )}
 
@@ -222,10 +279,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.strategic_plan_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
+                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                                 >
-                                    <ExternalLink size={16} />
-                                    Strategic Plan
+                                    <ExternalLink size={18} className="flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">Strategic Plan</span>
                                 </a>
                             )}
 
@@ -235,10 +292,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     href={entity.results_framework_link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-un-blue hover:opacity-80 transition-opacity duration-200"
+                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                                 >
-                                    <ExternalLink size={16} />
-                                    Results Framework
+                                    <ExternalLink size={18} className="flex-shrink-0" />
+                                    <span className="text-sm sm:text-base">Results Framework</span>
                                 </a>
                             )}
                         </div>
