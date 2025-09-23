@@ -89,16 +89,23 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     };
 
     return (
-        <Tooltip disableHoverableContent delayDuration={150}>
+        <Tooltip delayDuration={50}>
             <TooltipTrigger asChild>
                 <div
                     onClick={handleClick}
-                    className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-all duration-700 ease-out cursor-pointer hover:scale-105 active:scale-95 animate-in fade-in slide-in-from-bottom-4`}
+                    className={`${styles.bgColor} ${styles.textColor} p-2 rounded-lg h-[55px] w-[140px] flex items-center justify-center text-center transition-transform duration-200 ease-out cursor-pointer hover:scale-105 active:scale-95 animate-in fade-in slide-in-from-bottom-4`}
                 >
                     <span className="font-medium text-base leading-tight">{entity.entity}</span>
                 </div>
             </TooltipTrigger>
-            <TooltipContent side="top" sideOffset={8} className="bg-white text-slate-800 border border-slate-200" hideWhenDetached>
+            <TooltipContent 
+                side="top" 
+                sideOffset={12} 
+                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs" 
+                hideWhenDetached
+                avoidCollisions={true}
+                collisionPadding={8}
+            >
                 <div className="text-center max-w-xs">
                     <p className="font-medium text-sm leading-tight">{entity.entity_long}</p>
                     <p className="text-xs text-slate-500 mt-1">Click to view entity details</p>
