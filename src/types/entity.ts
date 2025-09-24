@@ -1,32 +1,34 @@
 export interface Entity {
     entity: string;
     entity_long: string;
+    entity_combined: string;
+    entity_description: string | null;
     entity_link: string;
+    entity_link_is_un_org: number; // 1 or 0
+    entity_main_data_portal: string | null;
     system_grouping: string;
-    un_pillar: string | null;
-    on_display: string; // "TRUE" or "FALSE" as string
-    budget_financial_reporting_link: string; // Can be "No link found"
-    strategic_plan_link: string; // Can be "No link found"
-    results_framework_link: string; // Can be "No link found"
-    un_principal_organ: string;
     category: string;
-    "ceb_member?": string; // "Yes" or "No"
+    un_principal_organ: string;
+    un_pillar: string | null;
+    is_ceb_member: boolean;
     head_of_entity_level: string; // Can be "Not applicable"
     head_of_entity_title: string; // Can be "Not applicable"
     head_of_entity_name: string; // Can be "Not applicable"
-    entity_description: string | null;
-    organizational_chart_link: string | null;
+    on_display: string; // "TRUE" or "FALSE" as string
     foundational_mandate: string | null;
-    transparency_portal_link: string; // Can be "Not found"
-    annual_reports_link: string; // Can be URL or "Not found"
-    comment: string | null;
+    organizational_chart_link: string | null;
     branding_link: string | null;
-    "entity_link_is_un.org": number; // 1 or 0
+    budget_financial_reporting_link: string; // Can be "No link found"
+    results_framework_link: string; // Can be "No link found"
+    strategic_plan_link: string; // Can be "No link found"
+    annual_reports_link: string; // Can be URL or "Not found"
+    transparency_portal_link: string; // Can be "Not found"
+    socials_linkedin: string | null;
+    socials_twitter: string | null;
+    socials_instagram: string | null;
 }
 
 export interface EntityFilters {
     system_grouping?: string;
-    // un_pillar?: string;
-    // un_principal_organ?: string;
-    // category?: string;
+    // un_principal_organ?: string; # TODO
 }
