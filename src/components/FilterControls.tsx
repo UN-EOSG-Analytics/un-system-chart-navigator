@@ -76,7 +76,7 @@ export default function FilterControls({
             const totalEntities = entities.length;
             return (
                 <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded border border-gray-300 bg-gradient-to-br from-blue-50 to-purple-50 flex-shrink-0"></div>
+                    <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
                     <span className="font-medium">All Categories ({totalEntities})</span>
                 </div>
             );
@@ -96,7 +96,7 @@ export default function FilterControls({
 
         return (
             <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded border border-gray-300 bg-gradient-to-br from-blue-50 to-purple-50 flex-shrink-0"></div>
+                <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
                 <span className="font-medium">All Categories ({entities.length})</span>
             </div>
         );
@@ -126,7 +126,7 @@ export default function FilterControls({
                         >
                             <SelectItem value="all">
                                 <div className="flex items-center gap-3 py-1">
-                                    <div className="w-5 h-5 rounded border border-gray-300 bg-gradient-to-br from-blue-50 to-purple-50 flex-shrink-0"></div>
+                                    <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
                                     <span className="font-medium">All Categories ({entities.length})</span>
                                 </div>
                             </SelectItem>
