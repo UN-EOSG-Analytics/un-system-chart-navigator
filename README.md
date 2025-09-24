@@ -37,9 +37,17 @@
 
 ## Data
 
-- minimal data wrangling in Python from CSV
+- fetching from Airtable API
+- minimal data wrangling in Python, export to JSON
+
+## GitHub Actions
+
+- Daily data fetch
+- Continous deploy
 
 ## Maintenance
 
 - `npx shadcn --version`
 - `npx next --version`
+- `npx tsc --noEmit`
+- `npm run lint`
