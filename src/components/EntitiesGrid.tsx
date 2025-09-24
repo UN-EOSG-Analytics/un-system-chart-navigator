@@ -181,6 +181,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
                 onReset={handleReset}
+                visibleEntitiesCount={visibleEntities.length}
             />
 
             {/* Entities Grid */}
@@ -188,10 +189,6 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
                 {visibleEntities.map((entity: Entity) => (
                     <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
                 ))}
-            </div>
-
-            <div className="mt-4 sm:mt-6 text-gray-600 text-left transition-opacity duration-500 text-sm sm:text-base">
-                Showing {visibleEntities.length} entities
             </div>
         </div>
     );
