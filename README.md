@@ -51,3 +51,4 @@
 - `npx next --version`
 - `npx tsc --noEmit`
 - `npm run lint`
+- `npx eslint . --ext .js,.jsx,.ts,.tsx`

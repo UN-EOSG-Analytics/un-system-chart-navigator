@@ -2,7 +2,7 @@
 
 import { Entity } from '@/types/entity';
 import { X, ExternalLink } from 'lucide-react';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 
 interface EntityModalProps {
     entity: Entity | null;
@@ -24,6 +24,14 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         return () => clearTimeout(timer);
     }, []);
 
+    const handleClose = useCallback(() => {
+        setIsClosing(true);
+        // Wait for exit animation before actually closing
+        setTimeout(() => {
+            onClose();
+        }, 300);
+    }, [onClose]);
+
     // Close modal on escape key
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
@@ -34,15 +42,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
         document.addEventListener('keydown', handleEscape);
         return () => document.removeEventListener('keydown', handleEscape);
-    }, []);
-
-    const handleClose = () => {
-        setIsClosing(true);
-        // Wait for exit animation before actually closing
-        setTimeout(() => {
-            onClose();
-        }, 300);
-    };
+    }, [handleClose]);
 
     // Swipe handling
     const minSwipeDistance = 50;
@@ -59,7 +59,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
     const onTouchEnd = () => {
         if (!touchStart || !touchEnd) return;
         const distance = touchStart - touchEnd;
-        const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
         
         // Close on right swipe (swipe to dismiss)
