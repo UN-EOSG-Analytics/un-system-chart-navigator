@@ -9,6 +9,13 @@ on:
   push:
     branches: ["main"]
 
+  # Runs after the data fetching workflow completes
+  workflow_run:
+    workflows: ["Fetch Data from Airtable"]
+    types:
+      - completed
+    branches: ["main"]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
