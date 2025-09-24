@@ -91,7 +91,7 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     };
 
     return (
-        <Tooltip delayDuration={50}>
+        <Tooltip delayDuration={50} disableHoverableContent>
             <TooltipTrigger asChild>
                 <div
                     onClick={handleClick}
