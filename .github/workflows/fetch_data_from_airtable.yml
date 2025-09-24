@@ -1,0 +1,43 @@
+name: Fetch Data from Airtable
+
+on:
+  schedule:
+    - cron: "0 5 * * *" # Runs every midnight New York time (UTC-5)
+  workflow_dispatch: # Allows manual trigger
+
+permissions:
+  contents: write # This grants permission to push changes
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies from lockfile
+        run: uv sync --frozen
+
+      - name: Run data fetching script
+        env:
+          # GitHub: "settings/secrets/actions" | Repository secrets
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_TABLE_ID: ${{ secrets.AIRTABLE_TABLE_ID }}
+        run: uv run python python/pull_from_airtable.py
+
+      - name: Run data processing script
+        run: uv run python python/process_entities_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Automated data update: Refresh entities data [GitHub Actions]" || exit 0
+          git push
