@@ -52,3 +52,4 @@
 - `npx tsc --noEmit`
 - `npm run lint`
 - `npx eslint . --ext .js,.jsx,.ts,.tsx`
+- `npm run format`
