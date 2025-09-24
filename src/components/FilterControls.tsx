@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { X } from 'lucide-react';
 import { Entity } from '@/types/entity';
 
 interface FilterControlsProps {
@@ -16,6 +17,7 @@ interface FilterControlsProps {
   entities: Entity[];
   searchQuery: string;
   onSearchChange: (query: string) => void;
+  onReset: () => void;
 }
 
 export default function FilterControls({ 
@@ -24,7 +26,8 @@ export default function FilterControls({
   onToggleGroup, 
   entities, 
   searchQuery, 
-  onSearchChange 
+  onSearchChange,
+  onReset
 }: FilterControlsProps) {
   // Count entities for each group
   const groupCounts = entities.reduce((acc, entity) => {
@@ -97,6 +100,9 @@ export default function FilterControls({
     );
   };
 
+  // Check if reset is needed
+  const isResetNeeded = searchQuery.trim() !== '' || !allGroupsActive;
+
   return (
     <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 mb-4 sm:mb-6 sm:items-end">
       {/* Filter Dropdown */}
@@ -151,6 +157,23 @@ export default function FilterControls({
           className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-sm sm:text-sm rounded-none touch-manipulation"
         />
       </div>
+
+      {/* Reset Button - only show when there's something to reset */}
+      {isResetNeeded && (
+        <button
+          onClick={onReset}
+          className="
+            flex items-center justify-center h-8 w-8 rounded-full
+            transition-all duration-200 ease-out touch-manipulation
+            text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
+            focus:outline-none focus:bg-gray-400 focus:text-gray-100
+          "
+          aria-label="Clear filters and search"
+          title="Clear filters and search"
+        >
+          <X className="h-3 w-3" />
+        </button>
+      )}
     </div>
   );
 }

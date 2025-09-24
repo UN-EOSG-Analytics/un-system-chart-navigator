@@ -80,7 +80,7 @@ const groupStyles: Record<string, { bgColor: string; textColor: string; order: n
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = groupStyles[entity.system_grouping] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.system_grouping };
-    
+
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
 
@@ -100,10 +100,10 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
                     <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
                 </div>
             </TooltipTrigger>
-            <TooltipContent 
-                side="top" 
-                sideOffset={8} 
-                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs sm:max-w-sm" 
+            <TooltipContent
+                side="top"
+                sideOffset={8}
+                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs sm:max-w-sm"
                 hideWhenDetached
                 avoidCollisions={true}
                 collisionPadding={12}
@@ -140,6 +140,11 @@ export default function EntitiesGrid() {
         router.replace(`/?entity=${entitySlug}`, { scroll: false });
     };
 
+    const handleReset = () => {
+        setSearchQuery('');
+        setActiveGroups(new Set(Object.keys(groupStyles)));
+    };
+
     // Filter and sort entities
     const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
         .filter((entity: Entity) => activeGroups.has(entity.system_grouping))
@@ -171,6 +176,7 @@ export default function EntitiesGrid() {
                 entities={entities}
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
+                onReset={handleReset}
             />
 
             {/* Entities Grid */}
