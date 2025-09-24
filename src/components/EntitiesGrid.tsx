@@ -3,7 +3,7 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Entity } from '@/types/entity';
 import FilterControls from './FilterControls';
-import { useState } from 'react';
+import { useState, forwardRef, useImperativeHandle } from 'react';
 import { useRouter } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/lib/entities';
 import { createEntitySlug } from '@/lib/utils';
@@ -118,7 +118,7 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     );
 };
 
-export default function EntitiesGrid() {
+const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
@@ -144,6 +144,10 @@ export default function EntitiesGrid() {
         setSearchQuery('');
         setActiveGroups(new Set(Object.keys(groupStyles)));
     };
+
+    useImperativeHandle(ref, () => ({
+        handleReset
+    }));
 
     // Filter and sort entities
     const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
@@ -191,4 +195,8 @@ export default function EntitiesGrid() {
             </div>
         </div>
     );
-}
+});
+
+EntitiesGrid.displayName = 'EntitiesGrid';
+
+export default EntitiesGrid;
