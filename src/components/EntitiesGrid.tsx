@@ -190,6 +190,11 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
                     <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
                 ))}
             </div>
+
+            {/* As of Date */}
+            <div className="mt-4 text-left">
+                <p className="text-base text-gray-600">As of September 2025</p>
+            </div>
         </div>
     );
 });

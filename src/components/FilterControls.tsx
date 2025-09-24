@@ -181,7 +181,7 @@ export default function FilterControls({
 
                 {/* Entity Count - stays on same line on large screens only */}
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-end">
-                    <div className="text-gray-400 text-sm transition-opacity duration-500 whitespace-nowrap">
+                    <div className="text-gray-400 text-base transition-opacity duration-500 whitespace-nowrap">
                         Showing {visibleEntitiesCount} entities
                     </div>
                 </div>
