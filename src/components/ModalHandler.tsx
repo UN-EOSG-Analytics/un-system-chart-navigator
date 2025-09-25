@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import EntityModal from './EntityModal';
 import { getEntityBySlug } from '@/lib/entities';
 import { Entity } from '@/types/entity';
-
 export default function ModalHandler() {
   const searchParams = useSearchParams();
   const router = useRouter();

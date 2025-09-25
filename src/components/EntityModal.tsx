@@ -33,6 +33,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         }, 300);
     }, [onClose]);
 
+
+
     // Close modal on escape key
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
@@ -189,7 +191,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         <div>
                             <FieldLabel>System Grouping:</FieldLabel>
                             <div className="mt-1">
-                                <SystemGroupingBadge grouping={entity!.system_grouping} />
+                                <SystemGroupingBadge 
+                                    grouping={entity!.system_grouping} 
+                                    clickable={true}
+                                />
                             </div>
                         </div>
                         <div>

@@ -3,8 +3,8 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Entity } from '@/types/entity';
 import FilterControls from './FilterControls';
-import { useState, forwardRef, useImperativeHandle } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, forwardRef, useImperativeHandle, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/lib/entities';
 import { createEntitySlug } from '@/lib/utils';
 import { systemGroupingStyles, getSystemGroupingStyle } from '@/lib/systemGroupings';
@@ -49,11 +49,23 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     );
 };
 
-const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
+const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKey: string) => void }>((props, ref) => {
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
     const router = useRouter();
+    const searchParams = useSearchParams();
+
+    // Check for filter parameter on mount and when URL changes
+    useEffect(() => {
+        const filterParam = searchParams.get('filter');
+        if (filterParam) {
+            setActiveGroups(new Set([filterParam]));
+            setSearchQuery('');
+            // Clear the filter parameter from URL after applying it
+            router.replace('/', { scroll: false });
+        }
+    }, [searchParams, router]);
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
@@ -77,7 +89,8 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
     };
 
     useImperativeHandle(ref, () => ({
-        handleReset
+        handleReset,
+        toggleGroup
     }));
 
     // Filter and sort entities

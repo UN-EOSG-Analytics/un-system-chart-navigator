@@ -1,14 +1,16 @@
 'use client';
 
 import EntitiesGrid from '@/components/EntitiesGrid';
-import { useRef } from 'react';
+import { useRef, Suspense } from 'react';
 
 export default function Home() {
-    const entitiesGridRef = useRef<{ handleReset: () => void }>(null);
+    const entitiesGridRef = useRef<{ handleReset: () => void; toggleGroup: (groupKey: string) => void }>(null);
 
     const handleTitleClick = () => {
         entitiesGridRef.current?.handleReset();
     };
+
+
 
     return (
         <main className="min-h-screen w-full p-3 sm:p-4 lg:p-6">
@@ -25,7 +27,9 @@ export default function Home() {
                 <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-relaxed -mt-1 sm:-mt-2">
                     Interactive overview of United Nations System entities. For informational purposes only and subject to official review. You can find the print version <a href="https://www.un.org/en/delegate/page/un-system-chart" target="_blank" rel="noopener noreferrer" className="text-un-blue hover:font-bold">here</a>.
                 </p>
-                <EntitiesGrid ref={entitiesGridRef} />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <EntitiesGrid ref={entitiesGridRef} />
+                </Suspense>
             </div>
         </main>
     );
