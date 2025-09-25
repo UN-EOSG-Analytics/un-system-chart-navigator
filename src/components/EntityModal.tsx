@@ -60,7 +60,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         if (!touchStart || !touchEnd) return;
         const distance = touchStart - touchEnd;
         const isRightSwipe = distance < -minSwipeDistance;
-        
+
         // Close on right swipe (swipe to dismiss)
         if (isRightSwipe) {
             handleClose();
@@ -88,218 +88,229 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         }
     };
 
-    if (loading) {
+    // Reusable close button component
+    const CloseButton = () => (
+        <button
+            onClick={handleClose}
+            className="
+                flex items-center justify-center h-8 w-8 rounded-full
+                transition-all duration-200 ease-out touch-manipulation
+                text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
+                focus:outline-none focus:bg-gray-400 focus:text-gray-100 flex-shrink-0
+            "
+            aria-label="Close modal"
+            title="Close modal"
+        >
+            <X className="h-3 w-3" />
+        </button>
+    );
+
+    // Reusable subheader component
+    const SubHeader = ({ children }: { children: React.ReactNode }) => (
+        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">{children}</h3>
+    );
+
+    // Reusable field label component
+    const FieldLabel = ({ children }: { children: React.ReactNode }) => (
+        <span className="font-semibold text-gray-600 text-xs sm:text-sm uppercase tracking-wide block sm:inline">{children}</span>
+    );
+
+    // Reusable badge/chip component
+    const Badge = ({ children }: { children: React.ReactNode }) => (
+        <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm font-medium">{children}</span>
+    );
+
+    // Render header content based on state
+    const renderHeader = () => {
+        if (loading) {
+            return (
+                <div className="flex items-center justify-between">
+                    <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
+                    <CloseButton />
+                </div>
+            );
+        }
+
+        if (!entity) {
+            return (
+                <div className="flex items-center justify-between">
+                    <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Entity Not Found</h2>
+                    <CloseButton />
+                </div>
+            );
+        }
+
         return (
-            <div
-                className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
-                    isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
-                }`}
-                onClick={handleBackdropClick}
-            >
-                <div 
-                    ref={modalRef}
-                    className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
-                        isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-                    }`}
-                    onTouchStart={onTouchStart}
-                    onTouchMove={onTouchMove}
-                    onTouchEnd={onTouchEnd}
-                >
-                    <div className="p-4 sm:p-6 border-b border-gray-200">
-                        <div className="flex items-center justify-between">
-                            <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
-                            <button
-                                onClick={handleClose}
-                                className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 touch-manipulation flex-shrink-0"
-                            >
-                                <X size={24} />
-                            </button>
+            <div className="flex items-start justify-between gap-4">
+                <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1">
+                    {entity.entity}: {entity.entity_long}
+                </h2>
+                <CloseButton />
+            </div>
+        );
+    };
+
+    // Render body content based on state
+    const renderBody = () => {
+        if (loading) {
+            return (
+                <div className="p-4 sm:p-6 space-y-4">
+                    <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
+                    <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+                    <div className="h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                </div>
+            );
+        }
+
+        if (!entity) {
+            return (
+                <div className="p-4 sm:p-6">
+                    <p className="text-gray-600">The requested entity could not be found.</p>
+                </div>
+            );
+        }
+
+        // Full entity content - only if entity exists
+        return (
+            <div className="p-4 sm:p-6 space-y-6">
+                {/* Description */}
+                {entity!.entity_description && (
+                    <div>
+                        {/* <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Description</h3> */}
+                        <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{entity!.entity_description}</p>
+                    </div>
+                )}
+
+                {/* Basic Info */}
+                <div>
+                    <SubHeader>Overview</SubHeader>
+                    <div className="space-y-3">
+                        <div>
+                            <FieldLabel>Category:</FieldLabel>
+                            <div className="mt-1">
+                                <Badge>{entity!.category}</Badge>
+                            </div>
+                        </div>
+                        <div>
+                            <FieldLabel>UN Principal Organ:</FieldLabel>
+                            <div className="mt-1">
+                                <Badge>{entity!.un_principal_organ}</Badge>
+                            </div>
                         </div>
                     </div>
-                    <div className="p-4 sm:p-6 space-y-4">
-                        <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
-                        <div className="h-4 bg-gray-200 rounded w-3/4 animate-pulse"></div>
-                        <div className="h-4 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+                </div>
+
+
+
+                {/* Links */}
+                <div>
+                    <SubHeader>Links</SubHeader>
+                    <div className="space-y-1">
+                        {/* Website */}
+                        {entity!.entity_link && entity!.entity_link.startsWith('https') && (
+                            <a
+                                href={entity!.entity_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Website</span>
+                            </a>
+                        )}
+
+                        {/* Annual Report */}
+                        {entity!.annual_reports_link && entity!.annual_reports_link.startsWith('https') && (
+                            <a
+                                href={entity!.annual_reports_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Annual Reports</span>
+                            </a>
+                        )}
+
+                        {/* Financials */}
+                        {entity!.budget_financial_reporting_link && entity!.budget_financial_reporting_link.startsWith('https') && (
+                            <a
+                                href={entity!.budget_financial_reporting_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Financial Reporting</span>
+                            </a>
+                        )}
+
+                        {/* Transparency Portal */}
+                        {entity!.transparency_portal_link && entity!.transparency_portal_link.startsWith('https') && (
+                            <a
+                                href={entity!.transparency_portal_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Transparency Portal</span>
+                            </a>
+                        )}
+
+                        {/* Strategic Plan */}
+                        {entity!.strategic_plan_link && entity!.strategic_plan_link.startsWith('https') && (
+                            <a
+                                href={entity!.strategic_plan_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Strategic Plan</span>
+                            </a>
+                        )}
+
+                        {/* Results Framework */}
+                        {entity!.results_framework_link && entity!.results_framework_link.startsWith('https') && (
+                            <a
+                                href={entity!.results_framework_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Results Framework</span>
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>
         );
-    }
+    };
 
-    if (!entity) {
-        return (
-            <div
-                className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
-                    isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
-                }`}
-                onClick={handleBackdropClick}
-            >
-                <div 
-                    ref={modalRef}
-                    className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${
-                        isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-                    }`}
-                    onTouchStart={onTouchStart}
-                    onTouchMove={onTouchMove}
-                    onTouchEnd={onTouchEnd}
-                >
-                    <div className="p-4 sm:p-6 border-b border-gray-200">
-                        <div className="flex items-center justify-between">
-                            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Entity Not Found</h2>
-                            <button
-                                onClick={handleClose}
-                                className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 touch-manipulation flex-shrink-0"
-                            >
-                                <X size={24} />
-                            </button>
-                        </div>
-                    </div>
-                    <div className="p-4 sm:p-6">
-                        <p className="text-gray-600">The requested entity could not be found.</p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-
+    // Single modal wrapper with dynamic content
     return (
         <div
-            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${
-                isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${isVisible && !isClosing ? 'opacity-100' : 'opacity-0'
+                }`}
             onClick={handleBackdropClick}
         >
-            <div 
+            <div
                 ref={modalRef}
-                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out overflow-y-auto ${
-                    isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
-                }`}
+                className={`w-full sm:w-2/3 md:w-1/2 lg:w-1/3 sm:min-w-[400px] lg:min-w-[500px] h-full bg-white shadow-2xl transition-transform duration-300 ease-out ${entity ? 'overflow-y-auto' : ''} ${isVisible && !isClosing ? 'translate-x-0' : 'translate-x-full'
+                    }`}
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className="p-4 sm:p-6 border-b border-gray-200 sticky top-0 bg-white">
-                    <div className="flex items-center justify-between">
-                        <h2 className="text-lg sm:text-xl font-semibold text-gray-900 pr-4 leading-tight flex-1">{entity.entity_long}</h2>
-                        <button
-                            onClick={handleClose}
-                            className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 touch-manipulation flex-shrink-0"
-                        >
-                            <X size={24} />
-                        </button>
-                    </div>
+                <div className={`px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
+                    {renderHeader()}
                 </div>
 
-                {/* Content */}
-                <div className="p-4 sm:p-6 space-y-6">
-                    {/* Basic Info */}
-                    <div>
-                        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Overview</h3>
-                        <div className="space-y-3">
-                            <div>
-                                <span className="font-medium text-sm sm:text-base block sm:inline">Category:</span>
-                                <span className="text-sm sm:text-base block sm:inline sm:ml-2">{entity.category}</span>
-                            </div>
-                            <div>
-                                <span className="font-medium text-sm sm:text-base block sm:inline">UN Principal Organ:</span>
-                                <span className="text-sm sm:text-base block sm:inline sm:ml-2">{entity.un_principal_organ}</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Description */}
-                    {entity.entity_description && (
-                        <div>
-                            <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Description</h3>
-                            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{entity.entity_description}</p>
-                        </div>
-                    )}
-
-                    {/* Links */}
-                    <div>
-                        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Links</h3>
-                        <div className="space-y-4">
-                            {/* Website */}
-                            {entity.entity_link && entity.entity_link.startsWith('https') && (
-                                <a
-                                    href={entity.entity_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                                >
-                                    <ExternalLink size={18} className="flex-shrink-0" />
-                                    <span className="text-sm sm:text-base">Website</span>
-                                </a>
-                            )}
-
-                            {/* Annual Report */}
-                            {entity.annual_reports_link && entity.annual_reports_link.startsWith('https') && (
-                                <a
-                                    href={entity.annual_reports_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                                >
-                                    <ExternalLink size={18} className="flex-shrink-0" />
-                                    <span className="text-sm sm:text-base">Annual Report</span>
-                                </a>
-                            )}
-
-                            {/* Financials */}
-                            {entity.budget_financial_reporting_link && entity.budget_financial_reporting_link.startsWith('https') && (
-                                <a
-                                    href={entity.budget_financial_reporting_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                                >
-                                    <ExternalLink size={18} className="flex-shrink-0" />
-                                    <span className="text-sm sm:text-base">Financial Reporting</span>
-                                </a>
-                            )}
-
-                            {/* Transparency Portal */}
-                            {entity.transparency_portal_link && entity.transparency_portal_link.startsWith('https') && (
-                                <a
-                                    href={entity.transparency_portal_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                                >
-                                    <ExternalLink size={18} className="flex-shrink-0" />
-                                    <span className="text-sm sm:text-base">Transparency Portal</span>
-                                </a>
-                            )}
-
-                            {/* Strategic Plan */}
-                            {entity.strategic_plan_link && entity.strategic_plan_link.startsWith('https') && (
-                                <a
-                                    href={entity.strategic_plan_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                                >
-                                    <ExternalLink size={18} className="flex-shrink-0" />
-                                    <span className="text-sm sm:text-base">Strategic Plan</span>
-                                </a>
-                            )}
-
-                            {/* Results Framework */}
-                            {entity.results_framework_link && entity.results_framework_link.startsWith('https') && (
-                                <a
-                                    href={entity.results_framework_link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 p-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                                >
-                                    <ExternalLink size={18} className="flex-shrink-0" />
-                                    <span className="text-sm sm:text-base">Results Framework</span>
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                </div>
+                {/* Body Content */}
+                {renderBody()}
             </div>
         </div>
     );
