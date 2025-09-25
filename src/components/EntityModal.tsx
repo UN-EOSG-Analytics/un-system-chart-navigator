@@ -3,6 +3,7 @@
 import { Entity } from '@/types/entity';
 import { X, ExternalLink } from 'lucide-react';
 import { useEffect, useState, useRef, useCallback } from 'react';
+import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 
 interface EntityModalProps {
     entity: Entity | null;
@@ -186,7 +187,13 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                     <SubHeader>Overview</SubHeader>
                     <div className="space-y-4">
                         <div>
-                            <FieldLabel>Category:</FieldLabel>
+                            <FieldLabel>System Grouping:</FieldLabel>
+                            <div className="mt-1">
+                                <SystemGroupingBadge grouping={entity!.system_grouping} />
+                            </div>
+                        </div>
+                        <div>
+                            <FieldLabel>Entity Category:</FieldLabel>
                             <div className="mt-1">
                                 <Badge>{entity!.category}</Badge>
                             </div>

@@ -7,79 +7,10 @@ import { useState, forwardRef, useImperativeHandle } from 'react';
 import { useRouter } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/lib/entities';
 import { createEntitySlug } from '@/lib/utils';
-
-// Color mapping for different groups with box colors, text colors, display labels, and order
-const groupStyles: Record<string, { bgColor: string; textColor: string; order: number; label: string }> = {
-    'UN Secretariat': {
-        bgColor: 'bg-un-gray',
-        textColor: 'text-black',
-        order: 1,
-        label: 'UN Secretariat'
-    },
-    'Peacekeeping operations and political missions': {
-        label: 'Peacekeeping Operations, Political Missions, etc.',
-        bgColor: 'bg-un-red',
-        textColor: 'text-white',
-        order: 2
-    },
-    'Regional Commissions': {
-        bgColor: 'bg-un-system-aubergine',
-        textColor: 'text-white',
-        order: 3,
-        label: 'Regional Commissions'
-    },
-    'Funds and Programmes': {
-        bgColor: 'bg-camouflage-green',
-        textColor: 'text-white',
-        order: 4,
-        label: 'Funds & Programmes'
-    },
-    'Research and Training': {
-        bgColor: 'bg-camouflage-green',
-        textColor: 'text-white',
-        order: 5,
-        label: 'Research & Training'
-    },
-    'Subsidiary Organs': {
-        bgColor: 'bg-trout',
-        textColor: 'text-white',
-        order: 6,
-        label: 'Subsidiary Organs'
-    },
-    'International Court of Justice': {
-        bgColor: 'bg-shuttle-gray',
-        textColor: 'text-white',
-        order: 7,
-        label: 'International Court of Justice'
-    },
-    'Specialized Agencies': {
-        bgColor: 'bg-shuttle-gray',
-        textColor: 'text-white',
-        order: 8,
-        label: 'Specialized Agencies'
-    },
-    'Related Organizations': {
-        bgColor: 'bg-black',
-        textColor: 'text-white',
-        order: 9,
-        label: 'Related Organizations'
-    },
-    'Other Entities': {
-        bgColor: 'bg-gray-500',
-        textColor: 'text-white',
-        order: 10,
-        label: 'Other Entities'
-    },
-    'Other Bodies': {
-        bgColor: 'bg-pale-oyster',
-        textColor: 'text-white',
-        order: 11,
-        label: 'Other Bodies'
-    },
-};
+import { systemGroupingStyles, getSystemGroupingStyle } from '@/lib/systemGroupings';
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
-    const styles = groupStyles[entity.system_grouping] || { bgColor: 'bg-gray-400', textColor: 'text-white', order: 999, label: entity.system_grouping };
+    const styles = getSystemGroupingStyle(entity.system_grouping);
 
     // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
@@ -120,7 +51,7 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
 
 const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
     const entities = getAllEntities();
-    const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(groupStyles)));
+    const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
     const router = useRouter();
 
@@ -128,7 +59,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
         setActiveGroups(prev => {
             // If this group is the only active one, show all groups
             if (prev.size === 1 && prev.has(groupKey)) {
-                return new Set(Object.keys(groupStyles));
+                return new Set(Object.keys(systemGroupingStyles));
             }
             // Otherwise, show only this group
             return new Set([groupKey]);
@@ -142,7 +73,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
 
     const handleReset = () => {
         setSearchQuery('');
-        setActiveGroups(new Set(Object.keys(groupStyles)));
+        setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
     };
 
     useImperativeHandle(ref, () => ({
@@ -153,10 +84,10 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
     const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
         .filter((entity: Entity) => activeGroups.has(entity.system_grouping))
         .sort((a: Entity, b: Entity) => {
-            // First sort by group order defined in groupStyles
+            // First sort by group order defined in systemGroupingStyles
             if (a.system_grouping !== b.system_grouping) {
-                const orderA = groupStyles[a.system_grouping]?.order || 999;
-                const orderB = groupStyles[b.system_grouping]?.order || 999;
+                const orderA = getSystemGroupingStyle(a.system_grouping).order;
+                const orderB = getSystemGroupingStyle(b.system_grouping).order;
                 return orderA - orderB;
             }
             // Within the same group, sort alphabetically but put "Other" at the end
@@ -174,7 +105,6 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void }>((props, ref) => {
         <div className="w-full">
             {/* Search and Filter Controls */}
             <FilterControls
-                groupStyles={groupStyles}
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}
                 entities={entities}

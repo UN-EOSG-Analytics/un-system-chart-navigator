@@ -9,9 +9,9 @@ import {
 } from '@/components/ui/select';
 import { X } from 'lucide-react';
 import { Entity } from '@/types/entity';
+import { systemGroupingStyles, getSortedSystemGroupings } from '@/lib/systemGroupings';
 
 interface FilterControlsProps {
-    groupStyles: Record<string, { bgColor: string; textColor: string; order: number; label: string }>;
     activeGroups: Set<string>;
     onToggleGroup: (groupKey: string) => void;
     entities: Entity[];
@@ -22,7 +22,6 @@ interface FilterControlsProps {
 }
 
 export default function FilterControls({
-    groupStyles,
     activeGroups,
     onToggleGroup,
     entities,
@@ -38,10 +37,10 @@ export default function FilterControls({
     }, {} as Record<string, number>);
 
     // Check if all groups are active (showing all) or only specific ones are filtered
-    const allGroupsActive = activeGroups.size === Object.keys(groupStyles).length;
+    const allGroupsActive = activeGroups.size === Object.keys(systemGroupingStyles).length;
 
     // Sort groups by their order
-    const sortedGroups = Object.entries(groupStyles).sort(([, a], [, b]) => a.order - b.order);
+    const sortedGroups = getSortedSystemGroupings();
 
     // Determine current selection value
     const getSelectedValue = () => {
@@ -77,14 +76,14 @@ export default function FilterControls({
             return (
                 <div className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0 ml-3"></div>
-                    <span className="font-medium text-base">All Categories ({totalEntities})</span>
+                    <span className="font-medium text-base">All Groups ({totalEntities})</span>
                 </div>
             );
         }
 
         if (activeGroups.size === 1) {
             const activeGroup = Array.from(activeGroups)[0];
-            const styles = groupStyles[activeGroup];
+            const styles = systemGroupingStyles[activeGroup];
             const count = groupCounts[activeGroup] || 0;
             return (
                 <div className="flex items-center gap-3">
@@ -97,7 +96,7 @@ export default function FilterControls({
         return (
             <div className="flex items-center gap-3">
                 <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0 ml-3"></div>
-                <span className="font-medium">All Categories ({entities.length})</span>
+                <span className="font-medium">All Groups ({entities.length})</span>
             </div>
         );
     };
@@ -127,7 +126,7 @@ export default function FilterControls({
                             <SelectItem value="all">
                                 <div className="flex items-center gap-3 py-1">
                                     <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
-                                    <span className="font-medium text-base">All Categories ({entities.length})</span>
+                                    <span className="font-medium text-base">All Groups ({entities.length})</span>
                                 </div>
                             </SelectItem>
 
