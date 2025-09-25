@@ -76,8 +76,8 @@ export default function FilterControls({
             const totalEntities = entities.length;
             return (
                 <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
-                    <span className="font-medium">All Categories ({totalEntities})</span>
+                    <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0 ml-3"></div>
+                    <span className="font-medium text-base">All Categories ({totalEntities})</span>
                 </div>
             );
         }
@@ -88,15 +88,15 @@ export default function FilterControls({
             const count = groupCounts[activeGroup] || 0;
             return (
                 <div className="flex items-center gap-3">
-                    <div className={`${styles.bgColor} w-5 h-5 rounded flex-shrink-0`}></div>
-                    <span className="font-medium">{styles.label} ({count})</span>
+                    <div className={`${styles.bgColor} w-5 h-5 rounded flex-shrink-0 ml-3`}></div>
+                    <span className="font-medium text-base">{styles.label} ({count})</span>
                 </div>
             );
         }
 
         return (
             <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
+                <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0 ml-3"></div>
                 <span className="font-medium">All Categories ({entities.length})</span>
             </div>
         );
@@ -127,7 +127,7 @@ export default function FilterControls({
                             <SelectItem value="all">
                                 <div className="flex items-center gap-3 py-1">
                                     <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
-                                    <span className="font-medium">All Categories ({entities.length})</span>
+                                    <span className="font-medium text-base">All Categories ({entities.length})</span>
                                 </div>
                             </SelectItem>
 
@@ -158,7 +158,7 @@ export default function FilterControls({
                         placeholder="Search for entities..."
                         value={searchQuery}
                         onChange={(e) => onSearchChange(e.target.value)}
-                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-sm sm:text-sm rounded-none touch-manipulation"
+                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-base rounded-none touch-manipulation"
                     />
                 </div>
 
