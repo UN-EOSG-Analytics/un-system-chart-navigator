@@ -107,12 +107,12 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
     // Reusable subheader component
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
-        <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">{children}</h3>
+        <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-3 uppercase tracking-wider">{children}</h3>
     );
 
     // Reusable field label component
     const FieldLabel = ({ children }: { children: React.ReactNode }) => (
-        <span className="font-semibold text-gray-600 text-xs sm:text-sm uppercase tracking-wide block sm:inline">{children}</span>
+        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">{children}</span>
     );
 
     // Reusable badge/chip component
@@ -172,7 +172,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
         // Full entity content - only if entity exists
         return (
-            <div className="p-4 sm:p-6 space-y-6">
+            <div className="p-6 sm:p-8 space-y-6">
                 {/* Description */}
                 {entity!.entity_description && (
                     <div>
@@ -184,7 +184,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 {/* Basic Info */}
                 <div>
                     <SubHeader>Overview</SubHeader>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                         <div>
                             <FieldLabel>Category:</FieldLabel>
                             <div className="mt-1">
@@ -305,7 +305,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className={`px-4 sm:px-6 pt-4 sm:pt-6 pb-3 sm:pb-4 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-3 sm:pb-4 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 
