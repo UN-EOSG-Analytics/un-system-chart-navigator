@@ -1,7 +1,7 @@
 'use client';
 
 import { Entity } from '@/types/entity';
-import { X, Linkedin, Globe, FileText, DollarSign, Eye, Target, BarChart3 } from 'lucide-react';
+import { X, Linkedin, Globe, FileText, DollarSign, Eye, Target, BarChart3, Newspaper } from 'lucide-react';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 import Image from 'next/image';
@@ -343,6 +343,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             </a>
                         )}
 
+                        {/* News Portal */}
+                        {entity!.entity_news_portal && entity!.entity_news_portal.startsWith('https') && (
+                            <a
+                                href={entity!.entity_news_portal}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <Newspaper size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">News</span>
+                            </a>
+                        )}
+
                         {/* Annual Report */}
                         {entity!.annual_reports_link && entity!.annual_reports_link.startsWith('https') && (
                             <a
@@ -353,6 +366,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             >
                                 <FileText size={18} className="flex-shrink-0" />
                                 <span className="text-sm sm:text-base">Annual Reports</span>
+                            </a>
+                        )}
+
+                            {/* Transparency Portal */}
+                        {entity!.transparency_portal_link && entity!.transparency_portal_link.startsWith('https') && (
+                            <a
+                                href={entity!.transparency_portal_link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <Eye size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Transparency Portal</span>
                             </a>
                         )}
 
@@ -369,18 +395,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             </a>
                         )}
 
-                        {/* Transparency Portal */}
-                        {entity!.transparency_portal_link && entity!.transparency_portal_link.startsWith('https') && (
-                            <a
-                                href={entity!.transparency_portal_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <Eye size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Transparency Portal</span>
-                            </a>
-                        )}
+                    
 
                         {/* Strategic Plan */}
                         {entity!.strategic_plan_link && entity!.strategic_plan_link.startsWith('https') && (
