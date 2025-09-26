@@ -21,6 +21,15 @@ records = table.all(view="API ALL")
 if records:
     data = [record["fields"] for record in records]
     df = pd.DataFrame(data)
+    
+    
+# Check for duplicate entities
+duplicates = df[df["entity"].duplicated(keep=False)]["entity"]
+if not duplicates.empty:
+    print("Warning: Duplicate entities found in the input data:")
+    print(duplicates.to_list())
+else:
+    print("All entities are unique.")
 
 # df.shape[1]
 # df.shape[0]

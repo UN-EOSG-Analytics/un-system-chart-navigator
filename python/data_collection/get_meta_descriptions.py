@@ -1,4 +1,3 @@
-import re
 from pathlib import Path
 
 import pandas as pd
@@ -6,9 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-# Constants
 SKIP_REDOWNLOAD = True  # Set to False to redownload all files
-REQUEST_TIMEOUT = 30  # Timeout for HTTP requests in seconds
+REQUEST_TIMEOUT = 30
 REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
@@ -22,7 +20,6 @@ def download_html(url, filepath):
 
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(response.text)
-
         return True, None
     except Exception as e:
         return False, str(e)
@@ -119,6 +116,7 @@ def process_entity(row, download_folder, download_stats, extraction_stats):
 data_folder = Path("data")
 input_path = data_folder / "input" / "input_entities.csv"
 download_folder = data_folder / "downloads" / "entity_pages"
+download_folder.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(input_path)
 
@@ -131,8 +129,7 @@ meta_description_list = []
 download_stats = {"success": 0, "skipped": 0, "failed": 0}
 extraction_stats = {"success": 0, "failed": 0, "no_file": 0}
 
-# Process entities with progress bar
-print("\nProcessing entities...")
+# Process entities
 for _, row in tqdm(
     df.iterrows(),
     total=len(df),
@@ -146,20 +143,12 @@ for _, row in tqdm(
     download_status_list.append(download_status)
     meta_description_list.append(meta_description)
 
-# Add results to the filtered dataframe
-df = df.copy()
+# Add results to the dataframe
 df["html_downloaded"] = html_downloaded_list
 df["download_status"] = download_status_list
 df["meta_description"] = meta_description_list
 
-# Merge back with original dataframe
-df = df.merge(
-    df[["entity", "html_downloaded", "download_status", "meta_description"]],
-    on="entity",
-    how="left",
-)
-
-# Fill NaN values for entities without links
+# Fill NaN values for entities without links (if any)
 df["html_downloaded"] = df["html_downloaded"].fillna(False)
 df["download_status"] = df["download_status"].fillna("No link available")
 df["meta_description"] = df["meta_description"].fillna("No link available")
