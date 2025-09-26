@@ -238,42 +238,69 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             <div className="space-y-4">
                                 {entity!.head_of_entity_name !== "Not applicable" && (
                                     <Field label="Head of Entity">
-                                        <div className="flex items-start gap-4 ml-0.5">
-                                            {entity!.head_of_entity_headshot && entity!.head_of_entity_headshot.trim() !== '' && (
-                                                <div className="relative w-16 h-20 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
-                                                    <Image
-                                                        src={entity!.head_of_entity_headshot}
-                                                        alt={`Portrait of ${entity!.head_of_entity_name}`}
-                                                        fill
-                                                        className="object-cover object-top"
-                                                        unoptimized={true}
-                                                        onError={(e) => {
-                                                            console.log('Image failed to load:', entity!.head_of_entity_headshot);
-                                                            e.currentTarget.style.display = 'none';
-                                                        }}
-                                                    />
-                                                </div>
-                                            )}
-                                            <div className="flex flex-col justify-center min-h-[5rem]">
-                                                <div>
-                                                    {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
-                                                        <a
-                                                            href={entity!.head_of_entity_bio}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="text-un-blue hover:opacity-80 transition-opacity duration-200 text-base font-semibold underline decoration-1 underline-offset-2 leading-relaxed block"
-                                                        >
-                                                            {entity!.head_of_entity_name}
-                                                        </a>
-                                                    ) : (
-                                                        <span className="text-gray-700 text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
-                                                    )}
-                                                    {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
-                                                        <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        </div>
+                                        {(() => {
+                                            const hasPhoto = entity!.head_of_entity_headshot && entity!.head_of_entity_headshot.trim() !== '';
+
+                                            if (hasPhoto) {
+                                                return (
+                                                    <div className="flex items-start gap-4 ml-0.5">
+                                                        <div className="relative w-16 h-20 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
+                                                            <Image
+                                                                src={entity!.head_of_entity_headshot!}
+                                                                alt={`Portrait of ${entity!.head_of_entity_name}`}
+                                                                fill
+                                                                className="object-cover object-top"
+                                                                unoptimized={true}
+                                                                onError={(e) => {
+                                                                    console.log('Image failed to load:', entity!.head_of_entity_headshot);
+                                                                    e.currentTarget.style.display = 'none';
+                                                                }}
+                                                            />
+                                                        </div>
+                                                        <div className="flex flex-col justify-center min-h-[5rem]">
+                                                            <div>
+                                                                {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                                    <a
+                                                                        href={entity!.head_of_entity_bio}
+                                                                        target="_blank"
+                                                                        rel="noopener noreferrer"
+                                                                        className="text-un-blue hover:opacity-80 transition-opacity duration-200 text-base font-semibold underline decoration-1 underline-offset-2 leading-relaxed block"
+                                                                    >
+                                                                        {entity!.head_of_entity_name}
+                                                                    </a>
+                                                                ) : (
+                                                                    <span className="text-gray-700 text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                                )}
+                                                                {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
+                                                                    <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            } else {
+                                                // No photo - content shifts up to align with label but maintains consistent indent
+                                                return (
+                                                    <div className="ml-0.5">
+                                                        {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                            <a
+                                                                href={entity!.head_of_entity_bio}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-un-blue hover:opacity-80 transition-opacity duration-200 text-base font-semibold underline decoration-1 underline-offset-2 leading-relaxed block"
+                                                            >
+                                                                {entity!.head_of_entity_name}
+                                                            </a>
+                                                        ) : (
+                                                            <span className="text-gray-700 text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                        )}
+                                                        {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
+                                                            <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
+                                                        )}
+                                                    </div>
+                                                );
+                                            }
+                                        })()}
                                     </Field>
                                 )}
                                 {entity!.head_of_entity_level !== "Not applicable" && (
