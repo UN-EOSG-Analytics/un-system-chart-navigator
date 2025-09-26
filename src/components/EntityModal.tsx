@@ -4,6 +4,7 @@ import { Entity } from '@/types/entity';
 import { X, ExternalLink } from 'lucide-react';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
+import Image from 'next/image';
 
 interface EntityModalProps {
     entity: Entity | null;
@@ -219,7 +220,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 {/* Leadership */}
                 {(() => {
                     const hasLeadershipInfo = entity!.head_of_entity_level !== "Not applicable" ||
-                        entity!.head_of_entity_title !== "Not applicable" ||
+                        entity!.head_of_entity_title_specific !== "Not applicable" ||
                         entity!.head_of_entity_name !== "Not applicable";
 
                     if (!hasLeadershipInfo) {
@@ -237,18 +238,42 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             <div className="space-y-4">
                                 {entity!.head_of_entity_name !== "Not applicable" && (
                                     <Field label="Head of Entity">
-                                        {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
-                                            <a
-                                                href={entity!.head_of_entity_bio}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-block text-un-blue hover:opacity-80 transition-opacity duration-200 text-sm sm:text-base font-medium underline decoration-1 underline-offset-2"
-                                            >
-                                                {entity!.head_of_entity_name}
-                                            </a>
-                                        ) : (
-                                            <span className="text-gray-700 text-sm sm:text-base font-medium">{entity!.head_of_entity_name}</span>
-                                        )}
+                                        <div className="flex items-start gap-4 ml-0.5">
+                                            {entity!.head_of_entity_headshot && entity!.head_of_entity_headshot.trim() !== '' && (
+                                                <div className="relative w-16 h-20 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
+                                                    <Image
+                                                        src={entity!.head_of_entity_headshot}
+                                                        alt={`Portrait of ${entity!.head_of_entity_name}`}
+                                                        fill
+                                                        className="object-cover object-top"
+                                                        unoptimized={true}
+                                                        onError={(e) => {
+                                                            console.log('Image failed to load:', entity!.head_of_entity_headshot);
+                                                            e.currentTarget.style.display = 'none';
+                                                        }}
+                                                    />
+                                                </div>
+                                            )}
+                                            <div className="flex flex-col justify-center min-h-[5rem]">
+                                                <div>
+                                                    {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                        <a
+                                                            href={entity!.head_of_entity_bio}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-un-blue hover:opacity-80 transition-opacity duration-200 text-base font-semibold underline decoration-1 underline-offset-2 leading-relaxed block"
+                                                        >
+                                                            {entity!.head_of_entity_name}
+                                                        </a>
+                                                    ) : (
+                                                        <span className="text-gray-700 text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                    )}
+                                                    {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
+                                                        <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </Field>
                                 )}
                                 {entity!.head_of_entity_level !== "Not applicable" && (

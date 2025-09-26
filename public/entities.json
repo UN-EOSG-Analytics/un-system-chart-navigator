@@ -12,10 +12,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -27,7 +30,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"BINUH",
@@ -42,10 +46,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG ",
+    "head_of_entity_title_general":"SRSG ",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Mar\u00eda Isabel Salvador",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -57,7 +64,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"CEB",
@@ -72,10 +80,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"CEB Secretary\/CEB Secretariat Director",
+    "head_of_entity_title_general":"Director of the CEB Secretariat and Secretary of the CEB",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Maaike Jansen",
     "head_of_entity_level":"D-2 or equivalent",
-    "head_of_entity_bio":null,
+    "head_of_entity_bio":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/maaike-jansen",
+    "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Maaike%20Jansen.JPG",
+    "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-system-chief-executives-board-for-coordination\/all",
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -87,7 +98,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"CNMC",
@@ -102,10 +114,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -117,7 +132,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"CTBTO",
@@ -132,10 +148,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Robert Floyd",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -147,7 +166,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/ctbto\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"CTED",
@@ -162,10 +182,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Natalia Gherman",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -177,7 +200,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/counter-terrorism-committee-executive-directorate-cted\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DA",
@@ -192,10 +216,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -207,7 +234,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DESA",
@@ -222,10 +250,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Li Junhua",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/development\/desa\/en\/about\/organigramme",
@@ -237,7 +268,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-department-of-economic-and-social-affairs",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DGACM",
@@ -252,10 +284,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Movses Abelian",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/dgacm\/en\/content\/structure",
@@ -267,7 +302,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DGC",
@@ -282,10 +318,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Melissa Fleming",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/melissa-fleming",
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -297,7 +336,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DMSPC",
@@ -312,10 +352,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Catherine Pollard",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -327,7 +370,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DOS",
@@ -342,10 +386,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Atul Khare",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/operationalsupport.un.org\/en\/organizational-structure",
@@ -357,7 +404,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DPO",
@@ -372,10 +420,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Jean-Pierre Fran\u00e7ois Renaud Lacroix",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/peacekeeping.un.org\/en\/department-of-peace-operations",
@@ -387,7 +438,8 @@
     "transparency_portal_link":"https:\/\/peacekeeping.un.org\/en\/open-data-portal",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-department-of-peace-operations\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DPPA",
@@ -402,10 +454,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Rosemary DiCarlo",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -417,7 +472,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-dppa\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"DSS",
@@ -432,10 +488,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Gilles Michaud",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/safety-and-security\/en\/about-us\/organisational-chart",
@@ -447,7 +506,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-department-of-safety-and-security\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ECA",
@@ -462,10 +522,13 @@
     "un_principal_organ":"Economic and Social Council \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Claver Gatete",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -477,7 +540,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-economic-commission-for-africa\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ECE",
@@ -492,10 +556,13 @@
     "un_principal_organ":"Economic and Social Council \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Tatiana Molcean",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -507,7 +574,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-economic-commission-for-europe\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ECLAC",
@@ -522,10 +590,13 @@
     "un_principal_organ":"Economic and Social Council \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Jos\u00e9 Manuel Salazar-Xirinachs",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/www.cepal.org\/en\/about\/mandate-and-mission",
     "organizational_chart_link":null,
@@ -537,7 +608,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/eclac\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"EO",
@@ -552,10 +624,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Chair",
+    "head_of_entity_title_general":"Chair",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Juraj Strasser",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -567,7 +642,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"EOSG",
@@ -582,10 +658,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":"Under-Secretary-General for Policy",
     "head_of_entity_name":"Guy Bernard Ryder",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/usg-policy.jpg",
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -597,7 +676,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ESCAP",
@@ -612,10 +692,13 @@
     "un_principal_organ":"Economic and Social Council \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Armida Salsiah Alisjahbana",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -627,7 +710,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unescap\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ESCWA",
@@ -642,10 +726,13 @@
     "un_principal_organ":"Economic and Social Council \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Rola A. A. H. Dashti",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -657,7 +744,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unescwa",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"FAO",
@@ -672,10 +760,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Qu Dongyu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.fao.org\/about\/org-chart\/en\/",
@@ -687,7 +778,8 @@
     "transparency_portal_link":"https:\/\/www.fao.org\/transparency\/en",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/fao",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"GoE-DRC",
@@ -702,10 +794,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -717,7 +812,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IAEA",
@@ -732,10 +828,13 @@
     "un_principal_organ":"General Assembly \/ Security Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Rafael Mariano Grossi",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -747,7 +846,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/iaea",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ICAO",
@@ -762,10 +862,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Secretary-General",
+    "head_of_entity_title_general":"Secretary-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Juan Carlos Salazar",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.icao.int\/sites\/default\/files\/Meetings\/a42\/Documents\/WP\/wp_037_en.pdf",
@@ -777,7 +880,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-civil-aviation-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ICC",
@@ -792,10 +896,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"President",
+    "head_of_entity_title_general":"President",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Judge Tomoko Akane",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -807,7 +914,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-criminal-court",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ICJ",
@@ -822,10 +930,13 @@
     "un_principal_organ":"International Court of Justice",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"President",
+    "head_of_entity_title_general":"President",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Iwasawa Yuji",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"MAYBE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -837,7 +948,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/cour-internationale-de-justice-international-court-of-justice\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ICSC",
@@ -852,10 +964,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Chairman",
+    "head_of_entity_title_general":"Chairman",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Larbi Djacta",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -867,7 +982,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-civil-service-commission",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IFAD",
@@ -882,10 +998,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"President",
+    "head_of_entity_title_general":"President",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Alvaro Lario",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.ifad.org\/documents\/d\/new-ifad.org\/ifad-organigram",
@@ -897,7 +1016,8 @@
     "transparency_portal_link":"https:\/\/www.ifad.org\/en\/operations-dashboard",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-fund-for-agricultural-development\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IIIM",
@@ -912,10 +1032,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Head",
+    "head_of_entity_title_general":"Head",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Robert Petit",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -927,7 +1050,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-impartial-and-independent-mechanism-syria",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IIMM",
@@ -942,10 +1066,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Head",
+    "head_of_entity_title_general":"Head",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Nicholas Koumjian",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -957,7 +1084,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ILO",
@@ -972,10 +1100,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Gilbert F. Houngbo",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.ilo.org\/sites\/default\/files\/2025-01\/ILO_organizational%20chart_Jan-2025-EN.pdf",
@@ -987,7 +1118,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-labour-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IMF",
@@ -1002,10 +1134,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Managing Director",
+    "head_of_entity_title_general":"Managing Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Kristalina Georgieva",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.imf.org\/en\/About\/Organization-Chart",
@@ -1017,7 +1152,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-monetary-fund\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IMO",
@@ -1032,10 +1168,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Secretary-General",
+    "head_of_entity_title_general":"Secretary-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Arsenio Dominguez",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1047,7 +1186,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-maritime-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"IOM",
@@ -1062,10 +1202,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Amy Pope",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1077,7 +1220,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-organization-for-migration-iom\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ISA",
@@ -1092,10 +1236,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Secretary-General",
+    "head_of_entity_title_general":"Secretary-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Leticia Reis de Carvalho",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1107,7 +1254,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-seabed-authority\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ITC",
@@ -1122,10 +1270,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Pamela Coke-Hamilton",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1137,7 +1288,8 @@
     "transparency_portal_link":"https:\/\/open.intracen.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-trade-centre\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ITLOS",
@@ -1152,10 +1304,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"President",
+    "head_of_entity_title_general":"President",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Judge Tomas Heidar",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1167,7 +1322,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ITU",
@@ -1182,10 +1338,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Secretary-General",
+    "head_of_entity_title_general":"Secretary-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Doreen Bogdan-Martin",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/digitallibrary.un.org\/record\/829886?ln=en&v=pdf",
@@ -1197,7 +1356,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-telecommunication-union\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"JIU",
@@ -1212,10 +1372,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Uren Pillay",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1227,7 +1390,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-joint-inspection-unit",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"MINURSO",
@@ -1242,10 +1406,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Alexander Ivanko",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/minurso.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -1257,7 +1424,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"MINUSCA",
@@ -1272,10 +1440,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Valentine Rugwabiza",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/minusca.unmissions.org\/en\/mandate",
     "organizational_chart_link":null,
@@ -1287,7 +1458,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"MONUSCO",
@@ -1302,10 +1474,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Bintou Keita",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1317,7 +1492,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-organization-stabilization-mission-in-the-democratic-republic-of-the-congo",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OAJ",
@@ -1332,10 +1508,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Alayne Frankson-Wallace",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/en\/internaljustice\/oaj\/organizational-structure.shtml",
@@ -1347,7 +1526,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OCHA",
@@ -1362,10 +1542,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG\/Emergency Relief Coordinator",
+    "head_of_entity_title_general":"USG\/Emergency Relief Coordinator",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Tom Fletcher",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1377,7 +1560,8 @@
     "transparency_portal_link":"https:\/\/fts.unocha.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-ocha\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OCT",
@@ -1392,10 +1576,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Vladimir Ivanovich Voronkov",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/counterterrorism\/office-structure",
@@ -1407,7 +1594,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-counter-terrorism\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ODA",
@@ -1422,10 +1610,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"High Representative",
+    "head_of_entity_title_general":"High Representative",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Izumi Nakamitsu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1437,7 +1628,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-for-disarmament-affairs\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ODET",
@@ -1452,10 +1644,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Amandeep Singh Gill",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1467,7 +1662,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"ODPP",
@@ -1482,10 +1678,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director",
+    "head_of_entity_title_general":"Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"(Vacant)",
     "head_of_entity_level":"D-1 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1497,7 +1696,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OFP-Delisting",
@@ -1512,10 +1712,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Other",
+    "head_of_entity_title_general":"Other",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":"Other",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1527,7 +1730,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OHCHR",
@@ -1542,10 +1746,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"High Commissioner",
+    "head_of_entity_title_general":"High Commissioner",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Volker T\u00fcrk",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1557,7 +1764,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/office-of-the-united-nations-high-commissioner-for-human-rights-ohchr\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OICT",
@@ -1572,10 +1780,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"CITO",
+    "head_of_entity_title_general":"CITO",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Bernardo Mariano Jr.",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1587,7 +1798,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-oict",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OIOS",
@@ -1602,10 +1814,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG",
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Fatoumata Ndiaye",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1617,7 +1832,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/office-of-internal-oversight-services-oios",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OLA",
@@ -1632,10 +1848,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG\/Legal Counsel",
+    "head_of_entity_title_general":"USG\/Legal Counsel",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Elinor Jane Britt Hammarskj\u00f6ld",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1647,7 +1866,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-legal-affairs",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OMBUD-RES1904",
@@ -1662,10 +1882,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1677,7 +1900,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OMS",
@@ -1692,10 +1916,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Ombudsman",
+    "head_of_entity_title_general":"Ombudsman",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Shireen Dodson",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1707,7 +1934,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OOSA",
@@ -1722,10 +1950,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director",
+    "head_of_entity_title_general":"Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Aarti Holla-Maini",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1737,7 +1968,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-for-outer-space-affairs\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OPCW",
@@ -1752,10 +1984,13 @@
     "un_principal_organ":"General Assembly \/ Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"USG\/Director-General",
+    "head_of_entity_title_general":"USG\/Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Fernando Arias",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1767,7 +2002,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/opcw\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSAA",
@@ -1782,10 +2018,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Adviser",
+    "head_of_entity_title_general":"Special Adviser",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Cristina Isabel Lopes da Silva Monteiro Duarte",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1797,7 +2036,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-the-special-adviser-on-africa-osaa\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSASG-Cyprus",
@@ -1812,10 +2052,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Adviser (Acting)",
+    "head_of_entity_title_general":"Special Adviser (Acting)",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Colin William Stewart",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1827,7 +2070,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSASG-PG",
@@ -1842,10 +2086,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Adviser (Acting)",
+    "head_of_entity_title_general":"Special Adviser (Acting)",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Virginia Gamba de Potgieter",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1857,7 +2104,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSC-SEA",
@@ -1872,10 +2120,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Coordinator",
+    "head_of_entity_title_general":"Special Coordinator",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Christian Saunders",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1887,7 +2138,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-FG",
@@ -1902,10 +2154,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"(Vacant)",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1917,7 +2172,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-GL",
@@ -1932,10 +2188,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Huang Xia",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1947,7 +2206,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-Horn",
@@ -1962,10 +2222,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -1977,7 +2240,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-Myanmar",
@@ -1992,10 +2256,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Julie Bishop",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2007,7 +2274,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-SCRES1559",
@@ -2022,10 +2290,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2037,7 +2308,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-Syria",
@@ -2052,10 +2324,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Geir Otto Pedersen",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2067,7 +2342,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSESG-Yemen",
@@ -2082,10 +2358,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Envoy",
+    "head_of_entity_title_general":"Special Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Hans Grundberg",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2097,7 +2376,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSRSG-CAAC",
@@ -2112,10 +2392,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG",
+    "head_of_entity_title_general":"SRSG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Virginia Gamba de Potgieter",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2127,7 +2410,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSRSG-SVC",
@@ -2142,10 +2426,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG",
+    "head_of_entity_title_general":"SRSG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Pramila Patten",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2157,7 +2444,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"OSRSG-VAC",
@@ -2172,10 +2460,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG",
+    "head_of_entity_title_general":"SRSG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Najat Maalla",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2187,7 +2478,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PESG-Sudan",
@@ -2202,10 +2494,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"PESG",
+    "head_of_entity_title_general":"PESG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Ramtane Lamamra",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2217,7 +2512,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PESG-WS",
@@ -2232,10 +2528,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Personal Envoy",
+    "head_of_entity_title_general":"Personal Envoy",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Staffan de Mistura",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2247,7 +2546,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-CAR",
@@ -2262,10 +2562,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2277,7 +2580,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-Haiti",
@@ -2292,10 +2596,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2307,7 +2614,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-Libya",
@@ -2322,10 +2630,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2337,7 +2648,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-RES2713",
@@ -2352,10 +2664,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2367,7 +2682,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-RES2745",
@@ -2382,10 +2698,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":null,
-    "head_of_entity_title":null,
+    "head_of_entity_title_general":null,
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2397,7 +2716,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-S.Sudan",
@@ -2412,10 +2732,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2427,7 +2750,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-Sudan",
@@ -2442,10 +2766,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2457,7 +2784,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"PoE-Yemen",
@@ -2472,10 +2800,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2487,7 +2818,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"RCS",
@@ -2502,10 +2834,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"ASG",
+    "head_of_entity_title_general":"ASG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Oscar Fern\u00e1ndez-Taranco",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/un-dco.org\/",
@@ -2517,7 +2852,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"RSCE",
@@ -2532,10 +2868,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director",
+    "head_of_entity_title_general":"Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Paulin Djomo",
     "head_of_entity_level":"D-2",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2547,7 +2886,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-rsce",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"SC-RES1540",
@@ -2562,10 +2902,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2577,7 +2920,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"SC-RES1718",
@@ -2592,10 +2936,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2607,7 +2954,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"SC-RES2231",
@@ -2622,10 +2970,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Not applicable",
+    "head_of_entity_title_general":"Not applicable",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2637,7 +2988,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"SWEO",
@@ -2652,10 +3004,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Andrea Cook",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2667,7 +3022,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UN Tourism",
@@ -2682,10 +3038,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Secretary-General",
+    "head_of_entity_title_general":"Secretary-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Zurab Pololikashvili",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2697,7 +3056,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unwto\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UN-Habitat",
@@ -2712,10 +3072,13 @@
     "un_principal_organ":"General Assembly \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Anacl\u00e1udia Rossbach",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2727,7 +3090,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-habitat\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UN-OHRLLS",
@@ -2742,10 +3106,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"High Representative",
+    "head_of_entity_title_general":"High Representative",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Rabab Fatima",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2757,7 +3124,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-ohrlls\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UN-Women",
@@ -2772,10 +3140,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Sima Sami Iskandar Bahous",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.unwomen.org\/sites\/default\/files\/2025-08\/unw_org_chart_internal_20250806.pdf",
@@ -2787,7 +3158,8 @@
     "transparency_portal_link":"https:\/\/data.unwomen.org\/data-portal",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-women\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNAIDS",
@@ -2802,10 +3174,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"UNAIDS Executive Director",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2817,7 +3192,8 @@
     "transparency_portal_link":"https:\/\/open.unaids.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unaids\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNAMA",
@@ -2832,10 +3208,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Roza Otunbayeva",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2847,7 +3226,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNAMI",
@@ -2862,10 +3242,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Mohamed Al Hassan",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2877,7 +3260,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-assistance-mission-for-iraq-unami",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNAOC",
@@ -2892,10 +3276,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"High Representative",
+    "head_of_entity_title_general":"High Representative",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Miguel \u00c1ngel Moratinos Cuyaub\u00e9",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2907,7 +3294,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-alliance-of-civilizations\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNCTAD",
@@ -2922,10 +3310,13 @@
     "un_principal_organ":"General Assembly \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Secretary-General",
+    "head_of_entity_title_general":"Secretary-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Rebeca Grynspan",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2937,7 +3328,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unctad\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNDOF",
@@ -2952,10 +3344,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Force Commander\/Head of Mission",
+    "head_of_entity_title_general":"Force Commander\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Anita Asmah",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -2967,7 +3362,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNDP",
@@ -2982,10 +3378,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Administrator (Acting)",
+    "head_of_entity_title_general":"Administrator (Acting)",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Haoliang Xu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.undp.org\/organizational-chart",
@@ -2997,7 +3396,8 @@
     "transparency_portal_link":"https:\/\/open.undp.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-development-programme\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNDRR",
@@ -3012,10 +3412,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG",
+    "head_of_entity_title_general":"SRSG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Kamal Kishore",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3027,7 +3430,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-for-disaster-risk-reduction-undrr\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNEP",
@@ -3042,10 +3446,13 @@
     "un_principal_organ":"General Assembly \/ Secretariat",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Inger La Cour Andersen",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3057,7 +3464,8 @@
     "transparency_portal_link":"https:\/\/open.unep.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-environment-programme\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNESCO",
@@ -3072,10 +3480,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Audrey Azoulay",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/unesdoc.unesco.org\/archives\/organization-charts",
@@ -3087,7 +3498,8 @@
     "transparency_portal_link":"https:\/\/core.unesco.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unesco\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNFCCC",
@@ -3102,10 +3514,13 @@
     "un_principal_organ":"Other",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Secretary",
+    "head_of_entity_title_general":"Executive Secretary",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Simon Emmanuel Kervin Stiell",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3117,7 +3532,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unfccc\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNFICYP",
@@ -3132,10 +3548,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Colin William Stewart",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3147,7 +3566,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNFPA",
@@ -3162,10 +3582,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Natalia Kanem",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3177,7 +3600,8 @@
     "transparency_portal_link":"https:\/\/www.unfpa.org\/data\/transparency-portal",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-population-fund-unfpa\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNGC",
@@ -3192,10 +3616,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"CEO\/Executive Director",
+    "head_of_entity_title_general":"CEO\/Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Sanda Ojiambo",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3207,7 +3634,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-global-compact\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNGEGN",
@@ -3222,10 +3650,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Chairperson",
+    "head_of_entity_title_general":"Chairperson",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Pierre Jaillard",
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3237,7 +3668,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNGGIM",
@@ -3252,10 +3684,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Co-Chair",
+    "head_of_entity_title_general":"Co-Chair",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Ingrid Vanden Berghe, Fernand Eanes Bale, Deirdre Dalpiaz Bishop",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3267,7 +3702,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNHCR",
@@ -3282,10 +3718,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"High Commissioner",
+    "head_of_entity_title_general":"High Commissioner",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Filippo Grandi",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3297,7 +3736,8 @@
     "transparency_portal_link":"https:\/\/reporting.unhcr.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unhcr\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNICEF",
@@ -3312,10 +3752,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Catherine Mary Russell",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.unicef.org\/executiveboard\/media\/21691\/file\/Integrated-Budget-MTR-Annexes.pdf",
@@ -3327,7 +3770,8 @@
     "transparency_portal_link":"https:\/\/open.unicef.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unicef\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNIDIR",
@@ -3342,10 +3786,13 @@
     "un_principal_organ":"General Assembly \/ Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director",
+    "head_of_entity_title_general":"Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Robin Geiss",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3357,7 +3804,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unidir",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNIDO",
@@ -3372,10 +3820,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Gerd M\u00fcller",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.unido.org\/sites\/default\/files\/unido-publications\/2025-04\/ANNUAL%20REPORT%202024.pdf",
@@ -3387,7 +3838,8 @@
     "transparency_portal_link":"https:\/\/open.unido.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unido\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNIFIL",
@@ -3402,10 +3854,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Force Commander\/Head of Mission",
+    "head_of_entity_title_general":"Force Commander\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Aroldo L\u00e1zaro S\u00e1enz",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3417,7 +3872,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNISFA",
@@ -3432,10 +3888,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Acting Head",
+    "head_of_entity_title_general":"Acting Head",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3447,7 +3906,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNITAR",
@@ -3462,10 +3922,13 @@
     "un_principal_organ":"General Assembly \/ Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Michelle Gyles-McDonnough",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3477,7 +3940,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unitar",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNLB",
@@ -3492,10 +3956,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director",
+    "head_of_entity_title_general":"Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Anton Antchev",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3507,7 +3974,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-global-service-centre\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNMHA",
@@ -3522,10 +3990,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Officer in charge and acting chair",
+    "head_of_entity_title_general":"Officer in charge and acting chair",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Mari Yamashita",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unmha.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -3537,7 +4008,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNMIK",
@@ -3552,10 +4024,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Caroline Ziadeh",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unmik.unmissions.org\/mandate",
     "organizational_chart_link":"https:\/\/unmik.unmissions.org\/united-nations-resolution-1244",
@@ -3567,7 +4042,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unmik",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNMISS",
@@ -3582,10 +4058,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Nicholas Haysom",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unmiss.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -3597,7 +4076,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unmiss\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNMOGIP",
@@ -3612,10 +4092,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Head\/Chief Military Observer",
+    "head_of_entity_title_general":"Head\/Chief Military Observer",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3627,7 +4110,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNOAU",
@@ -3642,10 +4126,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Office",
+    "head_of_entity_title_general":"SRSG\/Head of Office",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Parfait Onanga-Anyanga",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unoau.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -3657,7 +4144,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNOCA",
@@ -3672,10 +4160,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Office",
+    "head_of_entity_title_general":"SRSG\/Head of Office",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Abdou Abarry",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unoca.unmissions.org\/en\/mandate-and-missions",
     "organizational_chart_link":null,
@@ -3687,7 +4178,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNODC",
@@ -3702,10 +4194,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Ghada Fathy Ismail Waly",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3717,7 +4212,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-on-drugs-and-crime-unodc\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNOG",
@@ -3732,10 +4228,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Tatiana Valovaya",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3747,7 +4246,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-at-geneva\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNON",
@@ -3762,10 +4262,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Zainab Hawa Bangura",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3777,7 +4280,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-at-nairobi-unon\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNOPS",
@@ -3792,10 +4296,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Jorge Moreira da Silva",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/content.unops.org\/documents\/libraries\/policies-2020\/executive-office-directives-and-instructions\/organizational-principles-and-governance-model\/en\/UNOPS-organigramme_EN.pdf",
@@ -3807,7 +4314,8 @@
     "transparency_portal_link":"https:\/\/data.unops.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unops\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNOV",
@@ -3822,10 +4330,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Ghada Fathy Ismail Waly",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3837,7 +4348,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-at-vienna\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNOWAS",
@@ -3852,10 +4364,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Office",
+    "head_of_entity_title_general":"SRSG\/Head of Office",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Leonardo Santos Sim\u00e3o",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-west-africa-and-the-sahel\/all",
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unowas.unmissions.org\/unowas-mandate",
     "organizational_chart_link":"https:\/\/unowas.unmissions.org\/unowas-mandate",
@@ -3867,7 +4382,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNRCCA",
@@ -3882,10 +4398,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Office",
+    "head_of_entity_title_general":"SRSG\/Head of Office",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Kaha Imnadze",
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unrcca.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -3897,7 +4416,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-regional-center-for-preventive-diplomacy-for-central-asia-unrcca-",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNRGID",
@@ -3912,10 +4432,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Representative",
+    "head_of_entity_title_general":"Representative",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3927,7 +4450,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNRWA",
@@ -3942,10 +4466,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Commissioner-General",
+    "head_of_entity_title_general":"Commissioner-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Philippe Lazzarini",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3957,7 +4484,8 @@
     "transparency_portal_link":"https:\/\/open.unrwa.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unrwa",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNRoD",
@@ -3972,10 +4500,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Leonid Frolov",
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -3987,7 +4518,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNSCO",
@@ -4002,10 +4534,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Coordinator (Acting)",
+    "head_of_entity_title_general":"Special Coordinator (Acting)",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Sigrid Kaag",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4017,7 +4552,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNSCOL",
@@ -4032,10 +4568,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Special Coordinator",
+    "head_of_entity_title_general":"Special Coordinator",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Jeanine Hennis-Plasschaert",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4047,7 +4586,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNSMIL",
@@ -4062,10 +4602,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Head\/SRSG",
+    "head_of_entity_title_general":"Head\/SRSG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Hanna S. Tetteh",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4077,7 +4620,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-support-mission-in-libya",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNSOM",
@@ -4092,10 +4636,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"James Swan",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unsmil.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -4107,7 +4654,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unsom",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNSOS",
@@ -4122,10 +4670,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Head of Office",
+    "head_of_entity_title_general":"Head of Office",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Aisa Kirabo Kacyira",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unsos.unmissions.org\/unsos-mandate",
     "organizational_chart_link":null,
@@ -4137,7 +4688,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNSSC",
@@ -4152,10 +4704,13 @@
     "un_principal_organ":"General Assembly \/ Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Director (Acting)",
+    "head_of_entity_title_general":"Director (Acting)",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Miguel Panadero",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4167,7 +4722,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-system-staff-college\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNTMIS",
@@ -4182,10 +4738,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Office",
+    "head_of_entity_title_general":"SRSG\/Head of Office",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"James Swan",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4197,7 +4756,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNTSO",
@@ -4212,10 +4772,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Head of Mission\/Chief of Staff",
+    "head_of_entity_title_general":"Head of Mission\/Chief of Staff",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Patrick Gauchat",
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/untso.unmissions.org\/mandate",
     "organizational_chart_link":null,
@@ -4227,7 +4790,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNU",
@@ -4242,10 +4806,13 @@
     "un_principal_organ":"General Assembly \/ Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Rector",
+    "head_of_entity_title_general":"Rector",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Tshilidzi Marwala",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4257,7 +4824,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-university\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNVMC",
@@ -4272,10 +4840,13 @@
     "un_principal_organ":null,
     "un_pillar":null,
     "is_ceb_member":null,
-    "head_of_entity_title":null,
+    "head_of_entity_title_general":null,
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4287,7 +4858,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-verification-mission-in-colombia\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNVMC",
@@ -4302,10 +4874,13 @@
     "un_principal_organ":"Security Council",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"SRSG\/Head of Mission",
+    "head_of_entity_title_general":"SRSG\/Head of Mission",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Carlos Ruiz Massieu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4317,7 +4892,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-verification-mission-in-colombia\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UNYO",
@@ -4332,10 +4908,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"ASG",
+    "head_of_entity_title_general":"ASG",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Felipe Paullier",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
@@ -4347,7 +4926,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-youth-affairs",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"UPU",
@@ -4362,10 +4942,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Masahiko Metoki",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/bodies\/international-bureau\/organizational-structure",
@@ -4377,7 +4960,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/universal-postal-union\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"VRA",
@@ -4392,10 +4976,13 @@
     "un_principal_organ":"Secretariat",
     "un_pillar":null,
     "is_ceb_member":false,
-    "head_of_entity_title":"Victims\u2019 Rights Advocate",
+    "head_of_entity_title_general":"Victims\u2019 Rights Advocate",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Najla Nassif Palma",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/preventing-sexual-exploitation-and-abuse\/sites\/www.un.org.preventing-sexual-exploitation-and-abuse\/files\/ovra_fact_sheet_2021.pdf",
@@ -4407,7 +4994,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"WB",
@@ -4422,10 +5010,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"President",
+    "head_of_entity_title_general":"President",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Ajay Banga",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/thedocs.worldbank.org\/en\/doc\/404071412346998230-0090022021\/The-World-Bank-Organizational-Chart-English",
@@ -4437,7 +5028,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-bank\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"WFP",
@@ -4452,10 +5044,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Executive Director",
+    "head_of_entity_title_general":"Executive Director",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Cindy H. McCain",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.wfp.org\/publications\/wfp-organigram",
@@ -4467,7 +5062,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-food-programme\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"WHO",
@@ -4482,10 +5078,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Tedros Adhanom Ghebreyesus",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/cdn.who.int\/media\/docs\/default-source\/documents\/about-us\/who-hq-organigramme.pdf",
@@ -4497,7 +5096,8 @@
     "transparency_portal_link":"https:\/\/open.who.int\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-health-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":"https:\/\/www.who.int\/news"
   },
   {
     "entity":"WIPO",
@@ -4512,10 +5112,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director-General",
+    "head_of_entity_title_general":"Director-General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Daren Tang",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
@@ -4527,7 +5130,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-intellectual-property-organization-wipo\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"WMO",
@@ -4542,10 +5146,13 @@
     "un_principal_organ":"Economic and Social Council",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"President",
+    "head_of_entity_title_general":"President",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Abdulla Al Mandous",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/wmo.int\/about-wmo\/governance",
@@ -4557,7 +5164,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-meteorological-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   },
   {
     "entity":"WTO",
@@ -4572,10 +5180,13 @@
     "un_principal_organ":"General Assembly",
     "un_pillar":null,
     "is_ceb_member":true,
-    "head_of_entity_title":"Director General",
+    "head_of_entity_title_general":"Director General",
+    "head_of_entity_title_specific":null,
     "head_of_entity_name":"Ngozi Okonjo-Iweala",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio":null,
+    "head_of_entity_headshot":null,
+    "global_leadership_team_url":null,
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.wto.org\/english\/thewto_e\/whatis_e\/tif_e\/organigram_e.pdf",
@@ -4587,6 +5198,7 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-trade-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "entity_news_portal":null
   }
 ]

@@ -12,9 +12,12 @@ export interface Entity {
     un_pillar: string | null;
     is_ceb_member: boolean;
     head_of_entity_level: string; // Can be "Not applicable"
-    head_of_entity_title: string; // Can be "Not applicable"
+    head_of_entity_title_specific: string | null; // Can be "Not applicable" or null
+    head_of_entity_title_general: string; // Can be "Not applicable"
     head_of_entity_name: string; // Can be "Not applicable"
     head_of_entity_bio: string | null;
+    head_of_entity_headshot: string | null; // New field
+    global_leadership_team_url: string | null; // New field
     on_display: string; // "TRUE" or "FALSE" as string
     foundational_mandate: string | null;
     organizational_chart_link: string | null;
@@ -27,6 +30,7 @@ export interface Entity {
     socials_linkedin: string | null;
     socials_twitter: string | null;
     socials_instagram: string | null;
+    entity_news_portal: string | null;
 }
 
 export interface EntityFilters {

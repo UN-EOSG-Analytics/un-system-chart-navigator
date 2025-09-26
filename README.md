@@ -40,6 +40,13 @@
 - fetching from Airtable API
 - minimal data wrangling in Python, export to JSON
 
+To quickly refresh the data:
+
+```shell
+bash python/update_data.sh 
+```
+
+
 ## GitHub Actions
 
 - Daily data fetch
