@@ -57,7 +57,6 @@ selected_columns = [
     "on_display",
     "foundational_mandate",
     "organizational_chart_link",
-    "branding_link",
     "budget_financial_reporting_link",
     "results_framework_link",
     "strategic_plan_link",
@@ -68,7 +67,8 @@ selected_columns = [
     "socials_instagram",
     "entity_news_page",
     "entity_branding_page",
-    "entity_data_page"
+    "entity_data_page",
+    "entity_logo_page"   
 ]
 
 # Compare with all available columns

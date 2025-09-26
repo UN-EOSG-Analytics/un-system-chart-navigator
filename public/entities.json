@@ -21,7 +21,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -32,7 +31,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"BINUH",
@@ -56,7 +56,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -67,7 +66,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/binuh.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"CEB",
@@ -91,7 +91,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -102,7 +101,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unsceb.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"CNMC",
@@ -126,7 +126,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -137,7 +136,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found.",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"CTBTO",
@@ -161,7 +161,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -172,7 +171,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.ctbto.org\/press-centre\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"CTED",
@@ -196,7 +196,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -207,7 +206,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/sc\/ctc\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DA",
@@ -231,7 +231,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -242,7 +241,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DCO",
@@ -266,7 +266,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/un-dco.org\/",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -277,7 +276,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/un-dco.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DESA",
@@ -301,7 +301,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/development\/desa\/en\/about\/organigramme",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -312,7 +311,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/development\/desa\/en\/news.html",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DGACM",
@@ -336,7 +336,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/dgacm\/en\/content\/structure",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -347,7 +346,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DGC",
@@ -371,7 +371,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/digitallibrary.un.org\/record\/4010720?ln=&v=pdf",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -382,7 +381,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DMSPC",
@@ -406,7 +406,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -417,7 +416,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DOS",
@@ -441,7 +441,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/operationalsupport.un.org\/en\/organizational-structure",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"https:\/\/operationalsupport.un.org\/en\/performance-overview",
     "strategic_plan_link":"https:\/\/operationalsupport.un.org\/strategic-foundations",
@@ -452,7 +451,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DPO",
@@ -476,7 +476,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/peacekeeping.un.org\/en\/department-of-peace-operations",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -487,7 +486,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/peacekeeping.un.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DPPA",
@@ -511,7 +511,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"https:\/\/dppa.un.org\/en\/2023-2026-results-framework",
     "strategic_plan_link":"https:\/\/dppa.un.org\/en\/dppa-strategic-plan-2023-2026-updated",
@@ -522,7 +521,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/dppa.un.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"DSS",
@@ -546,7 +546,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/safety-and-security\/en\/about-us\/organisational-chart",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -557,7 +556,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/undss\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ECA",
@@ -581,7 +581,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.uneca.org\/medium-term-programme-framework-%282022%E2%80%932025%29",
@@ -592,7 +591,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.uneca.org\/stories",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ECE",
@@ -616,7 +616,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unece.org\/evaluation-policy-0",
     "strategic_plan_link":"No link found",
@@ -627,7 +626,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unece.org\/media\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ECLAC",
@@ -651,7 +651,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/www.cepal.org\/en\/about\/mandate-and-mission",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/repositorio.cepal.org\/server\/api\/core\/bitstreams\/ea965022-4466-4d5c-ae96-063cbcff30f0\/content",
     "strategic_plan_link":"https:\/\/caribbean.eclac.org\/publications\/strategic-plan-2015-2025?utm_source=chatgpt.com",
@@ -662,7 +661,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.cepal.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"EO",
@@ -686,7 +686,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.un.org\/en\/ethics\/overview\/documents-resources.shtml",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -697,7 +696,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"EOSG",
@@ -721,7 +721,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -732,7 +731,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ESCAP",
@@ -756,7 +756,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unescap.org\/sites\/default\/d8files\/event-documents\/80_21_2400174_E_2.pdf",
@@ -767,7 +766,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unescap.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ESCWA",
@@ -791,7 +791,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.unescwa.org\/about\/strategy",
     "strategic_plan_link":"https:\/\/www.unescwa.org\/about\/strategy",
@@ -802,7 +801,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unescwa.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"FAO",
@@ -826,7 +826,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.fao.org\/about\/org-chart\/en\/",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.fao.org\/about\/strategy-programme-budget\/fao-budget\/",
     "results_framework_link":"https:\/\/www.fao.org\/about\/strategy-programme-budget\/overview\/planning-monitoring-reporting\/en",
     "strategic_plan_link":"https:\/\/www.fao.org\/about\/strategy-programme-budget\/overview\/FAO-Strategic-Framework\/en",
@@ -837,7 +836,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.fao.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"GoE-DRC",
@@ -861,7 +861,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -872,7 +871,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IAEA",
@@ -896,7 +896,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.iaea.org\/about\/overview\/medium-term-strategy",
@@ -907,7 +906,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.iaea.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ICAO",
@@ -931,7 +931,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.icao.int\/sites\/default\/files\/Meetings\/a42\/Documents\/WP\/wp_037_en.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www2023.icao.int\/about-icao\/Council\/Pages\/strategic-plan-2026-2050.aspx",
@@ -942,7 +941,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.icao.int\/Newsroom",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ICC",
@@ -966,7 +966,6 @@
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.icc-cpi.int\/sites\/default\/files\/2023-08\/2023-strategic-plan-icc-v.2.pdf",
@@ -977,7 +976,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.icc-cpi.int\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ICJ",
@@ -1001,7 +1001,6 @@
     "on_display":"MAYBE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1012,7 +1011,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.icj-cij.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ICSC",
@@ -1036,7 +1036,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1047,7 +1046,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/icsc.un.org\/News",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IFAD",
@@ -1071,7 +1071,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.ifad.org\/documents\/d\/new-ifad.org\/ifad-organigram",
-    "branding_link":null,
     "budget_financial_reporting_link":"no budget, but annual financial statements (https:\/\/www.ifad.org\/en\/financial-documents)",
     "results_framework_link":"https:\/\/www.ifad.org\/en\/results-management-framework",
     "strategic_plan_link":"https:\/\/www.ifad.org\/en\/w\/corporate-documents\/policies\/ifad-strategic-framework-2016-20251",
@@ -1082,7 +1081,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.ifad.org\/en\/news-and-events",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IIIM",
@@ -1106,7 +1106,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1117,7 +1116,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/iiim.un.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IIMM",
@@ -1141,7 +1141,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/iimm.un.org\/strategic-plan",
@@ -1152,7 +1151,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/iimm.un.org\/news\/",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ILO",
@@ -1176,7 +1176,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.ilo.org\/sites\/default\/files\/2025-01\/ILO_organizational%20chart_Jan-2025-EN.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.ilo.org\/about-ilo\/how-ilo-works\/organizational-structure-international-labour-office\/financial-management\/programme-and-budget",
     "results_framework_link":"https:\/\/www.ilo.org\/about-ilo\/how-ilo-works\/results-based-management\/evaluation-ilos-results-based-management-framework",
     "strategic_plan_link":"https:\/\/www.ilo.org\/resource\/conference-paper\/gb\/352\/ilo%E2%80%99s-strategic-plan-2026%E2%80%9329",
@@ -1187,7 +1186,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.ilo.org\/global\/about-the-ilo\/newsroom\/news\/lang--en\/index.htm",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IMF",
@@ -1211,7 +1211,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.imf.org\/en\/About\/Organization-Chart",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.imf.org\/en\/Capacity-Development\/strategy-policies",
@@ -1222,7 +1221,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.imf.org\/en\/News",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IMO",
@@ -1246,7 +1246,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.imo.org\/en\/about\/pages\/structure.aspx",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.imo.org\/en\/about\/strategy\/pages\/default.aspx",
@@ -1257,7 +1256,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.imo.org\/en\/MediaCentre\/Pages\/Default.aspx",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"IOM",
@@ -1281,7 +1281,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.iom.int\/iom-strategic-results-framework-srf",
     "strategic_plan_link":"https:\/\/www.iom.int\/iom-strategic-plan-2024-2028",
@@ -1292,7 +1291,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.iom.int\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ISA",
@@ -1316,7 +1316,6 @@
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link",
     "strategic_plan_link":"https:\/\/www.isa.org.jm\/strategic-plan\/",
@@ -1327,7 +1326,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.isa.org.jm\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ITC",
@@ -1351,7 +1351,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.intracen.org\/about-us\/governance#scroll-to-section-budget",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.intracen.org\/about-us\/governance\/corporate-documents\/itc-strategic-plan",
@@ -1362,7 +1361,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/intracen.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ITLOS",
@@ -1386,7 +1386,6 @@
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1397,7 +1396,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.itlos.org\/news\/",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ITU",
@@ -1421,7 +1421,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/digitallibrary.un.org\/record\/829886?ln=en&v=pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.itu.int\/en\/mediacentre\/backgrounders\/Pages\/how-is-itu-funded.aspx",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.itu.int\/en\/council\/planning\/Pages\/default.aspx",
@@ -1432,7 +1431,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.itu.int\/en\/ITU-D\/Pages\/News.aspx",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"JIU",
@@ -1456,7 +1456,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unjiu.org\/content\/strategic-framework",
@@ -1467,7 +1466,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unjiu.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"MINURSO",
@@ -1491,7 +1491,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/minurso.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1502,7 +1501,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/minurso.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"MINUSCA",
@@ -1526,7 +1526,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/minusca.unmissions.org\/en\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1537,7 +1536,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/minusca.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"MONUSCO",
@@ -1561,7 +1561,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1572,7 +1571,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/monusco.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OAJ",
@@ -1596,7 +1596,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/en\/internaljustice\/oaj\/organizational-structure.shtml",
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1607,7 +1606,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/en\/internaljustice\/oaj\/news.shtml",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OCHA",
@@ -1631,7 +1631,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unocha.org\/our-funding",
     "results_framework_link":"https:\/\/www.unocha.org\/publications",
     "strategic_plan_link":"https:\/\/www.unocha.org\/publications\/report\/world\/ochas-strategic-plan-2023-2026-transforming-humanitarian-coordination",
@@ -1642,7 +1641,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unocha.org\/news",
     "entity_branding_page":"https:\/\/brand.unocha.org\/",
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":"https:\/\/brand.unocha.org\/"
   },
   {
     "entity":"OCT",
@@ -1666,7 +1666,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/counterterrorism\/office-structure",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.un.org\/counterterrorism\/sites\/www.un.org.counterterrorism\/files\/unoct_strategic_plan_results_framework_2022-25.pdf",
@@ -1677,7 +1676,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/counterterrorism\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ODA",
@@ -1701,7 +1701,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/disarmament.unoda.org\/unoda-strategic-plan-2021-2025\/",
@@ -1712,7 +1711,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/disarmament\/news\/",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ODET",
@@ -1736,7 +1736,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1747,7 +1746,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"ODPP",
@@ -1771,7 +1771,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1782,7 +1781,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OFP-Delisting",
@@ -1806,7 +1806,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1817,7 +1816,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found.",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OHCHR",
@@ -1841,7 +1841,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.ohchr.org\/en\/about-us\/evaluation-un-human-rights",
     "strategic_plan_link":"https:\/\/www.ohchr.org\/en\/publications\/management-plan\/un-human-rights-management-plan-2022-2023",
@@ -1852,7 +1851,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.ohchr.org\/en\/press-releases",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OICT",
@@ -1876,7 +1876,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1887,7 +1886,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OIOS",
@@ -1911,7 +1911,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1922,7 +1921,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OLA",
@@ -1946,7 +1946,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1957,7 +1956,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OMBUD-RES1904",
@@ -1981,7 +1981,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -1992,7 +1991,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OMS",
@@ -2016,7 +2016,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2027,7 +2026,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OOSA",
@@ -2051,7 +2051,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2062,7 +2061,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unoosa.org\/oosa\/en\/informationfor\/media\/index.html",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OPCW",
@@ -2086,7 +2086,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.opcw.org\/sites\/default\/files\/documents\/2023\/08\/EC-104_S-1_C-28_S-1_EN.pdf",
@@ -2097,7 +2096,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.opcw.org\/media-centre\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSA-PG",
@@ -2121,7 +2121,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2132,7 +2131,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSAA",
@@ -2156,7 +2156,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.un.org\/osaa\/content\/osaa-strategic-agenda",
@@ -2167,7 +2166,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/osaa\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSACAJT",
@@ -2191,7 +2191,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
     "strategic_plan_link":null,
@@ -2202,7 +2201,8 @@
     "socials_instagram":null,
     "entity_news_page":null,
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSASG-Cyprus",
@@ -2226,7 +2226,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2237,7 +2236,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSC-SEA",
@@ -2261,7 +2261,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2272,7 +2271,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-FG",
@@ -2296,7 +2296,6 @@
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2307,7 +2306,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-GL",
@@ -2331,7 +2331,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2342,7 +2341,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/ungreatlakes.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-Horn",
@@ -2366,7 +2366,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2377,7 +2376,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-Myanmar",
@@ -2401,7 +2401,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2412,7 +2411,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-SCRES1559",
@@ -2436,7 +2436,6 @@
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2447,7 +2446,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-Syria",
@@ -2471,7 +2471,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2482,7 +2481,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSESG-Yemen",
@@ -2506,7 +2506,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2517,7 +2516,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/osesgy.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSRSG-CAAC",
@@ -2541,7 +2541,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2552,7 +2551,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/childrenandarmedconflict.un.org\/news\/",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSRSG-SVC",
@@ -2576,7 +2576,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2587,7 +2586,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/sexualviolenceinconflict\/news\/",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"OSRSG-VAC",
@@ -2611,7 +2611,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2622,7 +2621,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/violenceagainstchildren.un.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PESG-Sudan",
@@ -2646,7 +2646,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2657,7 +2656,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found.",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PESG-WS",
@@ -2681,7 +2681,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2692,7 +2691,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-CAR",
@@ -2716,7 +2716,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2727,7 +2726,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-Haiti",
@@ -2751,7 +2751,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2762,7 +2761,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-Libya",
@@ -2786,7 +2786,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2797,7 +2796,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-RES2713",
@@ -2821,7 +2821,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2832,7 +2831,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-RES2745",
@@ -2856,7 +2856,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2867,7 +2866,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-S.Sudan",
@@ -2891,7 +2891,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2902,7 +2901,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-Sudan",
@@ -2926,7 +2926,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2937,7 +2936,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"PoE-Yemen",
@@ -2961,7 +2961,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -2972,7 +2971,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"RSCE",
@@ -2996,7 +2996,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3007,7 +3006,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"SC-RES1540",
@@ -3031,7 +3031,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3042,7 +3041,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"SC-RES1718",
@@ -3066,7 +3066,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3077,7 +3076,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"SC-RES2231",
@@ -3101,7 +3101,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3112,7 +3111,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"SWEO",
@@ -3136,7 +3136,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3147,7 +3146,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UN Tourism",
@@ -3171,7 +3171,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3182,7 +3181,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unwto.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UN-Habitat",
@@ -3206,7 +3206,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unhabitat.org\/sites\/default\/files\/2025\/02\/briefing_on_monitoring_of_strategic_plan_2026-2029.pdf",
     "strategic_plan_link":"https:\/\/unhabitat.org\/about-us\/our-strategy",
@@ -3217,7 +3216,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unhabitat.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UN-OHRLLS",
@@ -3241,7 +3241,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/open.unwomen.org\/en\/global-results\/overview",
     "strategic_plan_link":"No link found",
@@ -3252,7 +3251,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/ohrlls\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UN-Women",
@@ -3276,7 +3276,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.unwomen.org\/sites\/default\/files\/2025-08\/unw_org_chart_internal_20250806.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unwomen.org\/sites\/default\/files\/2022-05\/UN%20Women%20SP%20IRRF%202022-2025.pdf",
@@ -3287,7 +3286,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unwomen.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNAIDS",
@@ -3311,7 +3311,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unaids.org\/sites\/default\/files\/media_asset\/global-AIDS-strategy-2021-2026_en.pdf",
@@ -3322,7 +3321,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unaids.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNAMA",
@@ -3346,7 +3346,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/unama.unmissions.org\/sites\/default\/files\/unsf_afghanistan_formatted_20230629.pdf",
@@ -3357,7 +3356,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unama.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNAMI",
@@ -3381,7 +3381,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3392,7 +3391,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/iraq.un.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNAOC",
@@ -3416,7 +3416,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unaoc.org\/wp-content\/uploads\/UNAOC-Action-Plan-POA-2024-2026-250203_web.pdf",
@@ -3427,7 +3426,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unaoc.org\/category\/news\/",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNCTAD",
@@ -3451,7 +3451,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3462,7 +3461,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unctad.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNDOF",
@@ -3486,7 +3486,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3497,7 +3496,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/undof.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNDP",
@@ -3521,7 +3521,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.undp.org\/organizational-chart",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/rolhr.undp.org\/annualreport\/2023\/results-framework.html",
     "strategic_plan_link":"https:\/\/strategicplan.undp.org\/",
@@ -3532,7 +3531,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.undp.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNDRR",
@@ -3556,7 +3556,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.undrr.org\/media\/49267\/download",
@@ -3567,7 +3566,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.undrr.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNEP",
@@ -3591,7 +3591,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/wedocs.unep.org\/bitstream\/handle\/20.500.11822\/42683\/medium_term_strategy_2022.pdf?sequence=1&isAllowed=y",
@@ -3602,7 +3601,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unep.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNESCO",
@@ -3626,7 +3626,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/unesdoc.unesco.org\/archives\/organization-charts",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unesco.org\/en\/budget-strategy",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/unesdoc.unesco.org\/ark:\/48223\/pf0000378083_eng",
@@ -3637,7 +3636,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unesco.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNFCCC",
@@ -3661,7 +3661,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3672,7 +3671,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unfccc.int\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNFICYP",
@@ -3696,7 +3696,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3707,7 +3706,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unficyp.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNFPA",
@@ -3731,7 +3731,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unfpa.org\/sites\/default\/files\/board-documents\/main-document\/DP.FPA_.2021.8_-_UNFPA_strategic_plan_2022-2025_-_FINAL_-_14Jul21_-_Corrected_19Jul21.pdf",
@@ -3742,7 +3741,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unfpa.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNGC",
@@ -3766,7 +3766,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/unglobalcompact.org\/what-is-gc\/strategy",
@@ -3777,7 +3776,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unglobalcompact.org\/news",
     "entity_branding_page":"https:\/\/unglobalcompact.org\/participation\/getting-started\/brand-guidelines",
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":"https:\/\/unglobalcompact.org\/participation\/getting-started\/brand-guidelines"
   },
   {
     "entity":"UNGEGN",
@@ -3801,7 +3801,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/unstats.un.org\/unsd\/ungegn\/sessions\/2nd_session_2021\/documents\/UNGEGN_Strategic_Plan_final_5May2021.pdf",
@@ -3812,7 +3811,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNGGIM",
@@ -3836,7 +3836,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3847,7 +3846,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNHCR",
@@ -3871,7 +3871,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.unhcr.org\/media\/unhcrs-results-areas",
     "strategic_plan_link":"https:\/\/www.unhcr.org\/sites\/default\/files\/2025-06\/UNHCR%20Strategic%20Directions%202022-2026.pdfhttps:\/\/www.unhcr.org\/sites\/default\/files\/2025-06\/UNHCR%20Strategic%20Directions%202022--2026.pdf",
@@ -3882,7 +3881,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unhcr.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNICEF",
@@ -3906,7 +3906,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.unicef.org\/executiveboard\/media\/21691\/file\/Integrated-Budget-MTR-Annexes.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unicef.org\/executiveboard\/documents\/unicef-strategic-plan-2026-2029-draft-review-as-2025",
@@ -3917,7 +3916,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unicef.org\/press-releases",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNIDIR",
@@ -3941,7 +3941,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -3952,7 +3951,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unidir.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNIDO",
@@ -3976,7 +3976,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.unido.org\/sites\/default\/files\/unido-publications\/2025-04\/ANNUAL%20REPORT%202024.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unido.org\/resources\/policymaking-organs\/programme-and-budget-committee\/reports-programme-and-budget-committee",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.unido.org\/publications\/key-policy-documents",
@@ -3987,7 +3986,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unido.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNIFIL",
@@ -4011,7 +4011,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4022,7 +4021,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unifil.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNISFA",
@@ -4046,7 +4046,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4057,7 +4056,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unisfa.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNITAR",
@@ -4081,7 +4081,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unitar.org\/results-evidence-learning\/results-reports-and-other-reports",
     "strategic_plan_link":"https:\/\/unitar.org\/sites\/default\/files\/media\/publication\/doc\/UNITAR_Strategic%20Framework_2022-2025.pdf",
@@ -4092,7 +4091,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unitar.org\/news-events",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNLB",
@@ -4116,7 +4116,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4127,7 +4126,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.ungsc.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNMHA",
@@ -4151,7 +4151,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unmha.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4162,7 +4161,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNMIK",
@@ -4186,7 +4186,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unmik.unmissions.org\/mandate",
     "organizational_chart_link":"https:\/\/unmik.unmissions.org\/united-nations-resolution-1244",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4197,7 +4196,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unmik.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNMISS",
@@ -4221,7 +4221,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unmiss.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4232,7 +4231,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unmiss.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNMOGIP",
@@ -4256,7 +4256,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4267,7 +4266,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNOAU",
@@ -4291,7 +4291,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unoau.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4302,7 +4301,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unoau.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNOCA",
@@ -4326,7 +4326,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unoca.unmissions.org\/en\/mandate-and-missions",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4337,7 +4336,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unoca.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNODC",
@@ -4361,7 +4361,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.unodc.org\/unodc\/en\/evaluation\/reports.html",
     "strategic_plan_link":"https:\/\/www.unodc.org\/unodc\/en\/strategy\/index.html",
@@ -4372,7 +4371,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unodc.org\/unodc\/en\/press\/releases.html",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNOG",
@@ -4396,7 +4396,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4407,7 +4406,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.ungeneva.org\/en\/news-media",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNON",
@@ -4431,7 +4431,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4442,7 +4441,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unon.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNOPS",
@@ -4466,7 +4466,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/content.unops.org\/documents\/libraries\/policies-2020\/executive-office-directives-and-instructions\/organizational-principles-and-governance-model\/en\/UNOPS-organigramme_EN.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/docs.un.org\/en\/DP\/OPS\/2025\/9",
@@ -4477,7 +4476,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unops.org\/news-and-stories",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNOV",
@@ -4501,7 +4501,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4512,7 +4511,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unvienna.org\/unov\/en\/news.html",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNOWAS",
@@ -4536,7 +4536,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unowas.unmissions.org\/unowas-mandate",
     "organizational_chart_link":"https:\/\/unowas.unmissions.org\/unowas-mandate",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4547,7 +4546,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unowas.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNRCCA",
@@ -4571,7 +4571,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unrcca.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4582,7 +4581,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unrcca.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNRGID",
@@ -4606,7 +4606,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4617,7 +4616,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNRWA",
@@ -4641,7 +4641,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.unrwa.org\/resources\/strategy-policy",
     "strategic_plan_link":"https:\/\/www.unrwa.org\/resources\/strategy-policy",
@@ -4652,7 +4651,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unrwa.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNRoD",
@@ -4676,7 +4676,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4687,7 +4686,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNSCO",
@@ -4711,7 +4711,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4722,7 +4721,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNSCOL",
@@ -4746,7 +4746,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4757,7 +4756,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unscol.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNSMIL",
@@ -4781,7 +4781,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unsmil.unmissions.org\/un-libya-results-report-2022",
     "strategic_plan_link":"No link found",
@@ -4792,7 +4791,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unsmil.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNSOM",
@@ -4816,7 +4816,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unsmil.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4827,7 +4826,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unsom.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNSOS",
@@ -4851,7 +4851,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/unsos.unmissions.org\/unsos-mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4862,7 +4861,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unsos.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNSSC",
@@ -4886,7 +4886,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4897,7 +4896,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.unssc.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNTMIS",
@@ -4921,7 +4921,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4932,7 +4931,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNTSO",
@@ -4956,7 +4956,6 @@
     "on_display":"TRUE",
     "foundational_mandate":"https:\/\/untso.unmissions.org\/mandate",
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -4967,7 +4966,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/untso.unmissions.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNU",
@@ -4991,7 +4991,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No centralized RBM results framework found",
     "strategic_plan_link":"https:\/\/unu.edu\/sites\/default\/files\/2024-06\/UNU-Strategy_2025-2029.pdf",
@@ -5002,7 +5001,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/unu.edu\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNVMC",
@@ -5026,7 +5026,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -5037,7 +5036,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/colombia.unmissions.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UNYO",
@@ -5061,7 +5061,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":null,
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -5072,7 +5071,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.un.org\/youthaffairs\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"UPU",
@@ -5096,7 +5096,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/bodies\/international-bureau\/organizational-structure",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/finance#programme-and-budget",
     "results_framework_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/strategy#implementation-and-monitoring",
     "strategic_plan_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/strategy",
@@ -5107,7 +5106,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.upu.int\/en\/News",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"VRA",
@@ -5131,7 +5131,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.un.org\/preventing-sexual-exploitation-and-abuse\/sites\/www.un.org.preventing-sexual-exploitation-and-abuse\/files\/ovra_fact_sheet_2021.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -5142,7 +5141,8 @@
     "socials_instagram":null,
     "entity_news_page":"Not found",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"WB",
@@ -5166,7 +5166,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/thedocs.worldbank.org\/en\/doc\/404071412346998230-0090022021\/The-World-Bank-Organizational-Chart-English",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/financesone.worldbank.org\/world-bank-program-budget-and-all-funds\/DS00032",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
@@ -5177,7 +5176,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.worldbank.org\/en\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"WFP",
@@ -5201,7 +5201,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.wfp.org\/publications\/wfp-organigram",
-    "branding_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.wfp.org\/publications\/corporate-results-framework-2022-2025",
     "strategic_plan_link":"https:\/\/executiveboard.wfp.org\/document_download\/WFP-0000132205https:\/\/www.wfp.org\/publications\/wfp-strategic-plan-2022-25",
@@ -5212,7 +5211,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.wfp.org\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"WHO",
@@ -5236,7 +5236,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/cdn.who.int\/media\/docs\/default-source\/documents\/about-us\/who-hq-organigramme.pdf",
-    "branding_link":"https:\/\/www.who.int\/about\/communications\/credible-and-trusted\/who-brand",
     "budget_financial_reporting_link":"https:\/\/www.who.int\/about\/accountability\/budget",
     "results_framework_link":"https:\/\/www.who.int\/publications\/m\/item\/who-results-framework-delivering-a-measurable-impact-in-countries",
     "strategic_plan_link":"https:\/\/www.who.int\/publications\/i\/item\/9789240061545",
@@ -5247,7 +5246,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.who.int\/news",
     "entity_branding_page":"https:\/\/www.who.int\/about\/communications\/credible-and-trusted\/who-brand",
-    "entity_data_page":"https:\/\/www.who.int\/data\/"
+    "entity_data_page":"https:\/\/www.who.int\/data\/",
+    "entity_logo_page":"https:\/\/www.who.int\/about\/policies\/publishing\/logo"
   },
   {
     "entity":"WIPO",
@@ -5271,7 +5271,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/financial",
     "results_framework_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
     "strategic_plan_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
@@ -5282,7 +5281,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.wipo.int\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"WMO",
@@ -5306,7 +5306,6 @@
     "on_display":"TRUE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/wmo.int\/about-wmo\/governance",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/wmo.int\/about-wmo\/finance-and-accountability",
     "results_framework_link":"https:\/\/community.wmo.int\/en\/planning-and-monitoring\/operational-planning",
     "strategic_plan_link":"https:\/\/wmo.int\/about-wmo\/our-mandate",
@@ -5317,7 +5316,8 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/public.wmo.int\/en\/media\/news",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   },
   {
     "entity":"WTO",
@@ -5341,7 +5341,6 @@
     "on_display":"FALSE",
     "foundational_mandate":null,
     "organizational_chart_link":"https:\/\/www.wto.org\/english\/thewto_e\/whatis_e\/tif_e\/organigram_e.pdf",
-    "branding_link":null,
     "budget_financial_reporting_link":"https:\/\/www.wto.org\/english\/thewto_e\/secre_e\/budget_e.htm",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/www.wto.org\/english\/thewto_e\/secretariat_strategy2030_e.htm",
@@ -5352,6 +5351,7 @@
     "socials_instagram":null,
     "entity_news_page":"https:\/\/www.wto.org\/english\/news_e\/news_e.htm",
     "entity_branding_page":null,
-    "entity_data_page":null
+    "entity_data_page":null,
+    "entity_logo_page":null
   }
 ]

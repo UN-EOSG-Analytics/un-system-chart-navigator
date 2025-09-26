@@ -1,6 +1,7 @@
 'use client';
 
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
+import EntityLogo from '@/components/EntityLogo';
 import { Entity } from '@/types/entity';
 import { BarChart3, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
 import Image from 'next/image';
@@ -215,7 +216,14 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
         // Full entity content - only if entity exists
         return (
-            <div className="p-6 sm:p-8 space-y-6">
+            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6">
+                {/* Logo */}
+                <EntityLogo 
+                    entityName={entity!.entity}
+                    entityLong={entity!.entity_long}
+                    className="h-12 sm:h-14 lg:h-16 w-auto max-w-48"
+                />
+                
                 {/* Description */}
                 {entity!.entity_description && (
                     <div>
@@ -434,7 +442,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-3 sm:pb-4 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
+                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 

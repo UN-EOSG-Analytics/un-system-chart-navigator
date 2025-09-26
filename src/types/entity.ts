@@ -20,7 +20,6 @@ export interface Entity {
     on_display: string; // "TRUE" or "FALSE" as string
     foundational_mandate: string | null;
     organizational_chart_link: string | null;
-    branding_link: string | null;
     budget_financial_reporting_link: string; // Can be "No link found"
     results_framework_link: string; // Can be "No link found"
     strategic_plan_link: string; // Can be "No link found"
@@ -32,6 +31,7 @@ export interface Entity {
     entity_news_page: string | null;
     entity_branding_page: string | null;
     entity_data_page: string | null;
+    entity_logo_page: string | null;
 }
 
 export interface EntityFilters {
