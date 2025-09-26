@@ -14,6 +14,7 @@ export interface Entity {
     head_of_entity_level: string; // Can be "Not applicable"
     head_of_entity_title: string; // Can be "Not applicable"
     head_of_entity_name: string; // Can be "Not applicable"
+    head_of_entity_bio: string | null;
     on_display: string; // "TRUE" or "FALSE" as string
     foundational_mandate: string | null;
     organizational_chart_link: string | null;

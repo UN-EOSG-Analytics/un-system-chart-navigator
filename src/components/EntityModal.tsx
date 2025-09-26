@@ -123,6 +123,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         <span className="inline-block px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm font-medium">{children}</span>
     );
 
+    // Reusable field value wrapper component
+    const FieldValue = ({ children }: { children: React.ReactNode }) => (
+        <div className="mt-0.5">{children}</div>
+    );
+
+    // Complete field component combining label and value
+    const Field = ({ label, children }: { label: string; children: React.ReactNode }) => (
+        <div>
+            <FieldLabel>{label}</FieldLabel>
+            <FieldValue>{children}</FieldValue>
+        </div>
+    );
+
     // Render header content based on state
     const renderHeader = () => {
         if (loading) {
@@ -188,31 +201,65 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <div>
                     <SubHeader>Overview</SubHeader>
                     <div className="space-y-4">
-                        <div>
-                            <FieldLabel>System Grouping:</FieldLabel>
-                            <div className="mt-1">
-                                <SystemGroupingBadge 
-                                    grouping={entity!.system_grouping} 
-                                    clickable={true}
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <FieldLabel>Entity Category:</FieldLabel>
-                            <div className="mt-1">
-                                <Badge>{entity!.category}</Badge>
-                            </div>
-                        </div>
-                        <div>
-                            <FieldLabel>UN Principal Organ:</FieldLabel>
-                            <div className="mt-1">
-                                <Badge>{entity!.un_principal_organ}</Badge>
-                            </div>
-                        </div>
+                        <Field label="System Grouping">
+                            <SystemGroupingBadge
+                                grouping={entity!.system_grouping}
+                                clickable={true}
+                            />
+                        </Field>
+                        <Field label="Entity Category">
+                            <Badge>{entity!.category}</Badge>
+                        </Field>
+                        <Field label="UN Principal Organ">
+                            <Badge>{entity!.un_principal_organ}</Badge>
+                        </Field>
                     </div>
                 </div>
 
+                {/* Leadership */}
+                {(() => {
+                    const hasLeadershipInfo = entity!.head_of_entity_level !== "Not applicable" ||
+                        entity!.head_of_entity_title !== "Not applicable" ||
+                        entity!.head_of_entity_name !== "Not applicable";
 
+                    if (!hasLeadershipInfo) {
+                        return (
+                            <div>
+                                <SubHeader>Leadership</SubHeader>
+                                <p className="text-gray-500 text-sm">Not available</p>
+                            </div>
+                        );
+                    }
+
+                    return (
+                        <div>
+                            <SubHeader>Leadership</SubHeader>
+                            <div className="space-y-4">
+                                {entity!.head_of_entity_name !== "Not applicable" && (
+                                    <Field label="Head of Entity">
+                                        {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                            <a
+                                                href={entity!.head_of_entity_bio}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-block text-un-blue hover:opacity-80 transition-opacity duration-200 text-sm sm:text-base font-medium underline decoration-1 underline-offset-2"
+                                            >
+                                                {entity!.head_of_entity_name}
+                                            </a>
+                                        ) : (
+                                            <span className="text-gray-700 text-sm sm:text-base font-medium">{entity!.head_of_entity_name}</span>
+                                        )}
+                                    </Field>
+                                )}
+                                {entity!.head_of_entity_level !== "Not applicable" && (
+                                    <Field label="Post Level">
+                                        <Badge>{entity!.head_of_entity_level}</Badge>
+                                    </Field>
+                                )}
+                            </div>
+                        </div>
+                    );
+                })()}
 
                 {/* Links */}
                 <div>
