@@ -1,7 +1,7 @@
 'use client';
 
 import { Entity } from '@/types/entity';
-import { X, ExternalLink } from 'lucide-react';
+import { X, Linkedin, Globe, FileText, DollarSign, Eye, Target, BarChart3 } from 'lucide-react';
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 import Image from 'next/image';
@@ -325,8 +325,21 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                             >
-                                <ExternalLink size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Website</span>
+                                <Globe size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">Official Website</span>
+                            </a>
+                        )}
+
+                        {/* LinkedIn */}
+                        {entity!.socials_linkedin && entity!.socials_linkedin.startsWith('https') && (
+                            <a
+                                href={entity!.socials_linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+                            >
+                                <Linkedin size={18} className="flex-shrink-0" />
+                                <span className="text-sm sm:text-base">LinkedIn</span>
                             </a>
                         )}
 
@@ -338,7 +351,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                             >
-                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <FileText size={18} className="flex-shrink-0" />
                                 <span className="text-sm sm:text-base">Annual Reports</span>
                             </a>
                         )}
@@ -351,7 +364,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                             >
-                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <DollarSign size={18} className="flex-shrink-0" />
                                 <span className="text-sm sm:text-base">Financial Reporting</span>
                             </a>
                         )}
@@ -364,7 +377,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                             >
-                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <Eye size={18} className="flex-shrink-0" />
                                 <span className="text-sm sm:text-base">Transparency Portal</span>
                             </a>
                         )}
@@ -377,7 +390,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                             >
-                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <Target size={18} className="flex-shrink-0" />
                                 <span className="text-sm sm:text-base">Strategic Plan</span>
                             </a>
                         )}
@@ -390,7 +403,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
                             >
-                                <ExternalLink size={18} className="flex-shrink-0" />
+                                <BarChart3 size={18} className="flex-shrink-0" />
                                 <span className="text-sm sm:text-base">Results Framework</span>
                             </a>
                         )}
