@@ -33,7 +33,6 @@ selected_columns = [
     "entity_description",
     "entity_link",
     "entity_link_is_un_org",
-    "entity_main_data_portal",
     "system_grouping",
     "category",
     "un_principal_organ",
@@ -58,7 +57,9 @@ selected_columns = [
     "socials_linkedin",
     "socials_twitter",
     "socials_instagram",
-    "entity_news_portal"
+    "entity_news_page",
+    "entity_branding_page",
+    "entity_data_page"
 ]
 
 # Compare with all available columns

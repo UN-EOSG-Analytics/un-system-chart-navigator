@@ -1,10 +1,10 @@
 'use client';
 
-import { Entity } from '@/types/entity';
-import { X, Linkedin, Globe, FileText, DollarSign, Eye, Target, BarChart3, Newspaper } from 'lucide-react';
-import { useEffect, useState, useRef, useCallback } from 'react';
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
+import { Entity } from '@/types/entity';
+import { BarChart3, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
 import Image from 'next/image';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface EntityModalProps {
     entity: Entity | null;
@@ -135,6 +135,32 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             <FieldLabel>{label}</FieldLabel>
             <FieldValue>{children}</FieldValue>
         </div>
+    );
+
+    // Helper function to check if a link is valid
+    const isValidLink = (link: string | null | undefined): boolean => {
+        return link ? link.startsWith('https') : false;
+    };
+
+    // Reusable link component
+    const LinkItem = ({
+        href,
+        icon: Icon,
+        label
+    }: {
+        href: string;
+        icon: React.ComponentType<{ size: number; className: string }>;
+        label: string;
+    }) => (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
+        >
+            <Icon size={18} className="flex-shrink-0" />
+            <span className="text-base sm:text-lg">{label}</span>
+        </a>
     );
 
     // Render header content based on state
@@ -314,116 +340,80 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 })()}
 
                 {/* Links */}
-                <div>
-                    <SubHeader>Links</SubHeader>
-                    <div className="space-y-1">
-                        {/* Website */}
-                        {entity!.entity_link && entity!.entity_link.startsWith('https') && (
-                            <a
-                                href={entity!.entity_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <Globe size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Official Website</span>
-                            </a>
-                        )}
+                {(() => {
+                    const hasLinks =
+                        isValidLink(entity!.entity_link) ||
+                        isValidLink(entity!.socials_linkedin) ||
+                        isValidLink(entity!.entity_news_page) ||
+                        isValidLink(entity!.entity_branding_page) ||
+                        isValidLink(entity!.entity_data_page) ||
+                        isValidLink(entity!.annual_reports_link) ||
+                        isValidLink(entity!.transparency_portal_link) ||
+                        isValidLink(entity!.budget_financial_reporting_link) ||
+                        isValidLink(entity!.strategic_plan_link) ||
+                        isValidLink(entity!.results_framework_link);
 
-                        {/* LinkedIn */}
-                        {entity!.socials_linkedin && entity!.socials_linkedin.startsWith('https') && (
-                            <a
-                                href={entity!.socials_linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <Linkedin size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">LinkedIn</span>
-                            </a>
-                        )}
+                    if (!hasLinks) {
+                        return null;
+                    }
 
-                        {/* News Portal */}
-                        {entity!.entity_news_portal && entity!.entity_news_portal.startsWith('https') && (
-                            <a
-                                href={entity!.entity_news_portal}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <Newspaper size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">News</span>
-                            </a>
-                        )}
+                    return (
+                        <div>
+                            <SubHeader>Links</SubHeader>
+                            <div className="space-y-1">
+                                {/* Website */}
+                                {isValidLink(entity!.entity_link) && (
+                                    <LinkItem href={entity!.entity_link} icon={Globe} label="Official Website" />
+                                )}
 
-                        {/* Annual Report */}
-                        {entity!.annual_reports_link && entity!.annual_reports_link.startsWith('https') && (
-                            <a
-                                href={entity!.annual_reports_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <FileText size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Annual Reports</span>
-                            </a>
-                        )}
+                                {/* LinkedIn */}
+                                {isValidLink(entity!.socials_linkedin) && (
+                                    <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
+                                )}
 
-                            {/* Transparency Portal */}
-                        {entity!.transparency_portal_link && entity!.transparency_portal_link.startsWith('https') && (
-                            <a
-                                href={entity!.transparency_portal_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <Eye size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Transparency Portal</span>
-                            </a>
-                        )}
+                                {/* News Portal */}
+                                {isValidLink(entity!.entity_news_page) && (
+                                    <LinkItem href={entity!.entity_news_page!} icon={Newspaper} label="News" />
+                                )}
 
-                        {/* Financials */}
-                        {entity!.budget_financial_reporting_link && entity!.budget_financial_reporting_link.startsWith('https') && (
-                            <a
-                                href={entity!.budget_financial_reporting_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <DollarSign size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Financial Reporting</span>
-                            </a>
-                        )}
+                                {/* Annual Report */}
+                                {isValidLink(entity!.annual_reports_link) && (
+                                    <LinkItem href={entity!.annual_reports_link} icon={FileText} label="Annual Reports" />
+                                )}
 
-                    
+                                {/* Financials */}
+                                {isValidLink(entity!.budget_financial_reporting_link) && (
+                                    <LinkItem href={entity!.budget_financial_reporting_link} icon={DollarSign} label="Financials & Budget" />
+                                )}
 
-                        {/* Strategic Plan */}
-                        {entity!.strategic_plan_link && entity!.strategic_plan_link.startsWith('https') && (
-                            <a
-                                href={entity!.strategic_plan_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <Target size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Strategic Plan</span>
-                            </a>
-                        )}
+                                {/* Strategic Plan */}
+                                {isValidLink(entity!.strategic_plan_link) && (
+                                    <LinkItem href={entity!.strategic_plan_link} icon={Target} label="Strategic Plan" />
+                                )}
 
-                        {/* Results Framework */}
-                        {entity!.results_framework_link && entity!.results_framework_link.startsWith('https') && (
-                            <a
-                                href={entity!.results_framework_link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-un-blue hover:opacity-80 transition-opacity duration-200 py-2 px-3 rounded-lg hover:bg-blue-50 touch-manipulation"
-                            >
-                                <BarChart3 size={18} className="flex-shrink-0" />
-                                <span className="text-sm sm:text-base">Results Framework</span>
-                            </a>
-                        )}
-                    </div>
-                </div>
+                                {/* Results Framework */}
+                                {isValidLink(entity!.results_framework_link) && (
+                                    <LinkItem href={entity!.results_framework_link} icon={BarChart3} label="Results Framework" />
+                                )}
+
+                                {/* Transparency Portal */}
+                                {isValidLink(entity!.transparency_portal_link) && (
+                                    <LinkItem href={entity!.transparency_portal_link} icon={Eye} label="Transparency Portal" />
+                                )}
+
+                                {/* Data Page */}
+                                {isValidLink(entity!.entity_data_page) && (
+                                    <LinkItem href={entity!.entity_data_page!} icon={Database} label="Data Portal" />
+                                )}
+
+                                {/* Branding Page */}
+                                {isValidLink(entity!.entity_branding_page) && (
+                                    <LinkItem href={entity!.entity_branding_page!} icon={Palette} label="Branding" />
+                                )}
+                            </div>
+                        </div>
+                    );
+                })()}
             </div>
         );
     };

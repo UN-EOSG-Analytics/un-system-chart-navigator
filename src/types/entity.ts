@@ -5,7 +5,6 @@ export interface Entity {
     entity_description: string | null;
     entity_link: string;
     entity_link_is_un_org: number; // 1 or 0
-    entity_main_data_portal: string | null;
     system_grouping: string;
     category: string;
     un_principal_organ: string;
@@ -30,7 +29,9 @@ export interface Entity {
     socials_linkedin: string | null;
     socials_twitter: string | null;
     socials_instagram: string | null;
-    entity_news_portal: string | null;
+    entity_news_page: string | null;
+    entity_branding_page: string | null;
+    entity_data_page: string | null;
 }
 
 export interface EntityFilters {
