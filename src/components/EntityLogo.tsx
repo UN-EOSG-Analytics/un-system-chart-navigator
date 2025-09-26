@@ -1,23 +1,36 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface EntityLogoProps {
     entityName: string;
     entityLong?: string;
     className?: string;
     fallback?: React.ReactNode;
+    onLoadingComplete?: (hasLogo: boolean) => void;
 }
 
 const LOGO_EXTENSIONS = ['svg', 'png', 'jpg', 'jpeg'];
 
-export default function EntityLogo({ entityName, entityLong, className = '', fallback }: EntityLogoProps) {
+export default function EntityLogo({ entityName, entityLong, className = '', fallback, onLoadingComplete }: EntityLogoProps) {
     const [currentExtensionIndex, setCurrentExtensionIndex] = useState(0);
     const [hasError, setHasError] = useState(false);
+
+    // Reset states when entity changes
+    useEffect(() => {
+        setCurrentExtensionIndex(0);
+        setHasError(false);
+    }, [entityName]);
 
     // Reset error state when entity changes
     const resetError = () => {
         setCurrentExtensionIndex(0);
         setHasError(false);
+    };
+
+    // Handle successful logo load
+    const handleLoad = () => {
+        resetError();
+        onLoadingComplete?.(true);
     };
 
     // Try next extension or mark as failed
@@ -26,6 +39,7 @@ export default function EntityLogo({ entityName, entityLong, className = '', fal
             setCurrentExtensionIndex(prev => prev + 1);
         } else {
             setHasError(true);
+            onLoadingComplete?.(false);
         }
     };
 
@@ -53,7 +67,7 @@ export default function EntityLogo({ entityName, entityLong, className = '', fal
             height={64}
             className={`object-contain object-left ${className}`}
             onError={handleError}
-            onLoad={resetError}
+            onLoad={handleLoad}
             sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px"
             priority={false}
         />
