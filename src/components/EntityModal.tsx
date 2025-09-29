@@ -3,7 +3,7 @@
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
-import { BarChart3, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
+import { BarChart3, BookOpen, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -352,6 +352,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                     const hasLinks =
                         isValidLink(entity!.entity_link) ||
                         isValidLink(entity!.socials_linkedin) ||
+                        isValidLink(entity!.entity_wikipedia_page) ||
                         isValidLink(entity!.entity_news_page) ||
                         isValidLink(entity!.entity_branding_page) ||
                         isValidLink(entity!.entity_data_page) ||
@@ -377,6 +378,11 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {/* LinkedIn */}
                                 {isValidLink(entity!.socials_linkedin) && (
                                     <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
+                                )}
+
+                                {/* Wikipedia */}
+                                {isValidLink(entity!.entity_wikipedia_page) && (
+                                    <LinkItem href={entity!.entity_wikipedia_page!} icon={BookOpen} label="Wikipedia" />
                                 )}
 
                                 {/* News Portal */}

@@ -68,8 +68,11 @@ selected_columns = [
     "entity_news_page",
     "entity_branding_page",
     "entity_data_page",
-    "entity_logo_page"   
+    "entity_logo_page",
+    "entity_wikipedia_page"
 ]
+
+# TODO: don't forget to also add in `entity.ts`
 
 # Compare with all available columns
 all_columns = df.columns.tolist()
