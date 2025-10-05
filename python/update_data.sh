@@ -16,7 +16,12 @@ echo "⚙️ Step 2: Processing entities data..."
 uv run python/02-process_entities_data.py
 
 echo ""
+echo "💰 Step 3: Processing budget data..."
+uv run python/03-process_budget_data.py
+
+echo ""
 echo "✅ Data update complete!"
 echo "📄 Updated files:"
 echo "  - data/input/input_entities.csv"
 echo "  - public/entities.json"
+echo "  - public/budget.json"

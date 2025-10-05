@@ -1,0 +1,4 @@
+Sources:
+- un-system-expenses.csv: https://unsceb.org/total-expenses
+- un-secretariat-expenses.csv: https://open.un.org/un-secretariat-financials/expenses?tab=second
+Note that UN Secretariat expenses include double counting and the total does thus not match with the UN System expenses entry for the Secretariat.

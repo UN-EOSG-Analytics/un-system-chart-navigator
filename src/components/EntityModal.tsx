@@ -3,6 +3,7 @@
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
+import { budgetData, formatBudget } from '@/lib/entities';
 import { BarChart3, BookOpen, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -248,6 +249,22 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         <Field label="UN Principal Organ">
                             <Badge>{entity!.un_principal_organ}</Badge>
                         </Field>
+                        {(() => {
+                            const budget = budgetData[entity!.entity];
+                            if (budget) {
+                                return (
+                                    <Field label="Annual Expenses">
+                                        <div className="text-gray-700 text-base font-semibold">
+                                            {formatBudget(budget)}
+                                        </div>
+                                        <div className="text-gray-500 text-xs mt-0.5">
+                                            {entity!.system_grouping === 'United Nations Secretariat' ? '2022' : '2023'} data
+                                        </div>
+                                    </Field>
+                                );
+                            }
+                            return null;
+                        })()}
                     </div>
                 </div>
 

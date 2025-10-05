@@ -1,9 +1,11 @@
 import { Entity, EntityFilters } from '@/types/entity';
 import entitiesData from '../../public/entities.json';
+import budgetDataRaw from '../../public/budget.json';
 import { createEntitySlug } from './utils';
 
 // Direct import - 180KB JSON file loaded at build time
 export const entities = entitiesData as Entity[];
+export const budgetData = budgetDataRaw as Record<string, number>;
 
 // Centralized filtering and search function
 export function getEntities(options?: {
@@ -66,4 +68,13 @@ export const getUniqueValues = (field: keyof Entity): string[] => {
         .sort();
 
     return values;
+};
+
+export const formatBudget = (amount: number): string => {
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        notation: 'compact',
+        maximumFractionDigits: 2
+    }).format(amount);
 };
