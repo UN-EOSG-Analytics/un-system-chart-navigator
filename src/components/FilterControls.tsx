@@ -7,6 +7,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
+import { Switch } from '@/components/ui/switch';
 import { X } from 'lucide-react';
 import { Entity } from '@/types/entity';
 import { systemGroupingStyles, getSortedSystemGroupings } from '@/lib/systemGroupings';
@@ -19,6 +20,8 @@ interface FilterControlsProps {
     onSearchChange: (query: string) => void;
     onReset: () => void;
     visibleEntitiesCount: number;
+    showBudget: boolean;
+    onToggleBudget: () => void;
 }
 
 export default function FilterControls({
@@ -28,7 +31,9 @@ export default function FilterControls({
     searchQuery,
     onSearchChange,
     onReset,
-    visibleEntitiesCount
+    visibleEntitiesCount,
+    showBudget,
+    onToggleBudget
 }: FilterControlsProps) {
     // Count entities for each group
     const groupCounts = entities.reduce((acc, entity) => {
@@ -177,6 +182,14 @@ export default function FilterControls({
                         <X className="h-3 w-3" />
                     </button>
                 )}
+
+                {/* Budget Toggle */}
+                <div className="flex items-center gap-2 h-10">
+                    <label className="text-sm text-gray-600 cursor-pointer" onClick={onToggleBudget}>
+                        Budget
+                    </label>
+                    <Switch checked={showBudget} onCheckedChange={onToggleBudget} />
+                </div>
 
                 {/* Entity Count - stays on same line on large screens only */}
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-end">

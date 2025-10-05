@@ -3,6 +3,7 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Entity } from '@/types/entity';
 import FilterControls from './FilterControls';
+import BudgetTreemap from './BudgetTreemap';
 import { useState, forwardRef, useImperativeHandle, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/lib/entities';
@@ -11,11 +12,7 @@ import { systemGroupingStyles, getSystemGroupingStyle } from '@/lib/systemGroupi
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = getSystemGroupingStyle(entity.system_grouping);
-
-    // Create URL-friendly slug from entity name using utility function
     const entitySlug = createEntitySlug(entity.entity);
-
-    // All cards take exactly 1 grid cell for uniform appearance
 
     const handleClick = () => {
         onEntityClick(entitySlug);
@@ -25,8 +22,9 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
         <Tooltip delayDuration={50} disableHoverableContent>
             <TooltipTrigger asChild>
                 <div
+                    data-entity={entity.entity}
                     onClick={handleClick}
-                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] p-2 rounded-lg flex items-center justify-center text-center transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation`}
+                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] p-2 rounded-lg flex items-center justify-center text-center cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 touch-manipulation`}
                 >
                     <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
                 </div>
@@ -53,6 +51,9 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
+    const [showBudget, setShowBudget] = useState<boolean>(false);
+    const [isAnimating, setIsAnimating] = useState<boolean>(false);
+    const [displayBudget, setDisplayBudget] = useState<boolean>(false);
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -86,6 +87,24 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const handleReset = () => {
         setSearchQuery('');
         setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
+    };
+
+    const toggleBudget = () => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        
+        // Start display transition first
+        setDisplayBudget(prev => !prev);
+        
+        // Then trigger view change after brief delay
+        setTimeout(() => {
+            setShowBudget(prev => !prev);
+        }, 400);
+        
+        // Reset animation lock
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 800);
     };
 
     useImperativeHandle(ref, () => ({
@@ -125,19 +144,38 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 onSearchChange={setSearchQuery}
                 onReset={handleReset}
                 visibleEntitiesCount={visibleEntities.length}
+                showBudget={showBudget}
+                onToggleBudget={toggleBudget}
             />
 
-            {/* Entities Grid */}
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full transition-all duration-1000 ease-out">
-                {visibleEntities.map((entity: Entity) => (
-                    <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
-                ))}
+            {/* Animated View Container */}
+            <div className="relative w-full" data-view-container>
+                <div 
+                    className="transition-opacity duration-500 ease-in-out"
+                    style={{ opacity: displayBudget === showBudget ? 1 : 0 }}
+                >
+                    {showBudget ? (
+                        <BudgetTreemap 
+                            entities={visibleEntities} 
+                            onEntityClick={handleEntityClick}
+                            activeGroups={activeGroups}
+                        />
+                    ) : (
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
+                            {visibleEntities.map((entity: Entity) => (
+                                <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
+                            ))}
+                        </div>
+                    )}
+                </div>
             </div>
 
             {/* As of Date */}
-            <div className="mt-4 text-left">
-                <p className="text-base text-gray-600">As of September 2025</p>
-            </div>
+            {!showBudget && (
+                <div className="mt-4 text-left">
+                    <p className="text-base text-gray-600">As of September 2025</p>
+                </div>
+            )}
         </div>
     );
 });
