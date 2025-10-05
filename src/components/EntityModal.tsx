@@ -250,15 +250,28 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             <Badge>{entity!.un_principal_organ}</Badge>
                         </Field>
                         {(() => {
-                            const budget = budgetData[entity!.entity];
-                            if (budget) {
+                            const budgetEntry = budgetData[entity!.entity];
+                            if (budgetEntry) {
+                                const sourceLabel = budgetEntry.source === 'ceb' ? 'CEB' : 'UN';
+                                const sourceUrl = budgetEntry.source === 'ceb' 
+                                    ? 'https://unsceb.org/total-expenses'
+                                    : 'https://open.un.org/un-secretariat-financials/expenses?tab=second';
+                                const year = budgetEntry.year || 2023;
+                                
                                 return (
                                     <Field label="Annual Expenses">
                                         <div className="text-gray-700 text-base font-semibold">
-                                            {formatBudget(budget)}
+                                            {formatBudget(budgetEntry.amount)}
                                         </div>
                                         <div className="text-gray-500 text-xs mt-0.5">
-                                            2023 data
+                                            <a
+                                                href={sourceUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-gray-500 hover:text-gray-700 hover:underline transition-all duration-200"
+                                            >
+                                                {sourceLabel} {year}
+                                            </a>
                                         </div>
                                     </Field>
                                 );

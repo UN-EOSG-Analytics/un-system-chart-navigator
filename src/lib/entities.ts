@@ -5,7 +5,18 @@ import { createEntitySlug } from './utils';
 
 // Direct import - 180KB JSON file loaded at build time
 export const entities = entitiesData as Entity[];
-export const budgetData = budgetDataRaw as Record<string, number>;
+
+// Budget data - convert from array format to object for easy lookup
+export interface BudgetEntry {
+    amount: number;
+    source: string;
+    year?: number;
+}
+
+const budgetDataArray = budgetDataRaw as unknown as Array<{entity: string; source: string; amount: number; year?: number}>;
+export const budgetData: Record<string, BudgetEntry> = Object.fromEntries(
+    budgetDataArray.map(item => [item.entity, { amount: item.amount, source: item.source, year: item.year }])
+);
 
 // Centralized filtering and search function
 export function getEntities(options?: {

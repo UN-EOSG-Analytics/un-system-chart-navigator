@@ -1,76 +1,82 @@
 import csv
 import json
 from pathlib import Path
+import pandas as pd
+
+YEAR = 2023
+
+# Mapping from budget CSV entity codes to standardized entity codes
+ENTITY_MAPPING = {
+    'UN-HABITAT': 'UN-Habitat',
+    'UNHABITAT': 'UN-Habitat',
+    'UNWOMEN': 'UN-Women',
+    'UNWTO': 'UN Tourism',
+    'OHRLLS': 'UN-OHRLLS',
+    'POE-CAR': 'PoE-CAR',
+    'POE-HAITI': 'PoE-Haiti',
+    'POE-LIBYA': 'PoE-Libya',
+    'POE-SUDAN': 'PoE-Sudan',
+    'POE-YEMEN': 'PoE-Yemen',
+    'POS-SSUDAN': 'PoE-S.Sudan',
+    'SRSG-CAAC': 'OSRSG-CAAC',
+    'SRSG-SVC': 'OSRSG-SVC',
+    'SRSG-VAC': 'OSRSG-VAC',
+    'OSESG-MYAN': 'OSESG-Myanmar',
+    'SESG-MYAN': 'OSESG-Myanmar',
+    'SESG-HAFRICA': 'OSESG-Horn',
+    'SESG-YEMEN': 'OSESG-Yemen',
+    'SC-RES1559': 'OSESG-SCRES1559',
+    'SASG-CYP': 'OSASG-Cyprus',
+    'PESG-WSAHARA': 'PESG-WS',
+    'OSESG-BDI': 'OSESG-FG',
+    'GEXP-DRC': 'GoE-DRC',
+    'UNGCO': 'UNGC',
+    'OVRA': 'VRA',
+    'ETHICS': 'EO',
+    'AOJ': 'OAJ',
+    'IM-MYANMAR': 'IIMM',
+    'OSET': 'ODET',
+    'RCS': 'DCO',
+    'UN-RGID': 'UNRGID',
+}
 
 def parse_amount(amount_str: str) -> float:
     """Parse amount string to float, removing spaces and commas."""
     return float(amount_str.replace(',', '').replace(' ', '').strip())
 
-def main():
-    budget_data = {}
-    un_secretariat_total = 0
-    un_dpo_total = 0
-    
-    # Read UN System expenses (2023 data)
-    system_csv = Path('data/downloads/budget/un-system-expenses.csv')
-    with open(system_csv, 'r', encoding='utf-8-sig') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            year_key = next((k for k in row.keys() if 'year' in k.lower()), None)
-            agency_key = next((k for k in row.keys() if 'agency' in k.lower()), None)
-            amount_key = next((k for k in row.keys() if 'amount' in k.lower()), None)
-            
-            if year_key and agency_key and amount_key and row[year_key] == '2023':
-                entity = row[agency_key].strip()
-                amount = parse_amount(row[amount_key])
-                if entity:
-                    # Store UN and UN-DPO for correction calculation but don't include in final data
-                    if entity == 'UN':
-                        un_secretariat_total = amount
-                    elif entity == 'UN-DPO':
-                        un_dpo_total = amount
-                    else:
-                        budget_data[entity] = amount
-    
-    # Read UN Secretariat expenses (2023 data - aggregate by entity)
-    secretariat_detailed_sum = 0
-    secretariat_csv = Path('data/downloads/budget/un-secretariat-expenses.csv')
-    with open(secretariat_csv, 'r', encoding='utf-8-sig') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            year_key = next((k for k in row.keys() if k.upper() == 'YEAR'), None)
-            entity_key = next((k for k in row.keys() if k.upper() == 'ENTITY'), None)
-            amount_key = next((k for k in row.keys() if k.upper() == 'AMOUNT'), None)
-            
-            if year_key and entity_key and amount_key and row[year_key] == '2023':
-                entity = row[entity_key].strip()
-                amount = parse_amount(row[amount_key])
-                if entity:
-                    budget_data[entity] = budget_data.get(entity, 0) + amount
-                    secretariat_detailed_sum += amount
-    
-    # Add double counting correction: System total (UN + DPO) minus detailed sum
-    # This is negative because detailed data includes double counting
-    correction = (un_secretariat_total + un_dpo_total) - secretariat_detailed_sum
-    budget_data['UN-Secretariat-Correction'] = correction
-    
-    # Write to JSON
-    output_path = Path('public/budget.json')
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(budget_data, f, indent=2)
-    
-    print(f"Processed {len(budget_data)} entities")
-    print(f"UN Secretariat (system): ${un_secretariat_total:,.0f}")
-    print(f"UN-DPO (system): ${un_dpo_total:,.0f}")
-    print(f"Secretariat detailed sum: ${secretariat_detailed_sum:,.0f}")
-    print(f"Double counting correction: ${correction:,.0f}")
-    print(f"Output written to {output_path}")
+def normalize_entity(entity: str) -> str:
+    """Normalize entity code to match entities.json."""
+    return ENTITY_MAPPING.get(entity, entity)
 
-if __name__ == '__main__':
-    main()
+df_system = pd.read_csv('data/downloads/budget/un-system-expenses.csv')
+df_system = df_system[df_system["calendar_year"] == YEAR]
+df_system["amount"] = df_system["amount"].apply(parse_amount)
+df_system["agency"] = df_system["agency"].apply(normalize_entity)
+df_system = df_system.drop(columns=["calendar_year"]).rename(columns={"agency": "entity"}).reset_index(drop=True)
+df_secretariat = pd.read_csv('data/downloads/budget/un-secretariat-expenses.csv')
+df_secretariat = df_secretariat.groupby("ENTITY").agg({"AMOUNT": "sum"}).reset_index().rename(columns={"ENTITY": "entity", "AMOUNT": "amount"})
+df_secretariat["entity"] = df_secretariat["entity"].apply(normalize_entity)
 
+system_total = df_system["amount"].sum()
+assert 60e9 < system_total < 70e9
+assert 14e9 < df_secretariat["amount"].sum() < 15e9
+secretariat_v1 = df_system[df_system["entity"].isin(["UN", "UN-DPO"])]["amount"].sum()
+secretariat_v2 = df_secretariat["amount"].sum()
+assert abs(secretariat_v1 - secretariat_v2) < 0.5e9
+df_system = df_system[~df_system["entity"].isin(["UN", "UN-DPO"])]
+df_system.merge(df_secretariat, on="entity", how="inner", suffixes=("_system", "_secretariat"))
 
-import json
-from pathlib import Path
-budget = json.loads(Path("public/budget.json").read_text())
-sum(budget.values())
+df_combined = df_system.merge(df_secretariat, on="entity", how="outer", suffixes=("_system", "_secretariat"))
+df_combined["amount"] = df_combined["amount_system"].fillna(df_combined["amount_secretariat"])
+df_combined["source"] = df_combined.apply(lambda row: "ceb" if pd.notna(row["amount_system"]) else "secretariat" if pd.notna(row["amount_secretariat"]) else None, axis=1)
+assert abs(df_combined["amount"].sum() - system_total) < 2e9
+
+entities = json.loads(Path('public/entities.json').read_text())
+
+a = set([a["entity"] for a in entities])
+b = set(df_combined["entity"].values)
+print("entities without budget data:", a.difference(b))
+print("budget items that are not in entities:", b.difference(a))
+
+df_combined["year"] = YEAR
+df_combined[["entity", "source", "year", "amount"]].to_json("public/budget.json", orient="records", indent=2)
