@@ -20,8 +20,13 @@ echo "💰 Step 3: Processing budget data..."
 uv run python/03-process_budget_data.py
 
 echo ""
+echo "🇺🇳 Step 4: Processing member states data..."
+uv run python/03-process_state_data.py
+
+echo ""
 echo "✅ Data update complete!"
 echo "📄 Updated files:"
 echo "  - data/input/input_entities.csv"
 echo "  - public/entities.json"
 echo "  - public/budget.json"
+echo "  - public/member-states.json"

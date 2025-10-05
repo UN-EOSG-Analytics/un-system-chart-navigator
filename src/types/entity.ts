@@ -39,3 +39,9 @@ export interface EntityFilters {
     system_grouping?: string;
     // un_principal_organ?: string; # TODO
 }
+
+export interface MemberState {
+    name: string;
+    status: 'member' | 'observer' | 'nonmember';
+    contributions: Record<string, Record<string, number>>;
+}
