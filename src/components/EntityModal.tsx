@@ -258,7 +258,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                             {formatBudget(budget)}
                                         </div>
                                         <div className="text-gray-500 text-xs mt-0.5">
-                                            {entity!.system_grouping === 'United Nations Secretariat' ? '2022' : '2023'} data
+                                            2023 data
                                         </div>
                                     </Field>
                                 );
