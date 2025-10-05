@@ -19,7 +19,6 @@ interface FilterControlsProps {
     searchQuery: string;
     onSearchChange: (query: string) => void;
     onReset: () => void;
-    visibleEntitiesCount: number;
     showBudget: boolean;
     onToggleBudget: () => void;
 }
@@ -31,7 +30,6 @@ export default function FilterControls({
     searchQuery,
     onSearchChange,
     onReset,
-    visibleEntitiesCount,
     showBudget,
     onToggleBudget
 }: FilterControlsProps) {
@@ -186,22 +184,10 @@ export default function FilterControls({
                 {/* Budget Toggle */}
                 <div className="flex items-center gap-2 h-10">
                     <label className="text-sm text-gray-600 cursor-pointer" onClick={onToggleBudget}>
-                        Budget
+                        Expenses
                     </label>
                     <Switch checked={showBudget} onCheckedChange={onToggleBudget} />
                 </div>
-
-                {/* Entity Count - stays on same line on large screens only */}
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-end">
-                    <div className="text-gray-400 text-base transition-opacity duration-500 whitespace-nowrap">
-                        Showing {visibleEntitiesCount} entities
-                    </div>
-                </div>
-            </div>
-
-            {/* Entity Count - wraps down on medium and smaller screens */}
-            <div className="lg:hidden text-left text-gray-400 text-xs sm:text-sm transition-opacity duration-500 whitespace-nowrap">
-                Showing {visibleEntitiesCount} entities
             </div>
         </div>
     );

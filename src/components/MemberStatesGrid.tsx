@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { getAllMemberStates, getStatusStyle, getTotalContributions } from '@/lib/memberStates';
 import { formatBudget } from '@/lib/entities';
 import MemberStateModal from './MemberStateModal';
+import MemberStatesTreemap from './MemberStatesTreemap';
+import { Switch } from '@/components/ui/switch';
 
 const MemberStateCard = ({ state, onClick }: { state: MemberState; onClick: () => void }) => {
     const styles = getStatusStyle(state.status);
@@ -51,6 +53,10 @@ const MemberStateCard = ({ state, onClick }: { state: MemberState; onClick: () =
 
 export default function MemberStatesGrid() {
     const [selectedState, setSelectedState] = useState<MemberState | null>(null);
+    const [showTreemap, setShowTreemap] = useState<boolean>(false);
+    const [isAnimating, setIsAnimating] = useState<boolean>(false);
+    const [displayTreemap, setDisplayTreemap] = useState<boolean>(false);
+    
     const memberStates = getAllMemberStates().sort((a, b) => {
         const aStyle = getStatusStyle(a.status);
         const bStyle = getStatusStyle(b.status);
@@ -58,13 +64,46 @@ export default function MemberStatesGrid() {
         return a.name.localeCompare(b.name);
     });
 
+    const toggleTreemap = () => {
+        if (isAnimating) return;
+        setIsAnimating(true);
+        setDisplayTreemap(prev => !prev);
+        setTimeout(() => setShowTreemap(prev => !prev), 400);
+        setTimeout(() => setIsAnimating(false), 800);
+    };
+
     return (
         <div className="w-full">
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
-                {memberStates.map((state) => (
-                    <MemberStateCard key={state.name} state={state} onClick={() => setSelectedState(state)} />
-                ))}
+            <div className="mb-4 flex items-center gap-2">
+                <span className="text-sm text-gray-700">
+                    Contributions
+                </span>
+                <Switch
+                    checked={showTreemap}
+                    onCheckedChange={toggleTreemap}
+                />
             </div>
+
+            <div className="relative w-full" data-view-container>
+                <div 
+                    className="transition-opacity duration-500 ease-in-out"
+                    style={{ opacity: displayTreemap === showTreemap ? 1 : 0 }}
+                >
+                    {showTreemap ? (
+                        <MemberStatesTreemap 
+                            states={memberStates}
+                            onStateClick={setSelectedState}
+                        />
+                    ) : (
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
+                            {memberStates.map((state) => (
+                                <MemberStateCard key={state.name} state={state} onClick={() => setSelectedState(state)} />
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+
             {selectedState && (
                 <MemberStateModal memberState={selectedState} onClose={() => setSelectedState(null)} />
             )}

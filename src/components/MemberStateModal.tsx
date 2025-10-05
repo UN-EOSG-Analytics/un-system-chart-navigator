@@ -11,6 +11,25 @@ interface MemberStateModalProps {
     onClose: () => void;
 }
 
+const getContributionBreakdown = (contributions: Record<string, Record<string, number>>): Record<string, number> => {
+    const breakdown: Record<string, number> = {};
+    Object.values(contributions).forEach(entityContribs => {
+        Object.entries(entityContribs).forEach(([type, amount]) => {
+            breakdown[type] = (breakdown[type] || 0) + amount;
+        });
+    });
+    return breakdown;
+};
+
+const getContributionTypeOrder = (type: string): number => {
+    const lowerType = type.toLowerCase();
+    if (lowerType.includes('assessed')) return 0;
+    if (lowerType.includes('voluntary core') || lowerType.includes('un-earmarked')) return 1;
+    if (lowerType.includes('voluntary non-core') || lowerType.includes('earmarked')) return 2;
+    if (lowerType.includes('revenue') || lowerType.includes('other')) return 3;
+    return 4;
+};
+
 export default function MemberStateModal({ memberState, onClose }: MemberStateModalProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
@@ -61,6 +80,10 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
 
     const statusStyle = getStatusStyle(memberState.status);
     const totalContributions = getTotalContributions(memberState.contributions);
+    const breakdown = getContributionBreakdown(memberState.contributions);
+    const breakdownEntries = Object.entries(breakdown).sort((a, b) => 
+        getContributionTypeOrder(a[0]) - getContributionTypeOrder(b[0])
+    );
 
     return (
         <div
@@ -103,6 +126,18 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                         <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Total Contributions</span>
                         <div className="mt-0.5">
                             <div className="text-gray-700 text-base font-semibold">{formatBudget(totalContributions)}</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Contribution Breakdown</span>
+                        <div className="mt-2 space-y-2">
+                            {breakdownEntries.map(([type, amount]) => (
+                                <div key={type} className="flex justify-between items-center">
+                                    <span className="text-sm text-gray-600">{type}</span>
+                                    <span className="text-sm font-semibold text-gray-700">{formatBudget(amount)}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

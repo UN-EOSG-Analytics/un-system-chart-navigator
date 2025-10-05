@@ -143,7 +143,6 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
                 onReset={handleReset}
-                visibleEntitiesCount={visibleEntities.length}
                 showBudget={showBudget}
                 onToggleBudget={toggleBudget}
             />

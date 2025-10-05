@@ -3,6 +3,8 @@
 import EntitiesGrid from '@/components/EntitiesGrid';
 import MemberStatesGrid from '@/components/MemberStatesGrid';
 import { useRef, Suspense } from 'react';
+import { getAllMemberStates } from '@/lib/memberStates';
+import { getAllEntities } from '@/lib/entities';
 
 export default function Home() {
     const entitiesGridRef = useRef<{ handleReset: () => void; toggleGroup: (groupKey: string) => void }>(null);
@@ -10,6 +12,9 @@ export default function Home() {
     const handleTitleClick = () => {
         entitiesGridRef.current?.handleReset();
     };
+
+    const memberStatesCount = getAllMemberStates().filter(s => s.status === 'member').length;
+    const entitiesCount = getAllEntities().length;
 
     return (
         <main className="min-h-screen w-full p-3 sm:p-4 lg:p-6">
@@ -23,11 +28,11 @@ export default function Home() {
                     </button>
                     <sup className="text-sm sm:text-base lg:text-lg text-gray-500 font-normal ml-1 sm:ml-1.5">alpha</sup>
                 </h1>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">193 member states</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">{memberStatesCount} member states</h1>
                 <Suspense fallback={<div>Loading...</div>}>
                     <MemberStatesGrid />
                 </Suspense>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">fund 152 organizations</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">fund {entitiesCount} organizations</h1>
                 <Suspense fallback={<div>Loading...</div>}>
                     <EntitiesGrid ref={entitiesGridRef} />
                 </Suspense>
