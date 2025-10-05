@@ -111,6 +111,25 @@ export default function BudgetTreemap({ entities, onEntityClick }: BudgetTreemap
         sum + items.reduce((s, item) => s + item.value, 0), 0
     );
 
+    const MIN_HEIGHT_THRESHOLD = 5;
+    const consolidatedGroups = sortedGroups.reduce<Array<[string, TreemapItem[], string[]]>>((acc, [groupKey, groupItems]) => {
+        const groupTotal = groupItems.reduce((sum, item) => sum + item.value, 0);
+        const groupHeight = (groupTotal / totalBudget) * 100;
+        
+        if (groupHeight < MIN_HEIGHT_THRESHOLD) {
+            const otherGroup = acc.find(([key]) => key === 'Other');
+            if (otherGroup) {
+                otherGroup[1].push(...groupItems);
+                otherGroup[2].push(groupKey);
+            } else {
+                acc.push(['Other', groupItems, [groupKey]]);
+            }
+        } else {
+            acc.push([groupKey, groupItems, []]);
+        }
+        return acc;
+    }, []).sort(([keyA], [keyB]) => keyA === 'Other' ? 1 : keyB === 'Other' ? -1 : 0);
+
     const formatBudget = (amount: number): string => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
@@ -126,15 +145,17 @@ export default function BudgetTreemap({ entities, onEntityClick }: BudgetTreemap
     return (
         <div className="w-full h-[calc(100vh-280px)] min-h-[700px]">
             <div className="relative w-full h-full bg-gray-100">
-                {sortedGroups.map(([groupKey, groupItems]) => {
-                    const styles = systemGroupingStyles[groupKey];
+                {consolidatedGroups.map(([groupKey, groupItems, combinedGroupKeys]) => {
+                    const isOther = groupKey === 'Other';
+                    const styles = isOther 
+                        ? { bgColor: 'bg-gray-300', textColor: 'text-gray-800', order: 999 }
+                        : systemGroupingStyles[groupKey];
                     const groupTotal = groupItems.reduce((sum, item) => sum + item.value, 0);
                     const groupHeight = (groupTotal / totalBudget) * 100 - groupSpacing;
                     
                     const sortedItems = [...groupItems].sort((a, b) => b.value - a.value);
                     const rects = squarify(sortedItems, 0, currentY, 100, groupHeight);
                     
-                    const groupY = currentY;
                     currentY += groupHeight + groupSpacing;
 
                     return rects.map((rect, i) => {
@@ -183,6 +204,9 @@ export default function BudgetTreemap({ entities, onEntityClick }: BudgetTreemap
                                     <div className="text-center max-w-xs sm:max-w-sm p-1">
                                         <p className="font-medium text-xs sm:text-sm leading-tight">{rect.data.entity_long}</p>
                                         <p className="text-xs text-slate-600 mt-1">{formatBudget(entityBudget)}</p>
+                                        {isOther && combinedGroupKeys.length > 0 && (
+                                            <p className="text-xs text-slate-500 mt-1">From: {combinedGroupKeys.join(', ')}</p>
+                                        )}
                                         <p className="text-xs text-slate-500 mt-1 hidden sm:block">Click to view entity details</p>
                                         <p className="text-xs text-slate-500 mt-1 sm:hidden">Tap to view details</p>
                                     </div>
