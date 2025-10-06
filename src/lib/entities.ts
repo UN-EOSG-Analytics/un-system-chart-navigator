@@ -63,6 +63,10 @@ export const getEntityBySlug = (slug: string): Entity | null => {
     return entities.find(entity => createEntitySlug(entity.entity) === decodedSlug) || null;
 };
 
+export const getEntityByCode = (code: string): Entity | null => {
+    return entities.find(entity => entity.entity === code) || null;
+};
+
 export const getEntitiesByGroup = (group: string) => getEntities({ group });
 
 export const searchEntities = (query: string) => getEntities({ search: query });

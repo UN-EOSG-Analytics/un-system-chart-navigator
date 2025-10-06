@@ -4,16 +4,28 @@ import EntitiesGrid from '@/components/EntitiesGrid';
 import MemberStatesGrid from '@/components/MemberStatesGrid';
 import SDGsGrid from '@/components/SDGsGrid';
 import OrgansGrid from '@/components/OrgansGrid';
+import ImpactGrid from '@/components/ImpactGrid';
+import ModalHandler from '@/components/ModalHandler';
 import { useRef, Suspense } from 'react';
+import { useRouter } from 'next/navigation';
 import { getAllMemberStates } from '@/lib/memberStates';
-import { getAllEntities } from '@/lib/entities';
+import { getAllEntities, getEntityByCode } from '@/lib/entities';
 import { getAllOrgans } from '@/lib/organs';
 
 export default function Home() {
+    const router = useRouter();
     const entitiesGridRef = useRef<{ handleReset: () => void; toggleGroup: (groupKey: string) => void }>(null);
 
     const handleTitleClick = () => {
         entitiesGridRef.current?.handleReset();
+    };
+
+    const handleEntityClick = (entityCode: string) => {
+        const entity = getEntityByCode(entityCode);
+        if (entity) {
+            const slug = entity.entity.toLowerCase().replace(/\s+/g, '-');
+            router.push(`/?entity=${slug}`, { scroll: false });
+        }
     };
 
     const memberStatesCount = getAllMemberStates().filter(s => s.status === 'member').length;
@@ -40,9 +52,13 @@ export default function Home() {
                 <Suspense fallback={<div>Loading...</div>}>
                     <EntitiesGrid ref={entitiesGridRef} />
                 </Suspense>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">to pursue the 17 Sustainable Development Goals</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">to pursue the 17 Sustainable Development Goals,</h1>
                 <Suspense fallback={<div>Loading...</div>}>
                     <SDGsGrid />
+                </Suspense>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">and they are making an impact.</h1>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <ImpactGrid onEntityClick={handleEntityClick} />
                 </Suspense>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">Member states coordinate in {organsCount} organs,</h1>
                 <Suspense fallback={<div>Loading...</div>}>
@@ -50,8 +66,8 @@ export default function Home() {
                 </Suspense>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">adopt ~400 resolutions per year</h1>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">and publish ~1500 reports per year.</h1>
-                
             </div>
+            <ModalHandler />
         </main>
     );
 }

@@ -4,6 +4,7 @@ import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
 import { budgetData, formatBudget } from '@/lib/entities';
+import { getImpactsByEntity } from '@/lib/impacts';
 import { BarChart3, BookOpen, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -372,6 +373,28 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                         <Badge>{entity!.head_of_entity_level}</Badge>
                                     </Field>
                                 )}
+                            </div>
+                        </div>
+                    );
+                })()}
+
+                {/* Impact */}
+                {(() => {
+                    const impacts = getImpactsByEntity(entity!.entity);
+                    if (impacts.length === 0) return null;
+
+                    return (
+                        <div>
+                            <SubHeader>Impact</SubHeader>
+                            <div className="space-y-3">
+                                {impacts.map(impact => (
+                                    <div key={impact.id} className="flex gap-3">
+                                        <div className="flex-shrink-0 w-1 bg-un-blue rounded-full mt-1.5"></div>
+                                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed flex-1">
+                                            {impact.impact}
+                                        </p>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     );

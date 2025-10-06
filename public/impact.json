@@ -1,0 +1,758 @@
+[
+    {
+        "id": 1,
+        "entity": "DCO",
+        "highlight": "DCO",
+        "impact": "DCO aligned activities with the development priorities of 98% of host governments"
+    },
+    {
+        "id": 2,
+        "entity": "DPO",
+        "highlight": "DPO",
+        "impact": "DPO deployed over 61,000 peacekeepers across 11 peacekeeping missions"
+    },
+    {
+        "id": 3,
+        "entity": "DPPA",
+        "highlight": "DPPA",
+        "impact": "DPPA carried out 140 mediation expert deployments in 27 contexts"
+    },
+    {
+        "id": 4,
+        "entity": "DPPA",
+        "highlight": "DPPA",
+        "impact": "DPPA conducted 100 Rapid Response deployments of staff and envoys"
+    },
+    {
+        "id": 5,
+        "entity": "DPPA",
+        "highlight": "DPPA",
+        "impact": "DPPA conducted 170 mediation support assignments"
+    },
+    {
+        "id": 6,
+        "entity": "DPPA",
+        "highlight": "DPPA",
+        "impact": "DPPA provided electoral assistance for one-third of elections held globally"
+    },
+    {
+        "id": 7,
+        "entity": "DPPA",
+        "highlight": "DPPA",
+        "impact": "DPPA delivered climate and environmental data to 29 countries via Geoguard"
+    },
+    {
+        "id": 8,
+        "entity": "DPPA",
+        "highlight": "UN Peacebuilding Fund",
+        "impact": "UN Peacebuilding Fund allocated over $116 million to 32 countries and territories"
+    },
+    {
+        "id": 9,
+        "entity": "FAO",
+        "highlight": "FAO",
+        "impact": "FAO provided agricultural inputs to 158,000 households"
+    },
+    {
+        "id": 10,
+        "entity": "FAO",
+        "highlight": "FAO",
+        "impact": "FAO trained 50,000 government staff, strengthening institutional capacities"
+    },
+    {
+        "id": 11,
+        "entity": "IAEA",
+        "highlight": "IAEA",
+        "impact": "IAEA delivered $8.6M in equipment for nuclear safety, security and safeguards in Ukraine"
+    },
+    {
+        "id": 12,
+        "entity": "IAEA",
+        "highlight": "IAEA",
+        "impact": "IAEA supported 150 countries, including 35 LDCs, through its technical cooperation programme"
+    },
+    {
+        "id": 13,
+        "entity": "IFAD",
+        "highlight": "IFAD",
+        "impact": "IFAD approved over $800 million in climate finance"
+    },
+    {
+        "id": 14,
+        "entity": "IFAD",
+        "highlight": "IFAD",
+        "impact": "IFAD helped create 195,000 agriculture jobs for rural communities"
+    },
+    {
+        "id": 15,
+        "entity": "IFAD",
+        "highlight": "IFAD",
+        "impact": "IFAD reached 96 million people with agriculture finance support"
+    },
+    {
+        "id": 16,
+        "entity": "ILO",
+        "highlight": "ILO",
+        "impact": "ILO achieved 41 institutional changes for social protection in 10 countries"
+    },
+    {
+        "id": 17,
+        "entity": "ILO",
+        "highlight": "ILO",
+        "impact": "ILO improved access to social protection for nearly 56 million people between 2021 and 2024"
+    },
+    {
+        "id": 18,
+        "entity": "ILO",
+        "highlight": "ILO",
+        "impact": "ILO improved the operations of social protection systems in 21 countries"
+    },
+    {
+        "id": 19,
+        "entity": "ILO",
+        "highlight": "ILO",
+        "impact": "ILO supported reforms that improved social protection coverage for 18 million people worldwide"
+    },
+    {
+        "id": 20,
+        "entity": "IMO",
+        "highlight": "IMO",
+        "impact": "IMO disbursed $22 million to maritime partners"
+    },
+    {
+        "id": 21,
+        "entity": "IOM",
+        "highlight": "IOM",
+        "impact": "IOM assisted ~20,000 individuals with safe evacuation, return and voluntary transfer in crisis situations"
+    },
+    {
+        "id": 22,
+        "entity": "IOM",
+        "highlight": "IOM",
+        "impact": "IOM delivered ~7 million primary health consultations in crisis settings"
+    },
+    {
+        "id": 23,
+        "entity": "IOM",
+        "highlight": "IOM",
+        "impact": "IOM reached ~6.5 million people in Ukraine and neighbouring countries"
+    },
+    {
+        "id": 24,
+        "entity": "IOM",
+        "highlight": "IOM",
+        "impact": "IOM reached 4 million beneficiaries with cash‑based support"
+    },
+    {
+        "id": 25,
+        "entity": "IOM",
+        "highlight": "IOM",
+        "impact": "IOM reached over 32 million people on the move with support"
+    },
+    {
+        "id": 26,
+        "entity": "ITC",
+        "highlight": "ITC",
+        "impact": "ITC supported more than 10,000 women‑led businesses"
+    },
+    {
+        "id": 27,
+        "entity": "ITU",
+        "highlight": "ITU",
+        "impact": "ITU allocated spectrum and satellite resources to ensure global telecom and ICT access"
+    },
+    {
+        "id": 28,
+        "entity": "ITU",
+        "highlight": "ITU",
+        "impact": "ITU helped improve access to telecommunications for underserved communities globally"
+    },
+    {
+        "id": 29,
+        "entity": "ITU",
+        "highlight": "ITU",
+        "impact": "ITU supported 160 countries in adopting a broadband plan or national digital agenda"
+    },
+    {
+        "id": 30,
+        "entity": "ITU",
+        "highlight": "ITU",
+        "impact": "ITU supported over 90 countries in adopting e-waste regulation"
+    },
+    {
+        "id": 31,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA allocated $64M to anticipatory and early action initiatives"
+    },
+    {
+        "id": 32,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA assisted ~120 million people with assistance"
+    },
+    {
+        "id": 33,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA delivered nearly $54M in anticipatory financing helping communities prepare for crises"
+    },
+    {
+        "id": 34,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA disbursed $1.5 billion to the worst and most underfunded crises"
+    },
+    {
+        "id": 35,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA mobilized $25 billion in humanitarian assistance"
+    },
+    {
+        "id": 36,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA mobilized 2,000 partners and UN agencies to reach 116 million people in 33 countries"
+    },
+    {
+        "id": 37,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA released $3.4M to humanitarian responders in Nepal six minutes after verified flood warnings"
+    },
+    {
+        "id": 38,
+        "entity": "OCHA",
+        "highlight": "OCHA",
+        "impact": "OCHA supported over 370 families of humanitarian workers killed"
+    },
+    {
+        "id": 39,
+        "entity": "ODA",
+        "highlight": "ODA",
+        "impact": "ODA funded 133 arms control‑related projects benefitting 148 countries"
+    },
+    {
+        "id": 40,
+        "entity": "OHCHR",
+        "highlight": "OHCHR",
+        "impact": "OHCHR assisted 10,500+ slavery survivors in 36 countries"
+    },
+    {
+        "id": 41,
+        "entity": "OHCHR",
+        "highlight": "OHCHR",
+        "impact": "OHCHR helped over 12,600 victims of gender‑based violence gain access to urgent support"
+    },
+    {
+        "id": 42,
+        "entity": "OHCHR",
+        "highlight": "OHCHR",
+        "impact": "OHCHR provided legal aid, relocation, and family reunification for 15,000+ people in extreme violence situations"
+    },
+    {
+        "id": 43,
+        "entity": "OHCHR",
+        "highlight": "OHCHR",
+        "impact": "OHCHR secured the release of more than 3,000 arbitrarily detained people"
+    },
+    {
+        "id": 44,
+        "entity": "OHCHR",
+        "highlight": "OHCHR",
+        "impact": "OHCHR supported 49,000+ torture survivors in 93 countries"
+    },
+    {
+        "id": 45,
+        "entity": "OPCW",
+        "highlight": "OPCW",
+        "impact": "OPCW inspected over 5,000 industrial facilities"
+    },
+    {
+        "id": 46,
+        "entity": "Spotlight Initiative",
+        "highlight": "Spotlight",
+        "impact": "Spotlight mobilized $250M+ and backed 1,400+ grassroots organizations in fragile settings since 2016"
+    },
+    {
+        "id": 47,
+        "entity": "Spotlight Initiative",
+        "highlight": "Spotlight",
+        "impact": "Spotlight reached 384 million people, engaged 8 million youth, and aided 3 million gender‑based violence survivors"
+    },
+    {
+        "id": 48,
+        "entity": "SRSG-CAAC",
+        "highlight": "SRSG-CAAC",
+        "impact": "SRSG-CAAC aided 16,500 children formerly associated with armed groups"
+    },
+    {
+        "id": 49,
+        "entity": "UN Women",
+        "highlight": "UN Women",
+        "impact": "UN Women disbursed more than $220 million to civil society organizations, local organizations and networks working towards gender equality"
+    },
+    {
+        "id": 50,
+        "entity": "UN Women",
+        "highlight": "UN Women",
+        "impact": "UN Women strengthened leadership and capacity of 3,500+ civil society and women-led organizations"
+    },
+    {
+        "id": 51,
+        "entity": "UN Women",
+        "highlight": "UN Women",
+        "impact": "UN Women strengthened the capacities of 16,600 organizations to support women across 93 countries"
+    },
+    {
+        "id": 52,
+        "entity": "UN Women",
+        "highlight": "UN Women",
+        "impact": "UN Women strengthened the legal and policy environment protecting the rights of 3 billion women and girls in 83 countries"
+    },
+    {
+        "id": 53,
+        "entity": "UN-Habitat",
+        "highlight": "UN-Habitat",
+        "impact": "UN-Habitat benefited 320K people through improved water and sanitation services"
+    },
+    {
+        "id": 54,
+        "entity": "UN-Habitat",
+        "highlight": "UN-Habitat",
+        "impact": "UN-Habitat empowered 237 million people through improved urban planning and management"
+    },
+    {
+        "id": 55,
+        "entity": "UN-Habitat",
+        "highlight": "UN-Habitat",
+        "impact": "UN-Habitat enabled over 200,000 people living in slums and informal settlements to access basic services"
+    },
+    {
+        "id": 56,
+        "entity": "UN-Habitat",
+        "highlight": "UN-Habitat",
+        "impact": "UN-Habitat enabled over 5.7 million people to live in its developed urban plan areas"
+    },
+    {
+        "id": 57,
+        "entity": "UN-Habitat",
+        "highlight": "UN-Habitat",
+        "impact": "UN-Habitat reached 6.7 million internally displaced people with tailored support"
+    },
+    {
+        "id": 58,
+        "entity": "UNAIDS",
+        "highlight": "UNAIDS",
+        "impact": "UNAIDS expanded coverage of oral pre‑exposure prophylaxis to over 3.5 million people"
+    },
+    {
+        "id": 59,
+        "entity": "UNAIDS",
+        "highlight": "UNAIDS",
+        "impact": "UNAIDS helped ensure 31 million people received life‑saving treatment"
+    },
+    {
+        "id": 60,
+        "entity": "UNAIDS",
+        "highlight": "UNAIDS",
+        "impact": "UNAIDS supported 84 countries in scaling up HIV prevention programmes"
+    },
+    {
+        "id": 61,
+        "entity": "UNCDF",
+        "highlight": "UNCDF",
+        "impact": "UNCDF developed the Gambia River Basin master plan benefiting over 6 million people"
+    },
+    {
+        "id": 62,
+        "entity": "UNCDF",
+        "highlight": "UNCDF",
+        "impact": "UNCDF supported 1 million Pacific residents’ access to digital finance"
+    },
+    {
+        "id": 63,
+        "entity": "UNCTAD",
+        "highlight": "UNCTAD",
+        "impact": "UNCTAD delivered over 200 technical assistance projects in more than 70 countries"
+    },
+    {
+        "id": 64,
+        "entity": "UNDP",
+        "highlight": "UNDP",
+        "impact": "UNDP assisted 20 million people in situations of forced displacement"
+    },
+    {
+        "id": 65,
+        "entity": "UNDP",
+        "highlight": "UNDP",
+        "impact": "UNDP helped 160 million people gain access to essential services for health, education, and water"
+    },
+    {
+        "id": 66,
+        "entity": "UNDP",
+        "highlight": "UNDP",
+        "impact": "UNDP helped 51 million people gain access to renewable energy"
+    },
+    {
+        "id": 67,
+        "entity": "UNDP",
+        "highlight": "UNDP",
+        "impact": "UNDP helped register 377 million voters"
+    },
+    {
+        "id": 68,
+        "entity": "UNEP",
+        "highlight": "UNEP",
+        "impact": "UNEP helped 70 countries update their national biodiversity strategies"
+    },
+    {
+        "id": 69,
+        "entity": "UNEP",
+        "highlight": "UNEP",
+        "impact": "UNEP helped bring 1.6 million hectares of land and marine areas under improved management, benefiting about 1 million people"
+    },
+    {
+        "id": 70,
+        "entity": "UNEP",
+        "highlight": "UNEP",
+        "impact": "UNEP launched adaptation initiatives for 3.5 million people in 50 countries facing climate impacts"
+    },
+    {
+        "id": 71,
+        "entity": "UNEP",
+        "highlight": "UNEP",
+        "impact": "UNEP provided $200M in grants to help 35 developing countries advance low‑carbon development, reached 17 million people, and cut emissions equal to 65M cars"
+    },
+    {
+        "id": 72,
+        "entity": "UNESCO",
+        "highlight": "UNESCO",
+        "impact": "UNESCO helped protect 1,200 world heritage sites across 168 countries"
+    },
+    {
+        "id": 73,
+        "entity": "UNESCO",
+        "highlight": "UNESCO",
+        "impact": "UNESCO supported 43 million people in 133 countries affected by conflict and disaster"
+    },
+    {
+        "id": 74,
+        "entity": "UNESCO",
+        "highlight": "UNESCO",
+        "impact": "UNESCO trained 850,000 teachers to better prepare learners for the future"
+    },
+    {
+        "id": 75,
+        "entity": "UNFCCC",
+        "highlight": "UNFCCC",
+        "impact": "UNFCCC supported 170 countries in preparing their nationally determined contributions"
+    },
+    {
+        "id": 76,
+        "entity": "UNFPA",
+        "highlight": "UNFPA",
+        "impact": "UNFPA helped prevent 158,000 HIV infections through the provision of female condoms"
+    },
+    {
+        "id": 77,
+        "entity": "UNFPA",
+        "highlight": "UNFPA",
+        "impact": "UNFPA provided sexual and reproductive health services to 54 million women and young people"
+    },
+    {
+        "id": 78,
+        "entity": "UNFPA",
+        "highlight": "UNFPA",
+        "impact": "UNFPA reached 11 million marginalized girls with life‑skills programmes"
+    },
+    {
+        "id": 79,
+        "entity": "UNFPA",
+        "highlight": "UNFPA",
+        "impact": "UNFPA reached 14 million people with sexual and reproductive health services"
+    },
+    {
+        "id": 80,
+        "entity": "UNHCR",
+        "highlight": "UNHCR",
+        "impact": "UNHCR assisted over 37 million displaced people worldwide"
+    },
+    {
+        "id": 81,
+        "entity": "UNHCR",
+        "highlight": "UNHCR",
+        "impact": "UNHCR provided legal assistance to 1.4 million people"
+    },
+    {
+        "id": 82,
+        "entity": "UNHCR",
+        "highlight": "UNHCR",
+        "impact": "UNHCR reached 1.7 million people with gender‑based violence prevention support"
+    },
+    {
+        "id": 83,
+        "entity": "UNHCR",
+        "highlight": "UNHCR",
+        "impact": "UNHCR supported 4.6 million people in securing documentation"
+    },
+    {
+        "id": 84,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF delivered humanitarian assistance to millions of children across 448 emergencies in 104 countries"
+    },
+    {
+        "id": 85,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF delivered over 1.5 billion polio vaccine doses to 87 countries"
+    },
+    {
+        "id": 86,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF helped detect wasting early in 251 million children under five"
+    },
+    {
+        "id": 87,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF provided basic sanitation, and hygiene services to over 21 million people"
+    },
+    {
+        "id": 88,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF provided education access to 26 million out-of-school children, including 13 million in crisis"
+    },
+    {
+        "id": 89,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF provided safe water to more than 33 million people"
+    },
+    {
+        "id": 90,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF supported health centres where 1 in 4 babies worldwide were born"
+    },
+    {
+        "id": 91,
+        "entity": "UNICEF",
+        "highlight": "UNICEF",
+        "impact": "UNICEF treated over 9 million children for severe wasting and severe acute malnutrition"
+    },
+    {
+        "id": 92,
+        "entity": "UNIDO",
+        "highlight": "UNIDO",
+        "impact": "UNIDO delivered technical cooperation services worth $291M"
+    },
+    {
+        "id": 93,
+        "entity": "UNIDO",
+        "highlight": "UNIDO",
+        "impact": "UNIDO helped countries reduce 82 million tonnes of CO2 emissions through phasing down ozone-depleting substances and hydrofluorocarbons"
+    },
+    {
+        "id": 94,
+        "entity": "UNITAR",
+        "highlight": "UNITAR",
+        "impact": "UNITAR provided training for 40K PHC medical officers in India"
+    },
+    {
+        "id": 95,
+        "entity": "UNITAR",
+        "highlight": "UNITAR",
+        "impact": "UNITAR trained ~550K individuals worldwide"
+    },
+    {
+        "id": 96,
+        "entity": "UNMAS",
+        "highlight": "UNMAS",
+        "impact": "UNMAS cleared more than 4.4 million m2 of explosive ordnance-contaminated land in Afghanistan"
+    },
+    {
+        "id": 97,
+        "entity": "UNMAS",
+        "highlight": "UNMAS",
+        "impact": "UNMAS confirmed 4,000 km2 of roads safe through mine action programmes"
+    },
+    {
+        "id": 98,
+        "entity": "UNMAS",
+        "highlight": "UNMAS",
+        "impact": "UNMAS removed or destroyed 2 million explosive ordnance items"
+    },
+    {
+        "id": 99,
+        "entity": "UNMAS",
+        "highlight": "UNMAS",
+        "impact": "UNMAS removed over 5,000 explosive ordnance items in South Sudan"
+    },
+    {
+        "id": 100,
+        "entity": "UNODC",
+        "highlight": "UNODC",
+        "impact": "UNODC benefited 500,000 families globally with technical assistance to reduce illicit crop cultivation"
+    },
+    {
+        "id": 101,
+        "entity": "UNODC",
+        "highlight": "UNODC",
+        "impact": "UNODC facilitated the safe disposal of over 1,000 tons of drugs"
+    },
+    {
+        "id": 102,
+        "entity": "UNODC",
+        "highlight": "UNODC",
+        "impact": "UNODC monitored 1,300 new psychoactive substances in 150 countries and territories"
+    },
+    {
+        "id": 103,
+        "entity": "UNODC",
+        "highlight": "UNODC",
+        "impact": "UNODC provided technical assistance against organized crime across 156 countries"
+    },
+    {
+        "id": 104,
+        "entity": "UNOPS",
+        "highlight": "UNOPS",
+        "impact": "UNOPS delivered $1.3 billion worth of projects in least developed countries"
+    },
+    {
+        "id": 105,
+        "entity": "UNOPS",
+        "highlight": "UNOPS",
+        "impact": "UNOPS delivered $600 million worth of projects in landlocked developing countries"
+    },
+    {
+        "id": 106,
+        "entity": "UNOPS",
+        "highlight": "UNOPS",
+        "impact": "UNOPS procured $1.7 billion worth of goods and services for its partners"
+    },
+    {
+        "id": 107,
+        "entity": "UNRWA",
+        "highlight": "UNRWA",
+        "impact": "UNRWA conducted recreational activities for over 350K children"
+    },
+    {
+        "id": 108,
+        "entity": "UNRWA",
+        "highlight": "UNRWA",
+        "impact": "UNRWA provided emergency food or cash assistance to 2.6 million people"
+    },
+    {
+        "id": 109,
+        "entity": "UNU",
+        "highlight": "UNU",
+        "impact": "UNU provided free‑of‑charge online access to 8,700+ publications"
+    },
+    {
+        "id": 110,
+        "entity": "UNV",
+        "highlight": "UNV",
+        "impact": "UNV mobilized ~15K volunteers in 169 countries and territories"
+    },
+    {
+        "id": 111,
+        "entity": "UNV",
+        "highlight": "UNV",
+        "impact": "UNV supported 59 UN partner programmes and field operations worldwide"
+    },
+    {
+        "id": 112,
+        "entity": "UPU",
+        "highlight": "UPU",
+        "impact": "UPU served 7.3 billion people through the international postal network"
+    },
+    {
+        "id": 113,
+        "entity": "UPU",
+        "highlight": "UPU",
+        "impact": "UPU supported 4.5 million postal workers worldwide"
+    },
+    {
+        "id": 114,
+        "entity": "WFP",
+        "highlight": "WFP",
+        "impact": "WFP distributed 4.8 million metric tonnes of food"
+    },
+    {
+        "id": 115,
+        "entity": "WFP",
+        "highlight": "WFP",
+        "impact": "WFP provided $3.3 billion in cash‑based transfers and commodity vouchers"
+    },
+    {
+        "id": 116,
+        "entity": "WFP",
+        "highlight": "WFP",
+        "impact": "WFP reached 160 million people with life‑saving and life‑changing food assistance"
+    },
+    {
+        "id": 117,
+        "entity": "WFP",
+        "highlight": "WFP",
+        "impact": "WFP supported 88 countries with national social protection programmes"
+    },
+    {
+        "id": 118,
+        "entity": "WFP",
+        "highlight": "WFP",
+        "impact": "WFP supported more than 28 million people with malnutrition treatment and prevention"
+    },
+    {
+        "id": 119,
+        "entity": "WHO",
+        "highlight": "WHO",
+        "impact": "WHO allocated $52 million to respond to 51 health emergencies in 89 countries and territories"
+    },
+    {
+        "id": 120,
+        "entity": "WHO",
+        "highlight": "WHO",
+        "impact": "WHO delivered $44M critical supplies to 22 emergencies in 77 countries"
+    },
+    {
+        "id": 121,
+        "entity": "WHO",
+        "highlight": "WHO",
+        "impact": "WHO expanded access to mental health services to 70 million people"
+    },
+    {
+        "id": 122,
+        "entity": "WHO",
+        "highlight": "WHO",
+        "impact": "WHO prequalified 48 pharmaceutical products, 21 pharmaceutical ingredients and 22 cold‑chain products "
+    },
+    {
+        "id": 123,
+        "entity": "WHO",
+        "highlight": "WHO",
+        "impact": "WHO supported 7,800 critically ill patients in 45 countries with advanced clinical management at any given time"
+    },
+    {
+        "id": 124,
+        "entity": "WIPO",
+        "highlight": "WIPO",
+        "impact": "WIPO enrolled more than 150,000 participants in education courses"
+    },
+    {
+        "id": 125,
+        "entity": "WMO",
+        "highlight": "WMO",
+        "impact": "WMO helped build multi‑hazard early‑warning capacity in 108 countries"
+    },
+    {
+        "id": 126,
+        "entity": "WMO",
+        "highlight": "WMO",
+        "impact": "WMO helped LDCs and SIDS improve early‑warning systems for 397 million people"
+    }
+]
