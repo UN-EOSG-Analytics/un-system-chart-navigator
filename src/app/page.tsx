@@ -2,6 +2,7 @@
 
 import EntitiesGrid from '@/components/EntitiesGrid';
 import MemberStatesGrid from '@/components/MemberStatesGrid';
+import SDGsGrid from '@/components/SDGsGrid';
 import { useRef, Suspense } from 'react';
 import { getAllMemberStates } from '@/lib/memberStates';
 import { getAllEntities } from '@/lib/entities';
@@ -36,8 +37,10 @@ export default function Home() {
                 <Suspense fallback={<div>Loading...</div>}>
                     <EntitiesGrid ref={entitiesGridRef} />
                 </Suspense>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">to pursue the 17 Sustainable Development Goals,</h1>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">and they are having an impact.</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">to pursue the 17 Sustainable Development Goals</h1>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <SDGsGrid />
+                </Suspense>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">Member states coordinate in 23 organs,</h1>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">adopt ~400 resolutions per year</h1>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">and publish ~1500 reports per year.</h1>
