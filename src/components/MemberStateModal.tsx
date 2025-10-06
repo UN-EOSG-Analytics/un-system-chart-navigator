@@ -1,10 +1,13 @@
 'use client';
 
 import { MemberState } from '@/types/entity';
-import { X } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { getStatusStyle, getTotalContributions } from '@/lib/memberStates';
+import { X, Info } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
+import { getStatusStyle, getTotalContributions, getAllMemberStates } from '@/lib/memberStates';
 import { formatBudget } from '@/lib/entities';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { createEntitySlug } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 interface MemberStateModalProps {
     memberState: MemberState | null;
@@ -22,13 +25,41 @@ const getContributionBreakdown = (contributions: Record<string, Record<string, n
 };
 
 const getContributionTypeOrder = (type: string): number => {
-    const lowerType = type.toLowerCase();
-    if (lowerType.includes('assessed')) return 0;
-    if (lowerType.includes('voluntary core') || lowerType.includes('un-earmarked')) return 1;
-    if (lowerType.includes('voluntary non-core') || lowerType.includes('earmarked')) return 2;
-    if (lowerType.includes('revenue') || lowerType.includes('other')) return 3;
+    if (type === 'Assessed') return 0;
+    if (type === 'Voluntary un-earmarked') return 1;
+    if (type === 'Voluntary earmarked') return 2;
+    if (type === 'Other') return 3;
     return 4;
 };
+
+const getContributionTypeColor = (type: string): string => {
+    if (type === 'Assessed') return 'bg-gray-900';
+    if (type === 'Voluntary un-earmarked') return 'bg-gray-700';
+    if (type === 'Voluntary earmarked') return 'bg-gray-500';
+    if (type === 'Other') return 'bg-gray-400';
+    return 'bg-gray-500';
+};
+
+const formatBudgetFixed = (amount: number): string => {
+    // Format with consistent width for right alignment
+    if (amount >= 1_000_000_000) {
+        return `$${(amount / 1_000_000_000).toFixed(2)}B`;
+    } else if (amount >= 1_000_000) {
+        return `$${(amount / 1_000_000).toFixed(2)}M`;
+    } else if (amount >= 1_000) {
+        return `$${(amount / 1_000).toFixed(2)}K`;
+    }
+    return `$${amount.toFixed(2)}`;
+};
+
+interface EntityContribution {
+    entity: string;
+    total: number;
+    percentage: number;
+    typeBreakdown: Record<string, number>;
+    avgOthersPercentage: number;
+    avgTypeBreakdown: Record<string, number>;
+}
 
 export default function MemberStateModal({ memberState, onClose }: MemberStateModalProps) {
     const [isVisible, setIsVisible] = useState(false);
@@ -36,6 +67,8 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
     const modalRef = useRef<HTMLDivElement>(null);
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [showAllEntities, setShowAllEntities] = useState(false);
+    const router = useRouter();
 
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 10);
@@ -85,6 +118,51 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
         getContributionTypeOrder(a[0]) - getContributionTypeOrder(b[0])
     );
 
+    const totalAssessed = useMemo(() => {
+        return Object.values(memberState.contributions).reduce((sum, types) => {
+            return sum + (types['Assessed'] || 0);
+        }, 0);
+    }, [memberState]);
+
+    const entityContributions = useMemo(() => {
+        const allStates = getAllMemberStates();
+        
+        // Calculate total assessed across all states for weighted average
+        const totalAllAssessed = allStates.reduce((sum, state) => {
+            return sum + Object.values(state.contributions).reduce((s, types) => {
+                return s + (types['Assessed'] || 0);
+            }, 0);
+        }, 0);
+        
+        const contributions: EntityContribution[] = Object.entries(memberState.contributions).map(([entity, types]) => {
+            const total = Object.values(types).reduce((sum, val) => sum + val, 0);
+            // Use total assessed as denominator (percentage relative to assessed baseline)
+            const percentage = totalAssessed > 0 ? (total / totalAssessed) * 100 : (total / totalContributions) * 100;
+            
+            // Calculate weighted average: sum of all spending on entity / sum of all assessed
+            const totalEntitySpending = allStates.reduce((sum, state) => {
+                return sum + (state.contributions[entity] 
+                    ? Object.values(state.contributions[entity]).reduce((s, val) => s + val, 0)
+                    : 0);
+            }, 0);
+            
+            const avgOthersPercentage = totalAllAssessed > 0 
+                ? (totalEntitySpending / totalAllAssessed) * 100 
+                : 0;
+            
+            return {
+                entity,
+                total,
+                percentage,
+                typeBreakdown: types,
+                avgOthersPercentage,
+                avgTypeBreakdown: {}
+            };
+        });
+        
+        return contributions.sort((a, b) => b.total - a.total);
+    }, [memberState, totalContributions, totalAssessed]);
+
     return (
         <div
             className={`fixed inset-0 bg-black/50 flex items-center justify-end z-50 transition-all duration-300 ease-out ${isVisible && !isClosing ? 'opacity-100' : 'opacity-0'}`}
@@ -130,14 +208,189 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                     </div>
 
                     <div>
-                        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Contribution Breakdown</span>
+                        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Contribution Breakdown by Type</span>
                         <div className="mt-2 space-y-2">
                             {breakdownEntries.map(([type, amount]) => (
-                                <div key={type} className="flex justify-between items-center">
-                                    <span className="text-sm text-gray-600">{type}</span>
+                                <div key={type} className="flex items-center justify-between gap-2">
+                                    <div className="flex items-center gap-2">
+                                        <div className={`w-2 h-2 rounded-full ${getContributionTypeColor(type)}`} />
+                                        <span className="text-sm text-gray-600">{type}</span>
+                                    </div>
                                     <span className="text-sm font-semibold text-gray-700">{formatBudget(amount)}</span>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className="flex items-center gap-2 mb-3">
+                            <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Contribution Allocation by Entity</span>
+                        </div>
+                        <div className="flex items-center gap-3 text-xs text-gray-500 mb-2">
+                            <div className="flex items-center gap-1.5">
+                                <div className="flex h-2 w-8 rounded-sm overflow-hidden">
+                                    <div className="bg-gray-900 flex-1" />
+                                    <div className="bg-gray-700 flex-1" />
+                                    <div className="bg-gray-500 flex-1" />
+                                    <div className="bg-gray-400 flex-1" />
+                                </div>
+                                <span>{memberState.name}</span>
+                            </div>
+                            <div className="flex items-center gap-1.5">
+                                <div className="h-2 w-8 rounded-sm bg-gray-300" />
+                                <span>Global average</span>
+                            </div>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Info className="h-3 w-3 cursor-help" />
+                                </TooltipTrigger>
+                                <TooltipContent side="top" className="max-w-md bg-white text-slate-800 border border-slate-200">
+                                    <div className="text-xs space-y-2">
+                                        <p className="font-semibold">How to read this chart</p>
+                                        <div>
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <div className="flex h-2 w-8 rounded-sm overflow-hidden flex-shrink-0">
+                                                    <div className="bg-gray-900 flex-1" />
+                                                    <div className="bg-gray-700 flex-1" />
+                                                    <div className="bg-gray-500 flex-1" />
+                                                    <div className="bg-gray-400 flex-1" />
+                                                </div>
+                                                <p className="font-medium">{memberState.name}'s bars</p>
+                                            </div>
+                                            <p className="text-gray-600">Show contributions of {memberState.name} per entity, split by contribution type:</p>
+                                            <div className="ml-2 space-y-0.5 mt-1">
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-2 h-2 rounded-full bg-gray-900" />
+                                                    <span className="text-gray-600">Assessed</span>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-2 h-2 rounded-full bg-gray-700" />
+                                                    <span className="text-gray-600">Voluntary un-earmarked</span>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-2 h-2 rounded-full bg-gray-500" />
+                                                    <span className="text-gray-600">Voluntary earmarked</span>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <div className="w-2 h-2 rounded-full bg-gray-400" />
+                                                    <span className="text-gray-600">Other</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p className="font-medium">Percentage score</p>
+                                            <p className="text-gray-600">For each entity, the percentage shows {memberState.name}'s contributions to that entity divided by {memberState.name}'s total assessed contributions to all entities.</p>
+                                        </div>
+                                        <div>
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <div className="h-2 w-8 rounded-sm bg-gray-300 flex-shrink-0" />
+                                                <p className="font-medium">Global average bars</p>
+                                            </div>
+                                            <p className="text-gray-600">Shows the percentage of all member states' contributions to that entity divided by all states' total assessed contributions. Provides context for comparison.</p>
+                                        </div>
+                                    </div>
+                                </TooltipContent>
+                            </Tooltip>
+                        </div>
+                        <div className="space-y-1.5">
+                            {(() => {
+                                const displayedEntities = showAllEntities ? entityContributions : entityContributions.slice(0, 10);
+                                const maxPercentage = Math.max(...entityContributions.map(c => Math.max(c.percentage, c.avgOthersPercentage)));
+                                
+                                return (
+                                    <>
+                                        {displayedEntities.map((contrib) => {
+                                            const typeEntries = Object.entries(contrib.typeBreakdown).sort((a, b) => 
+                                                getContributionTypeOrder(a[0]) - getContributionTypeOrder(b[0])
+                                            );
+                                            const normalizedPercentage = (contrib.percentage / maxPercentage) * 100;
+                                            const normalizedAvgPercentage = (contrib.avgOthersPercentage / maxPercentage) * 100;
+                                            
+                                            return (
+                                                <div key={contrib.entity} className="flex items-center gap-2">
+                                                    <button
+                                                        onClick={() => {
+                                                            const entitySlug = createEntitySlug(contrib.entity);
+                                                            router.replace(`/?entity=${entitySlug}`, { scroll: false });
+                                                        }}
+                                                        className="w-20 text-xs text-gray-700 font-medium truncate flex-shrink-0 text-left hover:text-gray-900 hover:underline cursor-pointer"
+                                                        title={`View ${contrib.entity}`}
+                                                    >
+                                                        {contrib.entity}
+                                                    </button>
+                                                    <div className="flex-1 flex flex-col gap-px">
+                                                        {/* This state's bar */}
+                                                        <Tooltip>
+                                                            <TooltipTrigger asChild>
+                                                                <div className="h-2 rounded-sm overflow-hidden flex cursor-help" style={{ width: `${normalizedPercentage}%` }}>
+                                                                    {typeEntries.map(([type, amount]) => {
+                                                                        const typePercentage = (amount / contrib.total) * 100;
+                                                                        return typePercentage > 0 ? (
+                                                                            <div
+                                                                                key={type}
+                                                                                className={`${getContributionTypeColor(type)} transition-all`}
+                                                                                style={{ width: `${typePercentage}%` }}
+                                                                            />
+                                                                        ) : null;
+                                                                    })}
+                                                                </div>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent side="top" className="max-w-xs bg-white text-slate-800 border border-slate-200">
+                                                                <div className="text-xs space-y-1">
+                                                                    <div className="font-semibold mb-1">
+                                                                        {formatBudget(contrib.total)}
+                                                                        {totalAssessed > 0 && (
+                                                                            <div className="text-gray-600 font-normal mt-1">
+                                                                                {memberState.name}'s contributions to {contrib.entity} as percentage of {memberState.name}'s assessed contributions: {contrib.percentage.toFixed(0)}%
+                                                                            </div>
+                                                                        )}
+                                                                    </div>
+                                                                    {typeEntries.map(([type, amount]) => (
+                                                                        <div key={type} className="flex items-center gap-2">
+                                                                            <div className={`w-2 h-2 rounded-full ${getContributionTypeColor(type)}`} />
+                                                                            <span className="flex-1">{type}</span>
+                                                                            <span className="font-semibold">{formatBudget(amount)}</span>
+                                                                        </div>
+                                                                    ))}
+                                                                </div>
+                                                            </TooltipContent>
+                                                        </Tooltip>
+                                                        
+                                                        {/* Average bar */}
+                                                        <Tooltip>
+                                                            <TooltipTrigger asChild>
+                                                                <div className="h-2 rounded-sm overflow-hidden flex cursor-help bg-gray-300" style={{ width: `${normalizedAvgPercentage}%` }}>
+                                                                </div>
+                                                            </TooltipTrigger>
+                                                            <TooltipContent side="top" className="max-w-xs bg-white text-slate-800 border border-slate-200">
+                                                                <div className="text-xs">
+                                                                    {totalAssessed > 0 ? (
+                                                                        <div>Overall global contributions to {contrib.entity} as percentage of global assessed contributions: {contrib.avgOthersPercentage.toFixed(0)}%</div>
+                                                                    ) : (
+                                                                        <div>Global average contribution</div>
+                                                                    )}
+                                                                </div>
+                                                            </TooltipContent>
+                                                        </Tooltip>
+                                                    </div>
+                                                    <div className="text-xs text-gray-500 w-20 text-right flex-shrink-0">
+                                                        {formatBudgetFixed(contrib.total)}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                        
+                                        {!showAllEntities && entityContributions.length > 10 && (
+                                            <button
+                                                onClick={() => setShowAllEntities(true)}
+                                                className="text-xs text-gray-600 hover:text-gray-900 underline mt-2"
+                                            >
+                                                Show all {entityContributions.length} entities
+                                            </button>
+                                        )}
+                                    </>
+                                );
+                            })()}
                         </div>
                     </div>
                 </div>

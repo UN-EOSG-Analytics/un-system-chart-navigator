@@ -5,6 +5,19 @@ import requests
 from bs4 import BeautifulSoup
 from utils import normalize_entity, parse_amount
 
+
+def normalize_rev_type(rev_type: str) -> str:
+    """Normalize revenue type to shorter, consistent labels."""
+    lower = rev_type.lower()
+    if "assessed" in lower:
+        return "Assessed"
+    elif "voluntary core" in lower or "un-earmarked" in lower:
+        return "Voluntary un-earmarked"
+    elif "voluntary non-core" in lower or "earmarked" in lower:
+        return "Voluntary earmarked"
+    else:
+        return "Other"
+
 # Scrape UN member states and observer states
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
@@ -93,7 +106,7 @@ for donor in donor_names:
     contributions = {}
     for _, row in donor_data.iterrows():
         entity = row["entity_normalized"]
-        rev_type = row["rev_type"]
+        rev_type = normalize_rev_type(row["rev_type"])
         amount = row["amount_parsed"]
         if entity not in contributions:
             contributions[entity] = {}

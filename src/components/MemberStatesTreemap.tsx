@@ -32,20 +32,18 @@ const getContributionBreakdown = (contributions: Record<string, Record<string, n
 };
 
 const getContributionTypeOrder = (type: string): number => {
-    const lowerType = type.toLowerCase();
-    if (lowerType.includes('assessed')) return 0;
-    if (lowerType.includes('voluntary core') || lowerType.includes('un-earmarked')) return 1;
-    if (lowerType.includes('voluntary non-core') || lowerType.includes('earmarked')) return 2;
-    if (lowerType.includes('revenue') || lowerType.includes('other')) return 3;
+    if (type === 'Assessed') return 0;
+    if (type === 'Voluntary un-earmarked') return 1;
+    if (type === 'Voluntary earmarked') return 2;
+    if (type === 'Other') return 3;
     return 4;
 };
 
 const getContributionTypeColor = (type: string): string => {
-    const lowerType = type.toLowerCase();
-    if (lowerType.includes('assessed')) return 'opacity-95';
-    if (lowerType.includes('voluntary core') || lowerType.includes('un-earmarked')) return 'opacity-85';
-    if (lowerType.includes('voluntary non-core') || lowerType.includes('earmarked')) return 'opacity-75';
-    if (lowerType.includes('revenue') || lowerType.includes('other')) return 'opacity-65';
+    if (type === 'Assessed') return 'opacity-95';
+    if (type === 'Voluntary un-earmarked') return 'opacity-85';
+    if (type === 'Voluntary earmarked') return 'opacity-75';
+    if (type === 'Other') return 'opacity-65';
     return 'opacity-70';
 };
 
