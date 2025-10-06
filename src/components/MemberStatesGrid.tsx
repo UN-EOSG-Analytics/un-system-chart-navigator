@@ -72,9 +72,11 @@ export default function MemberStatesGrid() {
         setTimeout(() => setIsAnimating(false), 800);
     };
 
+    const typeOpacity = (t: string) => t === 'Assessed' ? 'opacity-95' : t === 'Voluntary un-earmarked' ? 'opacity-85' : t === 'Voluntary earmarked' ? 'opacity-75' : t === 'Other' ? 'opacity-65' : 'opacity-70';
+
     return (
         <div className="w-full">
-            <div className="mb-4 flex items-center gap-2">
+            <div className="mb-4 flex items-center gap-3 flex-wrap">
                 <span className="text-sm text-gray-700">
                     Contributions
                 </span>
@@ -82,6 +84,17 @@ export default function MemberStatesGrid() {
                     checked={showTreemap}
                     onCheckedChange={toggleTreemap}
                 />
+                {showTreemap && (
+                    <div className="ml-2 flex items-center gap-3 text-[10px] text-slate-700">
+                        {['Assessed','Voluntary un-earmarked','Voluntary earmarked','Other'].map(t => (
+                            <div key={t} className="flex items-center gap-2">
+                                <span className={`h-2 w-4 rounded bg-camouflage-green ${typeOpacity(t)}`}></span>
+                                <span className="hidden sm:inline">{t}</span>
+                                <span className="sm:hidden">{t.replace('Voluntary ','V ').replace('un-earmarked','un-EM').replace('earmarked','EM')}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
 
             <div className="relative w-full" data-view-container>
