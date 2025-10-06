@@ -1,4 +1,4 @@
-import { Entity, EntityFilters } from '@/types/entity';
+import { Entity, EntityFilters } from '@/types';
 import entitiesData from '../../public/entities.json';
 import budgetDataRaw from '../../public/budget.json';
 import { createEntitySlug } from './utils';

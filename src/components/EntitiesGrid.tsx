@@ -1,7 +1,7 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Entity } from '@/types/entity';
+import { Entity } from '@/types';
 import FilterControls from './FilterControls';
 import BudgetTreemap from './BudgetTreemap';
 import { useState, forwardRef, useImperativeHandle, useEffect } from 'react';

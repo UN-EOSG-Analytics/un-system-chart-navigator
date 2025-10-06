@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { X } from 'lucide-react';
-import { Entity } from '@/types/entity';
+import { Entity } from '@/types';
 import { systemGroupingStyles, getSortedSystemGroupings } from '@/lib/systemGroupings';
 
 interface FilterControlsProps {

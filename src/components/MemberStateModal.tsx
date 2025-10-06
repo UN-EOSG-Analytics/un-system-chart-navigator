@@ -1,6 +1,6 @@
 'use client';
 
-import { MemberState } from '@/types/entity';
+import { MemberState } from '@/types';
 import { X, Info } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 import { getStatusStyle, getTotalContributions, getAllMemberStates } from '@/lib/memberStates';

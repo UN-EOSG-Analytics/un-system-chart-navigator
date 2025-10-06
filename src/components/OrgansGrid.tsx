@@ -1,7 +1,7 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Organ } from '@/types/organ';
+import { Organ } from '@/types';
 import { useRouter } from 'next/navigation';
 import { getAllOrgans, createOrganSlug, getOrganTypeStyle } from '@/lib/organs';
 

@@ -1,4 +1,4 @@
-import { MemberState } from '@/types/entity';
+import { MemberState } from '@/types';
 import memberStatesData from '@/../public/member-states.json';
 import { createEntitySlug } from '@/lib/utils';
 

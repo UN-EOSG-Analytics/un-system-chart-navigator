@@ -1,6 +1,6 @@
 'use client';
 
-import { MemberState } from '@/types/entity';
+import { MemberState } from '@/types';
 import { getStatusStyle, getTotalContributions } from '@/lib/memberStates';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useState } from 'react';

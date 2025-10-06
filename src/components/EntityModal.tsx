@@ -2,7 +2,7 @@
 
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
-import { Entity } from '@/types/entity';
+import { Entity } from '@/types';
 import { budgetData, formatBudget } from '@/lib/entities';
 import { getImpactsByEntity } from '@/lib/impacts';
 import { BarChart3, BookOpen, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';

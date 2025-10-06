@@ -1,6 +1,6 @@
 'use client';
 
-import { Impact } from '@/types/impact';
+import { Impact } from '@/types';
 import { getAllImpacts } from '@/lib/impacts';
 import { useState, useEffect, useCallback } from 'react';
 

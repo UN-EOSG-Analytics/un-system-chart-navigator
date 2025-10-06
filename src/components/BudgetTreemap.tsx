@@ -1,6 +1,6 @@
 'use client';
 
-import { Entity } from '@/types/entity';
+import { Entity } from '@/types';
 import { budgetData } from '@/lib/entities';
 import { systemGroupingStyles, getSystemGroupingStyle } from '@/lib/systemGroupings';
 import { createEntitySlug } from '@/lib/utils';

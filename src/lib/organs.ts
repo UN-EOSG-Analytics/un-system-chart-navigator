@@ -1,4 +1,4 @@
-import { Organ } from '@/types/organ';
+import { Organ } from '@/types';
 
 let organs: Organ[] | null = null;
 

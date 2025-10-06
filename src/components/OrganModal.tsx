@@ -1,6 +1,6 @@
 'use client';
 
-import { Organ } from '@/types/organ';
+import { Organ } from '@/types';
 import { Globe, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';

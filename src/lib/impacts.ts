@@ -1,4 +1,4 @@
-import { Impact } from '@/types/impact';
+import { Impact } from '@/types';
 import impactData from '../../public/impact.json';
 
 export const getAllImpacts = (): Impact[] => {

@@ -64,7 +64,7 @@ export default function Home() {
                 <Suspense fallback={<div>Loading...</div>}>
                     <OrgansGrid />
                 </Suspense>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">adopt ~400 resolutions per year</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">adopt ~400 resolutions per year,</h1>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">and publish ~1500 reports per year.</h1>
             </div>
             <ModalHandler />
