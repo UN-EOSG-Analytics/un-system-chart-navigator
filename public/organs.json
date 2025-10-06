@@ -1,0 +1,296 @@
+[
+  {
+    "short_name": "GA",
+    "long_name": "General Assembly",
+    "type": "Principal Organ",
+    "parent_body": [],
+    "defunct": false,
+    "url": "https://www.un.org/en/ga/"
+  },
+  {
+    "short_name": "SC",
+    "long_name": "Security Council",
+    "type": "Principal Organ",
+    "parent_body": [],
+    "defunct": false,
+    "url": "https://www.un.org/securitycouncil/"
+  },
+  {
+    "short_name": "ECOSOC",
+    "long_name": "Economic and Social Council",
+    "type": "Principal Organ",
+    "parent_body": [],
+    "defunct": false,
+    "url": "https://www.un.org/ecosoc/"
+  },
+  {
+    "short_name": "TC",
+    "long_name": "Trusteeship Council",
+    "type": "Principal Organ",
+    "parent_body": [],
+    "defunct": true,
+    "url": "https://www.un.org/en/about-us/trusteeship-council"
+  },
+  {
+    "short_name": "ICJ",
+    "long_name": "International Court of Justice",
+    "type": "Principal Organ",
+    "parent_body": [],
+    "defunct": false,
+    "url": "https://www.icj-cij.org/"
+  },
+  {
+    "short_name": "Secretariat",
+    "long_name": "Secretariat",
+    "type": "Principal Organ",
+    "parent_body": [],
+    "defunct": false,
+    "url": "https://www.un.org/en/about-us/secretariat"
+  },
+
+  {
+    "short_name": "ECA",
+    "long_name": "Economic Commission for Africa",
+    "type": "Regional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.uneca.org/"
+  },
+  {
+    "short_name": "ECE",
+    "long_name": "Economic Commission for Europe",
+    "type": "Regional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://unece.org/"
+  },
+  {
+    "short_name": "ECLAC",
+    "long_name": "Economic Commission for Latin America and the Caribbean",
+    "type": "Regional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.cepal.org/en"
+  },
+  {
+    "short_name": "ESCWA",
+    "long_name": "Economic and Social Commission for Western Asia",
+    "type": "Regional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.unescwa.org/"
+  },
+  {
+    "short_name": "ESCAP",
+    "long_name": "Economic and Social Commission for Asia and the Pacific",
+    "type": "Regional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.unescap.org/"
+  },
+
+  {
+    "short_name": "CND",
+    "long_name": "Commission on Narcotic Drugs",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.unodc.org/unodc/commissions/CND/"
+  },
+  {
+    "short_name": "CCPCJ",
+    "long_name": "Commission on Crime Prevention and Criminal Justice",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.unodc.org/unodc/en/commissions/CCPCJ/index.html"
+  },
+  {
+    "short_name": "CSW",
+    "long_name": "Commission on the Status of Women",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.unwomen.org/en/csw"
+  },
+  {
+    "short_name": "CPD",
+    "long_name": "Commission on Population and Development",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://www.un.org/development/desa/pd/content/CPD"
+  },
+  {
+    "short_name": "CSTD",
+    "long_name": "Commission on Science and Technology for Development",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://unctad.org/topic/science-technology-and-innovation/commission-on-science-and-technology-for-development"
+  },
+  {
+    "short_name": "SocialDev",
+    "long_name": "Commission for Social Development",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://social.desa.un.org/"
+  },
+  {
+    "short_name": "StatCom",
+    "long_name": "Statistical Commission",
+    "type": "Functional Commission",
+    "parent_body": ["ECOSOC"],
+    "defunct": false,
+    "url": "https://unstats.un.org/unsd/statcom/"
+  },
+
+  {
+    "short_name": "UNEA",
+    "long_name": "United Nations Environment Assembly",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.unep.org/environmentassembly/"
+  },
+  {
+    "short_name": "UNHA",
+    "long_name": "United Nations Habitat Assembly",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://unhabitat.org/governance/un-habitat-assembly"
+  },
+  {
+    "short_name": "PBC",
+    "long_name": "Peacebuilding Commission",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA", "SC"],
+    "defunct": false,
+    "url": "https://www.un.org/peacebuilding/commission"
+  },
+
+  {
+    "short_name": "ACABQ",
+    "long_name": "Advisory Committee on Administrative and Budgetary Questions",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.un.org/ga/acabq/"
+  },
+  {
+    "short_name": "JIU",
+    "long_name": "Joint Inspection Unit",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.unjiu.org/"
+  },
+  {
+    "short_name": "IAAC",
+    "long_name": "Independent Audit Advisory Committee",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.un.org/ga/iaac/"
+  },
+  {
+    "short_name": "IRMCT",
+    "long_name": "International Residual Mechanism for Criminal Tribunals",
+    "type": "Subsidiary Organ",
+    "parent_body": ["SC"],
+    "defunct": false,
+    "url": "https://www.irmct.org/"
+  },
+  {
+    "short_name": "ICTY",
+    "long_name": "International Criminal Tribunal for the former Yugoslavia",
+    "type": "Subsidiary Organ",
+    "parent_body": ["SC"],
+    "defunct": true,
+    "url": "https://www.icty.org/"
+  },
+  {
+    "short_name": "ICTR",
+    "long_name": "International Criminal Tribunal for Rwanda",
+    "type": "Subsidiary Organ",
+    "parent_body": ["SC"],
+    "defunct": true,
+    "url": "https://unictr.irmct.org/"
+  },
+  {
+    "short_name": "UNAT",
+    "long_name": "United Nations Appeals Tribunal",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.un.org/en/internaljustice/unat/"
+  },
+  {
+    "short_name": "UNDT",
+    "long_name": "United Nations Dispute Tribunal",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.un.org/en/internaljustice/undt/"
+  },
+  {
+    "short_name": "BoA",
+    "long_name": "Board of Auditors",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.un.org/en/auditors/board/"
+  },
+
+  {
+    "short_name": "ICSC",
+    "long_name": "International Civil Service Commission",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://icsc.un.org/"
+  },
+
+  {
+    "short_name": "HRC",
+    "long_name": "Human Rights Council",
+    "type": "Subsidiary Organ",
+    "parent_body": ["GA"],
+    "defunct": false,
+    "url": "https://www.ohchr.org/en/hr-bodies/hrc"
+  },
+  {
+    "short_name": "UPR",
+    "long_name": "Universal Periodic Review",
+    "type": "Mechanism",
+    "parent_body": ["HRC"],
+    "defunct": false,
+    "url": "https://www.ohchr.org/en/hr-bodies/upr"
+  },
+  {
+    "short_name": "SP",
+    "long_name": "Special Procedures of the Human Rights Council",
+    "type": "Mechanism",
+    "parent_body": ["HRC"],
+    "defunct": false,
+    "url": "https://www.ohchr.org/en/special-procedures-human-rights-council"
+  },
+  {
+    "short_name": "HRC-AC",
+    "long_name": "Human Rights Council Advisory Committee",
+    "type": "Subsidiary Organ",
+    "parent_body": ["HRC"],
+    "defunct": false,
+    "url": "https://www.ohchr.org/en/hr-bodies/hrc/advisory-committee"
+  },
+  {
+    "short_name": "HRC-Complaint",
+    "long_name": "HRC Complaint Procedure",
+    "type": "Mechanism",
+    "parent_body": ["HRC"],
+    "defunct": false,
+    "url": "https://www.ohchr.org/en/hr-bodies/hrc/complaint-procedure/hrc-complaint-procedure-index"
+  }
+]

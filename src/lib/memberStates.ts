@@ -1,5 +1,6 @@
 import { MemberState } from '@/types/entity';
 import memberStatesData from '@/../public/member-states.json';
+import { createEntitySlug } from '@/lib/utils';
 
 export const getStatusStyle = (status: string) => {
     switch (status) {
@@ -26,4 +27,10 @@ export const getTotalContributions = (contributions: Record<string, Record<strin
     return Object.values(contributions).reduce((total, entityContributions) => {
         return total + Object.values(entityContributions).reduce((sum, amount) => sum + amount, 0);
     }, 0);
+};
+
+export const getMemberStateBySlug = (slug: string): MemberState | null => {
+    const decodedSlug = decodeURIComponent(slug).toLowerCase();
+    const states = getAllMemberStates();
+    return states.find(state => createEntitySlug(state.name) === decodedSlug) || null;
 };

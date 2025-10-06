@@ -3,9 +3,11 @@
 import EntitiesGrid from '@/components/EntitiesGrid';
 import MemberStatesGrid from '@/components/MemberStatesGrid';
 import SDGsGrid from '@/components/SDGsGrid';
+import OrgansGrid from '@/components/OrgansGrid';
 import { useRef, Suspense } from 'react';
 import { getAllMemberStates } from '@/lib/memberStates';
 import { getAllEntities } from '@/lib/entities';
+import { getAllOrgans } from '@/lib/organs';
 
 export default function Home() {
     const entitiesGridRef = useRef<{ handleReset: () => void; toggleGroup: (groupKey: string) => void }>(null);
@@ -16,6 +18,7 @@ export default function Home() {
 
     const memberStatesCount = getAllMemberStates().filter(s => s.status === 'member').length;
     const entitiesCount = getAllEntities().length;
+    const organsCount = getAllOrgans().length;
 
     return (
         <main className="min-h-screen w-full p-3 sm:p-4 lg:p-6">
@@ -41,7 +44,10 @@ export default function Home() {
                 <Suspense fallback={<div>Loading...</div>}>
                     <SDGsGrid />
                 </Suspense>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">Member states coordinate in 23 organs,</h1>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">Member states coordinate in {organsCount} organs,</h1>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <OrgansGrid />
+                </Suspense>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">adopt ~400 resolutions per year</h1>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left">and publish ~1500 reports per year.</h1>
                 
