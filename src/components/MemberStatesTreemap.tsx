@@ -84,7 +84,6 @@ function slice(items: (TreemapItem & { normalizedValue: number })[], x: number, 
     const rightItems = items.slice(splitIndex);
     
     const leftSum = leftItems.reduce((sum, item) => sum + item.normalizedValue, 0);
-    const rightSum = rightItems.reduce((sum, item) => sum + item.normalizedValue, 0);
 
     if (width >= height) {
         const leftWidth = width * (leftSum / total) - GAP / 2;
@@ -280,7 +279,7 @@ export default function MemberStatesTreemap({ states, onStateClick }: MemberStat
                     }));
                     
                     const groupRects = squarify(
-                        groupTreemapItems.map(g => ({ value: g.value, data: { name: g.status, status: g.status as any, contributions: {} } })),
+                        groupTreemapItems.map(g => ({ value: g.value, data: { name: g.status, status: g.status as 'member' | 'observer' | 'nonmember', contributions: {} } })),
                         0, currentY, 100, lastRowHeight
                     );
                     

@@ -211,7 +211,7 @@ export default function SDGExpensesTreemap({ onSDGClick }: SDGExpensesTreemapPro
   return (
     <div className="w-full h-[calc(100vh-320px)] min-h-[600px]">
       <div className="relative w-full h-full bg-gray-100">
-        {sdgRects.map((sdgRect, idx) => {
+        {sdgRects.map((sdgRect) => {
           const sdgNumber = parseInt(sdgRect.data.name);
           const entities = expensesData[sdgRect.data.name].entities;
           return renderEntities(sdgNumber, entities, sdgRect.x, sdgRect.y, sdgRect.width, sdgRect.height);

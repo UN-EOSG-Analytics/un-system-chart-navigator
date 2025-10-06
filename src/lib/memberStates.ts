@@ -16,7 +16,7 @@ export const getStatusStyle = (status: string) => {
 };
 
 export const getAllMemberStates = (): MemberState[] => {
-    return Object.entries(memberStatesData as Record<string, any>).map(([name, data]) => ({
+    return Object.entries(memberStatesData as Record<string, { status: 'member' | 'observer' | 'nonmember'; contributions: Record<string, Record<string, number>> }>).map(([name, data]) => ({
         name,
         status: data.status,
         contributions: data.contributions

@@ -56,7 +56,6 @@ function slice(items: (TreemapItem & { normalizedValue: number })[], x: number, 
     const rightItems = items.slice(splitIndex);
     
     const leftSum = leftItems.reduce((sum, item) => sum + item.normalizedValue, 0);
-    const rightSum = rightItems.reduce((sum, item) => sum + item.normalizedValue, 0);
 
     if (width >= height) {
         const leftWidth = width * (leftSum / total) - GAP / 2;

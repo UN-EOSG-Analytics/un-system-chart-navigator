@@ -12,10 +12,10 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 interface EntityModalProps {
     entity: Entity | null;
     onClose: () => void;
-    loading: boolean;
+    loading?: boolean;
 }
 
-export default function EntityModal({ entity, onClose, loading }: EntityModalProps) {
+export default function EntityModal({ entity, onClose, loading = false }: EntityModalProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);

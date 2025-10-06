@@ -1,16 +1,9 @@
 import { Organ } from '@/types';
+import organsData from '../../public/organs.json';
 
-let organs: Organ[] | null = null;
+const organs: Organ[] = organsData;
 
 export const getAllOrgans = (): Organ[] => {
-    if (!organs) {
-        try {
-            organs = require('../../public/organs.json');
-        } catch (error) {
-            console.error('Failed to load organs data:', error);
-            organs = [];
-        }
-    }
     return organs.filter(organ => !organ.defunct);
 };
 

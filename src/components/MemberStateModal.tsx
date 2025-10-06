@@ -2,7 +2,7 @@
 
 import { MemberState } from '@/types';
 import { X, Info } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { getStatusStyle, getTotalContributions, getAllMemberStates } from '@/lib/memberStates';
 import { formatBudget } from '@/lib/entities';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -51,15 +51,6 @@ const formatBudgetFixed = (amount: number): string => {
     }
     return `$${amount.toFixed(2)}`;
 };
-
-interface EntityContribution {
-    entity: string;
-    total: number;
-    percentage: number;
-    typeBreakdown: Record<string, number>;
-    avgOthersPercentage: number;
-    avgTypeBreakdown: Record<string, number>;
-}
 
 export default function MemberStateModal({ memberState, onClose }: MemberStateModalProps) {
     const [isVisible, setIsVisible] = useState(false);
@@ -118,50 +109,40 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
         getContributionTypeOrder(a[0]) - getContributionTypeOrder(b[0])
     );
 
-    const totalAssessed = useMemo(() => {
-        return Object.values(memberState.contributions).reduce((sum, types) => {
-            return sum + (types['Assessed'] || 0);
-        }, 0);
-    }, [memberState]);
+    const totalAssessed = Object.values(memberState.contributions).reduce((sum, types) => {
+        return sum + (types['Assessed'] || 0);
+    }, 0);
 
-    const entityContributions = useMemo(() => {
-        const allStates = getAllMemberStates();
+    const allStates = getAllMemberStates();
+    const totalAllAssessed = allStates.reduce((sum, state) => {
+        return sum + Object.values(state.contributions).reduce((s, types) => {
+            return s + (types['Assessed'] || 0);
+        }, 0);
+    }, 0);
+
+    const entityContributions = Object.entries(memberState.contributions).map(([entity, types]) => {
+        const total = Object.values(types).reduce((sum, val) => sum + val, 0);
+        const percentage = totalAssessed > 0 ? (total / totalAssessed) * 100 : (total / totalContributions) * 100;
         
-        // Calculate total assessed across all states for weighted average
-        const totalAllAssessed = allStates.reduce((sum, state) => {
-            return sum + Object.values(state.contributions).reduce((s, types) => {
-                return s + (types['Assessed'] || 0);
-            }, 0);
+        const totalEntitySpending = allStates.reduce((sum, state) => {
+            return sum + (state.contributions[entity] 
+                ? Object.values(state.contributions[entity]).reduce((s, val) => s + val, 0)
+                : 0);
         }, 0);
         
-        const contributions: EntityContribution[] = Object.entries(memberState.contributions).map(([entity, types]) => {
-            const total = Object.values(types).reduce((sum, val) => sum + val, 0);
-            // Use total assessed as denominator (percentage relative to assessed baseline)
-            const percentage = totalAssessed > 0 ? (total / totalAssessed) * 100 : (total / totalContributions) * 100;
-            
-            // Calculate weighted average: sum of all spending on entity / sum of all assessed
-            const totalEntitySpending = allStates.reduce((sum, state) => {
-                return sum + (state.contributions[entity] 
-                    ? Object.values(state.contributions[entity]).reduce((s, val) => s + val, 0)
-                    : 0);
-            }, 0);
-            
-            const avgOthersPercentage = totalAllAssessed > 0 
-                ? (totalEntitySpending / totalAllAssessed) * 100 
-                : 0;
-            
-            return {
-                entity,
-                total,
-                percentage,
-                typeBreakdown: types,
-                avgOthersPercentage,
-                avgTypeBreakdown: {}
-            };
-        });
+        const avgOthersPercentage = totalAllAssessed > 0 
+            ? (totalEntitySpending / totalAllAssessed) * 100 
+            : 0;
         
-        return contributions.sort((a, b) => b.total - a.total);
-    }, [memberState, totalContributions, totalAssessed]);
+        return {
+            entity,
+            total,
+            percentage,
+            typeBreakdown: types,
+            avgOthersPercentage,
+            avgTypeBreakdown: {}
+        };
+    }).sort((a, b) => b.total - a.total);
 
     return (
         <div
@@ -255,7 +236,7 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                                                     <div className="bg-gray-500 flex-1" />
                                                     <div className="bg-gray-400 flex-1" />
                                                 </div>
-                                                <p className="font-medium">{memberState.name}'s bars</p>
+                                                <p className="font-medium">{memberState.name}&apos;s bars</p>
                                             </div>
                                             <p className="text-gray-600">Show contributions of {memberState.name} per entity, split by contribution type:</p>
                                             <div className="ml-2 space-y-0.5 mt-1">
@@ -279,14 +260,14 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                                         </div>
                                         <div>
                                             <p className="font-medium">Percentage score</p>
-                                            <p className="text-gray-600">For each entity, the percentage shows {memberState.name}'s contributions to that entity divided by {memberState.name}'s total assessed contributions to all entities.</p>
+                                            <p className="text-gray-600">For each entity, the percentage shows {memberState.name}&apos;s contributions to that entity divided by {memberState.name}&apos;s total assessed contributions to all entities.</p>
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-2 mb-1">
                                                 <div className="h-2 w-8 rounded-sm bg-gray-300 flex-shrink-0" />
                                                 <p className="font-medium">Global average bars</p>
                                             </div>
-                                            <p className="text-gray-600">Shows the percentage of all member states' contributions to that entity divided by all states' total assessed contributions. Provides context for comparison.</p>
+                                            <p className="text-gray-600">Shows the percentage of all member states&apos; contributions to that entity divided by all states&apos; total assessed contributions. Provides context for comparison.</p>
                                         </div>
                                     </div>
                                 </TooltipContent>
@@ -341,7 +322,7 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                                                                         {formatBudget(contrib.total)}
                                                                         {totalAssessed > 0 && (
                                                                             <div className="text-gray-600 font-normal mt-1">
-                                                                                {memberState.name}'s contributions to {contrib.entity} as percentage of {memberState.name}'s assessed contributions: {contrib.percentage.toFixed(0)}%
+                                                                                {memberState.name}&apos;s contributions to {contrib.entity} as percentage of {memberState.name}&apos;s assessed contributions: {contrib.percentage.toFixed(0)}%
                                                                             </div>
                                                                         )}
                                                                     </div>

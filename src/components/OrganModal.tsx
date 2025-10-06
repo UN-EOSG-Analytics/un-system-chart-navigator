@@ -9,10 +9,10 @@ import { createOrganSlug } from '@/lib/organs';
 interface OrganModalProps {
     organ: Organ | null;
     onClose: () => void;
-    loading: boolean;
+    loading?: boolean;
 }
 
-export default function OrganModal({ organ, onClose, loading }: OrganModalProps) {
+export default function OrganModal({ organ, onClose, loading = false }: OrganModalProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null);

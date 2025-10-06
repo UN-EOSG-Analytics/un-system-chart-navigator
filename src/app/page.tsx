@@ -122,7 +122,9 @@ export default function Home() {
                     </div>
                 </Section>
             </div>
-            <ModalHandler />
+            <Suspense fallback={null}>
+                <ModalHandler />
+            </Suspense>
         </main>
     );
 }

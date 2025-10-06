@@ -100,21 +100,9 @@ export default function SDGsGrid() {
               <div
                 className="aspect-square cursor-pointer relative hover:scale-105 hover:shadow-xl active:scale-95 touch-manipulation transition-all overflow-hidden"
                 onClick={() => setSelectedSDG(sdg)}
+                style={{ backgroundColor: SDG_COLORS[sdg.number] }}
               >
-                <img
-                  src={`https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-${sdg.number.toString().padStart(2, '0')}.png`}
-                  alt={`SDG ${sdg.number}: ${sdg.shortTitle}`}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                    if (fallback) fallback.style.display = 'flex';
-                  }}
-                />
-                <div
-                  className="hidden w-full h-full items-start p-4 text-white"
-                  style={{ backgroundColor: SDG_COLORS[sdg.number] }}
-                >
+                <div className="w-full h-full flex items-start p-4 text-white">
                   <div className="text-2xl sm:text-3xl font-bold mr-2">{sdg.number}</div>
                   <div className="text-xs sm:text-sm font-semibold text-left leading-tight pt-0.5">
                     {sdg.shortTitle}
