@@ -372,21 +372,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.entity_link} icon={Globe} label="Official Website" />
                                 )}
 
-                                {/* LinkedIn */}
-                                {isValidLink(entity!.socials_linkedin) && (
-                                    <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
-                                )}
-
-                                {/* Wikipedia */}
-                                {isValidLink(entity!.entity_wikipedia_page) && (
-                                    <LinkItem href={entity!.entity_wikipedia_page!} icon={BookOpen} label="Wikipedia" />
-                                )}
-
-                                {/* News Portal */}
-                                {isValidLink(entity!.entity_news_page) && (
-                                    <LinkItem href={entity!.entity_news_page!} icon={Newspaper} label="News" />
-                                )}
-
                                 {/* Annual Report */}
                                 {isValidLink(entity!.annual_reports_link) && (
                                     <LinkItem href={entity!.annual_reports_link} icon={FileText} label="Annual Reports" />
@@ -395,6 +380,11 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {/* Financials */}
                                 {isValidLink(entity!.budget_financial_reporting_link) && (
                                     <LinkItem href={entity!.budget_financial_reporting_link} icon={DollarSign} label="Financials & Budget" />
+                                )}
+
+                                {/* Transparency Portal */}
+                                {isValidLink(entity!.transparency_portal_link) && (
+                                    <LinkItem href={entity!.transparency_portal_link} icon={Eye} label="Transparency Portal" />
                                 )}
 
                                 {/* Strategic Plan */}
@@ -407,20 +397,31 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.results_framework_link} icon={BarChart3} label="Results Framework" />
                                 )}
 
-                                {/* Transparency Portal */}
-                                {isValidLink(entity!.transparency_portal_link) && (
-                                    <LinkItem href={entity!.transparency_portal_link} icon={Eye} label="Transparency Portal" />
-                                )}
-
                                 {/* Data Page */}
                                 {isValidLink(entity!.entity_data_page) && (
                                     <LinkItem href={entity!.entity_data_page!} icon={Database} label="Data Portal" />
+                                )}
+
+                                {/* News Portal */}
+                                {isValidLink(entity!.entity_news_page) && (
+                                    <LinkItem href={entity!.entity_news_page!} icon={Newspaper} label="News" />
+                                )}
+
+                                {/* LinkedIn */}
+                                {isValidLink(entity!.socials_linkedin) && (
+                                    <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
+                                )}
+
+                                {/* Wikipedia */}
+                                {isValidLink(entity!.entity_wikipedia_page) && (
+                                    <LinkItem href={entity!.entity_wikipedia_page!} icon={BookOpen} label="Wikipedia" />
                                 )}
 
                                 {/* Branding Page */}
                                 {isValidLink(entity!.entity_branding_page) && (
                                     <LinkItem href={entity!.entity_branding_page!} icon={Palette} label="Branding" />
                                 )}
+
                             </div>
                         </div>
                     );
