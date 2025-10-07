@@ -7,7 +7,7 @@ export interface Entity {
     entity_link_is_un_org: number; // 1 or 0
     system_grouping: string;
     category: string;
-    un_principal_organ: string;
+    un_principal_organ: string[] | string | null;
     un_pillar: string | null;
     is_ceb_member: boolean | null;
     head_of_entity_level: string; // Can be "Not applicable"

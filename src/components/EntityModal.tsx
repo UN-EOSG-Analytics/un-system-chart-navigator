@@ -243,7 +243,43 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                             />
                         </Field>
                         <Field label="UN Principal Organ">
-                            <Badge>{entity!.un_principal_organ}</Badge>
+                            <div className="flex flex-wrap gap-2">
+                                {(() => {
+                                    const organs = entity!.un_principal_organ;
+                                    
+                                    // Handle null case - show empty badge
+                                    if (organs === null) {
+                                        return <Badge>{""}</Badge>;
+                                    }
+                                    
+                                    // Handle string format
+                                    if (typeof organs === 'string') {
+                                        // Check if it's a stringified array
+                                        if (organs.startsWith('[') && organs.endsWith(']')) {
+                                            try {
+                                                const parsed = JSON.parse(organs.replace(/'/g, '"'));
+                                                return Array.isArray(parsed) 
+                                                    ? parsed.map((organ: string, index: number) => (
+                                                        <Badge key={index}>{organ}</Badge>
+                                                    ))
+                                                    : <Badge>{organs}</Badge>;
+                                            } catch {
+                                                return <Badge>{organs}</Badge>;
+                                            }
+                                        }
+                                        return <Badge>{organs}</Badge>;
+                                    }
+                                    
+                                    // Handle array format
+                                    if (Array.isArray(organs)) {
+                                        return organs.map((organ: string, index: number) => (
+                                            <Badge key={index}>{organ}</Badge>
+                                        ));
+                                    }
+                                    
+                                    return <Badge>{String(organs)}</Badge>;
+                                })()}
+                            </div>
                         </Field>
                     </div>
                 </div>
