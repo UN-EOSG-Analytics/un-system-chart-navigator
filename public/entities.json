@@ -33,7 +33,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"BINUH",
@@ -69,7 +71,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Integrated_Office_in_Haiti"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Integrated_Office_in_Haiti",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"CEB",
@@ -105,7 +109,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Chief_Executives_Board_for_Coordination"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Chief_Executives_Board_for_Coordination",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"CNMC",
@@ -141,7 +147,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"CTBTO",
@@ -177,7 +185,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Comprehensive_Nuclear-Test-Ban_Treaty_Organization_Preparatory_Commission"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Comprehensive_Nuclear-Test-Ban_Treaty_Organization_Preparatory_Commission",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"CTED",
@@ -213,7 +223,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Counter-Terrorism_Committee_Executive_Directorate"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Counter-Terrorism_Committee_Executive_Directorate",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DA",
@@ -249,7 +261,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Account"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Account",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DCO",
@@ -285,7 +299,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Coordination_Office"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Coordination_Office",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DESA",
@@ -321,7 +337,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Economic_and_Social_Affairs"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Economic_and_Social_Affairs",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DGACM",
@@ -357,7 +375,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_for_General_Assembly_and_Conference_Management"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_for_General_Assembly_and_Conference_Management",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DGC",
@@ -393,7 +413,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Global_Communications"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Global_Communications",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DMSPC",
@@ -429,7 +451,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Management_Strategy,_Policy_and_Compliance"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Management_Strategy,_Policy_and_Compliance",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DOS",
@@ -465,7 +489,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Operational_Support"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Operational_Support",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DPO",
@@ -501,7 +527,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Peace_Operations"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Peace_Operations",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DPPA",
@@ -537,7 +565,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Political_and_Peacebuilding_Affairs"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Political_and_Peacebuilding_Affairs",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"DSS",
@@ -573,7 +603,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Safety_and_Security"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Safety_and_Security",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ECA",
@@ -609,7 +641,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Africa"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Africa",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ECE",
@@ -645,7 +679,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Europe"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Europe",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ECLAC",
@@ -681,7 +717,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Economic_Commission_for_Latin_America_and_the_Caribbean"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Economic_Commission_for_Latin_America_and_the_Caribbean",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"EO",
@@ -717,7 +755,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Ethics_Office"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Ethics_Office",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"EOSG",
@@ -753,7 +793,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Executive_Office_of_the_Secretary-General_of_the_United_Nations"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Executive_Office_of_the_Secretary-General_of_the_United_Nations",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ESCAP",
@@ -789,7 +831,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Asia_and_the_Pacific"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Asia_and_the_Pacific",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ESCWA",
@@ -825,7 +869,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Western_Asia"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Western_Asia",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"FAO",
@@ -861,7 +907,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Food_and_Agriculture_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Food_and_Agriculture_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"GoE-DRC",
@@ -897,7 +945,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_the_Democratic_Republic_of_the_Congo"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_the_Democratic_Republic_of_the_Congo",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IAEA",
@@ -933,7 +983,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Atomic_Energy_Agency"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Atomic_Energy_Agency",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ICAO",
@@ -969,7 +1021,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Aviation_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Aviation_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ICC",
@@ -1005,7 +1059,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Criminal_Court"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Criminal_Court",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ICJ",
@@ -1041,7 +1097,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Court_of_Justice"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Court_of_Justice",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ICSC",
@@ -1077,7 +1135,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Service_Commission"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Service_Commission",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IFAD",
@@ -1113,7 +1173,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Fund_for_Agricultural_Development"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Fund_for_Agricultural_Development",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IIIM",
@@ -1149,7 +1211,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International,_Impartial_and_Independent_Mechanism"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International,_Impartial_and_Independent_Mechanism",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IIMM",
@@ -1185,7 +1249,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Independent_Investigative_Mechanism_for_Myanmar"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Independent_Investigative_Mechanism_for_Myanmar",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ILO",
@@ -1221,7 +1287,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Labour_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Labour_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IMF",
@@ -1257,7 +1325,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Monetary_Fund"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Monetary_Fund",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IMO",
@@ -1293,7 +1363,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Maritime_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Maritime_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"IOM",
@@ -1329,7 +1401,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Organization_for_Migration"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Organization_for_Migration",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ISA",
@@ -1365,7 +1439,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Seabed_Authority"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Seabed_Authority",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ITC",
@@ -1401,7 +1477,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Trade_Centre"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Trade_Centre",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ITLOS",
@@ -1437,7 +1515,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Tribunal_for_the_Law_of_the_Sea"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Tribunal_for_the_Law_of_the_Sea",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ITU",
@@ -1473,7 +1553,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Telecommunication_Union"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Telecommunication_Union",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"JIU",
@@ -1509,7 +1591,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_Inspection_Unit"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_Inspection_Unit",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"MINURSO",
@@ -1545,7 +1629,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_for_the_Referendum_in_Western_Sahara"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_for_the_Referendum_in_Western_Sahara",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"MINUSCA",
@@ -1581,7 +1667,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Multidimensional_Integrated_Stabilization_Mission_in_the_Central_African_Republic"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Multidimensional_Integrated_Stabilization_Mission_in_the_Central_African_Republic",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"MONUSCO",
@@ -1617,7 +1705,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Organization_Stabilization_Mission_in_the_Democratic_Republic_of_the_Congo"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Organization_Stabilization_Mission_in_the_Democratic_Republic_of_the_Congo",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OAJ",
@@ -1653,7 +1743,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Administration_of_Justice"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Administration_of_Justice",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OCHA",
@@ -1689,7 +1781,9 @@
     "entity_branding_page":"https:\/\/brand.unocha.org\/",
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/brand.unocha.org\/",
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_the_Coordination_of_Humanitarian_Affairs"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_the_Coordination_of_Humanitarian_Affairs",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OCT",
@@ -1725,7 +1819,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Counter-Terrorism"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Counter-Terrorism",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ODA",
@@ -1761,7 +1857,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disarmament_Affairs"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disarmament_Affairs",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ODET",
@@ -1797,7 +1895,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"ODPP",
@@ -1833,7 +1933,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OFP-Delisting",
@@ -1869,7 +1971,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OHCHR",
@@ -1905,7 +2009,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_High_Commissioner_for_Human_Rights"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_High_Commissioner_for_Human_Rights",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OICT",
@@ -1941,7 +2047,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Information_and_Communications_Technology"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Information_and_Communications_Technology",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OIOS",
@@ -1977,7 +2085,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Internal_Oversight_Services"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Internal_Oversight_Services",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OLA",
@@ -2013,7 +2123,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Legal_Affairs"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Legal_Affairs",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OMBUD-RES1904",
@@ -2049,7 +2161,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OMS",
@@ -2085,7 +2199,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Ombudsman_and_Mediation_Services"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Ombudsman_and_Mediation_Services",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OOSA",
@@ -2121,7 +2237,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Outer_Space_Affairs"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Outer_Space_Affairs",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OPCW",
@@ -2157,7 +2275,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Organisation_for_the_Prohibition_of_Chemical_Weapons"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Organisation_for_the_Prohibition_of_Chemical_Weapons",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSA-PG",
@@ -2193,7 +2313,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_on_Genocide_Prevention_and_the_Responsibility_to_Protect"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_on_Genocide_Prevention_and_the_Responsibility_to_Protect",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSAA",
@@ -2229,7 +2351,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_on_Africa"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_on_Africa",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSACAJT",
@@ -2257,7 +2381,7 @@
     "results_framework_link":null,
     "strategic_plan_link":null,
     "annual_reports_link":null,
-    "transparency_portal_link":null,
+    "transparency_portal_link":"Not found",
     "socials_linkedin":null,
     "socials_twitter":null,
     "socials_instagram":null,
@@ -2265,7 +2389,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":null
+    "entity_wikipedia_page":null,
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSASG-Cyprus",
@@ -2301,7 +2427,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_to_the_Secretary-General_on_Cyprus"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_to_the_Secretary-General_on_Cyprus",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSC-SEA",
@@ -2337,7 +2465,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-FG",
@@ -2373,7 +2503,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-GL",
@@ -2409,7 +2541,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Special_Envoy_for_the_Great_Lakes_Region"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Special_Envoy_for_the_Great_Lakes_Region",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-Horn",
@@ -2445,7 +2579,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-Myanmar",
@@ -2481,7 +2617,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-SCRES1559",
@@ -2517,7 +2655,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-Syria",
@@ -2553,7 +2693,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_for_Syria"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_for_Syria",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSESG-Yemen",
@@ -2589,7 +2731,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_of_the_Secretary-General_for_Yemen"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_of_the_Secretary-General_for_Yemen",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSRSG-CAAC",
@@ -2625,7 +2769,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_for_Children_and_Armed_Conflict"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_for_Children_and_Armed_Conflict",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSRSG-SVC",
@@ -2661,7 +2807,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Sexual_Violence_in_Conflict"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Sexual_Violence_in_Conflict",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"OSRSG-VAC",
@@ -2697,7 +2845,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Violence_against_Children"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Violence_against_Children",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PESG-Sudan",
@@ -2733,7 +2883,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PESG-WS",
@@ -2769,7 +2921,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-CAR",
@@ -2805,7 +2959,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-Haiti",
@@ -2841,7 +2997,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-Libya",
@@ -2877,7 +3035,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-RES2713",
@@ -2913,7 +3073,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-RES2745",
@@ -2949,7 +3111,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-S.Sudan",
@@ -2985,7 +3149,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":"\n",
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-Sudan",
@@ -3021,7 +3187,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"PoE-Yemen",
@@ -3057,7 +3225,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"RSCE",
@@ -3093,7 +3263,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Service_Centre_in_Entebbe"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Service_Centre_in_Entebbe",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"SC-RES1540",
@@ -3129,7 +3301,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1540"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1540",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"SC-RES1718",
@@ -3165,7 +3339,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1718"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1718",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"SC-RES2231",
@@ -3201,7 +3377,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"SWEO",
@@ -3237,7 +3415,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UN Tourism",
@@ -3273,7 +3453,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_World_Tourism_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_World_Tourism_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UN-Habitat",
@@ -3309,7 +3491,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Human_Settlements_Programme"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Human_Settlements_Programme",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UN-OHRLLS",
@@ -3345,7 +3529,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_the_High_Representative_for_the_Least_Developed_Countries,_Landlocked_Developing_Countries_and_Small_Island_Developing_States"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_the_High_Representative_for_the_Least_Developed_Countries,_Landlocked_Developing_Countries_and_Small_Island_Developing_States",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UN-Women",
@@ -3381,7 +3567,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UN_Women"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UN_Women",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNAIDS",
@@ -3417,7 +3605,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_United_Nations_Programme_on_HIV\/AIDS"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_United_Nations_Programme_on_HIV\/AIDS",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNAMA",
@@ -3453,7 +3643,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Afghanistan"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Afghanistan",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNAMI",
@@ -3489,7 +3681,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_for_Iraq"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_for_Iraq",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNAOC",
@@ -3525,7 +3719,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Alliance_of_Civilizations"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Alliance_of_Civilizations",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNCTAD",
@@ -3561,7 +3757,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Conference_on_Trade_and_Development"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Conference_on_Trade_and_Development",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNDOF",
@@ -3597,7 +3795,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Disengagement_Observer_Force"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Disengagement_Observer_Force",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNDP",
@@ -3633,7 +3833,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Programme"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Programme",
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n- some other footnote for testing\n",
+    "is_primary_entity":true
   },
   {
     "entity":"UNDRR",
@@ -3669,7 +3871,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disaster_Risk_Reduction"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disaster_Risk_Reduction",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNEP",
@@ -3705,7 +3909,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Environment_Programme"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Environment_Programme",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNESCO",
@@ -3741,7 +3947,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNESCO"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNESCO",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNFCCC",
@@ -3777,7 +3985,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Secretariat_of_the_United_Nations_Framework_Convention_on_Climate_Change"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Secretariat_of_the_United_Nations_Framework_Convention_on_Climate_Change",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNFICYP",
@@ -3813,7 +4023,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Peacekeeping_Force_in_Cyprus"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Peacekeeping_Force_in_Cyprus",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNFPA",
@@ -3849,7 +4061,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Population_Fund"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Population_Fund",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNGC",
@@ -3885,7 +4099,9 @@
     "entity_branding_page":"https:\/\/unglobalcompact.org\/participation\/getting-started\/brand-guidelines",
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/unglobalcompact.org\/participation\/getting-started\/brand-guidelines",
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Global_Compact"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Global_Compact",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNGEGN",
@@ -3921,7 +4137,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_Geographical_Names"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_Geographical_Names",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNGGIM",
@@ -3957,7 +4175,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Committee_of_Experts_on_Global_Geospatial_Information_Management"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Committee_of_Experts_on_Global_Geospatial_Information_Management",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNHCR",
@@ -3993,7 +4213,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_High_Commissioner_for_Refugees"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_High_Commissioner_for_Refugees",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNICEF",
@@ -4029,7 +4251,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNICEF"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNICEF",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNIDIR",
@@ -4065,7 +4289,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Institute_for_Disarmament_Research"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Institute_for_Disarmament_Research",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNIDO",
@@ -4101,7 +4327,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Industrial_Development_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Industrial_Development_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNIFIL",
@@ -4137,7 +4365,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Force_in_Lebanon"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Force_in_Lebanon",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNISFA",
@@ -4173,7 +4403,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Security_Force_for_Abyei"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Security_Force_for_Abyei",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNITAR",
@@ -4209,7 +4441,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Institute_for_Training_and_Research"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Institute_for_Training_and_Research",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNLB",
@@ -4245,7 +4479,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Logistics_Base"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Logistics_Base",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNMHA",
@@ -4281,7 +4517,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_to_Support_the_Hudaydah_Agreement"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_to_Support_the_Hudaydah_Agreement",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNMIK",
@@ -4317,7 +4555,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Administration_Mission_in_Kosovo"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Administration_Mission_in_Kosovo",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNMISS",
@@ -4353,7 +4593,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_in_South_Sudan"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_in_South_Sudan",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNMOGIP",
@@ -4389,7 +4631,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Military_Observer_Group_in_India_and_Pakistan"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Military_Observer_Group_in_India_and_Pakistan",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNOAU",
@@ -4425,7 +4669,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_to_the_African_Union"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_to_the_African_Union",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNOCA",
@@ -4461,7 +4707,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Office_for_Central_Africa"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Office_for_Central_Africa",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNODC",
@@ -4497,7 +4745,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_on_Drugs_and_Crime"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_on_Drugs_and_Crime",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNOG",
@@ -4533,7 +4783,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Geneva"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Geneva",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNON",
@@ -4569,7 +4821,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Nairobi"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Nairobi",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNOPS",
@@ -4605,7 +4859,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Project_Services"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Project_Services",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNOV",
@@ -4641,7 +4897,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Vienna"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Vienna",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNOWAS",
@@ -4677,7 +4935,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_West_Africa_and_the_Sahel"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_West_Africa_and_the_Sahel",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNRCCA",
@@ -4713,7 +4973,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Centre_for_Preventive_Diplomacy_for_Central_Asia"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Centre_for_Preventive_Diplomacy_for_Central_Asia",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNRGID",
@@ -4749,7 +5011,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found"
+    "entity_wikipedia_page":"Not found",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNRWA",
@@ -4785,7 +5049,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Relief_and_Works_Agency_for_Palestine_Refugees_in_the_Near_East"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Relief_and_Works_Agency_for_Palestine_Refugees_in_the_Near_East",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNRoD",
@@ -4821,7 +5087,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Register_of_Damage_Caused_by_the_Construction_of_the_Wall_in_the_Occupied_Palestinian_Territory"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Register_of_Damage_Caused_by_the_Construction_of_the_Wall_in_the_Occupied_Palestinian_Territory",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNSCO",
@@ -4857,7 +5125,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_the_Middle_East_Peace_Process"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_the_Middle_East_Peace_Process",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNSCOL",
@@ -4893,7 +5163,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_Lebanon"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_Lebanon",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNSMIL",
@@ -4929,7 +5201,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Mission_in_Libya"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Mission_in_Libya",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNSOM",
@@ -4965,7 +5239,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Somalia"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Somalia",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNSOS",
@@ -5001,7 +5277,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Office_in_Somalia"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Office_in_Somalia",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNSSC",
@@ -5037,7 +5315,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Staff_College"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Staff_College",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNTMIS",
@@ -5073,7 +5353,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNTSO",
@@ -5109,7 +5391,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Truce_Supervision_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Truce_Supervision_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNU",
@@ -5145,7 +5429,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_University"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_University",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNVMC",
@@ -5181,7 +5467,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Verification_Mission_in_Colombia"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Verification_Mission_in_Colombia",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UNYO",
@@ -5217,7 +5505,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Youth_Office"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Youth_Office",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"UPU",
@@ -5253,7 +5543,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Universal_Postal_Union"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Universal_Postal_Union",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"VRA",
@@ -5289,7 +5581,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"Not found."
+    "entity_wikipedia_page":"Not found.",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"WB",
@@ -5325,7 +5619,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Bank"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Bank",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"WFP",
@@ -5361,7 +5657,9 @@
     "entity_branding_page":"www.wfp.org\/UIGuide",
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/uikit.wfp.org\/docs\/index.html?path=\/docs\/documentation-core-logos--page",
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Food_Programme"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Food_Programme",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"WHO",
@@ -5397,7 +5695,9 @@
     "entity_branding_page":"https:\/\/www.who.int\/about\/communications\/credible-and-trusted\/who-brand",
     "entity_data_page":"https:\/\/www.who.int\/data\/",
     "entity_logo_page":"https:\/\/www.who.int\/about\/policies\/publishing\/logo",
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Health_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Health_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"WIPO",
@@ -5433,7 +5733,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Intellectual_Property_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Intellectual_Property_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"WMO",
@@ -5469,7 +5771,9 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Meteorological_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Meteorological_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   },
   {
     "entity":"WTO",
@@ -5505,6 +5809,8 @@
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Trade_Organization"
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Trade_Organization",
+    "entity_footnotes":null,
+    "is_primary_entity":null
   }
 ]

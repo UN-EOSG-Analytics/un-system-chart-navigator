@@ -69,7 +69,9 @@ selected_columns = [
     "entity_branding_page",
     "entity_data_page",
     "entity_logo_page",
-    "entity_wikipedia_page"
+    "entity_wikipedia_page",
+    "entity_footnotes",
+    "is_primary_entity"
 ]
 
 # TODO: don't forget to also add in `entity.ts`

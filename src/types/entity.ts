@@ -9,7 +9,7 @@ export interface Entity {
     category: string;
     un_principal_organ: string;
     un_pillar: string | null;
-    is_ceb_member: boolean;
+    is_ceb_member: boolean | null;
     head_of_entity_level: string; // Can be "Not applicable"
     head_of_entity_title_specific: string | null; // Can be "Not applicable" or null
     head_of_entity_title_general: string; // Can be "Not applicable"
@@ -33,6 +33,8 @@ export interface Entity {
     entity_data_page: string | null;
     entity_logo_page: string | null;
     entity_wikipedia_page: string | null;
+    entity_footnotes: string | null;
+    is_primary_entity: boolean | null;
 }
 
 export interface EntityFilters {

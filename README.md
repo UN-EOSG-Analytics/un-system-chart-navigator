@@ -43,7 +43,7 @@
 To quickly refresh the data:
 
 ```shell
-bash python/update_data.sh 
+bash python/update_data.sh
 ```
 
 
