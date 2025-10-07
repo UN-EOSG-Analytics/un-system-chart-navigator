@@ -20,8 +20,11 @@
   --color-un-gray: #d7d1ca;
 
   --color-un-system-yellow: #f9df7f;
-  --color-un-system-aubergine: #a79ab3;
-  --color-un-system-green: #7d8471;
+  --color-un-system-purple: #a79ab3;
+  --color-un-system-green: #cee095;
+  --color-un-system-red: #fec99d;
+  --color-un-system-blue: #c5dfea;
+  --color-un-system-dark-gray: #cbcccb;
 }
 
 /* Prevent layout shifts by always showing scrollbar */

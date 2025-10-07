@@ -11,70 +11,70 @@ export interface SystemGroupingStyle {
 export const systemGroupingStyles: Record<string, SystemGroupingStyle> = {
     'UN Secretariat': {
         label: 'UN Secretariat',
-        bgColor: 'bg-un-gray',
+        bgColor: 'bg-un-system-yellow',
         textColor: 'text-black',
         order: 1
     },
     'Peacekeeping Operations and Political Missions': {
         label: 'Peacekeeping Operations, Political Missions, etc.',
-        bgColor: 'bg-un-red',
-        textColor: 'text-white',
+        bgColor: 'bg-un-system-red',
+        textColor: 'text-black',
         order: 2
     },
     'Regional Commissions': {
         label: 'Regional Commissions',
-        bgColor: 'bg-un-system-aubergine',
-        textColor: 'text-white',
+        bgColor: 'bg-un-system-blue',
+        textColor: 'text-black',
         order: 3
-    },
-    'Funds and Programmes': {
-        label: 'Funds & Programmes',
-        bgColor: 'bg-camouflage-green',
-        textColor: 'text-white',
-        order: 4
-    },
-    'Research and Training': {
-        label: 'Research & Training',
-        bgColor: 'bg-camouflage-green',
-        textColor: 'text-white',
-        order: 5
-    },
-    'Subsidiary Organs': {
-        label: 'Subsidiary Organs',
-        bgColor: 'bg-trout',
-        textColor: 'text-white',
-        order: 6
-    },
-    'International Court of Justice': {
-        label: 'International Court of Justice',
-        bgColor: 'bg-shuttle-gray',
-        textColor: 'text-white',
-        order: 7
-    },
-    'Specialized Agencies': {
-        label: 'Specialized Agencies',
-        bgColor: 'bg-shuttle-gray',
-        textColor: 'text-white',
-        order: 8
-    },
-    'Related Organizations': {
-        label: 'Related Organizations',
-        bgColor: 'bg-black',
-        textColor: 'text-white',
-        order: 9
-    },
-    'Other Entities': {
-        label: 'Other Entities',
-        bgColor: 'bg-gray-500',
-        textColor: 'text-white',
-        order: 10
     },
     'Other Bodies': {
         label: 'Other Bodies',
-        bgColor: 'bg-pale-oyster',
-        textColor: 'text-white',
+        bgColor: 'bg-un-system-blue',
+        textColor: 'text-black',
+        order: 4
+    },
+    'Intergovernmental and Expert Bodies': {
+        label: 'Intergovernmental and Expert Bodies',
+        bgColor: 'bg-un-system-green',
+        textColor: 'text-black',
+        order: 5
+    },
+    'Funds and Programmes': {
+        label: 'Funds & Programmes',
+        bgColor: 'bg-un-system-green',
+        textColor: 'text-black',
+        order: 6
+    },
+    'Research and Training': {
+        label: 'Research & Training',
+        bgColor: 'bg-un-system-green',
+        textColor: 'text-black',
+        order: 7
+    },
+    'Other Entities': {
+        label: 'Other Entities',
+        bgColor: 'bg-un-system-green',
+        textColor: 'text-black',
+        order: 8
+    },
+    'International Court of Justice': {
+        label: 'International Court of Justice',
+        bgColor: 'bg-un-system-purple',
+        textColor: 'text-black',
+        order: 9
+    },
+    'Specialized Agencies': {
+        label: 'Specialized Agencies',
+        bgColor: 'bg-un-system-dark-gray',
+        textColor: 'text-black',
+        order: 10
+    },
+    'Related Organizations': {
+        label: 'Related Organizations',
+        bgColor: 'bg-un-system-dark-gray',
+        textColor: 'text-black',
         order: 11
-    }
+    },
 };
 
 /**
