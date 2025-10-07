@@ -7,9 +7,9 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { X } from 'lucide-react';
+import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { systemGroupingStyles, getSortedSystemGroupings } from '@/lib/systemGroupings';
+import { X } from 'lucide-react';
 
 interface FilterControlsProps {
     activeGroups: Set<string>;
@@ -109,7 +109,7 @@ export default function FilterControls({
             {/* Filter Controls Row */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 sm:items-end">
                 {/* Filter Dropdown */}
-                <div className="relative w-full sm:w-[320px]">
+                <div className="relative w-full sm:w-[420px]">
                     <Select value={getSelectedValue()} onValueChange={handleValueChange}>
                         <SelectTrigger className="w-full h-12 sm:h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2 transition-all duration-500 ease-out touch-manipulation" id="category-filter">
                             <SelectValue asChild>
@@ -117,7 +117,7 @@ export default function FilterControls({
                             </SelectValue>
                         </SelectTrigger>
                         <SelectContent
-                            className="w-full sm:w-[320px] bg-white border-gray-300 z-50 animate-in fade-in slide-in-from-top-2 duration-500"
+                            className="w-full min-w-[var(--radix-select-trigger-width)] bg-white border-gray-300 z-50 animate-in fade-in slide-in-from-top-2 duration-500"
                             position="popper"
                             side="bottom"
                             align="start"
@@ -146,7 +146,7 @@ export default function FilterControls({
                 </div>
 
                 {/* Search Input */}
-                <div className="relative w-full sm:w-80">
+                <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
