@@ -242,9 +242,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 clickable={true}
                             />
                         </Field>
-                        <Field label="Entity Category">
-                            <Badge>{entity!.category}</Badge>
-                        </Field>
                         <Field label="UN Principal Organ">
                             <Badge>{entity!.un_principal_organ}</Badge>
                         </Field>
