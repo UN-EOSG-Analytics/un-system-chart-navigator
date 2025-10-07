@@ -136,7 +136,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
 
             {/* As of Date */}
             <div className="mt-4 text-left">
-                <p className="text-base text-gray-600">As of September 2025</p>
+                <p className="text-base text-gray-600">As of October 2025</p>
             </div>
         </div>
     );
