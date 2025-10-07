@@ -426,6 +426,21 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         </div>
                     );
                 })()}
+
+                {/* Footnotes */}
+                {entity!.entity_footnotes && entity!.entity_footnotes.trim() !== '' && (
+                    <div className="border-t border-gray-100 pt-2 mt-6">
+                        <div className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-1">Notes</div>
+                        <div className="text-xs text-gray-500 leading-snug space-y-0.5 ml-1.5">
+                            {entity!.entity_footnotes.split('\n').filter(line => line.trim()).map((line, index) => (
+                                <div key={index} className="flex items-start">
+                                    <span className="text-gray-400 mr-2 flex-shrink-0">•</span>
+                                    <span>{line.replace(/^-\s*/, '').trim()}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         );
     };

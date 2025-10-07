@@ -111,7 +111,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Chief_Executives_Board_for_Coordination",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"CNMC",
@@ -301,7 +301,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Coordination_Office",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DESA",
@@ -339,7 +339,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Economic_and_Social_Affairs",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DGACM",
@@ -377,7 +377,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_for_General_Assembly_and_Conference_Management",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DGC",
@@ -415,7 +415,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Global_Communications",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DMSPC",
@@ -453,7 +453,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Management_Strategy,_Policy_and_Compliance",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DOS",
@@ -491,7 +491,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Operational_Support",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DPO",
@@ -529,7 +529,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Peace_Operations",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DPPA",
@@ -567,7 +567,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Political_and_Peacebuilding_Affairs",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DSS",
@@ -605,7 +605,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Safety_and_Security",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ECA",
@@ -795,7 +795,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Executive_Office_of_the_Secretary-General_of_the_United_Nations",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ESCAP",
@@ -908,7 +908,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Food_and_Agriculture_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -984,7 +984,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Atomic_Energy_Agency",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -1022,7 +1022,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Aviation_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -1174,7 +1174,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Fund_for_Agricultural_Development",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -1288,7 +1288,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Labour_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n\n",
     "is_primary_entity":null
   },
   {
@@ -1326,7 +1326,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Monetary_Fund",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -1364,7 +1364,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Maritime_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -1402,7 +1402,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Organization_for_Migration",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -1554,7 +1554,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Telecommunication_Union",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -3454,7 +3454,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_World_Tourism_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -3492,7 +3492,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Human_Settlements_Programme",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
     "is_primary_entity":null
   },
   {
@@ -3568,7 +3568,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UN_Women",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -3758,7 +3758,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Conference_on_Trade_and_Development",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -3834,7 +3834,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Programme",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n- some other footnote for testing\n",
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n",
     "is_primary_entity":true
   },
   {
@@ -3910,7 +3910,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Environment_Programme",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n- The Secretariat of UNEP is part of the United Nations Secretariat.\n",
     "is_primary_entity":null
   },
   {
@@ -3948,7 +3948,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNESCO",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -4062,7 +4062,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Population_Fund",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
     "is_primary_entity":null
   },
   {
@@ -4214,7 +4214,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_High_Commissioner_for_Refugees",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -4252,7 +4252,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNICEF",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
     "is_primary_entity":null
   },
   {
@@ -4328,7 +4328,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Industrial_Development_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -4746,7 +4746,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_on_Drugs_and_Crime",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -4860,7 +4860,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Project_Services",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -5050,7 +5050,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Relief_and_Works_Agency_for_Palestine_Refugees_in_the_Near_East",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   },
   {
@@ -5544,7 +5544,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Universal_Postal_Union",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -5587,8 +5587,8 @@
   },
   {
     "entity":"WB",
-    "entity_long":"World Bank",
-    "entity_combined":"World Bank (WB)",
+    "entity_long":"World Bank Group",
+    "entity_combined":"World Bank Group (WB)",
     "entity_description":null,
     "entity_link":"https:\/\/www.worldbank.org\/",
     "entity_link_is_un_org":0,
@@ -5620,7 +5620,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Bank",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -5658,7 +5658,7 @@
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/uikit.wfp.org\/docs\/index.html?path=\/docs\/documentation-core-logos--page",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Food_Programme",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
     "is_primary_entity":null
   },
   {
@@ -5696,7 +5696,7 @@
     "entity_data_page":"https:\/\/www.who.int\/data\/",
     "entity_logo_page":"https:\/\/www.who.int\/about\/policies\/publishing\/logo",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Health_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -5734,7 +5734,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Intellectual_Property_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -5772,7 +5772,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Meteorological_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
     "is_primary_entity":null
   },
   {
@@ -5810,7 +5810,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Trade_Organization",
-    "entity_footnotes":null,
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
     "is_primary_entity":null
   }
 ]
