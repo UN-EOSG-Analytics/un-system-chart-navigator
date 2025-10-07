@@ -3,7 +3,7 @@
 import { MemberState } from '@/types';
 import { X, Info } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { getStatusStyle, getTotalContributions, getAllMemberStates } from '@/lib/memberStates';
+import { getStatusStyle, getTotalContributions, getAllMemberStates, getPaymentStatusStyle } from '@/lib/memberStates';
 import { formatBudget } from '@/lib/entities';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { createEntitySlug } from '@/lib/utils';
@@ -171,108 +171,144 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                     </div>
                 </div>
 
-                <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-4">
+                <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6">
                     <div>
-                        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Status</span>
-                        <div className="mt-0.5">
-                            <span className={`inline-block px-3 py-1 ${statusStyle.bgColor} ${statusStyle.textColor} rounded-full text-sm font-medium`}>
-                                {statusStyle.label}
-                            </span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Total Contributions</span>
-                        <div className="mt-0.5">
-                            <div className="text-gray-700 text-base font-semibold">{formatBudget(totalContributions)}</div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Contribution Breakdown by Type</span>
-                        <div className="mt-2 space-y-2">
-                            {breakdownEntries.map(([type, amount]) => (
-                                <div key={type} className="flex items-center justify-between gap-2">
-                                    <div className="flex items-center gap-2">
-                                        <div className={`w-2 h-2 rounded-full ${getContributionTypeColor(type)}`} />
-                                        <span className="text-sm text-gray-600">{type}</span>
-                                    </div>
-                                    <span className="text-sm font-semibold text-gray-700">{formatBudget(amount)}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="flex items-center gap-2 mb-3">
-                            <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Contribution Allocation by Entity</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-xs text-gray-500 mb-2">
-                            <div className="flex items-center gap-1.5">
-                                <div className="flex h-2 w-8 rounded-sm overflow-hidden">
-                                    <div className="bg-gray-900 flex-1" />
-                                    <div className="bg-gray-700 flex-1" />
-                                    <div className="bg-gray-500 flex-1" />
-                                    <div className="bg-gray-400 flex-1" />
-                                </div>
-                                <span>{memberState.name}</span>
+                        <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-3 uppercase tracking-wider">Overview</h3>
+                        <div>
+                            <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Status</span>
+                            <div className="mt-0.5">
+                                <span className={`inline-block px-3 py-1 ${statusStyle.bgColor} ${statusStyle.textColor} rounded-full text-sm font-medium`}>
+                                    {statusStyle.label}
+                                </span>
                             </div>
-                            <div className="flex items-center gap-1.5">
-                                <div className="h-2 w-8 rounded-sm bg-gray-300" />
-                                <span>Global average</span>
-                            </div>
-                            <Tooltip>
-                                <TooltipTrigger asChild>
-                                    <Info className="h-3 w-3 cursor-help" />
-                                </TooltipTrigger>
-                                <TooltipContent side="top" className="max-w-md bg-white text-slate-800 border border-slate-200">
-                                    <div className="text-xs space-y-2">
-                                        <p className="font-semibold">How to read this chart</p>
-                                        <div>
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <div className="flex h-2 w-8 rounded-sm overflow-hidden flex-shrink-0">
-                                                    <div className="bg-gray-900 flex-1" />
-                                                    <div className="bg-gray-700 flex-1" />
-                                                    <div className="bg-gray-500 flex-1" />
-                                                    <div className="bg-gray-400 flex-1" />
-                                                </div>
-                                                <p className="font-medium">{memberState.name}&apos;s bars</p>
-                                            </div>
-                                            <p className="text-gray-600">Show contributions of {memberState.name} per entity, split by contribution type:</p>
-                                            <div className="ml-2 space-y-0.5 mt-1">
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-gray-900" />
-                                                    <span className="text-gray-600">Assessed</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-gray-700" />
-                                                    <span className="text-gray-600">Voluntary un-earmarked</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-gray-500" />
-                                                    <span className="text-gray-600">Voluntary earmarked</span>
-                                                </div>
-                                                <div className="flex items-center gap-2">
-                                                    <div className="w-2 h-2 rounded-full bg-gray-400" />
-                                                    <span className="text-gray-600">Other</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p className="font-medium">Percentage score</p>
-                                            <p className="text-gray-600">For each entity, the percentage shows {memberState.name}&apos;s contributions to that entity divided by {memberState.name}&apos;s total assessed contributions to all entities.</p>
-                                        </div>
-                                        <div>
-                                            <div className="flex items-center gap-2 mb-1">
-                                                <div className="h-2 w-8 rounded-sm bg-gray-300 flex-shrink-0" />
-                                                <p className="font-medium">Global average bars</p>
-                                            </div>
-                                            <p className="text-gray-600">Shows the percentage of all member states&apos; contributions to that entity divided by all states&apos; total assessed contributions. Provides context for comparison.</p>
-                                        </div>
-                                    </div>
-                                </TooltipContent>
-                            </Tooltip>
                         </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-3 uppercase tracking-wider">Contributions</h3>
+                        
+                        {memberState.payment_status && (
+                            <div className="mb-4">
+                                <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Payment Date</span>
+                                <div className="mt-0.5 flex items-center gap-2">
+                                    {memberState.payment_date && (
+                                        <span className="text-base text-gray-700 font-semibold">
+                                            {(() => {
+                                                // Parse date like "7-Jan-25"
+                                                const parts = memberState.payment_date.split('-');
+                                                if (parts.length === 3) {
+                                                    const months: Record<string, string> = {
+                                                        'Jan': 'January', 'Feb': 'February', 'Mar': 'March', 
+                                                        'Apr': 'April', 'May': 'May', 'Jun': 'June',
+                                                        'Jul': 'July', 'Aug': 'August', 'Sep': 'September',
+                                                        'Oct': 'October', 'Nov': 'November', 'Dec': 'December'
+                                                    };
+                                                    return `${months[parts[1]] || parts[1]} ${parseInt(parts[0])}, 20${parts[2]}`;
+                                                }
+                                                return memberState.payment_date;
+                                            })()}
+                                        </span>
+                                    )}
+                                    <span className={`inline-block px-2.5 py-0.5 ${getPaymentStatusStyle(memberState.payment_status)?.bgColor} ${getPaymentStatusStyle(memberState.payment_status)?.textColor} rounded-full text-xs font-medium`}>
+                                        {getPaymentStatusStyle(memberState.payment_status)?.label}
+                                    </span>
+                                </div>
+                                <div className="text-gray-500 text-xs mt-0.5">
+                                    2025 Assessed Contributions
+                                </div>
+                            </div>
+                        )}
+
+                        <div className="mt-3">
+                            <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">Total</span>
+                            <div className="mt-0.5">
+                                <div className="text-gray-700 text-base font-semibold">{formatBudget(totalContributions)}</div>
+                            </div>
+                        </div>
+
+                        <div className="mt-4">
+                            <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">By Type</span>
+                            <div className="mt-2 space-y-2">
+                                {breakdownEntries.map(([type, amount]) => (
+                                    <div key={type} className="flex items-center justify-between gap-2">
+                                        <div className="flex items-center gap-2">
+                                            <div className={`w-2 h-2 rounded-full ${getContributionTypeColor(type)}`} />
+                                            <span className="text-sm text-gray-600">{type}</span>
+                                        </div>
+                                        <span className="text-sm font-semibold text-gray-700">{formatBudget(amount)}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="mt-4">
+                            <span className="font-normal text-gray-600 text-sm uppercase tracking-wide">By Entity</span>
+                            <div className="flex items-center gap-3 text-xs text-gray-500 mt-2 mb-2">
+                                <div className="flex items-center gap-1.5">
+                                    <div className="flex h-2 w-8 rounded-sm overflow-hidden">
+                                        <div className="bg-gray-900 flex-1" />
+                                        <div className="bg-gray-700 flex-1" />
+                                        <div className="bg-gray-500 flex-1" />
+                                        <div className="bg-gray-400 flex-1" />
+                                    </div>
+                                    <span>{memberState.name}</span>
+                                </div>
+                                <div className="flex items-center gap-1.5">
+                                    <div className="h-2 w-8 rounded-sm bg-gray-300" />
+                                    <span>Global average</span>
+                                </div>
+                                <Tooltip>
+                                    <TooltipTrigger asChild>
+                                        <Info className="h-3 w-3 cursor-help" />
+                                    </TooltipTrigger>
+                                    <TooltipContent side="top" className="max-w-md bg-white text-slate-800 border border-slate-200">
+                                        <div className="text-xs space-y-2">
+                                            <p className="font-semibold">How to read this chart</p>
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <div className="flex h-2 w-8 rounded-sm overflow-hidden flex-shrink-0">
+                                                        <div className="bg-gray-900 flex-1" />
+                                                        <div className="bg-gray-700 flex-1" />
+                                                        <div className="bg-gray-500 flex-1" />
+                                                        <div className="bg-gray-400 flex-1" />
+                                                    </div>
+                                                    <p className="font-medium">{memberState.name}&apos;s bars</p>
+                                                </div>
+                                                <p className="text-gray-600">Show contributions of {memberState.name} per entity, split by contribution type:</p>
+                                                <div className="ml-2 space-y-0.5 mt-1">
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-2 h-2 rounded-full bg-gray-900" />
+                                                        <span className="text-gray-600">Assessed</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-2 h-2 rounded-full bg-gray-700" />
+                                                        <span className="text-gray-600">Voluntary un-earmarked</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-2 h-2 rounded-full bg-gray-500" />
+                                                        <span className="text-gray-600">Voluntary earmarked</span>
+                                                    </div>
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-2 h-2 rounded-full bg-gray-400" />
+                                                        <span className="text-gray-600">Other</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <p className="font-medium">Percentage score</p>
+                                                <p className="text-gray-600">For each entity, the percentage shows {memberState.name}&apos;s contributions to that entity divided by {memberState.name}&apos;s total assessed contributions to all entities.</p>
+                                            </div>
+                                            <div>
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    <div className="h-2 w-8 rounded-sm bg-gray-300 flex-shrink-0" />
+                                                    <p className="font-medium">Global average bars</p>
+                                                </div>
+                                                <p className="text-gray-600">Shows the percentage of all member states&apos; contributions to that entity divided by all states&apos; total assessed contributions. Provides context for comparison.</p>
+                                            </div>
+                                        </div>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </div>
                         <div className="space-y-1.5">
                             {(() => {
                                 const displayedEntities = showAllEntities ? entityContributions : entityContributions.slice(0, 10);
@@ -372,6 +408,7 @@ export default function MemberStateModal({ memberState, onClose }: MemberStateMo
                                     </>
                                 );
                             })()}
+                        </div>
                         </div>
                     </div>
                 </div>

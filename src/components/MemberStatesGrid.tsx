@@ -3,14 +3,16 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { MemberState } from '@/types';
 import { useState } from 'react';
-import { getAllMemberStates, getStatusStyle, getTotalContributions } from '@/lib/memberStates';
+import { getAllMemberStates, getStatusStyle, getTotalContributions, getPaymentStatusStyle } from '@/lib/memberStates';
 import { formatBudget } from '@/lib/entities';
 import MemberStateModal from './MemberStateModal';
 import MemberStatesTreemap from './MemberStatesTreemap';
 import { Switch } from '@/components/ui/switch';
 
-const MemberStateCard = ({ state, onClick }: { state: MemberState; onClick: () => void }) => {
-    const styles = getStatusStyle(state.status);
+const MemberStateCard = ({ state, onClick, showPaymentStatus }: { state: MemberState; onClick: () => void; showPaymentStatus: boolean }) => {
+    const styles = showPaymentStatus && state.payment_status 
+        ? getPaymentStatusStyle(state.payment_status)!
+        : getStatusStyle(state.status);
     const totalContributions = getTotalContributions(state.contributions);
     
     const getDisplayName = (name: string) => {
@@ -56,6 +58,7 @@ export default function MemberStatesGrid() {
     const [showTreemap, setShowTreemap] = useState<boolean>(false);
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
     const [displayTreemap, setDisplayTreemap] = useState<boolean>(false);
+    const [showPaymentStatus, setShowPaymentStatus] = useState<boolean>(false);
     
     const memberStates = getAllMemberStates().sort((a, b) => {
         const aStyle = getStatusStyle(a.status);
@@ -84,7 +87,30 @@ export default function MemberStatesGrid() {
                     checked={showTreemap}
                     onCheckedChange={toggleTreemap}
                 />
-                {showTreemap && (
+                <span className="text-sm text-gray-700 ml-2">
+                    Payment status
+                </span>
+                <Switch
+                    checked={showPaymentStatus}
+                    onCheckedChange={setShowPaymentStatus}
+                />
+                {showPaymentStatus && (
+                    <div className="ml-2 flex items-center gap-3 text-[10px] text-slate-700">
+                        <div className="flex items-center gap-2">
+                            <span className="h-2 w-4 rounded bg-camouflage-green"></span>
+                            <span>Paid on time</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="h-2 w-4 rounded bg-amber-600"></span>
+                            <span>Paid late</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="h-2 w-4 rounded bg-un-red"></span>
+                            <span>Not paid</span>
+                        </div>
+                    </div>
+                )}
+                {showTreemap && !showPaymentStatus && (
                     <div className="ml-2 flex items-center gap-3 text-[10px] text-slate-700">
                         {['Assessed','Voluntary un-earmarked','Voluntary earmarked','Other'].map(t => (
                             <div key={t} className="flex items-center gap-2">
@@ -106,11 +132,12 @@ export default function MemberStatesGrid() {
                         <MemberStatesTreemap 
                             states={memberStates}
                             onStateClick={setSelectedState}
+                            showPaymentStatus={showPaymentStatus}
                         />
                     ) : (
                         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
                             {memberStates.map((state) => (
-                                <MemberStateCard key={state.name} state={state} onClick={() => setSelectedState(state)} />
+                                <MemberStateCard key={state.name} state={state} onClick={() => setSelectedState(state)} showPaymentStatus={showPaymentStatus} />
                             ))}
                         </div>
                     )}

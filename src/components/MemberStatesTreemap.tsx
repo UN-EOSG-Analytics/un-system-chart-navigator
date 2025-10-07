@@ -1,7 +1,7 @@
 'use client';
 
 import { MemberState } from '@/types';
-import { getStatusStyle, getTotalContributions } from '@/lib/memberStates';
+import { getStatusStyle, getTotalContributions, getPaymentStatusStyle } from '@/lib/memberStates';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { useState } from 'react';
 
@@ -103,9 +103,10 @@ function slice(items: (TreemapItem & { normalizedValue: number })[], x: number, 
 interface MemberStatesTreemapProps {
     states: MemberState[];
     onStateClick: (state: MemberState) => void;
+    showPaymentStatus: boolean;
 }
 
-export default function MemberStatesTreemap({ states, onStateClick }: MemberStatesTreemapProps) {
+export default function MemberStatesTreemap({ states, onStateClick, showPaymentStatus }: MemberStatesTreemapProps) {
     const [hoveredState, setHoveredState] = useState<string | null>(null);
 
     const groups = states.reduce((acc, state) => {
@@ -174,11 +175,13 @@ export default function MemberStatesTreemap({ states, onStateClick }: MemberStat
     let currentY = 0;
     
     const renderStates = (status: string, items: TreemapItem[], x: number, y: number, width: number, height: number) => {
-        const styles = getStatusStyle(status);
         const sortedItems = [...items].sort((a, b) => b.value - a.value);
         const rects = squarify(sortedItems, x, y, width, height);
         
         return rects.map((rect, i) => {
+            const styles = showPaymentStatus && rect.data.payment_status
+                ? getPaymentStatusStyle(rect.data.payment_status)!
+                : getStatusStyle(status);
             const stateContributions = getTotalContributions(rect.data.contributions);
             const breakdown = getContributionBreakdown(rect.data.contributions);
             const showLabel = rect.width > 3 && rect.height > 2;

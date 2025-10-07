@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 import pandas as pd
 import requests
@@ -17,6 +18,50 @@ def normalize_rev_type(rev_type: str) -> str:
         return "Voluntary earmarked"
     else:
         return "Other"
+
+
+def scrape_payment_status() -> dict[str, dict]:
+    """Scrape payment status from UN honour roll."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+    }
+    response = requests.get(
+        "https://www.un.org/en/ga/contributions/honourroll.shtml", headers=headers
+    )
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    payment_data = {}
+    
+    # Find all tables
+    tables = soup.find_all("table")
+    
+    # Deadline is 30 days after January 1, 2025 = February 6, 2025
+    deadline_date = datetime(2025, 2, 6)
+    
+    for table in tables:
+        rows = table.find_all("tr")
+        for row in rows[1:]:  # Skip header
+            cells = row.find_all("td")
+            if len(cells) >= 4:
+                state_name = cells[1].get_text().strip()
+                payment_date_str = cells[3].get_text().strip()
+                if state_name and payment_date_str and state_name != "Member State":
+                    # Parse payment date to determine if punctual or late
+                    try:
+                        # Parse date like "7-Jan-25" or "10-Jan-25"
+                        payment_date = datetime.strptime(payment_date_str, "%d-%b-%y")
+                        status = "punctual" if payment_date <= deadline_date else "late"
+                    except:
+                        # Default to punctual if can't parse
+                        status = "punctual"
+                    
+                    if state_name not in payment_data:
+                        payment_data[state_name] = {
+                            "payment_date": payment_date_str,
+                            "payment_status": status,
+                        }
+
+    return payment_data
 
 # Scrape UN member states and observer states
 headers = {
@@ -42,9 +87,15 @@ observer_states = [
     if h3.get_text().strip() not in ["MEMBER STATES", "Quick links for delegates"]
 ]
 
-all_states = member_states + observer_states
 # Normalize curly apostrophes to straight (UN website is inconsistent)
-all_states = [s.replace("\u2019", "'") for s in all_states]
+member_states = [s.replace("\u2019", "'") for s in member_states]
+observer_states = [s.replace("\u2019", "'") for s in observer_states]
+all_states = member_states + observer_states
+
+# Scrape payment status
+print("\nScraping payment status from honour roll...")
+payment_status_raw = scrape_payment_status()
+print(f"Found payment data for {len(payment_status_raw)} states")
 
 df_donors = pd.read_csv(
     "data/downloads/budget/government-donor-revenue.csv", encoding="utf-8"
@@ -66,6 +117,19 @@ STATE_MAPPING = {
     "Netherlands (Kingdom of the)": "Netherlands",
     "Venezuela, Bolivarian Republic of": "Venezuela (Bolivarian Republic of)",
 }
+
+# Mapping for payment status names that differ from member states list
+PAYMENT_STATE_MAPPING = {
+    "Cote d'Ivoire": "Côte D'Ivoire",
+    "United Kingdom": "United Kingdom of Great Britain and Northern Ireland",
+    "United States": "United States of America",
+}
+
+# Normalize payment status state names
+payment_status = {}
+for raw_name, data in payment_status_raw.items():
+    normalized_name = PAYMENT_STATE_MAPPING.get(raw_name, raw_name)
+    payment_status[normalized_name] = data
 
 all_states_normalized = [STATE_MAPPING.get(s, s) for s in all_states]
 all_states_normalized_set = set(all_states_normalized)
@@ -114,10 +178,25 @@ for donor in donor_names:
             contributions[entity][rev_type] = 0
         contributions[entity][rev_type] += amount
 
-    donor_contributions[donor] = {
+    donor_entry = {
         "status": state_status[donor],
         "contributions": contributions,
     }
+
+    # Add payment status if available (only for member/observer states)
+    if donor in payment_status:
+        donor_entry["payment_date"] = payment_status[donor]["payment_date"]
+        donor_entry["payment_status"] = payment_status[donor]["payment_status"]
+    elif state_status[donor] in ["member", "observer"]:
+        # State has not paid yet
+        donor_entry["payment_status"] = "missing"
+
+    donor_contributions[donor] = donor_entry
+
+print(f"\nPayment status coverage:")
+print(f"  Punctual: {sum(1 for d in donor_contributions.values() if d.get('payment_status') == 'punctual')}")
+print(f"  Late: {sum(1 for d in donor_contributions.values() if d.get('payment_status') == 'late')}")
+print(f"  Missing: {sum(1 for d in donor_contributions.values() if d.get('payment_status') == 'missing')}")
 
 with open("public/member-states.json", "w") as f:
     json.dump(donor_contributions, f, indent=2)

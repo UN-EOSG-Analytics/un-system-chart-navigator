@@ -43,6 +43,8 @@ export interface MemberState {
     name: string;
     status: 'member' | 'observer' | 'nonmember';
     contributions: Record<string, Record<string, number>>;
+    payment_date?: string;
+    payment_status?: 'punctual' | 'late' | 'missing';
 }
 
 export interface Organ {

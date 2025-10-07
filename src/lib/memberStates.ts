@@ -15,11 +15,26 @@ export const getStatusStyle = (status: string) => {
     }
 };
 
+export const getPaymentStatusStyle = (paymentStatus?: 'punctual' | 'late' | 'missing') => {
+    switch (paymentStatus) {
+        case 'punctual':
+            return { bgColor: 'bg-camouflage-green', textColor: 'text-white', label: 'Paid on time' };
+        case 'late':
+            return { bgColor: 'bg-amber-600', textColor: 'text-white', label: 'Paid late' };
+        case 'missing':
+            return { bgColor: 'bg-un-red', textColor: 'text-white', label: 'Not paid' };
+        default:
+            return null;
+    }
+};
+
 export const getAllMemberStates = (): MemberState[] => {
-    return Object.entries(memberStatesData as Record<string, { status: 'member' | 'observer' | 'nonmember'; contributions: Record<string, Record<string, number>> }>).map(([name, data]) => ({
+    return Object.entries(memberStatesData as Record<string, { status: 'member' | 'observer' | 'nonmember'; contributions: Record<string, Record<string, number>>; payment_date?: string; payment_status?: 'punctual' | 'late' | 'missing' }>).map(([name, data]) => ({
         name,
         status: data.status,
-        contributions: data.contributions
+        contributions: data.contributions,
+        payment_date: data.payment_date,
+        payment_status: data.payment_status
     }));
 };
 
