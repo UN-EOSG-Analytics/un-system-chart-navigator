@@ -1,5 +1,6 @@
 'use client';
 
+import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/ui/PrincipalOrganField';
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
@@ -236,50 +237,16 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <div>
                     <SubHeader>Overview</SubHeader>
                     <div className="space-y-4">
+                        {/* System Grouping */}
                         <Field label="System Grouping">
                             <SystemGroupingBadge
                                 grouping={entity!.system_grouping}
                                 clickable={true}
                             />
                         </Field>
-                        <Field label="UN Principal Organ">
-                            <div className="flex flex-wrap gap-2">
-                                {(() => {
-                                    const organs = entity!.un_principal_organ;
-                                    
-                                    // Handle null case - show empty badge
-                                    if (organs === null) {
-                                        return <Badge>{""}</Badge>;
-                                    }
-                                    
-                                    // Handle string format
-                                    if (typeof organs === 'string') {
-                                        // Check if it's a stringified array
-                                        if (organs.startsWith('[') && organs.endsWith(']')) {
-                                            try {
-                                                const parsed = JSON.parse(organs.replace(/'/g, '"'));
-                                                return Array.isArray(parsed) 
-                                                    ? parsed.map((organ: string, index: number) => (
-                                                        <Badge key={index}>{organ}</Badge>
-                                                    ))
-                                                    : <Badge>{organs}</Badge>;
-                                            } catch {
-                                                return <Badge>{organs}</Badge>;
-                                            }
-                                        }
-                                        return <Badge>{organs}</Badge>;
-                                    }
-                                    
-                                    // Handle array format
-                                    if (Array.isArray(organs)) {
-                                        return organs.map((organ: string, index: number) => (
-                                            <Badge key={index}>{organ}</Badge>
-                                        ));
-                                    }
-                                    
-                                    return <Badge>{String(organs)}</Badge>;
-                                })()}
-                            </div>
+                        {/* Principal Organ(s) */}
+                        <Field label={getPrincipalOrganLabel(entity!.un_principal_organ)}>
+                            <PrincipalOrganField principalOrgan={entity!.un_principal_organ} />
                         </Field>
                     </div>
                 </div>
