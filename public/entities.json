@@ -35,7 +35,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"BINUH",
@@ -73,7 +73,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Integrated_Office_in_Haiti",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"CEB",
@@ -149,7 +149,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"CTBTO",
@@ -187,7 +187,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Comprehensive_Nuclear-Test-Ban_Treaty_Organization_Preparatory_Commission",
     "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"CTED",
@@ -225,7 +225,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Counter-Terrorism_Committee_Executive_Directorate",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"DA",
@@ -263,7 +263,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Account",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"DCO",
@@ -643,7 +643,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Africa",
     "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ECE",
@@ -681,7 +681,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Europe",
     "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ECLAC",
@@ -719,7 +719,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Economic_Commission_for_Latin_America_and_the_Caribbean",
     "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"EO",
@@ -757,7 +757,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Ethics_Office",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"EOSG",
@@ -833,7 +833,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Asia_and_the_Pacific",
     "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ESCWA",
@@ -871,7 +871,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Western_Asia",
     "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"FAO",
@@ -909,7 +909,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Food_and_Agriculture_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"GoE-DRC",
@@ -947,7 +947,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_the_Democratic_Republic_of_the_Congo",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"IAEA",
@@ -985,7 +985,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Atomic_Energy_Agency",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ICAO",
@@ -1023,7 +1023,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Aviation_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ICC",
@@ -1061,7 +1061,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Criminal_Court",
     "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ICJ",
@@ -1099,7 +1099,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Court_of_Justice",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ICSC",
@@ -1137,7 +1137,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Service_Commission",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"IFAD",
@@ -1175,7 +1175,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Fund_for_Agricultural_Development",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"IIIM",
@@ -1213,7 +1213,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International,_Impartial_and_Independent_Mechanism",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"IIMM",
@@ -1251,7 +1251,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Independent_Investigative_Mechanism_for_Myanmar",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"ILO",
@@ -1289,7 +1289,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Labour_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"IMF",
@@ -1327,7 +1327,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Monetary_Fund",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"IMO",
@@ -1365,7 +1365,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Maritime_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"IOM",
@@ -1403,7 +1403,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Organization_for_Migration",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ISA",
@@ -1441,7 +1441,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Seabed_Authority",
     "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ITC",
@@ -1479,7 +1479,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Trade_Centre",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ITLOS",
@@ -1517,7 +1517,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Tribunal_for_the_Law_of_the_Sea",
     "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ITU",
@@ -1555,7 +1555,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Telecommunication_Union",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"JIU",
@@ -1631,7 +1631,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_for_the_Referendum_in_Western_Sahara",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"MINUSCA",
@@ -1669,7 +1669,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Multidimensional_Integrated_Stabilization_Mission_in_the_Central_African_Republic",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"MONUSCO",
@@ -1707,7 +1707,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Organization_Stabilization_Mission_in_the_Democratic_Republic_of_the_Congo",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OAJ",
@@ -1745,7 +1745,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Administration_of_Justice",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OCHA",
@@ -1783,7 +1783,7 @@
     "entity_logo_page":"https:\/\/brand.unocha.org\/",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_the_Coordination_of_Humanitarian_Affairs",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ODET",
@@ -1821,7 +1821,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"ODPP",
@@ -1859,7 +1859,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OFP-Delisting",
@@ -1897,7 +1897,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OHCHR",
@@ -1935,7 +1935,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_High_Commissioner_for_Human_Rights",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OICT",
@@ -1973,7 +1973,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Information_and_Communications_Technology",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OIOS",
@@ -2011,7 +2011,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Internal_Oversight_Services",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OLA",
@@ -2049,7 +2049,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Legal_Affairs",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OMBUD-RES1904",
@@ -2087,7 +2087,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OMS",
@@ -2125,7 +2125,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Ombudsman_and_Mediation_Services",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OOSA",
@@ -2163,7 +2163,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Outer_Space_Affairs",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OPCW",
@@ -2201,7 +2201,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Organisation_for_the_Prohibition_of_Chemical_Weapons",
     "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OSA-PG",
@@ -2239,7 +2239,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_on_Genocide_Prevention_and_the_Responsibility_to_Protect",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSAA",
@@ -2277,7 +2277,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_on_Africa",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OSACAJT",
@@ -2315,7 +2315,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSASG-Cyprus",
@@ -2353,7 +2353,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_to_the_Secretary-General_on_Cyprus",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSC-SEA",
@@ -2391,7 +2391,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-FG",
@@ -2429,7 +2429,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-GL",
@@ -2467,7 +2467,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Special_Envoy_for_the_Great_Lakes_Region",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-Horn",
@@ -2505,7 +2505,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-Myanmar",
@@ -2543,7 +2543,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-SCRES1559",
@@ -2581,7 +2581,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-Syria",
@@ -2619,7 +2619,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_for_Syria",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSESG-Yemen",
@@ -2657,7 +2657,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_of_the_Secretary-General_for_Yemen",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"OSRSG-CAAC",
@@ -2695,7 +2695,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_for_Children_and_Armed_Conflict",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OSRSG-SVC",
@@ -2733,7 +2733,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Sexual_Violence_in_Conflict",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"OSRSG-VAC",
@@ -2771,7 +2771,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Violence_against_Children",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"PESG-Sudan",
@@ -2809,7 +2809,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PESG-WS",
@@ -2847,7 +2847,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-CAR",
@@ -2885,7 +2885,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-Haiti",
@@ -2923,7 +2923,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-Libya",
@@ -2961,7 +2961,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-RES2713",
@@ -2999,7 +2999,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-RES2745",
@@ -3037,7 +3037,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-S.Sudan",
@@ -3075,7 +3075,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":"\n",
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-Sudan",
@@ -3113,7 +3113,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"PoE-Yemen",
@@ -3151,7 +3151,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"RSCE",
@@ -3189,7 +3189,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Service_Centre_in_Entebbe",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"SC-RES1540",
@@ -3227,7 +3227,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1540",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"SC-RES1718",
@@ -3265,7 +3265,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1718",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"SC-RES2231",
@@ -3303,7 +3303,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"SWEO",
@@ -3341,7 +3341,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UN Tourism",
@@ -3379,7 +3379,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_World_Tourism_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UN-Habitat",
@@ -3417,7 +3417,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Human_Settlements_Programme",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UN-OHRLLS",
@@ -3455,7 +3455,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_the_High_Representative_for_the_Least_Developed_Countries,_Landlocked_Developing_Countries_and_Small_Island_Developing_States",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UN-Women",
@@ -3531,7 +3531,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_United_Nations_Programme_on_HIV\/AIDS",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNAMA",
@@ -3569,7 +3569,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Afghanistan",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNAMI",
@@ -3607,7 +3607,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_for_Iraq",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNAOC",
@@ -3645,7 +3645,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Alliance_of_Civilizations",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNCTAD",
@@ -3683,7 +3683,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Conference_on_Trade_and_Development",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNDOF",
@@ -3721,7 +3721,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Disengagement_Observer_Force",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNDP",
@@ -3797,7 +3797,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disaster_Risk_Reduction",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNEP",
@@ -3835,7 +3835,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Environment_Programme",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNESCO",
@@ -3873,7 +3873,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNESCO",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNFCCC",
@@ -3911,7 +3911,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Secretariat_of_the_United_Nations_Framework_Convention_on_Climate_Change",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNFICYP",
@@ -3949,7 +3949,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Peacekeeping_Force_in_Cyprus",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNFPA",
@@ -4025,7 +4025,7 @@
     "entity_logo_page":"https:\/\/unglobalcompact.org\/participation\/getting-started\/brand-guidelines",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Global_Compact",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNGEGN",
@@ -4063,7 +4063,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_Geographical_Names",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNGGIM",
@@ -4101,7 +4101,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Committee_of_Experts_on_Global_Geospatial_Information_Management",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNHCR",
@@ -4253,7 +4253,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Industrial_Development_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNIFIL",
@@ -4291,7 +4291,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Force_in_Lebanon",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNISFA",
@@ -4329,7 +4329,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Security_Force_for_Abyei",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNITAR",
@@ -4405,7 +4405,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Logistics_Base",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNMHA",
@@ -4443,7 +4443,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_to_Support_the_Hudaydah_Agreement",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNMIK",
@@ -4481,7 +4481,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Administration_Mission_in_Kosovo",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNMISS",
@@ -4519,7 +4519,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_in_South_Sudan",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNMOGIP",
@@ -4557,7 +4557,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Military_Observer_Group_in_India_and_Pakistan",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNOAU",
@@ -4595,7 +4595,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_to_the_African_Union",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNOCA",
@@ -4633,7 +4633,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Office_for_Central_Africa",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNOCT",
@@ -4671,7 +4671,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Counter-Terrorism",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNODA",
@@ -4709,7 +4709,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disarmament_Affairs",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNODC",
@@ -4747,7 +4747,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_on_Drugs_and_Crime",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNOG",
@@ -4785,7 +4785,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Geneva",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNON",
@@ -4823,7 +4823,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Nairobi",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNOP",
@@ -4861,7 +4861,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
     "entity_footnotes":"- The United Nations Office for Partnerships is the focal point vis-a-vis the United Nations Foundation, Inc.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNOPS",
@@ -4937,7 +4937,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Vienna",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UNOWAS",
@@ -4975,7 +4975,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_West_Africa_and_the_Sahel",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNRCCA",
@@ -5013,7 +5013,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Centre_for_Preventive_Diplomacy_for_Central_Asia",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNRGID",
@@ -5051,7 +5051,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNRWA",
@@ -5127,7 +5127,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Register_of_Damage_Caused_by_the_Construction_of_the_Wall_in_the_Occupied_Palestinian_Territory",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNSCO",
@@ -5165,7 +5165,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_the_Middle_East_Peace_Process",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNSCOL",
@@ -5203,7 +5203,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_Lebanon",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNSMIL",
@@ -5241,7 +5241,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Mission_in_Libya",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNSOM",
@@ -5279,7 +5279,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Somalia",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNSOS",
@@ -5317,7 +5317,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Office_in_Somalia",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNSSC",
@@ -5393,7 +5393,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNTSO",
@@ -5431,7 +5431,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Truce_Supervision_Organization",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNU",
@@ -5507,7 +5507,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Verification_Mission_in_Colombia",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"UNYO",
@@ -5545,7 +5545,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Youth_Office",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"UPU",
@@ -5583,7 +5583,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Universal_Postal_Union",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"VRA",
@@ -5621,7 +5621,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
     "entity_footnotes":null,
-    "is_primary_entity":null
+    "is_primary_entity":false
   },
   {
     "entity":"WB",
@@ -5659,7 +5659,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Bank",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n- International Centre for Settlement of Investment Disputes (ICSID) and Multilateral Investment Guarantee Agency (MIGA) are not specialized agencies in accordance with Articles 57 and 63 of the Charter, but are part of the World Bank Group.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"WFP",
@@ -5735,7 +5735,7 @@
     "entity_logo_page":"https:\/\/www.who.int\/about\/policies\/publishing\/logo",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Health_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"WIPO",
@@ -5773,7 +5773,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Intellectual_Property_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"WMO",
@@ -5811,7 +5811,7 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Meteorological_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   },
   {
     "entity":"WTO",
@@ -5849,6 +5849,6 @@
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Trade_Organization",
     "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":null
+    "is_primary_entity":true
   }
 ]
