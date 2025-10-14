@@ -4,7 +4,7 @@ import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/ui/Pri
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
-import { BarChart3, BookOpen, Database, DollarSign, Eye, FileText, Globe, Linkedin, Newspaper, Palette, Target, X } from 'lucide-react';
+import { BarChart3, Book, BookOpen, Database, DollarSign, Eye, Globe, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -375,10 +375,14 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.entity_link} icon={Globe} label="Official Website" />
                                 )}
 
+
                                 {/* Annual Report */}
                                 {isValidLink(entity!.annual_reports_link) && (
-                                    <LinkItem href={entity!.annual_reports_link} icon={FileText} label="Annual Reports" />
+                                    <LinkItem href={entity!.annual_reports_link} icon={Book} label="Annual Reports" />
                                 )}
+
+                                {/* Mandate Registry */}
+                                <LinkItem href={`https://mandates.un.org/entity/${entity!.entity}`} icon={ScrollText} label="Mandate Registry" />
 
                                 {/* Financials */}
                                 {isValidLink(entity!.budget_financial_reporting_link) && (
