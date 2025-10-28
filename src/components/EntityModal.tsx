@@ -273,7 +273,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {entity!.head_of_entity_name !== "Not applicable" && (
                                     <Field label="Head of Entity">
                                         {(() => {
-                                            const hasPhoto = entity!.head_of_entity_headshot && entity!.head_of_entity_headshot.trim() !== '';
+                                            // Temporarily hidden until headshot links are fixed
+                                            const hasPhoto = false; // entity!.head_of_entity_headshot && entity!.head_of_entity_headshot.trim() !== '';
 
                                             if (hasPhoto) {
                                                 return (
