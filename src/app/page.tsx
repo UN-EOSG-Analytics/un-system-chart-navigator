@@ -15,18 +15,33 @@ export default function Home() {
     return (
         <main className="min-h-screen w-full p-3 sm:p-4 lg:p-6">
             <div className="w-full max-w-7xl mx-auto flex flex-col gap-4 sm:gap-6">
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-left mt-2 sm:mt-4">
-                    <button
-                        onClick={handleTitleClick}
-                        className="hover:opacity-80 transition-opacity duration-200 cursor-pointer bg-transparent border-none p-0 font-inherit text-inherit"
-                    >
-                        UN System Chart
-                    </button>
-                    <sup className="text-sm sm:text-base lg:text-lg text-gray-500 font-normal ml-1 sm:ml-1.5">alpha</sup>
-                </h1>
-                <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-relaxed -mt-1 sm:-mt-2">
-                    Interactive overview of United Nations System entities. For informational purposes only and subject to official review. The relevant rules of the organization concerned should be consulted in order to establish the legal status, functions and reporting lines of each entity shown. The print version is available <a href="https://www.un.org/en/delegate/page/un-system-chart" target="_blank" rel="noopener noreferrer" className="text-un-blue hover:font-bold">here</a>.
-                </p>
+                <div className="flex flex-col gap-3 mt-2 sm:mt-4">
+                    <h1 className="text-left">
+                        <button
+                            onClick={handleTitleClick}
+                            className="group inline-flex items-start gap-2 transition-all duration-200 cursor-pointer bg-transparent border-none p-0 text-left"
+                        >
+                            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 group-hover:text-un-blue transition-colors leading-tight">
+                                UN System
+                            </span>
+                            <span className="text-3xl sm:text-4xl lg:text-5xl font-normal text-gray-700 group-hover:text-un-blue transition-colors leading-tight">
+                                Chart
+                            </span>
+                            <sup className="text-base sm:text-lg text-gray-500 group-hover:text-un-blue font-normal mt-4 -ml-1 transition-colors">alpha</sup>
+                        </button>
+                    </h1>
+                    <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-relaxed">
+                        Interactive overview of United Nations System entities. For informational purposes only and subject to official review. The relevant rules of the organization concerned should be consulted in order to establish the legal status, functions and reporting lines of each entity shown. The print version is available{' '}
+                        <a
+                            href="https://www.un.org/en/delegate/page/un-system-chart"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-un-blue hover:underline font-medium transition-all"
+                        >
+                            here
+                        </a>.
+                    </p>
+                </div>
                 <Suspense fallback={<div>Loading...</div>}>
                     <EntitiesGrid ref={entitiesGridRef} />
                 </Suspense>
