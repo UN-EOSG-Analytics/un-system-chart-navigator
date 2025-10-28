@@ -32,6 +32,7 @@ ICSC,International Civil Service Commission
 IFAD,International Fund for Agricultural Development
 IIIM,"International, Impartial and Independent Mechanism to Assist in the Investigation and Prosecution of Persons Responsible for the Most Serious Crimes under International Law Committed in the Syrian Arab Republic since March 2011"
 IIMM,Independent Investigative Mechanism for Myanmar
+IIMP,Independent Institution on Missing Persons in the Syrian Arab Republic
 ILO,International Labor Organization
 IMF,International Monetary Fund
 IMO,International Maritime Organization
@@ -57,10 +58,10 @@ OMBUD-RES1904,Office of the Ombudsperson established pursuant to Security Counci
 OMS,Office of the United Nations Ombudsman and Mediation Services
 OOSA,Office for Outer Space Affairs
 OPCW,Organisation for the Prohibition of Chemical Weapons
-OSA-PG,Office of the Special Adviser on the Prevention of Genocide
 OSAA,Office of the Special Adviser on Africa
 OSACAJT,Office of the Special Adviser on Climate Action and Just Transition
 OSASG-Cyprus,Office of the Special Adviser to the Secretary-General on Cyprus
+OSASG-PG,Office of the Special Adviser of the Secretary-General for the Prevention of Genocide
 OSC-SEA,Office of the United Nations Special Coordinator on Improving the United Nations Response to Sexual Exploitation and Abuse
 OSESG-FG,Office of the Special Envoy of the Secretary-General for Future Generations
 OSESG-GL,Office of the Special Envoy of the Secretary-General for the Great Lakes Region
@@ -72,6 +73,8 @@ OSESG-Yemen,Office of the Special Envoy of the Secretary-General for Yemen
 OSRSG-CAAC,Office of the Special Representative of the Secretary-General for Children and Armed Conflict
 OSRSG-SVC,Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict
 OSRSG-VAC,Office of the Special Representative of the Secretary-General on Violence against Children
+OVRA,Office of the Victims' Rights Advocate
+PBSO,Peacebuilding Support Office
 PESG-Sudan,Office of the Personal Envoy of the Secretary-General for the Sudan
 PESG-WS,Personal Envoy of the Secretary-General for Western Sahara
 PoE-CAR,Panel of Experts on the Central African Republic
@@ -95,6 +98,7 @@ UNAIDS,Joint United Nations Programme on HIV/AIDS
 UNAMA,United Nations Assistance Mission in Afghanistan
 UNAMI,United Nations Assistance Mission for Iraq
 UNAOC,United Nations Alliance of Civilizations
+UNCDF,United Nations Capital Development Fund
 UNCTAD,United Nations Conference on Trade and Development
 UNDOF,United Nations Disengagement Observer Force
 UNDP,United Nations Development Programme
@@ -109,6 +113,7 @@ UNGEGN,United Nations Group of Experts on Geographical Names
 UNGGIM,Committee of Experts on Global Geospatial Information Management
 UNHCR,Office of the United Nations High Commissioner for Refugees
 UNICEF,United Nations Children's Fund
+UNICRI,United Nations Interregional Crime and Justice Research Institute
 UNIDIR,United Nations Institute for Disarmament Research
 UNIDO,United Nations Industrial Development Organization
 UNIFIL,United Nations Interim Force in Lebanon
@@ -123,15 +128,18 @@ UNOAU,United Nations Office to the African Union
 UNOCA,United Nations Regional Office for Central Africa
 UNOCT,Office of Counter-Terrorism
 UNODA,Office for Disarmament Affairs
-UNODC,United Nations Office on Drugs and Crime and United Nations Office at Vienna
+UNODC,United Nations Office on Drugs and Crime
 UNOG,United Nations Office at Geneva
 UNON,United Nations Office at Nairobi
 UNOP,United Nations Office for Partnerships
 UNOPS,United Nations Office for Project Services
+UNOSAPG,Office on Genocide Prevention & Responsibility to Protect
+UNOSSC,United Nations Office for South-South Cooperation
 UNOV,United Nations Office at Vienna
 UNOWAS,United Nations Office for West Africa and the Sahel
 UNRCCA,United Nations Regional Centre for Preventive Diplomacy for Central Asia
 UNRGID,Office of the United Nations Representative to the Geneva International Discussions
+UNRISD,United Nations Research Institute for Social Development
 UNRWA,United Nations Relief and Works Agency for Palestine Refugees in the Near East
 UNRoD,United Nations Register of Damage Caused by the Construction of the Wall in the Occupied Palestinian Territory
 UNSCO,Office of the United Nations Special Coordinator for the Middle East Peace Process
@@ -143,10 +151,10 @@ UNSSC,United Nations System Staff College
 UNTMIS,United Nations Transitional Assistance Mission in Somalia
 UNTSO,United Nations Truce Supervision Organization
 UNU,United Nations University
+UNV,United Nations Volunteers
 UNVMC,United Nations Verification Mission in Colombia
 UNYO,United Nations Youth Office
 UPU,Universal Postal Union
-VRA,Office of the Victims' Rights Advocate
 WB,World Bank Group
 WFP,World Food Programme
 WHO,World Health Organization
