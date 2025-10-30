@@ -1,13 +1,14 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Entity } from '@/types/entity';
-import FilterControls from './FilterControls';
-import { useState, forwardRef, useImperativeHandle, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/lib/entities';
+import { getSystemGroupingStyle, systemGroupingStyles } from '@/lib/systemGroupings';
 import { createEntitySlug } from '@/lib/utils';
-import { systemGroupingStyles, getSystemGroupingStyle } from '@/lib/systemGroupings';
+import { Entity } from '@/types/entity';
+import { Check, Download, FileJson, FileText, Link } from 'lucide-react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import FilterControls from './FilterControls';
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = getSystemGroupingStyle(entity.system_grouping);
@@ -53,8 +54,26 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
+    const [showDownloadOptions, setShowDownloadOptions] = useState<boolean>(false);
+    const [copiedFormat, setCopiedFormat] = useState<string | null>(null);
+    const [showCopiedToast, setShowCopiedToast] = useState<boolean>(false);
+    const [showDownloadToast, setShowDownloadToast] = useState<boolean>(false);
+    const [downloadedFormat, setDownloadedFormat] = useState<string>('');
+    const [toastMessage, setToastMessage] = useState<string>('');
+    const downloadRef = useRef<HTMLDivElement>(null);
     const router = useRouter();
     const searchParams = useSearchParams();
+
+    // Toast component for DRY code
+    const Toast = ({ message, show }: { message: string; show: boolean }) => {
+        if (!show) return null;
+        return (
+            <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white text-gray-600 px-4 py-2.5 rounded-lg shadow-lg flex items-center gap-2.5 animate-in fade-in slide-in-from-bottom-2 z-50">
+                <Check size={16} className="text-green-600 flex-shrink-0" />
+                <span className="text-sm font-medium">{message}</span>
+            </div>
+        );
+    };
 
     // Check for filter parameter on mount and when URL changes
     useEffect(() => {
@@ -66,6 +85,31 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
             router.replace('/', { scroll: false });
         }
     }, [searchParams, router]);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (downloadRef.current && !downloadRef.current.contains(event.target as Node)) {
+                setShowDownloadOptions(false);
+            }
+        };
+
+        const handleEscKey = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setShowDownloadOptions(false);
+            }
+        };
+
+        if (showDownloadOptions) {
+            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('keydown', handleEscKey);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscKey);
+        };
+    }, [showDownloadOptions]);
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
@@ -86,6 +130,31 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const handleReset = () => {
         setSearchQuery('');
         setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
+    };
+
+    const handleCopyLink = (format: string, url: string) => {
+        navigator.clipboard.writeText(url);
+        setCopiedFormat(format);
+        setShowCopiedToast(true);
+
+        // Reset after animation
+        setTimeout(() => {
+            setCopiedFormat(null);
+        }, 2000);
+
+        setTimeout(() => {
+            setShowCopiedToast(false);
+        }, 2000);
+    };
+
+    const handleDownload = (format: string) => {
+        setDownloadedFormat(format);
+        setShowDownloadToast(true);
+
+        // Reset after animation
+        setTimeout(() => {
+            setShowDownloadToast(false);
+        }, 2000);
     };
 
     useImperativeHandle(ref, () => ({
@@ -134,9 +203,74 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 ))}
             </div>
 
-            {/* As of Date */}
-            <div className="mt-4 text-left">
-                <p className="text-base text-gray-600">As of October 2025</p>
+            {/* Footer with Date and Download Links */}
+            <div className="mt-4 flex items-center gap-2 text-base">
+                <p className="text-gray-600">As of October 2025</p>
+                <span className="text-gray-400">|</span>
+                <div className="relative" ref={downloadRef}>
+                    <button
+                        onClick={() => setShowDownloadOptions(!showDownloadOptions)}
+                        className="text-un-blue hover:underline font-medium transition-all cursor-pointer flex items-center gap-1.5"
+                    >
+                        Get data
+                        <Download size={16} />
+                    </button>
+                    {/* use kebab-case */}
+                    {showDownloadOptions && (
+                        <div className="absolute bottom-full -left-1 mb-1 bg-white rounded-lg shadow-lg py-1.5 px-1.5 z-10 min-w-[140px]">
+                            <div className="flex items-stretch mb-1">
+                                <a
+                                    href="/un-entities.json"
+                                    download={`${new Date().toISOString().split('T')[0]}_un-entities.json`}
+                                    onClick={() => handleDownload('JSON')}
+                                    className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
+                                    title="Download JSON"
+                                >
+                                    <FileJson size={16} />
+                                    JSON
+                                </a>
+                                <button
+                                    onClick={() => handleCopyLink('json', `${window.location.origin}/entities.json`)}
+                                    className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
+                                    title="Copy link to JSON"
+                                >
+                                    {copiedFormat === 'json' ? (
+                                        <Check size={14} className="text-green-600" />
+                                    ) : (
+                                        <Link size={14} />
+                                    )}
+                                </button>
+                            </div>
+                            <div className="flex items-stretch">
+                                <a
+                                    href="/un-entities.csv"
+                                    download={`${new Date().toISOString().split('T')[0]}_un-entities.csv`}
+                                    onClick={() => handleDownload('CSV')}
+                                    className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
+                                    title="Download CSV"
+                                >
+                                    <FileText size={16} />
+                                    CSV
+                                </a>
+                                <button
+                                    onClick={() => handleCopyLink('csv', `${window.location.origin}/entities.csv`)}
+                                    className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
+                                    title="Copy link to CSV"
+                                >
+                                    {copiedFormat === 'csv' ? (
+                                        <Check size={14} className="text-green-600" />
+                                    ) : (
+                                        <Link size={14} />
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Toast notifications */}
+                    <Toast message="Link copied to clipboard." show={showCopiedToast} />
+                    <Toast message={`${downloadedFormat} downloaded.`} show={showDownloadToast} />
+                </div>
             </div>
         </div>
     );
