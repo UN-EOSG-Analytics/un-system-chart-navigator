@@ -271,24 +271,20 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
                 {/* Leadership */}
                 {(() => {
-                    const hasLeadershipInfo = entity!.head_of_entity_level !== "Not applicable" ||
-                        entity!.head_of_entity_title_specific !== "Not applicable" ||
-                        entity!.head_of_entity_name !== "Not applicable";
-
-                    if (!hasLeadershipInfo) {
-                        return (
-                            <div>
-                                <SubHeader>Leadership</SubHeader>
-                                <p className="text-gray-500 text-sm">Not available</p>
-                            </div>
-                        );
+                    // Check if there's any actual displayable leadership information
+                    const hasName = entity!.head_of_entity_name && entity!.head_of_entity_name !== "Not applicable";
+                    const hasLevel = entity!.head_of_entity_level && entity!.head_of_entity_level !== "Not applicable";
+                    
+                    // Only show the section if there's at least a name or level to display
+                    if (!hasName && !hasLevel) {
+                        return null;
                     }
 
                     return (
                         <div>
                             <SubHeader>Leadership</SubHeader>
                             <div className="space-y-4">
-                                {entity!.head_of_entity_name !== "Not applicable" && (
+                                {hasName && (
                                     <Field label="Head of Entity">
                                         {(() => {
                                             // Temporarily hidden until headshot links are fixed
@@ -358,7 +354,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                         })()}
                                     </Field>
                                 )}
-                                {entity!.head_of_entity_level !== "Not applicable" && (
+                                {hasLevel && (
                                     <Field label="Post Level">
                                         <Badge>{entity!.head_of_entity_level}</Badge>
                                     </Field>
