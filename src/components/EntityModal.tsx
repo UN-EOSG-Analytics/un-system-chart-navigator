@@ -399,7 +399,15 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 )}
 
                                 {/* Mandate Registry */}
-                                <LinkItem href={`https://mandates.un.org/entity/${entity!.entity}`} icon={ScrollText} label="Mandate Registry" />
+                                {(() => {
+                                    // Use custom URL if provided and valid, otherwise use default
+                                    const customUrl = entity!.entity_mandate_registry_custom;
+                                    const mandateUrl = (customUrl && customUrl !== 'Default' && customUrl.startsWith('https'))
+                                        ? customUrl
+                                        : `https://mandates.un.org/entity/${entity!.entity.toLowerCase()}`;
+                                    
+                                    return <LinkItem href={mandateUrl} icon={ScrollText} label="Mandate Registry" />;
+                                })()}
 
                                 {/* Financials */}
                                 {isValidLink(entity!.budget_financial_reporting_link) && (

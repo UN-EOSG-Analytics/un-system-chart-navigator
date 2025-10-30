@@ -74,7 +74,8 @@ selected_columns = [
     "entity_careers_page",
     "entity_wikipedia_page",
     "entity_footnotes",
-    "entity_aliases"
+    "entity_aliases",
+    "entity_mandate_registry_custom"
 ]
 
 # TODO: don't forget to also add in `entity.ts`
