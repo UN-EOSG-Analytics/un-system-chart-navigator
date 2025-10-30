@@ -6,6 +6,7 @@ from typing import Dict
 
 import pandas as pd
 import requests
+from playwright.sync_api import sync_playwright
 from requests.adapters import HTTPAdapter
 from tqdm import tqdm
 from urllib3.util.retry import Retry
@@ -93,6 +94,77 @@ def get_status_name(status_code: int) -> str:
         return "Unknown"
 
 
+def take_screenshot(url: str, entity_name: str, screenshot_dir: Path) -> Dict:
+    """
+    Take a screenshot of the webpage using Playwright.
+
+    Args:
+        url: URL to screenshot
+        entity_name: Name of the entity (used for filename)
+        screenshot_dir: Directory to save screenshots
+
+    Returns:
+        Dictionary with screenshot results
+    """
+    result = {
+        "screenshot_taken": False,
+        "screenshot_path": None,
+        "screenshot_error": None,
+    }
+
+    # Skip invalid URLs
+    if not url or url in [
+        "Not found",
+        "Not found.",
+        "Not applicable",
+        "No link found",
+        "null",
+        "None",
+    ]:
+        result["screenshot_error"] = "Invalid URL"
+        return result
+
+    try:
+        with sync_playwright() as p:
+            # Launch browser with headless mode
+            browser = p.chromium.launch(headless=True)
+
+            # Create context with realistic viewport and user agent
+            context = browser.new_context(
+                viewport={"width": 1920, "height": 1080},
+                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            )
+
+            page = context.new_page()
+
+            # Navigate to the page with timeout
+            page.goto(url, wait_until="networkidle", timeout=30000)
+
+            # Wait a bit for any dynamic content to load
+            page.wait_for_timeout(2000)
+
+            # Create screenshot filename from entity name
+            safe_filename = "".join(
+                c if c.isalnum() or c in ("-", "_") else "_" for c in entity_name
+            )
+            screenshot_path = screenshot_dir / f"{safe_filename}.png"
+
+            # Take full page screenshot with high quality
+            page.screenshot(path=str(screenshot_path), full_page=True, type="png")
+
+            result["screenshot_taken"] = True
+            result["screenshot_path"] = str(screenshot_path)
+
+            browser.close()
+
+    except TimeoutError:
+        result["screenshot_error"] = "Page load timeout"
+    except Exception as e:
+        result["screenshot_error"] = f"Screenshot error: {str(e)[:100]}"
+
+    return result
+
+
 def verify_link(session: requests.Session, url: str, delay: float = 0.5) -> Dict:
     """
     Verify a single URL for accessibility and content quality.
@@ -168,7 +240,7 @@ def verify_link(session: requests.Session, url: str, delay: float = 0.5) -> Dict
 
 
 def verify_entity_links(
-    df: pd.DataFrame, link_column: str = "entity_link"
+    df: pd.DataFrame, link_column: str = "entity_link", take_screenshots: bool = True
 ) -> pd.DataFrame:
     """
     Verify all entity links in the dataframe.
@@ -176,12 +248,20 @@ def verify_entity_links(
     Args:
         df: DataFrame with entity data
         link_column: Name of column containing links to verify
+        take_screenshots: Whether to take screenshots of the pages
 
     Returns:
         DataFrame with verification results
     """
     session = create_session()
     results = []
+
+    # Create screenshot directory if needed
+    screenshot_dir = None
+    if take_screenshots:
+        screenshot_dir = Path("data") / "downloads" / "entity_page_screenshots"
+        screenshot_dir.mkdir(parents=True, exist_ok=True)
+        print(f"Screenshots will be saved to: {screenshot_dir}")
 
     # Use tqdm for progress bar
     for idx, row in tqdm(df.iterrows(), total=len(df), desc="Verifying links"):
@@ -191,6 +271,14 @@ def verify_entity_links(
         result = verify_link(session, str(url) if url else "")
         result["entity"] = entity
         result["column"] = link_column
+
+        # Take screenshot if enabled and URL is accessible
+        if take_screenshots and screenshot_dir:
+            screenshot_result = take_screenshot(
+                str(url) if url else "", entity, screenshot_dir
+            )
+            result.update(screenshot_result)
+
         results.append(result)
 
     return pd.DataFrame(results)
@@ -204,7 +292,7 @@ if __name__ == "__main__":
     df = pd.DataFrame(entities_json)
 
     # Verify primary entity links
-    results = verify_entity_links(df, "entity_link")
+    results = verify_entity_links(df, "entity_link", take_screenshots=True)
 
     # Reorder columns to put entity and url first
     column_order = [
@@ -218,6 +306,9 @@ if __name__ == "__main__":
         "status_name",
         "error",
         "redirect_url",
+        "screenshot_taken",
+        "screenshot_path",
+        "screenshot_error",
         "column",
     ]
     # Only include columns that exist

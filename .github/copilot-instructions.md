@@ -14,4 +14,4 @@
 ## Python
 - always use `uv run python` to run scripts
 - avoid lots of print statements and summaries
-
+- always install packages with `uv add`
