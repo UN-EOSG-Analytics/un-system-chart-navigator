@@ -220,7 +220,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                         <div className="absolute bottom-full -left-1 mb-1 bg-white rounded-lg shadow-lg py-1.5 px-1.5 z-10 min-w-[140px]">
                             <div className="flex items-stretch mb-1">
                                 <a
-                                    href="/un-entities.json"
+                                    href="/entities.json"
                                     download={`${new Date().toISOString().split('T')[0]}_un-entities.json`}
                                     onClick={() => handleDownload('JSON')}
                                     className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
@@ -243,7 +243,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                             </div>
                             <div className="flex items-stretch">
                                 <a
-                                    href="/un-entities.csv"
+                                    href="/entities.csv"
                                     download={`${new Date().toISOString().split('T')[0]}_un-entities.csv`}
                                     onClick={() => handleDownload('CSV')}
                                     className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
