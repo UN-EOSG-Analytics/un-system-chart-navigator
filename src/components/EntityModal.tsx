@@ -4,7 +4,7 @@ import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/ui/Pri
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, BookOpen, Database, DollarSign, Eye, Globe, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
+import { BarChart3, Book, Database, DollarSign, Eye, Globe, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -294,7 +294,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                         </div>
                                                         <div className="flex flex-col justify-center min-h-[5rem]">
                                                             <div>
-                                                                {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                                {/* Temporarily disabled link */}
+                                                                {/* {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
                                                                     <a
                                                                         href={entity!.head_of_entity_bio}
                                                                         target="_blank"
@@ -303,9 +304,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                                     >
                                                                         {entity!.head_of_entity_name}
                                                                     </a>
-                                                                ) : (
-                                                                    <span className="text-gray-700 text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
-                                                                )}
+                                                                ) : ( */}
+                                                                    <span className="text-un-blue text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                                {/* )} */}
                                                                 {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
                                                                     <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
                                                                 )}
@@ -317,7 +318,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                 // No photo - content shifts up to align with label but maintains consistent indent
                                                 return (
                                                     <div className="ml-0.5">
-                                                        {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                        {/* Temporarily disabled link */}
+                                                        {/* {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
                                                             <a
                                                                 href={entity!.head_of_entity_bio}
                                                                 target="_blank"
@@ -326,9 +328,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                             >
                                                                 {entity!.head_of_entity_name}
                                                             </a>
-                                                        ) : (
-                                                            <span className="text-gray-700 text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
-                                                        )}
+                                                        ) : ( */}
+                                                            <span className="text-un-blue text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                        {/* )} */}
                                                         {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
                                                             <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
                                                         )}
@@ -379,7 +381,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
                                 {/* Annual Report */}
                                 {isValidLink(entity!.annual_reports_link) && (
-                                    <LinkItem href={entity!.annual_reports_link} icon={Book} label="Annual Reports" />
+                                    <LinkItem href={entity!.annual_reports_link} icon={Book} label="Reports" />
                                 )}
 
                                 {/* Mandate Registry */}
@@ -420,10 +422,10 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
                                 )}
 
-                                {/* Wikipedia */}
-                                {isValidLink(entity!.entity_wikipedia_page) && (
+                                {/* Wikipedia - hidden */}
+                                {/* {isValidLink(entity!.entity_wikipedia_page) && (
                                     <LinkItem href={entity!.entity_wikipedia_page!} icon={BookOpen} label="Wikipedia" />
-                                )}
+                                )} */}
 
                                 {/* Branding Page */}
                                 {isValidLink(entity!.entity_branding_page) && (
