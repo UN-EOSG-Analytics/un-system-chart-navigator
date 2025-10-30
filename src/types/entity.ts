@@ -36,6 +36,7 @@ export interface Entity {
     entity_wikipedia_page: string | null;
     entity_footnotes: string | null;
     is_primary_entity: boolean | null;
+    entity_aliases: string | null; // String format like "['RCS','UNDCO']"
 }
 
 export interface EntityFilters {

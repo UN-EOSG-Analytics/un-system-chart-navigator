@@ -73,7 +73,8 @@ selected_columns = [
     "entity_logo_page",
     "entity_careers_page",
     "entity_wikipedia_page",
-    "entity_footnotes"
+    "entity_footnotes",
+    "entity_aliases"
 ]
 
 # TODO: don't forget to also add in `entity.ts`
