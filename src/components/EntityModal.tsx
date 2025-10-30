@@ -4,7 +4,7 @@ import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/ui/Pri
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
+import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -372,6 +372,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         isValidLink(entity!.entity_news_page) ||
                         isValidLink(entity!.entity_branding_page) ||
                         isValidLink(entity!.entity_data_page) ||
+                        isValidLink(entity!.entity_careers_page) ||
                         isValidLink(entity!.annual_reports_link) ||
                         isValidLink(entity!.transparency_portal_link) ||
                         isValidLink(entity!.budget_financial_reporting_link) ||
@@ -438,6 +439,11 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {/* Branding Page */}
                                 {isValidLink(entity!.entity_branding_page) && (
                                     <LinkItem href={entity!.entity_branding_page!} icon={Palette} label="Branding" />
+                                )}
+
+                                {/* Jobs Page */}
+                                {isValidLink(entity!.entity_careers_page) && (
+                                    <LinkItem href={entity!.entity_careers_page!} icon={Briefcase} label="Careers" />
                                 )}
 
                             </div>

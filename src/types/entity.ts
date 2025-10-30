@@ -32,6 +32,7 @@ export interface Entity {
     entity_branding_page: string | null;
     entity_data_page: string | null;
     entity_logo_page: string | null;
+    entity_careers_page: string | null;
     entity_wikipedia_page: string | null;
     entity_footnotes: string | null;
     is_primary_entity: boolean | null;
