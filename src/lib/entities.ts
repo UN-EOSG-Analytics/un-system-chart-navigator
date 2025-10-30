@@ -1,5 +1,5 @@
 import { Entity, EntityFilters } from '@/types/entity';
-import entitiesData from '../../public/entities.json';
+import entitiesData from '../../public/un-entities.json';
 import { createEntitySlug } from './utils';
 
 // Direct import - 180KB JSON file loaded at build time

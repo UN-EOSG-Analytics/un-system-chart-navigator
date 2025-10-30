@@ -29,10 +29,10 @@ df = df[df["on_display"] != False]
 output_path = data_folder / "output" / "entities.csv"
 df.to_csv(output_path, index=False)
 
-output_path = Path("public") / "entities.csv"
+output_path = Path("public") / "un-entities.csv"
 df.to_csv(output_path, index=False)
 
-output_path = Path("public") / "entities.json"
+output_path = Path("public") / "un-entities.json"
 df.to_json(output_path, orient="records", indent=2)
 
 

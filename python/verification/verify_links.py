@@ -285,7 +285,7 @@ def verify_entity_links(
 
 
 if __name__ == "__main__":
-    input_path = Path("public") / "entities.json"
+    input_path = Path("public") / "un-entities.json"
     with open(input_path, "r", encoding="utf-8") as f:
         entities_json = json.load(f)
 

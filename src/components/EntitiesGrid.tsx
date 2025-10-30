@@ -220,7 +220,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                         <div className="absolute bottom-full -left-1 mb-1 bg-white rounded-lg shadow-lg py-1.5 px-1.5 z-10 min-w-[140px]">
                             <div className="flex items-stretch mb-1">
                                 <a
-                                    href="/entities.json"
+                                    href="/un-entities.json"
                                     download={`${new Date().toISOString().split('T')[0]}_un-entities.json`}
                                     onClick={() => handleDownload('JSON')}
                                     className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
@@ -230,7 +230,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                                     JSON
                                 </a>
                                 <button
-                                    onClick={() => handleCopyLink('json', `${window.location.origin}/entities.json`)}
+                                    onClick={() => handleCopyLink('json', `${window.location.origin}/un-entities.json`)}
                                     className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
                                     title="Copy link to JSON"
                                 >
@@ -243,7 +243,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                             </div>
                             <div className="flex items-stretch">
                                 <a
-                                    href="/entities.csv"
+                                    href="/un-entities.csv"
                                     download={`${new Date().toISOString().split('T')[0]}_un-entities.csv`}
                                     onClick={() => handleDownload('CSV')}
                                     className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
@@ -253,7 +253,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                                     CSV
                                 </a>
                                 <button
-                                    onClick={() => handleCopyLink('csv', `${window.location.origin}/entities.csv`)}
+                                    onClick={() => handleCopyLink('csv', `${window.location.origin}/un-entities.csv`)}
                                     className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
                                     title="Copy link to CSV"
                                 >
