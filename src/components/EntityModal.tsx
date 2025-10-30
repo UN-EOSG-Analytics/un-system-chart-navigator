@@ -404,7 +404,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     const customUrl = entity!.entity_mandate_registry_custom;
                                     const mandateUrl = (customUrl && customUrl !== 'Default' && customUrl.startsWith('https'))
                                         ? customUrl
-                                        : `https://mandates.un.org/entity/${entity!.entity.toLowerCase()}`;
+                                        : `https://mandates.un.org/entity/${entity!.entity.toUpperCase()}`;
                                     
                                     return <LinkItem href={mandateUrl} icon={ScrollText} label="Mandate Registry" />;
                                 })()}
