@@ -8,6 +8,7 @@ import { Entity } from '@/types/entity';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import FilterControls from './FilterControls';
+import { Download, FileText, FileJson } from 'lucide-react';
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = getSystemGroupingStyle(entity.system_grouping);
@@ -168,26 +169,29 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 <div className="relative" ref={downloadRef}>
                     <button
                         onClick={() => setShowDownloadOptions(!showDownloadOptions)}
-                        className="text-un-blue hover:underline font-medium transition-all cursor-pointer"
+                        className="text-un-blue hover:underline font-medium transition-all cursor-pointer flex items-center gap-1.5"
                     >
                         Get data
+                        <Download size={16} />
                     </button>
                     {/* use kebab-case */}
                     {showDownloadOptions && (
-                        <div className="absolute bottom-full left-0 mb-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-10 min-w-[100px]">
-                            <a
-                                href="/un-entities.csv"
-                                download={`${new Date().toISOString().split('T')[0]}_un-entities.csv`}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                            >
-                                CSV
-                            </a>
+                        <div className="absolute bottom-full -left-1 mb-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-10 min-w-[100px]">
                             <a
                                 href="/un-entities.json"
                                 download={`${new Date().toISOString().split('T')[0]}_un-entities.json`}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                                className="flex items-center gap-2 px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors rounded-lg"
                             >
+                                <FileJson size={16} />
                                 JSON
+                            </a>
+                            <a
+                                href="/un-entities.csv"
+                                download={`${new Date().toISOString().split('T')[0]}_un-entities.csv`}
+                                className="flex items-center gap-2 px-2 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors rounded-lg"
+                            >
+                                <FileText size={16} />
+                                CSV
                             </a>
                         </div>
                     )}
