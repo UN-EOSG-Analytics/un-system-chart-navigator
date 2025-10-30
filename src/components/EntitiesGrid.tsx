@@ -9,6 +9,7 @@ import { Check, Download, FileJson, FileText, Link } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import FilterControls from './FilterControls';
+import { Toast } from './Toast';
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = getSystemGroupingStyle(entity.system_grouping);
@@ -59,21 +60,9 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const [showCopiedToast, setShowCopiedToast] = useState<boolean>(false);
     const [showDownloadToast, setShowDownloadToast] = useState<boolean>(false);
     const [downloadedFormat, setDownloadedFormat] = useState<string>('');
-    const [toastMessage, setToastMessage] = useState<string>('');
     const downloadRef = useRef<HTMLDivElement>(null);
     const router = useRouter();
     const searchParams = useSearchParams();
-
-    // Toast component for DRY code
-    const Toast = ({ message, show }: { message: string; show: boolean }) => {
-        if (!show) return null;
-        return (
-            <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white text-gray-600 px-4 py-2.5 rounded-lg shadow-lg flex items-center gap-2.5 animate-in fade-in slide-in-from-bottom-2 z-50">
-                <Check size={16} className="text-green-600 flex-shrink-0" />
-                <span className="text-sm font-medium">{message}</span>
-            </div>
-        );
-    };
 
     // Check for filter parameter on mount and when URL changes
     useEffect(() => {
