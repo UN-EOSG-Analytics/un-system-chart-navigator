@@ -1,13 +1,13 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Entity } from '@/types/entity';
-import FilterControls from './FilterControls';
-import { useState, forwardRef, useImperativeHandle, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
 import { getAllEntities, searchEntities } from '@/lib/entities';
+import { getSystemGroupingStyle, systemGroupingStyles } from '@/lib/systemGroupings';
 import { createEntitySlug } from '@/lib/utils';
-import { systemGroupingStyles, getSystemGroupingStyle } from '@/lib/systemGroupings';
+import { Entity } from '@/types/entity';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import FilterControls from './FilterControls';
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = getSystemGroupingStyle(entity.system_grouping);
@@ -53,6 +53,8 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
+    const [showDownloadOptions, setShowDownloadOptions] = useState<boolean>(false);
+    const downloadRef = useRef<HTMLDivElement>(null);
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -66,6 +68,31 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
             router.replace('/', { scroll: false });
         }
     }, [searchParams, router]);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (downloadRef.current && !downloadRef.current.contains(event.target as Node)) {
+                setShowDownloadOptions(false);
+            }
+        };
+
+        const handleEscKey = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setShowDownloadOptions(false);
+            }
+        };
+
+        if (showDownloadOptions) {
+            document.addEventListener('mousedown', handleClickOutside);
+            document.addEventListener('keydown', handleEscKey);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscKey);
+        };
+    }, [showDownloadOptions]);
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
@@ -134,9 +161,37 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 ))}
             </div>
 
-            {/* As of Date */}
-            <div className="mt-4 text-left">
-                <p className="text-base text-gray-600">As of October 2025</p>
+            {/* Footer with Date and Download Links */}
+            <div className="mt-4 flex items-center gap-2 text-base">
+                <p className="text-gray-600">As of October 2025</p>
+                <span className="text-gray-400">|</span>
+                <div className="relative" ref={downloadRef}>
+                    <button
+                        onClick={() => setShowDownloadOptions(!showDownloadOptions)}
+                        className="text-un-blue hover:underline font-medium transition-all cursor-pointer"
+                    >
+                        Get data
+                    </button>
+                    {/* use kebab-case */}
+                    {showDownloadOptions && (
+                        <div className="absolute bottom-full left-0 mb-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-10 min-w-[100px]">
+                            <a
+                                href="/un-entities.csv"
+                                download={`${new Date().toISOString().split('T')[0]}_un-entities.csv`}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                            >
+                                CSV
+                            </a>
+                            <a
+                                href="/un-entities.json"
+                                download={`${new Date().toISOString().split('T')[0]}_un-entities.json`}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                            >
+                                JSON
+                            </a>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
