@@ -55,8 +55,9 @@ selected_columns = [
     "head_of_entity_headshot",
     "global_leadership_team_url",
     "on_display",
-    "is_primary_entity"
+    "is_primary_entity",
     "foundational_mandate",
+    "entity_logo_url",
     "organizational_chart_link",
     "budget_financial_reporting_link",
     "results_framework_link",
@@ -71,7 +72,7 @@ selected_columns = [
     "entity_data_page",
     "entity_logo_page",
     "entity_wikipedia_page",
-    "entity_footnotes",
+    "entity_footnotes"
 ]
 
 # TODO: don't forget to also add in `entity.ts`

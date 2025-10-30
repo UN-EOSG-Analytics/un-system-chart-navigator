@@ -4,7 +4,7 @@ import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/ui/Pri
 import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, Database, DollarSign, Eye, Globe, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
+import { BarChart3, Book, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -449,7 +449,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 {(() => {
                     const hasSocials =
                         isValidLink(entity!.socials_linkedin) ||
-                        isValidLink(entity!.socials_twitter);
+                        isValidLink(entity!.socials_twitter) ||
+                        isValidLink(entity!.socials_instagram);
 
                     if (!hasSocials) {
                         return null;
@@ -467,6 +468,11 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {/* X (formerly Twitter) */}
                                 {isValidLink(entity!.socials_twitter) && (
                                     <LinkItem href={entity!.socials_twitter!} icon={XTwitterIcon} label="X (formerly Twitter)" />
+                                )}
+
+                                {/* Instagram */}
+                                {isValidLink(entity!.socials_instagram) && (
+                                    <LinkItem href={entity!.socials_instagram!} icon={Instagram} label="Instagram" />
                                 )}
                             </div>
                         </div>

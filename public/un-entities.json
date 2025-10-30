@@ -19,13 +19,15 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/main.un.org\/securitycouncil\/en\/sanctions\/1267\/annual-reports",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -34,8 +36,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"BINUH",
@@ -57,7 +58,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Mr.%20Carlos%20Gabriel%20Ruiz-Massieu%20Aguirre.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-integrated-office-in-haiti\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -72,8 +75,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Integrated_Office_in_Haiti",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"CEB",
@@ -95,23 +97,24 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Maaike%20Jansen.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-system-chief-executives-board-for-coordination\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/unsceb.org\/reports?field_mechanism[94]=94&field_report[12]=12",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
-    "entity_news_page":"https:\/\/unsceb.org\/news",
+    "entity_news_page":"https:\/\/unsceb.org\/reports",
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Chief_Executives_Board_for_Coordination",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"CNMC",
@@ -133,7 +136,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -148,8 +153,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"CTBTO",
@@ -171,7 +175,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -186,8 +192,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Comprehensive_Nuclear-Test-Ban_Treaty_Organization_Preparatory_Commission",
-    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"CTED",
@@ -205,35 +210,36 @@
     "head_of_entity_title_specific":"Executive Director of the Counter-Terrorism Committee Executive Directorate",
     "head_of_entity_name":"Natalia Gherman",
     "head_of_entity_level":"ASG or equivalent",
-    "head_of_entity_bio":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/natalia-gherman-0",
-    "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/srsg_photo_Natalia%20Gherman_crop.jpeg",
-    "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/counter-terrorism-executive-directorate\/all",
+    "head_of_entity_bio":"https:\/\/www.un.org\/securitycouncil\/ctc\/content\/executive-director-cted",
+    "head_of_entity_headshot":"https:\/\/www.un.org\/securitycouncil\/ctc\/sites\/www.un.org.securitycouncil.ctc\/files\/styles\/panopoly_image_full\/public\/general\/srsg_photo_1.jpg",
+    "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/www.un.org\/securitycouncil\/ctc\/content\/work-programmes",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/counter-terrorism-committee-executive-directorate-cted\/",
     "socials_twitter":null,
     "socials_instagram":null,
-    "entity_news_page":"https:\/\/www.un.org\/sc\/ctc\/news",
+    "entity_news_page":"https:\/\/www.un.org\/securitycouncil\/ctc\/content\/news-articles",
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Counter-Terrorism_Committee_Executive_Directorate",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DA",
     "entity_long":"Development Account",
     "entity_combined":"Development Account (DA)",
     "entity_description":null,
-    "entity_link":"https:\/\/unece.org\/united-nations-development-account",
-    "entity_link_is_un_org":0,
+    "entity_link":"https:\/\/da.desa.un.org\/",
+    "entity_link_is_un_org":1,
     "system_grouping":"UN Secretariat",
     "category":"Departments and Offices",
     "un_principal_organ":"['Secretariat']",
@@ -247,13 +253,15 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
-    "annual_reports_link":"https:\/\/unstats.un.org\/UNSDWebsite\/Publications\/",
-    "transparency_portal_link":"Not found",
+    "annual_reports_link":"https:\/\/da.desa.un.org\/static-official-public",
+    "transparency_portal_link":"https:\/\/da.desa.un.org\/project-view-public",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -262,8 +270,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Account",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"DCO",
@@ -285,13 +292,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Fernandez-Taranco%2C%20Oscar_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/development-coordination-office\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/un-dco.org\/",
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/unsdg.un.org\/resources\/unsdg-chair-reports",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/unsdg.un.org\/SPTF",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -300,8 +309,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Coordination_Office",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DESA",
@@ -323,13 +331,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Li%20Junhua.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-economic-and-social-affairs\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/development\/desa\/en\/about\/organigramme",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
-    "annual_reports_link":"https:\/\/www.un.org\/en\/desa\/highlights-report-2023-2024",
-    "transparency_portal_link":"Not found",
+    "annual_reports_link":"https:\/\/desapublications.un.org\/?keywords=un+desa+annual+highlights&sort_by=date&sort_order=DESC",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-department-of-economic-and-social-affairs",
     "socials_twitter":"https:\/\/x.com\/UNDESA",
     "socials_instagram":null,
@@ -338,8 +348,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Economic_and_Social_Affairs",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DGACM",
@@ -361,13 +370,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Abelian%2C%20Movses.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-for-general-assembly-and-conference-management\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/dgacm\/en\/content\/structure",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"No annual report",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UNDGACM_EN",
     "socials_instagram":null,
@@ -376,8 +387,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_for_General_Assembly_and_Conference_Management",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DGC",
@@ -399,13 +409,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Melissa-Fleming-Official-UN-Photo-Web.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-global-communications\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/digitallibrary.un.org\/record\/4010720?ln=&v=pdf",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"No annual report",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -414,8 +426,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Global_Communications",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DMSPC",
@@ -437,13 +448,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Pollard.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-management-strategy%2C-policy-and-compliance\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/reform.un.org\/content\/management-reform",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -452,8 +465,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Management_Strategy,_Policy_and_Compliance",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DOS",
@@ -475,13 +487,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Khare.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-operational-support\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/operationalsupport.un.org\/en\/organizational-structure",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"https:\/\/operationalsupport.un.org\/en\/performance-overview",
     "strategic_plan_link":"https:\/\/operationalsupport.un.org\/strategic-foundations",
     "annual_reports_link":"https:\/\/operationalsupport.un.org\/en\/reports-and-resolutions",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UN_OpSupport",
     "socials_instagram":null,
@@ -490,8 +504,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Department_of_Operational_Support",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DPO",
@@ -513,13 +526,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Lacroix.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-peace-operations\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/peacekeeping.un.org\/en\/department-of-peace-operations",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/peacekeeping.un.org\/en\/reports",
-    "transparency_portal_link":"https:\/\/peacekeeping.un.org\/en\/open-data-portal",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-department-of-peace-operations\/",
     "socials_twitter":"https:\/\/x.com\/UNPeacekeeping",
     "socials_instagram":null,
@@ -528,8 +543,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Peace_Operations",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DPPA",
@@ -551,13 +565,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/rdicarlo.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-political-and-peacebuilding-affairs\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"https:\/\/dppa.un.org\/en\/2023-2026-results-framework",
     "strategic_plan_link":"https:\/\/dppa.un.org\/en\/dppa-strategic-plan-2023-2026-updated",
     "annual_reports_link":"https:\/\/dppa.un.org\/en\/reports-and-policy-documents",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-dppa\/",
     "socials_twitter":"https:\/\/x.com\/UNDPPA",
     "socials_instagram":null,
@@ -566,8 +582,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Political_and_Peacebuilding_Affairs",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"DSS",
@@ -589,13 +604,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/813786%20-%20Gilles%20Michaud%20-%20swear-in%20ceremony%20-%2002_07_2019%20-%20Cropped.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-safety-and-security\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/safety-and-security\/en\/about-us\/organisational-chart",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"No annual report",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-department-of-safety-and-security\/",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -604,8 +621,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Department_of_Safety_and_Security",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"ECA",
@@ -627,7 +643,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Claver%20Gatete%202_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-commission-for-africa\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -642,8 +660,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Africa",
-    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"ECE",
@@ -665,7 +682,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/tatiana-molcean.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-economic-commission-for-europe\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unece.org\/evaluation-policy-0",
@@ -680,8 +699,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_Commission_for_Europe",
-    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"ECLAC",
@@ -703,7 +721,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Salazar-Xirinachs_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-commission-for-latin-america-and-the-caribbean\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":"https:\/\/www.cepal.org\/en\/about\/mandate-and-mission",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/repositorio.cepal.org\/server\/api\/core\/bitstreams\/ea965022-4466-4d5c-ae96-063cbcff30f0\/content",
@@ -718,8 +738,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Economic_Commission_for_Latin_America_and_the_Caribbean",
-    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"EO",
@@ -741,7 +760,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/D2%20Villadsen%203.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-ethics-office\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.un.org\/en\/ethics\/overview\/documents-resources.shtml",
     "results_framework_link":"No link found",
@@ -756,8 +777,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Ethics_Office",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"EOSG",
@@ -779,13 +799,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/dsg_ammina_m_pp_2020.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/executive-office-of-the-secretary-general\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":null,
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -794,8 +816,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Executive_Office_of_the_Secretary-General_of_the_United_Nations",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"ESCAP",
@@ -817,7 +838,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/armida-salsiah-alisjahbana_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-and-social-commission-for-asia-and-the-pacific\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -832,8 +855,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Asia_and_the_Pacific",
-    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"ESCWA",
@@ -855,7 +877,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Dashti.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-and-social-commission-for-western-asia\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unescwa.org\/about\/services\/budget",
     "results_framework_link":"https:\/\/www.unescwa.org\/about\/strategy",
@@ -870,8 +894,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Economic_and_Social_Commission_for_Western_Asia",
-    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"FAO",
@@ -893,7 +916,9 @@
     "head_of_entity_headshot":"https:\/\/www.fao.org\/images\/dglibraries\/default-album\/dg_banner-bio.png?sfvrsn=d88f028_11",
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.fao.org\/about\/org-chart\/en\/",
     "budget_financial_reporting_link":"https:\/\/www.fao.org\/about\/strategy-programme-budget\/fao-budget\/",
     "results_framework_link":"https:\/\/www.fao.org\/about\/strategy-programme-budget\/overview\/planning-monitoring-reporting\/en",
@@ -908,8 +933,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Food_and_Agriculture_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"GoE-DRC",
@@ -931,13 +955,15 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/main.un.org\/securitycouncil\/en\/sanctions\/1533\/annual-reports",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -946,8 +972,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_the_Democratic_Republic_of_the_Congo",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"IAEA",
@@ -969,7 +994,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.iaea.org\/about\/overview\/budget",
     "results_framework_link":"No link found",
@@ -984,8 +1011,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Atomic_Energy_Agency",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"ICAO",
@@ -1007,7 +1033,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.icao.int\/sites\/default\/files\/Meetings\/a42\/Documents\/WP\/wp_037_en.pdf",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
@@ -1022,8 +1050,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Aviation_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"ICC",
@@ -1045,7 +1072,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"FALSE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/asp.icc-cpi.int\/bureau\/WorkingGroups\/budget",
     "results_framework_link":"No link found",
@@ -1060,8 +1089,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Criminal_Court",
-    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"ICJ",
@@ -1083,7 +1111,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"MAYBE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1098,8 +1128,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Court_of_Justice",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"ICSC",
@@ -1121,7 +1150,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1136,8 +1167,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Civil_Service_Commission",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"IFAD",
@@ -1159,7 +1189,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.ifad.org\/documents\/d\/new-ifad.org\/ifad-organigram",
     "budget_financial_reporting_link":"no budget, but annual financial statements (https:\/\/www.ifad.org\/en\/financial-documents)",
     "results_framework_link":"https:\/\/www.ifad.org\/en\/results-management-framework",
@@ -1174,8 +1206,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Fund_for_Agricultural_Development",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"IIIM",
@@ -1197,13 +1228,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Petit.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/international-impartial-and-independent-mechanism\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"No link found",
     "annual_reports_link":"https:\/\/iiim.un.org\/documents\/reports-to-general-assembly\/",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-impartial-and-independent-mechanism-syria",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -1212,8 +1245,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International,_Impartial_and_Independent_Mechanism",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"IIMM",
@@ -1235,13 +1267,15 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Koumjian%202.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/independent-mechanism-for-myanmar\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
     "strategic_plan_link":"https:\/\/iimm.un.org\/strategic-plan",
     "annual_reports_link":"https:\/\/iimm.un.org\/en\/annual-reports",
-    "transparency_portal_link":"Not found",
+    "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
     "socials_instagram":null,
@@ -1250,8 +1284,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Independent_Investigative_Mechanism_for_Myanmar",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"IIMP",
@@ -1273,7 +1306,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -1288,8 +1323,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"ILO",
@@ -1311,7 +1345,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.ilo.org\/sites\/default\/files\/2025-01\/ILO_organizational%20chart_Jan-2025-EN.pdf",
     "budget_financial_reporting_link":"https:\/\/www.ilo.org\/about-ilo\/how-ilo-works\/organizational-structure-international-labour-office\/financial-management\/programme-and-budget",
     "results_framework_link":"https:\/\/www.ilo.org\/about-ilo\/how-ilo-works\/results-based-management\/evaluation-ilos-results-based-management-framework",
@@ -1326,8 +1362,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Labour_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n\n"
   },
   {
     "entity":"IMF",
@@ -1349,7 +1384,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.imf.org\/en\/About\/Organization-Chart",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
@@ -1364,8 +1401,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Monetary_Fund",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"IMO",
@@ -1387,7 +1423,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.imo.org\/en\/about\/pages\/structure.aspx",
     "results_framework_link":"No link found",
@@ -1402,8 +1440,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Maritime_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"IOM",
@@ -1425,7 +1462,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/governingbodies.iom.int\/financial-reports",
     "results_framework_link":"https:\/\/www.iom.int\/iom-strategic-results-framework-srf",
@@ -1440,8 +1479,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Organization_for_Migration",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"ISA",
@@ -1463,7 +1501,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"FALSE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link",
@@ -1478,8 +1518,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Seabed_Authority",
-    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"ITC",
@@ -1501,7 +1540,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Pamela%20Rosemarie%20Coke-Hamilton.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/international-trade-centre\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.intracen.org\/about-us\/governance#scroll-to-section-budget",
     "results_framework_link":"No link found",
@@ -1516,8 +1557,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Trade_Centre",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"ITLOS",
@@ -1539,7 +1579,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"FALSE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.itlos.org\/en\/main\/general-information\/finances\/",
     "results_framework_link":"No link found",
@@ -1554,8 +1596,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Tribunal_for_the_Law_of_the_Sea",
-    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"ITU",
@@ -1577,7 +1618,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/digitallibrary.un.org\/record\/829886?ln=en&v=pdf",
     "budget_financial_reporting_link":"https:\/\/www.itu.int\/en\/mediacentre\/backgrounders\/Pages\/how-is-itu-funded.aspx",
     "results_framework_link":"No link found",
@@ -1592,8 +1635,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/International_Telecommunication_Union",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"JIU",
@@ -1615,7 +1657,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unjiu.org\/content\/funding-and-budget",
     "results_framework_link":"No link found",
@@ -1630,8 +1674,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_Inspection_Unit",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"MINURSO",
@@ -1653,7 +1696,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Ivanko.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-mission-for-the-referendum-in-western-sahara\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/minurso.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1668,8 +1713,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_for_the_Referendum_in_Western_Sahara",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"MINUSCA",
@@ -1691,7 +1735,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Rugwabiza%2C%20Valentine.jpeg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-multidimensional-integrated-stabilization-mission-in-the-central-african-republic\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/minusca.unmissions.org\/en\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1706,8 +1752,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Multidimensional_Integrated_Stabilization_Mission_in_the_Central_African_Republic",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"MONUSCO",
@@ -1729,7 +1774,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/srsg_bintou_keita.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-organization-stabilization-mission-in-the-democratic-republic-of-the-congo\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1744,8 +1791,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Organization_Stabilization_Mission_in_the_Democratic_Republic_of_the_Congo",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OAJ",
@@ -1767,7 +1813,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/OAJ.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-administration-of-justice\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/en\/internaljustice\/oaj\/organizational-structure.shtml",
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
@@ -1782,8 +1830,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Administration_of_Justice",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OCHA",
@@ -1805,7 +1852,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Fletcher%203.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-for-the-coordination-of-humanitarian-affairs\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unocha.org\/our-funding",
     "results_framework_link":"https:\/\/www.unocha.org\/publications",
@@ -1820,8 +1869,7 @@
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/brand.unocha.org\/",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_the_Coordination_of_Humanitarian_Affairs",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"ODET",
@@ -1843,7 +1891,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/amandeep-singh-gill.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-for-digital-and-emerging-technologies\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1858,8 +1908,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"ODPP",
@@ -1881,7 +1930,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1896,8 +1947,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OFP-Delisting",
@@ -1919,7 +1969,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -1934,8 +1986,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OHCHR",
@@ -1957,7 +2008,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Turk%2C%20Volker_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-united-nations-high-commissioner-for-human-rights\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.ohchr.org\/about-us\/funding-and-budget",
     "results_framework_link":"https:\/\/www.ohchr.org\/en\/about-us\/evaluation-un-human-rights",
@@ -1972,8 +2025,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_High_Commissioner_for_Human_Rights",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OICT",
@@ -1995,7 +2047,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2010,8 +2064,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Information_and_Communications_Technology",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OIOS",
@@ -2033,7 +2086,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/oios0487.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-internal-oversight-services\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2048,8 +2103,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_Internal_Oversight_Services",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OLA",
@@ -2071,7 +2125,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Hammarskj%C3%B6ld%20v3.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-legal-affairs\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2086,8 +2142,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Legal_Affairs",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OMBUD-RES1904",
@@ -2109,7 +2164,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2124,8 +2181,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OMS",
@@ -2147,7 +2203,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Dodson.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-ombudsman-and-mediation-services\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2162,8 +2220,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Ombudsman_and_Mediation_Services",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OOSA",
@@ -2185,7 +2242,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/D2%20Aarti%20Holla%20Maini.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-outer-space-affairs\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2200,8 +2259,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Outer_Space_Affairs",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OPCW",
@@ -2223,7 +2281,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2238,8 +2298,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Organisation_for_the_Prohibition_of_Chemical_Weapons",
-    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"OSAA",
@@ -2261,7 +2320,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Duarte.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-adviser-on-africa\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2276,8 +2337,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_on_Africa",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OSACAJT",
@@ -2299,7 +2359,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Hart.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-adviser-on-climate-action-and-just-transition\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -2314,8 +2376,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSASG-Cyprus",
@@ -2337,7 +2398,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2352,8 +2415,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Adviser_to_the_Secretary-General_on_Cyprus",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSASG-PG",
@@ -2375,7 +2437,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Beyani_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-adviser-on-the-prevention-of-genocide\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2390,8 +2454,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_on_Genocide_Prevention_and_the_Responsibility_to_Protect",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSC-SEA",
@@ -2413,7 +2476,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/UN7142580_ee6_.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-coordinator-on-improving-the-un-response-to-sexual-exploitation-and-abuse\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2428,8 +2493,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-FG",
@@ -2451,7 +2515,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"FALSE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2466,8 +2532,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-GL",
@@ -2489,7 +2554,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/huang-xia.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-for-the-great-lakes-region-of-africa\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2504,8 +2571,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Special_Envoy_for_the_Great_Lakes_Region",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-Horn",
@@ -2527,7 +2593,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2542,8 +2610,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-Myanmar",
@@ -2565,7 +2632,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Bishop.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-on-myanmar\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2580,8 +2649,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-SCRES1559",
@@ -2603,7 +2671,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"FALSE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2618,8 +2688,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-Syria",
@@ -2641,7 +2710,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Pedersen%2C%20Geir.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-for-syria\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2656,8 +2727,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_for_Syria",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSESG-Yemen",
@@ -2679,7 +2749,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/un_photo_loey_felipe.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-for-yemen\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2694,8 +2766,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Envoy_of_the_Secretary-General_for_Yemen",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"OSRSG-CAAC",
@@ -2717,7 +2788,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2732,8 +2805,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_for_Children_and_Armed_Conflict",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OSRSG-SVC",
@@ -2755,7 +2827,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Patten.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-representative-of-the-secretary-general-on-sexual-violence-in-conflict\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2770,8 +2844,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Sexual_Violence_in_Conflict",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OSRSG-VAC",
@@ -2793,7 +2866,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/najat_3.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-representative-of-the-secretary-general-on-violence-against-children\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2808,8 +2883,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_Special_Representative_of_the_Secretary-General_on_Violence_against_Children",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"OVRA",
@@ -2831,7 +2905,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Palma.jpeg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-victims%27-rights-advocate\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/preventing-sexual-exploitation-and-abuse\/sites\/www.un.org.preventing-sexual-exploitation-and-abuse\/files\/ovra_fact_sheet_2021.pdf",
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2846,8 +2922,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PBSO",
@@ -2869,7 +2944,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -2884,8 +2961,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"PESG-Sudan",
@@ -2907,7 +2983,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2922,8 +3000,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PESG-WS",
@@ -2945,7 +3022,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/de%20Mistura%2C%20Staffan.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-personal-envoy-of-the-secretary-general-for-western-sahara\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2960,8 +3039,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-CAR",
@@ -2983,7 +3061,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -2998,8 +3078,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-Haiti",
@@ -3021,7 +3100,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3036,8 +3117,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-Libya",
@@ -3059,7 +3139,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3074,8 +3156,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-RES2713",
@@ -3097,7 +3178,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3112,8 +3195,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-RES2745",
@@ -3135,7 +3217,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3150,8 +3234,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-S.Sudan",
@@ -3173,7 +3256,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3188,8 +3273,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":"\n",
-    "is_primary_entity":false
+    "entity_footnotes":"\n"
   },
   {
     "entity":"PoE-Sudan",
@@ -3211,7 +3295,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3226,8 +3312,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"PoE-Yemen",
@@ -3249,7 +3334,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3264,8 +3351,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"RSCE",
@@ -3287,7 +3373,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3302,8 +3390,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Service_Centre_in_Entebbe",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"SC-RES1540",
@@ -3325,7 +3412,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3340,8 +3429,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1540",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"SC-RES1718",
@@ -3363,7 +3451,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3378,8 +3468,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Security_Council_Resolution_1718",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"SC-RES2231",
@@ -3401,7 +3490,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3416,8 +3507,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"SWEO",
@@ -3439,7 +3529,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3454,8 +3546,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UN Tourism",
@@ -3477,7 +3568,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
     "results_framework_link":"No link found",
@@ -3492,8 +3585,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_World_Tourism_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"UN-Habitat",
@@ -3515,7 +3607,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Rossbach_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-human-settlements-programme\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unhabitat.org\/sites\/default\/files\/2025\/02\/briefing_on_monitoring_of_strategic_plan_2026-2029.pdf",
@@ -3530,8 +3624,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Human_Settlements_Programme",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"UN-OHRLLS",
@@ -3553,7 +3646,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/rabab-fatima.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-high-representative-for-the-least-developed-countries%2C-landlocked-developing-countries-and-small-island-developing-states\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/open.unwomen.org\/en\/global-results\/overview",
@@ -3568,8 +3663,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_the_High_Representative_for_the_Least_Developed_Countries,_Landlocked_Developing_Countries_and_Small_Island_Developing_States",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UN-Women",
@@ -3591,7 +3685,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Sima%20Sami%20Bahous.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-entity-for-gender-equality-and-the-empowerment-of-women\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.unwomen.org\/sites\/default\/files\/2025-08\/unw_org_chart_internal_20250806.pdf",
     "budget_financial_reporting_link":"https:\/\/www.unwomen.org\/en\/executive-board\/strategic-plan-review\/financial-resources",
     "results_framework_link":"No link found",
@@ -3606,8 +3702,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UN_Women",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n"
   },
   {
     "entity":"UNAIDS",
@@ -3629,7 +3724,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unaids.org\/en\/topic\/resources",
     "results_framework_link":"No link found",
@@ -3644,8 +3741,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Joint_United_Nations_Programme_on_HIV\/AIDS",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNAMA",
@@ -3667,7 +3763,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Roza%20Otunbayeva.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/un-assistance-mission-in-afghanistan\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3682,8 +3780,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Afghanistan",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNAMI",
@@ -3705,7 +3802,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Al%20Hassan%202.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/un-assistance-mission-for-iraq\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3720,8 +3819,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_for_Iraq",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNAOC",
@@ -3743,7 +3841,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/moratinos_official_web.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-alliance-of-civilizations\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3758,8 +3858,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Alliance_of_Civilizations",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNCDF",
@@ -3781,7 +3880,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -3796,8 +3897,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"UNCTAD",
@@ -3819,7 +3919,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/rebeca-grynspan-mayufis.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-conference-on-trade-and-development\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3834,8 +3936,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Conference_on_Trade_and_Development",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"UNDOF",
@@ -3857,7 +3958,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Asmah.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-disengagement-observer-force\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3872,8 +3975,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Disengagement_Observer_Force",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNDP",
@@ -3895,7 +3997,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Xu.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-development-programme\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.undp.org\/organizational-chart",
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/rolhr.undp.org\/annualreport\/2023\/results-framework.html",
@@ -3904,14 +4008,13 @@
     "transparency_portal_link":"https:\/\/open.undp.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-development-programme\/",
     "socials_twitter":"https:\/\/x.com\/UNDP",
-    "socials_instagram":null,
+    "socials_instagram":"https:\/\/www.instagram.com\/undp\/",
     "entity_news_page":"https:\/\/www.undp.org\/news",
     "entity_branding_page":null,
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Development_Programme",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n"
   },
   {
     "entity":"UNDRR",
@@ -3933,7 +4036,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Kishore%202.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-disaster-risk-reduction\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -3948,8 +4053,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disaster_Risk_Reduction",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNEP",
@@ -3971,7 +4075,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/IngerAndersen-5965.jpg",
     "global_leadership_team_url":"http:\/\/un.org\/sg\/en\/global-leadership\/united-nations-environment-programme\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unep.org\/resources\/programme-work-and-budget",
     "results_framework_link":"No link found",
@@ -3986,8 +4092,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Environment_Programme",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n- The secretariat of this entity is part of the United Nations Secretariat.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB)\n- The secretariat of this entity is part of the United Nations Secretariat.\n"
   },
   {
     "entity":"UNESCO",
@@ -4009,7 +4114,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/unesdoc.unesco.org\/archives\/organization-charts",
     "budget_financial_reporting_link":"https:\/\/www.unesco.org\/en\/budget-strategy",
     "results_framework_link":"No link found",
@@ -4024,8 +4131,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNESCO",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"UNFCCC",
@@ -4047,7 +4153,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Simon%20Stiell_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-framework-convention-on-climate-change\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unfccc.int\/topics\/budget",
     "results_framework_link":"No link found",
@@ -4062,8 +4170,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Secretariat_of_the_United_Nations_Framework_Convention_on_Climate_Change",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNFICYP",
@@ -4085,7 +4192,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/%20Stewart-Colin.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-peacekeeping-force-in-cyprus\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4100,8 +4209,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Peacekeeping_Force_in_Cyprus",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNFPA",
@@ -4123,7 +4231,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Diene%20Keita.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-population-fund\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unfpa.org\/finance-and-budget-policies",
     "results_framework_link":"https:\/\/www.unfpa.org\/results-based-management-unfpa",
@@ -4138,8 +4248,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Population_Fund",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n"
   },
   {
     "entity":"UNGC",
@@ -4161,7 +4270,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Sanda%20Ojiambo.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-global-compact\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4176,8 +4287,7 @@
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/unglobalcompact.org\/participation\/getting-started\/brand-guidelines",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Global_Compact",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNGEGN",
@@ -4199,7 +4309,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4214,8 +4326,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Group_of_Experts_on_Geographical_Names",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNGGIM",
@@ -4237,7 +4348,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4252,8 +4365,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Committee_of_Experts_on_Global_Geospatial_Information_Management",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNHCR",
@@ -4275,7 +4387,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Grandi.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-un-high-commissioner-for-refugees\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unhcr.org\/us\/budget-and-expenditure",
     "results_framework_link":"https:\/\/www.unhcr.org\/media\/unhcrs-results-areas",
@@ -4290,8 +4404,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_High_Commissioner_for_Refugees",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n"
   },
   {
     "entity":"UNICEF",
@@ -4313,7 +4426,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Russell.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-children%27s-fund\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.unicef.org\/executiveboard\/media\/21691\/file\/Integrated-Budget-MTR-Annexes.pdf",
     "budget_financial_reporting_link":"https:\/\/www.unicef.org\/executiveboard\/documents\/unicef-integrated-budget-2026-2029-srs-2025",
     "results_framework_link":"https:\/\/www.unicef.org\/executiveboard\/media\/32061\/file\/2025-29-Add1-SP-2026-2029-IRRF-EN-2025-07-21.pdf",
@@ -4328,8 +4443,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/UNICEF",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n"
   },
   {
     "entity":"UNICRI",
@@ -4351,7 +4465,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -4366,8 +4482,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"UNIDIR",
@@ -4389,7 +4504,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unidir.org\/who-we-are\/funding-and-support\/",
     "results_framework_link":"No link found",
@@ -4404,8 +4521,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Institute_for_Disarmament_Research",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNIDO",
@@ -4427,7 +4543,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.unido.org\/sites\/default\/files\/unido-publications\/2025-04\/ANNUAL%20REPORT%202024.pdf",
     "budget_financial_reporting_link":"https:\/\/www.unido.org\/resources\/policymaking-organs\/programme-and-budget-committee\/reports-programme-and-budget-committee",
     "results_framework_link":"No link found",
@@ -4442,8 +4560,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Industrial_Development_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"UNIFIL",
@@ -4465,7 +4582,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Aroldo%20La%CC%81zaro.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-interim-force-in-lebanon\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4480,8 +4599,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Force_in_Lebanon",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNISFA",
@@ -4503,7 +4621,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4518,8 +4638,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Security_Force_for_Abyei",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNITAR",
@@ -4541,7 +4660,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unitar.org\/about\/programme-budget",
     "results_framework_link":"https:\/\/unitar.org\/results-evidence-learning\/results-reports-and-other-reports",
@@ -4556,8 +4677,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Institute_for_Training_and_Research",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNLB",
@@ -4579,7 +4699,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4594,8 +4716,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Logistics_Base",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNMHA",
@@ -4617,7 +4738,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unmha.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4632,8 +4755,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_to_Support_the_Hudaydah_Agreement",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNMIK",
@@ -4655,7 +4777,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unmik.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/unmik.unmissions.org\/united-nations-resolution-1244",
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4670,8 +4794,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Interim_Administration_Mission_in_Kosovo",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNMISS",
@@ -4693,7 +4816,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Nicholas-Haysom.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/un-mission-in-south-sudan\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unmiss.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4708,8 +4833,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Mission_in_South_Sudan",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNMOGIP",
@@ -4731,7 +4855,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4746,8 +4872,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Military_Observer_Group_in_India_and_Pakistan",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNOAU",
@@ -4769,7 +4894,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Onanga-Anyanga%2C%20Parfait_1.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-to-the-african-union\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unoau.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4784,8 +4911,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_to_the_African_Union",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNOCA",
@@ -4807,7 +4933,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Abdou%20Abarry.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-regional-office-for-central-africa\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unoca.unmissions.org\/en\/mandate-and-missions",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4822,8 +4950,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Office_for_Central_Africa",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNOCT",
@@ -4845,7 +4972,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/counterterrorism\/office-structure",
     "budget_financial_reporting_link":"https:\/\/www.un.org\/counterterrorism\/funding-and-donors",
     "results_framework_link":"No link found",
@@ -4860,8 +4989,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Counter-Terrorism",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNODA",
@@ -4883,7 +5011,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Nakamitsu.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-for-disarmament-affairs\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/disarmament.unoda.org\/en\/our-work\/cross-cutting-issues\/financial-matters",
     "results_framework_link":"No link found",
@@ -4898,8 +5028,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Disarmament_Affairs",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNODC",
@@ -4921,7 +5050,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.unodc.org\/unodc\/en\/evaluation\/reports.html",
@@ -4936,8 +5067,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_on_Drugs_and_Crime",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n"
   },
   {
     "entity":"UNOG",
@@ -4959,7 +5089,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Waly.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-on-drugs-and-crime-and-united-nations-office-at-vienna\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -4974,8 +5106,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Geneva",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNON",
@@ -4997,7 +5128,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Bangura.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-at-nairobi\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5012,8 +5145,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Nairobi",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNOP",
@@ -5035,7 +5167,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/mptf.undp.org\/participating-organizations\/unop",
     "results_framework_link":null,
@@ -5050,8 +5184,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":"- The United Nations Office for Partnerships is the focal point vis-a-vis the United Nations Foundation, Inc.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- The United Nations Office for Partnerships is the focal point vis-a-vis the United Nations Foundation, Inc.\n"
   },
   {
     "entity":"UNOPS",
@@ -5073,7 +5206,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Jorge_Moreira_da_Silva.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-project-services\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/content.unops.org\/documents\/libraries\/policies-2020\/executive-office-directives-and-instructions\/organizational-principles-and-governance-model\/en\/UNOPS-organigramme_EN.pdf",
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5088,8 +5223,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_Project_Services",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n"
   },
   {
     "entity":"UNOSAPG",
@@ -5111,7 +5245,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -5126,8 +5262,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"UNOSSC",
@@ -5149,7 +5284,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -5164,8 +5301,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"UNOV",
@@ -5187,7 +5323,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5202,8 +5340,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_at_Vienna",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNOWAS",
@@ -5225,7 +5362,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/UNOWAS%20SRSG%20Simao_0.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-west-africa-and-the-sahel\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unowas.unmissions.org\/unowas-mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/unowas.unmissions.org\/unowas-mandate",
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5240,8 +5379,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_for_West_Africa_and_the_Sahel",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNRCCA",
@@ -5263,7 +5401,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Kaha%20Imnadze_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-regional-centre-for-preventive-diplomacy-for-central-asia\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unrcca.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5278,8 +5418,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Regional_Centre_for_Preventive_Diplomacy_for_Central_Asia",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNRGID",
@@ -5301,7 +5440,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5316,8 +5457,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNRISD",
@@ -5339,7 +5479,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -5354,8 +5496,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"UNRWA",
@@ -5377,7 +5518,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/LAZZARINI%2C%20Philippe.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-relief-and-works-agency-for-palestine-refugees-in-the-near-east\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unrwa.org\/how-you-can-help\/how-we-spend-funds\/core-programme-budget",
     "results_framework_link":"https:\/\/www.unrwa.org\/resources\/strategy-policy",
@@ -5392,8 +5535,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Relief_and_Works_Agency_for_Palestine_Refugees_in_the_Near_East",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n\n"
   },
   {
     "entity":"UNRoD",
@@ -5415,7 +5557,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5430,8 +5574,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Register_of_Damage_Caused_by_the_Construction_of_the_Wall_in_the_Occupied_Palestinian_Territory",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNSCO",
@@ -5453,7 +5596,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Kaag.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-united-nations-special-coordinator-for-the-middle-east-peace-process\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5468,8 +5613,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_the_Middle_East_Peace_Process",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNSCOL",
@@ -5491,7 +5635,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Hennis-Plasschaert%202.jpeg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-united-nations-special-coordinator-for-lebanon\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5506,8 +5652,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_Lebanon",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNSMIL",
@@ -5529,7 +5674,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Tetteh.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-support-mission-in-libya\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/unsmil.unmissions.org\/un-libya-results-report-2022",
@@ -5544,8 +5691,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Mission_in_Libya",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNSOM",
@@ -5567,7 +5713,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unsmil.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5582,8 +5730,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Assistance_Mission_in_Somalia",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNSOS",
@@ -5605,7 +5752,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/unsos.unmissions.org\/unsos-mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5620,8 +5769,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Support_Office_in_Somalia",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNSSC",
@@ -5643,7 +5791,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/w04.unssc.org\/financial",
     "results_framework_link":"No link found",
@@ -5658,8 +5808,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_System_Staff_College",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNTMIS",
@@ -5681,7 +5830,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Swan.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-transitional-assistance-mission-in-somalia\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5696,8 +5847,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"Not found.",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNTSO",
@@ -5719,7 +5869,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Gauchat%2C%20Patrick.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-truce-supervision-organization\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":"https:\/\/untso.unmissions.org\/mandate",
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5734,8 +5886,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Truce_Supervision_Organization",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNU",
@@ -5757,7 +5908,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/unu-rector.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-university\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unu.edu\/budget-and-finance",
     "results_framework_link":"No centralized RBM results framework found",
@@ -5772,8 +5925,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_University",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UNV",
@@ -5795,7 +5947,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":null,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":null,
@@ -5810,8 +5964,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":null,
-    "entity_footnotes":null,
-    "is_primary_entity":null
+    "entity_footnotes":null
   },
   {
     "entity":"UNVMC",
@@ -5833,7 +5986,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Rosende%2C%20Raul.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-verification-mission-in-colombia\/all",
     "on_display":"TRUE",
+    "is_primary_entity":false,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5848,8 +6003,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Verification_Mission_in_Colombia",
-    "entity_footnotes":null,
-    "is_primary_entity":false
+    "entity_footnotes":null
   },
   {
     "entity":"UNYO",
@@ -5871,7 +6025,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Youth%20Affairs_Portrait.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-youth-office\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
     "results_framework_link":"No link found",
@@ -5886,8 +6042,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Youth_Office",
-    "entity_footnotes":null,
-    "is_primary_entity":true
+    "entity_footnotes":null
   },
   {
     "entity":"UPU",
@@ -5909,7 +6064,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/bodies\/international-bureau\/organizational-structure",
     "budget_financial_reporting_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/finance#programme-and-budget",
     "results_framework_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/strategy#implementation-and-monitoring",
@@ -5924,8 +6081,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Universal_Postal_Union",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"WB",
@@ -5947,7 +6103,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/thedocs.worldbank.org\/en\/doc\/404071412346998230-0090022021\/The-World-Bank-Organizational-Chart-English",
     "budget_financial_reporting_link":"https:\/\/financesone.worldbank.org\/world-bank-program-budget-and-all-funds\/DS00032",
     "results_framework_link":"No link found",
@@ -5962,8 +6120,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Bank",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n- International Centre for Settlement of Investment Disputes (ICSID) and Multilateral Investment Guarantee Agency (MIGA) are not specialized agencies in accordance with Articles 57 and 63 of the Charter, but are part of the World Bank Group.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n- International Centre for Settlement of Investment Disputes (ICSID) and Multilateral Investment Guarantee Agency (MIGA) are not specialized agencies in accordance with Articles 57 and 63 of the Charter, but are part of the World Bank Group.\n"
   },
   {
     "entity":"WFP",
@@ -5985,7 +6142,9 @@
     "head_of_entity_headshot":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/cindy-mccain.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/world-food-programme\/all",
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.wfp.org\/publications\/wfp-organigram",
     "budget_financial_reporting_link":null,
     "results_framework_link":"https:\/\/www.wfp.org\/publications\/corporate-results-framework-2022-2025",
@@ -6000,8 +6159,7 @@
     "entity_data_page":null,
     "entity_logo_page":"https:\/\/uikit.wfp.org\/docs\/index.html?path=\/docs\/documentation-core-logos--page",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Food_Programme",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n"
   },
   {
     "entity":"WHO",
@@ -6023,7 +6181,9 @@
     "head_of_entity_headshot":"https:\/\/cdn.who.int\/media\/images\/default-source\/people-and-partners\/directors-general\/tedros-adhanom-ghebreyesus\/tedros-adhanom-ghebreyesus.tmb-768v.jpg",
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":"https:\/\/www.who.int\/images\/default-source\/fallback\/header-logos\/h-logo-blue1820eae93c154e37b2588ab90fdbc17e.svg?sfvrsn=aaed4f35_20",
     "organizational_chart_link":"https:\/\/cdn.who.int\/media\/docs\/default-source\/documents\/about-us\/who-hq-organigramme.pdf",
     "budget_financial_reporting_link":"https:\/\/www.who.int\/about\/accountability\/budget",
     "results_framework_link":"https:\/\/www.who.int\/publications\/m\/item\/who-results-framework-delivering-a-measurable-impact-in-countries",
@@ -6038,8 +6198,7 @@
     "entity_data_page":"https:\/\/www.who.int\/data\/",
     "entity_logo_page":"https:\/\/www.who.int\/about\/policies\/publishing\/logo",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Health_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"WIPO",
@@ -6061,7 +6220,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
     "budget_financial_reporting_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/financial",
     "results_framework_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
@@ -6076,8 +6237,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Intellectual_Property_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"WMO",
@@ -6099,7 +6259,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"TRUE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/wmo.int\/about-wmo\/governance",
     "budget_financial_reporting_link":"https:\/\/wmo.int\/about-wmo\/finance-and-accountability",
     "results_framework_link":"https:\/\/community.wmo.int\/en\/planning-and-monitoring\/operational-planning",
@@ -6114,8 +6276,7 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Meteorological_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   },
   {
     "entity":"WTO",
@@ -6137,7 +6298,9 @@
     "head_of_entity_headshot":null,
     "global_leadership_team_url":null,
     "on_display":"FALSE",
+    "is_primary_entity":true,
     "foundational_mandate":null,
+    "entity_logo_url":null,
     "organizational_chart_link":"https:\/\/www.wto.org\/english\/thewto_e\/whatis_e\/tif_e\/organigram_e.pdf",
     "budget_financial_reporting_link":"https:\/\/www.wto.org\/english\/thewto_e\/secre_e\/budget_e.htm",
     "results_framework_link":"No link found",
@@ -6152,7 +6315,6 @@
     "entity_data_page":null,
     "entity_logo_page":null,
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/World_Trade_Organization",
-    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n",
-    "is_primary_entity":true
+    "entity_footnotes":"- Member of the United Nations System Chief Executives Board for Coordination (CEB).\n- This organization is separate and independent from the United Nations. It has been brought into relationship with the United Nations through a relationship agreement.\n"
   }
 ]
