@@ -29,6 +29,9 @@ df = df[df["on_display"] != False]
 output_path = data_folder / "output" / "entities.csv"
 df.to_csv(output_path, index=False)
 
+output_path = Path("public") / "entities.csv"
+df.to_csv(output_path, index=False)
+
 output_path = Path("public") / "entities.json"
 df.to_json(output_path, orient="records", indent=2)
 
@@ -44,3 +47,5 @@ df = df[columns_to_select]
 
 output_path = data_folder / "output" / "mandate_entities.csv"
 df.to_csv(output_path, index=False)
+
+
