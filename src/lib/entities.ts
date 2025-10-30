@@ -1,6 +1,6 @@
 import { Entity, EntityFilters } from '@/types/entity';
 import entitiesData from '../../public/un-entities.json';
-import { createEntitySlug } from './utils';
+import { createEntitySlug, parseEntityAliases } from './utils';
 
 // Direct import - 180KB JSON file loaded at build time
 export const entities = entitiesData as Entity[];
@@ -32,11 +32,18 @@ export function getEntities(options?: {
     // Apply search
     if (options?.search) {
         const searchTerm = options.search.toLowerCase();
-        filtered = filtered.filter(entity =>
-            entity.entity.toLowerCase().includes(searchTerm) ||
-            entity.entity_long.toLowerCase().includes(searchTerm) ||
-            (entity.head_of_entity_name && entity.head_of_entity_name.toLowerCase().includes(searchTerm))
-        );
+        filtered = filtered.filter(entity => {
+            // Search in entity code and long name
+            if (entity.entity.toLowerCase().includes(searchTerm) ||
+                entity.entity_long.toLowerCase().includes(searchTerm) ||
+                (entity.head_of_entity_name && entity.head_of_entity_name.toLowerCase().includes(searchTerm))) {
+                return true;
+            }
+            
+            // Search in aliases
+            const aliases = parseEntityAliases(entity.entity_aliases);
+            return aliases.some(alias => alias.toLowerCase().includes(searchTerm));
+        });
     }
 
     return filtered;

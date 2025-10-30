@@ -28,3 +28,21 @@ export function findEntityBySlug(entities: Entity[], slug: string): Entity | nul
     return entitySlug === decodedSlug;
   }) || null;
 }
+
+/**
+ * Parse entity aliases from string format like "['RCS','UNDCO']" to array
+ */
+export function parseEntityAliases(aliasString: string | null | undefined): string[] {
+  if (!aliasString || typeof aliasString !== 'string') return [];
+  
+  try {
+    const parsed = JSON.parse(aliasString.replace(/'/g, '"'));
+    if (Array.isArray(parsed)) {
+      return parsed.filter(alias => typeof alias === 'string');
+    }
+  } catch {
+    // Silently skip invalid formats
+  }
+  
+  return [];
+}

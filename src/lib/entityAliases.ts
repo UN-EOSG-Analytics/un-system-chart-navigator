@@ -6,31 +6,20 @@
  */
 
 import { entities } from './entities';
+import { parseEntityAliases } from './utils';
 
 // Build alias map on import (runs once)
 const aliasMap = new Map<string, string>();
 
 entities.forEach(entity => {
-    if (!entity.entity_aliases || typeof entity.entity_aliases !== 'string') return;
-
-    try {
-        // Parse string format like "['RCS']"
-        const parsed = JSON.parse(entity.entity_aliases.replace(/'/g, '"'));
-        if (Array.isArray(parsed)) {
-            parsed.forEach(alias => {
-                if (alias && typeof alias === 'string') {
-                    // Store in lowercase for case-insensitive matching
-                    // Map to lowercase entity code for consistent URL format
-                    aliasMap.set(alias.toLowerCase(), entity.entity.toLowerCase());
-                }
-            });
-        }
-    } catch {
-        // Silently skip invalid formats
-    }
-});
-
-/**
+    const aliases = parseEntityAliases(entity.entity_aliases);
+    
+    // Store each alias in lowercase for case-insensitive matching
+    // Map to lowercase entity code for consistent URL format
+    aliases.forEach(alias => {
+        aliasMap.set(alias.toLowerCase(), entity.entity.toLowerCase());
+    });
+});/**
  * Resolves an entity identifier, returning the canonical entity code if it's an alias,
  * or the original identifier if it's not an alias.
  */
