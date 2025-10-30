@@ -8,6 +8,24 @@ import { BarChart3, Book, Database, DollarSign, Eye, Globe, Linkedin, Newspaper,
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+// Custom X (Twitter) icon component to match lucide-react style
+const XTwitterIcon = ({ size = 24, className = '' }: { size?: number; className?: string }) => (
+    <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+    </svg>
+);
+
 interface EntityModalProps {
     entity: Entity | null;
     onClose: () => void;
@@ -354,7 +372,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 {(() => {
                     const hasLinks =
                         isValidLink(entity!.entity_link) ||
-                        isValidLink(entity!.socials_linkedin) ||
                         isValidLink(entity!.entity_wikipedia_page) ||
                         isValidLink(entity!.entity_news_page) ||
                         isValidLink(entity!.entity_branding_page) ||
@@ -417,11 +434,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.entity_news_page!} icon={Newspaper} label="News" />
                                 )}
 
-                                {/* LinkedIn */}
-                                {isValidLink(entity!.socials_linkedin) && (
-                                    <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
-                                )}
-
                                 {/* Wikipedia - hidden */}
                                 {/* {isValidLink(entity!.entity_wikipedia_page) && (
                                     <LinkItem href={entity!.entity_wikipedia_page!} icon={BookOpen} label="Wikipedia" />
@@ -432,6 +444,34 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.entity_branding_page!} icon={Palette} label="Branding" />
                                 )}
 
+                            </div>
+                        </div>
+                    );
+                })()}
+
+                {/* Socials */}
+                {(() => {
+                    const hasSocials =
+                        isValidLink(entity!.socials_linkedin) ||
+                        isValidLink(entity!.socials_twitter);
+
+                    if (!hasSocials) {
+                        return null;
+                    }
+
+                    return (
+                        <div>
+                            <SubHeader>Socials</SubHeader>
+                            <div className="space-y-1">
+                                {/* LinkedIn */}
+                                {isValidLink(entity!.socials_linkedin) && (
+                                    <LinkItem href={entity!.socials_linkedin!} icon={Linkedin} label="LinkedIn" />
+                                )}
+
+                                {/* X (formerly Twitter) */}
+                                {isValidLink(entity!.socials_twitter) && (
+                                    <LinkItem href={entity!.socials_twitter!} icon={XTwitterIcon} label="X (formerly Twitter)" />
+                                )}
                             </div>
                         </div>
                     );
