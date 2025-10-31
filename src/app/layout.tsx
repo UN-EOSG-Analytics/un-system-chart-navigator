@@ -13,7 +13,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-    title: "UN System Chart",
+    title: "United Nations System Chart Navigator",
     description: "Interactively navigate the United Nations System",
 };
 
