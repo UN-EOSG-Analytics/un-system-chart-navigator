@@ -111,7 +111,11 @@ export default function FilterControls({
                 {/* Filter Dropdown */}
                 <div className="relative w-full sm:w-[420px]">
                     <Select value={getSelectedValue()} onValueChange={handleValueChange}>
-                        <SelectTrigger className="w-full h-12 sm:h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2 transition-all duration-500 ease-out touch-manipulation" id="category-filter">
+                        <SelectTrigger 
+                            className="w-full h-12 sm:h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2 transition-all duration-500 ease-out touch-manipulation" 
+                            id="category-filter"
+                            aria-label="Filter entities by category"
+                        >
                             <SelectValue asChild>
                                 <span className="flex items-center transition-all duration-500 ease-out">{getDisplayText()}</span>
                             </SelectValue>
@@ -147,17 +151,20 @@ export default function FilterControls({
 
                 {/* Search Input */}
                 <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
+                    <label htmlFor="entity-search" className="sr-only">Search for entities</label>
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </div>
                     <input
                         type="text"
+                        id="entity-search"
                         placeholder="Search for entities..."
                         value={searchQuery}
                         onChange={(e) => onSearchChange(e.target.value)}
                         className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-base rounded-none touch-manipulation"
+                        aria-label="Search for UN entities by keyword"
                     />
                 </div>
 

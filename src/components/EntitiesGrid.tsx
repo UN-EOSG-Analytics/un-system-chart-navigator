@@ -26,12 +26,13 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     return (
         <Tooltip delayDuration={50} disableHoverableContent>
             <TooltipTrigger asChild>
-                <div
+                <button
                     onClick={handleClick}
-                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] p-2 rounded-lg flex items-center justify-center text-center transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation`}
+                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] p-2 rounded-lg flex items-center justify-center text-center transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation w-full`}
+                    aria-label={`View details for ${entity.entity_long}`}
                 >
                     <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
-                </div>
+                </button>
             </TooltipTrigger>
             <TooltipContent
                 side="top"
@@ -200,6 +201,8 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                     <button
                         onClick={() => setShowDownloadOptions(!showDownloadOptions)}
                         className="text-un-blue hover:underline font-medium transition-all cursor-pointer flex items-center gap-1.5"
+                        aria-label="Download entity data in JSON or CSV format"
+                        aria-expanded={showDownloadOptions}
                     >
                         Get data
                         <Download size={16} />
@@ -222,6 +225,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                                     onClick={() => handleCopyLink('json', `${window.location.origin}/un-entities.json`)}
                                     className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
                                     title="Copy link to JSON"
+                                    aria-label="Copy link to JSON file"
                                 >
                                     {copiedFormat === 'json' ? (
                                         <Check size={14} className="text-green-600" />
@@ -245,6 +249,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                                     onClick={() => handleCopyLink('csv', `${window.location.origin}/un-entities.csv`)}
                                     className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
                                     title="Copy link to CSV"
+                                    aria-label="Copy link to CSV file"
                                 >
                                     {copiedFormat === 'csv' ? (
                                         <Check size={14} className="text-green-600" />

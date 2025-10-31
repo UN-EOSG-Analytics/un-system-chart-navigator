@@ -20,6 +20,7 @@ export default function Home() {
                         <button
                             onClick={handleTitleClick}
                             className="group inline-flex items-start gap-2 transition-all duration-200 cursor-pointer bg-transparent border-none p-0 text-left"
+                            aria-label="Reset filters and return to home view"
                         >
                             <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 group-hover:text-un-blue transition-colors leading-tight">
                                 UN System
