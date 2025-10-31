@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ModalHandler from "@/components/ModalHandler";
 import { Suspense } from "react";
 import Script from "next/script";
 
+const roboto = Roboto({
+    weight: ['300', '400', '500', '700'],
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 export const metadata: Metadata = {
     title: "UN System Chart",
@@ -17,8 +23,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body className="font-sans antialiased">
+        <html lang="en" className={roboto.className}>
+            <body className="antialiased">
                 <ErrorBoundary>
                     {children}
                     <Suspense fallback={null}>

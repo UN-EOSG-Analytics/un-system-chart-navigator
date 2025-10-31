@@ -8,7 +8,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  serverExternalPackages: ['d3-org-chart', 'd3']
+  serverExternalPackages: ['d3-org-chart', 'd3'],
+  // Optimize CSS loading
+  experimental: {
+    optimizeCss: true,
+  }
 };
 
 export default nextConfig;

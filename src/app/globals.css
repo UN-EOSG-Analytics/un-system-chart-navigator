@@ -1,11 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  /* Override default sans font to be Roboto everywhere */
-  --font-sans: Roboto, system-ui, sans-serif;
-
-  /* Custom fonts */
+  /* Custom fonts - Roboto is applied via next/font in layout.tsx */
   --font-roboto: Roboto, system-ui, sans-serif;
 
   /* Custom color palette */
