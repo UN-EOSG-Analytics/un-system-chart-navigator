@@ -9,6 +9,7 @@
 - make sure to understand the general api and page structure before making singular changes
 - do not create parallel infrastructures, prefer global solutions, do not hardcode things where it would be hard to find.
 - always keep in mind that this site is deployed as a static page on GitHub Pages
+- we are sticking with GitHub Pages, do not implement what does not work on a static deploy there
 - do not repeat helper functions, instead put them into `src/lib/utils.ts` and import
 
 ## Python
