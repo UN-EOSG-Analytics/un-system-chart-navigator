@@ -377,7 +377,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         isValidLink(entity!.transparency_portal_link) ||
                         isValidLink(entity!.budget_financial_reporting_link) ||
                         isValidLink(entity!.strategic_plan_link) ||
-                        isValidLink(entity!.results_framework_link);
+                        isValidLink(entity!.results_framework_link) ||
+                        isValidLink(entity!.entity_custom_mandate_registry);
 
                     if (!hasLinks) {
                         return null;
@@ -398,16 +399,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <LinkItem href={entity!.annual_reports_link} icon={Book} label="Reports" />
                                 )}
 
-                                {/* Mandate Registry */}
+                                {/* UN Mandate Source Registry - Always show */}
                                 {(() => {
-                                    // Use custom URL if provided and valid, otherwise use default
-                                    const customUrl = entity!.entity_mandate_registry_custom;
-                                    const mandateUrl = (customUrl && customUrl !== 'Default' && customUrl.startsWith('https'))
-                                        ? customUrl
+                                    const mandateUrl = isValidLink(entity!.entity_mandate_registry)
+                                        ? entity!.entity_mandate_registry!
                                         : `https://mandates.un.org/entity/${entity!.entity.toUpperCase()}`;
                                     
-                                    return <LinkItem href={mandateUrl} icon={ScrollText} label="Mandate Registry" />;
+                                    return <LinkItem href={mandateUrl} icon={ScrollText} label="UN Mandate Source Registry" />;
                                 })()}
+
+                                {/* Entity Mandate Registry - Only show if custom mandate registry exists */}
+                                {isValidLink(entity!.entity_custom_mandate_registry) && (
+                                    <LinkItem href={entity!.entity_custom_mandate_registry!} icon={ScrollText} label="Custom Mandate Registry" />
+                                )}
 
                                 {/* Financials */}
                                 {isValidLink(entity!.budget_financial_reporting_link) && (

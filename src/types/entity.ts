@@ -35,9 +35,10 @@ export interface Entity {
     entity_careers_page: string | null;
     entity_wikipedia_page: string | null;
     entity_footnotes: string | null;
-    entity_mandate_registry_custom: string | null;
     is_primary_entity: boolean | null;
     entity_aliases: string | null; // String format like "['RCS','UNDCO']"
+    entity_mandate_registry: string | null;
+    entity_custom_mandate_registry: string | null;
 }
 
 export interface EntityFilters {

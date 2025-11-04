@@ -21,8 +21,8 @@ records = table.all(view="API ALL")
 if records:
     data = [record["fields"] for record in records]
     df = pd.DataFrame(data)
-    
-    
+
+
 # Check for duplicate entities
 duplicates = df[df["entity"].duplicated(keep=False)]["entity"]
 if not duplicates.empty:
@@ -75,7 +75,8 @@ selected_columns = [
     "entity_wikipedia_page",
     "entity_footnotes",
     "entity_aliases",
-    "entity_mandate_registry_custom"
+    "entity_mandate_registry",
+    "entity_custom_mandate_registry",
 ]
 
 # TODO: don't forget to also add in `entity.ts`
