@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/select';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 
 interface FilterControlsProps {
     activeGroups: Set<string>;
@@ -112,9 +112,7 @@ export default function FilterControls({
                 <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
                     <label htmlFor="entity-search" className="sr-only">Search for entities</label>
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg className="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                        <Search className="h-4 w-4 text-gray-600" aria-hidden="true" />
                     </div>
                     <input
                         type="text"
