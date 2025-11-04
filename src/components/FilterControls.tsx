@@ -1,15 +1,10 @@
 'use client';
 
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Filter, Search, X } from 'lucide-react';
+import { Check, Filter, Search, X } from 'lucide-react';
+import { useState } from 'react';
 
 interface FilterControlsProps {
     activeGroups: Set<string>;
@@ -30,6 +25,8 @@ export default function FilterControls({
     onReset,
     visibleEntitiesCount
 }: FilterControlsProps) {
+    const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
     // Count entities for each group
     const groupCounts = entities.reduce((acc, entity) => {
         acc[entity.system_grouping] = (acc[entity.system_grouping] || 0) + 1;
@@ -42,66 +39,17 @@ export default function FilterControls({
     // Sort groups by their order
     const sortedGroups = getSortedSystemGroupings();
 
-    // Determine current selection value
-    const getSelectedValue = () => {
-        if (allGroupsActive) {
-            return 'all';
-        }
-        // If only one group is active, return its key
-        if (activeGroups.size === 1) {
-            return Array.from(activeGroups)[0];
-        }
-        // Multiple groups but not all - this shouldn't happen with current logic but fallback to 'all'
-        return 'all';
-    };
-
-    const handleValueChange = (value: string) => {
-        if (value === 'all') {
-            // Show all groups by clicking any group if not all are currently active
-            // The toggle logic will handle showing all groups
-            if (!allGroupsActive && activeGroups.size > 0) {
-                const firstActiveGroup = Array.from(activeGroups)[0];
-                onToggleGroup(firstActiveGroup);
-            }
-        } else {
-            // Show only the selected group
-            onToggleGroup(value);
-        }
-    };
-
-    // Get display text for the current selection
-    const getDisplayText = () => {
-        if (allGroupsActive) {
-            return (
-                <div className="flex items-center gap-3">
-                    <Filter className="h-4 w-4 text-gray-500" />
-                    <span className="text-base text-gray-500">Filter System Group...</span>
-                </div>
-            );
-        }
-
-        if (activeGroups.size === 1) {
-            const activeGroup = Array.from(activeGroups)[0];
-            const styles = systemGroupingStyles[activeGroup];
-            const count = groupCounts[activeGroup] || 0;
-            return (
-                <div className="flex items-center gap-3">
-                    <div className={`${styles.bgColor} w-5 h-5 rounded flex-shrink-0`}></div>
-                    <span className="text-base">{styles.label} ({count})</span>
-                </div>
-            );
-        }
-
-        return (
-            <div className="flex items-center gap-3">
-                <Filter className="h-4 w-4 text-gray-500" />
-                <span className="text-base text-gray-500">Filter System Group...</span>
-            </div>
-        );
-    };
-
     // Check if reset is needed
     const isResetNeeded = searchQuery.trim() !== '' || !allGroupsActive;
+
+    // Get filter button text
+    const getFilterText = () => {
+        if (allGroupsActive) {
+            return 'Filter System Groups...';
+        }
+        const count = activeGroups.size;
+        return `${count} group${count !== 1 ? 's' : ''} selected`;
+    };
 
     return (
         <div className="flex flex-col gap-2 mb-4 sm:mb-6">
@@ -124,46 +72,62 @@ export default function FilterControls({
                     />
                 </div>
 
-                {/* Filter Dropdown */}
-                <div className="relative w-full sm:w-64 md:w-72">
-                    <Select value={getSelectedValue()} onValueChange={handleValueChange}>
-                        <SelectTrigger 
-                            className="w-full !h-12 sm:!h-10 bg-white border border-gray-200 rounded-lg focus:ring-0 focus:border-gray-300 hover:border-gray-300 focus:outline-none focus-visible:outline-none focus-visible:ring-0 !px-3 !py-0 transition-colors touch-manipulation !text-base text-gray-700 flex items-center" 
-                            id="category-filter"
-                            aria-label="Filter entities by category"
+                {/* Filter Popover */}
+                <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+                    <PopoverTrigger asChild>
+                        <button
+                            className={`
+                                relative w-full sm:w-64 md:w-72 h-12 sm:h-10 
+                                flex items-center gap-3 px-3 
+                                border rounded-lg 
+                                text-base text-gray-700
+                                touch-manipulation transition-colors
+                                ${!allGroupsActive 
+                                    ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
+                                    : 'bg-white border-gray-200 hover:border-gray-300'
+                                }
+                            `}
+                            aria-label="Filter entities by system group"
                         >
-                            <SelectValue asChild>
-                                <span className="flex items-center">{getDisplayText()}</span>
-                            </SelectValue>
-                        </SelectTrigger>
-                        <SelectContent
-                            className="w-full min-w-[var(--radix-select-trigger-width)] bg-white border-0 z-50"
-                            position="popper"
-                            side="bottom"
-                            align="start"
-                            sideOffset={4}
-                        >
-                            <SelectItem value="all">
-                                <div className="flex items-center gap-3 py-1">
-                                    <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0"></div>
-                                    <span className="font-medium text-base">All Groups ({entities.length})</span>
-                                </div>
-                            </SelectItem>
-
+                            <Filter className={`h-4 w-4 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <span className={!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}>
+                                {getFilterText()}
+                            </span>
+                        </button>
+                    </PopoverTrigger>
+                    <PopoverContent 
+                        className="w-[26rem] p-1 bg-white border-0 shadow-lg"
+                        align="start"
+                        sideOffset={4}
+                    >
+                        <div>
                             {sortedGroups.map(([group, styles]) => {
                                 const count = groupCounts[group] || 0;
+                                const isSelected = activeGroups.has(group);
+                                // Only show checkmark if we're in filtered mode (not all groups active)
+                                const showCheckmark = !allGroupsActive && isSelected;
+                                
                                 return (
-                                    <SelectItem key={group} value={group}>
-                                        <div className="flex items-center gap-3 py-1">
-                                            <div className={`${styles.bgColor} w-5 h-5 rounded flex-shrink-0`}></div>
-                                            <span className="font-medium">{styles.label} ({count})</span>
+                                    <button
+                                        key={group}
+                                        onClick={() => onToggleGroup(group)}
+                                        className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
+                                    >
+                                        <div className={`${styles.bgColor} w-4 h-4 rounded flex-shrink-0`}></div>
+                                        <span className="text-sm flex-1 text-gray-600">
+                                            {styles.label} <span className="text-gray-400">({count})</span>
+                                        </span>
+                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                                            {showCheckmark && (
+                                                <Check className="h-4 w-4 text-un-blue" />
+                                            )}
                                         </div>
-                                    </SelectItem>
+                                    </button>
                                 );
                             })}
-                        </SelectContent>
-                    </Select>
-                </div>
+                        </div>
+                    </PopoverContent>
+                </Popover>
 
                 {/* Reset Button - only show when there's something to reset */}
                 {isResetNeeded && (

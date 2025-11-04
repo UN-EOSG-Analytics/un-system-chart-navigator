@@ -103,12 +103,30 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
 
     const toggleGroup = (groupKey: string) => {
         setActiveGroups(prev => {
-            // If this group is the only active one, show all groups
-            if (prev.size === 1 && prev.has(groupKey)) {
-                return new Set(Object.keys(systemGroupingStyles));
+            const allGroups = Object.keys(systemGroupingStyles);
+            const allActive = prev.size === allGroups.length;
+            
+            // If all groups are active (no filter), start a new selection with just this group
+            if (allActive) {
+                return new Set([groupKey]);
             }
-            // Otherwise, show only this group
-            return new Set([groupKey]);
+            
+            // Otherwise, toggle the group in the current selection
+            const newGroups = new Set(prev);
+            
+            if (newGroups.has(groupKey)) {
+                // Remove the group
+                newGroups.delete(groupKey);
+                // If no groups left, show all
+                if (newGroups.size === 0) {
+                    return new Set(allGroups);
+                }
+            } else {
+                // Add the group
+                newGroups.add(groupKey);
+            }
+            
+            return newGroups;
         });
     };
 
