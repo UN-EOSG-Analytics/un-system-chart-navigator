@@ -1,6 +1,7 @@
 'use client';
 
 import EntitiesGrid from '@/components/EntitiesGrid';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Suspense, useRef } from 'react';
 
 export default function Home() {
@@ -22,13 +23,22 @@ export default function Home() {
                             className="group inline-flex items-start gap-2 transition-all duration-200 cursor-pointer bg-transparent border-none p-0 text-left"
                             aria-label="Reset filters and return to home view"
                         >
-                            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 group-hover:text-un-blue transition-colors leading-tight">
+                            <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground group-hover:text-un-blue transition-colors leading-tight">
                                 UN System
                             </span>
-                            <span className="text-3xl sm:text-4xl lg:text-5xl font-normal text-gray-700 group-hover:text-un-blue transition-colors leading-tight">
+                            <span className="text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground group-hover:text-un-blue transition-colors leading-tight">
                                 Chart
                             </span>
-                            <sup className="text-base sm:text-lg text-gray-500 group-hover:text-un-blue font-normal mt-4 -ml-1 transition-colors">alpha</sup>
+                            <Tooltip delayDuration={300}>
+                                <TooltipTrigger asChild>
+                                    <sup className="text-base sm:text-lg text-gray-600 group-hover:text-un-blue font-normal mt-4 -ml-0.5 transition-colors cursor-help">
+                                        alpha
+                                    </sup>
+                                </TooltipTrigger>
+                                <TooltipContent side="right" className="bg-white text-slate-800 border border-slate-200 ml-2">
+                                    <p className="text-sm">This is an experimental version in active development.</p>
+                                </TooltipContent>
+                            </Tooltip>
                         </button>
                     </h1>
                     <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-relaxed">

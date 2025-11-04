@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
-  /* Custom fonts - Roboto is applied via next/font in layout.tsx */
-  --font-roboto: Roboto, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
   /* Custom color palette */
   --color-un-blue: #009edb;
@@ -21,6 +22,11 @@
   --color-un-system-red: #fec99d;
   --color-un-system-blue: #c5dfea;
   --color-un-system-dark-gray: #cbcccb;
+}
+
+:root {
+  --background: white;
+  --foreground: black;
 }
 
 /* Prevent layout shifts by always showing scrollbar */
