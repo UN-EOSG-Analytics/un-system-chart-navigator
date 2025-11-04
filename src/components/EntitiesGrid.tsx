@@ -219,7 +219,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
         })
         .sort((a: Entity, b: Entity) => {
             if (groupingMode === 'principal-organ') {
-                // Sort by principal organ order, then alphabetically
+                // Sort by principal organ order, then system grouping, then alphabetically
                 const aNormalized = normalizePrincipalOrgan(a.un_principal_organ);
                 const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
                 
@@ -235,7 +235,14 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                     return orderA - orderB;
                 }
                 
-                // Within the same organ, sort alphabetically but put "Other" at the end
+                // Within the same organ, sort by system grouping first
+                if (a.system_grouping !== b.system_grouping) {
+                    const orderA = getSystemGroupingStyle(a.system_grouping).order;
+                    const orderB = getSystemGroupingStyle(b.system_grouping).order;
+                    return orderA - orderB;
+                }
+                
+                // Within the same system grouping, sort alphabetically but put "Other" at the end
                 const aIsOther = a.entity === 'Other';
                 const bIsOther = b.entity === 'Other';
                 if (aIsOther && !bIsOther) return 1;
