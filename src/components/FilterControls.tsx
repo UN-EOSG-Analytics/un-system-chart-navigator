@@ -2,6 +2,7 @@
 
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
+import { getSortedPrincipalOrgans } from '@/lib/principalOrgans';
 import { Entity } from '@/types/entity';
 import { Check, Filter, Search, X } from 'lucide-react';
 import { useState } from 'react';
@@ -9,6 +10,10 @@ import { useState } from 'react';
 interface FilterControlsProps {
     activeGroups: Set<string>;
     onToggleGroup: (groupKey: string) => void;
+    groupingMode: 'system' | 'principal-organ';
+    onGroupingModeChange: (mode: 'system' | 'principal-organ') => void;
+    activePrincipalOrgans: Set<string>;
+    onTogglePrincipalOrgan: (organ: string) => void;
     entities: Entity[];
     searchQuery: string;
     onSearchChange: (query: string) => void;
@@ -19,6 +24,8 @@ interface FilterControlsProps {
 export default function FilterControls({
     activeGroups,
     onToggleGroup,
+    selectedPrincipalOrgan,
+    onPrincipalOrganSelect,
     entities,
     searchQuery,
     onSearchChange,
@@ -26,6 +33,7 @@ export default function FilterControls({
     visibleEntitiesCount
 }: FilterControlsProps) {
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+    const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] = useState(false);
 
     // Count entities for each group
     const groupCounts = entities.reduce((acc, entity) => {
@@ -40,7 +48,7 @@ export default function FilterControls({
     const sortedGroups = getSortedSystemGroupings();
 
     // Check if reset is needed
-    const isResetNeeded = searchQuery.trim() !== '' || !allGroupsActive;
+    const isResetNeeded = searchQuery.trim() !== '' || !allGroupsActive || selectedPrincipalOrgan !== null;
 
     // Get filter button text
     const getFilterText = () => {
@@ -119,6 +127,62 @@ export default function FilterControls({
                                         </span>
                                         <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
                                             {showCheckmark && (
+                                                <Check className="h-4 w-4 text-un-blue" />
+                                            )}
+                                        </div>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </PopoverContent>
+                </Popover>
+
+                {/* Principal Organ Filter Popover */}
+                <Popover open={isPrincipalOrganPopoverOpen} onOpenChange={setIsPrincipalOrganPopoverOpen}>
+                    <PopoverTrigger asChild>
+                        <button
+                            className={`
+                                relative w-full sm:w-64 md:w-72 h-12 sm:h-10 
+                                flex items-center gap-3 px-3 
+                                border rounded-lg 
+                                text-base text-gray-700
+                                touch-manipulation transition-colors
+                                ${selectedPrincipalOrgan 
+                                    ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
+                                    : 'bg-white border-gray-200 hover:border-gray-300'
+                                }
+                            `}
+                            aria-label="Group by principal organ"
+                        >
+                            <Filter className={`h-4 w-4 ${selectedPrincipalOrgan ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <span className={selectedPrincipalOrgan ? 'text-un-blue' : 'text-gray-500'}>
+                                {selectedPrincipalOrgan ? selectedPrincipalOrgan : 'Group by Principal Organ...'}
+                            </span>
+                        </button>
+                    </PopoverTrigger>
+                    <PopoverContent 
+                        className="w-[26rem] p-1 bg-white border-0 shadow-lg"
+                        align="start"
+                        sideOffset={4}
+                    >
+                        <div>
+                            {getSortedPrincipalOrgans().map(([organKey, config]) => {
+                                const isSelected = selectedPrincipalOrgan === organKey;
+                                
+                                return (
+                                    <button
+                                        key={organKey}
+                                        onClick={() => {
+                                            onPrincipalOrganSelect(organKey);
+                                            setIsPrincipalOrganPopoverOpen(false);
+                                        }}
+                                        className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
+                                    >
+                                        <span className="text-sm flex-1 text-gray-600">
+                                            {config.label}
+                                        </span>
+                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                                            {isSelected && (
                                                 <Check className="h-4 w-4 text-un-blue" />
                                             )}
                                         </div>

@@ -3,6 +3,7 @@
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { getAllEntities, searchEntities } from '@/lib/entities';
 import { getSystemGroupingStyle, systemGroupingStyles } from '@/lib/systemGroupings';
+import { normalizePrincipalOrgan, principalOrganConfigs } from '@/lib/principalOrgans';
 import { createEntitySlug } from '@/lib/utils';
 import { Entity } from '@/types/entity';
 import { Check, Download, FileJson, FileText, Link } from 'lucide-react';
@@ -56,6 +57,8 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const entities = getAllEntities();
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
+    const [groupingMode, setGroupingMode] = useState<'system' | 'principal-organ'>('system');
+    const [selectedPrincipalOrgan, setSelectedPrincipalOrgan] = useState<string | null>(null);
     const [showDownloadOptions, setShowDownloadOptions] = useState<boolean>(false);
     const [copiedFormat, setCopiedFormat] = useState<string | null>(null);
     const [showCopiedToast, setShowCopiedToast] = useState<boolean>(false);
@@ -138,6 +141,8 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const handleReset = () => {
         setSearchQuery('');
         setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
+        setSelectedPrincipalOrgan(null);
+        setGroupingMode('system');
     };
 
     const handleCopyLink = (format: string, url: string) => {
@@ -170,41 +175,106 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
         toggleGroup
     }));
 
+    // Effect to switch grouping mode when principal organ is selected
+    useEffect(() => {
+        if (selectedPrincipalOrgan) {
+            setGroupingMode('principal-organ');
+        } else {
+            setGroupingMode('system');
+        }
+    }, [selectedPrincipalOrgan]);
+
     // Filter and sort entities
     const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
-        .filter((entity: Entity) => activeGroups.has(entity.system_grouping))
-        .sort((a: Entity, b: Entity) => {
-            // First sort by group order defined in systemGroupingStyles
-            if (a.system_grouping !== b.system_grouping) {
-                const orderA = getSystemGroupingStyle(a.system_grouping).order;
-                const orderB = getSystemGroupingStyle(b.system_grouping).order;
-                return orderA - orderB;
+        .filter((entity: Entity) => {
+            // Filter by system grouping
+            if (!activeGroups.has(entity.system_grouping)) return false;
+            
+            // Filter by principal organ if one is selected
+            if (selectedPrincipalOrgan) {
+                const normalizedOrgan = normalizePrincipalOrgan(entity.un_principal_organ);
+                // Handle arrays and single values
+                if (Array.isArray(normalizedOrgan)) {
+                    return normalizedOrgan.includes(selectedPrincipalOrgan);
+                }
+                return normalizedOrgan === selectedPrincipalOrgan;
             }
-            // Within the same group, sort alphabetically but put "Other" at the end
-            const aIsOther = a.entity === 'Other';
-            const bIsOther = b.entity === 'Other';
-
-            if (aIsOther && !bIsOther) return 1;  // a is "Other", put it after b
-            if (!aIsOther && bIsOther) return -1; // b is "Other", put it after a
-
-            // Both are "Other" or neither is "Other", sort alphabetically
-            return a.entity.localeCompare(b.entity);
+            
+            return true;
+        })
+        .sort((a: Entity, b: Entity) => {
+            if (groupingMode === 'principal-organ') {
+                // Sort by principal organ order, then alphabetically
+                const aNormalized = normalizePrincipalOrgan(a.un_principal_organ);
+                const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
+                
+                // Get primary organ for each entity (first one if array)
+                const aOrgan = Array.isArray(aNormalized) ? aNormalized[0] : aNormalized;
+                const bOrgan = Array.isArray(bNormalized) ? bNormalized[0] : bNormalized;
+                
+                if (aOrgan !== bOrgan) {
+                    const aConfig = principalOrganConfigs[aOrgan || ''];
+                    const bConfig = principalOrganConfigs[bOrgan || ''];
+                    const orderA = aConfig?.order ?? 999;
+                    const orderB = bConfig?.order ?? 999;
+                    return orderA - orderB;
+                }
+                
+                // Within the same organ, sort alphabetically but put "Other" at the end
+                const aIsOther = a.entity === 'Other';
+                const bIsOther = b.entity === 'Other';
+                if (aIsOther && !bIsOther) return 1;
+                if (!aIsOther && bIsOther) return -1;
+                return a.entity.localeCompare(b.entity);
+            } else {
+                // Sort by system grouping order, then alphabetically
+                if (a.system_grouping !== b.system_grouping) {
+                    const orderA = getSystemGroupingStyle(a.system_grouping).order;
+                    const orderB = getSystemGroupingStyle(b.system_grouping).order;
+                    return orderA - orderB;
+                }
+                
+                // Within the same group, sort alphabetically but put "Other" at the end
+                const aIsOther = a.entity === 'Other';
+                const bIsOther = b.entity === 'Other';
+                if (aIsOther && !bIsOther) return 1;
+                if (!aIsOther && bIsOther) return -1;
+                return a.entity.localeCompare(b.entity);
+            }
         });
 
-    // Group entities by system_grouping
+    // Group entities based on current grouping mode
     const groupedEntities = visibleEntities.reduce((acc: Record<string, Entity[]>, entity: Entity) => {
-        if (!acc[entity.system_grouping]) {
-            acc[entity.system_grouping] = [];
+        let groupKey: string;
+        
+        if (groupingMode === 'principal-organ') {
+            const normalized = normalizePrincipalOrgan(entity.un_principal_organ);
+            // Use first organ if array, or the organ itself
+            groupKey = Array.isArray(normalized) ? (normalized[0] || 'Other') : (normalized || 'Other');
+        } else {
+            groupKey = entity.system_grouping;
         }
-        acc[entity.system_grouping].push(entity);
+        
+        if (!acc[groupKey]) {
+            acc[groupKey] = [];
+        }
+        acc[groupKey].push(entity);
         return acc;
     }, {});
 
-    // Get sorted group keys based on the order defined in systemGroupingStyles
+    // Get sorted group keys based on the current grouping mode
     const sortedGroupKeys = Object.keys(groupedEntities).sort((a, b) => {
-        const orderA = getSystemGroupingStyle(a).order;
-        const orderB = getSystemGroupingStyle(b).order;
-        return orderA - orderB;
+        if (groupingMode === 'principal-organ') {
+            const aConfig = principalOrganConfigs[a];
+            const bConfig = principalOrganConfigs[b];
+            const orderA = aConfig?.order ?? 999;
+            const orderB = bConfig?.order ?? 999;
+            return orderA - orderB;
+        } else {
+            const orderA = getSystemGroupingStyle(a).order;
+            const orderB = getSystemGroupingStyle(b).order;
+            return orderA - orderB;
+        }
     });
 
     return (
@@ -213,6 +283,9 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
             <FilterControls
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}
+                groupingMode={groupingMode}
+                selectedPrincipalOrgan={selectedPrincipalOrgan}
+                onPrincipalOrganSelect={setSelectedPrincipalOrgan}
                 entities={entities}
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
@@ -223,13 +296,17 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
             {/* Entities Grid with Group Headings */}
             <div className="space-y-8">
                 {sortedGroupKeys.map((groupKey) => {
-                    const groupStyle = getSystemGroupingStyle(groupKey);
+                    // Get the appropriate style/label based on grouping mode
+                    const groupLabel = groupingMode === 'principal-organ' 
+                        ? (principalOrganConfigs[groupKey]?.label || groupKey)
+                        : getSystemGroupingStyle(groupKey).label;
+                    
                     return (
                         <div key={groupKey} className="animate-in fade-in slide-in-from-bottom-4">
                             {/* Group Heading */}
                             <div className="mb-4">
                                 <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-0.5">
-                                    {groupStyle.label}
+                                    {groupLabel}
                                 </h2>
                                 <div className="h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
                             </div>
