@@ -168,10 +168,19 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     };
 
     const handleReset = () => {
+        // Full reset including mode - used when clicking home header
         setSearchQuery('');
         setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
         setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
         setGroupingMode('system');
+    };
+    
+    const handleFilterReset = () => {
+        // Partial reset preserving mode - used by reset button
+        setSearchQuery('');
+        setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
+        setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
+        // Don't reset grouping mode - preserve user's view preference
     };
 
     const handleCopyLink = (format: string, url: string) => {
@@ -312,7 +321,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 entities={entities}
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
-                onReset={handleReset}
+                onReset={handleFilterReset}
                 visibleEntitiesCount={visibleEntities.length}
             />
 
