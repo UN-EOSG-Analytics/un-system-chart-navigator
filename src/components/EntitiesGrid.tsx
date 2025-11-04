@@ -173,6 +173,22 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
             return a.entity.localeCompare(b.entity);
         });
 
+    // Group entities by system_grouping
+    const groupedEntities = visibleEntities.reduce((acc: Record<string, Entity[]>, entity: Entity) => {
+        if (!acc[entity.system_grouping]) {
+            acc[entity.system_grouping] = [];
+        }
+        acc[entity.system_grouping].push(entity);
+        return acc;
+    }, {});
+
+    // Get sorted group keys based on the order defined in systemGroupingStyles
+    const sortedGroupKeys = Object.keys(groupedEntities).sort((a, b) => {
+        const orderA = getSystemGroupingStyle(a).order;
+        const orderB = getSystemGroupingStyle(b).order;
+        return orderA - orderB;
+    });
+
     return (
         <div className="w-full">
             {/* Search and Filter Controls */}
@@ -186,15 +202,33 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 visibleEntitiesCount={visibleEntities.length}
             />
 
-            {/* Entities Grid */}
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full transition-all duration-1000 ease-out">
-                {visibleEntities.map((entity: Entity) => (
-                    <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
-                ))}
+            {/* Entities Grid with Group Headings */}
+            <div className="space-y-8">
+                {sortedGroupKeys.map((groupKey) => {
+                    const groupStyle = getSystemGroupingStyle(groupKey);
+                    return (
+                        <div key={groupKey} className="animate-in fade-in slide-in-from-bottom-4">
+                            {/* Group Heading */}
+                            <div className="mb-4">
+                                <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-0.5">
+                                    {groupStyle.label}
+                                </h2>
+                                <div className="h-px bg-gradient-to-r from-gray-300 via-gray-200 to-transparent"></div>
+                            </div>
+                            
+                            {/* Group Grid */}
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
+                                {groupedEntities[groupKey].map((entity: Entity) => (
+                                    <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
+                                ))}
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
 
             {/* Footer with Date and Download Links */}
-            <div className="mt-4 flex items-center gap-2 text-base">
+            <div className="mt-8 mb-5 flex items-center gap-2 text-base">
                 <p className="text-gray-600">As of October 2025</p>
                 <span className="text-gray-400">|</span>
                 <div className="relative" ref={downloadRef}>
@@ -223,7 +257,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                                 </a>
                                 <button
                                     onClick={() => handleCopyLink('json', `${window.location.origin}/un-entities.json`)}
-                                    className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
+                                    className="w-8 flex items-center justify-center text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
                                     title="Copy link to JSON"
                                     aria-label="Copy link to JSON file"
                                 >
@@ -247,7 +281,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                                 </a>
                                 <button
                                     onClick={() => handleCopyLink('csv', `${window.location.origin}/un-entities.csv`)}
-                                    className="w-8 flex items-center justify-center text-gray-400 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
+                                    className="w-8 flex items-center justify-center text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
                                     title="Copy link to CSV"
                                     aria-label="Copy link to CSV file"
                                 >
