@@ -58,7 +58,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const [activeGroups, setActiveGroups] = useState<Set<string>>(new Set(Object.keys(systemGroupingStyles)));
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [groupingMode, setGroupingMode] = useState<'system' | 'principal-organ'>('system');
-    const [selectedPrincipalOrgan, setSelectedPrincipalOrgan] = useState<string | null>(null);
+    const [activePrincipalOrgans, setActivePrincipalOrgans] = useState<Set<string>>(new Set(Object.keys(principalOrganConfigs)));
     const [showDownloadOptions, setShowDownloadOptions] = useState<boolean>(false);
     const [copiedFormat, setCopiedFormat] = useState<string | null>(null);
     const [showCopiedToast, setShowCopiedToast] = useState<boolean>(false);
@@ -133,6 +133,35 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
         });
     };
 
+    const togglePrincipalOrgan = (organKey: string) => {
+        setActivePrincipalOrgans(prev => {
+            const allOrgans = Object.keys(principalOrganConfigs);
+            const allActive = prev.size === allOrgans.length;
+            
+            // If all organs are active (no filter), start a new selection with just this organ
+            if (allActive) {
+                return new Set([organKey]);
+            }
+            
+            // Otherwise, toggle the organ in the current selection
+            const newOrgans = new Set(prev);
+            
+            if (newOrgans.has(organKey)) {
+                // Remove the organ
+                newOrgans.delete(organKey);
+                // If no organs left, show all
+                if (newOrgans.size === 0) {
+                    return new Set(allOrgans);
+                }
+            } else {
+                // Add the organ
+                newOrgans.add(organKey);
+            }
+            
+            return newOrgans;
+        });
+    };
+
     const handleEntityClick = (entitySlug: string) => {
         // Update URL without navigation to prevent page jumping
         router.replace(`/?entity=${entitySlug}`, { scroll: false });
@@ -141,7 +170,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
     const handleReset = () => {
         setSearchQuery('');
         setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
-        setSelectedPrincipalOrgan(null);
+        setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
         setGroupingMode('system');
     };
 
@@ -175,30 +204,16 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
         toggleGroup
     }));
 
-    // Effect to switch grouping mode when principal organ is selected
-    useEffect(() => {
-        if (selectedPrincipalOrgan) {
-            setGroupingMode('principal-organ');
-        } else {
-            setGroupingMode('system');
-        }
-    }, [selectedPrincipalOrgan]);
-
     // Filter and sort entities
     const visibleEntities = (searchQuery.trim() ? searchEntities(searchQuery) : entities)
         .filter((entity: Entity) => {
             // Filter by system grouping
             if (!activeGroups.has(entity.system_grouping)) return false;
             
-            // Filter by principal organ if one is selected
-            if (selectedPrincipalOrgan) {
-                const normalizedOrgan = normalizePrincipalOrgan(entity.un_principal_organ);
-                // Handle arrays and single values
-                if (Array.isArray(normalizedOrgan)) {
-                    return normalizedOrgan.includes(selectedPrincipalOrgan);
-                }
-                return normalizedOrgan === selectedPrincipalOrgan;
-            }
+            // Filter by principal organ - check if entity's organ is in active set
+            const normalizedOrgan = normalizePrincipalOrgan(entity.un_principal_organ);
+            const organToCheck = Array.isArray(normalizedOrgan) ? (normalizedOrgan[0] || 'Other') : (normalizedOrgan || 'Other');
+            if (!activePrincipalOrgans.has(organToCheck)) return false;
             
             return true;
         })
@@ -284,8 +299,9 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                 activeGroups={activeGroups}
                 onToggleGroup={toggleGroup}
                 groupingMode={groupingMode}
-                selectedPrincipalOrgan={selectedPrincipalOrgan}
-                onPrincipalOrganSelect={setSelectedPrincipalOrgan}
+                onGroupingModeChange={setGroupingMode}
+                activePrincipalOrgans={activePrincipalOrgans}
+                onTogglePrincipalOrgan={togglePrincipalOrgan}
                 entities={entities}
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
@@ -294,33 +310,39 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
             />
 
             {/* Entities Grid with Group Headings */}
-            <div className="space-y-8">
-                {sortedGroupKeys.map((groupKey) => {
-                    // Get the appropriate style/label based on grouping mode
-                    const groupLabel = groupingMode === 'principal-organ' 
-                        ? (principalOrganConfigs[groupKey]?.label || groupKey)
-                        : getSystemGroupingStyle(groupKey).label;
-                    
-                    return (
-                        <div key={groupKey} className="animate-in fade-in slide-in-from-bottom-4">
-                            {/* Group Heading */}
-                            <div className="mb-4">
-                                <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-0.5">
-                                    {groupLabel}
-                                </h2>
-                                <div className="h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
+            {visibleEntities.length === 0 ? (
+                <div className="text-center py-12">
+                    <p className="text-gray-500 text-lg">No entities match the current filters.</p>
+                </div>
+            ) : (
+                <div className="space-y-8">
+                    {sortedGroupKeys.map((groupKey) => {
+                        // Get the appropriate style/label based on grouping mode
+                        const groupLabel = groupingMode === 'principal-organ' 
+                            ? (principalOrganConfigs[groupKey]?.label || groupKey)
+                            : getSystemGroupingStyle(groupKey).label;
+                        
+                        return (
+                            <div key={groupKey} className="animate-in fade-in slide-in-from-bottom-4">
+                                {/* Group Heading */}
+                                <div className="mb-4">
+                                    <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-0.5">
+                                        {groupLabel}
+                                    </h2>
+                                    <div className="h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
+                                </div>
+                                
+                                {/* Group Grid */}
+                                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
+                                    {groupedEntities[groupKey].map((entity: Entity) => (
+                                        <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
+                                    ))}
+                                </div>
                             </div>
-                            
-                            {/* Group Grid */}
-                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-2 sm:gap-3 w-full">
-                                {groupedEntities[groupKey].map((entity: Entity) => (
-                                    <EntityCard key={entity.entity} entity={entity} onEntityClick={handleEntityClick} />
-                                ))}
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
+                        );
+                    })}
+                </div>
+            )}
 
             {/* Footer with Date and Download Links */}
             <div className="mt-8 mb-5 flex items-center gap-2 text-base">

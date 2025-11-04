@@ -1,8 +1,9 @@
 'use client';
 
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
-import { getSortedPrincipalOrgans } from '@/lib/principalOrgans';
+import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { Entity } from '@/types/entity';
 import { Check, Filter, Search, X } from 'lucide-react';
 import { useState } from 'react';
@@ -24,8 +25,10 @@ interface FilterControlsProps {
 export default function FilterControls({
     activeGroups,
     onToggleGroup,
-    selectedPrincipalOrgan,
-    onPrincipalOrganSelect,
+    groupingMode,
+    onGroupingModeChange,
+    activePrincipalOrgans,
+    onTogglePrincipalOrgan,
     entities,
     searchQuery,
     onSearchChange,
@@ -43,12 +46,15 @@ export default function FilterControls({
 
     // Check if all groups are active (showing all) or only specific ones are filtered
     const allGroupsActive = activeGroups.size === Object.keys(systemGroupingStyles).length;
+    
+    // Check if all principal organs are active
+    const allPrincipalOrgansActive = activePrincipalOrgans.size === Object.keys(principalOrganConfigs).length;
 
     // Sort groups by their order
     const sortedGroups = getSortedSystemGroupings();
 
     // Check if reset is needed
-    const isResetNeeded = searchQuery.trim() !== '' || !allGroupsActive || selectedPrincipalOrgan !== null;
+    const isResetNeeded = searchQuery.trim() !== '' || !allGroupsActive || !allPrincipalOrgansActive;
 
     // Get filter button text
     const getFilterText = () => {
@@ -59,9 +65,18 @@ export default function FilterControls({
         return `${count} group${count !== 1 ? 's' : ''} selected`;
     };
 
+    // Get principal organ filter button text
+    const getPrincipalOrganFilterText = () => {
+        if (allPrincipalOrgansActive) {
+            return 'Filter Principal Organs...';
+        }
+        const count = activePrincipalOrgans.size;
+        return `${count} organ${count !== 1 ? 's' : ''} selected`;
+    };
+
     return (
-        <div className="flex flex-col gap-2 mb-4 sm:mb-6">
-            {/* Filter Controls Row */}
+        <div className="flex flex-col gap-3 mb-4 sm:mb-6">
+            {/* Search and Filter Controls Row */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 sm:items-end">
                 {/* Search Input */}
                 <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
@@ -147,16 +162,16 @@ export default function FilterControls({
                                 border rounded-lg 
                                 text-base text-gray-700
                                 touch-manipulation transition-colors
-                                ${selectedPrincipalOrgan 
+                                ${!allPrincipalOrgansActive 
                                     ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
                                     : 'bg-white border-gray-200 hover:border-gray-300'
                                 }
                             `}
-                            aria-label="Group by principal organ"
+                            aria-label="Filter entities by principal organ"
                         >
-                            <Filter className={`h-4 w-4 ${selectedPrincipalOrgan ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={selectedPrincipalOrgan ? 'text-un-blue' : 'text-gray-500'}>
-                                {selectedPrincipalOrgan ? selectedPrincipalOrgan : 'Group by Principal Organ...'}
+                            <Filter className={`h-4 w-4 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <span className={!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}>
+                                {getPrincipalOrganFilterText()}
                             </span>
                         </button>
                     </PopoverTrigger>
@@ -167,22 +182,21 @@ export default function FilterControls({
                     >
                         <div>
                             {getSortedPrincipalOrgans().map(([organKey, config]) => {
-                                const isSelected = selectedPrincipalOrgan === organKey;
+                                const isSelected = activePrincipalOrgans.has(organKey);
+                                // Only show checkmark if we're in filtered mode (not all organs active)
+                                const showCheckmark = !allPrincipalOrgansActive && isSelected;
                                 
                                 return (
                                     <button
                                         key={organKey}
-                                        onClick={() => {
-                                            onPrincipalOrganSelect(organKey);
-                                            setIsPrincipalOrganPopoverOpen(false);
-                                        }}
+                                        onClick={() => onTogglePrincipalOrgan(organKey)}
                                         className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
                                     >
                                         <span className="text-sm flex-1 text-gray-600">
                                             {config.label}
                                         </span>
                                         <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
-                                            {isSelected && (
+                                            {showCheckmark && (
                                                 <Check className="h-4 w-4 text-un-blue" />
                                             )}
                                         </div>
@@ -217,6 +231,24 @@ export default function FilterControls({
                     </div>
                 </div>
             </div>
+
+            {/* Grouping Mode Tabs Row */}
+            <Tabs value={groupingMode} onValueChange={(value) => onGroupingModeChange(value as 'system' | 'principal-organ')}>
+                <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-gray-100 h-12 sm:h-10">
+                    <TabsTrigger 
+                        value="system"
+                        className="data-[state=active]:bg-un-blue data-[state=active]:text-white"
+                    >
+                        By System Group
+                    </TabsTrigger>
+                    <TabsTrigger 
+                        value="principal-organ"
+                        className="data-[state=active]:bg-un-blue data-[state=active]:text-white"
+                    >
+                        By Principal Organ
+                    </TabsTrigger>
+                </TabsList>
+            </Tabs>
 
             {/* Entity Count - wraps down on medium and smaller screens */}
             <div className="lg:hidden text-left text-gray-400 text-xs sm:text-sm transition-opacity duration-500 whitespace-nowrap">
