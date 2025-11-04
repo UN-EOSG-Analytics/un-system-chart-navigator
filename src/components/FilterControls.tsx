@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/select';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Search, X } from 'lucide-react';
+import { Filter, Search, X } from 'lucide-react';
 
 interface FilterControlsProps {
     activeGroups: Set<string>;
@@ -72,11 +72,10 @@ export default function FilterControls({
     // Get display text for the current selection
     const getDisplayText = () => {
         if (allGroupsActive) {
-            const totalEntities = entities.length;
             return (
                 <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0 ml-3"></div>
-                    <span className="font-medium text-base">All Groups ({totalEntities})</span>
+                    <Filter className="h-4 w-4 text-gray-500" />
+                    <span className="text-base text-gray-500">Filter System Group...</span>
                 </div>
             );
         }
@@ -87,16 +86,16 @@ export default function FilterControls({
             const count = groupCounts[activeGroup] || 0;
             return (
                 <div className="flex items-center gap-3">
-                    <div className={`${styles.bgColor} w-5 h-5 rounded flex-shrink-0 ml-3`}></div>
-                    <span className="font-medium text-base">{styles.label} ({count})</span>
+                    <div className={`${styles.bgColor} w-5 h-5 rounded flex-shrink-0`}></div>
+                    <span className="text-base">{styles.label} ({count})</span>
                 </div>
             );
         }
 
         return (
             <div className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded bg-un-blue flex-shrink-0 ml-3"></div>
-                <span className="font-medium">All Groups ({entities.length})</span>
+                <Filter className="h-4 w-4 text-gray-500" />
+                <span className="text-base text-gray-500">Filter System Group...</span>
             </div>
         );
     };
@@ -112,7 +111,7 @@ export default function FilterControls({
                 <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
                     <label htmlFor="entity-search" className="sr-only">Search for entities</label>
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Search className="h-4 w-4 text-gray-600" aria-hidden="true" />
+                        <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
                     </div>
                     <input
                         type="text"
@@ -120,25 +119,25 @@ export default function FilterControls({
                         placeholder="Search for entities..."
                         value={searchQuery}
                         onChange={(e) => onSearchChange(e.target.value)}
-                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-base rounded-none touch-manipulation"
+                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
                         aria-label="Search for UN entities by keyword"
                     />
                 </div>
 
                 {/* Filter Dropdown */}
-                <div className="relative w-full sm:w-[420px]">
+                <div className="relative w-full sm:w-64 md:w-72">
                     <Select value={getSelectedValue()} onValueChange={handleValueChange}>
                         <SelectTrigger 
-                            className="w-full h-12 sm:h-10 bg-transparent border-0 border-b border-gray-300 rounded-none focus:ring-0 focus:border-gray-400 hover:border-gray-400 focus:outline-none focus-visible:outline-none focus-visible:ring-0 px-0 py-2 transition-all duration-500 ease-out touch-manipulation" 
+                            className="w-full !h-12 sm:!h-10 bg-white border border-gray-200 rounded-lg focus:ring-0 focus:border-gray-300 hover:border-gray-300 focus:outline-none focus-visible:outline-none focus-visible:ring-0 !px-3 !py-0 transition-colors touch-manipulation !text-base text-gray-700 flex items-center" 
                             id="category-filter"
                             aria-label="Filter entities by category"
                         >
                             <SelectValue asChild>
-                                <span className="flex items-center transition-all duration-500 ease-out">{getDisplayText()}</span>
+                                <span className="flex items-center">{getDisplayText()}</span>
                             </SelectValue>
                         </SelectTrigger>
                         <SelectContent
-                            className="w-full min-w-[var(--radix-select-trigger-width)] bg-white border-gray-300 z-50 animate-in fade-in slide-in-from-top-2 duration-500"
+                            className="w-full min-w-[var(--radix-select-trigger-width)] bg-white border-0 z-50"
                             position="popper"
                             side="bottom"
                             align="start"
@@ -171,7 +170,7 @@ export default function FilterControls({
                     <button
                         onClick={onReset}
                         className="
-              flex items-center justify-center h-8 w-8 rounded-full
+              flex items-center justify-center h-12 sm:h-10 w-12 sm:w-10 rounded-lg
               transition-all duration-200 ease-out touch-manipulation
               text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
               focus:outline-none focus:bg-gray-400 focus:text-gray-100
