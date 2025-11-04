@@ -239,7 +239,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 {/* Logo */}
                 {entity!.entity_logo_available && (
                     <EntityLogo 
-                        logoUrl={`/images/logos/${entity!.entity}.svg`}
                         entityName={entity!.entity}
                         entityLong={entity!.entity_long}
                         className="h-12 sm:h-14 lg:h-16 w-auto max-w-48"
