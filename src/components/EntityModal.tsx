@@ -1,7 +1,7 @@
 'use client';
 
-import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/ui/PrincipalOrganField';
-import { SystemGroupingBadge } from '@/components/ui/SystemGroupingBadge';
+import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/PrincipalOrganField';
+import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
 // import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
 import { Entity } from '@/types/entity';
 import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
