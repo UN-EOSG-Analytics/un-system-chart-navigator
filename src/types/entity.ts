@@ -19,6 +19,8 @@ export interface Entity {
     global_leadership_team_url: string | null; // New field
     on_display: string; // "TRUE" or "FALSE" as string
     foundational_mandate: string | null;
+    entity_logo_url: string | null;
+    entity_logo_available: boolean | null;
     organizational_chart_link: string | null;
     budget_financial_reporting_link: string; // Can be "No link found"
     results_framework_link: string; // Can be "No link found"

@@ -2,7 +2,7 @@
 
 import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/PrincipalOrganField';
 import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
-// import EntityLogo from '@/components/EntityLogo'; // Hidden for now since the feature is not complete yet
+import EntityLogo from '@/components/EntityLogo';
 import { Entity } from '@/types/entity';
 import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
@@ -236,12 +236,15 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         // Full entity content - only if entity exists
         return (
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6">
-                {/* Logo - Hidden for now since the feature is not complete yet */}
-                {/* <EntityLogo 
-                    entityName={entity!.entity}
-                    entityLong={entity!.entity_long}
-                    className="h-12 sm:h-14 lg:h-16 w-auto max-w-48"
-                /> */}
+                {/* Logo */}
+                {entity!.entity_logo_available && (
+                    <EntityLogo 
+                        logoUrl={`/images/logos/${entity!.entity}.svg`}
+                        entityName={entity!.entity}
+                        entityLong={entity!.entity_long}
+                        className="h-12 sm:h-14 lg:h-16 w-auto max-w-48"
+                    />
+                )}
 
                 {/* Description */}
                 {entity!.entity_description && (
