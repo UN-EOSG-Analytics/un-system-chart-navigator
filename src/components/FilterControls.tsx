@@ -229,16 +229,16 @@ export default function FilterControls({
             {/* Grouping Mode Tabs Row with Entity Count */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                 <Tabs value={groupingMode} onValueChange={(value) => onGroupingModeChange(value as 'system' | 'principal-organ')}>
-                    <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-gray-100 h-12 sm:h-10">
+                    <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-white border border-gray-200 h-12 sm:h-10">
                         <TabsTrigger 
                             value="system"
-                            className="data-[state=active]:bg-un-blue data-[state=active]:text-white text-sm"
+                            className="data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue data-[state=active]:border-un-blue text-sm text-gray-500 border border-transparent rounded-md transition-colors"
                         >
                             By System Group
                         </TabsTrigger>
                         <TabsTrigger 
                             value="principal-organ"
-                            className="data-[state=active]:bg-un-blue data-[state=active]:text-white text-sm"
+                            className="data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue data-[state=active]:border-un-blue text-sm text-gray-500 border border-transparent rounded-md transition-colors"
                         >
                             By Principal Organ
                         </TabsTrigger>
