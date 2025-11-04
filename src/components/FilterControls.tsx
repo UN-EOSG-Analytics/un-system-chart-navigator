@@ -108,6 +108,25 @@ export default function FilterControls({
         <div className="flex flex-col gap-2 mb-4 sm:mb-6">
             {/* Filter Controls Row */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 sm:items-end">
+                {/* Search Input */}
+                <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
+                    <label htmlFor="entity-search" className="sr-only">Search for entities</label>
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg className="h-4 w-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <input
+                        type="text"
+                        id="entity-search"
+                        placeholder="Search for entities..."
+                        value={searchQuery}
+                        onChange={(e) => onSearchChange(e.target.value)}
+                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-base rounded-none touch-manipulation"
+                        aria-label="Search for UN entities by keyword"
+                    />
+                </div>
+
                 {/* Filter Dropdown */}
                 <div className="relative w-full sm:w-[420px]">
                     <Select value={getSelectedValue()} onValueChange={handleValueChange}>
@@ -147,25 +166,6 @@ export default function FilterControls({
                             })}
                         </SelectContent>
                     </Select>
-                </div>
-
-                {/* Search Input */}
-                <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
-                    <label htmlFor="entity-search" className="sr-only">Search for entities</label>
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-                    <input
-                        type="text"
-                        id="entity-search"
-                        placeholder="Search for entities..."
-                        value={searchQuery}
-                        onChange={(e) => onSearchChange(e.target.value)}
-                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border-0 border-b border-gray-300 bg-transparent placeholder-gray-400 focus:outline-none focus:border-gray-400 focus:ring-0 text-base rounded-none touch-manipulation"
-                        aria-label="Search for UN entities by keyword"
-                    />
                 </div>
 
                 {/* Reset Button - only show when there's something to reset */}
