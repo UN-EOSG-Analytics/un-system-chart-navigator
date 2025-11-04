@@ -77,9 +77,9 @@ export default function FilterControls({
     return (
         <div className="flex flex-col gap-3 mb-4 sm:mb-6">
             {/* Search and Filter Controls Row */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-2 sm:items-end">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-2 sm:items-end">
                 {/* Search Input */}
-                <div className="relative w-full sm:w-80 md:w-96 lg:w-[26rem]">
+                <div className="relative w-full sm:flex-1 sm:min-w-[24rem] md:w-96 lg:w-[26rem] sm:flex-shrink-0">
                     <label htmlFor="entity-search" className="sr-only">Search for entities</label>
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
@@ -100,7 +100,7 @@ export default function FilterControls({
                     <PopoverTrigger asChild>
                         <button
                             className={`
-                                relative w-full sm:w-64 md:w-72 h-12 sm:h-10 
+                                relative w-full sm:flex-1 sm:min-w-64 md:w-72 sm:flex-shrink-0 h-12 sm:h-10 
                                 flex items-center gap-3 px-3 
                                 border rounded-lg 
                                 text-base text-gray-700
@@ -112,8 +112,8 @@ export default function FilterControls({
                             `}
                             aria-label="Filter entities by system group"
                         >
-                            <Filter className={`h-4 w-4 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}>
+                            <Filter className={`h-4 w-4 flex-shrink-0 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <span className={`truncate flex-1 text-left ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`}>
                                 {getFilterText()}
                             </span>
                         </button>
@@ -157,7 +157,7 @@ export default function FilterControls({
                     <PopoverTrigger asChild>
                         <button
                             className={`
-                                relative w-full sm:w-64 md:w-72 h-12 sm:h-10 
+                                relative w-full sm:w-64 md:w-72 sm:flex-shrink-0 h-12 sm:h-10 
                                 flex items-center gap-3 px-3 
                                 border rounded-lg 
                                 text-base text-gray-700
@@ -169,8 +169,8 @@ export default function FilterControls({
                             `}
                             aria-label="Filter entities by principal organ"
                         >
-                            <Filter className={`h-4 w-4 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}>
+                            <Filter className={`h-4 w-4 flex-shrink-0 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <span className={`truncate flex-1 text-left ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`}>
                                 {getPrincipalOrganFilterText()}
                             </span>
                         </button>
@@ -237,13 +237,13 @@ export default function FilterControls({
                 <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-gray-100 h-12 sm:h-10">
                     <TabsTrigger 
                         value="system"
-                        className="data-[state=active]:bg-un-blue data-[state=active]:text-white"
+                        className="data-[state=active]:bg-un-blue data-[state=active]:text-white text-sm"
                     >
                         By System Group
                     </TabsTrigger>
                     <TabsTrigger 
                         value="principal-organ"
-                        className="data-[state=active]:bg-un-blue data-[state=active]:text-white"
+                        className="data-[state=active]:bg-un-blue data-[state=active]:text-white text-sm"
                     >
                         By Principal Organ
                     </TabsTrigger>
