@@ -342,10 +342,10 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
                             <div key={groupKey} className="animate-in fade-in slide-in-from-bottom-4">
                                 {/* Group Heading */}
                                 <div className="mb-4">
-                                    <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-0.5">
+                                    <div className="h-px bg-gradient-to-r from-un-blue via-un-blue/50 to-transparent mb-2"></div>
+                                    <h2 className="text-xl sm:text-2xl font-semibold text-foreground">
                                         {groupLabel}
                                     </h2>
-                                    <div className="h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
                                 </div>
                                 
                                 {/* Group Grid */}
