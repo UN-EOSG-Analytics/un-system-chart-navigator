@@ -43,3 +43,11 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* Remove focus rings globally */
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  --tw-ring-shadow: none !important;
+}
