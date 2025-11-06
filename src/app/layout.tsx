@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={roboto.className}>
-            <body className="antialiased">
+            <body className="antialiased flex flex-col min-h-screen">
                 <ErrorBoundary>
                     {children}
                     <Suspense fallback={null}>
