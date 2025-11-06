@@ -6,7 +6,7 @@ import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principal
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
 import { Check, ChevronDown, ChevronUp, Filter, Search, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface FilterControlsProps {
     activeGroups: Set<string>;
@@ -38,6 +38,20 @@ export default function FilterControls({
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] = useState(false);
     const [filtersExpanded, setFiltersExpanded] = useState(false);
+    
+    // Refs for search inputs
+    const mobileSearchRef = useRef<HTMLInputElement>(null);
+    const desktopSearchRef = useRef<HTMLInputElement>(null);
+
+    // Auto-focus search input on mount
+    useEffect(() => {
+        // Focus desktop search on larger screens, mobile on smaller
+        if (window.innerWidth >= 1024) {
+            desktopSearchRef.current?.focus();
+        } else {
+            mobileSearchRef.current?.focus();
+        }
+    }, []);
 
     // Count entities for each group
     const groupCounts = entities.reduce((acc, entity) => {
@@ -84,6 +98,7 @@ export default function FilterControls({
                     <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
                 </div>
                 <input
+                    ref={mobileSearchRef}
                     type="text"
                     id="entity-search"
                     placeholder="Search for entities..."
@@ -148,6 +163,7 @@ export default function FilterControls({
                         <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
                     </div>
                     <input
+                        ref={desktopSearchRef}
                         type="text"
                         id="entity-search-desktop"
                         placeholder="Search for entities..."
