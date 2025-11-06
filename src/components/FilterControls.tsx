@@ -289,7 +289,7 @@ export default function FilterControls({
             </div>
 
             {/* Grouping Mode Tabs Row with Entity Count */}
-            <div className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 ${filtersExpanded ? '-mt-1' : '-mt-3'} sm:mt-0`}>
+            <div className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 ${filtersExpanded ? '' : '-mt-3'} sm:mt-0`}>
                 <Tabs value={groupingMode} onValueChange={(value) => onGroupingModeChange(value as 'system' | 'principal-organ')}>
                     <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-white border border-gray-200 h-12 sm:h-10">
                         <TabsTrigger
