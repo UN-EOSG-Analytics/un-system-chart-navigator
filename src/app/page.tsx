@@ -21,22 +21,22 @@ export default function Home() {
             <main className="flex-grow w-full p-3 sm:p-4 lg:p-6">
                 <div className="w-full max-w-7xl mx-auto flex flex-col gap-4 sm:gap-6">
                     <div className="flex flex-col gap-3 mt-2 sm:mt-4">
-                        <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-center justify-between gap-2 sm:gap-4">
                             <h1 className="text-left">
                                 <button
                                     onClick={handleTitleClick}
-                                    className="group inline-flex items-start gap-2 transition-all duration-200 cursor-pointer bg-transparent border-none p-0 text-left"
+                                    className="group inline-flex flex-wrap items-center gap-x-1.5 sm:gap-x-2 gap-y-0 transition-all duration-200 cursor-pointer bg-transparent border-none p-0 text-left"
                                     aria-label="Reset filters and return to home view"
                                 >
-                                    <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground group-hover:text-un-blue transition-colors leading-tight">
+                                    <span className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground group-hover:text-un-blue transition-colors leading-tight whitespace-nowrap">
                                         UN System
                                     </span>
-                                    <span className="text-3xl sm:text-4xl lg:text-5xl font-normal text-foreground group-hover:text-un-blue transition-colors leading-tight">
+                                    <span className="text-2xl sm:text-4xl lg:text-5xl font-normal text-foreground group-hover:text-un-blue transition-colors leading-tight whitespace-nowrap">
                                         Chart
                                     </span>
                                     <Tooltip delayDuration={300}>
                                         <TooltipTrigger asChild>
-                                            <sup className="text-base sm:text-lg text-gray-600 group-hover:text-un-blue font-normal mt-4 -ml-0.5 transition-colors cursor-help">
+                                            <sup className="text-xs sm:text-base lg:text-lg text-gray-600 group-hover:text-un-blue font-normal mt-1 sm:mt-4 -ml-0.5 transition-colors cursor-help">
                                                 alpha
                                             </sup>
                                         </TooltipTrigger>
@@ -50,11 +50,11 @@ export default function Home() {
                                 href="/contribute"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 h-8 px-3 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 mt-1 font-normal"
+                                className="flex items-center justify-center gap-2 h-8 px-2 sm:px-3 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 mt-0.5 sm:mt-1 font-normal"
                                 aria-label="Contribute to the UN System Chart"
                             >
                                 <FileEdit className="h-4 w-4" />
-                                <span>Contribute</span>
+                                <span className="hidden sm:inline">Contribute</span>
                             </Link>
                         </div>
                         <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-snug sm:leading-relaxed">
