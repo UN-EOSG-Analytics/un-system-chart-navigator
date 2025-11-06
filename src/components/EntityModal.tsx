@@ -311,9 +311,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                         <div className="flex flex-col justify-center min-h-[5rem]">
                                                             <div>
                                                                 {/* Temporarily disabled link */}
-                                                                {/* {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                                {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
                                                                     <a
-                                                                        href={entity!.head_of_entity_bio}
+                                                                        href={entity!.head_of_entity_bio_link}
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
                                                                         className="text-un-blue hover:opacity-80 transition-opacity duration-200 text-base font-semibold underline decoration-1 underline-offset-2 leading-relaxed block"
@@ -335,9 +335,9 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                 return (
                                                     <div className="ml-0.5">
                                                         {/* Temporarily disabled link */}
-                                                        {/* {entity!.head_of_entity_bio && entity!.head_of_entity_bio.startsWith('https') ? (
+                                                        {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
                                                             <a
-                                                                href={entity!.head_of_entity_bio}
+                                                                href={entity!.head_of_entity_bio_link}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 className="text-un-blue hover:opacity-80 transition-opacity duration-200 text-base font-semibold underline decoration-1 underline-offset-2 leading-relaxed block"

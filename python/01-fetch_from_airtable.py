@@ -51,7 +51,7 @@ selected_columns = [
     "head_of_entity_title_specific",
     "head_of_entity_name",
     "head_of_entity_level",
-    "head_of_entity_bio",
+    "head_of_entity_bio_link",
     "head_of_entity_headshot",
     "global_leadership_team_url",
     "on_display",

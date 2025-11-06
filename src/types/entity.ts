@@ -14,7 +14,7 @@ export interface Entity {
     head_of_entity_title_specific: string | null; // Can be "Not applicable" or null
     head_of_entity_title_general: string; // Can be "Not applicable"
     head_of_entity_name: string; // Can be "Not applicable"
-    head_of_entity_bio: string | null;
+    head_of_entity_bio_link: string | null;
     head_of_entity_headshot: string | null; // New field
     global_leadership_team_url: string | null; // New field
     on_display: string; // "TRUE" or "FALSE" as string
