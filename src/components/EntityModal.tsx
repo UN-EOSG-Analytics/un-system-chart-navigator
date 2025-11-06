@@ -1,10 +1,10 @@
 'use client';
 
+import EntityLogo from '@/components/EntityLogo';
 import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/PrincipalOrganField';
 import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
-import EntityLogo from '@/components/EntityLogo';
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
+import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
@@ -238,7 +238,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6">
                 {/* Logo */}
                 {entity!.entity_logo_available && (
-                    <EntityLogo 
+                    <EntityLogo
                         entityName={entity!.entity}
                         entityLong={entity!.entity_long}
                         className="h-12 sm:h-14 lg:h-16 w-auto max-w-48"
@@ -276,7 +276,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                     // Check if there's any actual displayable leadership information
                     const hasName = entity!.head_of_entity_name && entity!.head_of_entity_name !== "Not applicable";
                     const hasLevel = entity!.head_of_entity_level && entity!.head_of_entity_level !== "Not applicable";
-                    
+
                     // Only show the section if there's at least a name or level to display
                     if (!hasName && !hasLevel) {
                         return null;
@@ -321,7 +321,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                                         {entity!.head_of_entity_name}
                                                                     </a>
                                                                 ) : ( */}
-                                                                    <span className="text-un-blue text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                                <span className="text-un-blue text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
                                                                 {/* )} */}
                                                                 {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
                                                                     <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
@@ -345,7 +345,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                                                 {entity!.head_of_entity_name}
                                                             </a>
                                                         ) : ( */}
-                                                            <span className="text-un-blue text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
+                                                        <span className="text-un-blue text-base font-semibold leading-relaxed block">{entity!.head_of_entity_name}</span>
                                                         {/* )} */}
                                                         {entity!.head_of_entity_title_specific && entity!.head_of_entity_title_specific !== "Not applicable" && (
                                                             <div className="text-gray-500 text-base leading-tight">{entity!.head_of_entity_title_specific}</div>
@@ -380,6 +380,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         isValidLink(entity!.budget_financial_reporting_link) ||
                         isValidLink(entity!.strategic_plan_link) ||
                         isValidLink(entity!.results_framework_link) ||
+                        isValidLink(entity!.organizational_chart_link) ||
                         isValidLink(entity!.entity_custom_mandate_registry);
 
                     if (!hasLinks) {
@@ -406,7 +407,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     const mandateUrl = isValidLink(entity!.entity_mandate_registry)
                                         ? entity!.entity_mandate_registry!
                                         : `https://mandates.un.org/entity/${entity!.entity.toUpperCase()}`;
-                                    
+
                                     return <LinkItem href={mandateUrl} icon={ScrollText} label="UN Mandate Source Registry" />;
                                 })()}
 
@@ -433,6 +434,11 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {/* Results Framework */}
                                 {isValidLink(entity!.results_framework_link) && (
                                     <LinkItem href={entity!.results_framework_link} icon={BarChart3} label="Results Framework" />
+                                )}
+
+                                {/* Organizational Chart */}
+                                {isValidLink(entity!.organizational_chart_link) && (
+                                    <LinkItem href={entity!.organizational_chart_link!} icon={Network} label="Organizational Chart" />
                                 )}
 
                                 {/* Data Page */}
