@@ -5,8 +5,8 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Boxes, Check, ChevronDown, ChevronUp, Filter, Landmark, Search, X } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { Boxes, Check, ChevronDown, ChevronUp, Filter, Landmark, RotateCcw, Search } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 interface FilterControlsProps {
     activeGroups: Set<string>;
@@ -38,7 +38,7 @@ export default function FilterControls({
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] = useState(false);
     const [filtersExpanded, setFiltersExpanded] = useState(false);
-    
+
     // Refs for search inputs
     const mobileSearchRef = useRef<HTMLInputElement>(null);
     const desktopSearchRef = useRef<HTMLInputElement>(null);
@@ -136,16 +136,17 @@ export default function FilterControls({
                     <button
                         onClick={onReset}
                         className="
-                            flex items-center justify-center gap-1.5 h-10 px-3 rounded-md
+                            flex items-center justify-center gap-1.5 h-10 px-3
+                            border border-gray-300 bg-gray-200 rounded-lg
                             transition-all duration-200 ease-out touch-manipulation
-                            text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
-                            focus:outline-none focus:bg-gray-400 focus:text-gray-100
+                            text-gray-700 hover:border-gray-400 hover:bg-gray-300
+                            focus:outline-none focus:border-gray-400 focus:bg-gray-300
                             text-sm font-medium flex-shrink-0
                         "
                         aria-label="Clear filters and search"
                         title="Clear filters and search"
                     >
-                        <X className="h-3.5 w-3.5" />
+                        <RotateCcw className="h-3.5 w-3.5" />
                         <span>Reset</span>
                     </button>
                 )}
@@ -291,15 +292,16 @@ export default function FilterControls({
                     <button
                         onClick={onReset}
                         className="
-              hidden lg:flex items-center justify-center h-10 w-10 rounded-lg
-              transition-all duration-200 ease-out touch-manipulation
-              text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
-              focus:outline-none focus:bg-gray-400 focus:text-gray-100
-            "
+                            hidden lg:flex items-center justify-center h-10 w-10
+                            border border-gray-300 bg-gray-200 rounded-lg
+                            transition-all duration-200 ease-out touch-manipulation
+                            text-gray-700 hover:border-gray-400 hover:bg-gray-300
+                            focus:outline-none focus:border-gray-400 focus:bg-gray-300
+                        "
                         aria-label="Clear filters and search"
                         title="Clear filters and search"
                     >
-                        <X className="h-3 w-3" />
+                        <RotateCcw className="h-4 w-4" />
                     </button>
                 )}
             </div>
