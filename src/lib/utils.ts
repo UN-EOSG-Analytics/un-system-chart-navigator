@@ -59,36 +59,58 @@ export function generateContributeUrl(entity?: Entity): string {
   
   const params = new URLSearchParams();
   
-  // Add all entity fields as prefill parameters
-  params.set('prefill_entity', entity.entity);
-  params.set('prefill_entity_long', entity.entity_long);
+  // Helper function to add parameter if value is not null/empty
+  const addParam = (key: string, value: string | number | boolean | null | undefined) => {
+    if (value !== null && value !== undefined && value !== '' && value !== 'Not applicable' && value !== 'Not found' && value !== 'No link found') {
+      params.set(`prefill_${key}`, String(value));
+    }
+  };
+  
+  // Always set form contribution type
   params.set('prefill_form_contribution', 'Edit existing Entity Data');
   
-  // Add other relevant fields
-  if (entity.entity_description) {
-    params.set('prefill_entity_description', entity.entity_description);
-  }
-  if (entity.entity_link) {
-    params.set('prefill_entity_link', entity.entity_link);
-  }
-  if (entity.system_grouping) {
-    params.set('prefill_system_grouping', entity.system_grouping);
-  }
-  if (entity.category) {
-    params.set('prefill_category', entity.category);
-  }
-  if (entity.un_principal_organ) {
-    const organValue = Array.isArray(entity.un_principal_organ) 
-      ? entity.un_principal_organ.join(', ') 
-      : entity.un_principal_organ;
-    params.set('prefill_un_principal_organ', organValue);
-  }
-  if (entity.head_of_entity_name && entity.head_of_entity_name !== 'Not applicable') {
-    params.set('prefill_head_of_entity_name', entity.head_of_entity_name);
-  }
-  if (entity.head_of_entity_title_specific && entity.head_of_entity_title_specific !== 'Not applicable') {
-    params.set('prefill_head_of_entity_title_specific', entity.head_of_entity_title_specific);
-  }
+  // Add all entity fields
+  addParam('edited_entity', entity.record_id);
+  addParam('entity', entity.entity);
+  addParam('entity_long', entity.entity_long);
+  addParam('entity_combined', entity.entity_combined);
+  addParam('entity_description', entity.entity_description);
+  addParam('entity_link', entity.entity_link);
+  addParam('entity_link_is_un_org', entity.entity_link_is_un_org);
+  addParam('system_grouping', entity.system_grouping);
+  addParam('category', entity.category);
+  addParam('un_principal_organ', entity.un_principal_organ);
+  addParam('un_pillar', entity.un_pillar);
+  addParam('is_ceb_member', entity.is_ceb_member);
+  addParam('head_of_entity_level', entity.head_of_entity_level);
+  addParam('head_of_entity_title_specific', entity.head_of_entity_title_specific);
+  addParam('head_of_entity_title_general', entity.head_of_entity_title_general);
+  addParam('head_of_entity_name', entity.head_of_entity_name);
+  addParam('head_of_entity_bio_link', entity.head_of_entity_bio_link);
+  addParam('head_of_entity_headshot_link', entity.head_of_entity_headshot_link);
+  addParam('global_leadership_team_url', entity.global_leadership_team_url);
+  addParam('foundational_mandate', entity.foundational_mandate);
+  addParam('entity_logo_url', entity.entity_logo_url);
+  addParam('entity_logo_available', entity.entity_logo_available);
+  addParam('organizational_chart_link', entity.organizational_chart_link);
+  addParam('budget_financial_reporting_link', entity.budget_financial_reporting_link);
+  addParam('results_framework_link', entity.results_framework_link);
+  addParam('strategic_plan_link', entity.strategic_plan_link);
+  addParam('annual_reports_link', entity.annual_reports_link);
+  addParam('transparency_portal_link', entity.transparency_portal_link);
+  addParam('socials_linkedin', entity.socials_linkedin);
+  addParam('socials_twitter', entity.socials_twitter);
+  addParam('socials_instagram', entity.socials_instagram);
+  addParam('entity_news_page', entity.entity_news_page);
+  addParam('entity_branding_page', entity.entity_branding_page);
+  addParam('entity_data_page', entity.entity_data_page);
+  addParam('entity_logo_page', entity.entity_logo_page);
+  addParam('entity_careers_page', entity.entity_careers_page);
+  addParam('entity_footnotes', entity.entity_footnotes);
+  addParam('is_primary_entity', entity.is_primary_entity);
+  addParam('entity_aliases', entity.entity_aliases);
+  addParam('entity_mandate_registry', entity.entity_mandate_registry);
+  addParam('entity_custom_mandate_registry', entity.entity_custom_mandate_registry);
   
   return `${baseUrl}?${params.toString()}`;
 }

@@ -3,8 +3,8 @@
 import EntityLogo from '@/components/EntityLogo';
 import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/PrincipalOrganField';
 import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
-import { Entity } from '@/types/entity';
 import { generateContributeUrl } from '@/lib/utils';
+import { Entity } from '@/types/entity';
 import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, FileEdit, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -213,7 +213,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                     {entity.entity}: {entity.entity_long}
                 </h2>
                 <div className="flex items-center gap-2">
-                    <Link 
+                    <Link
                         href={generateContributeUrl(entity)}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -386,7 +386,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 {(() => {
                     const hasLinks =
                         isValidLink(entity!.entity_link) ||
-                        isValidLink(entity!.entity_wikipedia_page) ||
                         isValidLink(entity!.entity_news_page) ||
                         isValidLink(entity!.entity_branding_page) ||
                         isValidLink(entity!.entity_data_page) ||
@@ -466,11 +465,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                 {isValidLink(entity!.entity_news_page) && (
                                     <LinkItem href={entity!.entity_news_page!} icon={Newspaper} label="News" />
                                 )}
-
-                                {/* Wikipedia - hidden */}
-                                {/* {isValidLink(entity!.entity_wikipedia_page) && (
-                                    <LinkItem href={entity!.entity_wikipedia_page!} icon={BookOpen} label="Wikipedia" />
-                                )} */}
 
                                 {/* Branding Page */}
                                 {isValidLink(entity!.entity_branding_page) && (

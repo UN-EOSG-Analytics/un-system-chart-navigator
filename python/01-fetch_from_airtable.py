@@ -1,6 +1,7 @@
 # https://airtable.com/create/tokens
 
 import os
+import re
 from pathlib import Path
 
 import pandas as pd
@@ -23,11 +24,14 @@ if records:
     df = pd.DataFrame(data)
 
 
+# Filter out rows where 'added_via_form' is True
+if "added_via_form" in df.columns:
+    df = df[df["added_via_form"] != "TRUE"]
+
 # Check for duplicate entities
 duplicates = df[df["entity"].duplicated(keep=False)]["entity"]
 if not duplicates.empty:
-    print("Warning: Duplicate entities found in the input data:")
-    print(duplicates.to_list())
+    raise ValueError(f"Duplicate entities found in the input data: {duplicates.to_list()}")
 else:
     print("All entities are unique.")
 
@@ -78,9 +82,27 @@ selected_columns = [
     "entity_aliases",
     "entity_mandate_registry",
     "entity_custom_mandate_registry",
+    "record_id",
 ]
 
-# TODO: don't forget to also add in `entity.ts`
+entity_ts_path = Path("src/types/entity.ts")
+entity_ts_content = entity_ts_path.read_text()
+entity_interface_match = re.search(r"export interface Entity\s*{(.*?)}", entity_ts_content, re.DOTALL)
+if not entity_interface_match:
+    raise ValueError("Could not locate Entity interface in src/types/entity.ts")
+
+entity_fields = []
+for line in entity_interface_match.group(1).splitlines():
+    stripped = line.strip()
+    if not stripped or stripped.startswith("//"):
+        continue
+    field_name = stripped.split(":", 1)[0].strip().rstrip("?")
+    if field_name:
+        entity_fields.append(field_name)
+
+missing_fields = [col for col in selected_columns if col not in entity_fields]
+if missing_fields:
+    raise ValueError(f"Columns missing in Entity interface: {missing_fields}")
 
 # Compare with all available columns
 all_columns = df.columns.tolist()

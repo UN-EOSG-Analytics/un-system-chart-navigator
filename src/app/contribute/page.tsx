@@ -8,7 +8,7 @@ function ContributeForm() {
     
     // Build Airtable URL with prefill parameters
     const buildAirtableUrl = () => {
-        const baseUrl = 'https://airtable.com/appJtP9H7xvsl3yAN/pagDuSV8RUxFhfO1k/form';
+        const baseUrl = 'https://airtable.com/embed/appJtP9H7xvsl3yAN/pagDuSV8RUxFhfO1k/form';
         const params = new URLSearchParams();
         
         // Transfer all prefill_ parameters from URL to Airtable URL
