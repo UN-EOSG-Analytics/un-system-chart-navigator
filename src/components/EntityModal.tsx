@@ -5,7 +5,7 @@ import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/Princi
 import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
 import { generateContributeUrl } from '@/lib/utils';
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, FileEdit, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
+import { BarChart3, Book, Briefcase, Check, Database, DollarSign, Eye, FileEdit, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Share2, Target, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -40,6 +40,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
     const modalRef = useRef<HTMLDivElement>(null);
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
+    const [isCopied, setIsCopied] = useState(false);
+    const [showToast, setShowToast] = useState(false);
 
     // Animation state management
     useEffect(() => {
@@ -121,8 +123,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             className="
                 flex items-center justify-center h-8 w-8 rounded-md
                 transition-colors
-                text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700
-                border border-gray-200 hover:border-gray-300
+                text-gray-600 bg-gray-200 hover:bg-gray-300 hover:text-gray-800
+                border border-gray-300 hover:border-gray-400
                 flex-shrink-0 cursor-pointer
                 focus:outline-none focus:ring-2 focus:ring-gray-300
             "
@@ -132,6 +134,51 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             <X className="h-4 w-4" />
         </button>
     );
+
+    // Share button component
+    const ShareButton = () => {
+        const handleShare = async () => {
+            if (!entity) return;
+
+            // Generate the URL for the current entity
+            const url = `${window.location.origin}?entity=${encodeURIComponent(entity.entity)}`;
+
+            try {
+                await navigator.clipboard.writeText(url);
+                setIsCopied(true);
+                setShowToast(true);
+
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    setIsCopied(false);
+                    setShowToast(false);
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+            }
+        };
+
+        return (
+            <button
+                onClick={handleShare}
+                className={`
+                    flex items-center justify-center h-8 w-8 rounded-md
+                    transition-all duration-200
+                    ${isCopied
+                        ? 'text-white bg-un-blue border-un-blue'
+                        : 'text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border-gray-200 hover:border-un-blue'
+                    }
+                    border
+                    flex-shrink-0 cursor-pointer
+                    focus:outline-none focus:ring-2 focus:ring-gray-300
+                `}
+                aria-label="Share entity"
+                title="Copy link to clipboard"
+            >
+                {isCopied ? <Check className="h-4 w-4" /> : <Share2 className="h-4 w-4" />}
+            </button>
+        );
+    };
 
     // Reusable subheader component
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
@@ -212,18 +259,31 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1">
                     {entity.entity}: {entity.entity_long}
                 </h2>
-                <div className="flex items-center gap-2">
-                    <Link
-                        href={generateContributeUrl(entity)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 h-8 lg:px-3 px-2 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 font-normal"
-                        aria-label={`Contribute information about ${entity.entity}`}
-                    >
-                        <FileEdit className="h-4 w-4" />
-                        <span className="hidden lg:inline">Contribute</span>
-                    </Link>
-                    <CloseButton />
+                <div className="flex flex-col items-end gap-2">
+                    <div className="flex items-center gap-2">
+                        <Link
+                            href={generateContributeUrl(entity)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 h-8 lg:px-3 px-2 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 font-normal"
+                            aria-label={`Contribute information about ${entity.entity}`}
+                        >
+                            <FileEdit className="h-4 w-4" />
+                            <span className="hidden lg:inline">Contribute</span>
+                        </Link>
+                        <CloseButton />
+                    </div>
+                    <div className="relative">
+                        <ShareButton />
+                        {showToast && (
+                            <div className="absolute top-1/2 -translate-y-1/2 right-full mr-2 animate-in fade-in slide-in-from-right-2 duration-200">
+                                <div className="bg-white text-gray-700 px-3 py-1.5 rounded-md border border-gray-200 flex items-center gap-2 whitespace-nowrap">
+                                    <Check className="h-3.5 w-3.5 text-un-blue" />
+                                    <span className="text-xs font-medium">Entity link copied!</span>
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         );
