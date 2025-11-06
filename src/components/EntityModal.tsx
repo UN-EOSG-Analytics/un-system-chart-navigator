@@ -60,17 +60,20 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
 
 
-    // Close modal on escape key
+    // Close modal on escape key and open Airtable on 'e' key
     useEffect(() => {
-        const handleEscape = (e: KeyboardEvent) => {
+        const handleKeyPress = (e: KeyboardEvent) => {
             if (e.key === 'Escape') {
                 handleClose();
+            } else if (e.key === 'e' && entity?.record_id) {
+                // Open Airtable record in new tab
+                window.open(`https://airtable.com/appJtP9H7xvsl3yAN/tblUbh0OZdOiZyrZ3/${entity.record_id}`, '_blank');
             }
         };
 
-        document.addEventListener('keydown', handleEscape);
-        return () => document.removeEventListener('keydown', handleEscape);
-    }, [handleClose]);
+        document.addEventListener('keydown', handleKeyPress);
+        return () => document.removeEventListener('keydown', handleKeyPress);
+    }, [handleClose, entity]);
 
     // Swipe handling
     const minSwipeDistance = 50;
