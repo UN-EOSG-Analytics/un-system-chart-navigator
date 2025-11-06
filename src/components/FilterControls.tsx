@@ -94,26 +94,47 @@ export default function FilterControls({
                 />
             </div>
 
-            {/* Toggle Filters Button - Only on Mobile */}
-            <button
-                onClick={() => setFiltersExpanded(!filtersExpanded)}
-                className={`
-                    sm:hidden w-auto h-10 -mt-1
-                    flex items-center gap-2 px-3 
-                    text-sm
-                    touch-manipulation transition-colors
-                    ${(!allGroupsActive || !allPrincipalOrgansActive)
-                        ? 'text-un-blue'
-                        : 'text-gray-500'
-                    }
-                `}
-                aria-label={filtersExpanded ? "Hide filters" : "Show filters"}
-                aria-expanded={filtersExpanded}
-            >
-                <Filter className="h-4 w-4" />
-                <span>{filtersExpanded ? 'Hide' : 'Show'} Filters</span>
-                {filtersExpanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
-            </button>
+            {/* Mobile: Toggle Filters Button + Reset Button Row */}
+            <div className="sm:hidden flex items-center justify-between gap-2 -mt-1 mb-1">
+                <button
+                    onClick={() => setFiltersExpanded(!filtersExpanded)}
+                    className={`
+                        w-auto h-9
+                        flex items-center gap-2 px-3 
+                        text-sm
+                        touch-manipulation transition-colors
+                        ${(!allGroupsActive || !allPrincipalOrgansActive)
+                            ? 'text-un-blue'
+                            : 'text-gray-500'
+                        }
+                    `}
+                    aria-label={filtersExpanded ? "Hide filters" : "Show filters"}
+                    aria-expanded={filtersExpanded}
+                >
+                    <Filter className="h-4 w-4" />
+                    <span>{filtersExpanded ? 'Hide' : 'Show'} Filters</span>
+                    {filtersExpanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+                </button>
+
+                {/* Reset Button - Mobile - only show when there's something to reset */}
+                {isResetNeeded && (
+                    <button
+                        onClick={onReset}
+                        className="
+                            flex items-center justify-center gap-1.5 h-9 px-3 rounded-md
+                            transition-all duration-200 ease-out touch-manipulation
+                            text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
+                            focus:outline-none focus:bg-gray-400 focus:text-gray-100
+                            text-sm font-medium flex-shrink-0
+                        "
+                        aria-label="Clear filters and search"
+                        title="Clear filters and search"
+                    >
+                        <X className="h-3.5 w-3.5" />
+                        <span>Reset</span>
+                    </button>
+                )}
+            </div>
 
             {/* Desktop: Search + Filter Controls Row | Mobile: Filter Controls (collapsible) */}
             <div className={`
@@ -249,12 +270,12 @@ export default function FilterControls({
                     </PopoverContent>
                 </Popover>
 
-                {/* Reset Button - only show when there's something to reset */}
+                {/* Reset Button - Desktop only - only show when there's something to reset */}
                 {isResetNeeded && (
                     <button
                         onClick={onReset}
                         className="
-              flex items-center justify-center h-12 sm:h-10 w-12 sm:w-10 rounded-lg
+              hidden sm:flex items-center justify-center h-10 w-10 rounded-lg
               transition-all duration-200 ease-out touch-manipulation
               text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
               focus:outline-none focus:bg-gray-400 focus:text-gray-100
