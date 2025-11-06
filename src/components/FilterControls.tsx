@@ -5,7 +5,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Check, ChevronDown, ChevronUp, Filter, Search, X } from 'lucide-react';
+import { Boxes, Check, ChevronDown, ChevronUp, Filter, Landmark, Search, X } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
 interface FilterControlsProps {
@@ -74,19 +74,19 @@ export default function FilterControls({
     // Get filter button text
     const getFilterText = () => {
         if (allGroupsActive) {
-            return 'Filter System Groups...';
+            return 'Filter by System Group...';
         }
         const count = activeGroups.size;
-        return `${count} group${count !== 1 ? 's' : ''} selected`;
+        return `${count} Group${count !== 1 ? 's' : ''} selected`;
     };
 
     // Get principal organ filter button text
     const getPrincipalOrganFilterText = () => {
         if (allPrincipalOrgansActive) {
-            return 'Filter Principal Organs...';
+            return 'Filter by Principal Organ...';
         }
         const count = activePrincipalOrgans.size;
-        return `${count} organ${count !== 1 ? 's' : ''} selected`;
+        return `${count} Organ${count !== 1 ? 's' : ''} selected`;
     };
 
     return (
@@ -191,7 +191,7 @@ export default function FilterControls({
                             `}
                             aria-label="Filter entities by system group"
                         >
-                            <Filter className={`h-4 w-4 flex-shrink-0 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <Boxes className={`h-4 w-4 flex-shrink-0 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
                             <span className={`truncate flex-1 text-left ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`}>
                                 {getFilterText()}
                             </span>
@@ -248,7 +248,7 @@ export default function FilterControls({
                             `}
                             aria-label="Filter entities by principal organ"
                         >
-                            <Filter className={`h-4 w-4 flex-shrink-0 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                            <Landmark className={`h-4 w-4 flex-shrink-0 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
                             <span className={`truncate flex-1 text-left ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`}>
                                 {getPrincipalOrganFilterText()}
                             </span>
