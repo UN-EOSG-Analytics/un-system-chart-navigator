@@ -76,9 +76,9 @@ export default function FilterControls({
     };
 
     return (
-        <div className="flex flex-col gap-3 mb-4 sm:mb-6">
-            {/* Search Bar - Mobile Only (separate) */}
-            <div className="sm:hidden relative w-full mt-2">
+        <div className="flex flex-col gap-3 mb-4 lg:mb-6">
+            {/* Search Bar - Mobile/Tablet Only (separate) */}
+            <div className="lg:hidden relative w-full mt-2">
                 <label htmlFor="entity-search" className="sr-only">Search for entities</label>
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
@@ -89,17 +89,17 @@ export default function FilterControls({
                     placeholder="Search for entities..."
                     value={searchQuery}
                     onChange={(e) => onSearchChange(e.target.value)}
-                    className="block w-full h-12 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
+                    className="block w-full h-10 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
                     aria-label="Search for UN entities by keyword"
                 />
             </div>
 
-            {/* Mobile: Toggle Filters Button + Reset Button Row */}
-            <div className="sm:hidden flex items-center justify-between gap-2 -mt-1 mb-1">
+            {/* Mobile/Tablet: Toggle Filters Button + Reset Button Row */}
+            <div className="lg:hidden flex items-center justify-between gap-2 -mt-1 mb-0.5">
                 <button
                     onClick={() => setFiltersExpanded(!filtersExpanded)}
                     className={`
-                        w-auto h-9
+                        w-auto h-10
                         flex items-center gap-2 px-3 
                         text-sm
                         touch-manipulation transition-colors
@@ -116,12 +116,12 @@ export default function FilterControls({
                     {filtersExpanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
                 </button>
 
-                {/* Reset Button - Mobile - only show when there's something to reset */}
+                {/* Reset Button - Mobile/Tablet - only show when there's something to reset */}
                 {isResetNeeded && (
                     <button
                         onClick={onReset}
                         className="
-                            flex items-center justify-center gap-1.5 h-9 px-3 rounded-md
+                            flex items-center justify-center gap-1.5 h-10 px-3 rounded-md
                             transition-all duration-200 ease-out touch-manipulation
                             text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
                             focus:outline-none focus:bg-gray-400 focus:text-gray-100
@@ -136,13 +136,13 @@ export default function FilterControls({
                 )}
             </div>
 
-            {/* Desktop: Search + Filter Controls Row | Mobile: Filter Controls (collapsible) */}
+            {/* Desktop: Search + Filter Controls Row | Mobile/Tablet: Filter Controls (collapsible) */}
             <div className={`
-                ${filtersExpanded ? 'flex' : 'hidden'} sm:flex
-                flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-2 sm:items-end
+                ${filtersExpanded ? 'flex' : 'hidden'} lg:flex
+                flex-col lg:flex-row lg:flex-nowrap gap-3 lg:gap-2 lg:items-end
             `}>
                 {/* Search Bar - Desktop Only (inline with filters) */}
-                <div className="hidden sm:block relative w-80 flex-shrink-0">
+                <div className="hidden lg:block relative w-80 flex-shrink-0">
                     <label htmlFor="entity-search-desktop" className="sr-only">Search for entities</label>
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
@@ -163,7 +163,7 @@ export default function FilterControls({
                     <PopoverTrigger asChild>
                         <button
                             className={`
-                                relative w-full sm:w-72 sm:flex-shrink-0 h-12 sm:h-10 
+                                relative w-full lg:w-72 lg:flex-shrink-0 h-10 
                                 flex items-center gap-3 px-3 
                                 border rounded-lg 
                                 text-base text-gray-700
@@ -220,7 +220,7 @@ export default function FilterControls({
                     <PopoverTrigger asChild>
                         <button
                             className={`
-                                relative w-full sm:w-72 sm:flex-shrink-0 h-12 sm:h-10 
+                                relative w-full lg:w-72 lg:flex-shrink-0 h-10 
                                 flex items-center gap-3 px-3 
                                 border rounded-lg 
                                 text-base text-gray-700
@@ -275,7 +275,7 @@ export default function FilterControls({
                     <button
                         onClick={onReset}
                         className="
-              hidden sm:flex items-center justify-center h-10 w-10 rounded-lg
+              hidden lg:flex items-center justify-center h-10 w-10 rounded-lg
               transition-all duration-200 ease-out touch-manipulation
               text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
               focus:outline-none focus:bg-gray-400 focus:text-gray-100
@@ -289,9 +289,9 @@ export default function FilterControls({
             </div>
 
             {/* Grouping Mode Tabs Row with Entity Count */}
-            <div className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 ${filtersExpanded ? '' : '-mt-3'} sm:mt-0`}>
+            <div className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 ${filtersExpanded ? 'mt-1' : '-mt-3'} lg:mt-0`}>
                 <Tabs value={groupingMode} onValueChange={(value) => onGroupingModeChange(value as 'system' | 'principal-organ')}>
-                    <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-white border border-gray-200 h-12 sm:h-10">
+                    <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-white border border-gray-200 h-10">
                         <TabsTrigger
                             value="system"
                             className="data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue data-[state=active]:border-un-blue text-sm text-gray-500 border border-transparent rounded-md transition-colors"
@@ -308,7 +308,7 @@ export default function FilterControls({
                 </Tabs>
 
                 {/* Entity Count - aligned with tabs on larger screens, wraps below on mobile */}
-                <div className="text-left sm:text-right sm:flex-1 text-gray-400 text-sm sm:text-base transition-opacity duration-500 whitespace-nowrap">
+                <div className="text-left sm:text-right sm:flex-1 text-gray-400 text-base transition-opacity duration-500 whitespace-nowrap">
                     Showing {visibleEntitiesCount} entities
                 </div>
             </div>
