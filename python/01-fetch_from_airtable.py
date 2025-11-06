@@ -52,7 +52,7 @@ selected_columns = [
     "head_of_entity_name",
     "head_of_entity_level",
     "head_of_entity_bio_link",
-    "head_of_entity_headshot",
+    "head_of_entity_headshot_link",
     "global_leadership_team_url",
     "on_display",
     "is_primary_entity",

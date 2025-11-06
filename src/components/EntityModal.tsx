@@ -290,20 +290,20 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                                     <Field label="Head of Entity">
                                         {(() => {
                                             // Temporarily hidden until headshot links are fixed
-                                            const hasPhoto = false; // entity!.head_of_entity_headshot && entity!.head_of_entity_headshot.trim() !== '';
+                                            const hasPhoto = false; // entity!.head_of_entity_headshot_link && entity!.head_of_entity_headshot_link.trim() !== '';
 
                                             if (hasPhoto) {
                                                 return (
                                                     <div className="flex items-start gap-4 ml-0.5">
                                                         <div className="relative w-16 h-20 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
                                                             <Image
-                                                                src={entity!.head_of_entity_headshot!}
+                                                                src={entity!.head_of_entity_headshot_link!}
                                                                 alt={`Portrait of ${entity!.head_of_entity_name}`}
                                                                 fill
                                                                 className="object-cover object-top"
                                                                 unoptimized={true}
                                                                 onError={(e) => {
-                                                                    console.log('Image failed to load:', entity!.head_of_entity_headshot);
+                                                                    console.log('Image failed to load:', entity!.head_of_entity_headshot_link);
                                                                     e.currentTarget.style.display = 'none';
                                                                 }}
                                                             />
