@@ -46,3 +46,49 @@ export function parseEntityAliases(aliasString: string | null | undefined): stri
   
   return [];
 }
+
+/**
+ * Generate Airtable contribution form URL with prefilled entity data
+ */
+export function generateContributeUrl(entity?: Entity): string {
+  const baseUrl = '/contribute';
+  
+  if (!entity) {
+    return baseUrl;
+  }
+  
+  const params = new URLSearchParams();
+  
+  // Add all entity fields as prefill parameters
+  params.set('prefill_entity', entity.entity);
+  params.set('prefill_entity_long', entity.entity_long);
+  params.set('prefill_form_contribution', 'Edit existing Entity Data');
+  
+  // Add other relevant fields
+  if (entity.entity_description) {
+    params.set('prefill_entity_description', entity.entity_description);
+  }
+  if (entity.entity_link) {
+    params.set('prefill_entity_link', entity.entity_link);
+  }
+  if (entity.system_grouping) {
+    params.set('prefill_system_grouping', entity.system_grouping);
+  }
+  if (entity.category) {
+    params.set('prefill_category', entity.category);
+  }
+  if (entity.un_principal_organ) {
+    const organValue = Array.isArray(entity.un_principal_organ) 
+      ? entity.un_principal_organ.join(', ') 
+      : entity.un_principal_organ;
+    params.set('prefill_un_principal_organ', organValue);
+  }
+  if (entity.head_of_entity_name && entity.head_of_entity_name !== 'Not applicable') {
+    params.set('prefill_head_of_entity_name', entity.head_of_entity_name);
+  }
+  if (entity.head_of_entity_title_specific && entity.head_of_entity_title_specific !== 'Not applicable') {
+    params.set('prefill_head_of_entity_title_specific', entity.head_of_entity_title_specific);
+  }
+  
+  return `${baseUrl}?${params.toString()}`;
+}

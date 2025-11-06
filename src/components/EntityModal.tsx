@@ -4,8 +4,10 @@ import EntityLogo from '@/components/EntityLogo';
 import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/PrincipalOrganField';
 import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
+import { generateContributeUrl } from '@/lib/utils';
+import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, FileEdit, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Target, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 // Custom X (Twitter) icon component to match lucide-react style
@@ -117,15 +119,17 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         <button
             onClick={handleClose}
             className="
-                flex items-center justify-center h-8 w-8 rounded-full
-                transition-all duration-200 ease-out touch-manipulation
-                text-gray-600 bg-gray-200 hover:bg-gray-400 hover:text-gray-100 cursor-pointer
-                focus:outline-none focus:bg-gray-400 focus:text-gray-100 flex-shrink-0
+                flex items-center justify-center h-8 w-8 rounded-md
+                transition-colors
+                text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700
+                border border-gray-200 hover:border-gray-300
+                flex-shrink-0 cursor-pointer
+                focus:outline-none focus:ring-2 focus:ring-gray-300
             "
             aria-label="Close modal"
             title="Close modal"
         >
-            <X className="h-3 w-3" />
+            <X className="h-4 w-4" />
         </button>
     );
 
@@ -208,7 +212,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1">
                     {entity.entity}: {entity.entity_long}
                 </h2>
-                <CloseButton />
+                <div className="flex items-center gap-2">
+                    <Link 
+                        href={generateContributeUrl(entity)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 h-8 lg:px-3 px-2 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 font-normal"
+                        aria-label={`Contribute information about ${entity.entity}`}
+                    >
+                        <FileEdit className="h-4 w-4" />
+                        <span className="hidden lg:inline">Contribute</span>
+                    </Link>
+                    <CloseButton />
+                </div>
             </div>
         );
     };
