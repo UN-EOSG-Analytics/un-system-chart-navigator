@@ -5,7 +5,7 @@ import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { Entity } from '@/types/entity';
-import { Check, Filter, Search, X } from 'lucide-react';
+import { Check, ChevronDown, ChevronUp, Filter, Search, X } from 'lucide-react';
 import { useState } from 'react';
 
 interface FilterControlsProps {
@@ -37,6 +37,7 @@ export default function FilterControls({
 }: FilterControlsProps) {
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] = useState(false);
+    const [filtersExpanded, setFiltersExpanded] = useState(false);
 
     // Count entities for each group
     const groupCounts = entities.reduce((acc, entity) => {
@@ -76,136 +77,164 @@ export default function FilterControls({
 
     return (
         <div className="flex flex-col gap-3 mb-4 sm:mb-6">
-            {/* Search and Filter Controls Row */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-2 sm:items-end">
-                {/* Search Input */}
-                <div className="relative w-full sm:w-80 sm:flex-shrink-0">
-                    <label htmlFor="entity-search" className="sr-only">Search for entities</label>
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
-                    </div>
-                    <input
-                        type="text"
-                        id="entity-search"
-                        placeholder="Search for entities..."
-                        value={searchQuery}
-                        onChange={(e) => onSearchChange(e.target.value)}
-                        className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
-                        aria-label="Search for UN entities by keyword"
-                    />
+            {/* Search Bar */}
+            <div className="relative w-full sm:w-80 sm:flex-shrink-0 mt-2 sm:mt-0">
+                <label htmlFor="entity-search" className="sr-only">Search for entities</label>
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
                 </div>
+                <input
+                    type="text"
+                    id="entity-search"
+                    placeholder="Search for entities..."
+                    value={searchQuery}
+                    onChange={(e) => onSearchChange(e.target.value)}
+                    className="block w-full h-12 sm:h-10 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
+                    aria-label="Search for UN entities by keyword"
+                />
+            </div>
 
-                {/* Filter Popover */}
-                <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
-                    <PopoverTrigger asChild>
-                        <button
-                            className={`
-                                relative w-full sm:w-72 sm:flex-shrink-0 h-12 sm:h-10 
-                                flex items-center gap-3 px-3 
-                                border rounded-lg 
-                                text-base text-gray-700
-                                touch-manipulation transition-colors
-                                ${!allGroupsActive 
-                                    ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
-                                    : 'bg-white border-gray-200 hover:border-gray-300'
-                                }
-                            `}
-                            aria-label="Filter entities by system group"
-                        >
-                            <Filter className={`h-4 w-4 flex-shrink-0 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={`truncate flex-1 text-left ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`}>
-                                {getFilterText()}
-                            </span>
-                        </button>
-                    </PopoverTrigger>
-                    <PopoverContent 
-                        className="w-[26rem] p-1 bg-white border-0 shadow-lg"
-                        align="start"
-                        sideOffset={4}
-                    >
-                        <div>
-                            {sortedGroups.map(([group, styles]) => {
-                                const count = groupCounts[group] || 0;
-                                const isSelected = activeGroups.has(group);
-                                // Only show checkmark if we're in filtered mode (not all groups active)
-                                const showCheckmark = !allGroupsActive && isSelected;
-                                
-                                return (
-                                    <button
-                                        key={group}
-                                        onClick={() => onToggleGroup(group)}
-                                        className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
-                                    >
-                                        <div className={`${styles.bgColor} w-4 h-4 rounded flex-shrink-0`}></div>
-                                        <span className="text-sm flex-1 text-gray-600">
-                                            {styles.label} <span className="text-gray-400">({count})</span>
-                                        </span>
-                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
-                                            {showCheckmark && (
-                                                <Check className="h-4 w-4 text-un-blue" />
-                                            )}
-                                        </div>
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </PopoverContent>
-                </Popover>
+            {/* Toggle Filters Button - Only on Mobile */}
+            <button
+                onClick={() => setFiltersExpanded(!filtersExpanded)}
+                className={`
+                    sm:hidden w-auto h-10 -mt-1
+                    flex items-center gap-2 px-3 
+                    text-sm
+                    touch-manipulation transition-colors
+                    ${(!allGroupsActive || !allPrincipalOrgansActive) 
+                        ? 'text-un-blue' 
+                        : 'text-gray-500'
+                    }
+                `}
+                aria-label={filtersExpanded ? "Hide filters" : "Show filters"}
+                aria-expanded={filtersExpanded}
+            >
+                <Filter className="h-4 w-4" />
+                <span>{filtersExpanded ? 'Hide' : 'Show'} Filters</span>
+                {filtersExpanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+            </button>
 
-                {/* Principal Organ Filter Popover */}
-                <Popover open={isPrincipalOrganPopoverOpen} onOpenChange={setIsPrincipalOrganPopoverOpen}>
-                    <PopoverTrigger asChild>
-                        <button
-                            className={`
-                                relative w-full sm:w-72 sm:flex-shrink-0 h-12 sm:h-10 
-                                flex items-center gap-3 px-3 
-                                border rounded-lg 
-                                text-base text-gray-700
-                                touch-manipulation transition-colors
-                                ${!allPrincipalOrgansActive 
-                                    ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
-                                    : 'bg-white border-gray-200 hover:border-gray-300'
-                                }
-                            `}
-                            aria-label="Filter entities by principal organ"
+            {/* Filter Controls Row */}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-2 sm:items-end">
+
+                {/* Filter Controls - Hidden on mobile unless expanded */}
+                <div className={`
+                    ${filtersExpanded ? 'flex' : 'hidden'} sm:flex
+                    flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-2 w-full sm:w-auto
+                `}>
+                    {/* Filter Popover */}
+                    <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
+                        <PopoverTrigger asChild>
+                            <button
+                                className={`
+                                    relative w-full sm:w-72 sm:flex-shrink-0 h-12 sm:h-10 
+                                    flex items-center gap-3 px-3 
+                                    border rounded-lg 
+                                    text-base text-gray-700
+                                    touch-manipulation transition-colors
+                                    ${!allGroupsActive 
+                                        ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
+                                        : 'bg-white border-gray-200 hover:border-gray-300'
+                                    }
+                                `}
+                                aria-label="Filter entities by system group"
+                            >
+                                <Filter className={`h-4 w-4 flex-shrink-0 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                                <span className={`truncate flex-1 text-left ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`}>
+                                    {getFilterText()}
+                                </span>
+                            </button>
+                        </PopoverTrigger>
+                        <PopoverContent 
+                            className="w-[26rem] p-1 bg-white border-0 shadow-lg"
+                            align="start"
+                            sideOffset={4}
                         >
-                            <Filter className={`h-4 w-4 flex-shrink-0 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={`truncate flex-1 text-left ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`}>
-                                {getPrincipalOrganFilterText()}
-                            </span>
-                        </button>
-                    </PopoverTrigger>
-                    <PopoverContent 
-                        className="w-[26rem] p-1 bg-white border-0 shadow-lg"
-                        align="start"
-                        sideOffset={4}
-                    >
-                        <div>
-                            {getSortedPrincipalOrgans().map(([organKey, config]) => {
-                                const isSelected = activePrincipalOrgans.has(organKey);
-                                // Only show checkmark if we're in filtered mode (not all organs active)
-                                const showCheckmark = !allPrincipalOrgansActive && isSelected;
-                                
-                                return (
-                                    <button
-                                        key={organKey}
-                                        onClick={() => onTogglePrincipalOrgan(organKey)}
-                                        className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
-                                    >
-                                        <span className="text-sm flex-1 text-gray-600">
-                                            {config.label}
-                                        </span>
-                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
-                                            {showCheckmark && (
-                                                <Check className="h-4 w-4 text-un-blue" />
-                                            )}
-                                        </div>
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </PopoverContent>
-                </Popover>
+                            <div>
+                                {sortedGroups.map(([group, styles]) => {
+                                    const count = groupCounts[group] || 0;
+                                    const isSelected = activeGroups.has(group);
+                                    // Only show checkmark if we're in filtered mode (not all groups active)
+                                    const showCheckmark = !allGroupsActive && isSelected;
+                                    
+                                    return (
+                                        <button
+                                            key={group}
+                                            onClick={() => onToggleGroup(group)}
+                                            className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
+                                        >
+                                            <div className={`${styles.bgColor} w-4 h-4 rounded flex-shrink-0`}></div>
+                                            <span className="text-sm flex-1 text-gray-600">
+                                                {styles.label} <span className="text-gray-400">({count})</span>
+                                            </span>
+                                            <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                                                {showCheckmark && (
+                                                    <Check className="h-4 w-4 text-un-blue" />
+                                                )}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </PopoverContent>
+                    </Popover>
+
+                    {/* Principal Organ Filter Popover */}
+                    <Popover open={isPrincipalOrganPopoverOpen} onOpenChange={setIsPrincipalOrganPopoverOpen}>
+                        <PopoverTrigger asChild>
+                            <button
+                                className={`
+                                    relative w-full sm:w-72 sm:flex-shrink-0 h-12 sm:h-10 
+                                    flex items-center gap-3 px-3 
+                                    border rounded-lg 
+                                    text-base text-gray-700
+                                    touch-manipulation transition-colors
+                                    ${!allPrincipalOrgansActive 
+                                        ? 'bg-un-blue/10 border-un-blue hover:border-un-blue' 
+                                        : 'bg-white border-gray-200 hover:border-gray-300'
+                                    }
+                                `}
+                                aria-label="Filter entities by principal organ"
+                            >
+                                <Filter className={`h-4 w-4 flex-shrink-0 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
+                                <span className={`truncate flex-1 text-left ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`}>
+                                    {getPrincipalOrganFilterText()}
+                                </span>
+                            </button>
+                        </PopoverTrigger>
+                        <PopoverContent 
+                            className="w-[26rem] p-1 bg-white border-0 shadow-lg"
+                            align="start"
+                            sideOffset={4}
+                        >
+                            <div>
+                                {getSortedPrincipalOrgans().map(([organKey, config]) => {
+                                    const isSelected = activePrincipalOrgans.has(organKey);
+                                    // Only show checkmark if we're in filtered mode (not all organs active)
+                                    const showCheckmark = !allPrincipalOrgansActive && isSelected;
+                                    
+                                    return (
+                                        <button
+                                            key={organKey}
+                                            onClick={() => onTogglePrincipalOrgan(organKey)}
+                                            className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
+                                        >
+                                            <span className="text-sm flex-1 text-gray-600">
+                                                {config.label}
+                                            </span>
+                                            <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                                                {showCheckmark && (
+                                                    <Check className="h-4 w-4 text-un-blue" />
+                                                )}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </PopoverContent>
+                    </Popover>
+                </div>
 
                 {/* Reset Button - only show when there's something to reset */}
                 {isResetNeeded && (
@@ -227,7 +256,7 @@ export default function FilterControls({
             </div>
 
             {/* Grouping Mode Tabs Row with Entity Count */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+            <div className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 ${filtersExpanded ? '-mt-1' : '-mt-3'} sm:mt-0`}>
                 <Tabs value={groupingMode} onValueChange={(value) => onGroupingModeChange(value as 'system' | 'principal-organ')}>
                     <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-white border border-gray-200 h-12 sm:h-10">
                         <TabsTrigger 

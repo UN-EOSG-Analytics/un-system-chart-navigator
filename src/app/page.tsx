@@ -41,7 +41,7 @@ export default function Home() {
                             </Tooltip>
                         </button>
                     </h1>
-                    <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-relaxed">
+                    <p className="text-gray-600 text-base sm:text-base lg:text-lg leading-snug sm:leading-relaxed">
                         Interactive overview of United Nations System entities. For informational purposes only and subject to official review. The relevant rules of the organization concerned should be consulted in order to establish the legal status, functions and reporting lines of each entity shown. The print version is available{' '}
                         <a
                             href="https://www.un.org/en/delegate/page/un-system-chart"
