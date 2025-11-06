@@ -71,10 +71,10 @@ export default function Home() {
                     </div>
                     <Suspense fallback={<div className="min-h-screen"></div>}>
                         <EntitiesGrid ref={entitiesGridRef} />
-                        <Footer />
                     </Suspense>
                 </div>
             </main>
+            <Footer />
         </>
     );
 }
