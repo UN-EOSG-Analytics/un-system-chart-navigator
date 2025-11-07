@@ -16,7 +16,7 @@ export const systemGroupingStyles: Record<string, SystemGroupingStyle> = {
         order: 1
     },
     'Peacekeeping Operations and Political Missions': {
-        label: 'Peacekeeping Operations, Political Missions, etc.',
+        label: 'Peacekeeping Operations, Special Political Missions, etc.',
         bgColor: 'bg-un-system-red',
         textColor: 'text-black',
         order: 2
