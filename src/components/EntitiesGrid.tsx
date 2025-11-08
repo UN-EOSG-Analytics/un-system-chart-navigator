@@ -29,7 +29,7 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
             <TooltipTrigger asChild>
                 <button
                     onClick={handleClick}
-                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] p-2 rounded-lg flex items-center justify-center text-center transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation w-full`}
+                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] pt-3 pl-3 pr-2 pb-2 rounded-lg flex items-start justify-start text-left transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation w-full`}
                     aria-label={`View details for ${entity.entity_long}`}
                 >
                     <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
