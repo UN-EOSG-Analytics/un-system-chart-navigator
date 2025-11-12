@@ -198,8 +198,8 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1">
                     {entity.entity}: {entity.entity_long}
                 </h2>
-                <div className="flex flex-col items-end gap-2">
-                    <div className="flex items-center gap-2">
+                <div className="flex flex-col items-end gap-1 -mt-0.5">
+                    <div className="flex items-center gap-1.5">
                         <ShareButton entityName={entity.entity} />
                         <CloseButton onClick={handleClose} />
                     </div>
@@ -538,7 +538,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className={`px-6 sm:px-8 pt-4 sm:pt-6 pb-2 sm:pb-3 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
+                <div className={`px-4 sm:px-6 pt-3 sm:pt-4 pb-2 sm:pb-3 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 
