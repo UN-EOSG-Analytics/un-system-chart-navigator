@@ -2,6 +2,7 @@
 
 import EntitiesGrid from '@/components/EntitiesGrid';
 import Footer from '@/components/Footer';
+import DataDownloadBar from '@/components/DataDownloadBar';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Suspense, useRef } from 'react';
 import Link from 'next/link';
@@ -74,6 +75,7 @@ export default function Home() {
                     </Suspense>
                 </div>
             </main>
+            <DataDownloadBar />
             <Footer />
         </>
     );
