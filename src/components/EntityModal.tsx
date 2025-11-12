@@ -195,10 +195,14 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
         return (
             <div className="flex items-start justify-between gap-4">
-                <h2 className="text-xl sm:text-2xl lg:text-2xl font-bold text-gray-900 leading-tight flex-1">
+                <h2 className={`font-bold text-gray-900 leading-tight flex-1 ${
+                    (entity.entity + ': ' + entity.entity_long).length > 60 
+                        ? 'text-xl sm:text-2xl lg:text-2xl' 
+                        : 'text-2xl sm:text-3xl lg:text-3xl'
+                }`}>
                     {entity.entity}: {entity.entity_long}
                 </h2>
-                <div className="flex flex-col items-end gap-1 -mt-0.5">
+                <div className="flex flex-col items-end gap-1">
                     <div className="flex items-center gap-1.5">
                         <ShareButton entityName={entity.entity} />
                         <CloseButton onClick={handleClose} />
@@ -240,7 +244,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
 
         // Full entity content - only if entity exists
         return (
-            <div className="px-6 sm:px-8 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6">
+            <div className="px-5 sm:px-7 pt-4 sm:pt-5 pb-6 sm:pb-8 space-y-6">
                 {/* Logo */}
                 {entity!.entity_logo_available && (
                     <EntityLogo
@@ -538,7 +542,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 onTouchEnd={onTouchEnd}
             >
                 {/* Header */}
-                <div className={`px-4 sm:px-6 pt-3 sm:pt-4 pb-2 sm:pb-3 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
+                <div className={`px-5 sm:px-7 pt-3 sm:pt-4 pb-2 sm:pb-3 border-b border-gray-300 ${entity ? 'sticky top-0 bg-white' : ''}`}>
                     {renderHeader()}
                 </div>
 
