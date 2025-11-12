@@ -11,6 +11,8 @@
 - always keep in mind that this site is deployed as a static page on GitHub Pages
 - we are sticking with GitHub Pages, do not implement what does not work on a static deploy there
 - do not repeat helper functions, instead put them into `src/lib/utils.ts` and import
+- Keep the original shadcn files in `components/ui/` and compose on top of them in `src/components/` rather than editing them directly.
+
 
 ## Python
 - always use `uv run python` to run scripts

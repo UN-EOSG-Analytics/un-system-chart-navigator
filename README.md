@@ -60,3 +60,4 @@ bash python/update_data.sh
 - `npm run lint`
 - `npx eslint . --ext .js,.jsx,.ts,.tsx`
 - `npm run format`
+- `npx shadcn@latest diff`

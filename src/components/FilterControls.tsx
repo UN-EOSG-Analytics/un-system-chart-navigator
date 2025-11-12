@@ -1,11 +1,11 @@
 'use client';
 
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import FilterDropdown from '@/components/FilterDropdown';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Boxes, Check, ChevronDown, ChevronUp, Filter, Landmark, RotateCcw, Search } from 'lucide-react';
+import { Boxes, ChevronDown, ChevronUp, Filter, Landmark, RotateCcw, Search } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 interface FilterControlsProps {
@@ -176,116 +176,40 @@ export default function FilterControls({
                 </div>
 
                 {/* Filter Popover */}
-                <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
-                    <PopoverTrigger asChild>
-                        <button
-                            className={`
-                                relative w-full lg:w-72 lg:flex-shrink-0 h-10 
-                                flex items-center gap-3 px-3 
-                                border rounded-lg 
-                                text-base text-gray-700
-                                touch-manipulation transition-colors
-                                ${!allGroupsActive
-                                    ? 'bg-un-blue/10 border-un-blue hover:border-un-blue'
-                                    : 'bg-white border-gray-200 hover:border-gray-300'
-                                }
-                            `}
-                            aria-label="Filter entities by system group"
-                        >
-                            <Boxes className={`h-4 w-4 flex-shrink-0 ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={`truncate flex-1 text-left ${!allGroupsActive ? 'text-un-blue' : 'text-gray-500'}`}>
-                                {getFilterText()}
-                            </span>
-                        </button>
-                    </PopoverTrigger>
-                    <PopoverContent
-                        className="w-[26rem] p-1 bg-white border-0 shadow-lg"
-                        align="start"
-                        sideOffset={4}
-                    >
-                        <div>
-                            {sortedGroups.map(([group, styles]) => {
-                                const count = groupCounts[group] || 0;
-                                const isSelected = activeGroups.has(group);
-                                // Only show checkmark if we're in filtered mode (not all groups active)
-                                const showCheckmark = !allGroupsActive && isSelected;
-
-                                return (
-                                    <button
-                                        key={group}
-                                        onClick={() => onToggleGroup(group)}
-                                        className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
-                                    >
-                                        <div className={`${styles.bgColor} w-4 h-4 rounded flex-shrink-0`}></div>
-                                        <span className="text-sm flex-1 text-gray-600">
-                                            {styles.label} <span className="text-gray-400">({count})</span>
-                                        </span>
-                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
-                                            {showCheckmark && (
-                                                <Check className="h-4 w-4 text-un-blue" />
-                                            )}
-                                        </div>
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </PopoverContent>
-                </Popover>
+                <FilterDropdown
+                    open={isPopoverOpen}
+                    onOpenChange={setIsPopoverOpen}
+                    icon={<Boxes className="h-4 w-4" />}
+                    triggerText={getFilterText()}
+                    isFiltered={!allGroupsActive}
+                    allActive={allGroupsActive}
+                    options={sortedGroups.map(([group, styles]) => ({
+                        key: group,
+                        label: styles.label,
+                        count: groupCounts[group] || 0,
+                        color: styles.bgColor,
+                    }))}
+                    selectedKeys={activeGroups}
+                    onToggle={onToggleGroup}
+                    ariaLabel="Filter entities by system group"
+                />
 
                 {/* Principal Organ Filter Popover */}
-                <Popover open={isPrincipalOrganPopoverOpen} onOpenChange={setIsPrincipalOrganPopoverOpen}>
-                    <PopoverTrigger asChild>
-                        <button
-                            className={`
-                                relative w-full lg:w-72 lg:flex-shrink-0 h-10 
-                                flex items-center gap-3 px-3 
-                                border rounded-lg 
-                                text-base text-gray-700
-                                touch-manipulation transition-colors
-                                ${!allPrincipalOrgansActive
-                                    ? 'bg-un-blue/10 border-un-blue hover:border-un-blue'
-                                    : 'bg-white border-gray-200 hover:border-gray-300'
-                                }
-                            `}
-                            aria-label="Filter entities by principal organ"
-                        >
-                            <Landmark className={`h-4 w-4 flex-shrink-0 ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`} />
-                            <span className={`truncate flex-1 text-left ${!allPrincipalOrgansActive ? 'text-un-blue' : 'text-gray-500'}`}>
-                                {getPrincipalOrganFilterText()}
-                            </span>
-                        </button>
-                    </PopoverTrigger>
-                    <PopoverContent
-                        className="w-[26rem] p-1 bg-white border-0 shadow-lg"
-                        align="start"
-                        sideOffset={4}
-                    >
-                        <div>
-                            {getSortedPrincipalOrgans().map(([organKey, config]) => {
-                                const isSelected = activePrincipalOrgans.has(organKey);
-                                // Only show checkmark if we're in filtered mode (not all organs active)
-                                const showCheckmark = !allPrincipalOrgansActive && isSelected;
-
-                                return (
-                                    <button
-                                        key={organKey}
-                                        onClick={() => onTogglePrincipalOrgan(organKey)}
-                                        className="flex items-center gap-3 py-1.5 px-2 rounded-md hover:bg-un-blue/10 cursor-pointer transition-colors w-full text-left"
-                                    >
-                                        <span className="text-sm flex-1 text-gray-600">
-                                            {config.label}
-                                        </span>
-                                        <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
-                                            {showCheckmark && (
-                                                <Check className="h-4 w-4 text-un-blue" />
-                                            )}
-                                        </div>
-                                    </button>
-                                );
-                            })}
-                        </div>
-                    </PopoverContent>
-                </Popover>
+                <FilterDropdown
+                    open={isPrincipalOrganPopoverOpen}
+                    onOpenChange={setIsPrincipalOrganPopoverOpen}
+                    icon={<Landmark className="h-4 w-4" />}
+                    triggerText={getPrincipalOrganFilterText()}
+                    isFiltered={!allPrincipalOrgansActive}
+                    allActive={allPrincipalOrgansActive}
+                    options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
+                        key: organKey,
+                        label: config.label,
+                    }))}
+                    selectedKeys={activePrincipalOrgans}
+                    onToggle={onTogglePrincipalOrgan}
+                    ariaLabel="Filter entities by principal organ"
+                />
 
                 {/* Reset Button - Desktop only - only show when there's something to reset */}
                 {isResetNeeded && (
