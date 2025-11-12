@@ -3,9 +3,11 @@
 import EntityLogo from '@/components/EntityLogo';
 import PrincipalOrganField, { getPrincipalOrganLabel } from '@/components/PrincipalOrganField';
 import { SystemGroupingBadge } from '@/components/SystemGroupingBadge';
+import CloseButton from '@/components/CloseButton';
+import ShareButton from '@/components/ShareButton';
 import { generateContributeUrl } from '@/lib/utils';
 import { Entity } from '@/types/entity';
-import { BarChart3, Book, Briefcase, Check, Database, DollarSign, Eye, FileEdit, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Share2, Target, X } from 'lucide-react';
+import { BarChart3, Book, Briefcase, Database, DollarSign, Eye, FileEdit, Globe, Instagram, Linkedin, Network, Newspaper, Palette, ScrollText, Target } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -40,8 +42,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
     const modalRef = useRef<HTMLDivElement>(null);
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
-    const [isCopied, setIsCopied] = useState(false);
-    const [showToast, setShowToast] = useState(false);
 
     // Animation state management
     useEffect(() => {
@@ -119,70 +119,6 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
         }
     };
 
-    // Reusable close button component
-    const CloseButton = () => (
-        <button
-            onClick={handleClose}
-            className="
-                flex items-center justify-center h-8 w-8 rounded-md
-                transition-colors
-                text-gray-600 bg-gray-200 hover:bg-gray-300 hover:text-gray-800
-                border border-gray-300 hover:border-gray-400
-                flex-shrink-0 cursor-pointer
-                focus:outline-none focus:ring-2 focus:ring-gray-300
-            "
-            aria-label="Close modal"
-            title="Close modal"
-        >
-            <X className="h-4 w-4" />
-        </button>
-    );
-
-    // Share button component
-    const ShareButton = () => {
-        const handleShare = async () => {
-            if (!entity) return;
-
-            // Generate the URL for the current entity
-            const url = `${window.location.origin}?entity=${encodeURIComponent(entity.entity)}`;
-
-            try {
-                await navigator.clipboard.writeText(url);
-                setIsCopied(true);
-                setShowToast(true);
-
-                // Reset after 2 seconds
-                setTimeout(() => {
-                    setIsCopied(false);
-                    setShowToast(false);
-                }, 2000);
-            } catch (err) {
-                console.error('Failed to copy:', err);
-            }
-        };
-
-        return (
-            <button
-                onClick={handleShare}
-                className={`
-                    flex items-center justify-center h-8 w-8 rounded-md
-                    transition-all duration-200
-                    ${isCopied
-                        ? 'text-white bg-un-blue border-un-blue'
-                        : 'text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border-gray-200 hover:border-un-blue'
-                    }
-                    border
-                    flex-shrink-0 cursor-pointer
-                    focus:outline-none focus:ring-2 focus:ring-gray-300
-                `}
-                aria-label="Share entity"
-                title="Copy link to clipboard"
-            >
-                {isCopied ? <Check className="h-4 w-4" /> : <Share2 className="h-4 w-4" />}
-            </button>
-        );
-    };
-
     // Reusable subheader component
     const SubHeader = ({ children }: { children: React.ReactNode }) => (
         <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-3 uppercase tracking-wider">{children}</h3>
@@ -243,7 +179,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             return (
                 <div className="flex items-center justify-between">
                     <div className="h-6 bg-gray-200 rounded w-48 animate-pulse flex-1 mr-4"></div>
-                    <CloseButton />
+                    <CloseButton onClick={handleClose} />
                 </div>
             );
         }
@@ -252,7 +188,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
             return (
                 <div className="flex items-center justify-between">
                     <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex-1 pr-4">Entity Not Found</h2>
-                    <CloseButton />
+                    <CloseButton onClick={handleClose} />
                 </div>
             );
         }
@@ -264,29 +200,19 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                 </h2>
                 <div className="flex flex-col items-end gap-2">
                     <div className="flex items-center gap-2">
-                        <Link
-                            href={generateContributeUrl(entity)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2 h-8 lg:px-3 px-2 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 font-normal"
-                            aria-label={`Contribute information about ${entity.entity}`}
-                        >
-                            <FileEdit className="h-4 w-4" />
-                            <span className="hidden lg:inline">Contribute</span>
-                        </Link>
-                        <CloseButton />
+                        <ShareButton entityName={entity.entity} />
+                        <CloseButton onClick={handleClose} />
                     </div>
-                    <div className="relative">
-                        <ShareButton />
-                        {showToast && (
-                            <div className="absolute top-1/2 -translate-y-1/2 right-full mr-2 animate-in fade-in slide-in-from-right-2 duration-200">
-                                <div className="bg-white text-gray-700 px-3 py-1.5 rounded-md border border-gray-200 flex items-center gap-2 whitespace-nowrap">
-                                    <Check className="h-3.5 w-3.5 text-un-blue" />
-                                    <span className="text-xs font-medium">Entity link copied!</span>
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                    <Link
+                        href={generateContributeUrl(entity)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-start gap-2 h-8 px-2 sm:px-3 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 font-normal w-full"
+                        aria-label={`Contribute information about ${entity.entity}`}
+                    >
+                        <FileEdit className="h-4 w-4" />
+                        <span className="hidden sm:inline">Contribute</span>
+                    </Link>
                 </div>
             </div>
         );

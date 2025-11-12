@@ -51,7 +51,7 @@ export default function Home() {
                                 href="/contribute"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 h-8 px-2 sm:px-3 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 mt-0.5 sm:mt-1 font-normal"
+                                className="flex items-center justify-start gap-2 h-8 px-2 sm:px-3 rounded-md transition-colors text-sm text-gray-500 bg-white hover:bg-un-blue/10 hover:text-un-blue border border-gray-200 hover:border-un-blue flex-shrink-0 mt-0.5 sm:mt-1 font-normal"
                                 aria-label="Contribute to the UN System Chart"
                             >
                                 <FileEdit className="h-4 w-4" />
