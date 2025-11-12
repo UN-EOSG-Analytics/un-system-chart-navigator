@@ -211,7 +211,7 @@ export default function EntityModal({ entity, onClose, loading }: EntityModalPro
                         aria-label={`Contribute information about ${entity.entity}`}
                     >
                         <FileEdit className="h-4 w-4" />
-                        <span className="hidden sm:inline">Contribute</span>
+                        <span className="hidden sm:inline">Needs edit?</span>
                     </Link>
                 </div>
             </div>
