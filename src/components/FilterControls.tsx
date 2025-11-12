@@ -1,9 +1,9 @@
 'use client';
 
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import FilterDropdown from '@/components/FilterDropdown';
 import SearchInput from '@/components/SearchInput';
 import ResetButton from '@/components/ResetButton';
+import ViewToggle from '@/components/ViewToggle';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
@@ -194,22 +194,7 @@ export default function FilterControls({
 
             {/* Grouping Mode Tabs Row with Entity Count */}
             <div className={`flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 ${filtersExpanded ? 'mt-1' : '-mt-3'} lg:mt-0`}>
-                <Tabs value={groupingMode} onValueChange={(value) => onGroupingModeChange(value as 'system' | 'principal-organ')}>
-                    <TabsList className="grid w-full sm:w-80 grid-cols-2 bg-white border border-gray-200 h-10">
-                        <TabsTrigger
-                            value="system"
-                            className="data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue data-[state=active]:border-un-blue text-sm text-gray-500 border border-transparent rounded-md transition-colors"
-                        >
-                            By System Group
-                        </TabsTrigger>
-                        <TabsTrigger
-                            value="principal-organ"
-                            className="data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue data-[state=active]:border-un-blue text-sm text-gray-500 border border-transparent rounded-md transition-colors"
-                        >
-                            By Principal Organ
-                        </TabsTrigger>
-                    </TabsList>
-                </Tabs>
+                <ViewToggle value={groupingMode} onValueChange={onGroupingModeChange} />
 
                 {/* Entity Count - aligned with tabs on larger screens, wraps below on mobile */}
                 <div className="text-left sm:text-right sm:flex-1 text-gray-400 text-base transition-opacity duration-500 whitespace-nowrap">
