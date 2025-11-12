@@ -327,7 +327,7 @@ const EntitiesGrid = forwardRef<{ handleReset: () => void; toggleGroup: (groupKe
 
             {/* Entities Grid with Group Headings */}
             {visibleEntities.length === 0 ? (
-                <div className="text-center py-12">
+                <div className="text-left py-12">
                     <p className="text-gray-500 text-lg">No entities match the current filters.</p>
                 </div>
             ) : (
