@@ -3,10 +3,11 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import FilterDropdown from '@/components/FilterDropdown';
 import SearchInput from '@/components/SearchInput';
+import ResetButton from '@/components/ResetButton';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Boxes, ChevronDown, ChevronUp, Filter, Landmark, RotateCcw } from 'lucide-react';
+import { Boxes, ChevronDown, ChevronUp, Filter, Landmark } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 interface FilterControlsProps {
@@ -128,22 +129,7 @@ export default function FilterControls({
 
                 {/* Reset Button - Mobile/Tablet - only show when there's something to reset */}
                 {isResetNeeded && (
-                    <button
-                        onClick={onReset}
-                        className="
-                            flex items-center justify-center gap-1.5 h-10 px-3
-                            border border-gray-300 bg-gray-200 rounded-lg
-                            transition-all duration-200 ease-out touch-manipulation
-                            text-gray-700 hover:border-gray-400 hover:bg-gray-300
-                            focus:outline-none focus:border-gray-400 focus:bg-gray-300
-                            text-sm font-medium flex-shrink-0
-                        "
-                        aria-label="Clear filters and search"
-                        title="Clear filters and search"
-                    >
-                        <RotateCcw className="h-3.5 w-3.5" />
-                        <span>Reset</span>
-                    </button>
+                    <ResetButton onClick={onReset} showLabel={true} />
                 )}
             </div>
 
@@ -202,20 +188,7 @@ export default function FilterControls({
 
                 {/* Reset Button - Desktop only - only show when there's something to reset */}
                 {isResetNeeded && (
-                    <button
-                        onClick={onReset}
-                        className="
-                            hidden lg:flex items-center justify-center h-10 w-10
-                            border border-gray-300 bg-gray-200 rounded-lg
-                            transition-all duration-200 ease-out touch-manipulation
-                            text-gray-700 hover:border-gray-400 hover:bg-gray-300
-                            focus:outline-none focus:border-gray-400 focus:bg-gray-300
-                        "
-                        aria-label="Clear filters and search"
-                        title="Clear filters and search"
-                    >
-                        <RotateCcw className="h-4 w-4" />
-                    </button>
+                    <ResetButton onClick={onReset} className="hidden lg:flex" />
                 )}
             </div>
 
