@@ -2,10 +2,11 @@
 
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import FilterDropdown from '@/components/FilterDropdown';
+import SearchInput from '@/components/SearchInput';
 import { getSortedPrincipalOrgans, principalOrganConfigs } from '@/lib/principalOrgans';
 import { getSortedSystemGroupings, systemGroupingStyles } from '@/lib/systemGroupings';
 import { Entity } from '@/types/entity';
-import { Boxes, ChevronDown, ChevronUp, Filter, Landmark, RotateCcw, Search } from 'lucide-react';
+import { Boxes, ChevronDown, ChevronUp, Filter, Landmark, RotateCcw } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 interface FilterControlsProps {
@@ -92,20 +93,14 @@ export default function FilterControls({
     return (
         <div className="flex flex-col gap-3 mb-4 lg:mb-6">
             {/* Search Bar - Mobile/Tablet Only (separate) */}
-            <div className="lg:hidden relative w-full mt-2">
-                <label htmlFor="entity-search" className="sr-only">Search for entities</label>
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
-                </div>
-                <input
+            <div className="lg:hidden mt-2">
+                <SearchInput
                     ref={mobileSearchRef}
-                    type="text"
                     id="entity-search"
-                    placeholder="Search for entities..."
                     value={searchQuery}
-                    onChange={(e) => onSearchChange(e.target.value)}
-                    className="block w-full h-10 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
-                    aria-label="Search for UN entities by keyword"
+                    onChange={onSearchChange}
+                    placeholder="Search for UN entities..."
+                    ariaLabel="Search for UN entities by keyword"
                 />
             </div>
 
@@ -158,20 +153,14 @@ export default function FilterControls({
                 flex-col lg:flex-row lg:flex-nowrap gap-3 lg:gap-2 lg:items-end
             `}>
                 {/* Search Bar - Desktop Only (inline with filters) */}
-                <div className="hidden lg:block relative w-80 flex-shrink-0">
-                    <label htmlFor="entity-search-desktop" className="sr-only">Search for entities</label>
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <Search className="h-4 w-4 text-gray-500" aria-hidden="true" />
-                    </div>
-                    <input
+                <div className="hidden lg:block w-80 flex-shrink-0">
+                    <SearchInput
                         ref={desktopSearchRef}
-                        type="text"
                         id="entity-search-desktop"
-                        placeholder="Search for entities..."
                         value={searchQuery}
-                        onChange={(e) => onSearchChange(e.target.value)}
-                        className="block w-full h-10 pl-10 pr-3 py-2 border border-gray-200 bg-white rounded-lg placeholder-gray-500 focus:outline-none focus:border-gray-300 focus:ring-0 text-base text-gray-700 touch-manipulation hover:border-gray-300 transition-colors"
-                        aria-label="Search for UN entities by keyword"
+                        onChange={onSearchChange}
+                        placeholder="Search for UN entities..."
+                        ariaLabel="Search for UN entities by keyword"
                     />
                 </div>
 
