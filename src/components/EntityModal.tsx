@@ -644,6 +644,21 @@ export default function EntityModal({
           );
         })()}
 
+        {/* Contribution Prompt */}
+        <div className="mt-8 rounded-lg bg-gray-50 px-4 py-3 border border-gray-200">
+          <p className="text-sm leading-relaxed text-gray-700">
+            Notice something incorrect or have information to add?{" "}
+            <a
+              href={generateContributeUrl(entity!)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-un-blue hover:text-un-blue/80 font-medium underline decoration-1 underline-offset-2"
+            >
+              Let us know.
+            </a>
+          </p>
+        </div>
+
         {/* Footnotes */}
         {entity!.entity_footnotes && entity!.entity_footnotes.trim() !== "" && (
           <div className="mt-6 border-t border-gray-100 pt-2">
