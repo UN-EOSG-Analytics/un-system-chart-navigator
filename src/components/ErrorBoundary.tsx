@@ -51,34 +51,34 @@ class ErrorBoundary extends React.Component<
 
       return (
         <div className="flex min-h-screen items-center justify-center p-4">
-          <div>
-            <h2 className="mb-4 text-2xl font-bold text-gray-900">
+          <div className="max-w-md text-center">
+            <h2 className="mb-4 text-2xl font-bold text-foreground sm:text-3xl">
               Something went wrong
             </h2>
-            <p className="mb-4 text-gray-600">
+            <p className="mb-6 text-shuttle-gray">
               There was an error loading this page. Please try refreshing or go
               back to the home page.
             </p>
-            <div className="space-x-4">
+            <div className="flex flex-wrap justify-center gap-3">
               <button
                 onClick={this.resetError}
-                className="rounded bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600"
+                className="rounded-lg bg-un-blue px-6 py-2.5 text-white transition-colors hover:opacity-90"
               >
                 Try Again
               </button>
               <Link
                 href="/"
-                className="inline-block rounded bg-gray-500 px-4 py-2 text-white transition-colors hover:bg-gray-600"
+                className="inline-block rounded-lg border border-gray-300 bg-white px-6 py-2.5 text-foreground transition-colors hover:bg-gray-50"
               >
                 Go Home
               </Link>
             </div>
             {process.env.NODE_ENV === "development" && this.state.error && (
-              <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-shuttle-gray hover:text-un-blue">
                   Error Details
                 </summary>
-                <pre className="mt-2 overflow-auto text-xs text-red-600">
+                <pre className="mt-2 max-h-48 overflow-auto rounded-lg bg-gray-50 p-3 text-xs text-un-red">
                   {this.state.error.stack}
                 </pre>
               </details>
