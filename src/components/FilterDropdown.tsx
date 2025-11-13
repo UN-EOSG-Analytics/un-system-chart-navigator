@@ -68,7 +68,7 @@ export default function FilterDropdown({
           } `}
           aria-label={ariaLabel}
         >
-          <div className="flex-shrink-0">{icon}</div>
+          <div className="flex-shrink-0 text-un-blue">{icon}</div>
           <span className="flex-1 truncate text-left">{triggerText}</span>
           <div className="ml-auto flex-shrink-0">
             {open ? (

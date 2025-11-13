@@ -64,7 +64,7 @@ export default function Home() {
                 className="mt-0.5 flex h-8 flex-shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:mt-1 sm:px-3"
                 aria-label="Contribute to the UN System Chart"
               >
-                <FileEdit className="h-4 w-4" />
+                <FileEdit className="h-4 w-4 text-un-blue" />
                 <span className="hidden sm:inline">Contribute</span>
               </Link>
             </div>

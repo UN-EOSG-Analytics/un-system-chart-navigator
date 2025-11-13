@@ -49,7 +49,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
         </label>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
           <Search
-            className={`h-4 w-4 transition-colors ${isActive ? "text-un-blue" : "text-gray-500"}`}
+            className="h-4 w-4 text-un-blue"
             aria-hidden="true"
           />
         </div>
