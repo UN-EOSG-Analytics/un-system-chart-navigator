@@ -13,8 +13,9 @@ if (!password) {
 console.log('Starting encryption of HTML files...');
 
 // Encrypt all HTML files recursively, output to 'encrypted' directory
+// Use -t instead of -f for template flag
 execSync(
-  `npx staticrypt out -r -d encrypted -f ./scripts/password-template.html --short`,
+  `npx staticrypt out -r -d encrypted -t ./scripts/password-template.html --short`,
   {
     stdio: 'inherit'
   }
