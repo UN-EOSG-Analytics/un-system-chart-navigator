@@ -78,7 +78,7 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
         env:
           NEXT_PUBLIC_BASE_PATH: ''
-          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -2,35 +2,45 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const password = process.env.SITE_PASSWORD;
+const password = process.env.STATICRYPT_PASSWORD;
 const outDir = './out';
 
 if (!password) {
-  console.error('SITE_PASSWORD environment variable is required');
+  console.error('STATICRYPT_PASSWORD environment variable is required');
   process.exit(1);
 }
 
-function encryptHtmlFiles(dir) {
-  const files = fs.readdirSync(dir);
+console.log('Starting encryption of HTML files...');
+
+// Encrypt all HTML files recursively, output to 'encrypted' directory
+execSync(
+  `npx staticrypt out -r -d encrypted -f ./scripts/password-template.html --short`,
+  {
+    stdio: 'inherit'
+  }
+);
+
+// Copy encrypted files back to out/ directory
+function copyEncryptedFiles(encryptedDir, targetDir) {
+  const items = fs.readdirSync(encryptedDir);
   
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  items.forEach(item => {
+    const encryptedPath = path.join(encryptedDir, item);
+    const targetPath = path.join(targetDir, item);
+    const stat = fs.statSync(encryptedPath);
     
     if (stat.isDirectory()) {
-      encryptHtmlFiles(filePath);
-    } else if (file.endsWith('.html')) {
-      console.log(`Encrypting ${filePath}...`);
-      // Using default sessionStorage (no --remember flag)
-      // -f flag uses custom template
-      // Password must come right after the file path, before other flags
-      execSync(`npx staticrypt "${filePath}" "${password}" -f ./scripts/password-template.html --short -o "${filePath}"`, {
-        stdio: 'pipe' // Don't inherit stdio to prevent interactive prompts
-      });
+      copyEncryptedFiles(encryptedPath, targetPath);
+    } else if (item.endsWith('.html')) {
+      fs.copyFileSync(encryptedPath, targetPath);
+      console.log(`Copied encrypted ${targetPath}`);
     }
   });
 }
 
-console.log('Starting encryption of HTML files...');
-encryptHtmlFiles(outDir);
+copyEncryptedFiles('./encrypted/out', './out');
+
+// Clean up encrypted directory
+fs.rmSync('./encrypted', { recursive: true });
+
 console.log('Encryption complete!');
