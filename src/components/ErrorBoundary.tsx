@@ -51,7 +51,7 @@ class ErrorBoundary extends React.Component<
 
       return (
         <div className="flex min-h-screen items-center justify-center p-4">
-          <div className="text-center">
+          <div>
             <h2 className="mb-4 text-2xl font-bold text-gray-900">
               Something went wrong
             </h2>

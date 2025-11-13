@@ -59,7 +59,7 @@ export default function ShareButton({ entityName }: ShareButtonProps) {
         side="left"
         sideOffset={4}
       >
-        <p className="text-center text-sm">
+        <p className="text-sm">
           {isCopied ? "Copied!" : "Copy link to entity"}
         </p>
       </PopoverContent>
