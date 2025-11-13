@@ -1,6 +1,5 @@
 'use client';
 
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { getAllEntities, searchEntities } from '@/lib/entities';
 import { getSystemGroupingStyle, systemGroupingStyles } from '@/lib/systemGroupings';
 import { normalizePrincipalOrgan, principalOrganConfigs } from '@/lib/principalOrgans';
@@ -9,6 +8,7 @@ import { Entity } from '@/types/entity';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
 import FilterControls from './FilterControls';
+import EntityTooltip from './EntityTooltip';
 
 const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: (entitySlug: string) => void }) => {
     const styles = getSystemGroupingStyle(entity.system_grouping);
@@ -23,31 +23,15 @@ const EntityCard = ({ entity, onEntityClick }: { entity: Entity; onEntityClick: 
     };
 
     return (
-        <Tooltip delayDuration={50} disableHoverableContent>
-            <TooltipTrigger asChild>
-                <button
-                    onClick={handleClick}
-                    className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] pt-3 pl-3 pr-2 pb-2 rounded-lg flex items-start justify-start text-left transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation w-full`}
-                    aria-label={`View details for ${entity.entity_long}`}
-                >
-                    <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
-                </button>
-            </TooltipTrigger>
-            <TooltipContent
-                side="top"
-                sideOffset={8}
-                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs sm:max-w-sm"
-                hideWhenDetached
-                avoidCollisions={true}
-                collisionPadding={12}
+        <EntityTooltip entity={entity}>
+            <button
+                onClick={handleClick}
+                className={`${styles.bgColor} ${styles.textColor} h-[50px] sm:h-[55px] pt-3 pl-3 pr-2 pb-2 rounded-lg flex items-start justify-start text-left transition-all duration-200 ease-out cursor-pointer hover:scale-105 hover:shadow-md active:scale-95 animate-in fade-in slide-in-from-bottom-4 touch-manipulation w-full`}
+                aria-label={`View details for ${entity.entity_long}`}
             >
-                <div className="text-center max-w-xs sm:max-w-sm p-1">
-                    <p className="font-medium text-xs sm:text-sm leading-tight">{entity.entity_long}</p>
-                    <p className="text-xs text-slate-500 mt-1 hidden sm:block">Click to view entity details</p>
-                    <p className="text-xs text-slate-500 mt-1 sm:hidden">Tap to view details</p>
-                </div>
-            </TooltipContent>
-        </Tooltip>
+                <span className="font-medium text-xs sm:text-sm leading-tight">{entity.entity}</span>
+            </button>
+        </EntityTooltip>
     );
 };
 
