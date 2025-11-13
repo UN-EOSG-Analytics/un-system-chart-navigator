@@ -23,8 +23,9 @@ function encryptHtmlFiles(dir) {
       console.log(`Encrypting ${filePath}...`);
       // Using default sessionStorage (no --remember flag)
       // -f flag uses custom template
-      execSync(`npx staticrypt ${filePath} ${password} --short -f ./scripts/password-template.html -o ${filePath}`, {
-        stdio: 'inherit'
+      // Password must come right after the file path, before other flags
+      execSync(`npx staticrypt "${filePath}" "${password}" -f ./scripts/password-template.html --short -o "${filePath}"`, {
+        stdio: 'pipe' // Don't inherit stdio to prevent interactive prompts
       });
     }
   });
