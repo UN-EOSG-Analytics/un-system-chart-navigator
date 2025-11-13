@@ -207,7 +207,7 @@ export default function EntityModal({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex touch-manipulation items-center gap-3 rounded-lg px-3 py-2 text-un-blue transition-opacity duration-200 hover:bg-blue-50 hover:opacity-80"
+      className="flex touch-manipulation items-center gap-3 rounded-lg -ml-1 pl-2 pr-3 py-2 text-un-blue transition-opacity duration-200 hover:bg-un-blue/10"
     >
       <Icon size={18} className="flex-shrink-0" />
       <span className="text-base sm:text-lg">{label}</span>
@@ -468,7 +468,7 @@ export default function EntityModal({
           return (
             <div>
               <SubHeader>Links</SubHeader>
-              <div className="space-y-1">
+              <div className="space-y-0.5">
                 {/* Website */}
                 {isValidLink(entity!.entity_link) && (
                   <LinkItem
@@ -612,7 +612,7 @@ export default function EntityModal({
           return (
             <div>
               <SubHeader>Socials</SubHeader>
-              <div className="space-y-1">
+              <div className="space-y-0.5">
                 {/* LinkedIn */}
                 {isValidLink(entity!.socials_linkedin) && (
                   <LinkItem
@@ -645,14 +645,14 @@ export default function EntityModal({
         })()}
 
         {/* Contribution Prompt */}
-        <div className="mt-8 rounded-lg bg-gray-50 px-4 py-3 border border-gray-200">
+        <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3 -ml-1 mr-2">
           <p className="text-sm leading-relaxed text-gray-700">
             Notice something incorrect or have information to add?{" "}
             <a
               href={generateContributeUrl(entity!)}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-un-blue hover:text-un-blue/80 font-medium underline decoration-1 underline-offset-2"
+              className="font-medium text-un-blue underline decoration-1 underline-offset-2 hover:text-un-blue/80"
             >
               Let us know.
             </a>
