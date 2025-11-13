@@ -12,5 +12,7 @@
         "github.remotehub",
         "charliermarsh.vscode-ruff", // https://docs.astral.sh/ruff/
         "mechatroner.rainbow-csv",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
     ]
 }

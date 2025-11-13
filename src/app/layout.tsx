@@ -7,45 +7,45 @@ import { Suspense } from "react";
 import Script from "next/script";
 
 const roboto = Roboto({
-    weight: ['300', '400', '500', '700'],
-    subsets: ['latin'],
-    display: 'swap',
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "United Nations System Chart Navigator",
-    description: "Interactively navigate the United Nations System",
+  title: "United Nations System Chart Navigator",
+  description: "Interactively navigate the United Nations System",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en" className={roboto.className}>
-            <body className="antialiased flex flex-col min-h-screen">
-                <ErrorBoundary>
-                    {children}
-                    <Suspense fallback={null}>
-                        <ModalHandler />
-                    </Suspense>
-                </ErrorBoundary>
+  return (
+    <html lang="en" className={roboto.className}>
+      <body className="flex min-h-screen flex-col antialiased">
+        <ErrorBoundary>
+          {children}
+          <Suspense fallback={null}>
+            <ModalHandler />
+          </Suspense>
+        </ErrorBoundary>
 
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-E7KQ0BSP9Z"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-E7KQ0BSP9Z"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
                         
                         gtag('config', 'G-E7KQ0BSP9Z');
                     `}
-                </Script>
-            </body>
-        </html>
-    )
+        </Script>
+      </body>
+    </html>
+  );
 }

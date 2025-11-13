@@ -1,31 +1,42 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { Entity } from '@/types/entity';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Entity } from "@/types/entity";
 
 interface EntityTooltipProps {
-    entity: Entity;
-    children: React.ReactNode;
+  entity: Entity;
+  children: React.ReactNode;
 }
 
-export default function EntityTooltip({ entity, children }: EntityTooltipProps) {
-    return (
-        <Tooltip delayDuration={50} disableHoverableContent>
-            <TooltipTrigger asChild>
-                {children}
-            </TooltipTrigger>
-            <TooltipContent
-                side="top"
-                sideOffset={8}
-                className="bg-white text-slate-800 border border-slate-200 shadow-lg max-w-xs sm:max-w-sm text-left"
-                hideWhenDetached
-                avoidCollisions={true}
-                collisionPadding={12}
-            >
-                <div className="max-w-xs sm:max-w-sm p-1">
-                    <p className="font-medium text-xs sm:text-sm leading-tight text-left">{entity.entity_long}</p>
-                    <p className="text-xs text-slate-500 mt-1 hidden sm:block text-left">Click to view entity details</p>
-                    <p className="text-xs text-slate-500 mt-1 sm:hidden text-left">Tap to view details</p>
-                </div>
-            </TooltipContent>
-        </Tooltip>
-    );
+export default function EntityTooltip({
+  entity,
+  children,
+}: EntityTooltipProps) {
+  return (
+    <Tooltip delayDuration={50} disableHoverableContent>
+      <TooltipTrigger asChild>{children}</TooltipTrigger>
+      <TooltipContent
+        side="top"
+        sideOffset={8}
+        className="max-w-xs border border-slate-200 bg-white text-left text-slate-800 shadow-lg sm:max-w-sm"
+        hideWhenDetached
+        avoidCollisions={true}
+        collisionPadding={12}
+      >
+        <div className="max-w-xs p-1 sm:max-w-sm">
+          <p className="text-left text-xs leading-tight font-medium sm:text-sm">
+            {entity.entity_long}
+          </p>
+          <p className="mt-1 hidden text-left text-xs text-slate-500 sm:block">
+            Click to view entity details
+          </p>
+          <p className="mt-1 text-left text-xs text-slate-500 sm:hidden">
+            Tap to view details
+          </p>
+        </div>
+      </TooltipContent>
+    </Tooltip>
+  );
 }

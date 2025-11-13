@@ -68,14 +68,14 @@ export default function DataDownloadBar() {
 
   return (
     <div className="w-full bg-white">
-      <div className="w-full max-w-7xl mx-auto py-6 px-3 sm:px-4 lg:px-6">
+      <div className="mx-auto w-full max-w-7xl px-3 py-6 sm:px-4 lg:px-6">
         <div className="flex items-start gap-2 text-base">
           <p className="text-gray-600">As of October 2025</p>
           <span className="text-gray-400">|</span>
           <div className="relative" ref={downloadRef}>
             <button
               onClick={() => setShowDownloadOptions(!showDownloadOptions)}
-              className="text-un-blue hover:underline font-medium transition-all cursor-pointer flex items-center gap-1.5"
+              className="flex cursor-pointer items-center gap-1.5 font-medium text-un-blue transition-all hover:underline"
               aria-label="Download entity data in JSON or CSV format"
               aria-expanded={showDownloadOptions}
             >
@@ -83,15 +83,15 @@ export default function DataDownloadBar() {
               <Download size={16} />
             </button>
             {showDownloadOptions && (
-              <div className="absolute bottom-full -left-1 mb-1 bg-white rounded-lg shadow-lg py-1.5 px-1.5 z-10 min-w-[140px]">
-                <div className="flex items-stretch mb-1">
+              <div className="absolute bottom-full -left-1 z-10 mb-1 min-w-[140px] rounded-lg bg-white px-1.5 py-1.5 shadow-lg">
+                <div className="mb-1 flex items-stretch">
                   <a
                     href="/un-entities.json"
                     download={`${
                       new Date().toISOString().split("T")[0]
                     }_un-entities.json`}
                     onClick={() => handleDownload("JSON")}
-                    className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
+                    className="flex flex-1 items-center gap-2 rounded-lg py-2 pr-1 pl-2 text-sm text-gray-600 transition-all hover:bg-gray-50 hover:text-un-blue"
                     title="Download JSON"
                   >
                     <FileJson size={16} />
@@ -101,10 +101,10 @@ export default function DataDownloadBar() {
                     onClick={() =>
                       handleCopyLink(
                         "json",
-                        `${window.location.origin}/un-entities.json`
+                        `${window.location.origin}/un-entities.json`,
                       )
                     }
-                    className="w-8 flex items-center justify-center text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
+                    className="flex w-8 items-center justify-center rounded-lg text-gray-600 transition-all outline-none hover:bg-gray-50 hover:text-un-blue focus:outline-none"
                     title="Copy link to JSON"
                     aria-label="Copy link to JSON file"
                   >
@@ -122,7 +122,7 @@ export default function DataDownloadBar() {
                       new Date().toISOString().split("T")[0]
                     }_un-entities.csv`}
                     onClick={() => handleDownload("CSV")}
-                    className="flex items-center gap-2 pl-2 pr-1 py-2 text-sm text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg flex-1"
+                    className="flex flex-1 items-center gap-2 rounded-lg py-2 pr-1 pl-2 text-sm text-gray-600 transition-all hover:bg-gray-50 hover:text-un-blue"
                     title="Download CSV"
                   >
                     <FileText size={16} />
@@ -132,10 +132,10 @@ export default function DataDownloadBar() {
                     onClick={() =>
                       handleCopyLink(
                         "csv",
-                        `${window.location.origin}/un-entities.csv`
+                        `${window.location.origin}/un-entities.csv`,
                       )
                     }
-                    className="w-8 flex items-center justify-center text-gray-600 hover:text-un-blue hover:bg-gray-50 transition-all rounded-lg outline-none focus:outline-none"
+                    className="flex w-8 items-center justify-center rounded-lg text-gray-600 transition-all outline-none hover:bg-gray-50 hover:text-un-blue focus:outline-none"
                     title="Copy link to CSV"
                     aria-label="Copy link to CSV file"
                   >

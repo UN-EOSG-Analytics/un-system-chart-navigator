@@ -9,7 +9,9 @@
     "dev": "next dev --turbopack",
     "build": "next build && node scripts/encrypt-site.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\""
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.3",
@@ -39,6 +41,8 @@
     "critters": "^0.0.23",
     "eslint": "^9",
     "eslint-config-next": "^15.5.4",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "shadcn": "^3.5.0",
     "staticrypt": "^3.5.4",
     "tailwindcss": "^4",
