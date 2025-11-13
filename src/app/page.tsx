@@ -65,7 +65,7 @@ export default function Home() {
                 aria-label="Contribute to the UN System Chart"
               >
                 <FileEdit className="h-4 w-4 text-un-blue" />
-                <span className="hidden sm:inline">Contribute</span>
+                <span>Contribute</span>
               </Link>
             </div>
             <p className="text-base leading-snug text-gray-600 sm:text-base sm:leading-relaxed lg:text-lg">

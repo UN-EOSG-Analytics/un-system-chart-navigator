@@ -260,7 +260,7 @@ export default function EntityModal({
             aria-label={`Contribute information about ${entity.entity}`}
           >
             <FileEdit className="h-4 w-4" />
-            <span className="hidden sm:inline">Needs edit?</span>
+            <span>Needs edit?</span>
           </Link>
         </div>
       </div>
