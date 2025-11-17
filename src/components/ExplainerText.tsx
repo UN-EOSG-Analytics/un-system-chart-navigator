@@ -1,10 +1,11 @@
-"use client";
+"use client"; // for Tooltip component
 
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
 } from "@/components/ui/tooltip";
+import ExternalLink from "./ExternalLink";
 
 export default function ExplainerText() {
   return (
@@ -29,20 +30,18 @@ export default function ExplainerText() {
             independent international organizations funded by both voluntary and
             assessed contributions. The UN coordinates its work with these
             separate UN system entities, which cooperate with the Organization
-            to help it achieve its goals.
+            to help it achieve its goals.{" "}
+            <ExternalLink href="https://www.un.org/en/about-us/un-system">
+              Learn more
+            </ExternalLink>
           </p>
         </TooltipContent>
       </Tooltip>
       . For informational purposes only and subject to official review. The
       print version is available{" "}
-      <a
-        href="https://www.un.org/en/delegate/page/un-system-chart"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-medium text-un-blue transition-all hover:underline"
-      >
+      <ExternalLink href="https://www.un.org/en/delegate/page/un-system-chart">
         here
-      </a>
+      </ExternalLink>
       .
     </p>
   );
