@@ -38,6 +38,9 @@ if not duplicates.empty:
 else:
     print("All entities are unique.")
 
+
+print(f"Number of entities: {df.shape[0]}")
+
 # Check if all entity values are URL safe
 unsafe_entities = []
 for entity in df["entity"]:
