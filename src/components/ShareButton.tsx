@@ -8,17 +8,13 @@ import {
 import { Check, Share2 } from "lucide-react";
 import { useState } from "react";
 
-interface ShareButtonProps {
-  entityName: string;
-}
-
-export default function ShareButton({ entityName }: ShareButtonProps) {
+export default function ShareButton() {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
   const handleShare = async () => {
-    // Generate the URL for the current entity
-    const url = `${window.location.origin}?entity=${encodeURIComponent(entityName)}`;
+    // Share the current URL (already canonicalized by ModalHandler)
+    const url = window.location.href;
 
     try {
       await navigator.clipboard.writeText(url);

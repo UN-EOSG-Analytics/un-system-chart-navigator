@@ -249,7 +249,7 @@ export default function EntityModal({
         </h2>
         <div className="flex flex-col items-end gap-1">
           <div className="flex items-center gap-1.5">
-            <ShareButton entityName={entity.entity} />
+            <ShareButton />
             <CloseButton onClick={handleClose} />
           </div>
           <Link
