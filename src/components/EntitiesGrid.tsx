@@ -247,10 +247,14 @@ const EntitiesGrid = forwardRef<{
 
       if (groupingMode === "principal-organ") {
         const normalized = normalizePrincipalOrgan(entity.un_principal_organ);
-        // Use first organ if array, or the organ itself
-        groupKey = Array.isArray(normalized)
-          ? normalized[0] || "Other"
-          : normalized || "Other";
+        // Use first organ if array, or the organ itself, or "N/A" if null
+        if (Array.isArray(normalized)) {
+          groupKey = normalized[0] || "N/A";
+        } else if (normalized === null || normalized === "") {
+          groupKey = "N/A";
+        } else {
+          groupKey = normalized;
+        }
       } else {
         groupKey = entity.system_grouping;
       }

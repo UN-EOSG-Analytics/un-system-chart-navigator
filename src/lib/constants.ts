@@ -155,11 +155,17 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-dark-gray",
     textColor: "text-black",
   },
-  Other: {
-    label: "Other / Not Affiliated",
-    order: 999,
+  "Other": {
+    label: "Other",
+    order: 998,
     bgColor: "bg-gray-300",
     textColor: "text-black",
+  },
+  "N/A": {
+    label: "N/A",
+    order: 999,
+    bgColor: "bg-gray-300",
+    textColor: "text-gray-600",
   },
 };
 
