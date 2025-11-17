@@ -7,7 +7,7 @@ export const entities = entitiesData as Entity[];
 
 // Pre-computed slug-to-entity map for O(1) lookups
 export const entitySlugMap = new Map(
-  entities.map((entity) => [createEntitySlug(entity.entity), entity])
+  entities.map((entity) => [createEntitySlug(entity.entity), entity]),
 );
 
 // Centralized filtering and search function

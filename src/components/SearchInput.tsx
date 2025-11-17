@@ -48,10 +48,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           {ariaLabel}
         </label>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-          <Search
-            className="h-4 w-4 text-un-blue"
-            aria-hidden="true"
-          />
+          <Search className="h-4 w-4 text-un-blue" aria-hidden="true" />
         </div>
         <input
           ref={ref}

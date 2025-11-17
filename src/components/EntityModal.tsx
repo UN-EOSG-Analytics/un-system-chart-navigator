@@ -207,7 +207,7 @@ export default function EntityModal({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex touch-manipulation items-center gap-3 rounded-lg -ml-1 pl-2 pr-3 py-2 text-un-blue transition-opacity duration-200 hover:bg-un-blue/10"
+      className="-ml-1 flex touch-manipulation items-center gap-3 rounded-lg py-2 pr-3 pl-2 text-un-blue transition-opacity duration-200 hover:bg-un-blue/10"
     >
       <Icon size={18} className="flex-shrink-0" />
       <span className="text-base sm:text-lg">{label}</span>
@@ -645,7 +645,7 @@ export default function EntityModal({
         })()}
 
         {/* Contribution Prompt */}
-        <div className="mt-8 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3 -ml-1 mr-2">
+        <div className="mt-8 mr-2 -ml-1 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3">
           <p className="text-sm leading-relaxed text-gray-700">
             Notice something incorrect or have information to add?{" "}
             <a
