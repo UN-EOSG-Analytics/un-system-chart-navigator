@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <main className="w-full flex-grow p-3 sm:p-4 lg:p-6">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-6">
-          <div className="mt-2 flex flex-col gap-3 sm:mt-4">
+          <div className="flex flex-col gap-3 sm:mt-2">
             <Header onTitleClick={handleTitleClick} />
             <ExplainerText />
           </div>

@@ -29,7 +29,7 @@ export default function Header({ onTitleClick }: HeaderProps) {
           </span>
           <Tooltip delayDuration={300}>
             <TooltipTrigger asChild>
-              <sup className="mt-1 -ml-0.5 cursor-help text-xs font-normal text-gray-600 transition-colors group-hover:text-un-blue sm:mt-4 sm:text-base lg:text-lg">
+              <sup className="-ml-0.5 cursor-help text-xs font-normal text-gray-600 transition-colors group-hover:text-un-blue sm:mt-4 sm:text-base lg:text-lg">
                 alpha
               </sup>
             </TooltipTrigger>

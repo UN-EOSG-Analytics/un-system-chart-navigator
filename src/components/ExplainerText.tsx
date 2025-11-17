@@ -8,7 +8,7 @@ import {
 
 export default function ExplainerText() {
   return (
-    <p className="text-base leading-snug text-gray-600 sm:text-base sm:leading-relaxed lg:text-lg">
+    <p className="mt-1 mb-0.5 text-base leading-snug text-gray-600 sm:text-base sm:leading-relaxed lg:text-lg">
       Interactive overview of{" "}
       <Tooltip delayDuration={200}>
         <TooltipTrigger asChild>
@@ -34,9 +34,7 @@ export default function ExplainerText() {
         </TooltipContent>
       </Tooltip>
       . For informational purposes only and subject to official review. The
-      relevant rules of the organization concerned should be consulted in order
-      to establish the legal status, functions and reporting lines of each
-      entity shown. The print version is available{" "}
+      print version is available{" "}
       <a
         href="https://www.un.org/en/delegate/page/un-system-chart"
         target="_blank"
