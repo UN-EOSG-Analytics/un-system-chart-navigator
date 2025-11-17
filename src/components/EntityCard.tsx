@@ -33,11 +33,13 @@ const EntityCard = ({
     onEntityClick(entitySlug);
   };
 
+  const borderClass = entity.review_needed ? "border-2 border-red-600" : "";
+
   return (
     <EntityTooltip entity={entity}>
       <button
         onClick={handleClick}
-        className={`${bgColor} ${textColor} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg pt-3 pr-2 pb-2 pl-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px]`}
+        className={`${bgColor} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg pt-3 pr-2 pb-2 pl-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px]`}
         aria-label={`View details for ${entity.entity_long}`}
       >
         <span className="text-xs leading-tight font-medium sm:text-sm">
