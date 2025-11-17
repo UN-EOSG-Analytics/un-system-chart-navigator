@@ -39,6 +39,9 @@ else:
     print("All entities are unique.")
 
 
+# Filter out rows where the on_display column is False
+df = df[df["on_display"] != "FALSE"]
+
 print(f"Number of entities: {df.shape[0]}")
 
 # Check if all entity values are URL safe
@@ -75,7 +78,6 @@ selected_columns = [
     "head_of_entity_bio_link",
     "head_of_entity_headshot_link",
     "global_leadership_team_url",
-    "on_display",
     "is_primary_entity",
     "foundational_mandate",
     "entity_logo_url",

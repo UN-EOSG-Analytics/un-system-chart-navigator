@@ -11,9 +11,6 @@ df = pd.read_csv(input_path)
 
 df = df.sort_values("entity")
 
-# Filter out rows where the on_display column is False
-df = df[df["on_display"] != False]
-
 # len(df)
 
 # Export ------------------------------------------------------

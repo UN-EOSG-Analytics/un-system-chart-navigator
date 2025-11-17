@@ -17,7 +17,6 @@ export interface Entity {
   head_of_entity_bio_link: string | null;
   head_of_entity_headshot_link: string | null;
   global_leadership_team_url: string | null;
-  on_display: string | null;
   foundational_mandate: string | null;
   entity_logo_url: string | null;
   entity_logo_available: boolean | null;
