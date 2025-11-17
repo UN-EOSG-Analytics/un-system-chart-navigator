@@ -22,16 +22,16 @@ export default function ViewToggle({
         className={`grid h-10 w-full grid-cols-2 gap-0.5 border border-gray-200 bg-white sm:w-80 ${className}`}
       >
         <TabsTrigger
-          value="system"
-          className="rounded-md border border-transparent text-sm text-gray-500 transition-colors hover:text-un-blue data-[state=active]:border-un-blue data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue"
-        >
-          By System Group
-        </TabsTrigger>
-        <TabsTrigger
           value="principal-organ"
           className="rounded-md border border-transparent text-sm text-gray-500 transition-colors hover:text-un-blue data-[state=active]:border-un-blue data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue"
         >
           By Principal Organ
+        </TabsTrigger>
+        <TabsTrigger
+          value="system"
+          className="rounded-md border border-transparent text-sm text-gray-500 transition-colors hover:text-un-blue data-[state=active]:border-un-blue data-[state=active]:bg-un-blue/10 data-[state=active]:text-un-blue"
+        >
+          By System Group
         </TabsTrigger>
       </TabsList>
     </Tabs>

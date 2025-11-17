@@ -159,6 +159,23 @@ export default function FilterControls({
           />
         </div>
 
+        {/* Principal Organ Filter Popover */}
+        <FilterDropdown
+          open={isPrincipalOrganPopoverOpen}
+          onOpenChange={setIsPrincipalOrganPopoverOpen}
+          icon={<Landmark className="h-4 w-4" />}
+          triggerText={getPrincipalOrganFilterText()}
+          isFiltered={!allPrincipalOrgansActive}
+          allActive={allPrincipalOrgansActive}
+          options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
+            key: organKey,
+            label: config.label,
+          }))}
+          selectedKeys={activePrincipalOrgans}
+          onToggle={onTogglePrincipalOrgan}
+          ariaLabel="Filter entities by principal organ"
+        />
+
         {/* Filter Popover */}
         <FilterDropdown
           open={isPopoverOpen}
@@ -176,23 +193,6 @@ export default function FilterControls({
           selectedKeys={activeGroups}
           onToggle={onToggleGroup}
           ariaLabel="Filter entities by system group"
-        />
-
-        {/* Principal Organ Filter Popover */}
-        <FilterDropdown
-          open={isPrincipalOrganPopoverOpen}
-          onOpenChange={setIsPrincipalOrganPopoverOpen}
-          icon={<Landmark className="h-4 w-4" />}
-          triggerText={getPrincipalOrganFilterText()}
-          isFiltered={!allPrincipalOrgansActive}
-          allActive={allPrincipalOrgansActive}
-          options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
-            key: organKey,
-            label: config.label,
-          }))}
-          selectedKeys={activePrincipalOrgans}
-          onToggle={onTogglePrincipalOrgan}
-          ariaLabel="Filter entities by principal organ"
         />
 
         {/* Reset Button - Desktop only - only show when there's something to reset */}

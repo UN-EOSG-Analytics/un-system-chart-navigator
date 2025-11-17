@@ -60,7 +60,7 @@ const EntitiesGrid = forwardRef<{
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [groupingMode, setGroupingMode] = useState<
     "system" | "principal-organ"
-  >("system");
+  >("principal-organ");
   const [activePrincipalOrgans, setActivePrincipalOrgans] = useState<
     Set<string>
   >(new Set(Object.keys(principalOrganConfigs)));
