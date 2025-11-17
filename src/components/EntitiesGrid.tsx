@@ -1,60 +1,18 @@
 "use client";
 
-import { getAllEntities, searchEntities } from "@/lib/entities";
 import {
-  getSystemGroupingStyle,
-  systemGroupingStyles,
-  normalizePrincipalOrgan,
-  principalOrganConfigs,
-  getSortedCategories,
+    getSortedCategories,
+    getSystemGroupingStyle,
+    normalizePrincipalOrgan,
+    principalOrganConfigs,
+    systemGroupingStyles,
 } from "@/lib/constants";
-import { createEntitySlug } from "@/lib/utils";
+import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
+import EntityCard from "./EntityCard";
 import FilterControls from "./FilterControls";
-import EntityTooltip from "./EntityTooltip";
-
-const EntityCard = ({
-  entity,
-  onEntityClick,
-  customBgColor,
-  customTextColor,
-}: {
-  entity: Entity;
-  onEntityClick: (entitySlug: string) => void;
-  customBgColor?: string;
-  customTextColor?: string;
-}) => {
-  const styles = getSystemGroupingStyle(entity.system_grouping);
-  
-  // Use custom colors if provided, otherwise use system grouping styles
-  const bgColor = customBgColor || styles.bgColor;
-  const textColor = customTextColor || styles.textColor;
-
-  // Create URL-friendly slug from entity name using utility function
-  const entitySlug = createEntitySlug(entity.entity);
-
-  // All cards take exactly 1 grid cell for uniform appearance
-
-  const handleClick = () => {
-    onEntityClick(entitySlug);
-  };
-
-  return (
-    <EntityTooltip entity={entity}>
-      <button
-        onClick={handleClick}
-        className={`${bgColor} ${textColor} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg pt-3 pr-2 pb-2 pl-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px]`}
-        aria-label={`View details for ${entity.entity_long}`}
-      >
-        <span className="text-xs leading-tight font-medium sm:text-sm">
-          {entity.entity}
-        </span>
-      </button>
-    </EntityTooltip>
-  );
-};
 
 const EntitiesGrid = forwardRef<{
   handleReset: () => void;
@@ -318,7 +276,7 @@ const EntitiesGrid = forwardRef<{
 
             // For principal organ mode, group entities by category
             const entitiesInGroup = groupedEntities[groupKey];
-            
+
             if (groupingMode === "principal-organ") {
               // Get principal organ colors
               const organConfig = principalOrganConfigs[groupKey];
@@ -338,7 +296,9 @@ const EntitiesGrid = forwardRef<{
                 {},
               );
 
-              const sortedCategories = getSortedCategories(Object.keys(categorizedEntities));
+              const sortedCategories = getSortedCategories(
+                Object.keys(categorizedEntities),
+              );
 
               return (
                 <div
@@ -364,15 +324,17 @@ const EntitiesGrid = forwardRef<{
 
                         {/* Category Grid */}
                         <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                          {categorizedEntities[category].map((entity: Entity) => (
-                            <EntityCard
-                              key={entity.entity}
-                              entity={entity}
-                              onEntityClick={handleEntityClick}
-                              customBgColor={organBgColor}
-                              customTextColor={organTextColor}
-                            />
-                          ))}
+                          {categorizedEntities[category].map(
+                            (entity: Entity) => (
+                              <EntityCard
+                                key={entity.entity}
+                                entity={entity}
+                                onEntityClick={handleEntityClick}
+                                customBgColor={organBgColor}
+                                customTextColor={organTextColor}
+                              />
+                            ),
+                          )}
                         </div>
                       </div>
                     ))}
