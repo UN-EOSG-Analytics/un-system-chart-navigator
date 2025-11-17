@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import ModalHandler from "@/components/ModalHandler";
+import { AnimatedCornerLogo } from "@/components/AnimatedCornerLogo";
 import { Suspense } from "react";
 import Script from "next/script";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.className}>
       <body className="flex min-h-screen flex-col antialiased">
+        <AnimatedCornerLogo />
         <ErrorBoundary>
           {children}
           <Suspense fallback={null}>

@@ -55,3 +55,68 @@ body::-webkit-scrollbar {
   box-shadow: none !important;
   --tw-ring-shadow: none !important;
 }
+
+/* ----------------------------------------------------------- */
+/* UN 2.0 Logo Animation Sprite */
+/* ----------------------------------------------------------- */
+
+@keyframes corner-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes un-two-zero-roll-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) rotate(-360deg) scale(0.3);
+  }
+  70% {
+    opacity: 0.8;
+    transform: translateX(0) rotate(0deg) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+}
+
+/* Animation Classes */
+.corner-slide-entrance {
+  animation: corner-slide-in 0.8s ease-out forwards;
+  animation-delay: 3s;
+  opacity: 0;
+  transform: translateX(-120px);
+}
+
+.corner-slide-loaded {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.corner-slide-hidden {
+  opacity: 0;
+  transform: translateX(-120px);
+}
+
+.un-two-zero-roll-entrance {
+  animation: un-two-zero-roll-in 1s ease-out forwards;
+  animation-delay: 4s; /* 3s corner delay + 1s additional */
+  opacity: 0;
+  transform: translateX(-60px) rotate(-360deg) scale(0.3);
+}
+
+.un-two-zero-roll-loaded {
+  opacity: 1;
+  transform: translateX(0) rotate(0deg) scale(1);
+}
+
+.un-two-zero-roll-hidden {
+  opacity: 0;
+  transform: translateX(-60px) rotate(-360deg) scale(0.3);
+}
