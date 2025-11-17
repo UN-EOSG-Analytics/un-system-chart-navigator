@@ -70,7 +70,7 @@ export default function DataDownloadBar() {
     <div className="w-full bg-white p-3 sm:p-4 lg:p-6">
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex items-start gap-2 text-base">
-          <p className="text-gray-600">As of October 2025</p>
+          <p className="text-gray-600">As of November 2025</p>
           <span className="text-gray-400">|</span>
           <div className="relative" ref={downloadRef}>
             <button
@@ -157,6 +157,11 @@ export default function DataDownloadBar() {
             />
           </div>
         </div>
+        <p className="mt-2 text-sm leading-tight text-gray-500">
+          The relevant rules of the organization concerned should be consulted
+          in order to establish the legal status, functions and reporting lines
+          of each entity shown in this Chart.
+        </p>
       </div>
     </div>
   );
