@@ -5,6 +5,11 @@ import { createEntitySlug, parseEntityAliases } from "./utils";
 // Direct import - 180KB JSON file loaded at build time
 export const entities = entitiesData as Entity[];
 
+// Pre-computed slug-to-entity map for O(1) lookups
+export const entitySlugMap = new Map(
+  entities.map((entity) => [createEntitySlug(entity.entity), entity])
+);
+
 // Centralized filtering and search function
 export function getEntities(options?: {
   filters?: EntityFilters;
@@ -59,11 +64,7 @@ export const getAllEntities = () => entities;
 
 export const getEntityBySlug = (slug: string): Entity | null => {
   const decodedSlug = decodeURIComponent(slug).toLowerCase();
-  return (
-    entities.find(
-      (entity) => createEntitySlug(entity.entity) === decodedSlug,
-    ) || null
-  );
+  return entitySlugMap.get(decodedSlug) || null;
 };
 
 export const getEntitiesByGroup = (group: string) => getEntities({ group });
