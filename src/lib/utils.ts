@@ -6,14 +6,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// FIXME: standardize with a variable instead of creating here, to make URLs safe and consistent
 // Create a safe, consistent slug from entity names
 export function createEntitySlug(entityName: string): string {
   return (
     entityName
       .toLowerCase()
-      // Replace special characters and symbols with hyphens
-      .replace(/[^\w\s-]/g, "-")
+      // Replace special characters and symbols (including underscores) with hyphens
+      .replace(/[^a-z0-9\s-]/g, "-")
       // Replace multiple spaces or hyphens with single hyphen
       .replace(/[\s-]+/g, "-")
       // Remove leading/trailing hyphens

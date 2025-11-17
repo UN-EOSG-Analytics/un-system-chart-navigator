@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 from pyairtable import Api
 from dotenv import load_dotenv
+from urllib.parse import quote
 
 # Load environment variables from .env file
 load_dotenv()
@@ -31,9 +32,22 @@ if "added_via_form" in df.columns:
 # Check for duplicate entities
 duplicates = df[df["entity"].duplicated(keep=False)]["entity"]
 if not duplicates.empty:
-    raise ValueError(f"Duplicate entities found in the input data: {duplicates.to_list()}")
+    raise ValueError(
+        f"Duplicate entities found in the input data: {duplicates.to_list()}"
+    )
 else:
     print("All entities are unique.")
+
+# Check if all entity values are URL safe
+unsafe_entities = []
+for entity in df["entity"]:
+    if quote(entity, safe="") != entity:
+        unsafe_entities.append(entity)
+
+if unsafe_entities:
+    print(f"Warning: Entities not URL safe: {unsafe_entities}")
+else:
+    print("All entities are URL safe.")
 
 # df.shape[1]
 # df.shape[0]
@@ -87,7 +101,9 @@ selected_columns = [
 
 entity_ts_path = Path("src/types/entity.ts")
 entity_ts_content = entity_ts_path.read_text()
-entity_interface_match = re.search(r"export interface Entity\s*{(.*?)}", entity_ts_content, re.DOTALL)
+entity_interface_match = re.search(
+    r"export interface Entity\s*{(.*?)}", entity_ts_content, re.DOTALL
+)
 if not entity_interface_match:
     raise ValueError("Could not locate Entity interface in src/types/entity.ts")
 
