@@ -3,11 +3,11 @@
 import os
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 import pandas as pd
-from pyairtable import Api
 from dotenv import load_dotenv
-from urllib.parse import quote
+from pyairtable import Api
 
 # Load environment variables from .env file
 load_dotenv()
@@ -97,28 +97,8 @@ selected_columns = [
     "entity_mandate_registry",
     "entity_custom_mandate_registry",
     "record_id",
+    "review_needed",
 ]
-
-entity_ts_path = Path("src/types/entity.ts")
-entity_ts_content = entity_ts_path.read_text()
-entity_interface_match = re.search(
-    r"export interface Entity\s*{(.*?)}", entity_ts_content, re.DOTALL
-)
-if not entity_interface_match:
-    raise ValueError("Could not locate Entity interface in src/types/entity.ts")
-
-entity_fields = []
-for line in entity_interface_match.group(1).splitlines():
-    stripped = line.strip()
-    if not stripped or stripped.startswith("//"):
-        continue
-    field_name = stripped.split(":", 1)[0].strip().rstrip("?")
-    if field_name:
-        entity_fields.append(field_name)
-
-missing_fields = [col for col in selected_columns if col not in entity_fields]
-if missing_fields:
-    raise ValueError(f"Columns missing in Entity interface: {missing_fields}")
 
 # Compare with all available columns
 all_columns = df.columns.tolist()
@@ -130,7 +110,5 @@ print("Columns not selected:", not_selected_columns)
 # Filter the DataFrame to include only selected columns
 df = df[selected_columns]
 
-data_folder = Path("data")
-
-output_path = data_folder / "input" / "input_entities.csv"
+output_path = Path("data") / "input" / "input_entities.csv"
 df.to_csv(output_path, index=False)

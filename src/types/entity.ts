@@ -42,6 +42,7 @@ export interface Entity {
   entity_mandate_registry: string | null;
   entity_custom_mandate_registry: string | null;
   record_id: string;
+  review_needed: boolean | null;
 }
 
 export interface EntityFilters {
