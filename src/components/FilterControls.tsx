@@ -7,11 +7,9 @@ import ViewToggle from "@/components/ViewToggle";
 import {
   getSortedPrincipalOrgans,
   principalOrganConfigs,
-} from "@/lib/principalOrgans";
-import {
   getSortedSystemGroupings,
   systemGroupingStyles,
-} from "@/lib/systemGroupings";
+} from "@/lib/constants";
 import { Entity } from "@/types/entity";
 import { Boxes, ChevronDown, ChevronUp, Filter, Landmark } from "lucide-react";
 import { useEffect, useRef, useState } from "react";

@@ -1,5 +1,6 @@
 "use client";
 
+import { principalOrganConfigs } from "@/lib/constants";
 import { ExternalLink } from "lucide-react";
 
 interface PrincipalOrganBadgeProps {
@@ -57,13 +58,19 @@ export default function PrincipalOrganBadge({
 }: PrincipalOrganBadgeProps) {
   const url = getOrganUrl(organ);
   const isClickable = Boolean(url);
+  
+  // Get colors from principal organ config
+  const organConfig = principalOrganConfigs[organ];
+  const bgColor = organConfig?.bgColor || "bg-gray-200";
+  const textColor = organConfig?.textColor || "text-gray-800";
 
   const badgeClasses = `
         inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium
+        ${bgColor} ${textColor}
         ${
           isClickable
-            ? "bg-gray-200 text-gray-800 hover:bg-gray-300 cursor-pointer transition-colors duration-200"
-            : "bg-gray-200 text-gray-800"
+            ? "hover:opacity-80 cursor-pointer transition-all duration-200"
+            : ""
         }
         ${className}
     `.trim();

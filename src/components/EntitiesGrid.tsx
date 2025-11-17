@@ -4,11 +4,10 @@ import { getAllEntities, searchEntities } from "@/lib/entities";
 import {
   getSystemGroupingStyle,
   systemGroupingStyles,
-} from "@/lib/systemGroupings";
-import {
   normalizePrincipalOrgan,
   principalOrganConfigs,
-} from "@/lib/principalOrgans";
+  getSortedCategories,
+} from "@/lib/constants";
 import { createEntitySlug } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -19,11 +18,19 @@ import EntityTooltip from "./EntityTooltip";
 const EntityCard = ({
   entity,
   onEntityClick,
+  customBgColor,
+  customTextColor,
 }: {
   entity: Entity;
   onEntityClick: (entitySlug: string) => void;
+  customBgColor?: string;
+  customTextColor?: string;
 }) => {
   const styles = getSystemGroupingStyle(entity.system_grouping);
+  
+  // Use custom colors if provided, otherwise use system grouping styles
+  const bgColor = customBgColor || styles.bgColor;
+  const textColor = customTextColor || styles.textColor;
 
   // Create URL-friendly slug from entity name using utility function
   const entitySlug = createEntitySlug(entity.entity);
@@ -38,7 +45,7 @@ const EntityCard = ({
     <EntityTooltip entity={entity}>
       <button
         onClick={handleClick}
-        className={`${styles.bgColor} ${styles.textColor} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg pt-3 pr-2 pb-2 pl-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px]`}
+        className={`${bgColor} ${textColor} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg pt-3 pr-2 pb-2 pl-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px]`}
         aria-label={`View details for ${entity.entity_long}`}
       >
         <span className="text-xs leading-tight font-medium sm:text-sm">
@@ -304,6 +311,71 @@ const EntitiesGrid = forwardRef<{
               groupingMode === "principal-organ"
                 ? principalOrganConfigs[groupKey]?.label || groupKey
                 : getSystemGroupingStyle(groupKey).label;
+
+            // For principal organ mode, group entities by category
+            const entitiesInGroup = groupedEntities[groupKey];
+            
+            if (groupingMode === "principal-organ") {
+              // Get principal organ colors
+              const organConfig = principalOrganConfigs[groupKey];
+              const organBgColor = organConfig?.bgColor || "bg-gray-300";
+              const organTextColor = organConfig?.textColor || "text-black";
+
+              // Group by category
+              const categorizedEntities = entitiesInGroup.reduce(
+                (acc: Record<string, Entity[]>, entity: Entity) => {
+                  const category = entity.category || "Other";
+                  if (!acc[category]) {
+                    acc[category] = [];
+                  }
+                  acc[category].push(entity);
+                  return acc;
+                },
+                {},
+              );
+
+              const sortedCategories = getSortedCategories(Object.keys(categorizedEntities));
+
+              return (
+                <div
+                  key={groupKey}
+                  className="animate-in fade-in slide-in-from-bottom-4"
+                >
+                  {/* Principal Organ Heading */}
+                  <div className="mb-4">
+                    <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
+                    <h2 className="text-xl font-semibold text-foreground sm:text-2xl">
+                      {groupLabel}
+                    </h2>
+                  </div>
+
+                  {/* Categories within this Principal Organ */}
+                  <div className="space-y-4">
+                    {sortedCategories.map((category) => (
+                      <div key={category}>
+                        {/* Category H2 Header */}
+                        <h2 className="mb-2 text-base font-medium text-gray-600 sm:text-lg">
+                          {category}
+                        </h2>
+
+                        {/* Category Grid */}
+                        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                          {categorizedEntities[category].map((entity: Entity) => (
+                            <EntityCard
+                              key={entity.entity}
+                              entity={entity}
+                              onEntityClick={handleEntityClick}
+                              customBgColor={organBgColor}
+                              customTextColor={organTextColor}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
 
             return (
               <div

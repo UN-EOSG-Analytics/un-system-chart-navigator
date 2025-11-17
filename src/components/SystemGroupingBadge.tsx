@@ -1,6 +1,6 @@
 "use client";
 
-import { getSystemGroupingStyle } from "@/lib/systemGroupings";
+import { getSystemGroupingStyle } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 
 interface SystemGroupingBadgeProps {
