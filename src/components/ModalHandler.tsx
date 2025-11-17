@@ -23,6 +23,13 @@ export default function ModalHandler() {
       return;
     }
 
+    // Canonicalize to lowercase for consistent URLs (SEO best practice)
+    const lowercaseSlug = entitySlug.toLowerCase();
+    if (entitySlug !== lowercaseSlug) {
+      router.replace(`/?entity=${lowercaseSlug}`, { scroll: false });
+      return;
+    }
+
     // If the provided slug is an alias, replace the URL with the canonical entity
     // This runs in the client, so it's suitable for static deployments (GitHub Pages)
     if (isEntityAlias(entitySlug)) {
