@@ -1,11 +1,10 @@
+import { AnimatedCornerLogo } from "@/components/AnimatedCornerLogo";
+import ModalHandler from "@/components/ModalHandler";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import "./globals.css";
-import ErrorBoundary from "@/components/ErrorBoundary";
-import ModalHandler from "@/components/ModalHandler";
-import { AnimatedCornerLogo } from "@/components/AnimatedCornerLogo";
 import { Suspense } from "react";
-import Script from "next/script";
+import "./globals.css";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -27,26 +26,11 @@ export default function RootLayout({
     <html lang="en" className={roboto.className}>
       <body className="flex min-h-screen flex-col antialiased">
         <AnimatedCornerLogo />
-        <ErrorBoundary>
-          {children}
-          <Suspense fallback={null}>
-            <ModalHandler />
-          </Suspense>
-        </ErrorBoundary>
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-E7KQ0BSP9Z"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        
-                        gtag('config', 'G-E7KQ0BSP9Z');
-                    `}
-        </Script>
+        {children}
+        <Suspense fallback={null}>
+          <ModalHandler />
+        </Suspense>
+        <GoogleAnalytics gaId="G-E7KQ0BSP9Z" />
       </body>
     </html>
   );
