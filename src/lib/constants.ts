@@ -155,7 +155,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-dark-gray",
     textColor: "text-black",
   },
-  "Other": {
+  Other: {
     label: "Other",
     order: 998,
     bgColor: "bg-gray-300",
@@ -205,100 +205,81 @@ export function normalizePrincipalOrgan(
 // CATEGORIES
 // ============================================================================
 
-export interface CategoryConfig {
-  label: string;
-  order: number;
-}
-
-export const categoryConfigs: Record<string, CategoryConfig> = {
-  "Departments and Offices": {
-    label: "Departments and Offices",
-    order: 1,
+/**
+ * Hierarchical category ordering by principal organ
+ * Each principal organ has its own category order
+ */
+export const categoryOrderByPrincipalOrgan: Record<
+  string,
+  Record<string, number>
+> = {
+  "General Assembly (GA)": {
+    "Intergovernmental and Expert Bodies": 1,
+    "Funds and Programmes": 2,
+    "Research and Training": 3,
+    "Other Entities": 4,
+    "Related Organizations": 5,
+    "N/A": 999,
   },
-  "Departments and Offices (Internal Justice Bodies)": {
-    label: "Departments and Offices (Internal Justice Bodies)",
-    order: 2,
+  "Security Council (SC)": {
+    "Subsidiary Organs (Peacekeeping operations and political missions)": 1,
+    "Subsidiary Organs (Counter-Terrorism Committee)": 2,
+    "Subsidiary Organs (Sanctions Committee)": 3,
+    "Subsidiary Organs (Standing committees and ad hoc bodies)": 4,
+    "N/A": 999,
   },
-  "Departments and Offices (Other Entities)": {
-    label: "Departments and Offices (Other Entities)",
-    order: 3,
+  "Economic and Social Council (ECOSOC)": {
+    "Regional Commissions": 1,
+    "Other Bodies": 2,
+    "Specialized Agencies": 3,
+    "N/A": 999,
   },
-  "UN Secretariat": {
-    label: "UN Secretariat",
-    order: 4,
+  Secretariat: {
+    "Departments and Offices": 1,
+    "Departments and Offices (Internal Justice Bodies)": 2,
+    "Departments and Offices (Other Entities)": 3,
+    "N/A": 999,
   },
-  "Peacekeeping Operations and Political Missions": {
-    label: "Peacekeeping Operations and Political Missions",
-    order: 5,
+  "International Court of Justice (ICJ)": {
+    "International Court of Justice": 1,
+    "N/A": 999,
   },
-  "Subsidiary Organs (Peacekeeping operations and political missions)": {
-    label: "Subsidiary Organs (Peacekeeping operations and political missions)",
-    order: 6,
+  "Trusteeship Council": {
+    "N/A": 999,
   },
-  "Subsidiary Organs (Sanctions Committee)": {
-    label: "Subsidiary Organs (Sanctions Committee)",
-    order: 7,
+  Other: {
+    "Related Organizations": 1,
+    "N/A": 999,
   },
-  "Subsidiary Organs (Standing committees and ad hoc bodies)": {
-    label: "Subsidiary Organs (Standing committees and ad hoc bodies)",
-    order: 8,
-  },
-  "Regional Commissions": {
-    label: "Regional Commissions",
-    order: 9,
-  },
-  "Other Bodies": {
-    label: "Other Bodies",
-    order: 10,
-  },
-  "Intergovernmental and Expert Bodies": {
-    label: "Intergovernmental and Expert Bodies",
-    order: 11,
-  },
-  "Funds and Programmes": {
-    label: "Funds and Programmes",
-    order: 12,
-  },
-  "Research and Training": {
-    label: "Research and Training",
-    order: 13,
-  },
-  "Other Entities": {
-    label: "Other Entities",
-    order: 14,
-  },
-  "International Court of Justice": {
-    label: "International Court of Justice",
-    order: 15,
-  },
-  "Specialized Agencies": {
-    label: "Specialized Agencies",
-    order: 16,
-  },
-  "Related Organizations": {
-    label: "Related Organizations",
-    order: 17,
+  "N/A": {
+    "Related Organizations": 1,
+    "N/A": 999,
   },
 };
 
 /**
- * Get all categories sorted by their order
+ * Get all categories sorted by their order within a principal organ context
+ * @param categories - Array of category names to sort
+ * @param principalOrgan - The principal organ context for hierarchical sorting
+ * @returns Sorted array of category names
  */
-export function getSortedCategories(categories: string[]): string[] {
+export function getSortedCategories(
+  categories: string[],
+  principalOrgan: string | null,
+): string[] {
   return categories.sort((a, b) => {
-    const orderA = categoryConfigs[a]?.order ?? 999;
-    const orderB = categoryConfigs[b]?.order ?? 999;
+    let orderA = 999;
+    let orderB = 999;
+
+    if (principalOrgan && categoryOrderByPrincipalOrgan[principalOrgan]) {
+      orderA = categoryOrderByPrincipalOrgan[principalOrgan][a] ?? 999;
+      orderB = categoryOrderByPrincipalOrgan[principalOrgan][b] ?? 999;
+    }
+
     if (orderA !== orderB) {
       return orderA - orderB;
     }
     // Fallback to alphabetical if same order or not configured
     return a.localeCompare(b);
   });
-}
-
-/**
- * Get label for a category
- */
-export function getCategoryLabel(category: string): string {
-  return categoryConfigs[category]?.label || category;
 }

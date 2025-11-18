@@ -1,11 +1,11 @@
 "use client";
 
 import {
-    getSortedCategories,
-    getSystemGroupingStyle,
-    normalizePrincipalOrgan,
-    principalOrganConfigs,
-    systemGroupingStyles,
+  getSortedCategories,
+  getSystemGroupingStyle,
+  normalizePrincipalOrgan,
+  principalOrganConfigs,
+  systemGroupingStyles,
 } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
@@ -286,7 +286,7 @@ const EntitiesGrid = forwardRef<{
               // Group by category
               const categorizedEntities = entitiesInGroup.reduce(
                 (acc: Record<string, Entity[]>, entity: Entity) => {
-                  const category = entity.category || "Other";
+                  const category = entity.category || "N/A";
                   if (!acc[category]) {
                     acc[category] = [];
                   }
@@ -298,6 +298,7 @@ const EntitiesGrid = forwardRef<{
 
               const sortedCategories = getSortedCategories(
                 Object.keys(categorizedEntities),
+                groupKey, // Pass the principal organ as context
               );
 
               return (
