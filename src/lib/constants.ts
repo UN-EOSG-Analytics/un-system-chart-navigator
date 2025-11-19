@@ -227,7 +227,10 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Related Organizations": 5,
     "N/A": 999,
   },
-  "Security Council (SC)": {},
+  "Security Council (SC)": {
+    "Subsidiary Organs": 1,
+    "N/A": 999,
+  },
   "Economic and Social Council (ECOSOC)": {
     "Functional Commissions": 1,
     "Regional Commissions": 2,
@@ -282,6 +285,62 @@ export function getSortedCategories(
       return orderA - orderB;
     }
     // Fallback to alphabetical if same order or not configured
+    return a.localeCompare(b);
+  });
+}
+
+// ============================================================================
+// SUBCATEGORIES
+// ============================================================================
+
+/**
+ * Subcategory ordering by principal organ
+ * Allows fine-grained control over subcategory display order
+ * 
+ * For Security Council (SC):
+ * - Category is always "Subsidiary Organs"
+ * - Subcategories are what matter and need ordering (alphabetically)
+ */
+export const subcategoryOrderByPrincipalOrgan: Record<
+    string,
+    Record<string, number>
+> = {
+    "Security Council (SC)": {
+        "Counter-Terrorism Committee": 1,
+        "International Residual Mechanism for Criminal Tribunals": 2,
+        "Military Staff Committee": 3,
+        "Peacekeeping operations and special political missions": 4,
+        "Standing committees and ad hoc bodies": 5,
+        "Sanctions Committees": 6,
+        "": 999, // Empty subcategory (entities without subcategory)
+    },
+};
+
+/**
+ * Get all subcategories sorted by their order within a principal organ context
+ * @param subcategories - Array of subcategory names to sort
+ * @param principalOrgan - The principal organ context for hierarchical sorting
+ * @returns Sorted array of subcategory names
+ */
+export function getSortedSubcategories(
+  subcategories: string[],
+  principalOrgan: string | null,
+): string[] {
+  return subcategories.sort((a, b) => {
+    let orderA = 999;
+    let orderB = 999;
+
+    if (principalOrgan && subcategoryOrderByPrincipalOrgan[principalOrgan]) {
+      orderA = subcategoryOrderByPrincipalOrgan[principalOrgan][a] ?? 999;
+      orderB = subcategoryOrderByPrincipalOrgan[principalOrgan][b] ?? 999;
+    }
+
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+    // Fallback: empty string goes last, then alphabetical
+    if (a === "" && b !== "") return 1;
+    if (a !== "" && b === "") return -1;
     return a.localeCompare(b);
   });
 }

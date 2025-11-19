@@ -2,6 +2,7 @@
 
 import {
   getSortedCategories,
+  getSortedSubcategories,
   getSystemGroupingStyle,
   normalizePrincipalOrgan,
   principalOrganConfigs,
@@ -323,7 +324,9 @@ const EntitiesGrid = forwardRef<{
                   <div className="space-y-4">
                     {sortedCategories.map((category) => {
                       // Group entities by subcategory within this category
-                      const subcategorizedEntities = categorizedEntities[category].reduce(
+                      const subcategorizedEntities = categorizedEntities[
+                        category
+                      ].reduce(
                         (acc: Record<string, Entity[]>, entity: Entity) => {
                           const subcategory = entity.subcategory || "";
                           if (!acc[subcategory]) {
@@ -336,15 +339,47 @@ const EntitiesGrid = forwardRef<{
                       );
 
                       const subcategories = Object.keys(subcategorizedEntities);
-                      const hasSubcategories = subcategories.length > 1 || (subcategories.length === 1 && subcategories[0] !== "");
+                      const hasSubcategories =
+                        subcategories.length > 1 ||
+                        (subcategories.length === 1 && subcategories[0] !== "");
 
-                      // Sort subcategories: empty string (no subcategory) goes last
-                      const sortedSubcategories = subcategories.sort((a, b) => {
-                        if (a === "" && b !== "") return 1;
-                        if (a !== "" && b === "") return -1;
-                        return a.localeCompare(b);
-                      });
+                      // Use custom sorting for subcategories
+                      const sortedSubcategories = getSortedSubcategories(
+                        subcategories,
+                        groupKey,
+                      );
 
+                      // Special rendering for Security Council: skip category header, only show subcategories
+                      if (groupKey === "Security Council (SC)") {
+                        return (
+                          <div key={category} className="space-y-3">
+                            {sortedSubcategories.map((subcategory) => (
+                              <div key={subcategory || "none"}>
+                                {subcategory && (
+                                  <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
+                                    {subcategory}
+                                  </h3>
+                                )}
+                                <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                                  {subcategorizedEntities[subcategory].map(
+                                    (entity: Entity) => (
+                                      <EntityCard
+                                        key={entity.entity}
+                                        entity={entity}
+                                        onEntityClick={handleEntityClick}
+                                        customBgColor={organBgColor}
+                                        customTextColor={organTextColor}
+                                      />
+                                    ),
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        );
+                      }
+
+                      // Standard rendering for other principal organs
                       return (
                         <div key={category}>
                           {/* Category H2 Header */}
