@@ -175,8 +175,8 @@ export default function FilterControls({
           ariaLabel="Filter entities by principal organ"
         />
 
-        {/* Filter Popover */}
-        <FilterDropdown
+        {/* Filter Popover - DISABLED */}
+        {/* <FilterDropdown
           open={isPopoverOpen}
           onOpenChange={setIsPopoverOpen}
           icon={<Boxes className="h-4 w-4" />}
@@ -192,7 +192,7 @@ export default function FilterControls({
           selectedKeys={activeGroups}
           onToggle={onToggleGroup}
           ariaLabel="Filter entities by system group"
-        />
+        /> */}
 
         {/* Reset Button - Desktop only - only show when there's something to reset */}
         {isResetNeeded && (
@@ -204,7 +204,8 @@ export default function FilterControls({
       <div
         className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 ${filtersExpanded ? "mt-1" : "-mt-3"} lg:mt-0`}
       >
-        <ViewToggle value={groupingMode} onValueChange={onGroupingModeChange} />
+        {/* ViewToggle - DISABLED */}
+        {/* <ViewToggle value={groupingMode} onValueChange={onGroupingModeChange} /> */}
 
         {/* Entity Count - aligned with tabs on larger screens, wraps below on mobile */}
         <div className="text-left text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:flex-1 sm:text-right">
