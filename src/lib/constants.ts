@@ -79,7 +79,7 @@ export const systemGroupingStyles: Record<string, SystemGroupingStyle> = {
     textColor: "text-black",
     order: 11,
   },
-  "Unspecified": {
+  Unspecified: {
     label: "Unspecified",
     bgColor: "bg-gray-400",
     textColor: "text-black",
@@ -212,6 +212,43 @@ export function normalizePrincipalOrgan(
 // ============================================================================
 
 /**
+ * Category footnotes - explanatory text for specific categories
+ * Key format: "PrincipalOrgan|Category"
+ */
+export const categoryFootnotes: Record<string, string> = {
+  // 1
+  "General Assembly (GA)|Funds and Programmes":
+    "Member of the United Nations System Chief Executives Board for Coordination (CEB).",
+
+  // 6
+  "Economic and Social Council (ECOSOC)|Regional Commissions":
+    "The secretariats of these organs are part of the United Nations Secretariat.",
+
+  // 8
+  "Economic and Social Council (ECOSOC)|Other Bodies":
+    "For a complete list of ECOSOC subsidiary organs see un.org/ecosoc.",
+
+  // 7
+  "Secretariat|Departments and Offices":
+    " The Secretariat also includes the following offices: the Ethics Office, United Nations Ombudsman and Mediation Services, and the Office of Administration of Justice.",
+};
+
+/**
+ * Get footnote text for a category within a principal organ context
+ * @param principalOrgan - The principal organ context
+ * @param category - The category name
+ * @returns Footnote text or null if no footnote exists
+ */
+export function getCategoryFootnote(
+  principalOrgan: string | null,
+  category: string,
+): string | null {
+  if (!principalOrgan) return null;
+  const key = `${principalOrgan}|${category}`;
+  return categoryFootnotes[key] || null;
+}
+
+/**
  * Hierarchical category ordering by principal organ
  * Each principal organ has its own category order
  */
@@ -243,8 +280,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Departments and Offices": 1,
     "N/A": 999,
   },
-  "International Court of Justice (ICJ)": {
-  },
+  "International Court of Justice (ICJ)": {},
   "Trusteeship Council": {
     "N/A": 999,
   },
@@ -292,24 +328,24 @@ export function getSortedCategories(
 /**
  * Subcategory ordering by principal organ
  * Allows fine-grained control over subcategory display order
- * 
+ *
  * For Security Council (SC):
  * - Category is always "Subsidiary Organs"
  * - Subcategories are what matter and need ordering (alphabetically)
  */
 export const subcategoryOrderByPrincipalOrgan: Record<
-    string,
-    Record<string, number>
+  string,
+  Record<string, number>
 > = {
-    "Security Council (SC)": {
-        "Counter-Terrorism Committee": 1,
-        "International Residual Mechanism for Criminal Tribunals": 2,
-        "Military Staff Committee": 3,
-        "Peacekeeping operations and special political missions": 4,
-        "Standing committees and ad hoc bodies": 5,
-        "Sanctions Committees": 6,
-        "": 999, // Empty subcategory (entities without subcategory)
-    },
+  "Security Council (SC)": {
+    "Counter-Terrorism Committee": 1,
+    "International Residual Mechanism for Criminal Tribunals": 2,
+    "Military Staff Committee": 3,
+    "Peacekeeping operations and special political missions": 4,
+    "Standing committees and ad hoc bodies": 5,
+    "Sanctions Committees": 6,
+    "": 999, // Empty subcategory (entities without subcategory)
+  },
 };
 
 /**

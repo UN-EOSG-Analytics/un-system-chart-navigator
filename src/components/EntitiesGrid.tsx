@@ -2,6 +2,7 @@
 
 import {
   categoryOrderByPrincipalOrgan,
+  getCategoryFootnote,
   getSortedCategories,
   getSortedSubcategories,
   getSystemGroupingStyle,
@@ -14,6 +15,7 @@ import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
+import CategoryFootnote from "./CategoryFootnote";
 import EntityCard from "./EntityCard";
 import FilterControls from "./FilterControls";
 
@@ -310,7 +312,8 @@ const EntitiesGrid = forwardRef<{
               );
 
               // Check if categories are defined in constants for this organ
-              const hasDefinedCategories = categoryOrderByPrincipalOrgan[groupKey] !== undefined &&
+              const hasDefinedCategories =
+                categoryOrderByPrincipalOrgan[groupKey] !== undefined &&
                 Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length > 0;
 
               return (
@@ -342,156 +345,182 @@ const EntitiesGrid = forwardRef<{
                   ) : (
                     /* Categories within this Principal Organ */
                     <div className="space-y-4">
-                    {sortedCategories.map((category) => {
-                      // Group entities by subcategory within this category
-                      const subcategorizedEntities = categorizedEntities[
-                        category
-                      ].reduce(
-                        (acc: Record<string, Entity[]>, entity: Entity) => {
-                          const subcategory = entity.subcategory || "";
-                          if (!acc[subcategory]) {
-                            acc[subcategory] = [];
+                      {sortedCategories.map((category) => {
+                        // Group entities by subcategory within this category
+                        const subcategorizedEntities = categorizedEntities[
+                          category
+                        ].reduce(
+                          (acc: Record<string, Entity[]>, entity: Entity) => {
+                            const subcategory = entity.subcategory || "";
+                            if (!acc[subcategory]) {
+                              acc[subcategory] = [];
+                            }
+                            acc[subcategory].push(entity);
+                            return acc;
+                          },
+                          {},
+                        );
+
+                        const subcategories = Object.keys(
+                          subcategorizedEntities,
+                        );
+                        const hasSubcategories =
+                          subcategories.length > 1 ||
+                          (subcategories.length === 1 &&
+                            subcategories[0] !== "");
+
+                        // Check if subcategories are defined in constants for this organ
+                        const hasDefinedSubcategories =
+                          subcategoryOrderByPrincipalOrgan[groupKey] !==
+                          undefined;
+
+                        // Special rendering when subcategories are defined: show all defined subcategories with headers
+                        if (hasDefinedSubcategories) {
+                          // Get all defined subcategories from constants
+                          const definedSubcategories = Object.keys(
+                            subcategoryOrderByPrincipalOrgan[groupKey] || {},
+                          ).filter((key) => key !== ""); // Exclude empty string placeholder
+
+                          // Use all defined subcategories, not just ones with entities
+                          const allSubcategories = Array.from(
+                            new Set([...definedSubcategories]),
+                          );
+                          const sortedAllSubcategories = getSortedSubcategories(
+                            allSubcategories,
+                            groupKey,
+                          );
+
+                          // For Security Council, skip category header
+                          if (groupKey === "Security Council (SC)") {
+                            return (
+                              <div key={category} className="space-y-3">
+                                {sortedAllSubcategories.map((subcategory) => {
+                                  const entitiesInSubcategory =
+                                    subcategorizedEntities[subcategory] || [];
+
+                                  return (
+                                    <div key={subcategory || "none"}>
+                                      {subcategory && (
+                                        <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
+                                          {subcategory}
+                                        </h3>
+                                      )}
+                                      {entitiesInSubcategory.length > 0 && (
+                                        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                                          {entitiesInSubcategory.map(
+                                            (entity: Entity) => (
+                                              <EntityCard
+                                                key={entity.entity}
+                                                entity={entity}
+                                                onEntityClick={
+                                                  handleEntityClick
+                                                }
+                                                customBgColor={organBgColor}
+                                                customTextColor={organTextColor}
+                                              />
+                                            ),
+                                          )}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            );
                           }
-                          acc[subcategory].push(entity);
-                          return acc;
-                        },
-                        {},
-                      );
 
-                      const subcategories = Object.keys(subcategorizedEntities);
-                      const hasSubcategories =
-                        subcategories.length > 1 ||
-                        (subcategories.length === 1 && subcategories[0] !== "");
-
-                      // Check if subcategories are defined in constants for this organ
-                      const hasDefinedSubcategories = subcategoryOrderByPrincipalOrgan[groupKey] !== undefined;
-                      
-                      // Special rendering when subcategories are defined: show all defined subcategories with headers
-                      if (hasDefinedSubcategories) {
-                        // Get all defined subcategories from constants
-                        const definedSubcategories = Object.keys(
-                          subcategoryOrderByPrincipalOrgan[groupKey] || {}
-                        ).filter(key => key !== ""); // Exclude empty string placeholder
-                        
-                        // Use all defined subcategories, not just ones with entities
-                        const allSubcategories = Array.from(
-                          new Set([...definedSubcategories])
-                        );
-                        const sortedAllSubcategories = getSortedSubcategories(
-                          allSubcategories,
-                          groupKey,
-                        );
-
-                        // For Security Council, skip category header
-                        if (groupKey === "Security Council (SC)") {
+                          // For other organs with defined subcategories, show category header then subcategories
                           return (
-                            <div key={category} className="space-y-3">
-                              {sortedAllSubcategories.map((subcategory) => {
-                                const entitiesInSubcategory = subcategorizedEntities[subcategory] || [];
-                                
-                                return (
-                                  <div key={subcategory || "none"}>
-                                    {subcategory && (
-                                      <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
-                                        {subcategory}
-                                      </h3>
-                                    )}
-                                    {entitiesInSubcategory.length > 0 && (
-                                      <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                                        {entitiesInSubcategory.map(
-                                          (entity: Entity) => (
-                                            <EntityCard
-                                              key={entity.entity}
-                                              entity={entity}
-                                              onEntityClick={handleEntityClick}
-                                              customBgColor={organBgColor}
-                                              customTextColor={organTextColor}
-                                            />
-                                          ),
-                                        )}
-                                      </div>
-                                    )}
-                                  </div>
-                                );
-                              })}
+                            <div key={category}>
+                              {/* Category H2 Header */}
+                              <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
+                                {category}
+                                {getCategoryFootnote(groupKey, category) && (
+                                  <CategoryFootnote
+                                    text={
+                                      getCategoryFootnote(groupKey, category)!
+                                    }
+                                  />
+                                )}
+                              </h2>
+
+                              {/* All defined subcategories */}
+                              <div className="space-y-3">
+                                {sortedAllSubcategories.map((subcategory) => {
+                                  const entitiesInSubcategory =
+                                    subcategorizedEntities[subcategory] || [];
+
+                                  return (
+                                    <div key={subcategory || "none"}>
+                                      {subcategory && (
+                                        <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
+                                          {subcategory}
+                                        </h3>
+                                      )}
+                                      {entitiesInSubcategory.length > 0 && (
+                                        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                                          {entitiesInSubcategory.map(
+                                            (entity: Entity) => (
+                                              <EntityCard
+                                                key={entity.entity}
+                                                entity={entity}
+                                                onEntityClick={
+                                                  handleEntityClick
+                                                }
+                                                customBgColor={organBgColor}
+                                                customTextColor={organTextColor}
+                                              />
+                                            ),
+                                          )}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        } else {
+                          // Standard rendering for organs without defined subcategories
+                          // Use custom sorting for subcategories
+                          const sortedSubcategories = getSortedSubcategories(
+                            subcategories,
+                            groupKey,
+                          );
+
+                          return (
+                            <div key={category}>
+                              {/* Category H2 Header */}
+                              <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
+                                {category}
+                                {getCategoryFootnote(groupKey, category) && (
+                                  <CategoryFootnote
+                                    text={
+                                      getCategoryFootnote(groupKey, category)!
+                                    }
+                                  />
+                                )}
+                              </h2>
+                              {
+                                /* Direct grid only - no subcategories shown */
+                                <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                                  {categorizedEntities[category].map(
+                                    (entity: Entity) => (
+                                      <EntityCard
+                                        key={entity.entity}
+                                        entity={entity}
+                                        onEntityClick={handleEntityClick}
+                                        customBgColor={organBgColor}
+                                        customTextColor={organTextColor}
+                                      />
+                                    ),
+                                  )}
+                                </div>
+                              }{" "}
                             </div>
                           );
                         }
-                        
-                        // For other organs with defined subcategories, show category header then subcategories
-                        return (
-                          <div key={category}>
-                            {/* Category H2 Header */}
-                            <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
-                              {category}
-                            </h2>
-                            
-                            {/* All defined subcategories */}
-                            <div className="space-y-3">
-                              {sortedAllSubcategories.map((subcategory) => {
-                                const entitiesInSubcategory = subcategorizedEntities[subcategory] || [];
-                                
-                                return (
-                                  <div key={subcategory || "none"}>
-                                    {subcategory && (
-                                      <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
-                                        {subcategory}
-                                      </h3>
-                                    )}
-                                    {entitiesInSubcategory.length > 0 && (
-                                      <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                                        {entitiesInSubcategory.map(
-                                          (entity: Entity) => (
-                                            <EntityCard
-                                              key={entity.entity}
-                                              entity={entity}
-                                              onEntityClick={handleEntityClick}
-                                              customBgColor={organBgColor}
-                                              customTextColor={organTextColor}
-                                            />
-                                          ),
-                                        )}
-                                      </div>
-                                    )}
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        );
-                      } else {
-                        // Standard rendering for organs without defined subcategories
-                        // Use custom sorting for subcategories
-                        const sortedSubcategories = getSortedSubcategories(
-                          subcategories,
-                          groupKey,
-                        );
-
-                        return (
-                          <div key={category}>
-                            {/* Category H2 Header */}
-                            <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
-                              {category}
-                            </h2>
-
-                            {/* Direct grid only - no subcategories shown */}
-                            <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                              {categorizedEntities[category].map(
-                                (entity: Entity) => (
-                                  <EntityCard
-                                    key={entity.entity}
-                                    entity={entity}
-                                    onEntityClick={handleEntityClick}
-                                    customBgColor={organBgColor}
-                                    customTextColor={organTextColor}
-                                  />
-                                ),
-                              )}
-                            </div>
-                          </div>
-                        );
-                      }
-                    })}
+                      })}
                     </div>
                   )}
                 </div>
