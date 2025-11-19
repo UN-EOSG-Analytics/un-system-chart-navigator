@@ -3,9 +3,8 @@ export interface Entity {
   entity_long: string;
   entity_combined: string;
   entity_description: string | null;
-  entity_link: string;
-  entity_link_is_un_org: number;
-  system_grouping: string;
+  entity_link: string | null;
+  system_grouping: string | null;
   category: string | null;
   subcategory: string | null;
   un_principal_organ: string | null;
@@ -13,8 +12,8 @@ export interface Entity {
   is_ceb_member: boolean | null;
   head_of_entity_level: string;
   head_of_entity_title_specific: string | null;
-  head_of_entity_title_general: string;
-  head_of_entity_name: string;
+  head_of_entity_title_general: string | null;
+  head_of_entity_name: string | null;
   head_of_entity_bio_link: string | null;
   head_of_entity_headshot_link: string | null;
   global_leadership_team_url: string | null;
@@ -23,9 +22,9 @@ export interface Entity {
   entity_logo_available: boolean | null;
   organizational_chart_link: string | null;
   budget_financial_reporting_link: string;
-  results_framework_link: string;
-  strategic_plan_link: string;
-  annual_reports_link: string;
+  results_framework_link: string | null;
+  strategic_plan_link: string | null;
+  annual_reports_link: string | null;
   transparency_portal_link: string;
   socials_linkedin: string | null;
   socials_twitter: string | null;

@@ -63,7 +63,8 @@ export default function FilterControls({
   // Count entities for each group
   const groupCounts = entities.reduce(
     (acc, entity) => {
-      acc[entity.system_grouping] = (acc[entity.system_grouping] || 0) + 1;
+      const grouping = entity.system_grouping || "Unspecified";
+      acc[grouping] = (acc[grouping] || 0) + 1;
       return acc;
     },
     {} as Record<string, number>,

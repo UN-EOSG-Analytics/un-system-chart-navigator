@@ -4,7 +4,7 @@ import { getSystemGroupingStyle } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 
 interface SystemGroupingBadgeProps {
-  grouping: string;
+  grouping: string | null;
   className?: string;
   onClick?: (grouping: string) => void;
   clickable?: boolean;
@@ -20,15 +20,16 @@ export function SystemGroupingBadge({
   onClick,
   clickable = false,
 }: SystemGroupingBadgeProps) {
-  const styles = getSystemGroupingStyle(grouping);
+  const normalizedGrouping = grouping || "Unspecified";
+  const styles = getSystemGroupingStyle(normalizedGrouping);
   const router = useRouter();
 
   const handleClick = () => {
     if (onClick && clickable) {
-      onClick(grouping);
+      onClick(normalizedGrouping);
     } else if (clickable) {
       // Fallback: navigate to home and add filter parameter
-      router.push(`/?filter=${encodeURIComponent(grouping)}`);
+      router.push(`/?filter=${encodeURIComponent(normalizedGrouping)}`);
     }
   };
 

@@ -132,8 +132,9 @@ const EntitiesGrid = forwardRef<{
     searchQuery.trim() ? searchEntities(searchQuery) : entities
   )
     .filter((entity: Entity) => {
-      // Filter by system grouping
-      if (!activeGroups.has(entity.system_grouping)) return false;
+      // Filter by system grouping - always show if system_grouping is null/empty
+      const systemGrouping = entity.system_grouping || "Unspecified";
+      if (!activeGroups.has(systemGrouping)) return false;
 
       // Filter by principal organ - check if entity's organ is in active set
       const normalizedOrgan = normalizePrincipalOrgan(
@@ -169,9 +170,11 @@ const EntitiesGrid = forwardRef<{
         }
 
         // Within the same organ, sort by system grouping first
-        if (a.system_grouping !== b.system_grouping) {
-          const orderA = getSystemGroupingStyle(a.system_grouping).order;
-          const orderB = getSystemGroupingStyle(b.system_grouping).order;
+        const aGrouping = a.system_grouping || "Unspecified";
+        const bGrouping = b.system_grouping || "Unspecified";
+        if (aGrouping !== bGrouping) {
+          const orderA = getSystemGroupingStyle(aGrouping).order;
+          const orderB = getSystemGroupingStyle(bGrouping).order;
           return orderA - orderB;
         }
 
@@ -183,9 +186,11 @@ const EntitiesGrid = forwardRef<{
         return a.entity.localeCompare(b.entity);
       } else {
         // Sort by system grouping order, then alphabetically
-        if (a.system_grouping !== b.system_grouping) {
-          const orderA = getSystemGroupingStyle(a.system_grouping).order;
-          const orderB = getSystemGroupingStyle(b.system_grouping).order;
+        const aGrouping = a.system_grouping || "Unspecified";
+        const bGrouping = b.system_grouping || "Unspecified";
+        if (aGrouping !== bGrouping) {
+          const orderA = getSystemGroupingStyle(aGrouping).order;
+          const orderB = getSystemGroupingStyle(bGrouping).order;
           return orderA - orderB;
         }
 
@@ -214,7 +219,7 @@ const EntitiesGrid = forwardRef<{
           groupKey = normalized;
         }
       } else {
-        groupKey = entity.system_grouping;
+        groupKey = entity.system_grouping || "Unspecified";
       }
 
       if (!acc[groupKey]) {

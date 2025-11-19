@@ -79,6 +79,12 @@ export const systemGroupingStyles: Record<string, SystemGroupingStyle> = {
     textColor: "text-black",
     order: 11,
   },
+  "Unspecified": {
+    label: "Unspecified",
+    bgColor: "bg-gray-400",
+    textColor: "text-black",
+    order: 999,
+  },
 };
 
 /**

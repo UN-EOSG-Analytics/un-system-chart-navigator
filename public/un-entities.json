@@ -2677,7 +2677,7 @@
     "system_grouping":"Related Organizations",
     "category":"Related Organizations",
     "subcategory":null,
-    "un_principal_organ":null,
+    "un_principal_organ":"Other",
     "un_pillar":"['N\/A']",
     "is_ceb_member":false,
     "head_of_entity_title_general":"USG\/Director-General",
