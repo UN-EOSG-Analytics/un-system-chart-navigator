@@ -6,6 +6,7 @@ import {
   getSystemGroupingStyle,
   normalizePrincipalOrgan,
   principalOrganConfigs,
+  subcategoryOrderByPrincipalOrgan,
   systemGroupingStyles,
 } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
@@ -351,30 +352,50 @@ const EntitiesGrid = forwardRef<{
 
                       // Special rendering for Security Council: skip category header, only show subcategories
                       if (groupKey === "Security Council (SC)") {
+                        // Get all defined subcategories from constants, merge with actual data
+                        const definedSubcategories = Object.keys(
+                          subcategoryOrderByPrincipalOrgan[groupKey] || {}
+                        ).filter(key => key !== ""); // Exclude empty string placeholder
+                        
+                        // Use all defined subcategories, not just ones with entities
+                        const allSubcategories = Array.from(
+                          new Set([...definedSubcategories])
+                        );
+                        const sortedAllSubcategories = getSortedSubcategories(
+                          allSubcategories,
+                          groupKey,
+                        );
+
                         return (
                           <div key={category} className="space-y-3">
-                            {sortedSubcategories.map((subcategory) => (
-                              <div key={subcategory || "none"}>
-                                {subcategory && (
-                                  <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
-                                    {subcategory}
-                                  </h3>
-                                )}
-                                <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                                  {subcategorizedEntities[subcategory].map(
-                                    (entity: Entity) => (
-                                      <EntityCard
-                                        key={entity.entity}
-                                        entity={entity}
-                                        onEntityClick={handleEntityClick}
-                                        customBgColor={organBgColor}
-                                        customTextColor={organTextColor}
-                                      />
-                                    ),
+                            {sortedAllSubcategories.map((subcategory) => {
+                              const entitiesInSubcategory = subcategorizedEntities[subcategory] || [];
+                              
+                              return (
+                                <div key={subcategory || "none"}>
+                                  {subcategory && (
+                                    <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
+                                      {subcategory}
+                                    </h3>
+                                  )}
+                                  {entitiesInSubcategory.length > 0 && (
+                                    <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                                      {entitiesInSubcategory.map(
+                                        (entity: Entity) => (
+                                          <EntityCard
+                                            key={entity.entity}
+                                            entity={entity}
+                                            onEntityClick={handleEntityClick}
+                                            customBgColor={organBgColor}
+                                            customTextColor={organTextColor}
+                                          />
+                                        ),
+                                      )}
+                                    </div>
                                   )}
                                 </div>
-                              </div>
-                            ))}
+                              );
+                            })}
                           </div>
                         );
                       }
