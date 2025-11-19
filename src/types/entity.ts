@@ -6,7 +6,8 @@ export interface Entity {
   entity_link: string;
   entity_link_is_un_org: number;
   system_grouping: string;
-  category: string;
+  category: string | null;
+  subcategory: string | null;
   un_principal_organ: string | null;
   un_pillar: string | null;
   is_ceb_member: boolean | null;

@@ -221,17 +221,13 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Related Organizations": 5,
     "N/A": 999,
   },
-  "Security Council (SC)": {
-    "Subsidiary Organs (Peacekeeping operations and political missions)": 1,
-    "Subsidiary Organs (Counter-Terrorism Committee)": 2,
-    "Subsidiary Organs (Sanctions Committee)": 3,
-    "Subsidiary Organs (Standing committees and ad hoc bodies)": 4,
-    "N/A": 999,
-  },
+  "Security Council (SC)": {},
   "Economic and Social Council (ECOSOC)": {
-    "Regional Commissions": 1,
-    "Other Bodies": 2,
-    "Specialized Agencies": 3,
+    "Functional Commissions": 1,
+    "Regional Commissions": 2,
+    "Other Bodies": 3,
+    "Research and Training": 4,
+    "Specialized Agencies": 5,
     "N/A": 999,
   },
   Secretariat: {

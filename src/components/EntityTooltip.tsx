@@ -27,7 +27,7 @@ export default function EntityTooltip({
       >
         <div className="max-w-xs p-1 sm:max-w-sm">
           <p className="text-left text-xs leading-tight font-medium sm:text-sm">
-            {entity.entity_long}
+            {entity.entity_long} ({entity.entity})
           </p>
           <p className="mt-1 hidden text-left text-xs text-slate-500 sm:block">
             Click to view entity details

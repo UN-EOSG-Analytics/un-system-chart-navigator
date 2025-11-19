@@ -316,29 +316,83 @@ const EntitiesGrid = forwardRef<{
 
                   {/* Categories within this Principal Organ */}
                   <div className="space-y-4">
-                    {sortedCategories.map((category) => (
-                      <div key={category}>
-                        {/* Category H2 Header */}
-                        <h2 className="mb-2 text-base font-medium text-gray-600 sm:text-lg">
-                          {category}
-                        </h2>
+                    {sortedCategories.map((category) => {
+                      // Group entities by subcategory within this category
+                      const subcategorizedEntities = categorizedEntities[category].reduce(
+                        (acc: Record<string, Entity[]>, entity: Entity) => {
+                          const subcategory = entity.subcategory || "";
+                          if (!acc[subcategory]) {
+                            acc[subcategory] = [];
+                          }
+                          acc[subcategory].push(entity);
+                          return acc;
+                        },
+                        {},
+                      );
 
-                        {/* Category Grid */}
-                        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                          {categorizedEntities[category].map(
-                            (entity: Entity) => (
-                              <EntityCard
-                                key={entity.entity}
-                                entity={entity}
-                                onEntityClick={handleEntityClick}
-                                customBgColor={organBgColor}
-                                customTextColor={organTextColor}
-                              />
-                            ),
+                      const subcategories = Object.keys(subcategorizedEntities);
+                      const hasSubcategories = subcategories.length > 1 || (subcategories.length === 1 && subcategories[0] !== "");
+
+                      // Sort subcategories: empty string (no subcategory) goes last
+                      const sortedSubcategories = subcategories.sort((a, b) => {
+                        if (a === "" && b !== "") return 1;
+                        if (a !== "" && b === "") return -1;
+                        return a.localeCompare(b);
+                      });
+
+                      return (
+                        <div key={category}>
+                          {/* Category H2 Header */}
+                          <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
+                            {category}
+                          </h2>
+
+                          {/* Subcategories or direct grid */}
+                          {hasSubcategories ? (
+                            <div className="space-y-3">
+                              {sortedSubcategories.map((subcategory) => (
+                                <div key={subcategory || "none"}>
+                                  {subcategory ? (
+                                    <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
+                                      {subcategory}
+                                    </h3>
+                                  ) : (
+                                    <div className="mb-1.5 h-[1.25rem] sm:h-[1.5rem]" />
+                                  )}
+                                  <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                                    {subcategorizedEntities[subcategory].map(
+                                      (entity: Entity) => (
+                                        <EntityCard
+                                          key={entity.entity}
+                                          entity={entity}
+                                          onEntityClick={handleEntityClick}
+                                          customBgColor={organBgColor}
+                                          customTextColor={organTextColor}
+                                        />
+                                      ),
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+                              {categorizedEntities[category].map(
+                                (entity: Entity) => (
+                                  <EntityCard
+                                    key={entity.entity}
+                                    entity={entity}
+                                    onEntityClick={handleEntityClick}
+                                    customBgColor={organBgColor}
+                                    customTextColor={organTextColor}
+                                  />
+                                ),
+                              )}
+                            </div>
                           )}
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               );

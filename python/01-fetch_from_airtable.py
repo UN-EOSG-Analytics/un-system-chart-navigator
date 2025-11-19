@@ -68,6 +68,7 @@ selected_columns = [
     "entity_link_is_un_org",
     "system_grouping",
     "category",
+    "subcategory",
     "un_principal_organ",
     "un_pillar",
     "is_ceb_member",
