@@ -79,11 +79,12 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("entity_combined", entity.entity_combined);
   addParam("entity_description", entity.entity_description);
   addParam("entity_link", entity.entity_link);
-  addParam("entity_link_is_un_org", entity.entity_link_is_un_org);
   addParam("system_grouping", entity.system_grouping);
   addParam("category", entity.category);
+  addParam("subcategory", entity.subcategory);
   addParam("un_principal_organ", entity.un_principal_organ);
   addParam("un_pillar", entity.un_pillar);
+  addParam("is_ceb_member", entity.is_ceb_member);
   addParam("head_of_entity_level", entity.head_of_entity_level);
   addParam(
     "head_of_entity_title_specific",
@@ -114,6 +115,7 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("entity_data_page", entity.entity_data_page);
   addParam("entity_logo_page", entity.entity_logo_page);
   addParam("entity_careers_page", entity.entity_careers_page);
+  addParam("entity_wikipedia_page", entity.entity_wikipedia_page);
   addParam("entity_footnotes", entity.entity_footnotes);
   addParam("is_primary_entity", entity.is_primary_entity);
   addParam("entity_aliases", entity.entity_aliases);
@@ -122,6 +124,7 @@ export function generateContributeUrl(entity?: Entity): string {
     "entity_custom_mandate_registry",
     entity.entity_custom_mandate_registry,
   );
+  addParam("review_needed", entity.review_needed);
 
   return `${baseUrl}?${params.toString()}`;
 }

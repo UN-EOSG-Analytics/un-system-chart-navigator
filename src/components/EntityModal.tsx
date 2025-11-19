@@ -472,7 +472,7 @@ export default function EntityModal({
                 {/* Website */}
                 {isValidLink(entity!.entity_link) && (
                   <LinkItem
-                    href={entity!.entity_link}
+                    href={entity!.entity_link!}
                     icon={Globe}
                     label="Official Website"
                   />
@@ -481,7 +481,7 @@ export default function EntityModal({
                 {/* Annual Report */}
                 {isValidLink(entity!.annual_reports_link) && (
                   <LinkItem
-                    href={entity!.annual_reports_link}
+                    href={entity!.annual_reports_link!}
                     icon={Book}
                     label="Reports"
                   />
@@ -516,7 +516,7 @@ export default function EntityModal({
                 {/* Financials */}
                 {isValidLink(entity!.budget_financial_reporting_link) && (
                   <LinkItem
-                    href={entity!.budget_financial_reporting_link}
+                    href={entity!.budget_financial_reporting_link!}
                     icon={DollarSign}
                     label="Financials & Budget"
                   />
@@ -525,7 +525,7 @@ export default function EntityModal({
                 {/* Transparency Portal */}
                 {isValidLink(entity!.transparency_portal_link) && (
                   <LinkItem
-                    href={entity!.transparency_portal_link}
+                    href={entity!.transparency_portal_link!}
                     icon={Eye}
                     label="Transparency Portal"
                   />
@@ -534,7 +534,7 @@ export default function EntityModal({
                 {/* Strategic Plan */}
                 {isValidLink(entity!.strategic_plan_link) && (
                   <LinkItem
-                    href={entity!.strategic_plan_link}
+                    href={entity!.strategic_plan_link!}
                     icon={Target}
                     label="Strategic Plan"
                   />
@@ -543,7 +543,7 @@ export default function EntityModal({
                 {/* Results Framework */}
                 {isValidLink(entity!.results_framework_link) && (
                   <LinkItem
-                    href={entity!.results_framework_link}
+                    href={entity!.results_framework_link!}
                     icon={BarChart3}
                     label="Results Framework"
                   />
