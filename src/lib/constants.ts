@@ -241,13 +241,9 @@ export const categoryOrderByPrincipalOrgan: Record<
   },
   Secretariat: {
     "Departments and Offices": 1,
-    "Departments and Offices (Internal Justice Bodies)": 2,
-    "Departments and Offices (Other Entities)": 3,
     "N/A": 999,
   },
   "International Court of Justice (ICJ)": {
-    "International Court of Justice": 1,
-    "N/A": 999,
   },
   "Trusteeship Council": {
     "N/A": 999,
