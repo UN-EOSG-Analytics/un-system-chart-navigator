@@ -302,14 +302,15 @@ export default function EntityModal({
         )}
 
         {/* Description */}
+        {/* Temporarily hidden
         {entity!.entity_description && (
           <div>
-            {/* <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3">Description</h3> */}
             <p className="text-sm leading-relaxed text-gray-700 sm:text-base">
               {entity!.entity_description}
             </p>
           </div>
         )}
+        */}
 
         {/* Basic Info */}
         <div>
