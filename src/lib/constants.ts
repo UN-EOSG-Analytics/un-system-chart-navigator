@@ -214,8 +214,9 @@ export function normalizePrincipalOrgan(
 /**
  * Category footnotes - explanatory text for specific categories
  * Key format: "PrincipalOrgan|Category"
+ * Can be a single string or an array of strings (for bullet points)
  */
-export const categoryFootnotes: Record<string, string> = {
+export const categoryFootnotes: Record<string, string | string[]> = {
   // 1
   "General Assembly (GA)|Funds and Programmes":
     "Member of the United Nations System Chief Executives Board for Coordination (CEB).",
@@ -223,6 +224,10 @@ export const categoryFootnotes: Record<string, string> = {
   // 6
   "Economic and Social Council (ECOSOC)|Regional Commissions":
     "The secretariats of these organs are part of the United Nations Secretariat.",
+  "Economic and Social Council (ECOSOC)|Specialized Agencies": [
+    "Member of the United Nations System Chief Executives Board for Coordination (CEB).",
+    "These organizations are separate and independent from the United Nations. They have been brought into relationship with the United Nations through relationship agreements.",
+  ],
 
   // 8
   "Economic and Social Council (ECOSOC)|Other Bodies":
@@ -237,12 +242,12 @@ export const categoryFootnotes: Record<string, string> = {
  * Get footnote text for a category within a principal organ context
  * @param principalOrgan - The principal organ context
  * @param category - The category name
- * @returns Footnote text or null if no footnote exists
+ * @returns Footnote text (string or array) or null if no footnote exists
  */
 export function getCategoryFootnote(
   principalOrgan: string | null,
   category: string,
-): string | null {
+): string | string[] | null {
   if (!principalOrgan) return null;
   const key = `${principalOrgan}|${category}`;
   return categoryFootnotes[key] || null;
