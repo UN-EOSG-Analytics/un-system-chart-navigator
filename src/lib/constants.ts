@@ -235,7 +235,9 @@ export const categoryFootnotes: Record<string, string | string[]> = {
 
   // 7
   "Secretariat|Departments and Offices":
-    " The Secretariat also includes the following offices: the Ethics Office, United Nations Ombudsman and Mediation Services, and the Office of Administration of Justice.",
+    "The Secretariat also includes the following offices: the Ethics Office, United Nations Ombudsman and Mediation Services, and the Office of Administration of Justice.",
+  "Other|Related Organizations":
+    "These organizations are separate and independent from the United Nations. They have been brought into relationship with the United Nations through relationship agreements.",
 };
 
 /**

@@ -89,12 +89,12 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recsFC6T0ZKEMEJQ1",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"CNMC",
-    "entity_long":"United Nations support for the Cameroon-Nigeria Mixed Commission",
-    "entity_combined":"United Nations support for the Cameroon-Nigeria Mixed Commission (CNMC)",
+    "entity_long":"United Nations Support for the Cameroon-Nigeria Mixed Commission",
+    "entity_combined":"United Nations Support for the Cameroon-Nigeria Mixed Commission (CNMC)",
     "entity_description":"The goal of the CNMC is to facilitate the implementation of the 10 October 2002 judgment of the International Court of Justice (ICJ) on the Cameroon-Nigeria boundary dispute.",
     "entity_link":"https:\/\/unowas.unmissions.org\/cameroon-nigeria-mixed-commission",
     "entity_link_is_un_org":0,
@@ -135,7 +135,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recGudYcdfjhjBzPa",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"CSW",
@@ -319,7 +319,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recnioeNrdQNJUasl",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"DCO",
@@ -917,7 +917,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recyODC2QoLjSFM7Y",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"EOSG",
@@ -1147,7 +1147,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recBnzdRxwKlLAs7t",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"HRC",
@@ -1341,7 +1341,7 @@
     "entity_link":"https:\/\/icsc.un.org\/",
     "entity_link_is_un_org":1,
     "system_grouping":"Intergovernmental and Expert Bodies",
-    "category":null,
+    "category":"Other Entities",
     "subcategory":null,
     "un_principal_organ":"General Assembly (GA)",
     "un_pillar":"['N\/A']",
@@ -1433,7 +1433,7 @@
     "entity_link":"https:\/\/iiim.un.org\/",
     "entity_link_is_un_org":1,
     "system_grouping":"UN Secretariat",
-    "category":null,
+    "category":"Other Entities",
     "subcategory":null,
     "un_principal_organ":"General Assembly (GA)",
     "un_pillar":"['N\/A']",
@@ -1479,7 +1479,7 @@
     "entity_link":"https:\/\/iimm.un.org\/",
     "entity_link_is_un_org":1,
     "system_grouping":"UN Secretariat",
-    "category":null,
+    "category":"Other Entities",
     "subcategory":null,
     "un_principal_organ":"General Assembly (GA)",
     "un_pillar":"['N\/A']",
@@ -1525,7 +1525,7 @@
     "entity_link":"https:\/\/iimp.un.org\/",
     "entity_link_is_un_org":1,
     "system_grouping":"UN Secretariat",
-    "category":null,
+    "category":"Other Entities",
     "subcategory":null,
     "un_principal_organ":"General Assembly (GA)",
     "un_pillar":"['N\/A']",
@@ -2113,7 +2113,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec9LNHf75uRnmHnM",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OCHA",
@@ -2573,7 +2573,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recosEkpdpTaMyfPA",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OMS",
@@ -2619,7 +2619,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recf5StOJVveEzaXx",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OOSA",
@@ -2849,7 +2849,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec2KzmTAK9Usa6zB",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSASG-PG",
@@ -2895,7 +2895,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recPBo6ToqtjUSHid",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSC-SEA",
@@ -2987,7 +2987,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rechj1IFTcRUp2zH4",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSESG-Horn",
@@ -3033,7 +3033,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"reci5RMvEPI9ZfIKE",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSESG-Myanmar",
@@ -3079,7 +3079,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recJPNSsC5a3qlvBL",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSESG-Syria",
@@ -3125,7 +3125,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recarBduCii0diPVg",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSESG-Yemen",
@@ -3171,7 +3171,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec86X5ivN9oChGqI",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSRSG-CAAC",
@@ -3217,7 +3217,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"receIHZlzrc3NIg7a",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSRSG-SVC",
@@ -3263,7 +3263,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recQNuaMZcSFpXPi9",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OSRSG-VAC",
@@ -3309,7 +3309,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recTcGOgw0JgxvTQg",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"OVRA",
@@ -3355,7 +3355,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec3CIlH9lUgRAdfw",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PBSO",
@@ -3401,7 +3401,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recHhvjPLPh2kbGnG",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PESG-Sudan",
@@ -3447,7 +3447,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec6b5dgcABolgwoD",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PESG-WS",
@@ -3493,7 +3493,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recWTP7Mqw8o4zP4T",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-CAR",
@@ -3539,7 +3539,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recyg2xLyhGOwMigv",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-Haiti",
@@ -3585,7 +3585,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recdrNefGS2UtJSIW",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-Libya",
@@ -3631,7 +3631,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recrhrAvNybRPGvmB",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-RES2713",
@@ -3677,7 +3677,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec6sbobZJQgj0CJb",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-RES2745",
@@ -3723,7 +3723,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recCrQzAZ5nMOS4sE",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-S.Sudan",
@@ -3769,7 +3769,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recI0vvX1SC9v9zJ7",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-Sudan",
@@ -3815,7 +3815,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recIkVEO23wDYT2Vu",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"PoE-Yemen",
@@ -3861,7 +3861,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recDVMzTvy4UMgY6j",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"RSCE",
@@ -3907,7 +3907,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recPVYJ9vnq3t8ai2",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"SC-RES1540",
@@ -3953,7 +3953,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recjs5t6N4n57Xaca",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"SC-RES1718",
@@ -3999,7 +3999,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recyL2Lqkch7Gq8Bz",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"SC-RES2231",
@@ -4045,7 +4045,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec3jqpdCJKl0SIS3",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"SC-RES2253",
@@ -4091,7 +4091,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"reclI9faynH4SbaKq",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"SWEO",
@@ -4137,7 +4137,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"rec56BW3bX5ybNqUu",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UN Tourism",
@@ -4505,7 +4505,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recl1wBnKvoYenYOt",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNCDF",
@@ -4735,7 +4735,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recl37Ls73tFqUFoW",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNDP",
@@ -5103,7 +5103,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recBFnqMRXHR63qRB",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNGEGN",
@@ -6207,7 +6207,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"receK2JnmVGbZB8AA",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNOSSC",
@@ -6217,7 +6217,7 @@
     "entity_link":"https:\/\/unsouthsouth.org\/",
     "entity_link_is_un_org":0,
     "system_grouping":"Funds and Programmes",
-    "category":null,
+    "category":"Other Entities",
     "subcategory":null,
     "un_principal_organ":"General Assembly (GA)",
     "un_pillar":"['N\/A']",
@@ -6575,7 +6575,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recKSJlcSGDVtfFp5",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNSCO",
@@ -6621,7 +6621,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recj1O39nAknJLfIE",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNSCOL",
@@ -6667,7 +6667,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recH7Y3G9utGV0te7",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNSMIL",
@@ -6943,7 +6943,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"receOanKc4qg3gnVW",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNU",
@@ -7081,7 +7081,7 @@
     "entity_mandate_registry":null,
     "entity_custom_mandate_registry":null,
     "record_id":"recLdAFBv3eX1iuCw",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"UNYO",
