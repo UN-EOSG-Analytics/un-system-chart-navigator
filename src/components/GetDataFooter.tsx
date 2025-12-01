@@ -1,5 +1,6 @@
 "use client";
 
+import { footnoteDefinitions } from "@/lib/constants";
 import { Check, Download, FileJson, FileText, Link } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Toast } from "./Toast";
@@ -158,10 +159,32 @@ export default function DataDownloadBar() {
           </div>
         </div>
         <p className="mt-2 text-sm leading-tight text-gray-500">
-          The relevant rules of the organization concerned should be consulted
-          in order to establish the legal status, functions and reporting lines
-          of each entity shown in this Chart.
+          This Chart is intended to provide a graphical reflection of the
+          functional organization of the United Nations system and is for
+          informational purposes only. The relevant rules of the organization
+          concerned should be consulted in order to establish the legal status,
+          functions and reporting lines of each entity shown in this Chart. The
+          Chart does not include all offices or entities of the United Nations
+          system.
         </p>
+        <div className="mt-3 border-t border-gray-200 pt-3">
+          <h3 className="mb-1 text-xs font-semibold text-gray-600">Notes:</h3>
+          <div className="max-w-5xl space-y-0.5 text-sm leading-tight text-gray-500">
+            {Object.entries(footnoteDefinitions)
+              .sort(([a], [b]) => Number(a) - Number(b))
+              .map(([num, text]) => (
+                <div
+                  key={num}
+                  className="flex text-xs leading-snug text-gray-500"
+                >
+                  <strong className="w-3 flex-shrink-0 font-semibold">
+                    {num}
+                  </strong>
+                  <span className="flex-1">{text}</span>
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
     </div>
   );

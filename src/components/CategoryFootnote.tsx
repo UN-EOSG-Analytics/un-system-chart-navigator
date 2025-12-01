@@ -3,13 +3,16 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { footnoteDefinitions } from "@/lib/constants";
 import { Info } from "lucide-react";
 
 interface CategoryFootnoteProps {
-  text: string | string[];
+  footnoteNumbers: number[];
 }
 
-export default function CategoryFootnote({ text }: CategoryFootnoteProps) {
+export default function CategoryFootnote({
+  footnoteNumbers,
+}: CategoryFootnoteProps) {
   return (
     <Tooltip delayDuration={50} disableHoverableContent>
       <TooltipTrigger asChild>
@@ -25,20 +28,14 @@ export default function CategoryFootnote({ text }: CategoryFootnoteProps) {
         collisionPadding={12}
       >
         <div className="text-left text-xs leading-snug text-wrap">
-          {Array.isArray(text) ? (
-            // Array: render as bullet points
-            <div className="space-y-1">
-              {text.map((line, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <span className="flex-shrink-0 text-gray-400">•</span>
-                  <span className="text-wrap">{line}</span>
-                </div>
-              ))}
-            </div>
-          ) : (
-            // Single string: render as plain text
-            <div className="text-wrap">{text}</div>
-          )}
+          <div className="space-y-1.5">
+            {footnoteNumbers.map((num) => (
+              <div key={num} className="flex items-start gap-2">
+                <span className="flex-shrink-0 font-medium">{num}</span>
+                <span className="text-wrap">{footnoteDefinitions[num]}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </TooltipContent>
     </Tooltip>

@@ -437,7 +437,7 @@ const EntitiesGrid = forwardRef<{
                                 {category}
                                 {getCategoryFootnote(groupKey, category) && (
                                   <CategoryFootnote
-                                    text={
+                                    footnoteNumbers={
                                       getCategoryFootnote(groupKey, category)!
                                     }
                                   />
@@ -495,7 +495,7 @@ const EntitiesGrid = forwardRef<{
                                 {category}
                                 {getCategoryFootnote(groupKey, category) && (
                                   <CategoryFootnote
-                                    text={
+                                    footnoteNumbers={
                                       getCategoryFootnote(groupKey, category)!
                                     }
                                   />

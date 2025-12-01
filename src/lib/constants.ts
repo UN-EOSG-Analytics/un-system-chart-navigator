@@ -212,47 +212,60 @@ export function normalizePrincipalOrgan(
 // ============================================================================
 
 /**
- * Category footnotes - explanatory text for specific categories
- * Key format: "PrincipalOrgan|Category"
- * Can be a single string or an array of strings (for bullet points)
+ * Numbered footnote definitions
+ * These are the actual footnote texts that will be displayed at the bottom
  */
-export const categoryFootnotes: Record<string, string | string[]> = {
-  // 1
-  "General Assembly (GA)|Funds and Programmes":
-    "Member of the United Nations System Chief Executives Board for Coordination (CEB).",
-
-  // 6
-  "Economic and Social Council (ECOSOC)|Regional Commissions":
-    "The secretariats of these organs are part of the United Nations Secretariat.",
-  "Economic and Social Council (ECOSOC)|Specialized Agencies": [
-    "Member of the United Nations System Chief Executives Board for Coordination (CEB).",
-    "These organizations are separate and independent from the United Nations. They have been brought into relationship with the United Nations through relationship agreements.",
-  ],
-
-  // 8
-  "Economic and Social Council (ECOSOC)|Other Bodies":
-    "For a complete list of ECOSOC subsidiary organs see un.org/ecosoc.",
-
-  // 7
-  "Secretariat|Departments and Offices":
-    "The Secretariat also includes the following offices: the Ethics Office, United Nations Ombudsman and Mediation Services, and the Office of Administration of Justice.",
-  "Other|Related Organizations":
-    "These organizations are separate and independent from the United Nations. They have been brought into relationship with the United Nations through relationship agreements.",
+export const footnoteDefinitions: Record<number, string> = {
+  1: "Member of the United Nations System Chief Executives Board for Coordination (CEB).",
+  2: "The United Nations Office for Partnerships is the focal point vis-à-vis the United Nations Foundation, Inc.",
+  3: "These organizations are separate and independent from the United Nations. They have been brought into relationship with the United Nations through relationship agreements.",
+  4: "The Trusteeship Council suspended operations on 1 November 1994, as Palau, the last United Nations Trust Territory, became independent on 1 October 1994.",
+  5: "International Centre for Settlement of Investment Disputes (ICSID) and Multilateral Investment Guarantee Agency (MIGA) are not specialized agencies in accordance with Articles 57 and 63 of the Charter, but are part of the World Bank Group.",
+  6: "The secretariats of these organs are part of the United Nations Secretariat.",
+  7: "The Secretariat also includes the following offices: the Ethics Office, United Nations Ombudsman and Mediation Services, and the Office of Administration of Justice.",
+  8: "For a complete list of ECOSOC subsidiary organs see un.org/ecosoc.",
+  9: "HLPF was established by the General Assembly. Meetings of HLPF are separately convened under the auspices of the General Assembly and of the Economic and Social Council.",
 };
 
 /**
- * Get footnote text for a category within a principal organ context
+ * Category footnotes - maps categories to footnote numbers
+ * Key format: "PrincipalOrgan|Category"
+ * Value is an array of footnote numbers that apply to this category
+ */
+export const categoryFootnotes: Record<string, number[]> = {
+  "General Assembly (GA)|Funds and Programmes": [1],
+  "Economic and Social Council (ECOSOC)|Regional Commissions": [6],
+  "Economic and Social Council (ECOSOC)|Specialized Agencies": [1, 3],
+  "Economic and Social Council (ECOSOC)|Other Bodies": [8],
+  "Secretariat|Departments and Offices": [7],
+  "Other|Related Organizations": [3],
+};
+
+/**
+ * Get footnote numbers for a category within a principal organ context
  * @param principalOrgan - The principal organ context
  * @param category - The category name
- * @returns Footnote text (string or array) or null if no footnote exists
+ * @returns Array of footnote numbers or null if no footnotes exist
  */
 export function getCategoryFootnote(
   principalOrgan: string | null,
   category: string,
-): string | string[] | null {
+): number[] | null {
   if (!principalOrgan) return null;
   const key = `${principalOrgan}|${category}`;
   return categoryFootnotes[key] || null;
+}
+
+/**
+ * Get all footnote numbers that are actually used in categoryFootnotes
+ * Returns them sorted in numerical order
+ */
+export function getUsedFootnotes(): number[] {
+  const usedNumbers = new Set<number>();
+  Object.values(categoryFootnotes).forEach((numbers) => {
+    numbers.forEach((num) => usedNumbers.add(num));
+  });
+  return Array.from(usedNumbers).sort((a, b) => a - b);
 }
 
 /**
