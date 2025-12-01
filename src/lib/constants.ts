@@ -240,6 +240,7 @@ export const footnoteDefinitions: Record<number, string> = {
  * Value is an array of footnote numbers that apply to this category
  */
 export const categoryFootnotes: Record<string, number[]> = {
+  "Trusteeship Council": [4],
   "General Assembly|Funds and Programmes": [1],
   "Economic and Social Council|Regional Commissions": [6],
   "Economic and Social Council|Specialized Agencies": [1, 3],
@@ -251,14 +252,21 @@ export const categoryFootnotes: Record<string, number[]> = {
 /**
  * Get footnote numbers for a category within a principal organ context
  * @param principalOrgan - The principal organ context
- * @param category - The category name
+ * @param category - The category name (optional - if omitted, returns organ-level footnotes)
  * @returns Array of footnote numbers or null if no footnotes exist
  */
 export function getCategoryFootnote(
   principalOrgan: string | null,
-  category: string,
+  category?: string,
 ): number[] | null {
   if (!principalOrgan) return null;
+  
+  // If no category provided, look for organ-level footnotes
+  if (!category) {
+    return categoryFootnotes[principalOrgan] || null;
+  }
+  
+  // Look for category-level footnotes
   const key = `${principalOrgan}|${category}`;
   return categoryFootnotes[key] || null;
 }

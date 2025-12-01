@@ -366,6 +366,11 @@ const EntitiesGrid = forwardRef<{
                       <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
                       <h2 className="text-xl font-semibold text-foreground uppercase sm:text-2xl">
                         {groupLabel}
+                        {getCategoryFootnote(groupKey) && (
+                          <CategoryFootnote
+                            footnoteNumbers={getCategoryFootnote(groupKey)!}
+                          />
+                        )}
                       </h2>
                       {sectionHeading && (
                         <h3 className="mt-3 text-lg font-semibold text-gray-700 sm:text-xl">

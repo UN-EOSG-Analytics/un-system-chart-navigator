@@ -16,7 +16,7 @@ export default function CategoryFootnote({
   return (
     <Tooltip delayDuration={50} disableHoverableContent>
       <TooltipTrigger asChild>
-        <Info className="ml-1.5 inline-block h-3.5 w-3.5 cursor-help text-gray-400 hover:text-gray-600" />
+        <Info className="ml-1.5 inline-block h-3.5 w-3.5 cursor-help text-gray-400 hover:text-gray-600 align-middle" />
       </TooltipTrigger>
       <TooltipContent
         side="top"
