@@ -122,44 +122,51 @@ export interface PrincipalOrganConfig {
   order: number;
   bgColor: string;
   textColor: string;
+  sectionHeading?: string; // Optional higher-level heading for the organ
 }
 
 export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
-  "General Assembly (GA)": {
-    label: "General Assembly (GA)",
+  "General Assembly": {
+    label: "General Assembly",
     order: 1,
     bgColor: "bg-un-system-green",
     textColor: "text-black",
+    sectionHeading: "SUBSIDIARY ORGANS",
   },
-  "Security Council (SC)": {
-    label: "Security Council (SC)",
+  "Security Council": {
+    label: "Security Council",
     order: 2,
     bgColor: "bg-un-system-red",
     textColor: "text-black",
+    sectionHeading: "SUBSIDIARY ORGANS",
   },
-  "Economic and Social Council (ECOSOC)": {
-    label: "Economic and Social Council (ECOSOC)",
+  "Economic and Social Council": {
+    label: "Economic and Social Council",
     order: 3,
     bgColor: "bg-un-system-blue",
     textColor: "text-black",
+    sectionHeading: "COMMISSIONS AND OTHER SUBSIDIARY ORGANS",
   },
   Secretariat: {
     label: "Secretariat",
     order: 4,
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
+    sectionHeading: "DEPARTMENTS AND OFFICES",
   },
-  "International Court of Justice (ICJ)": {
-    label: "International Court of Justice (ICJ)",
+  "International Court of Justice": {
+    label: "International Court of Justice",
     order: 5,
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
+    sectionHeading: "",
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
     order: 6,
-    bgColor: "bg-un-system-dark-gray",
+    bgColor: "bg-un-system-brown",
     textColor: "text-black",
+    sectionHeading: "",
   },
   Other: {
     label: "Other",
@@ -233,10 +240,10 @@ export const footnoteDefinitions: Record<number, string> = {
  * Value is an array of footnote numbers that apply to this category
  */
 export const categoryFootnotes: Record<string, number[]> = {
-  "General Assembly (GA)|Funds and Programmes": [1],
-  "Economic and Social Council (ECOSOC)|Regional Commissions": [6],
-  "Economic and Social Council (ECOSOC)|Specialized Agencies": [1, 3],
-  "Economic and Social Council (ECOSOC)|Other Bodies": [8],
+  "General Assembly|Funds and Programmes": [1],
+  "Economic and Social Council|Regional Commissions": [6],
+  "Economic and Social Council|Specialized Agencies": [1, 3],
+  "Economic and Social Council|Other Bodies": [8],
   "Secretariat|Departments and Offices": [7],
   "Other|Related Organizations": [3],
 };
@@ -276,7 +283,7 @@ export const categoryOrderByPrincipalOrgan: Record<
   string,
   Record<string, number>
 > = {
-  "General Assembly (GA)": {
+  "General Assembly": {
     "Intergovernmental and Expert Bodies": 1,
     "Funds and Programmes": 2,
     "Research and Training": 3,
@@ -284,11 +291,11 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Related Organizations": 5,
     "N/A": 999,
   },
-  "Security Council (SC)": {
-    "Subsidiary Organs": 1,
+  "Security Council": {
+    "": 1,
     "N/A": 999,
   },
-  "Economic and Social Council (ECOSOC)": {
+  "Economic and Social Council": {
     "Functional Commissions": 1,
     "Regional Commissions": 2,
     "Other Bodies": 3,
@@ -300,7 +307,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Departments and Offices": 1,
     "N/A": 999,
   },
-  "International Court of Justice (ICJ)": {},
+  "International Court of Justice": {},
   "Trusteeship Council": {
     "N/A": 999,
   },
@@ -357,7 +364,7 @@ export const subcategoryOrderByPrincipalOrgan: Record<
   string,
   Record<string, number>
 > = {
-  "Security Council (SC)": {
+  "Security Council": {
     "Counter-Terrorism Committee": 1,
     "International Residual Mechanism for Criminal Tribunals": 2,
     "Military Staff Committee": 3,
