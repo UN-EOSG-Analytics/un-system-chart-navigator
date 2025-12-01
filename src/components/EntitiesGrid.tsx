@@ -1,15 +1,15 @@
 "use client";
 
 import {
-  categoryOrderByPrincipalOrgan,
-  getCategoryFootnote,
-  getSortedCategories,
-  getSortedSubcategories,
-  getSystemGroupingStyle,
-  normalizePrincipalOrgan,
-  principalOrganConfigs,
-  subcategoryOrderByPrincipalOrgan,
-  systemGroupingStyles,
+    categoryOrderByPrincipalOrgan,
+    getCategoryFootnote,
+    getSortedCategories,
+    getSortedSubcategories,
+    getSystemGroupingStyle,
+    normalizePrincipalOrgan,
+    principalOrganConfigs,
+    subcategoryOrderByPrincipalOrgan,
+    systemGroupingStyles,
 } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
@@ -334,9 +334,12 @@ const EntitiesGrid = forwardRef<{
               const sectionHeading = organConfig?.sectionHeading || null;
 
               // Convert Tailwind color class to CSS custom property
-              const getCssColorVar = (bgColorClass: string): string => {
+              const getCssColorVar = (
+                bgColorClass: string,
+                useDark: boolean = false,
+              ): string => {
                 const colorName = bgColorClass.replace("bg-", "");
-                return `var(--color-${colorName})`;
+                return `var(--color-${colorName}${useDark ? "-dark" : ""})`;
               };
 
               return (
@@ -350,8 +353,13 @@ const EntitiesGrid = forwardRef<{
                       background: `linear-gradient(to bottom, color-mix(in srgb, ${getCssColorVar(organBgColor)} 15%, transparent), color-mix(in srgb, ${getCssColorVar(organBgColor)} 20%, transparent))`,
                     }}
                   >
-                    {/* Principal Organ Heading - No horizontal padding, only top */}
-                    <div className="mb-6 pt-3 pl-4 sm:pt-5 sm:pl-4">
+                    {/* Principal Organ Heading with left border */}
+                    <div
+                      className="mb-6 border-l-4 pt-3 pl-4 sm:pt-5 sm:pl-4"
+                      style={{
+                        borderColor: getCssColorVar(organBgColor, true),
+                      }}
+                    >
                       <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
                       <h2 className="text-xl font-semibold text-foreground uppercase sm:text-2xl">
                         {groupLabel}
