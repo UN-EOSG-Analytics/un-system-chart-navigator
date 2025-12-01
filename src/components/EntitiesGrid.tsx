@@ -1,15 +1,15 @@
 "use client";
 
 import {
-    categoryOrderByPrincipalOrgan,
-    getCategoryFootnote,
-    getSortedCategories,
-    getSortedSubcategories,
-    getSystemGroupingStyle,
-    normalizePrincipalOrgan,
-    principalOrganConfigs,
-    subcategoryOrderByPrincipalOrgan,
-    systemGroupingStyles,
+  categoryOrderByPrincipalOrgan,
+  getCategoryFootnote,
+  getSortedCategories,
+  getSortedSubcategories,
+  getSystemGroupingStyle,
+  normalizePrincipalOrgan,
+  principalOrganConfigs,
+  subcategoryOrderByPrincipalOrgan,
+  systemGroupingStyles,
 } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
@@ -334,12 +334,15 @@ const EntitiesGrid = forwardRef<{
               const sectionHeading = organConfig?.sectionHeading || null;
 
               // Convert Tailwind color class to CSS custom property
-              const getCssColorVar = (
-                bgColorClass: string,
-                useDark: boolean = false,
-              ): string => {
+              const getCssColorVar = (bgColorClass: string): string => {
                 const colorName = bgColorClass.replace("bg-", "");
-                return `var(--color-${colorName}${useDark ? "-dark" : ""})`;
+                return `var(--color-${colorName})`;
+              };
+
+              // Get the dark variant of a color
+              const getCssColorVarDark = (bgColorClass: string): string => {
+                const colorName = bgColorClass.replace("bg-", "");
+                return `var(--color-${colorName}-dark)`;
               };
 
               return (
@@ -355,9 +358,9 @@ const EntitiesGrid = forwardRef<{
                   >
                     {/* Principal Organ Heading with left border */}
                     <div
-                      className="mb-6 border-l-4 pt-3 pl-4 sm:pt-5 sm:pl-4"
+                      className="mb-6 border-l-[6px] pt-3 pl-4 sm:pt-5 sm:pl-4"
                       style={{
-                        borderColor: getCssColorVar(organBgColor, true),
+                        borderColor: getCssColorVarDark(organBgColor),
                       }}
                     >
                       <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>

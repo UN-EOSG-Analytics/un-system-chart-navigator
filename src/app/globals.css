@@ -18,16 +18,32 @@
   --color-un-system-yellow: #fce281;
   --color-un-system-purple: #d3b6d7;
   --color-un-system-green: #d1e39b;
-  --color-un-system-green-dark: #72bf44;
   --color-un-system-red: #fdc99b;
   --color-un-system-blue: #c7e1f5;
   --color-un-system-brown: #e5ceaa;
-  --color-un-system-dark-gray: #cbcccb;
+  --color-un-system-dark-gray: #ededee;
 }
 
 :root {
   --background: white;
   --foreground: black;
+
+  /* UN System colors - also exposed as CSS variables for runtime use */
+  --color-un-system-yellow: #fce281;
+  --color-un-system-yellow-dark: #d7aa17;
+  --color-un-system-purple: #d3b6d7;
+  --color-un-system-purple-dark: #b17fb8;
+  --color-un-system-green: #d1e39b;
+  --color-un-system-green-dark: #72bf44;
+  --color-un-system-red: #fdc99b;
+  --color-un-system-red-dark: #f58220;
+  --color-un-system-blue: #c7e1f5;
+  --color-un-system-blue-dark: #4aace1;
+  --color-un-system-brown: #e5ceaa;
+  --color-un-system-brown-dark: #c08a32;
+
+  --color-un-system-dark-gray: #ededee;
+  --color-un-system-dark-gray-dark: #d1d3d4;
 }
 
 @theme inline {
