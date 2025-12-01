@@ -316,13 +316,6 @@ export default function EntityModal({
         <div>
           <SubHeader>Overview</SubHeader>
           <div className="space-y-4">
-            {/* System Grouping */}
-            <Field label="System Grouping">
-              <SystemGroupingBadge
-                grouping={entity!.system_grouping}
-                clickable={true}
-              />
-            </Field>
             {/* Principal Organ(s) */}
             <Field label={getPrincipalOrganLabel(entity!.un_principal_organ)}>
               <PrincipalOrganField
@@ -352,7 +345,7 @@ export default function EntityModal({
               <SubHeader>Leadership</SubHeader>
               <div className="space-y-4">
                 {hasName && (
-                  <Field label="Head of Entity">
+                  <Field label="">
                     {(() => {
                       // Temporarily hidden until headshot links are fixed
                       const hasPhoto = false; // entity!.head_of_entity_headshot_link && entity!.head_of_entity_headshot_link.trim() !== '';
@@ -437,7 +430,7 @@ export default function EntityModal({
                   </Field>
                 )}
                 {hasLevel && (
-                  <Field label="Post Level">
+                  <Field label="">
                     <Badge>{entity!.head_of_entity_level}</Badge>
                   </Field>
                 )}
