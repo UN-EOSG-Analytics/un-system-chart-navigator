@@ -173,6 +173,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "N/A": 999,
   },
   "Security Council": {
+    // not applicable to SC
     "": 1,
   },
   "Economic and Social Council": {

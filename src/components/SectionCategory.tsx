@@ -48,7 +48,7 @@ export default function CategorySection({
   if (!hasDefinedSubcategories) {
     return (
       <div>
-        <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
+        <h2 className="category-header mb-2 text-base font-medium text-gray-500 sm:text-lg">
           {category}
           {getCategoryFootnote(groupKey, category) && (
             <CategoryFootnote

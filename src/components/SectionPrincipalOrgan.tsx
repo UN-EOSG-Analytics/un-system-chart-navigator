@@ -1,8 +1,8 @@
 import {
-    categoryOrderByPrincipalOrgan,
-    getCategoryFootnote,
-    getSortedCategories,
-    principalOrganConfigs,
+  categoryOrderByPrincipalOrgan,
+  getCategoryFootnote,
+  getSortedCategories,
+  principalOrganConfigs,
 } from "@/lib/constants";
 import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
 import { Entity } from "@/types/entity";
@@ -72,7 +72,7 @@ export default function PrincipalOrganSection({
           }}
         >
           <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
-          <h2 className="text-xl font-semibold text-foreground uppercase sm:text-2xl">
+          <h2 className="text-2xl font-bold text-black uppercase sm:text-2xl md:text-3xl">
             {groupLabel}
             {getCategoryFootnote(groupKey) && (
               <CategoryFootnote
@@ -81,7 +81,7 @@ export default function PrincipalOrganSection({
             )}
           </h2>
           {sectionHeading && (
-            <h3 className="mt-3 text-lg font-semibold text-gray-700 sm:text-xl">
+            <h3 className="mt-1 text-lg font-semibold text-gray-500 leading-tight sm:text-lg md:text-xl">
               {sectionHeading}
             </h3>
           )}
