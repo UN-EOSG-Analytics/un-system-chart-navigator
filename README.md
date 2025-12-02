@@ -46,7 +46,6 @@ To quickly refresh the data:
 bash python/update_data.sh
 ```
 
-
 ## GitHub Actions
 
 - Daily data fetch
@@ -56,8 +55,10 @@ bash python/update_data.sh
 
 - `npx shadcn --version`
 - `npx next --version`
-- `npx tsc --noEmit`
+- `npx shadcn@latest diff`
+
 - `npm run lint`
 - `npx eslint . --ext .js,.jsx,.ts,.tsx`
+- `npx tsc --noEmit`
+
 - `npm run format`
-- `npx shadcn@latest diff`

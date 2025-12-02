@@ -55,23 +55,36 @@ if unsafe_entities:
 else:
     print("All entities are URL safe.")
 
-# df.shape[1]
-# df.shape[0]
 # df.columns
 # List of selected columns
 selected_columns = [
+    # Core entity identifiers
     "entity",
     "entity_long",
     "entity_combined",
+    "entity_aliases",
     "entity_description",
+    "entity_footnotes",
+    # Links and references
     "entity_link",
-    "entity_link_is_un_org",
-    "system_grouping",
+    "entity_wikipedia_page",
+    "entity_news_page",
+    "entity_branding_page",
+    "entity_data_page",
+    "entity_logo_page",
+    "entity_logo_url",
+    "entity_logo_available",
+    "entity_careers_page",
+    # UN structure and classification
+    "un_principal_organ",
     "category",
     "subcategory",
-    "un_principal_organ",
-    "un_pillar",
     "is_ceb_member",
+    # Mandate and registry
+    "foundational_mandate",
+    "entity_mandate_registry",
+    "entity_custom_mandate_registry",
+    # Leadership
     "head_of_entity_title_general",
     "head_of_entity_title_specific",
     "head_of_entity_name",
@@ -79,29 +92,18 @@ selected_columns = [
     "head_of_entity_bio_link",
     "head_of_entity_headshot_link",
     "global_leadership_team_url",
-    "is_primary_entity",
-    "foundational_mandate",
-    "entity_logo_url",
+    # Documents and resources
     "organizational_chart_link",
     "budget_financial_reporting_link",
     "results_framework_link",
     "strategic_plan_link",
     "annual_reports_link",
     "transparency_portal_link",
+    # Socials
     "socials_linkedin",
     "socials_twitter",
     "socials_instagram",
-    "entity_news_page",
-    "entity_branding_page",
-    "entity_data_page",
-    "entity_logo_page",
-    "entity_logo_available",
-    "entity_careers_page",
-    "entity_wikipedia_page",
-    "entity_footnotes",
-    "entity_aliases",
-    "entity_mandate_registry",
-    "entity_custom_mandate_registry",
+    # Misc
     "record_id",
     "review_needed",
 ]

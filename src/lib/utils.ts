@@ -41,6 +41,22 @@ export function parseEntityAliases(
 }
 
 /**
+ * Convert Tailwind color class to CSS custom property
+ */
+export function getCssColorVar(bgColorClass: string): string {
+  const colorName = bgColorClass.replace("bg-", "");
+  return `var(--color-${colorName})`;
+}
+
+/**
+ * Get the dark variant of a Tailwind color class as CSS custom property
+ */
+export function getCssColorVarDark(bgColorClass: string): string {
+  const colorName = bgColorClass.replace("bg-", "");
+  return `var(--color-${colorName}-dark)`;
+}
+
+/**
  * Generate Airtable contribution form URL with prefilled entity data
  */
 export function generateContributeUrl(entity?: Entity): string {
@@ -79,11 +95,9 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("entity_combined", entity.entity_combined);
   addParam("entity_description", entity.entity_description);
   addParam("entity_link", entity.entity_link);
-  addParam("system_grouping", entity.system_grouping);
   addParam("category", entity.category);
   addParam("subcategory", entity.subcategory);
   addParam("un_principal_organ", entity.un_principal_organ);
-  addParam("un_pillar", entity.un_pillar);
   addParam("is_ceb_member", entity.is_ceb_member);
   addParam("head_of_entity_level", entity.head_of_entity_level);
   addParam(
@@ -117,7 +131,6 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("entity_careers_page", entity.entity_careers_page);
   addParam("entity_wikipedia_page", entity.entity_wikipedia_page);
   addParam("entity_footnotes", entity.entity_footnotes);
-  addParam("is_primary_entity", entity.is_primary_entity);
   addParam("entity_aliases", entity.entity_aliases);
   addParam("entity_mandate_registry", entity.entity_mandate_registry);
   addParam(

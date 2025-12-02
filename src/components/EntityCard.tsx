@@ -1,7 +1,6 @@
 "use client";
 
 import { Entity } from "@/types/entity";
-import { getSystemGroupingStyle } from "@/lib/constants";
 import { createEntitySlug } from "@/lib/utils";
 import EntityTooltip from "./EntityTooltip";
 
@@ -18,13 +17,9 @@ const EntityCard = ({
   customBgColor,
   customTextColor,
 }: EntityCardProps) => {
-  const styles = getSystemGroupingStyle(
-    entity.system_grouping || "Unspecified",
-  );
-
-  // Use custom colors if provided, otherwise use system grouping styles
-  const bgColor = customBgColor || styles.bgColor;
-  const textColor = customTextColor || styles.textColor;
+  // Use custom colors if provided, otherwise use defaults
+  const bgColor = customBgColor || "bg-gray-100";
+  const textColor = customTextColor || "text-black";
 
   // Create URL-friendly slug from entity name using utility function
   const entitySlug = createEntitySlug(entity.entity);

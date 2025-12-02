@@ -4,11 +4,9 @@ export interface Entity {
   entity_combined: string;
   entity_description: string | null;
   entity_link: string | null;
-  system_grouping: string | null;
   category: string | null;
   subcategory: string | null;
   un_principal_organ: string | null;
-  un_pillar: string | null;
   is_ceb_member: boolean | null;
   head_of_entity_level: string;
   head_of_entity_title_specific: string | null;
@@ -36,7 +34,6 @@ export interface Entity {
   entity_careers_page: string | null;
   entity_wikipedia_page: string | null;
   entity_footnotes: string | null;
-  is_primary_entity: boolean | null;
   entity_aliases: string | null;
   entity_mandate_registry: string | null;
   entity_custom_mandate_registry: string | null;
@@ -44,7 +41,7 @@ export interface Entity {
   review_needed: boolean | null;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface EntityFilters {
-  system_grouping?: string;
-  // TODO: what about others?
+  // Future filters can be added here as needed
 }

@@ -18,13 +18,6 @@ export function getEntities(options?: {
 }): Entity[] {
   let filtered = [...entities];
 
-  // Apply group filter
-  if (options?.group) {
-    filtered = filtered.filter(
-      (entity) => entity.system_grouping === options.group,
-    );
-  }
-
   // Apply general filters
   if (options?.filters) {
     filtered = filtered.filter((entity) => {

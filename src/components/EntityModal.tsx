@@ -4,7 +4,6 @@ import EntityLogo from "@/components/EntityLogo";
 import PrincipalOrganField, {
   getPrincipalOrganLabel,
 } from "@/components/PrincipalOrganField";
-import { SystemGroupingBadge } from "@/components/SystemGroupingBadge";
 import CloseButton from "@/components/CloseButton";
 import ShareButton from "@/components/ShareButton";
 import { generateContributeUrl } from "@/lib/utils";

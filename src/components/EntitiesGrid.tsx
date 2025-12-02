@@ -1,36 +1,19 @@
 "use client";
 
-import {
-  categoryOrderByPrincipalOrgan,
-  getCategoryFootnote,
-  getSortedCategories,
-  getSortedSubcategories,
-  getSystemGroupingStyle,
-  normalizePrincipalOrgan,
-  principalOrganConfigs,
-  subcategoryOrderByPrincipalOrgan,
-  systemGroupingStyles,
-} from "@/lib/constants";
+import { normalizePrincipalOrgan, principalOrganConfigs } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
-import CategoryFootnote from "./CategoryFootnote";
-import EntityCard from "./EntityCard";
 import FilterControls from "./FilterControls";
+import PrincipalOrganSection from "./PrincipalOrganSection";
 
 const EntitiesGrid = forwardRef<{
   handleReset: () => void;
   toggleGroup: (groupKey: string) => void;
 }>((props, ref) => {
   const entities = getAllEntities();
-  const [activeGroups, setActiveGroups] = useState<Set<string>>(
-    new Set(Object.keys(systemGroupingStyles)),
-  );
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [groupingMode, setGroupingMode] = useState<
-    "system" | "principal-organ"
-  >("principal-organ");
   const [activePrincipalOrgans, setActivePrincipalOrgans] = useState<
     Set<string>
   >(new Set(Object.keys(principalOrganConfigs)));
@@ -41,40 +24,13 @@ const EntitiesGrid = forwardRef<{
   useEffect(() => {
     const filterParam = searchParams.get("filter");
     if (filterParam) {
-      setActiveGroups(new Set([filterParam]));
-      setSearchQuery("");
       // Clear the filter parameter from URL after applying it
       router.replace("/", { scroll: false });
     }
   }, [searchParams, router]);
 
-  const toggleGroup = (groupKey: string) => {
-    setActiveGroups((prev) => {
-      const allGroups = Object.keys(systemGroupingStyles);
-      const allActive = prev.size === allGroups.length;
-
-      // If all groups are active (no filter), start a new selection with just this group
-      if (allActive) {
-        return new Set([groupKey]);
-      }
-
-      // Otherwise, toggle the group in the current selection
-      const newGroups = new Set(prev);
-
-      if (newGroups.has(groupKey)) {
-        // Remove the group
-        newGroups.delete(groupKey);
-        // If no groups left, show all
-        if (newGroups.size === 0) {
-          return new Set(allGroups);
-        }
-      } else {
-        // Add the group
-        newGroups.add(groupKey);
-      }
-
-      return newGroups;
-    });
+  const toggleGroup = () => {
+    // No-op: system grouping removed, keeping for backward compatibility
   };
 
   const togglePrincipalOrgan = (organKey: string) => {
@@ -112,19 +68,15 @@ const EntitiesGrid = forwardRef<{
   };
 
   const handleReset = () => {
-    // Full reset including mode - used when clicking home header
+    // Full reset
     setSearchQuery("");
-    setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
     setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
-    setGroupingMode("system");
   };
 
   const handleFilterReset = () => {
-    // Partial reset preserving mode - used by reset button
+    // Partial reset
     setSearchQuery("");
-    setActiveGroups(new Set(Object.keys(systemGroupingStyles)));
     setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
-    // Don't reset grouping mode - preserve user's view preference
   };
 
   useImperativeHandle(ref, () => ({
@@ -137,10 +89,6 @@ const EntitiesGrid = forwardRef<{
     searchQuery.trim() ? searchEntities(searchQuery) : entities
   )
     .filter((entity: Entity) => {
-      // Filter by system grouping - always show if system_grouping is null/empty
-      const systemGrouping = entity.system_grouping || "Unspecified";
-      if (!activeGroups.has(systemGrouping)) return false;
-
       // Filter by principal organ - check if entity's organ is in active set
       const normalizedOrgan = normalizePrincipalOrgan(
         entity.un_principal_organ,
@@ -153,78 +101,46 @@ const EntitiesGrid = forwardRef<{
       return true;
     })
     .sort((a: Entity, b: Entity) => {
-      if (groupingMode === "principal-organ") {
-        // Sort by principal organ order, then system grouping, then alphabetically
-        const aNormalized = normalizePrincipalOrgan(a.un_principal_organ);
-        const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
+      // Sort by principal organ order, then alphabetically
+      const aNormalized = normalizePrincipalOrgan(a.un_principal_organ);
+      const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
 
-        // Get primary organ for each entity (first one if array)
-        const aOrgan = Array.isArray(aNormalized)
-          ? aNormalized[0]
-          : aNormalized;
-        const bOrgan = Array.isArray(bNormalized)
-          ? bNormalized[0]
-          : bNormalized;
+      // Get primary organ for each entity (first one if array)
+      const aOrgan = Array.isArray(aNormalized)
+        ? aNormalized[0]
+        : aNormalized;
+      const bOrgan = Array.isArray(bNormalized)
+        ? bNormalized[0]
+        : bNormalized;
 
-        if (aOrgan !== bOrgan) {
-          const aConfig = principalOrganConfigs[aOrgan || ""];
-          const bConfig = principalOrganConfigs[bOrgan || ""];
-          const orderA = aConfig?.order ?? 999;
-          const orderB = bConfig?.order ?? 999;
-          return orderA - orderB;
-        }
-
-        // Within the same organ, sort by system grouping first
-        const aGrouping = a.system_grouping || "Unspecified";
-        const bGrouping = b.system_grouping || "Unspecified";
-        if (aGrouping !== bGrouping) {
-          const orderA = getSystemGroupingStyle(aGrouping).order;
-          const orderB = getSystemGroupingStyle(bGrouping).order;
-          return orderA - orderB;
-        }
-
-        // Within the same system grouping, sort alphabetically but put "Other" at the end
-        const aIsOther = a.entity === "Other";
-        const bIsOther = b.entity === "Other";
-        if (aIsOther && !bIsOther) return 1;
-        if (!aIsOther && bIsOther) return -1;
-        return a.entity.localeCompare(b.entity);
-      } else {
-        // Sort by system grouping order, then alphabetically
-        const aGrouping = a.system_grouping || "Unspecified";
-        const bGrouping = b.system_grouping || "Unspecified";
-        if (aGrouping !== bGrouping) {
-          const orderA = getSystemGroupingStyle(aGrouping).order;
-          const orderB = getSystemGroupingStyle(bGrouping).order;
-          return orderA - orderB;
-        }
-
-        // Within the same group, sort alphabetically but put "Other" at the end
-        const aIsOther = a.entity === "Other";
-        const bIsOther = b.entity === "Other";
-        if (aIsOther && !bIsOther) return 1;
-        if (!aIsOther && bIsOther) return -1;
-        return a.entity.localeCompare(b.entity);
+      if (aOrgan !== bOrgan) {
+        const aConfig = principalOrganConfigs[aOrgan || ""];
+        const bConfig = principalOrganConfigs[bOrgan || ""];
+        const orderA = aConfig?.order ?? 999;
+        const orderB = bConfig?.order ?? 999;
+        return orderA - orderB;
       }
+
+      // Within the same organ, sort alphabetically but put "Other" at the end
+      const aIsOther = a.entity === "Other";
+      const bIsOther = b.entity === "Other";
+      if (aIsOther && !bIsOther) return 1;
+      if (!aIsOther && bIsOther) return -1;
+      return a.entity.localeCompare(b.entity);
     });
 
-  // Group entities based on current grouping mode
+  // Group entities by principal organ
   const groupedEntities = visibleEntities.reduce(
     (acc: Record<string, Entity[]>, entity: Entity) => {
+      const normalized = normalizePrincipalOrgan(entity.un_principal_organ);
       let groupKey: string;
-
-      if (groupingMode === "principal-organ") {
-        const normalized = normalizePrincipalOrgan(entity.un_principal_organ);
-        // Use first organ if array, or the organ itself, or "N/A" if null
-        if (Array.isArray(normalized)) {
-          groupKey = normalized[0] || "N/A";
-        } else if (normalized === null || normalized === "") {
-          groupKey = "N/A";
-        } else {
-          groupKey = normalized;
-        }
+      // Use first organ if array, or the organ itself, or "N/A" if null
+      if (Array.isArray(normalized)) {
+        groupKey = normalized[0] || "N/A";
+      } else if (normalized === null || normalized === "") {
+        groupKey = "N/A";
       } else {
-        groupKey = entity.system_grouping || "Unspecified";
+        groupKey = normalized;
       }
 
       if (!acc[groupKey]) {
@@ -236,40 +152,27 @@ const EntitiesGrid = forwardRef<{
     {},
   );
 
-  // Get sorted group keys based on the current grouping mode
+  // Get sorted group keys by principal organ
   const sortedGroupKeys = (() => {
-    if (groupingMode === "principal-organ") {
-      // Include all principal organs, even those without entities
-      const allOrgans = Object.keys(principalOrganConfigs);
-      const organsWithEntities = Object.keys(groupedEntities);
-      const allOrganKeys = Array.from(
-        new Set([...allOrgans, ...organsWithEntities]),
-      );
+    // Include all principal organs, even those without entities
+    const allOrgans = Object.keys(principalOrganConfigs);
+    const organsWithEntities = Object.keys(groupedEntities);
+    const allOrganKeys = Array.from(
+      new Set([...allOrgans, ...organsWithEntities]),
+    );
 
-      return allOrganKeys.sort((a, b) => {
-        const aConfig = principalOrganConfigs[a];
-        const bConfig = principalOrganConfigs[b];
-        const orderA = aConfig?.order ?? 999;
-        const orderB = bConfig?.order ?? 999;
-        return orderA - orderB;
-      });
-    } else {
-      return Object.keys(groupedEntities).sort((a, b) => {
-        const orderA = getSystemGroupingStyle(a).order;
-        const orderB = getSystemGroupingStyle(b).order;
-        return orderA - orderB;
-      });
-    }
+    return allOrganKeys.sort((a, b) => {
+      const aConfig = principalOrganConfigs[a];
+      const bConfig = principalOrganConfigs[b];
+      const orderA = aConfig?.order ?? 999;
+      const orderB = bConfig?.order ?? 999;
+      return orderA - orderB;
+    });
   })();
 
   return (
     <div className="w-full">
-      {/* Search and Filter Controls */}
       <FilterControls
-        activeGroups={activeGroups}
-        onToggleGroup={toggleGroup}
-        groupingMode={groupingMode}
-        onGroupingModeChange={setGroupingMode}
         activePrincipalOrgans={activePrincipalOrgans}
         onTogglePrincipalOrgan={togglePrincipalOrgan}
         entities={entities}
@@ -279,7 +182,6 @@ const EntitiesGrid = forwardRef<{
         visibleEntitiesCount={visibleEntities.length}
       />
 
-      {/* Entities Grid with Group Headings */}
       {visibleEntities.length === 0 ? (
         <div className="py-20 text-left">
           <p className="text-lg text-gray-500">
@@ -289,354 +191,16 @@ const EntitiesGrid = forwardRef<{
       ) : (
         <div className="space-y-8">
           {sortedGroupKeys.map((groupKey) => {
-            // Get the appropriate style/label based on grouping mode
-            const groupLabel =
-              groupingMode === "principal-organ"
-                ? principalOrganConfigs[groupKey]?.label || groupKey
-                : getSystemGroupingStyle(groupKey).label;
-
-            // For principal organ mode, group entities by category
             const entitiesInGroup = groupedEntities[groupKey] || [];
-
-            if (groupingMode === "principal-organ") {
-              // Get principal organ colors
-              const organConfig = principalOrganConfigs[groupKey];
-              const organBgColor = organConfig?.bgColor || "bg-gray-300";
-              const organTextColor = organConfig?.textColor || "text-black";
-
-              // Group by category only if there are entities
-              const categorizedEntities =
-                entitiesInGroup.length > 0
-                  ? entitiesInGroup.reduce(
-                      (acc: Record<string, Entity[]>, entity: Entity) => {
-                        const category = entity.category || "N/A";
-                        if (!acc[category]) {
-                          acc[category] = [];
-                        }
-                        acc[category].push(entity);
-                        return acc;
-                      },
-                      {},
-                    )
-                  : {};
-
-              const sortedCategories = getSortedCategories(
-                Object.keys(categorizedEntities),
-                groupKey, // Pass the principal organ as context
-              );
-
-              // Check if categories are defined in constants for this organ
-              const hasDefinedCategories =
-                categoryOrderByPrincipalOrgan[groupKey] !== undefined &&
-                Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length > 0;
-
-              // Get the higher-level heading from config
-              const sectionHeading = organConfig?.sectionHeading || null;
-
-              // Convert Tailwind color class to CSS custom property
-              const getCssColorVar = (bgColorClass: string): string => {
-                const colorName = bgColorClass.replace("bg-", "");
-                return `var(--color-${colorName})`;
-              };
-
-              // Get the dark variant of a color
-              const getCssColorVarDark = (bgColorClass: string): string => {
-                const colorName = bgColorClass.replace("bg-", "");
-                return `var(--color-${colorName}-dark)`;
-              };
-
-              return (
-                <div
-                  key={groupKey}
-                  className="animate-in fade-in slide-in-from-bottom-4"
-                >
-                  {/* Principal Organ Section with Background */}
-                  <div
-                    style={{
-                      background: `linear-gradient(to bottom, color-mix(in srgb, ${getCssColorVar(organBgColor)} 15%, transparent), color-mix(in srgb, ${getCssColorVar(organBgColor)} 20%, transparent))`,
-                    }}
-                  >
-                    {/* Principal Organ Heading with left border */}
-                    <div
-                      className="mb-6 border-l-[6px] pt-3 pl-4 sm:pt-5 sm:pl-4"
-                      style={{
-                        borderColor: getCssColorVarDark(organBgColor),
-                      }}
-                    >
-                      <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
-                      <h2 className="text-xl font-semibold text-foreground uppercase sm:text-2xl">
-                        {groupLabel}
-                        {getCategoryFootnote(groupKey) && (
-                          <CategoryFootnote
-                            footnoteNumbers={getCategoryFootnote(groupKey)!}
-                          />
-                        )}
-                      </h2>
-                      {sectionHeading && (
-                        <h3 className="mt-3 text-lg font-semibold text-gray-700 sm:text-xl">
-                          {sectionHeading}
-                        </h3>
-                      )}
-                    </div>
-
-                    {/* Content with padding */}
-                    <div className="px-6 pb-6 sm:px-8 sm:pb-8">
-                      {/* If no entities, show nothing in content area */}
-                      {entitiesInGroup.length === 0 ? null : (
-                        <>
-                          {/* If categories are not defined, show entities directly without category headers */}
-                          {!hasDefinedCategories ? (
-                            <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                              {entitiesInGroup.map((entity: Entity) => (
-                                <EntityCard
-                                  key={entity.entity}
-                                  entity={entity}
-                                  onEntityClick={handleEntityClick}
-                                  customBgColor={organBgColor}
-                                  customTextColor={organTextColor}
-                                />
-                              ))}
-                            </div>
-                          ) : (
-                            /* Categories within this Principal Organ */
-                            <div className="space-y-4">
-                              {sortedCategories.map((category) => {
-                                // Group entities by subcategory within this category
-                                const subcategorizedEntities =
-                                  categorizedEntities[category].reduce(
-                                    (
-                                      acc: Record<string, Entity[]>,
-                                      entity: Entity,
-                                    ) => {
-                                      const subcategory =
-                                        entity.subcategory || "";
-                                      if (!acc[subcategory]) {
-                                        acc[subcategory] = [];
-                                      }
-                                      acc[subcategory].push(entity);
-                                      return acc;
-                                    },
-                                    {},
-                                  );
-
-                                // Check if subcategories are defined in constants for this organ
-                                const hasDefinedSubcategories =
-                                  subcategoryOrderByPrincipalOrgan[groupKey] !==
-                                  undefined;
-
-                                // Special rendering when subcategories are defined: show all defined subcategories with headers
-                                if (hasDefinedSubcategories) {
-                                  // Get all defined subcategories from constants
-                                  const definedSubcategories = Object.keys(
-                                    subcategoryOrderByPrincipalOrgan[
-                                      groupKey
-                                    ] || {},
-                                  ).filter((key) => key !== ""); // Exclude empty string placeholder
-
-                                  // Use all defined subcategories, not just ones with entities
-                                  const allSubcategories = Array.from(
-                                    new Set([...definedSubcategories]),
-                                  );
-                                  const sortedAllSubcategories =
-                                    getSortedSubcategories(
-                                      allSubcategories,
-                                      groupKey,
-                                    );
-
-                                  // For Security Council, skip category header
-                                  if (groupKey === "Security Council (SC)") {
-                                    return (
-                                      <div key={category} className="space-y-3">
-                                        {sortedAllSubcategories.map(
-                                          (subcategory) => {
-                                            const entitiesInSubcategory =
-                                              subcategorizedEntities[
-                                                subcategory
-                                              ] || [];
-
-                                            return (
-                                              <div key={subcategory || "none"}>
-                                                {subcategory && (
-                                                  <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
-                                                    {subcategory}
-                                                  </h3>
-                                                )}
-                                                {entitiesInSubcategory.length >
-                                                  0 && (
-                                                  <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                                                    {entitiesInSubcategory.map(
-                                                      (entity: Entity) => (
-                                                        <EntityCard
-                                                          key={entity.entity}
-                                                          entity={entity}
-                                                          onEntityClick={
-                                                            handleEntityClick
-                                                          }
-                                                          customBgColor={
-                                                            organBgColor
-                                                          }
-                                                          customTextColor={
-                                                            organTextColor
-                                                          }
-                                                        />
-                                                      ),
-                                                    )}
-                                                  </div>
-                                                )}
-                                              </div>
-                                            );
-                                          },
-                                        )}
-                                      </div>
-                                    );
-                                  }
-
-                                  // For other organs with defined subcategories, show category header then subcategories
-                                  return (
-                                    <div key={category}>
-                                      {/* Category H2 Header */}
-                                      <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
-                                        {category}
-                                        {getCategoryFootnote(
-                                          groupKey,
-                                          category,
-                                        ) && (
-                                          <CategoryFootnote
-                                            footnoteNumbers={
-                                              getCategoryFootnote(
-                                                groupKey,
-                                                category,
-                                              )!
-                                            }
-                                          />
-                                        )}
-                                      </h2>
-
-                                      {/* All defined subcategories */}
-                                      <div className="space-y-3">
-                                        {sortedAllSubcategories.map(
-                                          (subcategory) => {
-                                            const entitiesInSubcategory =
-                                              subcategorizedEntities[
-                                                subcategory
-                                              ] || [];
-
-                                            return (
-                                              <div key={subcategory || "none"}>
-                                                {subcategory && (
-                                                  <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
-                                                    {subcategory}
-                                                  </h3>
-                                                )}
-                                                {entitiesInSubcategory.length >
-                                                  0 && (
-                                                  <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                                                    {entitiesInSubcategory.map(
-                                                      (entity: Entity) => (
-                                                        <EntityCard
-                                                          key={entity.entity}
-                                                          entity={entity}
-                                                          onEntityClick={
-                                                            handleEntityClick
-                                                          }
-                                                          customBgColor={
-                                                            organBgColor
-                                                          }
-                                                          customTextColor={
-                                                            organTextColor
-                                                          }
-                                                        />
-                                                      ),
-                                                    )}
-                                                  </div>
-                                                )}
-                                              </div>
-                                            );
-                                          },
-                                        )}
-                                      </div>
-                                    </div>
-                                  );
-                                } else {
-                                  // Standard rendering for organs without defined subcategories
-                                  return (
-                                    <div key={category}>
-                                      {/* Category H2 Header */}
-                                      <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
-                                        {category}
-                                        {getCategoryFootnote(
-                                          groupKey,
-                                          category,
-                                        ) && (
-                                          <CategoryFootnote
-                                            footnoteNumbers={
-                                              getCategoryFootnote(
-                                                groupKey,
-                                                category,
-                                              )!
-                                            }
-                                          />
-                                        )}
-                                      </h2>
-                                      {
-                                        /* Direct grid only - no subcategories shown */
-                                        <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                                          {categorizedEntities[category].map(
-                                            (entity: Entity) => (
-                                              <EntityCard
-                                                key={entity.entity}
-                                                entity={entity}
-                                                onEntityClick={
-                                                  handleEntityClick
-                                                }
-                                                customBgColor={organBgColor}
-                                                customTextColor={organTextColor}
-                                              />
-                                            ),
-                                          )}
-                                        </div>
-                                      }{" "}
-                                    </div>
-                                  );
-                                }
-                              })}
-                            </div>
-                          )}
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              );
-            }
+            if (entitiesInGroup.length === 0) return null;
 
             return (
-              <div
+              <PrincipalOrganSection
                 key={groupKey}
-                className="animate-in fade-in slide-in-from-bottom-4"
-              >
-                {/* Principal Organ Heading - No padding for consistency */}
-                <div className="mb-6">
-                  <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
-                  <h2 className="text-xl font-semibold text-foreground uppercase sm:text-2xl">
-                    {groupLabel}
-                  </h2>
-                </div>
-
-                {/* Content with padding for consistency */}
-                <div className="px-6 sm:px-8">
-                  {/* Group Grid */}
-                  <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
-                    {groupedEntities[groupKey].map((entity: Entity) => (
-                      <EntityCard
-                        key={entity.entity}
-                        entity={entity}
-                        onEntityClick={handleEntityClick}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
+                groupKey={groupKey}
+                entities={entitiesInGroup}
+                onEntityClick={handleEntityClick}
+              />
             );
           })}
         </div>

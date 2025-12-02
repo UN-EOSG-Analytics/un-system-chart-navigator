@@ -3,22 +3,15 @@
 import FilterDropdown from "@/components/FilterDropdown";
 import SearchInput from "@/components/SearchInput";
 import ResetButton from "@/components/ResetButton";
-import ViewToggle from "@/components/ViewToggle";
 import {
   getSortedPrincipalOrgans,
   principalOrganConfigs,
-  getSortedSystemGroupings,
-  systemGroupingStyles,
 } from "@/lib/constants";
 import { Entity } from "@/types/entity";
-import { Boxes, ChevronDown, ChevronUp, Filter, Landmark } from "lucide-react";
+import { ChevronDown, ChevronUp, Filter, Landmark } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface FilterControlsProps {
-  activeGroups: Set<string>;
-  onToggleGroup: (groupKey: string) => void;
-  groupingMode: "system" | "principal-organ";
-  onGroupingModeChange: (mode: "system" | "principal-organ") => void;
   activePrincipalOrgans: Set<string>;
   onTogglePrincipalOrgan: (organ: string) => void;
   entities: Entity[];
@@ -29,19 +22,13 @@ interface FilterControlsProps {
 }
 
 export default function FilterControls({
-  activeGroups,
-  onToggleGroup,
-  groupingMode,
-  onGroupingModeChange,
   activePrincipalOrgans,
   onTogglePrincipalOrgan,
-  entities,
   searchQuery,
   onSearchChange,
   onReset,
   visibleEntitiesCount,
 }: FilterControlsProps) {
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] =
     useState(false);
   const [filtersExpanded, setFiltersExpanded] = useState(false);
@@ -60,39 +47,13 @@ export default function FilterControls({
     }
   }, []);
 
-  // Count entities for each group
-  const groupCounts = entities.reduce(
-    (acc, entity) => {
-      const grouping = entity.system_grouping || "Unspecified";
-      acc[grouping] = (acc[grouping] || 0) + 1;
-      return acc;
-    },
-    {} as Record<string, number>,
-  );
-
-  // Check if all groups are active (showing all) or only specific ones are filtered
-  const allGroupsActive =
-    activeGroups.size === Object.keys(systemGroupingStyles).length;
-
   // Check if all principal organs are active
   const allPrincipalOrgansActive =
     activePrincipalOrgans.size === Object.keys(principalOrganConfigs).length;
 
-  // Sort groups by their order
-  const sortedGroups = getSortedSystemGroupings();
-
   // Check if reset is needed
   const isResetNeeded =
-    searchQuery.trim() !== "" || !allGroupsActive || !allPrincipalOrgansActive;
-
-  // Get filter button text
-  const getFilterText = () => {
-    if (allGroupsActive) {
-      return "Filter by System Group...";
-    }
-    const count = activeGroups.size;
-    return `${count} Group${count !== 1 ? "s" : ""} selected`;
-  };
+    searchQuery.trim() !== "" || !allPrincipalOrgansActive;
 
   // Get principal organ filter button text
   const getPrincipalOrganFilterText = () => {
@@ -122,7 +83,7 @@ export default function FilterControls({
         <button
           onClick={() => setFiltersExpanded(!filtersExpanded)}
           className={`flex h-10 w-auto touch-manipulation items-center gap-2 px-3 text-sm transition-colors ${
-            !allGroupsActive || !allPrincipalOrgansActive
+            !allPrincipalOrgansActive
               ? "text-un-blue"
               : "text-gray-500"
           } `}
@@ -175,39 +136,16 @@ export default function FilterControls({
           ariaLabel="Filter entities by principal organ"
         />
 
-        {/* Filter Popover - DISABLED */}
-        {/* <FilterDropdown
-          open={isPopoverOpen}
-          onOpenChange={setIsPopoverOpen}
-          icon={<Boxes className="h-4 w-4" />}
-          triggerText={getFilterText()}
-          isFiltered={!allGroupsActive}
-          allActive={allGroupsActive}
-          options={sortedGroups.map(([group, styles]) => ({
-            key: group,
-            label: styles.label,
-            count: groupCounts[group] || 0,
-            color: styles.bgColor,
-          }))}
-          selectedKeys={activeGroups}
-          onToggle={onToggleGroup}
-          ariaLabel="Filter entities by system group"
-        /> */}
-
         {/* Reset Button - Desktop only - only show when there's something to reset */}
         {isResetNeeded && (
           <ResetButton onClick={onReset} className="hidden lg:flex" />
         )}
       </div>
 
-      {/* Grouping Mode Tabs Row with Entity Count */}
+      {/* Entity Count Row */}
       <div
-        className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 ${filtersExpanded ? "mt-1" : "-mt-3"} lg:mt-0`}
+        className={`flex ${filtersExpanded ? "mt-1" : "-mt-3"} lg:mt-0`}
       >
-        {/* ViewToggle - DISABLED */}
-        {/* <ViewToggle value={groupingMode} onValueChange={onGroupingModeChange} /> */}
-
-        {/* Entity Count - aligned with tabs on larger screens, wraps below on mobile */}
         <div className="text-left text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:flex-1 sm:text-right">
           Showing {visibleEntitiesCount} entities
         </div>
