@@ -9,7 +9,7 @@ import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import FilterControls from "./FilterControls";
-import PrincipalOrganSection from "./PrincipalOrganSection";
+import PrincipalOrganSection from "./SectionPrincipalOrgan";
 
 const EntitiesGrid = forwardRef<{
   handleReset: () => void;

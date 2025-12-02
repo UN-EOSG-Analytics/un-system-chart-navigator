@@ -6,7 +6,7 @@ import {
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
 import EntityGrid from "./EntityGrid";
-import SubcategorySection from "./SubcategorySection";
+import SubcategorySection from "./SectionSubcategory";
 
 interface CategorySectionProps {
   category: string;

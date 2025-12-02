@@ -25,6 +25,9 @@ if records:
     df = pd.DataFrame(data)
 
 
+if len(df) < 160:
+    raise ValueError(f"Expected more than 160 records, but got {len(df)}")
+
 # Filter out rows where 'added_via_form' is True
 if "added_via_form" in df.columns:
     df = df[df["added_via_form"] != "TRUE"]

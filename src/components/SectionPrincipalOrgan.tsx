@@ -7,7 +7,7 @@ import {
 import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
-import CategorySection from "./CategorySection";
+import CategorySection from "./SectionCategory";
 import EntityGrid from "./EntityGrid";
 
 interface PrincipalOrganSectionProps {

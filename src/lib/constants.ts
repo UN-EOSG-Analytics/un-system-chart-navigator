@@ -1,9 +1,5 @@
-// Centralized constants for UN System Chart Navigator
+// Centralized constants for UN System Chart Navigator ------------------------------
 // This file contains all configuration for principal organs and categories
-
-// ============================================================================
-// PRINCIPAL ORGANS
-// ============================================================================
 
 export interface PrincipalOrganConfig {
   label: string;
@@ -13,48 +9,49 @@ export interface PrincipalOrganConfig {
   sectionHeading?: string; // Optional higher-level heading for the organ
 }
 
+// NOTE: keys here need to match entity.un_principal_organ
 export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
   "General Assembly": {
     label: "General Assembly",
+    sectionHeading: "SUBSIDIARY ORGANS",
     order: 1,
     bgColor: "bg-un-system-green",
     textColor: "text-black",
-    sectionHeading: "SUBSIDIARY ORGANS",
   },
   "Security Council": {
     label: "Security Council",
+    sectionHeading: "SUBSIDIARY ORGANS",
     order: 2,
     bgColor: "bg-un-system-red",
     textColor: "text-black",
-    sectionHeading: "SUBSIDIARY ORGANS",
   },
   "Economic and Social Council": {
     label: "Economic and Social Council",
+    sectionHeading: "COMMISSIONS AND OTHER SUBSIDIARY ORGANS",
     order: 3,
     bgColor: "bg-un-system-blue",
     textColor: "text-black",
-    sectionHeading: "COMMISSIONS AND OTHER SUBSIDIARY ORGANS",
   },
   Secretariat: {
     label: "Secretariat",
+    sectionHeading: "DEPARTMENTS AND OFFICES",
     order: 4,
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
-    sectionHeading: "DEPARTMENTS AND OFFICES",
   },
   "International Court of Justice": {
     label: "International Court of Justice",
+    sectionHeading: "",
     order: 5,
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
-    sectionHeading: "",
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
+    sectionHeading: "",
     order: 6,
     bgColor: "bg-un-system-brown",
     textColor: "text-black",
-    sectionHeading: "",
   },
   Other: {
     label: "Other",
@@ -160,18 +157,6 @@ export function getCategoryFootnote(
 }
 
 /**
- * Get all footnote numbers that are actually used in categoryFootnotes
- * Returns them sorted in numerical order
- */
-export function getUsedFootnotes(): number[] {
-  const usedNumbers = new Set<number>();
-  Object.values(categoryFootnotes).forEach((numbers) => {
-    numbers.forEach((num) => usedNumbers.add(num));
-  });
-  return Array.from(usedNumbers).sort((a, b) => a - b);
-}
-
-/**
  * Hierarchical category ordering by principal organ
  * Each principal organ has its own category order
  */
@@ -189,7 +174,6 @@ export const categoryOrderByPrincipalOrgan: Record<
   },
   "Security Council": {
     "": 1,
-    "N/A": 999,
   },
   "Economic and Social Council": {
     "Functional Commissions": 1,

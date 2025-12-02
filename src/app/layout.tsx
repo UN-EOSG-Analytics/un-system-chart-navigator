@@ -1,5 +1,5 @@
 import { AnimatedCornerLogo } from "@/components/AnimatedCornerLogo";
-import ModalHandler from "@/components/ModalHandler";
+import ModalHandler from "@/components/EntityModalHandler";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
