@@ -206,9 +206,10 @@ const EntitiesGrid = forwardRef<{
   const sortedGroupKeys = (() => {
     const allOrgans = Object.keys(principalOrganConfigs);
     const isFilterActive = activePrincipalOrgans.size < allOrgans.length;
+    const isSearchActive = searchQuery.trim() !== "";
 
-    if (isFilterActive) {
-      // When filtering: only show active organs that have entities
+    if (isFilterActive || isSearchActive) {
+      // When filtering or searching: only show organs that have entities
       const organsWithEntities = Object.keys(groupedEntities);
       return organsWithEntities.sort((a, b) => {
         const aConfig = principalOrganConfigs[a];
