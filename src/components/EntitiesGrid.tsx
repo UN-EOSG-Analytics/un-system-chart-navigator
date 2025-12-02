@@ -2,41 +2,127 @@
 
 import {
   normalizePrincipalOrgan,
+  organsToUrlParam,
   principalOrganConfigs,
+  urlParamToOrgans,
 } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
-import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
+import {
+  forwardRef,
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import FilterControls from "./FilterControls";
 import PrincipalOrganSection from "./SectionPrincipalOrgan";
+
+/**
+ * Build URL with current filter state
+ * Preserves entity param if present, only adds non-default filter params
+ * Uses manual string building to avoid URLSearchParams encoding commas
+ */
+function buildFilterUrl(
+  searchQuery: string,
+  activePrincipalOrgans: Set<string>,
+  currentEntityParam: string | null,
+): string {
+  const parts: string[] = [];
+
+  // Preserve entity param if present
+  if (currentEntityParam) {
+    parts.push(`entity=${encodeURIComponent(currentEntityParam)}`);
+  }
+
+  // Add search query if not empty
+  if (searchQuery.trim()) {
+    parts.push(`q=${encodeURIComponent(searchQuery.trim())}`);
+  }
+
+  // Add organs param if not all selected (commas don't need encoding)
+  const organsParam = organsToUrlParam(activePrincipalOrgans);
+  if (organsParam) {
+    parts.push(`organs=${organsParam}`);
+  }
+
+  return parts.length > 0 ? `/?${parts.join("&")}` : "/";
+}
 
 const EntitiesGrid = forwardRef<{
   handleReset: () => void;
   toggleGroup: (groupKey: string) => void;
 }>((props, ref) => {
   const entities = getAllEntities();
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [activePrincipalOrgans, setActivePrincipalOrgans] = useState<
-    Set<string>
-  >(new Set(Object.keys(principalOrganConfigs)));
-  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(true);
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // Check for filter parameter on mount and when URL changes
+  // Track if we've initialized from URL to prevent loops
+  const initializedFromUrl = useRef(false);
+
+  // Initialize state from URL params or defaults
+  const getInitialSearch = () => searchParams.get("q") || "";
+  const getInitialOrgans = () => {
+    const organsParam = searchParams.get("organs");
+    return (
+      urlParamToOrgans(organsParam) ||
+      new Set(Object.keys(principalOrganConfigs))
+    );
+  };
+
+  const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
+  const [activePrincipalOrgans, setActivePrincipalOrgans] = useState<
+    Set<string>
+  >(getInitialOrgans);
+  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(true);
+
+  // Sync URL when filters change (after initial load)
+  const updateUrl = useCallback(
+    (query: string, organs: Set<string>) => {
+      // Don't include entity param - filters are separate from modal
+      const newUrl = buildFilterUrl(query, organs, null);
+      router.replace(newUrl, { scroll: false });
+    },
+    [router],
+  );
+
+  // Handle URL changes (back/forward navigation, direct URL changes)
   useEffect(() => {
-    const filterParam = searchParams.get("filter");
-    if (filterParam) {
-      // Clear the filter parameter from URL after applying it
-      router.replace("/", { scroll: false });
+    // Skip the first run since we initialize from URL already
+    if (!initializedFromUrl.current) {
+      initializedFromUrl.current = true;
+      return;
     }
-  }, [searchParams, router]);
+
+    // Skip URL sync when entity modal is open - the modal manages its own URL
+    // and we don't want to reset filters when navigating to /?entity=xyz
+    if (searchParams.get("entity")) {
+      return;
+    }
+
+    const urlSearch = searchParams.get("q") || "";
+    const urlOrgans =
+      urlParamToOrgans(searchParams.get("organs")) ||
+      new Set(Object.keys(principalOrganConfigs));
+
+    // Update state if URL changed externally (e.g., back/forward)
+    if (urlSearch !== searchQuery) {
+      setSearchQuery(urlSearch);
+    }
+
+    // Check if organs changed
+    const currentOrgansStr = Array.from(activePrincipalOrgans).sort().join(",");
+    const urlOrgansStr = Array.from(urlOrgans).sort().join(",");
+    if (currentOrgansStr !== urlOrgansStr) {
+      setActivePrincipalOrgans(urlOrgans);
+    }
+  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Add keyboard shortcut to toggle review borders
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
-      // Don't trigger if focus is on an input, textarea, select, or button
       const target = e.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
       if (
@@ -49,7 +135,6 @@ const EntitiesGrid = forwardRef<{
         return;
       }
 
-      // Toggle review borders on "r" key
       if (e.key.toLowerCase() === "r") {
         setShowReviewBorders((prev) => !prev);
       }
@@ -63,50 +148,56 @@ const EntitiesGrid = forwardRef<{
     // No-op: system grouping removed, keeping for backward compatibility
   };
 
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    updateUrl(query, activePrincipalOrgans);
+  };
+
   const togglePrincipalOrgan = (organKey: string) => {
     setActivePrincipalOrgans((prev) => {
       const allOrgans = Object.keys(principalOrganConfigs);
       const allActive = prev.size === allOrgans.length;
 
-      // If all organs are active (no filter), start a new selection with just this organ
+      let newOrgans: Set<string>;
+
       if (allActive) {
-        return new Set([organKey]);
-      }
-
-      // Otherwise, toggle the organ in the current selection
-      const newOrgans = new Set(prev);
-
-      if (newOrgans.has(organKey)) {
-        // Remove the organ
-        newOrgans.delete(organKey);
-        // If no organs left, show all
-        if (newOrgans.size === 0) {
-          return new Set(allOrgans);
-        }
+        newOrgans = new Set([organKey]);
       } else {
-        // Add the organ
-        newOrgans.add(organKey);
+        newOrgans = new Set(prev);
+        if (newOrgans.has(organKey)) {
+          newOrgans.delete(organKey);
+          if (newOrgans.size === 0) {
+            newOrgans = new Set(allOrgans);
+          }
+        } else {
+          newOrgans.add(organKey);
+        }
       }
 
+      // Update URL with new organs
+      updateUrl(searchQuery, newOrgans);
       return newOrgans;
     });
   };
 
   const handleEntityClick = (entitySlug: string) => {
-    // Update URL without navigation to prevent page jumping
+    // Store current filter URL for modal to restore on close
+    const currentFilterUrl = buildFilterUrl(searchQuery, activePrincipalOrgans, null);
+    sessionStorage.setItem("entityModalReturnUrl", currentFilterUrl);
+    
+    // Navigate to clean entity URL
     router.replace(`/?entity=${entitySlug}`, { scroll: false });
   };
 
   const handleReset = () => {
-    // Full reset
     setSearchQuery("");
     setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
+    // Clear filters from URL (modal handles its own URL separately)
+    router.replace("/", { scroll: false });
   };
 
   const handleFilterReset = () => {
-    // Partial reset
-    setSearchQuery("");
-    setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
+    handleReset();
   };
 
   useImperativeHandle(ref, () => ({
@@ -241,7 +332,7 @@ const EntitiesGrid = forwardRef<{
         onTogglePrincipalOrgan={togglePrincipalOrgan}
         entities={entities}
         searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
+        onSearchChange={handleSearchChange}
         onReset={handleFilterReset}
         visibleEntitiesCount={visibleEntities.length}
       />

@@ -1,7 +1,6 @@
 - use Next.js v15.4 (https://nextjs.org/docs)
 - ALWAYS use code for Tailwind CSS v4
   - make sure to consult https://tailwindcss.com/docs/ to update your knowledge since many things that you think would work are actually outdated
-- if you want to test run, use `npm run dev`
 - use `shadcn/ui` components (https://ui.shadcn.com/docs/components)
   - install via `npx shadcn@latest add`
 - follow best practices for UI/UX and web development

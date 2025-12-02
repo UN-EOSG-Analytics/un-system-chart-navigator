@@ -6,6 +6,10 @@ import EntityModal from "./EntityModal";
 import { getEntityBySlug } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { isEntityAlias, resolveEntityAlias } from "@/lib/entityAliases";
+
+// Session storage key for return URL (set by EntitiesGrid before opening modal)
+const RETURN_URL_KEY = "entityModalReturnUrl";
+
 export default function ModalHandler() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -60,7 +64,10 @@ export default function ModalHandler() {
   }, [entitySlug, router]);
 
   const handleClose = () => {
-    router.replace("/", { scroll: false }); // Remove query param, return to home without jumping
+    // Get stored return URL and clear it
+    const returnUrl = sessionStorage.getItem(RETURN_URL_KEY) || "/";
+    sessionStorage.removeItem(RETURN_URL_KEY);
+    router.replace(returnUrl, { scroll: false });
   };
 
   // Don't render anything if no entity slug
