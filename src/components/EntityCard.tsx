@@ -1,8 +1,8 @@
 "use client";
 
-import { Entity } from "@/types/entity";
-import { createEntitySlug, getCssColorVar } from "@/lib/utils";
 import { normalizePrincipalOrgan, principalOrganConfigs } from "@/lib/constants";
+import { createEntitySlug, getCssColorVar } from "@/lib/utils";
+import { Entity } from "@/types/entity";
 import EntityTooltip from "./EntityTooltip";
 
 interface EntityCardProps {
@@ -60,11 +60,15 @@ const EntityCard = ({
     <EntityTooltip entity={entity}>
       <button
         onClick={handleClick}
-        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg pt-3 pr-2 pb-2 pl-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px]`}
+        // Spacing constraints: Equal top/bottom margins for 1-line and 2-line text
+        // Math: h-[50px] - (2 lines × 15px line-height) = 20px remaining → py-[10px] each
+        // Fixed line-height prevents spacing conflicts; -mt-[1px] compensates for font's internal top spacing
+        // top-left aligned
+        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg py-[10px] px-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px] sm:py-[12.5px]`}
         style={splitBackground ? { background: splitBackground } : undefined}
         aria-label={`View details for ${entity.entity_long}`}
       >
-        <span className="text-xs leading-tight font-medium sm:text-sm">
+        <span className="-mt-[1px] text-xs leading-[15px] font-medium sm:text-sm sm:leading-[15px]">
           {entity.entity}
         </span>
       </button>
