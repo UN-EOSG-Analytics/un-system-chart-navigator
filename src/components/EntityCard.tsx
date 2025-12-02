@@ -41,7 +41,7 @@ const EntityCard = ({
   };
 
   const borderClass =
-    showReviewBorders && entity.review_needed ? "border-2 border-red-600" : "";
+    showReviewBorders && entity.review_needed ? "outline-2 outline-red-600" : "";
 
   // Generate split background for multiple organs
   const splitBackground =
