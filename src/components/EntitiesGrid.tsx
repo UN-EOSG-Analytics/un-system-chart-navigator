@@ -191,7 +191,6 @@ const EntitiesGrid = forwardRef<{
         <div className="space-y-8">
           {sortedGroupKeys.map((groupKey) => {
             const entitiesInGroup = groupedEntities[groupKey] || [];
-            if (entitiesInGroup.length === 0) return null;
 
             return (
               <PrincipalOrganSection

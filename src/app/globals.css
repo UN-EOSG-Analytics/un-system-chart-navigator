@@ -21,7 +21,7 @@
   --color-un-system-red: #fdc99b;
   --color-un-system-blue: #c7e1f5;
   --color-un-system-brown: #e5ceaa;
-  --color-un-system-dark-gray: #ededee;
+  --color-un-system-gray: #ededee;
 }
 
 :root {
@@ -42,8 +42,8 @@
   --color-un-system-brown: #e5ceaa;
   --color-un-system-brown-dark: #c08a32;
 
-  --color-un-system-dark-gray: #ededee;
-  --color-un-system-dark-gray-dark: #d1d3d4;
+  --color-un-system-gray: #ededee;
+  --color-un-system-gray-dark: #d1d3d4;
 }
 
 @theme inline {

@@ -7,6 +7,7 @@ export interface PrincipalOrganConfig {
   bgColor: string;
   textColor: string;
   sectionHeading?: string; // Optional higher-level heading for the organ
+  borderColor?: string; // Optional border color override
 }
 
 // NOTE: keys here need to match entity.un_principal_organ
@@ -39,32 +40,43 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
   },
+  "Specialized Agencies": {
+    label: "Specialized Agencies",
+    sectionHeading: "",
+    order: 5,
+    // bgColor: "bg-un-system-gray",
+    bgColor: "bg-gray-300",
+    borderColor: "un-system-gray-dark",
+    textColor: "text-black",
+  },
+
   "International Court of Justice": {
     label: "International Court of Justice",
     sectionHeading: "",
-    order: 5,
+    order: 6,
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
     sectionHeading: "",
-    order: 6,
+    order: 7,
     bgColor: "bg-un-system-brown",
     textColor: "text-black",
   },
+
   Other: {
     label: "Other",
     order: 998,
     bgColor: "bg-gray-300",
     textColor: "text-black",
   },
-  "N/A": {
-    label: "N/A",
-    order: 999,
-    bgColor: "bg-gray-300",
-    textColor: "text-gray-600",
-  },
+//   "N/A": {
+//     label: "N/A [WIP]",
+//     order: 999,
+//     bgColor: "bg-gray-300",
+//     textColor: "text-gray-600",
+//   },
 };
 
 /**

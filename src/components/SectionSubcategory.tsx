@@ -19,7 +19,7 @@ export default function SubcategorySection({
   if (entities.length === 0) return null;
 
   return (
-    <div>
+    <div className="pl-3">
       {subcategory && (
         <h3 className="subcategory-header mb-1.5 text-sm font-normal text-gray-500 sm:text-base">
           {subcategory}

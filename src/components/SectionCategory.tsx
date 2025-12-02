@@ -47,7 +47,7 @@ export default function CategorySection({
   // If no subcategories defined, show entities directly
   if (!hasDefinedSubcategories) {
     return (
-      <div>
+      <div className="pl-3">
         <h2 className="category-header mb-2 text-base font-medium text-gray-500 sm:text-lg">
           {category}
           {getCategoryFootnote(groupKey, category) && (
@@ -97,7 +97,7 @@ export default function CategorySection({
 
   // Other organs: show category header then subcategories
   return (
-    <div>
+    <div className="pl-3">
       <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
         {category}
         {getCategoryFootnote(groupKey, category) && (

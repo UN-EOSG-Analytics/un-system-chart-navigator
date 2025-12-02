@@ -26,6 +26,9 @@ export default function PrincipalOrganSection({
   const organBgColor = organConfig?.bgColor || "bg-gray-300";
   const organTextColor = organConfig?.textColor || "text-black";
   const sectionHeading = organConfig?.sectionHeading || null;
+  const borderColor = organConfig?.borderColor
+    ? getCssColorVar(organConfig.borderColor)
+    : getCssColorVarDark(organBgColor);
 
   // Check if categories are defined for this organ
   const hasDefinedCategories =
@@ -68,7 +71,7 @@ export default function PrincipalOrganSection({
         <div
           className="mb-6 border-l-[6px] pt-3 pl-4 sm:pt-5 sm:pl-4"
           style={{
-            borderColor: getCssColorVarDark(organBgColor),
+            borderColor: borderColor,
           }}
         >
           <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
@@ -89,32 +92,28 @@ export default function PrincipalOrganSection({
 
         {/* Content */}
         <div className="px-6 pb-6 sm:px-8 sm:pb-8">
-          {entities.length === 0 ? null : (
-            <>
-              {!hasDefinedCategories ? (
-                <EntityGrid
-                  entities={entities}
+          {!hasDefinedCategories ? (
+            <EntityGrid
+              entities={entities}
+              onEntityClick={onEntityClick}
+              customBgColor={organBgColor}
+              customTextColor={organTextColor}
+            />
+          ) : (
+            <div className="space-y-4">
+              {sortedCategories.map((category) => (
+                <CategorySection
+                  key={category}
+                  category={category}
+                  entities={categorizedEntities[category]}
+                  groupKey={groupKey}
                   onEntityClick={onEntityClick}
                   customBgColor={organBgColor}
                   customTextColor={organTextColor}
+                  skipCategoryHeader={skipCategoryLayer}
                 />
-              ) : (
-                <div className="space-y-4">
-                  {sortedCategories.map((category) => (
-                    <CategorySection
-                      key={category}
-                      category={category}
-                      entities={categorizedEntities[category]}
-                      groupKey={groupKey}
-                      onEntityClick={onEntityClick}
-                      customBgColor={organBgColor}
-                      customTextColor={organTextColor}
-                      skipCategoryHeader={skipCategoryLayer}
-                    />
-                  ))}
-                </div>
-              )}
-            </>
+              ))}
+            </div>
           )}
         </div>
       </div>
