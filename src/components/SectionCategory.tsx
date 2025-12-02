@@ -16,6 +16,7 @@ interface CategorySectionProps {
   customBgColor?: string;
   customTextColor?: string;
   skipCategoryHeader?: boolean;
+  showReviewBorders?: boolean;
 }
 
 export default function CategorySection({
@@ -26,6 +27,7 @@ export default function CategorySection({
   customBgColor,
   customTextColor,
   skipCategoryHeader = false,
+  showReviewBorders = false,
 }: CategorySectionProps) {
   // Group entities by subcategory
   const subcategorizedEntities = entities.reduce(
@@ -61,6 +63,7 @@ export default function CategorySection({
           onEntityClick={onEntityClick}
           customBgColor={customBgColor}
           customTextColor={customTextColor}
+          showReviewBorders={showReviewBorders}
         />
       </div>
     );
@@ -89,6 +92,7 @@ export default function CategorySection({
             onEntityClick={onEntityClick}
             customBgColor={customBgColor}
             customTextColor={customTextColor}
+            showReviewBorders={showReviewBorders}
           />
         ))}
       </div>
@@ -115,6 +119,7 @@ export default function CategorySection({
             onEntityClick={onEntityClick}
             customBgColor={customBgColor}
             customTextColor={customTextColor}
+            showReviewBorders={showReviewBorders}
           />
         ))}
       </div>

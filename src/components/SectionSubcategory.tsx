@@ -7,6 +7,7 @@ interface SubcategorySectionProps {
   onEntityClick: (entitySlug: string) => void;
   customBgColor?: string;
   customTextColor?: string;
+  showReviewBorders?: boolean;
 }
 
 export default function SubcategorySection({
@@ -15,6 +16,7 @@ export default function SubcategorySection({
   onEntityClick,
   customBgColor,
   customTextColor,
+  showReviewBorders = false,
 }: SubcategorySectionProps) {
   if (entities.length === 0) return null;
 
@@ -30,6 +32,7 @@ export default function SubcategorySection({
         onEntityClick={onEntityClick}
         customBgColor={customBgColor}
         customTextColor={customTextColor}
+        showReviewBorders={showReviewBorders}
       />
     </div>
   );

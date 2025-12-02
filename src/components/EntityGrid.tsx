@@ -6,6 +6,7 @@ interface EntityGridProps {
   onEntityClick: (entitySlug: string) => void;
   customBgColor?: string;
   customTextColor?: string;
+  showReviewBorders?: boolean;
 }
 
 export default function EntityGrid({
@@ -13,6 +14,7 @@ export default function EntityGrid({
   onEntityClick,
   customBgColor,
   customTextColor,
+  showReviewBorders = false,
 }: EntityGridProps) {
   return (
     <div className="grid w-full grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
@@ -23,6 +25,7 @@ export default function EntityGrid({
           onEntityClick={onEntityClick}
           customBgColor={customBgColor}
           customTextColor={customTextColor}
+          showReviewBorders={showReviewBorders}
         />
       ))}
     </div>

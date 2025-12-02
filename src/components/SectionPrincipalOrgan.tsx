@@ -14,12 +14,14 @@ interface PrincipalOrganSectionProps {
   groupKey: string;
   entities: Entity[];
   onEntityClick: (entitySlug: string) => void;
+  showReviewBorders?: boolean;
 }
 
 export default function PrincipalOrganSection({
   groupKey,
   entities,
   onEntityClick,
+  showReviewBorders = false,
 }: PrincipalOrganSectionProps) {
   const organConfig = principalOrganConfigs[groupKey];
   const groupLabel = organConfig?.label || groupKey;
@@ -84,7 +86,7 @@ export default function PrincipalOrganSection({
             )}
           </h2>
           {sectionHeading && (
-            <h3 className="mt-1 text-lg font-semibold text-gray-500 leading-tight sm:text-lg md:text-xl">
+            <h3 className="mt-1 text-lg leading-tight font-semibold text-gray-500 sm:text-lg md:text-xl">
               {sectionHeading}
             </h3>
           )}
@@ -98,6 +100,7 @@ export default function PrincipalOrganSection({
               onEntityClick={onEntityClick}
               customBgColor={organBgColor}
               customTextColor={organTextColor}
+              showReviewBorders={showReviewBorders}
             />
           ) : (
             <div className="space-y-4">
@@ -111,6 +114,7 @@ export default function PrincipalOrganSection({
                   customBgColor={organBgColor}
                   customTextColor={organTextColor}
                   skipCategoryHeader={skipCategoryLayer}
+                  showReviewBorders={showReviewBorders}
                 />
               ))}
             </div>

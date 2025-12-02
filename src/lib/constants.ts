@@ -71,12 +71,12 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-gray-300",
     textColor: "text-black",
   },
-//   "N/A": {
-//     label: "N/A [WIP]",
-//     order: 999,
-//     bgColor: "bg-gray-300",
-//     textColor: "text-gray-600",
-//   },
+  //   "N/A": {
+  //     label: "N/A [WIP]",
+  //     order: 999,
+  //     bgColor: "bg-gray-300",
+  //     textColor: "text-gray-600",
+  //   },
 };
 
 /**

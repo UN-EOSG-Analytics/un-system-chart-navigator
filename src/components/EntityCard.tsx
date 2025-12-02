@@ -1,6 +1,9 @@
 "use client";
 
-import { normalizePrincipalOrgan, principalOrganConfigs } from "@/lib/constants";
+import {
+  normalizePrincipalOrgan,
+  principalOrganConfigs,
+} from "@/lib/constants";
 import { createEntitySlug, getCssColorVar } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import EntityTooltip from "./EntityTooltip";
@@ -10,6 +13,7 @@ interface EntityCardProps {
   onEntityClick: (entitySlug: string) => void;
   customBgColor?: string;
   customTextColor?: string;
+  showReviewBorders?: boolean;
 }
 
 const EntityCard = ({
@@ -17,6 +21,7 @@ const EntityCard = ({
   onEntityClick,
   customBgColor,
   customTextColor,
+  showReviewBorders = false,
 }: EntityCardProps) => {
   // Check if entity has multiple principal organs
   const normalizedOrgans = normalizePrincipalOrgan(entity.un_principal_organ);
@@ -35,26 +40,34 @@ const EntityCard = ({
     onEntityClick(entitySlug);
   };
 
-  const borderClass = entity.review_needed ? "border-2 border-red-600" : "";
+  const borderClass =
+    showReviewBorders && entity.review_needed ? "border-2 border-red-600" : "";
 
   // Generate split background for multiple organs
-  const splitBackground = hasMultipleOrgans && normalizedOrgans ? (() => {
-    const colors = normalizedOrgans.map(organ => {
-      const config = principalOrganConfigs[organ];
-      return config ? getCssColorVar(config.bgColor) : getCssColorVar("bg-gray-300");
-    });
-    
-    if (colors.length === 2) {
-      return `linear-gradient(135deg, ${colors[0]} 0%, ${colors[0]} 50%, ${colors[1]} 50%, ${colors[1]} 100%)`;
-    }
-    // For more than 2 organs, distribute evenly
-    const step = 100 / colors.length;
-    const stops = colors.flatMap((color, i) => [
-      `${color} ${i * step}%`,
-      `${color} ${(i + 1) * step}%`
-    ]).join(", ");
-    return `linear-gradient(135deg, ${stops})`;
-  })() : null;
+  const splitBackground =
+    hasMultipleOrgans && normalizedOrgans
+      ? (() => {
+          const colors = normalizedOrgans.map((organ) => {
+            const config = principalOrganConfigs[organ];
+            return config
+              ? getCssColorVar(config.bgColor)
+              : getCssColorVar("bg-gray-300");
+          });
+
+          if (colors.length === 2) {
+            return `linear-gradient(135deg, ${colors[0]} 0%, ${colors[0]} 50%, ${colors[1]} 50%, ${colors[1]} 100%)`;
+          }
+          // For more than 2 organs, distribute evenly
+          const step = 100 / colors.length;
+          const stops = colors
+            .flatMap((color, i) => [
+              `${color} ${i * step}%`,
+              `${color} ${(i + 1) * step}%`,
+            ])
+            .join(", ");
+          return `linear-gradient(135deg, ${stops})`;
+        })()
+      : null;
 
   return (
     <EntityTooltip entity={entity}>
@@ -64,7 +77,7 @@ const EntityCard = ({
         // Math: h-[50px] - (2 lines × 15px line-height) = 20px remaining → py-[10px] each
         // Fixed line-height prevents spacing conflicts; -mt-[1px] compensates for font's internal top spacing
         // top-left aligned
-        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg py-[10px] px-3 text-left transition-all duration-200 ease-out fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px] sm:py-[12.5px]`}
+        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg px-3 py-[10px] text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px] sm:py-[12.5px]`}
         style={splitBackground ? { background: splitBackground } : undefined}
         aria-label={`View details for ${entity.entity_long}`}
       >
