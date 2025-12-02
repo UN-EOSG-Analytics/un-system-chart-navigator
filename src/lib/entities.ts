@@ -26,10 +26,12 @@ function parseUnPrincipalOrgan(value: unknown): string[] | null {
 
 // Direct import - 180KB JSON file loaded at build time
 // Parse un_principal_organ fields on load
-export const entities = (entitiesData as any[]).map((entity) => ({
-  ...entity,
-  un_principal_organ: parseUnPrincipalOrgan(entity.un_principal_organ),
-})) as Entity[];
+export const entities = (entitiesData as Record<string, unknown>[]).map(
+  (entity) => ({
+    ...entity,
+    un_principal_organ: parseUnPrincipalOrgan(entity.un_principal_organ),
+  }),
+) as Entity[];
 
 // Pre-computed slug-to-entity map for O(1) lookups
 export const entitySlugMap = new Map(

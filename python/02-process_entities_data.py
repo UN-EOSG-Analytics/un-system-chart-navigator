@@ -15,7 +15,11 @@ df = df.sort_values("entity")
 # Parse un_principal_organ from string representation to list
 df["un_principal_organ"] = df["un_principal_organ"].astype(str)
 df["un_principal_organ"] = df["un_principal_organ"].apply(
-    lambda x: ast.literal_eval(x) if x.startswith("[") and x.endswith("]") else None if x == "nan" else x
+    lambda x: ast.literal_eval(x)
+    if x.startswith("[") and x.endswith("]")
+    else None
+    if x == "nan"
+    else x
 )
 
 # len(df)
