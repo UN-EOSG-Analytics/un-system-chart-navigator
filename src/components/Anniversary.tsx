@@ -69,7 +69,7 @@ export default function UN80Animation() {
     ];
 
     const newConfetti: Confetti[] = [];
-    const confettiCount = 10000;
+    const confettiCount = 200;
 
     for (let i = 0; i < confettiCount; i++) {
       newConfetti.push({
