@@ -1,12 +1,7 @@
-import {
-  getCategoryFootnote,
-  getSortedSubcategories,
-  subcategoryOrderByPrincipalOrgan,
-} from "@/lib/constants";
+import { getCategoryFootnote } from "@/lib/constants";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
 import EntityGrid from "./EntityGrid";
-import SubcategorySection from "./SectionSubcategory";
 
 interface CategorySectionProps {
   category: string;
@@ -15,7 +10,7 @@ interface CategorySectionProps {
   onEntityClick: (entitySlug: string) => void;
   customBgColor?: string;
   customTextColor?: string;
-  skipCategoryHeader?: boolean;
+  smallHeaders?: boolean;
   showReviewBorders?: boolean;
 }
 
@@ -26,83 +21,19 @@ export default function CategorySection({
   onEntityClick,
   customBgColor,
   customTextColor,
-  skipCategoryHeader = false,
+  smallHeaders = false,
   showReviewBorders = false,
 }: CategorySectionProps) {
-  // Group entities by subcategory
-  const subcategorizedEntities = entities.reduce(
-    (acc: Record<string, Entity[]>, entity: Entity) => {
-      const subcategory = entity.subcategory || "";
-      if (!acc[subcategory]) {
-        acc[subcategory] = [];
-      }
-      acc[subcategory].push(entity);
-      return acc;
-    },
-    {},
-  );
+  if (entities.length === 0) return null;
 
-  // Check if subcategories are defined
-  const hasDefinedSubcategories =
-    subcategoryOrderByPrincipalOrgan[groupKey] !== undefined;
+  // Header styling based on smallHeaders prop
+  const headerClasses = smallHeaders
+    ? "mb-1.5 text-sm font-normal text-gray-500 sm:text-base" // Smaller styling
+    : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
 
-  // If no subcategories defined, show entities directly
-  if (!hasDefinedSubcategories) {
-    return (
-      <div className="pl-3">
-        <h2 className="category-header mb-2 text-base font-medium text-gray-500 sm:text-lg">
-          {category.trim() || "\u00A0"}
-          {getCategoryFootnote(groupKey, category) && (
-            <CategoryFootnote
-              footnoteNumbers={getCategoryFootnote(groupKey, category)!}
-            />
-          )}
-        </h2>
-        <EntityGrid
-          entities={entities}
-          onEntityClick={onEntityClick}
-          customBgColor={customBgColor}
-          customTextColor={customTextColor}
-          showReviewBorders={showReviewBorders}
-        />
-      </div>
-    );
-  }
-
-  // Get all defined subcategories
-  const definedSubcategories = Object.keys(
-    subcategoryOrderByPrincipalOrgan[groupKey] || {},
-  ).filter((key) => key !== "");
-
-  const allSubcategories = Array.from(new Set([...definedSubcategories]));
-  const sortedSubcategories = getSortedSubcategories(
-    allSubcategories,
-    groupKey,
-  );
-
-  // If category layer should be skipped, render subcategories directly
-  if (skipCategoryHeader && category === "") {
-    return (
-      <div className="space-y-3">
-        {sortedSubcategories.map((subcategory) => (
-          <SubcategorySection
-            key={subcategory || "none"}
-            subcategory={subcategory}
-            entities={subcategorizedEntities[subcategory] || []}
-            onEntityClick={onEntityClick}
-            customBgColor={customBgColor}
-            customTextColor={customTextColor}
-            showReviewBorders={showReviewBorders}
-          />
-        ))}
-      </div>
-    );
-  }
-
-  // Other organs: show category header then subcategories
   return (
     <div className="pl-3">
-      <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
+      <h2 className={`category-header ${headerClasses}`}>
         {category.trim() || "\u00A0"}
         {getCategoryFootnote(groupKey, category) && (
           <CategoryFootnote
@@ -110,19 +41,13 @@ export default function CategorySection({
           />
         )}
       </h2>
-      <div className="space-y-3">
-        {sortedSubcategories.map((subcategory) => (
-          <SubcategorySection
-            key={subcategory || "none"}
-            subcategory={subcategory}
-            entities={subcategorizedEntities[subcategory] || []}
-            onEntityClick={onEntityClick}
-            customBgColor={customBgColor}
-            customTextColor={customTextColor}
-            showReviewBorders={showReviewBorders}
-          />
-        ))}
-      </div>
+      <EntityGrid
+        entities={entities}
+        onEntityClick={onEntityClick}
+        customBgColor={customBgColor}
+        customTextColor={customTextColor}
+        showReviewBorders={showReviewBorders}
+      />
     </div>
   );
 }

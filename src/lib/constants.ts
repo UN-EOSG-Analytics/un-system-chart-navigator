@@ -8,6 +8,8 @@ export interface PrincipalOrganConfig {
   textColor: string;
   sectionHeading?: string; // Optional higher-level heading for the organ
   borderColor?: string; // Optional border color override
+  skipCategoryLayer?: boolean; // If true, render entities directly without category grouping
+  smallCategoryHeaders?: boolean; // If true, use smaller category header styling
 }
 
 // NOTE: keys here need to match entity.un_principal_organ
@@ -25,6 +27,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 2,
     bgColor: "bg-un-system-red",
     textColor: "text-black",
+    smallCategoryHeaders: true,
   },
   "Economic and Social Council": {
     label: "Economic and Social Council",
@@ -56,6 +59,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 6,
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
+    skipCategoryLayer: true,
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
@@ -63,6 +67,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 7,
     bgColor: "bg-un-system-brown",
     textColor: "text-black",
+    skipCategoryLayer: true,
   },
 
   Other: {
@@ -172,6 +177,10 @@ export function getCategoryFootnote(
 /**
  * Hierarchical category ordering by principal organ
  * Each principal organ has its own category order
+ *
+ * Convention:
+ * - " " (space) = Fallback for entities without category (shows section with blank header)
+ * - To skip category layer entirely for an organ, use `skipCategoryLayer: true` in principalOrganConfigs
  */
 export const categoryOrderByPrincipalOrgan: Record<
   string,
@@ -183,11 +192,16 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Research and Training": 3,
     "Other Entities": 4,
     "Related Organizations": 5,
-    "": 999,
+    " ": 999, // Fallback for entities without category (shows section, blank header)
   },
   "Security Council": {
-    // not applicable to SC
-    "": 1,
+    "Counter-Terrorism Committee": 1,
+    "International Residual Mechanism for Criminal Tribunals": 2,
+    "Military Staff Committee": 3,
+    "Peacekeeping operations and special political missions": 4,
+    "Standing committees and ad hoc bodies": 5,
+    "Sanctions Committees": 6,
+    " ": 999, // Fallback for entities without category
   },
   "Economic and Social Council": {
     "Functional Commissions": 1,
@@ -195,25 +209,20 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Other Bodies": 3,
     "Research and Training": 4,
     "Specialized Agencies": 5,
-    "": 999,
+    " ": 999, // Fallback for entities without category
   },
   Secretariat: {
     "Departments and Offices": 1,
-    "": 999,
+    " ": 999, // Fallback for entities without category
   },
-  "International Court of Justice": {
-    "": 999,
-  },
-  "Trusteeship Council": {
-    "": 999,
-  },
+  // ICJ and Trusteeship Council use skipCategoryLayer in principalOrganConfigs
   Other: {
     "Related Organizations": 1,
-    "": 999,
+    " ": 999, // Fallback for entities without category
   },
   "N/A": {
     "Related Organizations": 1,
-    "": 999,
+    " ": 999, // Fallback for entities without category
   },
 };
 
@@ -240,62 +249,6 @@ export function getSortedCategories(
       return orderA - orderB;
     }
     // Fallback to alphabetical if same order or not configured
-    return a.localeCompare(b);
-  });
-}
-
-// ============================================================================
-// SUBCATEGORIES
-// ============================================================================
-
-/**
- * Subcategory ordering by principal organ
- * Allows fine-grained control over subcategory display order
- *
- * For Security Council (SC):
- * - Category is always "Subsidiary Organs"
- * - Subcategories are what matter and need ordering (alphabetically)
- */
-export const subcategoryOrderByPrincipalOrgan: Record<
-  string,
-  Record<string, number>
-> = {
-  "Security Council": {
-    "Counter-Terrorism Committee": 1,
-    "International Residual Mechanism for Criminal Tribunals": 2,
-    "Military Staff Committee": 3,
-    "Peacekeeping operations and special political missions": 4,
-    "Standing committees and ad hoc bodies": 5,
-    "Sanctions Committees": 6,
-    "": 999, // Empty subcategory (entities without subcategory)
-  },
-};
-
-/**
- * Get all subcategories sorted by their order within a principal organ context
- * @param subcategories - Array of subcategory names to sort
- * @param principalOrgan - The principal organ context for hierarchical sorting
- * @returns Sorted array of subcategory names
- */
-export function getSortedSubcategories(
-  subcategories: string[],
-  principalOrgan: string | null,
-): string[] {
-  return subcategories.sort((a, b) => {
-    let orderA = 999;
-    let orderB = 999;
-
-    if (principalOrgan && subcategoryOrderByPrincipalOrgan[principalOrgan]) {
-      orderA = subcategoryOrderByPrincipalOrgan[principalOrgan][a] ?? 999;
-      orderB = subcategoryOrderByPrincipalOrgan[principalOrgan][b] ?? 999;
-    }
-
-    if (orderA !== orderB) {
-      return orderA - orderB;
-    }
-    // Fallback: empty string goes last, then alphabetical
-    if (a === "" && b !== "") return 1;
-    if (a !== "" && b === "") return -1;
     return a.localeCompare(b);
   });
 }

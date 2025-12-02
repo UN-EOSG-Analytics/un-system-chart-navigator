@@ -83,7 +83,6 @@ selected_columns = [
     # UN structure and classification
     "un_principal_organ",
     "category",
-    "subcategory",
     "is_ceb_member",
     # Mandate and registry
     "foundational_mandate",

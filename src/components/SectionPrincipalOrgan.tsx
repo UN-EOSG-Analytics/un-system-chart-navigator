@@ -32,22 +32,21 @@ export default function PrincipalOrganSection({
     ? getCssColorVar(organConfig.borderColor)
     : getCssColorVarDark(organBgColor);
 
+  // Check if this organ should skip the category layer entirely (from config)
+  const skipCategoryLayer = organConfig?.skipCategoryLayer === true;
+  const smallCategoryHeaders = organConfig?.smallCategoryHeaders === true;
+
   // Check if categories are defined for this organ
   const hasDefinedCategories =
+    !skipCategoryLayer &&
     categoryOrderByPrincipalOrgan[groupKey] !== undefined &&
     Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length > 0;
 
-  // If only empty string category is defined, skip category layer entirely
-  const skipCategoryLayer =
-    hasDefinedCategories &&
-    Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length === 1 &&
-    "" in categoryOrderByPrincipalOrgan[groupKey];
-
-  // Group entities by category
+  // Group entities by category (only if not skipping category layer)
   const categorizedEntities = entities.reduce(
     (acc: Record<string, Entity[]>, entity: Entity) => {
-      // Use empty string if skipping category layer, otherwise use entity category or empty string
-      const category = skipCategoryLayer ? "" : entity.category || "";
+      // Use entity category or space for fallback (blank header)
+      const category = entity.category || " ";
       if (!acc[category]) {
         acc[category] = [];
       }
@@ -94,7 +93,7 @@ export default function PrincipalOrganSection({
 
         {/* Content */}
         <div className="px-6 pb-6 sm:px-8 sm:pb-8">
-          {!hasDefinedCategories ? (
+          {skipCategoryLayer || !hasDefinedCategories ? (
             <EntityGrid
               entities={entities}
               onEntityClick={onEntityClick}
@@ -113,7 +112,7 @@ export default function PrincipalOrganSection({
                   onEntityClick={onEntityClick}
                   customBgColor={organBgColor}
                   customTextColor={organTextColor}
-                  skipCategoryHeader={skipCategoryLayer}
+                  smallHeaders={smallCategoryHeaders}
                   showReviewBorders={showReviewBorders}
                 />
               ))}

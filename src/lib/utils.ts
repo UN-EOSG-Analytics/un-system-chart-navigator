@@ -101,7 +101,6 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("entity_description", entity.entity_description);
   addParam("entity_link", entity.entity_link);
   addParam("category", entity.category);
-  addParam("subcategory", entity.subcategory);
   addParam("un_principal_organ", entity.un_principal_organ);
   addParam("is_ceb_member", entity.is_ceb_member);
   addParam("head_of_entity_level", entity.head_of_entity_level);

@@ -18,8 +18,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -63,7 +62,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -106,8 +104,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -151,7 +148,6 @@
       "Economic and Social Council"
     ],
     "category":"Functional Commissions",
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -195,7 +191,6 @@
       "General Assembly"
     ],
     "category":"Related Organizations",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -238,8 +233,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Counter-Terrorism Committee",
+    "category":"Counter-Terrorism Committee",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -283,7 +277,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -327,7 +320,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":"https:\/\/mandates.un.org\/entity\/RCS",
@@ -371,7 +363,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -415,7 +406,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -459,7 +449,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -503,7 +492,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -547,7 +535,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -591,7 +578,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -635,7 +621,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -679,7 +664,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -723,7 +707,6 @@
       "Economic and Social Council"
     ],
     "category":"Regional Commissions",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -767,7 +750,6 @@
       "Economic and Social Council"
     ],
     "category":"Regional Commissions",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -811,7 +793,6 @@
       "Economic and Social Council"
     ],
     "category":"Regional Commissions",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/www.cepal.org\/en\/about\/mandate-and-mission",
     "entity_mandate_registry":null,
@@ -855,7 +836,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -899,7 +879,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -943,7 +922,6 @@
       "Economic and Social Council"
     ],
     "category":"Regional Commissions",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -987,7 +965,6 @@
       "Economic and Social Council"
     ],
     "category":"Regional Commissions",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1031,7 +1008,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1074,8 +1050,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1120,7 +1095,6 @@
       "Economic and Social Council"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1164,7 +1138,6 @@
       "General Assembly"
     ],
     "category":"Intergovernmental and Expert Bodies",
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1208,7 +1181,6 @@
       "General Assembly"
     ],
     "category":"Related Organizations",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1252,7 +1224,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1296,7 +1267,6 @@
       "International Court of Justice"
     ],
     "category":"International Court of Justice",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1340,7 +1310,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1384,7 +1353,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1428,7 +1396,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1472,7 +1439,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1516,7 +1482,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1560,7 +1525,6 @@
       "General Assembly"
     ],
     "category":"Intergovernmental and Expert Bodies",
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1604,7 +1568,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1648,7 +1611,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1692,7 +1654,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1736,7 +1697,6 @@
       "General Assembly"
     ],
     "category":"Related Organizations",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1780,7 +1740,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1824,7 +1783,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1868,7 +1826,6 @@
       "General Assembly"
     ],
     "category":"Intergovernmental and Expert Bodies",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1911,8 +1868,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/minurso.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -1955,8 +1911,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/minusca.unmissions.org\/en\/mandate",
     "entity_mandate_registry":null,
@@ -1999,8 +1954,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2044,7 +1998,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices (Internal Justice Bodies)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2088,7 +2041,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2132,7 +2084,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2176,7 +2127,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2220,7 +2170,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2263,8 +2212,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2308,7 +2256,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2352,7 +2299,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2396,7 +2342,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2440,7 +2385,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2483,8 +2427,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2528,7 +2471,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2572,7 +2514,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2616,7 +2557,6 @@
       "Other"
     ],
     "category":"Related Organizations",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2660,7 +2600,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2704,7 +2643,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2747,8 +2685,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2792,7 +2729,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2836,7 +2772,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2879,8 +2814,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2923,8 +2857,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2967,8 +2900,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3011,8 +2943,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3055,8 +2986,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3100,7 +3030,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3144,7 +3073,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3188,7 +3116,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3232,7 +3159,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3276,7 +3202,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3319,8 +3244,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3363,8 +3287,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3409,7 +3332,6 @@
       "Security Council"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3452,8 +3374,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3497,7 +3418,6 @@
       "Security Council"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3540,8 +3460,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3584,8 +3503,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3628,8 +3546,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3672,8 +3589,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3716,8 +3632,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3760,8 +3675,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3804,8 +3718,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3848,8 +3761,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Standing committees and ad hoc bodies",
+    "category":"Standing committees and ad hoc bodies",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3892,8 +3804,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Standing committees and ad hoc bodies",
+    "category":"Standing committees and ad hoc bodies",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3936,8 +3847,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3980,8 +3890,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Sanctions Committees",
+    "category":"Sanctions Committees",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4025,7 +3934,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4069,7 +3977,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4113,7 +4020,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4157,7 +4063,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4201,7 +4106,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4245,7 +4149,6 @@
       "Economic and Social Council"
     ],
     "category":"Other Bodies",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4288,8 +4191,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4332,8 +4234,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4377,7 +4278,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4421,7 +4321,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4465,7 +4364,6 @@
       "General Assembly"
     ],
     "category":"Intergovernmental and Expert Bodies",
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4509,7 +4407,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4553,7 +4450,6 @@
       "General Assembly"
     ],
     "category":"Intergovernmental and Expert Bodies",
-    "subcategory":null,
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4596,8 +4492,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4641,7 +4536,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4685,7 +4579,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4729,7 +4622,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4773,7 +4665,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4816,8 +4707,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4861,7 +4751,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4905,7 +4794,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4949,7 +4837,6 @@
       "Economic and Social Council"
     ],
     "category":"Other Bodies",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4993,7 +4880,6 @@
       "Economic and Social Council"
     ],
     "category":"Other Bodies",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5037,7 +4923,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5081,7 +4966,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5125,7 +5009,6 @@
       "Economic and Social Council"
     ],
     "category":"Research and Training",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5169,7 +5052,6 @@
       "General Assembly"
     ],
     "category":"Research and Training",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5213,7 +5095,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5256,8 +5137,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5300,8 +5180,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5345,7 +5224,6 @@
       "General Assembly"
     ],
     "category":"Research and Training",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5388,8 +5266,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5432,8 +5309,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unmha.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -5476,8 +5352,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unmik.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -5520,8 +5395,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unmiss.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -5564,8 +5438,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5608,8 +5481,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unoau.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -5652,8 +5524,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unoca.unmissions.org\/en\/mandate-and-missions",
     "entity_mandate_registry":null,
@@ -5697,7 +5568,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5741,7 +5611,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5785,7 +5654,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5829,7 +5697,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5873,7 +5740,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5917,7 +5783,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5961,7 +5826,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6005,7 +5869,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6049,7 +5912,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6092,8 +5954,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unowas.unmissions.org\/unowas-mandate",
     "entity_mandate_registry":null,
@@ -6136,8 +5997,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unrcca.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -6180,8 +6040,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6225,7 +6084,6 @@
       "Economic and Social Council"
     ],
     "category":"Research and Training",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6269,7 +6127,6 @@
       "General Assembly"
     ],
     "category":"Other Entities",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6312,8 +6169,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6356,8 +6212,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6400,8 +6255,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6444,8 +6298,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6488,8 +6341,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unsmil.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -6532,8 +6384,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/unsos.unmissions.org\/unsos-mandate",
     "entity_mandate_registry":null,
@@ -6577,7 +6428,6 @@
       "General Assembly"
     ],
     "category":"Research and Training",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6620,8 +6470,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6664,8 +6513,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":"https:\/\/untso.unmissions.org\/mandate",
     "entity_mandate_registry":null,
@@ -6709,7 +6557,6 @@
       "General Assembly"
     ],
     "category":"Research and Training",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6753,7 +6600,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6796,8 +6642,7 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":null,
-    "subcategory":"Peacekeeping operations and special political missions",
+    "category":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6841,7 +6686,6 @@
       "Secretariat"
     ],
     "category":"Departments and Offices",
-    "subcategory":"Departments and Offices",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6885,7 +6729,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6929,7 +6772,6 @@
       "General Assembly"
     ],
     "category":"Funds and Programmes",
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6973,7 +6815,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7017,7 +6858,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7061,7 +6901,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7105,7 +6944,6 @@
       "Specialized Agencies"
     ],
     "category":null,
-    "subcategory":null,
     "is_ceb_member":true,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
