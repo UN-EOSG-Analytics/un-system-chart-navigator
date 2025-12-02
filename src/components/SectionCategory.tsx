@@ -15,7 +15,7 @@ interface CategorySectionProps {
   onEntityClick: (entitySlug: string) => void;
   customBgColor?: string;
   customTextColor?: string;
-  isSecurityCouncil?: boolean;
+  skipCategoryHeader?: boolean;
 }
 
 export default function CategorySection({
@@ -25,7 +25,7 @@ export default function CategorySection({
   onEntityClick,
   customBgColor,
   customTextColor,
-  isSecurityCouncil = false,
+  skipCategoryHeader = false,
 }: CategorySectionProps) {
   // Group entities by subcategory
   const subcategorizedEntities = entities.reduce(
@@ -77,8 +77,8 @@ export default function CategorySection({
     groupKey,
   );
 
-  // Security Council: skip category header
-  if (isSecurityCouncil) {
+  // If category layer should be skipped, render subcategories directly
+  if (skipCategoryHeader && category === "") {
     return (
       <div className="space-y-3">
         {sortedSubcategories.map((subcategory) => (

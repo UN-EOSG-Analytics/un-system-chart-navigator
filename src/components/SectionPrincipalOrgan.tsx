@@ -1,14 +1,14 @@
 import {
-  categoryOrderByPrincipalOrgan,
-  getCategoryFootnote,
-  getSortedCategories,
-  principalOrganConfigs,
+    categoryOrderByPrincipalOrgan,
+    getCategoryFootnote,
+    getSortedCategories,
+    principalOrganConfigs,
 } from "@/lib/constants";
 import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
-import CategorySection from "./SectionCategory";
 import EntityGrid from "./EntityGrid";
+import CategorySection from "./SectionCategory";
 
 interface PrincipalOrganSectionProps {
   groupKey: string;
@@ -32,10 +32,17 @@ export default function PrincipalOrganSection({
     categoryOrderByPrincipalOrgan[groupKey] !== undefined &&
     Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length > 0;
 
+  // If only empty string category is defined, skip category layer entirely
+  const skipCategoryLayer =
+    hasDefinedCategories &&
+    Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length === 1 &&
+    "" in categoryOrderByPrincipalOrgan[groupKey];
+
   // Group entities by category
   const categorizedEntities = entities.reduce(
     (acc: Record<string, Entity[]>, entity: Entity) => {
-      const category = entity.category || "N/A";
+      // Use empty string if skipping category layer, otherwise use entity category
+      const category = skipCategoryLayer ? "" : entity.category || "N/A";
       if (!acc[category]) {
         acc[category] = [];
       }
@@ -49,8 +56,6 @@ export default function PrincipalOrganSection({
     Object.keys(categorizedEntities),
     groupKey,
   );
-
-  const isSecurityCouncil = groupKey === "Security Council (SC)";
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4">
@@ -104,7 +109,7 @@ export default function PrincipalOrganSection({
                       onEntityClick={onEntityClick}
                       customBgColor={organBgColor}
                       customTextColor={organTextColor}
-                      isSecurityCouncil={isSecurityCouncil}
+                      skipCategoryHeader={skipCategoryLayer}
                     />
                   ))}
                 </div>
