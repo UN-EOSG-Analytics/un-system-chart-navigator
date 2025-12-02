@@ -70,12 +70,11 @@ export default function PrincipalOrganSection({
       >
         {/* Principal Organ Heading */}
         <div
-          className="mb-6 border-l-[6px] pt-3 pl-4 sm:pt-5 sm:pl-4"
+          className="mb-6 border-l-[6px] pt-2 pl-4 sm:pt-3 pb-2 sm:pl-4"
           style={{
             borderColor: borderColor,
           }}
         >
-          <div className="mb-1 h-px bg-gradient-to-r from-gray-400 via-gray-200 to-transparent"></div>
           <h2 className="text-2xl font-bold text-black uppercase sm:text-2xl md:text-3xl">
             {groupLabel}
             {getCategoryFootnote(groupKey) && (
