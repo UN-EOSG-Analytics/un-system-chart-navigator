@@ -40,7 +40,7 @@ export function AnimatedCornerLogo() {
         href="https://un-two-zero.network/"
         target="_blank"
         rel="noopener noreferrer"
-        className={`fixed bottom-0 left-0 z-30 cursor-pointer transition-opacity hover:opacity-80 hidden md:block ${cornerClass}`}
+        className={`fixed bottom-0 left-0 z-30 hidden cursor-pointer transition-opacity hover:opacity-80 md:block ${cornerClass}`}
         aria-label="Visit UN 2.0 Network"
       >
         {/* Base corner logo */}

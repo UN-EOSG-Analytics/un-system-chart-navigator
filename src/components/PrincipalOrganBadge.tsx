@@ -58,7 +58,7 @@ export default function PrincipalOrganBadge({
 }: PrincipalOrganBadgeProps) {
   const url = getOrganUrl(organ);
   const isClickable = Boolean(url);
-  
+
   // Get colors from principal organ config
   const organConfig = principalOrganConfigs[organ];
   const bgColor = organConfig?.bgColor || "bg-gray-200";

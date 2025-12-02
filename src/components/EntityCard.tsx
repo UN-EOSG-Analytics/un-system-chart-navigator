@@ -18,8 +18,10 @@ const EntityCard = ({
   customBgColor,
   customTextColor,
 }: EntityCardProps) => {
-  const styles = getSystemGroupingStyle(entity.system_grouping || "Unspecified");
-  
+  const styles = getSystemGroupingStyle(
+    entity.system_grouping || "Unspecified",
+  );
+
   // Use custom colors if provided, otherwise use system grouping styles
   const bgColor = customBgColor || styles.bgColor;
   const textColor = customTextColor || styles.textColor;

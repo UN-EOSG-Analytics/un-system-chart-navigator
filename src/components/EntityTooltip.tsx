@@ -26,13 +26,13 @@ export default function EntityTooltip({
         collisionPadding={12}
       >
         <div className="p-1">
-          <p className="text-left text-xs font-medium leading-tight text-wrap sm:text-sm">
+          <p className="text-left text-xs leading-tight font-medium text-wrap sm:text-sm">
             {entity.entity_long} ({entity.entity})
           </p>
-          <p className="mt-1 hidden text-left text-xs text-slate-500 text-wrap sm:block">
+          <p className="mt-1 hidden text-left text-xs text-wrap text-slate-500 sm:block">
             Click to view entity details
           </p>
-          <p className="mt-1 text-left text-xs text-slate-500 text-wrap sm:hidden">
+          <p className="mt-1 text-left text-xs text-wrap text-slate-500 sm:hidden">
             Tap to view details
           </p>
         </div>

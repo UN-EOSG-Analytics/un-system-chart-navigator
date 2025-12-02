@@ -260,12 +260,12 @@ export function getCategoryFootnote(
   category?: string,
 ): number[] | null {
   if (!principalOrgan) return null;
-  
+
   // If no category provided, look for organ-level footnotes
   if (!category) {
     return categoryFootnotes[principalOrgan] || null;
   }
-  
+
   // Look for category-level footnotes
   const key = `${principalOrgan}|${category}`;
   return categoryFootnotes[key] || null;
