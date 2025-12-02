@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="w-full flex-grow p-3 sm:p-4 lg:p-6">
+      <main className="w-full flex-grow py-3 sm:py-4 md:py-6 lg:py-8 xl:py-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-6">
           <div className="flex flex-col gap-3 sm:mt-2">
             <Header onTitleClick={handleTitleClick} />

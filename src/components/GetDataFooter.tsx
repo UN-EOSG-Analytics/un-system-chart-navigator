@@ -68,7 +68,7 @@ export default function DataDownloadBar() {
   };
 
   return (
-    <div className="w-full bg-white p-3 sm:p-4 lg:p-6">
+    <div className="w-full bg-white py-3 sm:py-4 md:py-6 lg:py-8 xl:py-10">
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex items-start gap-2 text-base">
           <p className="text-gray-600">As of November 2025</p>
