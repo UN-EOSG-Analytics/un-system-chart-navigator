@@ -44,8 +44,8 @@ export default function PrincipalOrganSection({
   // Group entities by category
   const categorizedEntities = entities.reduce(
     (acc: Record<string, Entity[]>, entity: Entity) => {
-      // Use empty string if skipping category layer, otherwise use entity category
-      const category = skipCategoryLayer ? "" : entity.category || "N/A";
+      // Use empty string if skipping category layer, otherwise use entity category or empty string
+      const category = skipCategoryLayer ? "" : entity.category || "";
       if (!acc[category]) {
         acc[category] = [];
       }

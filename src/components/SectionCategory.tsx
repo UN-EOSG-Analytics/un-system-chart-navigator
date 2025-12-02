@@ -49,7 +49,7 @@ export default function CategorySection({
     return (
       <div className="pl-3">
         <h2 className="category-header mb-2 text-base font-medium text-gray-500 sm:text-lg">
-          {category}
+          {category.trim() || "\u00A0"}
           {getCategoryFootnote(groupKey, category) && (
             <CategoryFootnote
               footnoteNumbers={getCategoryFootnote(groupKey, category)!}
@@ -99,7 +99,7 @@ export default function CategorySection({
   return (
     <div className="pl-3">
       <h2 className="category-header mb-2 text-base font-medium text-gray-600 sm:text-lg">
-        {category}
+        {category.trim() || "\u00A0"}
         {getCategoryFootnote(groupKey, category) && (
           <CategoryFootnote
             footnoteNumbers={getCategoryFootnote(groupKey, category)!}

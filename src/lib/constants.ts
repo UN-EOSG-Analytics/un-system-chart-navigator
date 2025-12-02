@@ -183,7 +183,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Research and Training": 3,
     "Other Entities": 4,
     "Related Organizations": 5,
-    "N/A": 999,
+    "": 999,
   },
   "Security Council": {
     // not applicable to SC
@@ -195,23 +195,25 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Other Bodies": 3,
     "Research and Training": 4,
     "Specialized Agencies": 5,
-    "N/A": 999,
+    "": 999,
   },
   Secretariat: {
     "Departments and Offices": 1,
-    "N/A": 999,
+    "": 999,
   },
-  "International Court of Justice": {},
+  "International Court of Justice": {
+    "": 999,
+  },
   "Trusteeship Council": {
-    "N/A": 999,
+    "": 999,
   },
   Other: {
     "Related Organizations": 1,
-    "N/A": 999,
+    "": 999,
   },
   "N/A": {
     "Related Organizations": 1,
-    "N/A": 999,
+    "": 999,
   },
 };
 
