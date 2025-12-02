@@ -100,15 +100,16 @@ export function getPrincipalOrganLabel(organ: string | null): string {
 
 /**
  * Normalize principal organ value (handle arrays and null)
+ * Returns an array of principal organs, or null if none
  */
 export function normalizePrincipalOrgan(
   organ: string[] | string | null,
-): string | null {
+): string[] | null {
   if (!organ) return null;
   if (Array.isArray(organ)) {
-    return organ[0] || null;
+    return organ.length > 0 ? organ : null;
   }
-  return organ;
+  return [organ];
 }
 
 // ============================================================================

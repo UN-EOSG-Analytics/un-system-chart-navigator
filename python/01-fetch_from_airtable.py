@@ -28,6 +28,8 @@ if records:
 if len(df) < 160:
     raise ValueError(f"Expected more than 160 records, but got {len(df)}")
 
+print(f"Number of entities fetched: {df.shape[0]}")
+
 # Filter out rows where 'added_via_form' is True
 if "added_via_form" in df.columns:
     df = df[df["added_via_form"] != "TRUE"]
@@ -45,7 +47,7 @@ else:
 # Filter out rows where the on_display column is False
 df = df[df["on_display"] != "FALSE"]
 
-print(f"Number of entities: {df.shape[0]}")
+print(f"Number of entities showing: {df.shape[0]}")
 
 # Check if all entity values are URL safe
 unsafe_entities = []

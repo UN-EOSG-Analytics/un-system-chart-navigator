@@ -15,7 +15,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -57,7 +59,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
@@ -99,7 +103,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -141,7 +147,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Functional Commissions",
     "subcategory":null,
     "is_ceb_member":null,
@@ -183,7 +191,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Related Organizations",
     "subcategory":null,
     "is_ceb_member":false,
@@ -225,7 +235,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Counter-Terrorism Committee",
     "is_ceb_member":false,
@@ -267,7 +279,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -309,7 +323,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -351,7 +367,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -393,7 +411,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -435,7 +455,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -477,7 +499,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -519,7 +543,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -561,7 +587,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -603,7 +631,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -645,7 +675,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -687,7 +719,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Regional Commissions",
     "subcategory":null,
     "is_ceb_member":false,
@@ -729,7 +763,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Regional Commissions",
     "subcategory":null,
     "is_ceb_member":false,
@@ -771,7 +807,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Regional Commissions",
     "subcategory":null,
     "is_ceb_member":false,
@@ -813,7 +851,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
@@ -855,7 +895,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -897,7 +939,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Regional Commissions",
     "subcategory":null,
     "is_ceb_member":false,
@@ -939,7 +983,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Regional Commissions",
     "subcategory":null,
     "is_ceb_member":false,
@@ -981,7 +1027,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1023,7 +1071,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -1050,6 +1100,51 @@
     "review_needed":true
   },
   {
+    "entity":"HLPF",
+    "entity_long":"High-level Political Forum on Sustainable Development",
+    "entity_combined":"High-level Political Forum on Sustainable Development (HLPF)",
+    "entity_aliases":null,
+    "entity_description":null,
+    "entity_footnotes":"- HLPF was established by the General Assembly. Meetings of HLPF are separately convened under the auspices of the General Assembly and of the Economic and Social Council.\n",
+    "entity_link":null,
+    "entity_wikipedia_page":null,
+    "entity_news_page":null,
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":null,
+    "entity_careers_page":null,
+    "un_principal_organ":[
+      "General Assembly",
+      "Economic and Social Council"
+    ],
+    "category":null,
+    "subcategory":null,
+    "is_ceb_member":null,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "head_of_entity_title_general":null,
+    "head_of_entity_title_specific":null,
+    "head_of_entity_name":null,
+    "head_of_entity_level":null,
+    "head_of_entity_bio_link":null,
+    "head_of_entity_headshot_link":null,
+    "global_leadership_team_url":null,
+    "organizational_chart_link":null,
+    "budget_financial_reporting_link":null,
+    "results_framework_link":null,
+    "strategic_plan_link":null,
+    "annual_reports_link":null,
+    "transparency_portal_link":null,
+    "socials_linkedin":null,
+    "socials_twitter":null,
+    "socials_instagram":null,
+    "record_id":"recIdB3zEg9k3LcA1",
+    "review_needed":null
+  },
+  {
     "entity":"HRC",
     "entity_long":"Human Rights Council",
     "entity_combined":"Human Rights Council (HRC)",
@@ -1065,7 +1160,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Intergovernmental and Expert Bodies",
     "subcategory":null,
     "is_ceb_member":null,
@@ -1107,7 +1204,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Related Organizations",
     "subcategory":null,
     "is_ceb_member":true,
@@ -1149,7 +1248,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1191,7 +1292,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"International Court of Justice",
+    "un_principal_organ":[
+      "International Court of Justice"
+    ],
     "category":"International Court of Justice",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1233,7 +1336,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1275,7 +1380,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1317,7 +1424,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1359,7 +1468,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1401,7 +1512,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1443,7 +1556,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Intergovernmental and Expert Bodies",
     "subcategory":null,
     "is_ceb_member":null,
@@ -1485,7 +1600,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1527,7 +1644,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1569,7 +1688,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1611,7 +1732,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Related Organizations",
     "subcategory":null,
     "is_ceb_member":true,
@@ -1653,7 +1776,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1695,7 +1820,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -1737,7 +1864,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Intergovernmental and Expert Bodies",
     "subcategory":null,
     "is_ceb_member":false,
@@ -1779,7 +1908,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -1821,7 +1952,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -1863,7 +1996,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -1905,7 +2040,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices (Internal Justice Bodies)",
     "is_ceb_member":false,
@@ -1947,7 +2084,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -1989,7 +2128,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2031,7 +2172,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2073,7 +2216,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2115,7 +2260,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -2157,7 +2304,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2199,7 +2348,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2241,7 +2392,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2283,7 +2436,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2325,7 +2480,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -2367,7 +2524,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2409,7 +2568,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2451,7 +2612,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Other",
+    "un_principal_organ":[
+      "Other"
+    ],
     "category":"Related Organizations",
     "subcategory":null,
     "is_ceb_member":false,
@@ -2493,7 +2656,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2535,7 +2700,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":null,
     "is_ceb_member":false,
@@ -2577,7 +2744,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -2619,7 +2788,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2661,7 +2832,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2703,7 +2876,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -2745,7 +2920,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -2787,7 +2964,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -2829,7 +3008,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -2871,7 +3052,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -2913,7 +3096,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2955,7 +3140,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -2997,7 +3184,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -3039,7 +3228,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -3081,7 +3272,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":null,
     "is_ceb_member":false,
@@ -3123,7 +3316,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -3165,7 +3360,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -3192,6 +3389,51 @@
     "review_needed":true
   },
   {
+    "entity":"Peacebuilding Commission",
+    "entity_long":"Peacebuilding Commission",
+    "entity_combined":"Peacebuilding Commission (Peacebuilding Commission)",
+    "entity_aliases":null,
+    "entity_description":null,
+    "entity_footnotes":null,
+    "entity_link":null,
+    "entity_wikipedia_page":null,
+    "entity_news_page":null,
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":null,
+    "entity_careers_page":null,
+    "un_principal_organ":[
+      "General Assembly",
+      "Security Council"
+    ],
+    "category":null,
+    "subcategory":null,
+    "is_ceb_member":null,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "head_of_entity_title_general":null,
+    "head_of_entity_title_specific":null,
+    "head_of_entity_name":null,
+    "head_of_entity_level":null,
+    "head_of_entity_bio_link":null,
+    "head_of_entity_headshot_link":null,
+    "global_leadership_team_url":null,
+    "organizational_chart_link":null,
+    "budget_financial_reporting_link":null,
+    "results_framework_link":null,
+    "strategic_plan_link":null,
+    "annual_reports_link":null,
+    "transparency_portal_link":null,
+    "socials_linkedin":null,
+    "socials_twitter":null,
+    "socials_instagram":null,
+    "record_id":"recddpx9CyJZ7GWpm",
+    "review_needed":null
+  },
+  {
     "entity":"PoE-CAR",
     "entity_long":"Panel of Experts on the Central African Republic",
     "entity_combined":"Panel of Experts on the Central African Republic (PoE-CAR)",
@@ -3207,7 +3449,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3249,7 +3493,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":false,
@@ -3291,7 +3537,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3333,7 +3581,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3375,7 +3625,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3417,7 +3669,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3459,7 +3713,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3501,7 +3757,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3543,7 +3801,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -3585,7 +3845,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Standing committees and ad hoc bodies",
     "is_ceb_member":false,
@@ -3627,7 +3889,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Standing committees and ad hoc bodies",
     "is_ceb_member":false,
@@ -3669,7 +3933,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3711,7 +3977,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Sanctions Committees",
     "is_ceb_member":false,
@@ -3753,7 +4021,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
@@ -3795,7 +4065,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -3837,7 +4109,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":true,
@@ -3879,7 +4153,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -3921,7 +4197,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":true,
@@ -3963,7 +4241,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Other Bodies",
     "subcategory":null,
     "is_ceb_member":false,
@@ -4005,7 +4285,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -4047,7 +4329,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -4089,7 +4373,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
@@ -4131,7 +4417,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":false,
@@ -4173,7 +4461,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Intergovernmental and Expert Bodies",
     "subcategory":null,
     "is_ceb_member":null,
@@ -4215,7 +4505,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":true,
@@ -4257,7 +4549,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Intergovernmental and Expert Bodies",
     "subcategory":null,
     "is_ceb_member":null,
@@ -4299,7 +4593,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -4341,7 +4637,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":"https:\/\/jobs.undp.org\/",
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":true,
@@ -4383,7 +4681,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -4425,7 +4725,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":true,
@@ -4467,7 +4769,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -4509,7 +4813,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -4551,7 +4857,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":true,
@@ -4593,7 +4901,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices (Other Entities)",
     "is_ceb_member":false,
@@ -4635,7 +4945,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Other Bodies",
     "subcategory":null,
     "is_ceb_member":false,
@@ -4677,7 +4989,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Other Bodies",
     "subcategory":null,
     "is_ceb_member":false,
@@ -4719,7 +5033,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":true,
@@ -4761,7 +5077,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":true,
@@ -4803,7 +5121,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Research and Training",
     "subcategory":null,
     "is_ceb_member":false,
@@ -4845,7 +5165,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Research and Training",
     "subcategory":null,
     "is_ceb_member":false,
@@ -4887,7 +5209,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -4929,7 +5253,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -4971,7 +5297,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5013,7 +5341,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Research and Training",
     "subcategory":null,
     "is_ceb_member":false,
@@ -5055,7 +5385,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5097,7 +5429,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5139,7 +5473,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5181,7 +5517,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5223,7 +5561,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5265,7 +5605,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5307,7 +5649,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5349,7 +5693,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -5391,7 +5737,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":true,
@@ -5433,7 +5781,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -5475,7 +5825,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -5517,7 +5869,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":null,
     "is_ceb_member":false,
@@ -5559,7 +5913,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":true,
@@ -5601,7 +5957,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":null,
     "is_ceb_member":false,
@@ -5643,7 +6001,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":false,
@@ -5685,7 +6045,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -5727,7 +6089,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5769,7 +6133,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5811,7 +6177,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5853,7 +6221,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Economic and Social Council",
+    "un_principal_organ":[
+      "Economic and Social Council"
+    ],
     "category":"Research and Training",
     "subcategory":null,
     "is_ceb_member":false,
@@ -5895,7 +6265,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Other Entities",
     "subcategory":null,
     "is_ceb_member":true,
@@ -5937,7 +6309,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -5979,7 +6353,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6021,7 +6397,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6063,7 +6441,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6105,7 +6485,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6147,7 +6529,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6189,7 +6573,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Research and Training",
     "subcategory":null,
     "is_ceb_member":false,
@@ -6231,7 +6617,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6273,7 +6661,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6315,7 +6705,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Research and Training",
     "subcategory":null,
     "is_ceb_member":false,
@@ -6357,7 +6749,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":false,
@@ -6399,7 +6793,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Security Council",
+    "un_principal_organ":[
+      "Security Council"
+    ],
     "category":null,
     "subcategory":"Peacekeeping operations and special political missions",
     "is_ceb_member":false,
@@ -6441,7 +6837,9 @@
     "entity_logo_url":null,
     "entity_logo_available":null,
     "entity_careers_page":null,
-    "un_principal_organ":"Secretariat",
+    "un_principal_organ":[
+      "Secretariat"
+    ],
     "category":"Departments and Offices",
     "subcategory":"Departments and Offices",
     "is_ceb_member":false,
@@ -6483,7 +6881,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -6525,7 +6925,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"General Assembly",
+    "un_principal_organ":[
+      "General Assembly"
+    ],
     "category":"Funds and Programmes",
     "subcategory":null,
     "is_ceb_member":true,
@@ -6567,7 +6969,9 @@
     "entity_logo_url":"https:\/\/www.who.int\/images\/default-source\/fallback\/header-logos\/h-logo-blue1820eae93c154e37b2588ab90fdbc17e.svg?sfvrsn=aaed4f35_20",
     "entity_logo_available":true,
     "entity_careers_page":"https:\/\/www.who.int\/careers",
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -6609,7 +7013,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -6651,7 +7057,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,
@@ -6693,7 +7101,9 @@
     "entity_logo_url":null,
     "entity_logo_available":true,
     "entity_careers_page":null,
-    "un_principal_organ":"Specialized Agencies",
+    "un_principal_organ":[
+      "Specialized Agencies"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":true,

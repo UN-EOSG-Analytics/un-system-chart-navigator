@@ -71,7 +71,7 @@ export function generateContributeUrl(entity?: Entity): string {
   // Helper function to add parameter if value is not null/empty
   const addParam = (
     key: string,
-    value: string | number | boolean | null | undefined,
+    value: string | number | boolean | string[] | null | undefined,
   ) => {
     if (
       value !== null &&
@@ -81,7 +81,12 @@ export function generateContributeUrl(entity?: Entity): string {
       value !== "Not found" &&
       value !== "No link found"
     ) {
-      params.set(`prefill_${key}`, String(value));
+      // Handle arrays by joining them
+      if (Array.isArray(value)) {
+        params.set(`prefill_${key}`, value.join(", "));
+      } else {
+        params.set(`prefill_${key}`, String(value));
+      }
     }
   };
 

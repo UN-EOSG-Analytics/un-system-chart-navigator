@@ -2,8 +2,34 @@ import { Entity, EntityFilters } from "@/types/entity";
 import entitiesData from "../../public/un-entities.json";
 import { createEntitySlug, parseEntityAliases } from "./utils";
 
+// Parse un_principal_organ field (handle both string representations and actual arrays)
+function parseUnPrincipalOrgan(value: unknown): string[] | null {
+  if (!value) return null;
+  if (Array.isArray(value)) return value;
+  if (typeof value === "string") {
+    // Handle string representation like "['Security Council']"
+    if (value.startsWith("[") && value.endsWith("]")) {
+      try {
+        // Replace single quotes with double quotes for JSON parsing
+        const jsonString = value.replace(/'/g, '"');
+        const parsed = JSON.parse(jsonString);
+        return Array.isArray(parsed) ? parsed : null;
+      } catch {
+        return null;
+      }
+    }
+    // Single value
+    return [value];
+  }
+  return null;
+}
+
 // Direct import - 180KB JSON file loaded at build time
-export const entities = entitiesData as Entity[];
+// Parse un_principal_organ fields on load
+export const entities = (entitiesData as any[]).map((entity) => ({
+  ...entity,
+  un_principal_organ: parseUnPrincipalOrgan(entity.un_principal_organ),
+})) as Entity[];
 
 // Pre-computed slug-to-entity map for O(1) lookups
 export const entitySlugMap = new Map(

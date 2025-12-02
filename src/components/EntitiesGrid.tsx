@@ -92,16 +92,18 @@ const EntitiesGrid = forwardRef<{
     searchQuery.trim() ? searchEntities(searchQuery) : entities
   )
     .filter((entity: Entity) => {
-      // Filter by principal organ - check if entity's organ is in active set
-      const normalizedOrgan = normalizePrincipalOrgan(
+      // Filter by principal organ - check if ANY of entity's organs is in active set
+      const normalizedOrgans = normalizePrincipalOrgan(
         entity.un_principal_organ,
       );
-      const organToCheck = Array.isArray(normalizedOrgan)
-        ? normalizedOrgan[0] || "Other"
-        : normalizedOrgan || "Other";
-      if (!activePrincipalOrgans.has(organToCheck)) return false;
-
-      return true;
+      
+      if (!normalizedOrgans || normalizedOrgans.length === 0) {
+        // Entity has no principal organ - check if "Other" is active
+        return activePrincipalOrgans.has("Other");
+      }
+      
+      // Check if any of the entity's organs is in the active set
+      return normalizedOrgans.some(organ => activePrincipalOrgans.has(organ));
     })
     .sort((a: Entity, b: Entity) => {
       // Sort by principal organ order, then alphabetically
@@ -109,8 +111,8 @@ const EntitiesGrid = forwardRef<{
       const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
 
       // Get primary organ for each entity (first one if array)
-      const aOrgan = Array.isArray(aNormalized) ? aNormalized[0] : aNormalized;
-      const bOrgan = Array.isArray(bNormalized) ? bNormalized[0] : bNormalized;
+      const aOrgan = aNormalized?.[0] || "Other";
+      const bOrgan = bNormalized?.[0] || "Other";
 
       if (aOrgan !== bOrgan) {
         const aConfig = principalOrganConfigs[aOrgan || ""];
@@ -129,23 +131,45 @@ const EntitiesGrid = forwardRef<{
     });
 
   // Group entities by principal organ
+  // When filtering, entities appear only in their filtered organ(s)
+  // When showing all, entities with multiple organs appear in each organ's group
   const groupedEntities = visibleEntities.reduce(
     (acc: Record<string, Entity[]>, entity: Entity) => {
       const normalized = normalizePrincipalOrgan(entity.un_principal_organ);
-      let groupKey: string;
-      // Use first organ if array, or the organ itself, or "N/A" if null
-      if (Array.isArray(normalized)) {
-        groupKey = normalized[0] || "N/A";
-      } else if (normalized === null || normalized === "") {
-        groupKey = "N/A";
+      
+      if (!normalized || normalized.length === 0) {
+        // No principal organ - add to "Other"
+        if (!acc["Other"]) {
+          acc["Other"] = [];
+        }
+        acc["Other"].push(entity);
       } else {
-        groupKey = normalized;
+        // Determine which organs to show entity in
+        const allOrgans = Object.keys(principalOrganConfigs);
+        const isFilterActive = activePrincipalOrgans.size < allOrgans.length;
+        
+        if (isFilterActive) {
+          // When filtering: only show in active filtered organs
+          const organsToShow = normalized.filter(organ => 
+            activePrincipalOrgans.has(organ)
+          );
+          organsToShow.forEach(organ => {
+            if (!acc[organ]) {
+              acc[organ] = [];
+            }
+            acc[organ].push(entity);
+          });
+        } else {
+          // When showing all: show in all entity's organs
+          normalized.forEach(organ => {
+            if (!acc[organ]) {
+              acc[organ] = [];
+            }
+            acc[organ].push(entity);
+          });
+        }
       }
-
-      if (!acc[groupKey]) {
-        acc[groupKey] = [];
-      }
-      acc[groupKey].push(entity);
+      
       return acc;
     },
     {},
@@ -153,20 +177,33 @@ const EntitiesGrid = forwardRef<{
 
   // Get sorted group keys by principal organ
   const sortedGroupKeys = (() => {
-    // Include all principal organs, even those without entities
     const allOrgans = Object.keys(principalOrganConfigs);
-    const organsWithEntities = Object.keys(groupedEntities);
-    const allOrganKeys = Array.from(
-      new Set([...allOrgans, ...organsWithEntities]),
-    );
-
-    return allOrganKeys.sort((a, b) => {
-      const aConfig = principalOrganConfigs[a];
-      const bConfig = principalOrganConfigs[b];
-      const orderA = aConfig?.order ?? 999;
-      const orderB = bConfig?.order ?? 999;
-      return orderA - orderB;
-    });
+    const isFilterActive = activePrincipalOrgans.size < allOrgans.length;
+    
+    if (isFilterActive) {
+      // When filtering: only show active organs that have entities
+      const organsWithEntities = Object.keys(groupedEntities);
+      return organsWithEntities.sort((a, b) => {
+        const aConfig = principalOrganConfigs[a];
+        const bConfig = principalOrganConfigs[b];
+        const orderA = aConfig?.order ?? 999;
+        const orderB = bConfig?.order ?? 999;
+        return orderA - orderB;
+      });
+    } else {
+      // When showing all: include all principal organs, even those without entities
+      const organsWithEntities = Object.keys(groupedEntities);
+      const allOrganKeys = Array.from(
+        new Set([...allOrgans, ...organsWithEntities]),
+      );
+      return allOrganKeys.sort((a, b) => {
+        const aConfig = principalOrganConfigs[a];
+        const bConfig = principalOrganConfigs[b];
+        const orderA = aConfig?.order ?? 999;
+        const orderB = bConfig?.order ?? 999;
+        return orderA - orderB;
+      });
+    }
   })();
 
   return (
