@@ -72,7 +72,10 @@ export default function CategorySection({
   ).filter((key) => key !== "");
 
   const allSubcategories = Array.from(new Set([...definedSubcategories]));
-  const sortedSubcategories = getSortedSubcategories(allSubcategories, groupKey);
+  const sortedSubcategories = getSortedSubcategories(
+    allSubcategories,
+    groupKey,
+  );
 
   // Security Council: skip category header
   if (isSecurityCouncil) {

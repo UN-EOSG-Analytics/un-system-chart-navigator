@@ -1,6 +1,9 @@
 "use client";
 
-import { normalizePrincipalOrgan, principalOrganConfigs } from "@/lib/constants";
+import {
+  normalizePrincipalOrgan,
+  principalOrganConfigs,
+} from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -106,12 +109,8 @@ const EntitiesGrid = forwardRef<{
       const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
 
       // Get primary organ for each entity (first one if array)
-      const aOrgan = Array.isArray(aNormalized)
-        ? aNormalized[0]
-        : aNormalized;
-      const bOrgan = Array.isArray(bNormalized)
-        ? bNormalized[0]
-        : bNormalized;
+      const aOrgan = Array.isArray(aNormalized) ? aNormalized[0] : aNormalized;
+      const bOrgan = Array.isArray(bNormalized) ? bNormalized[0] : bNormalized;
 
       if (aOrgan !== bOrgan) {
         const aConfig = principalOrganConfigs[aOrgan || ""];

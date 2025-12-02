@@ -1,14 +1,14 @@
 "use client";
 
 import FilterDropdown from "@/components/FilterDropdown";
-import SearchInput from "@/components/SearchInput";
 import ResetButton from "@/components/ResetButton";
+import SearchInput from "@/components/SearchInput";
 import {
   getSortedPrincipalOrgans,
   principalOrganConfigs,
 } from "@/lib/constants";
 import { Entity } from "@/types/entity";
-import { ChevronDown, ChevronUp, Filter, Landmark } from "lucide-react";
+import { Landmark } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface FilterControlsProps {
@@ -31,7 +31,6 @@ export default function FilterControls({
 }: FilterControlsProps) {
   const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] =
     useState(false);
-  const [filtersExpanded, setFiltersExpanded] = useState(false);
 
   // Refs for search inputs
   const mobileSearchRef = useRef<HTMLInputElement>(null);
@@ -52,20 +51,19 @@ export default function FilterControls({
     activePrincipalOrgans.size === Object.keys(principalOrganConfigs).length;
 
   // Check if reset is needed
-  const isResetNeeded =
-    searchQuery.trim() !== "" || !allPrincipalOrgansActive;
+  const isResetNeeded = searchQuery.trim() !== "" || !allPrincipalOrgansActive;
 
   // Get principal organ filter button text
   const getPrincipalOrganFilterText = () => {
     if (allPrincipalOrgansActive) {
-      return "Filter by Principal Organ...";
+      return "Filter by Principal Organ";
     }
     const count = activePrincipalOrgans.size;
     return `${count} Organ${count !== 1 ? "s" : ""} selected`;
   };
 
   return (
-    <div className="mb-4 flex flex-col gap-3 lg:mb-6">
+    <div className="mb-4 flex flex-col gap-3 lg:mb-10">
       {/* Search Bar - Mobile/Tablet Only (separate) */}
       <div className="mt-2 lg:hidden">
         <SearchInput
@@ -78,35 +76,8 @@ export default function FilterControls({
         />
       </div>
 
-      {/* Mobile/Tablet: Toggle Filters Button + Reset Button Row */}
-      <div className="-mt-1 mb-0.5 flex items-center justify-between gap-2 lg:hidden">
-        <button
-          onClick={() => setFiltersExpanded(!filtersExpanded)}
-          className={`flex h-10 w-auto touch-manipulation items-center gap-2 px-3 text-sm transition-colors ${
-            !allPrincipalOrgansActive
-              ? "text-un-blue"
-              : "text-gray-500"
-          } `}
-          aria-label={filtersExpanded ? "Hide filters" : "Show filters"}
-          aria-expanded={filtersExpanded}
-        >
-          <Filter className="h-4 w-4" />
-          <span>{filtersExpanded ? "Hide" : "Show"} Filters</span>
-          {filtersExpanded ? (
-            <ChevronUp className="h-3.5 w-3.5" />
-          ) : (
-            <ChevronDown className="h-3.5 w-3.5" />
-          )}
-        </button>
-
-        {/* Reset Button - Mobile/Tablet - only show when there's something to reset */}
-        {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
-      </div>
-
-      {/* Desktop: Search + Filter Controls Row | Mobile/Tablet: Filter Controls (collapsible) */}
-      <div
-        className={` ${filtersExpanded ? "flex" : "hidden"} flex-col gap-3 lg:flex lg:flex-row lg:flex-nowrap lg:items-end lg:gap-2`}
-      >
+      {/* Search + Filter Controls Row */}
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:gap-2">
         {/* Search Bar - Desktop Only (inline with filters) */}
         <div className="hidden w-80 flex-shrink-0 lg:block">
           <SearchInput
@@ -136,19 +107,18 @@ export default function FilterControls({
           ariaLabel="Filter entities by principal organ"
         />
 
-        {/* Reset Button - Desktop only - only show when there's something to reset */}
-        {isResetNeeded && (
-          <ResetButton onClick={onReset} className="hidden lg:flex" />
-        )}
-      </div>
+        {/* Reset Button - only show when there's something to reset */}
+        {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
 
-      {/* Entity Count Row */}
-      <div
-        className={`flex ${filtersExpanded ? "mt-1" : "-mt-3"} lg:mt-0`}
-      >
-        <div className="text-left text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:flex-1 sm:text-right">
+        {/* Entity Count - Desktop: aligned right on same row */}
+        <div className="hidden text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 lg:ml-auto lg:block lg:pb-2">
           Showing {visibleEntitiesCount} entities
         </div>
+      </div>
+
+      {/* Entity Count - Mobile: Always visible below search */}
+      <div className="text-left text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:text-right lg:hidden">
+        Showing {visibleEntitiesCount} entities
       </div>
     </div>
   );
