@@ -1,6 +1,7 @@
 import {
   entitySortOrder,
   getCategoryFootnote,
+  hideCategoryForOrgan,
   subcategorySortOrder,
 } from "@/lib/constants";
 import { naturalCompare } from "@/lib/utils";
@@ -38,8 +39,14 @@ export default function CategorySection({
     : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
 
   // Group entities by subcategory
+  // For dual-organ entities, check if subcategory should be hidden for this organ
   const entitiesWithoutSubcategory = entities
-    .filter((e) => !e.subcategory)
+    .filter((e) => {
+      // Check if this entity should hide its category/subcategory for this organ
+      const hideKey = `${e.entity}|${groupKey}`;
+      const shouldHideSubcategory = hideCategoryForOrgan.has(hideKey);
+      return !e.subcategory || shouldHideSubcategory;
+    })
     .sort((a, b) => {
       const orderA = entitySortOrder[a.entity] ?? 0;
       const orderB = entitySortOrder[b.entity] ?? 0;
@@ -48,7 +55,11 @@ export default function CategorySection({
     });
   const entitiesBySubcategory = entities.reduce(
     (acc: Record<string, Entity[]>, entity) => {
-      if (entity.subcategory) {
+      // Check if this entity should hide its category/subcategory for this organ
+      const hideKey = `${entity.entity}|${groupKey}`;
+      const shouldHideSubcategory = hideCategoryForOrgan.has(hideKey);
+
+      if (entity.subcategory && !shouldHideSubcategory) {
         if (!acc[entity.subcategory]) {
           acc[entity.subcategory] = [];
         }

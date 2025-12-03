@@ -27,6 +27,19 @@ export const externalLinkEntities: Record<string, string> = {
 export const sortLastEntities = new Set(["Other Committees"]);
 
 /**
+ * Dual-organ entities where category/subcategory should be hidden for specific organs.
+ * Key format: "entity|principalOrgan"
+ * When a dual-organ entity appears in the specified organ's section, it will be
+ * rendered without category/subcategory grouping (appears at the root level).
+ *
+ * Use case: UNPC reports to both GA and SC, but should only show its category
+ * ("Intergovernmental and Expert Bodies" / "Commissions") when displayed under GA.
+ */
+export const hideCategoryForOrgan: Set<string> = new Set([
+  "UNPC|Security Council",
+]);
+
+/**
  * Custom sort order for specific entities within their category.
  * Higher values appear later. Entities not listed use default alphabetical sorting.
  */

@@ -2,6 +2,7 @@ import {
   categoryOrderByPrincipalOrgan,
   getCategoryFootnote,
   getSortedCategories,
+  hideCategoryForOrgan,
   principalOrganConfigs,
 } from "@/lib/constants";
 import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
@@ -46,10 +47,15 @@ export default function PrincipalOrganSection({
     Object.keys(categoryOrderByPrincipalOrgan[groupKey]).length > 0;
 
   // Group entities by category (only if not skipping category layer)
+  // For dual-organ entities, check if category should be hidden for this organ
   const categorizedEntities = entities.reduce(
     (acc: Record<string, Entity[]>, entity: Entity) => {
-      // Use entity category or space for fallback (blank header)
-      const category = entity.category || " ";
+      // Check if this entity should hide its category for this organ
+      const hideKey = `${entity.entity}|${groupKey}`;
+      const shouldHideCategory = hideCategoryForOrgan.has(hideKey);
+
+      // Use space (fallback) if category should be hidden, otherwise use entity's category
+      const category = shouldHideCategory ? " " : (entity.category || " ");
       if (!acc[category]) {
         acc[category] = [];
       }
