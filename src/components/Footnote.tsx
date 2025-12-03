@@ -1,7 +1,7 @@
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { footnoteDefinitions } from "@/lib/constants";
 
@@ -9,16 +9,11 @@ interface CategoryFootnoteProps {
   footnoteNumbers: number[];
 }
 
-export default function Footnote({
-  footnoteNumbers,
-}: CategoryFootnoteProps) {
+export default function Footnote({ footnoteNumbers }: CategoryFootnoteProps) {
   return (
     <Tooltip delayDuration={50} disableHoverableContent>
       <TooltipTrigger asChild>
-        <sup
-          className="ml-[0.1em] cursor-help font-normal normal-case"
-          style={{ fontSize: "clamp(10px, 0.5em, 11px)" }}
-        >
+        <sup className="ml-[0.1em] cursor-help text-[0.65em] font-normal text-slate-500 normal-case">
           {footnoteNumbers.join(",")}
         </sup>
       </TooltipTrigger>
