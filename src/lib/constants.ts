@@ -15,6 +15,10 @@ export const externalLinkEntities: Record<string, string> = {
   "Other Committees":
     "https://www.un.org/en/ga/about/subsidiary/committees.shtml",
   "Working Groups": "https://www.un.org/en/ga/about/subsidiary/other.shtml",
+  "Standing Committees":
+    "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main1",
+  "Ad Hoc Bodies":
+    "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main2",
 };
 
 /**
@@ -27,8 +31,13 @@ export const sortLastEntities = new Set(["Other Committees"]);
  * Higher values appear later. Subcategories not listed use order 0 (alphabetical first).
  */
 export const subcategorySortOrder: Record<string, number> = {
+  // General Assembly - Main Committees
   "Main Committees": 998, // Second to last
   Committees: 999, // Last
+  // Security Council - Peacekeeping operations and special political missions
+  "Peacekeeping Operations": 1,
+  "Special Political Missions (SPMs)": 2,
+  Other: 999, // Last
 };
 
 export interface PrincipalOrganConfig {
