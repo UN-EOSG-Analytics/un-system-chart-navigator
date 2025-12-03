@@ -43,10 +43,22 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
   },
+  
+  "Related Organizations": {
+    label: "Related Organizations",
+    sectionHeading: "",
+    skipCategoryLayer: true,
+    order: 5,
+    bgColor: "bg-gray-300",
+    borderColor: "un-system-gray-dark",
+    textColor: "text-black",
+  },
+
   "Specialized Agencies": {
     label: "Specialized Agencies",
     sectionHeading: "",
-    order: 5,
+    skipCategoryLayer: true,
+    order: 6,
     // bgColor: "bg-un-system-gray",
     bgColor: "bg-gray-300",
     borderColor: "un-system-gray-dark",
@@ -56,7 +68,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
   "International Court of Justice": {
     label: "International Court of Justice",
     sectionHeading: "",
-    order: 6,
+    order: 7,
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
     skipCategoryLayer: true,
@@ -64,7 +76,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
   "Trusteeship Council": {
     label: "Trusteeship Council",
     sectionHeading: "",
-    order: 7,
+    order: 8,
     bgColor: "bg-un-system-brown",
     textColor: "text-black",
     skipCategoryLayer: true,
@@ -96,6 +108,7 @@ export const principalOrganSlugs: Record<string, string> = {
   "Specialized Agencies": "agencies",
   "International Court of Justice": "icj",
   "Trusteeship Council": "trusteeship",
+  "Related Organizations": "related",
   Other: "other",
 };
 
@@ -273,6 +286,9 @@ export const categoryOrderByPrincipalOrgan: Record<
     " ": 999, // Fallback for entities without category
   },
   // ICJ and Trusteeship Council use skipCategoryLayer in principalOrganConfigs
+  "Related Organizations": {
+    " ": 999, // Fallback for entities without category
+  },
   Other: {
     "Related Organizations": 1,
     " ": 999, // Fallback for entities without category
