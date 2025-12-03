@@ -8,6 +8,7 @@ import {
 } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
+import { naturalCompareEntities } from "@/lib/utils";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   forwardRef,
@@ -245,7 +246,7 @@ const EntitiesGrid = forwardRef<{
       const bIsOther = b.entity === "Other";
       if (aIsOther && !bIsOther) return 1;
       if (!aIsOther && bIsOther) return -1;
-      return a.entity.localeCompare(b.entity);
+      return naturalCompareEntities(a.entity, b.entity);
     });
 
   // Group entities by principal organ
