@@ -1,6 +1,22 @@
 entity,entity_long
+1518 Committee,Security Council Committee established pursuant to resolution 1518 (2003)
+1533 Committee,Security Council Committee established pursuant to resolution 1533 (2004) concerning the Democratic Republic of the Congo
+1591 Committee,Security Council Committee established pursuant to resolution 1591 (2005) concerning the Sudan
+1636 Committee,Security Council Committee established pursuant to resolution 1636 (2005)
+1718 Committee,Security Council Committee established pursuant to resolution 1718 (2006)
+1737 Committee,Security Council Committee established pursuant to resolution 1737 (2006)
+1970 Committee,Security Council Committee established pursuant to resolution 1970 (2011) concerning Libya
+1988 Committee,Security Council Committee established pursuant to resolution 1988 (2011)
+2048 Committee,Security Council Committee established pursuant to resolution 2048 (2012) concerning Guinea-Bissau
+2140 Committee,Security Council Committee established pursuant to resolution 2140 (2014)
+2206 Committee,Security Council Committee established pursuant to resolution 2206 (2015) concerning South Sudan
+2253 Committee,"Security Council Committee pursuant to resolutions 1267 (1999) 1989 (2011) and 2253 (2015) concerning Islamic State in Iraq and the Levant (Da’esh), Al-Qaida and associated individuals, groups, undertakings and entities"
+2253 Ombudsperson,Ombudsperson to the ISIL (Da'esh) and Al-Qaida Sanctions Committee
+2653 Committee,Security Council Committee established pursuant to resolution 2653 (2022) concerning Haiti
+2745 Committee,Security Council Committee pursuant to resolution 2745 (2024)
 ABDM,Advisory Board on Disarmament Matters
 Ad Hoc Bodies,
+Al-Shabaab Committee,Security Council Committee pursuant to resolution 2713 (2023) concerning Al-Shabaab
 BINUH,United Nations Integrated Office in Haiti
 Board of Auditors,Board of Auditors
 Boards,
@@ -35,6 +51,7 @@ EOSG,Executive Office of the Secretary-General
 ESCAP,Economic and Social Commission for Asia and the Pacific
 ESCWA,Economic and Social Commission for Western Asia
 FAO,Food and Agriculture Organization
+FP-Delisting,Focal Point for De-listing
 Fifth Committee,Administrative and Budgetary Committee
 First Committee,Disarmament and International Security
 Fourth Committee,Special Political and Decolonization
@@ -74,7 +91,6 @@ OCT,Office of Counter-Terrorism
 ODA,Office for Disarmament Affairs
 ODET,Office for Digital and Emerging Technologies
 ODPP,Office of Data Protection and Privacy
-OFP-Delisting,Office of the Focal Point for De-listing
 OHCHR,Office of the United Nations High Commissioner for Human Rights
 OICT,Office of Information and Communications Technology
 OIOS,Office of Internal Oversight Services
@@ -106,7 +122,6 @@ PoE-CAR,Panel of Experts on the Central African Republic
 PoE-Haiti,Panel of Experts on Haiti
 PoE-Libya,Panel of Experts on Libya
 PoE-RES2713,Panel of Experts pursuant to resolution 2713 (2023)
-PoE-RES2745,Panel of Experts pursuant to resolution 2745 (2024)
 PoE-S.Sudan,Panel of Experts on South Sudan
 PoE-Sudan,Panel of Experts on the Sudan
 PoE-Yemen,Panel of Experts on Yemen
@@ -114,8 +129,8 @@ RSCE,"Regional Service Centre in Entebbe, Uganda"
 SC-RES1540,Support to the Security Council Committee established pursuant to resolution 1540 (2004) on the non-proliferation of all weapons of mass destruction
 SC-RES1718,Support to the Security Council Committee established pursuant to resolution 1718 (2006)
 SC-RES2231,Implementation of Security Council resolution 2231 (2015)
-SC-RES2253,"Support to the Security Council Committee pursuant to resolutions 1267 (1999) 1989 (2011) and 2253 (2015) concerning Islamic State in Iraq and the Levant (Da’esh), Al-Qaida and associated individuals, groups, undertakings and entities"
 SWEO,United Nations Sustainable Development Group System-wide Evaluation Office
+Sanctions WG,Informal Working Group on General Security Council Sanctions Issues
 Second Committee,Economic and Financial Committee
 Sixth Committee,Legal
 Standing Committees,
