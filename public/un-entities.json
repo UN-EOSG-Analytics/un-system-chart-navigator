@@ -63,7 +63,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -371,7 +371,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -393,7 +393,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recGudYcdfjhjBzPa",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"CPD",
@@ -634,8 +634,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Counter-Terrorism Committee",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -657,7 +657,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reccTK7EVU2sFp0uA",
-    "review_needed":null
+    "review_needed":true
   },
   {
     "entity":"DA",
@@ -1646,8 +1646,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -1669,7 +1669,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recBnzdRxwKlLAs7t",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"HLPF",
@@ -2641,6 +2641,50 @@
     "review_needed":null
   },
   {
+    "entity":"KJSO",
+    "entity_long":"Kuwait Joint Support Office",
+    "entity_combined":"Kuwait Joint Support Office (KJSO)",
+    "entity_aliases":null,
+    "entity_description":null,
+    "entity_footnotes":null,
+    "entity_link":null,
+    "entity_wikipedia_page":null,
+    "entity_news_page":null,
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":null,
+    "entity_careers_page":null,
+    "un_principal_organ":[
+      "Security Council"
+    ],
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Other",
+    "is_ceb_member":null,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "head_of_entity_title_general":null,
+    "head_of_entity_title_specific":null,
+    "head_of_entity_name":null,
+    "head_of_entity_level":null,
+    "head_of_entity_bio_link":null,
+    "head_of_entity_headshot_link":null,
+    "global_leadership_team_url":null,
+    "organizational_chart_link":null,
+    "budget_financial_reporting_link":null,
+    "results_framework_link":null,
+    "strategic_plan_link":null,
+    "annual_reports_link":null,
+    "transparency_portal_link":null,
+    "socials_linkedin":null,
+    "socials_twitter":null,
+    "socials_instagram":null,
+    "record_id":"receNKXgqI5uPln2D",
+    "review_needed":null
+  },
+  {
     "entity":"MINURSO",
     "entity_long":"United Nations Mission for the Referendum in Western Sahara",
     "entity_combined":"United Nations Mission for the Referendum in Western Sahara (MINURSO)",
@@ -2660,7 +2704,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/minurso.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -2704,7 +2748,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/minusca.unmissions.org\/en\/mandate>\n",
     "entity_mandate_registry":null,
@@ -2729,6 +2773,50 @@
     "review_needed":null
   },
   {
+    "entity":"MINUSMA",
+    "entity_long":"United Nations Multidimensional Integrated Stabilization Mission in Mali",
+    "entity_combined":"United Nations Multidimensional Integrated Stabilization Mission in Mali (MINUSMA)",
+    "entity_aliases":null,
+    "entity_description":null,
+    "entity_footnotes":null,
+    "entity_link":null,
+    "entity_wikipedia_page":null,
+    "entity_news_page":null,
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":null,
+    "entity_careers_page":null,
+    "un_principal_organ":[
+      "Security Council"
+    ],
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Peacekeeping Operations",
+    "is_ceb_member":null,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "head_of_entity_title_general":null,
+    "head_of_entity_title_specific":null,
+    "head_of_entity_name":null,
+    "head_of_entity_level":null,
+    "head_of_entity_bio_link":null,
+    "head_of_entity_headshot_link":null,
+    "global_leadership_team_url":null,
+    "organizational_chart_link":null,
+    "budget_financial_reporting_link":null,
+    "results_framework_link":null,
+    "strategic_plan_link":null,
+    "annual_reports_link":null,
+    "transparency_portal_link":null,
+    "socials_linkedin":null,
+    "socials_twitter":null,
+    "socials_instagram":null,
+    "record_id":"recSMrnLUUB6SukYJ",
+    "review_needed":true
+  },
+  {
     "entity":"MONUSCO",
     "entity_long":"United Nations Organization Stabilization Mission in the Democratic Republic of the Congo",
     "entity_combined":"United Nations Organization Stabilization Mission in the Democratic Republic of the Congo (MONUSCO)",
@@ -2748,7 +2836,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -2946,6 +3034,50 @@
     "socials_twitter":"https:\/\/x.com\/UNOCHA",
     "socials_instagram":null,
     "record_id":"rec74fnI62TBYdoqM",
+    "review_needed":null
+  },
+  {
+    "entity":"OCT",
+    "entity_long":"Office of Counter-Terrorism",
+    "entity_combined":"Office of Counter-Terrorism (OCT)",
+    "entity_aliases":null,
+    "entity_description":"The UNOCT works closely with UN Member States, UN entities, civil society, and other related stakeholders, strengthening existing and developing new partnerships to effectively prevent and counter terrorism.",
+    "entity_footnotes":null,
+    "entity_link":"https:\/\/www.un.org\/counterterrorism\/",
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Counter-Terrorism",
+    "entity_news_page":"https:\/\/www.un.org\/counterterrorism\/news",
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":null,
+    "entity_careers_page":null,
+    "un_principal_organ":[
+      "Secretariat"
+    ],
+    "category":"Departments and Offices",
+    "subcategory":null,
+    "is_ceb_member":false,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "head_of_entity_title_general":"USG",
+    "head_of_entity_title_specific":null,
+    "head_of_entity_name":"Vladimir Ivanovich Voronkov",
+    "head_of_entity_level":"USG or equivalent",
+    "head_of_entity_bio_link":null,
+    "head_of_entity_headshot_link":null,
+    "global_leadership_team_url":null,
+    "organizational_chart_link":"https:\/\/www.un.org\/counterterrorism\/office-structure",
+    "budget_financial_reporting_link":"https:\/\/www.un.org\/counterterrorism\/funding-and-donors",
+    "results_framework_link":"No link found",
+    "strategic_plan_link":"https:\/\/www.un.org\/counterterrorism\/sites\/www.un.org.counterterrorism\/files\/unoct_strategic_plan_results_framework_2022-25.pdf",
+    "annual_reports_link":"https:\/\/www.un.org\/counterterrorism\/un-documents",
+    "transparency_portal_link":"Not found",
+    "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-counter-terrorism\/",
+    "socials_twitter":"https:\/\/x.com\/UN_OCT",
+    "socials_instagram":null,
+    "record_id":"reckHDXweiNKELYAZ",
     "review_needed":null
   },
   {
@@ -3319,8 +3451,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3342,7 +3474,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recosEkpdpTaMyfPA",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OMS",
@@ -3584,7 +3716,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3606,7 +3738,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec2KzmTAK9Usa6zB",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OSASG-Genocide",
@@ -3628,7 +3760,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":null,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3760,7 +3892,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3782,7 +3914,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rechj1IFTcRUp2zH4",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OSESG-Horn",
@@ -3804,7 +3936,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3826,7 +3958,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reci5RMvEPI9ZfIKE",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OSESG-Myanmar",
@@ -3848,7 +3980,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3870,7 +4002,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recJPNSsC5a3qlvBL",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OSESG-Syria",
@@ -3892,7 +4024,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3914,7 +4046,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recarBduCii0diPVg",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OSESG-Yemen",
@@ -3936,7 +4068,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -3958,7 +4090,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec86X5ivN9oChGqI",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"OSRSG-CAAC",
@@ -4244,7 +4376,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4266,7 +4398,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6b5dgcABolgwoD",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PESG-WS",
@@ -4288,7 +4420,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4310,7 +4442,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recWTP7Mqw8o4zP4T",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-CAR",
@@ -4331,8 +4463,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4354,7 +4486,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recyg2xLyhGOwMigv",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-Haiti",
@@ -4375,8 +4507,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4398,7 +4530,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recdrNefGS2UtJSIW",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-Libya",
@@ -4419,8 +4551,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4442,7 +4574,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recrhrAvNybRPGvmB",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-RES2713",
@@ -4463,8 +4595,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4486,7 +4618,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6sbobZJQgj0CJb",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-RES2745",
@@ -4551,8 +4683,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4574,7 +4706,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recI0vvX1SC9v9zJ7",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-Sudan",
@@ -4595,8 +4727,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4618,7 +4750,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recIkVEO23wDYT2Vu",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"PoE-Yemen",
@@ -4639,8 +4771,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4662,12 +4794,12 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recDVMzTvy4UMgY6j",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"RSCE",
-    "entity_long":"United Nations Regional Service Centre in Entebbe",
-    "entity_combined":"United Nations Regional Service Centre in Entebbe (RSCE)",
+    "entity_long":"Regional Service Centre in Entebbe, Uganda",
+    "entity_combined":"Regional Service Centre in Entebbe, Uganda (RSCE)",
     "entity_aliases":null,
     "entity_description":"The RSCE consolidates administrative and support functions, with the goal of providing client-orientated and scalable services while reducing the missions\u2019 footprints to UN field missions across Africa.",
     "entity_footnotes":null,
@@ -4684,7 +4816,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4727,8 +4859,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Standing committees and ad hoc bodies",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4750,7 +4882,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recjs5t6N4n57Xaca",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"SC-RES1718",
@@ -4771,8 +4903,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Standing committees and ad hoc bodies",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4794,7 +4926,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recyL2Lqkch7Gq8Bz",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"SC-RES2231",
@@ -4815,8 +4947,8 @@
     "un_principal_organ":[
       "Security Council"
     ],
-    "category":"Sanctions Committees",
-    "subcategory":null,
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -4838,7 +4970,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec3jqpdCJKl0SIS3",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"SC-RES2253",
@@ -5432,7 +5564,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5476,7 +5608,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5740,7 +5872,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -5762,7 +5894,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recl37Ls73tFqUFoW",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"UNDP",
@@ -6048,7 +6180,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6246,6 +6378,50 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recWVxWmeSLkY9pLq",
+    "review_needed":null
+  },
+  {
+    "entity":"UNGSC Brindisi",
+    "entity_long":"United Nations Logistics Base at Brindisi, Italy",
+    "entity_combined":"United Nations Logistics Base at Brindisi, Italy (UNGSC Brindisi)",
+    "entity_aliases":null,
+    "entity_description":"The logistics base at Brindisi provides logistic support, telecommunications and training for all peacekeeping operations around the world.",
+    "entity_footnotes":null,
+    "entity_link":"https:\/\/www.ungsc.org\/brindisi",
+    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Logistics_Base",
+    "entity_news_page":"https:\/\/www.ungsc.org\/news",
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":true,
+    "entity_careers_page":null,
+    "un_principal_organ":[
+      "Security Council"
+    ],
+    "category":"Peacekeeping operations and special political missions",
+    "subcategory":"Other",
+    "is_ceb_member":false,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "head_of_entity_title_general":"Director",
+    "head_of_entity_title_specific":null,
+    "head_of_entity_name":"Anton Antchev",
+    "head_of_entity_level":"D-2 or equivalent",
+    "head_of_entity_bio_link":null,
+    "head_of_entity_headshot_link":null,
+    "global_leadership_team_url":null,
+    "organizational_chart_link":null,
+    "budget_financial_reporting_link":null,
+    "results_framework_link":"No link found",
+    "strategic_plan_link":"No link found",
+    "annual_reports_link":"No annual report",
+    "transparency_portal_link":"Not found",
+    "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-global-service-centre\/",
+    "socials_twitter":null,
+    "socials_instagram":null,
+    "record_id":"rec9SsCUYENfxKzXI",
     "review_needed":null
   },
   {
@@ -6532,7 +6708,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6576,7 +6752,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6689,50 +6865,6 @@
     "review_needed":null
   },
   {
-    "entity":"UNLB",
-    "entity_long":"United Nations Logistics Base at Brindisi",
-    "entity_combined":"United Nations Logistics Base at Brindisi (UNLB)",
-    "entity_aliases":null,
-    "entity_description":"The logistics base at Brindisi provides logistic support, telecommunications and training for all peacekeeping operations around the world.",
-    "entity_footnotes":null,
-    "entity_link":"https:\/\/www.ungsc.org\/",
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Logistics_Base",
-    "entity_news_page":"https:\/\/www.ungsc.org\/news",
-    "entity_branding_page":null,
-    "entity_data_page":null,
-    "entity_logo_page":null,
-    "entity_logo_url":null,
-    "entity_logo_available":true,
-    "entity_careers_page":null,
-    "un_principal_organ":[
-      "Security Council"
-    ],
-    "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
-    "is_ceb_member":false,
-    "foundational_mandate":null,
-    "entity_mandate_registry":null,
-    "entity_custom_mandate_registry":null,
-    "head_of_entity_title_general":"Director",
-    "head_of_entity_title_specific":null,
-    "head_of_entity_name":"Anton Antchev",
-    "head_of_entity_level":"D-2 or equivalent",
-    "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
-    "global_leadership_team_url":null,
-    "organizational_chart_link":null,
-    "budget_financial_reporting_link":null,
-    "results_framework_link":"No link found",
-    "strategic_plan_link":"No link found",
-    "annual_reports_link":"No annual report",
-    "transparency_portal_link":"Not found",
-    "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-global-service-centre\/",
-    "socials_twitter":null,
-    "socials_instagram":null,
-    "record_id":"rec9SsCUYENfxKzXI",
-    "review_needed":null
-  },
-  {
     "entity":"UNMHA",
     "entity_long":"United Nations Mission to Support the Hudaydah Agreement",
     "entity_combined":"United Nations Mission to Support the Hudaydah Agreement (UNMHA)",
@@ -6752,7 +6884,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unmha.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -6796,7 +6928,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unmik.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -6840,7 +6972,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unmiss.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -6884,7 +7016,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -6928,7 +7060,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unoau.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -6972,7 +7104,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unoca.unmissions.org\/en\/mandate-and-missions>\n",
     "entity_mandate_registry":null,
@@ -6994,50 +7126,6 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recQfGYFxHIaE8hHM",
-    "review_needed":null
-  },
-  {
-    "entity":"UNOCT",
-    "entity_long":"Office of Counter-Terrorism",
-    "entity_combined":"Office of Counter-Terrorism (UNOCT)",
-    "entity_aliases":null,
-    "entity_description":"The UNOCT works closely with UN Member States, UN entities, civil society, and other related stakeholders, strengthening existing and developing new partnerships to effectively prevent and counter terrorism.",
-    "entity_footnotes":null,
-    "entity_link":"https:\/\/www.un.org\/counterterrorism\/",
-    "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/United_Nations_Office_of_Counter-Terrorism",
-    "entity_news_page":"https:\/\/www.un.org\/counterterrorism\/news",
-    "entity_branding_page":null,
-    "entity_data_page":null,
-    "entity_logo_page":null,
-    "entity_logo_url":null,
-    "entity_logo_available":null,
-    "entity_careers_page":null,
-    "un_principal_organ":[
-      "Secretariat"
-    ],
-    "category":"Departments and Offices",
-    "subcategory":null,
-    "is_ceb_member":false,
-    "foundational_mandate":null,
-    "entity_mandate_registry":null,
-    "entity_custom_mandate_registry":null,
-    "head_of_entity_title_general":"USG",
-    "head_of_entity_title_specific":null,
-    "head_of_entity_name":"Vladimir Ivanovich Voronkov",
-    "head_of_entity_level":"USG or equivalent",
-    "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
-    "global_leadership_team_url":null,
-    "organizational_chart_link":"https:\/\/www.un.org\/counterterrorism\/office-structure",
-    "budget_financial_reporting_link":"https:\/\/www.un.org\/counterterrorism\/funding-and-donors",
-    "results_framework_link":"No link found",
-    "strategic_plan_link":"https:\/\/www.un.org\/counterterrorism\/sites\/www.un.org.counterterrorism\/files\/unoct_strategic_plan_results_framework_2022-25.pdf",
-    "annual_reports_link":"https:\/\/www.un.org\/counterterrorism\/un-documents",
-    "transparency_portal_link":"Not found",
-    "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-counter-terrorism\/",
-    "socials_twitter":"https:\/\/x.com\/UN_OCT",
-    "socials_instagram":null,
-    "record_id":"reckHDXweiNKELYAZ",
     "review_needed":null
   },
   {
@@ -7412,7 +7500,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unowas.unmissions.org\/unowas-mandate>\n",
     "entity_mandate_registry":null,
@@ -7545,7 +7633,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unrcca.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -7589,7 +7677,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7765,7 +7853,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7794,7 +7882,7 @@
     "entity_long":"Office of the United Nations Special Coordinator for the Middle East Peace Process",
     "entity_combined":"Office of the United Nations Special Coordinator for the Middle East Peace Process (UNSCO)",
     "entity_aliases":null,
-    "entity_description":"The DPPA supports UN peacemaking efforts in various ways, including by advising and assisting the Secretary-General in his Middle East diplomacy and by overseeing UN political activities in the region.",
+    "entity_description":"The Office of the United Nations Special Coordinator for the Middle East Peace Process (UNSCO) is mandated to coordinate UN activities related to the Middle East peace process, support negotiations aimed at achieving a peaceful resolution to the Israeli-Palestinian conflict, and mobilize international support towards a comprehensive, just, and lasting peace.\n\n",
     "entity_footnotes":null,
     "entity_link":"https:\/\/unsco.unmissions.org\/",
     "entity_wikipedia_page":"https:\/\/en.wikipedia.org\/wiki\/Office_of_the_United_Nations_Special_Coordinator_for_the_Middle_East_Peace_Process",
@@ -7809,7 +7897,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7853,7 +7941,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7875,7 +7963,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recH7Y3G9utGV0te7",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"UNSMIL",
@@ -7897,7 +7985,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -7941,7 +8029,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unsmil.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -7985,7 +8073,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Peacekeeping Operations",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/unsos.unmissions.org\/unsos-mandate>\n",
     "entity_mandate_registry":null,
@@ -8073,7 +8161,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -8117,7 +8205,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Other",
     "is_ceb_member":false,
     "foundational_mandate":"<https:\/\/untso.unmissions.org\/mandate>\n",
     "entity_mandate_registry":null,
@@ -8293,7 +8381,7 @@
       "Security Council"
     ],
     "category":"Peacekeeping operations and special political missions",
-    "subcategory":null,
+    "subcategory":"Special Political Missions (SPMs)",
     "is_ceb_member":false,
     "foundational_mandate":null,
     "entity_mandate_registry":null,
@@ -8315,7 +8403,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recLdAFBv3eX1iuCw",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"UNYO",
