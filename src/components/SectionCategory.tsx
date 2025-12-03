@@ -1,7 +1,7 @@
 import { getCategoryFootnote } from "@/lib/constants";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
-import EntityGrid from "./EntitiesContainer";
+import EntityContainer from "./EntitiesContainer";
 
 interface CategorySectionProps {
   category: string;
@@ -32,7 +32,7 @@ export default function CategorySection({
     : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
 
   return (
-    <div className="pl-3">
+    <div className="px-3">
       <h2 className={`category-header ${headerClasses}`}>
         {category.trim() || "\u00A0"}
         {getCategoryFootnote(groupKey, category) && (
@@ -41,7 +41,7 @@ export default function CategorySection({
           />
         )}
       </h2>
-      <EntityGrid
+      <EntityContainer
         entities={entities}
         onEntityClick={onEntityClick}
         customBgColor={customBgColor}

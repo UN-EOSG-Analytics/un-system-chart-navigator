@@ -7,7 +7,7 @@ import {
 import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
-import EntityGrid from "./EntitiesContainer";
+import EntityContainer from "./EntitiesContainer";
 import CategorySection from "./SectionCategory";
 
 interface PrincipalOrganSectionProps {
@@ -70,7 +70,7 @@ export default function PrincipalOrganSection({
       >
         {/* Principal Organ Heading */}
         <div
-          className="mb-6 border-l-[6px] pt-2 pl-4 sm:pt-3 pb-2 sm:pl-4"
+          className="mb-5 border-l-[6px] pt-2 pl-4 sm:pt-3 pb-2 sm:pl-4"
           style={{
             borderColor: borderColor,
           }}
@@ -93,7 +93,7 @@ export default function PrincipalOrganSection({
         {/* Content */}
         <div className="px-6 pb-6 sm:px-8 sm:pb-8">
           {skipCategoryLayer || !hasDefinedCategories ? (
-            <EntityGrid
+            <EntityContainer
               entities={entities}
               onEntityClick={onEntityClick}
               customBgColor={organBgColor}

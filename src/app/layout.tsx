@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={roboto.className}>
-      <body className="flex min-h-screen flex-col px-6 antialiased sm:px-10 md:px-14 lg:px-16 xl:px-20">
+      <body className="flex min-h-screen flex-col px-4 antialiased sm:px-6 md:px-10 lg:px-12 xl:px-16">
         <AnimatedCornerLogo />
         {children}
         <Suspense fallback={null}>

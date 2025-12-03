@@ -9,7 +9,7 @@ interface EntityGridProps {
   showReviewBorders?: boolean;
 }
 
-export default function EntityGrid({
+export default function EntityContainer({
   entities,
   onEntityClick,
   customBgColor,
