@@ -82,7 +82,6 @@ OVRA,Office of the Victims' Rights Advocate
 PBSO,Peacebuilding Support Office
 PESG-Sudan,Office of the Personal Envoy of the Secretary-General for the Sudan
 PESG-WS,Personal Envoy of the Secretary-General for Western Sahara
-Peacebuilding Commission,Peacebuilding Commission
 PoE-CAR,Panel of Experts on the Central African Republic
 PoE-Haiti,Panel of Experts on Haiti
 PoE-Libya,Panel of Experts on Libya
@@ -102,6 +101,7 @@ Sixth Committee,Legal
 Third Committee,"Social, Humanitarian & Cultural Issues"
 UN Tourism,World Tourism Organization
 UN-Habitat,United Nations Human Settlements Programme
+UN-Habitat Assembly,United Nations Habitat Assembly of the United Nations Human Settlements Programme
 UN-OHRLLS,"Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States"
 UN-Women,United Nations Entity for Gender Equality and the Empowerment of Women
 UNAIDS,Joint United Nations Programme on HIV/AIDS
@@ -111,10 +111,11 @@ UNAOC,United Nations Alliance of Civilizations
 UNCDF,United Nations Capital Development Fund
 UNCITRAL,United Nations Commission on International Trade Law
 UNCTAD,United Nations Conference on Trade and Development
-UNDC,United Nations Disarmament Commission
+UNDC,Disarmament Commission
 UNDOF,United Nations Disengagement Observer Force
 UNDP,United Nations Development Programme
 UNDRR,United Nations Office for Disaster Risk Reduction
+UNEA,United Nations Environment Assembly
 UNEP,United Nations Environment Programme
 UNESCO,"United Nations Educational, Scientific and Cultural Organization"
 UNFICYP,United Nations Peacekeeping Force in Cyprus
@@ -147,6 +148,7 @@ UNOSAPG,Office on Genocide Prevention & Responsibility to Protect
 UNOSSC,United Nations Office for South-South Cooperation
 UNOV,United Nations Office at Vienna
 UNOWAS,United Nations Office for West Africa and the Sahel
+UNPC,Peacebuilding Commission
 UNRCCA,United Nations Regional Centre for Preventive Diplomacy for Central Asia
 UNRGID,Office of the United Nations Representative to the Geneva International Discussions
 UNRISD,United Nations Research Institute for Social Development
@@ -161,6 +163,7 @@ UNSSC,United Nations System Staff College
 UNTMIS,United Nations Transitional Assistance Mission in Somalia
 UNTSO,United Nations Truce Supervision Organization
 UNU,United Nations University
+UNU Council,Council of the United Nations University
 UNV,United Nations Volunteers
 UNVMC,United Nations Verification Mission in Colombia
 UNYO,United Nations Youth Office

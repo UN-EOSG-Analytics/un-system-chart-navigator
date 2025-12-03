@@ -6,7 +6,7 @@ import {
 } from "@/lib/constants";
 import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
 import { Entity } from "@/types/entity";
-import CategoryFootnote from "./CategoryFootnote";
+import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import CategorySection from "./SectionCategory";
 
@@ -78,7 +78,7 @@ export default function PrincipalOrganSection({
           <h2 className="text-2xl font-bold text-black uppercase sm:text-2xl md:text-3xl">
             {groupLabel}
             {getCategoryFootnote(groupKey) && (
-              <CategoryFootnote
+              <Footnote
                 footnoteNumbers={getCategoryFootnote(groupKey)!}
               />
             )}

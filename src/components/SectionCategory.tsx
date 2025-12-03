@@ -1,7 +1,7 @@
 import { getCategoryFootnote } from "@/lib/constants";
 import { naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
-import CategoryFootnote from "./CategoryFootnote";
+import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import SubcategorySection from "./SectionSubcategory";
 
@@ -54,7 +54,7 @@ export default function CategorySection({
       <h2 className={`category-header ${headerClasses}`}>
         {category.trim() || "\u00A0"}
         {getCategoryFootnote(groupKey, category) && (
-          <CategoryFootnote
+          <Footnote
             footnoteNumbers={getCategoryFootnote(groupKey, category)!}
           />
         )}

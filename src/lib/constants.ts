@@ -1,6 +1,12 @@
 // Centralized constants for UN System Chart Navigator ------------------------------
 // This file contains all configuration for principal organs and categories
 
+/**
+ * Entities that should display their long name on the card instead of the short name.
+ * Use for entities where the acronym is not well-known.
+ */
+export const useLongNameOnCard = new Set(["UNDC", "UNPC"]);
+
 export interface PrincipalOrganConfig {
   label: string;
   order: number;
@@ -43,12 +49,29 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
   },
-  
+
+  "International Court of Justice": {
+    label: "International Court of Justice",
+    sectionHeading: "",
+    order: 5,
+    bgColor: "bg-un-system-purple",
+    textColor: "text-black",
+    skipCategoryLayer: true,
+  },
+  "Trusteeship Council": {
+    label: "Trusteeship Council",
+    sectionHeading: "",
+    order: 6,
+    bgColor: "bg-un-system-brown",
+    textColor: "text-black",
+    skipCategoryLayer: true,
+  },
+
   "Related Organizations": {
     label: "Related Organizations",
     sectionHeading: "",
     skipCategoryLayer: true,
-    order: 5,
+    order: 7,
     bgColor: "bg-gray-300",
     borderColor: "un-system-gray-dark",
     textColor: "text-black",
@@ -58,28 +81,11 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     label: "Specialized Agencies",
     sectionHeading: "",
     skipCategoryLayer: true,
-    order: 6,
+    order: 8,
     // bgColor: "bg-un-system-gray",
     bgColor: "bg-gray-300",
     borderColor: "un-system-gray-dark",
     textColor: "text-black",
-  },
-
-  "International Court of Justice": {
-    label: "International Court of Justice",
-    sectionHeading: "",
-    order: 7,
-    bgColor: "bg-un-system-purple",
-    textColor: "text-black",
-    skipCategoryLayer: true,
-  },
-  "Trusteeship Council": {
-    label: "Trusteeship Council",
-    sectionHeading: "",
-    order: 8,
-    bgColor: "bg-un-system-brown",
-    textColor: "text-black",
-    skipCategoryLayer: true,
   },
 
   Other: {
@@ -214,6 +220,8 @@ export const footnoteDefinitions: Record<number, string> = {
  */
 export const categoryFootnotes: Record<string, number[]> = {
   "Trusteeship Council": [4],
+  "Specialized Agencies": [1,3],
+  "Related Organizations": [3],
   "General Assembly|Funds and Programmes": [1],
   "Economic and Social Council|Regional Commissions": [6],
   "Economic and Social Council|Specialized Agencies": [1, 3],
@@ -247,8 +255,19 @@ export function getCategoryFootnote(
 /**
  * Entity-specific footnotes - maps entity short names to footnote numbers
  */
+// FIXME: maybe keep in a variable on dataset?
 export const entityFootnotes: Record<string, number[]> = {
   HLPF: [9],
+  UNCTAD: [1, 6],
+  "UN-Habitat": [6],
+  UNEP: [6],
+  UNHCR: [1],
+  UNOPS: [1],
+  UNRWA: [1],
+  "UN-Women": [1],
+  IAEA: [1],
+  IOM: [1],
+  WTO: [1],
 };
 
 /**

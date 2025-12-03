@@ -9,7 +9,7 @@ interface CategoryFootnoteProps {
   footnoteNumbers: number[];
 }
 
-export default function CategoryFootnote({
+export default function Footnote({
   footnoteNumbers,
 }: CategoryFootnoteProps) {
   return (

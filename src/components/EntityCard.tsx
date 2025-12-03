@@ -4,6 +4,7 @@ import {
   getEntityFootnote,
   normalizePrincipalOrgan,
   principalOrganConfigs,
+  useLongNameOnCard,
 } from "@/lib/constants";
 import { createEntitySlug, getCssColorVar } from "@/lib/utils";
 import { Entity } from "@/types/entity";
@@ -37,6 +38,11 @@ const EntityCard = ({
 
   // Create URL-friendly slug from entity name using utility function
   const entitySlug = createEntitySlug(entity.entity);
+
+  // Use long name on card for certain entities
+  const displayName = useLongNameOnCard.has(entity.entity)
+    ? entity.entity_long
+    : entity.entity;
 
   // All cards take exactly 1 grid cell for uniform appearance
 
@@ -86,7 +92,7 @@ const EntityCard = ({
         aria-label={`View details for ${entity.entity_long}`}
       >
         <span className="-mt-[1px] text-xs leading-[15px] font-medium sm:text-sm sm:leading-[15px]">
-          {entity.entity}
+          {displayName}
           {footnoteNumbers && (
             <sup className="ml-0.5 text-[9px] sm:text-[10px]">
               {footnoteNumbers.join(",")}
