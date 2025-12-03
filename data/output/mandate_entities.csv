@@ -1,8 +1,15 @@
 entity,entity_long
 BINUH,United Nations Integrated Office in Haiti
+CCPCJ,United Nations Commission on Crime Prevention and Criminal Justice
+CDP,Committee for Development Policy
 CEB,United Nations System Chief Executives Board for Coordination
+CEPA,Committee of Experts on Public Administration
+CND,United Nations Commission on Narcotic Drugs
 CNMC,United Nations Support for the Cameroon-Nigeria Mixed Commission
-CSW,Commission on the Status of Women
+CPD,United Nations Commission on Population and Development
+CSTD,United Nations Commission on Science and Technology for Development
+CSW,United Nations Commission on the Status of Women
+CSocD,United Nations Commission for Social Development
 CTBTO,Preparatory Commission for the Comprehensive Nuclear-Test-Ban Treaty Organization
 CTED,Counter-Terrorism Committee Executive Directorate
 DA,Development Account
@@ -51,6 +58,7 @@ JIU,Joint Inspection Unit
 MINURSO,United Nations Mission for the Referendum in Western Sahara
 MINUSCA,United Nations Multidimensional Integrated Stabilization Mission in the Central African Republic
 MONUSCO,United Nations Organization Stabilization Mission in the Democratic Republic of the Congo
+NGO Committee,Committee on Non-Governmental Organizations
 OAJ,Office of Administration of Justice
 OCHA,Office for the Coordination of Humanitarian Affairs
 ODA,Office for Disarmament Affairs
@@ -98,6 +106,7 @@ SC-RES2253,"Support to the Security Council Committee pursuant to resolutions 12
 SWEO,United Nations Sustainable Development Group System-wide Evaluation Office
 Second Committee,Economic and Financial Committee
 Sixth Committee,Legal
+StatCom,United Nations Statistical Commission
 Third Committee,"Social, Humanitarian & Cultural Issues"
 UN Tourism,World Tourism Organization
 UN-Habitat,United Nations Human Settlements Programme
@@ -118,6 +127,7 @@ UNDRR,United Nations Office for Disaster Risk Reduction
 UNEA,United Nations Environment Assembly
 UNEP,United Nations Environment Programme
 UNESCO,"United Nations Educational, Scientific and Cultural Organization"
+UNFF,United Nations Forum on Forests
 UNFICYP,United Nations Peacekeeping Force in Cyprus
 UNFPA,United Nations Population Fund
 UNGC,United Nations Global Compact
@@ -149,6 +159,7 @@ UNOSSC,United Nations Office for South-South Cooperation
 UNOV,United Nations Office at Vienna
 UNOWAS,United Nations Office for West Africa and the Sahel
 UNPC,Peacebuilding Commission
+UNPFII,United Nations Permanent Forum on Indigenous Issues
 UNRCCA,United Nations Regional Centre for Preventive Diplomacy for Central Asia
 UNRGID,Office of the United Nations Representative to the Geneva International Discussions
 UNRISD,United Nations Research Institute for Social Development

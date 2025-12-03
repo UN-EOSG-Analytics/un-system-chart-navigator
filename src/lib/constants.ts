@@ -88,12 +88,12 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     textColor: "text-black",
   },
 
-  Other: {
-    label: "Other",
-    order: 998,
-    bgColor: "bg-gray-300",
-    textColor: "text-black",
-  },
+  //   Other: {
+  //     label: "Other",
+  //     order: 998,
+  //     bgColor: "bg-gray-300",
+  //     textColor: "text-black",
+  //   },
   //   "N/A": {
   //     label: "N/A [WIP]",
   //     order: 999,
@@ -220,7 +220,7 @@ export const footnoteDefinitions: Record<number, string> = {
  */
 export const categoryFootnotes: Record<string, number[]> = {
   "Trusteeship Council": [4],
-  "Specialized Agencies": [1,3],
+  "Specialized Agencies": [1, 3],
   "Related Organizations": [3],
   "General Assembly|Funds and Programmes": [1],
   "Economic and Social Council|Regional Commissions": [6],
@@ -268,6 +268,9 @@ export const entityFootnotes: Record<string, number[]> = {
   IAEA: [1],
   IOM: [1],
   WTO: [1],
+  UNOP: [2],
+  UNODC: [1],
+  //   "WORLD BANK GROUP": [5],
 };
 
 /**
@@ -324,14 +327,14 @@ export const categoryOrderByPrincipalOrgan: Record<
   "Related Organizations": {
     " ": 999, // Fallback for entities without category
   },
-  Other: {
-    "Related Organizations": 1,
-    " ": 999, // Fallback for entities without category
-  },
-  "N/A": {
-    "Related Organizations": 1,
-    " ": 999, // Fallback for entities without category
-  },
+  //   Other: {
+  //     "Related Organizations": 1,
+  //     " ": 999, // Fallback for entities without category
+  //   },
+  //   "N/A": {
+  //     "Related Organizations": 1,
+  //     " ": 999, // Fallback for entities without category
+  //   },
 };
 
 /**
