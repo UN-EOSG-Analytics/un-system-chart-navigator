@@ -75,6 +75,31 @@ export function naturalCompareEntities(a: string, b: string): number {
 }
 
 /**
+ * Ordinal word to number mapping for sorting (First, Second, etc.)
+ */
+const ordinalOrder: Record<string, number> = {
+  first: 1,
+  second: 2,
+  third: 3,
+  fourth: 4,
+  fifth: 5,
+  sixth: 6,
+  seventh: 7,
+  eighth: 8,
+  ninth: 9,
+  tenth: 10,
+};
+
+/**
+ * Get ordinal sort order from a string (e.g., "First Committee" -> 1)
+ * Returns Infinity if no ordinal found (sorts to end)
+ */
+export function getOrdinalOrder(str: string): number {
+  const firstWord = str.toLowerCase().split(/\s+/)[0];
+  return ordinalOrder[firstWord] ?? Infinity;
+}
+
+/**
  * Generate Airtable contribution form URL with prefilled entity data
  */
 export function generateContributeUrl(entity?: Entity): string {
