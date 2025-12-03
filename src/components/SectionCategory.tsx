@@ -1,4 +1,5 @@
 import {
+  affiliatedEntities,
   entitySortOrder,
   getCategoryFootnote,
   hideCategoryForOrgan,
@@ -38,6 +39,18 @@ export default function CategorySection({
     ? "mb-1.5 text-sm font-normal text-gray-500 sm:text-base" // Smaller styling
     : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
 
+  /**
+   * Get sort key for entities, handling affiliated entities that should follow their parent.
+   * Returns a tuple: [parentName, isAffiliated (0 or 1), entityName]
+   */
+  function getAffiliatedSortKey(entity: string): [string, number, string] {
+    const affiliation = affiliatedEntities[entity];
+    if (affiliation) {
+      return [affiliation.parent, 1, entity];
+    }
+    return [entity, 0, entity];
+  }
+
   // Group entities by subcategory
   // For dual-organ entities, check if subcategory should be hidden for this organ
   const entitiesWithoutSubcategory = entities
@@ -48,10 +61,21 @@ export default function CategorySection({
       return !e.subcategory || shouldHideSubcategory;
     })
     .sort((a, b) => {
+      // First check custom entity sort order
       const orderA = entitySortOrder[a.entity] ?? 0;
       const orderB = entitySortOrder[b.entity] ?? 0;
       if (orderA !== orderB) return orderA - orderB;
-      return naturalCompare(a.entity, b.entity);
+
+      // Then apply affiliated entity sorting
+      const [parentA, isAffiliatedA, nameA] = getAffiliatedSortKey(a.entity);
+      const [parentB, isAffiliatedB, nameB] = getAffiliatedSortKey(b.entity);
+
+      const parentCompare = naturalCompare(parentA, parentB);
+      if (parentCompare !== 0) return parentCompare;
+
+      if (isAffiliatedA !== isAffiliatedB) return isAffiliatedA - isAffiliatedB;
+
+      return naturalCompare(nameA, nameB);
     });
   const entitiesBySubcategory = entities.reduce(
     (acc: Record<string, Entity[]>, entity) => {

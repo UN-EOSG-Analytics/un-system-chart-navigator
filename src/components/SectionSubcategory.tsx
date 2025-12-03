@@ -1,5 +1,5 @@
-import { sortLastEntities } from "@/lib/constants";
-import { getOrdinalOrder } from "@/lib/utils";
+import { affiliatedEntities, sortLastEntities } from "@/lib/constants";
+import { getOrdinalOrder, naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import EntityContainer from "./EntitiesContainer";
 
@@ -10,6 +10,21 @@ interface SubcategorySectionProps {
   customBgColor?: string;
   customTextColor?: string;
   showReviewBorders?: boolean;
+}
+
+/**
+ * Get sort key for entities, handling affiliated entities that should follow their parent.
+ * Returns a tuple: [parentName, isAffiliated (0 or 1), entityName]
+ * This ensures affiliated entities sort right after their parent.
+ */
+function getAffiliatedSortKey(entity: string): [string, number, string] {
+  const affiliation = affiliatedEntities[entity];
+  if (affiliation) {
+    // Affiliated entities: sort after parent, then alphabetically among themselves
+    return [affiliation.parent, 1, entity];
+  }
+  // Non-affiliated: use entity name as parent, mark as non-affiliated
+  return [entity, 0, entity];
 }
 
 /**
@@ -41,6 +56,22 @@ export default function SubcategorySection({
     sortedEntities = sortedEntities.sort(
       (a, b) => getOrdinalOrder(a.entity) - getOrdinalOrder(b.entity),
     );
+  } else {
+    // Apply affiliated entity sorting (UNDP-affiliated entities after UNDP)
+    sortedEntities = sortedEntities.sort((a, b) => {
+      const [parentA, isAffiliatedA, nameA] = getAffiliatedSortKey(a.entity);
+      const [parentB, isAffiliatedB, nameB] = getAffiliatedSortKey(b.entity);
+
+      // First compare by parent entity name
+      const parentCompare = naturalCompare(parentA, parentB);
+      if (parentCompare !== 0) return parentCompare;
+
+      // Same parent: non-affiliated (the parent itself) comes first
+      if (isAffiliatedA !== isAffiliatedB) return isAffiliatedA - isAffiliatedB;
+
+      // Both affiliated or both non-affiliated: sort alphabetically
+      return naturalCompare(nameA, nameB);
+    });
   }
 
   return (

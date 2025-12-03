@@ -34,6 +34,23 @@ export const externalLinkEntities: Record<string, string> = {
 export const sortLastEntities = new Set(["Other Committees"]);
 
 /**
+ * Entities that are affiliated with a parent entity and should:
+ * 1. Be sorted immediately after the parent entity (breaking alpha order)
+ * 2. Display a subtitle on the card (e.g., "UNDP-affiliated")
+ *
+ * The affiliated entities are sorted alphabetically among themselves,
+ * but always appear after the parent entity.
+ */
+export const affiliatedEntities: Record<
+  string,
+  { parent: string; subtitle: string }
+> = {
+  UNCDF: { parent: "UNDP", subtitle: "UNDP-affiliated" },
+  UNV: { parent: "UNDP", subtitle: "UNDP-affiliated" },
+  UNOSSC: { parent: "UNDP", subtitle: "UNDP-affiliated" },
+};
+
+/**
  * Dual-organ entities where category/subcategory should be hidden for specific organs.
  * Key format: "entity|principalOrgan"
  * When a dual-organ entity appears in the specified organ's section, it will be

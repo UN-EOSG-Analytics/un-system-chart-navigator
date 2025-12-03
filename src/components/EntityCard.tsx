@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  affiliatedEntities,
   externalLinkEntities,
   getEntityFootnote,
   normalizePrincipalOrgan,
@@ -44,6 +45,9 @@ const EntityCard = ({
   const displayName = useLongNameOnCard.has(entity.entity)
     ? entity.entity_long
     : entity.entity;
+
+  // Check if entity has an affiliated subtitle
+  const affiliatedSubtitle = affiliatedEntities[entity.entity]?.subtitle;
 
   // All cards take exactly 1 grid cell for uniform appearance
 
@@ -95,13 +99,13 @@ const EntityCard = ({
         onClick={handleClick}
         // Spacing constraints: Equal top/bottom margins for 1-line and 2-line text
         // Math: h-[50px] - (2 lines × 15px line-height) = 20px remaining → py-[10px] each
-        // Fixed line-height prevents spacing conflicts; -mt-[1px] compensates for font's internal top spacing
+        // Fixed line-height prevents spacing conflicts; -mt-px compensates for font's internal top spacing
         // top-left aligned
-        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation items-start justify-start rounded-lg px-3 py-[10px] text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px] sm:py-[12.5px]`}
+        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-[50px] w-full animate-in cursor-pointer touch-manipulation flex-col items-start justify-start rounded-lg px-3 py-2.5 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-95 sm:h-[55px] sm:py-[12.5px]`}
         style={splitBackground ? { background: splitBackground } : undefined}
         aria-label={`View details for ${entity.entity_long}`}
       >
-        <span className="-mt-[1px] text-xs leading-[15px] font-medium sm:text-sm sm:leading-[15px]">
+        <span className="-mt-px text-xs leading-[15px] font-medium sm:text-sm sm:leading-[15px]">
           {displayName}
           {footnoteNumbers && (
             <sup className="ml-0.5 text-[9px] sm:text-[10px]">
@@ -109,6 +113,11 @@ const EntityCard = ({
             </sup>
           )}
         </span>
+        {affiliatedSubtitle && (
+          <span className="text-[8px] leading-tight text-gray-600 opacity-80 sm:text-[9px]">
+            {affiliatedSubtitle}
+          </span>
+        )}
       </button>
     </EntityTooltip>
   );
