@@ -1,7 +1,7 @@
 import { getCategoryFootnote } from "@/lib/constants";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
-import EntityGrid from "./EntityGrid";
+import EntityGrid from "./EntitiesContainer";
 
 interface CategorySectionProps {
   category: string;
