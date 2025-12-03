@@ -61,7 +61,7 @@ export default function FilterDropdown({
     <Popover open={open} onOpenChange={onOpenChange}>
       <PopoverTrigger asChild>
         <button
-          className={`relative flex h-10 w-full touch-manipulation items-center gap-3 rounded-lg border px-3 text-base transition-colors lg:w-72 lg:flex-shrink-0 ${
+          className={`relative flex h-10 w-full touch-manipulation items-center gap-3 rounded-lg border px-3 text-base transition-colors lg:w-80 lg:flex-shrink-0 ${
             isFiltered
               ? "border-un-blue bg-un-blue/10 text-un-blue hover:border-un-blue"
               : "border-gray-200 bg-white text-gray-500 hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue"

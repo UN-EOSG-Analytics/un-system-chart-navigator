@@ -28,9 +28,9 @@ if records:
 df = df.dropna(how="all")
 
 if len(df) < 160:
-    raise ValueError(f"Expected more than 160 records, but got {len(df)}")
+    raise ValueError(f"\nExpected more than 160 records, but got {len(df)}")
 
-print(f"Number of entities fetched: {df.shape[0]}")
+print(f"\nNumber of entities fetched: {df.shape[0]}")
 
 # Filter out rows where 'added_via_form' is True
 if "added_via_form" in df.columns:
@@ -46,10 +46,10 @@ if duplicates_mask.any():
     duplicates_info = duplicate_rows.to_string(index=False)
     raise ValueError(f"Duplicate entities found in the input data:\n{duplicates_info}")
 else:
-    print("All entities are unique.")
+    print("\nAll entities are unique.")
 
 
-print(f"Number of entities showing: {df.shape[0]}")
+print(f"\nNumber of entities showing: {df.shape[0]}")
 
 # Check if all entity values are URL safe
 unsafe_entities = []
@@ -58,9 +58,9 @@ for entity in df["entity"]:
         unsafe_entities.append(entity)
 
 if unsafe_entities:
-    print(f"Warning: Entities not URL safe: {unsafe_entities}")
+    print(f"\nWarning: Entities not URL safe: {unsafe_entities}")
 else:
-    print("All entities are URL safe.")
+    print("\nAll entities are URL safe.")
 
 # df.columns
 # List of selected columns
@@ -82,6 +82,7 @@ selected_columns = [
     "entity_logo_url",
     "entity_logo_available",
     "entity_careers_page",
+    "entity_headquarters",
     # UN structure and classification
     "un_principal_organ",
     "category",
@@ -120,7 +121,7 @@ all_columns = df.columns.tolist()
 not_selected_columns = [col for col in all_columns if col not in selected_columns]
 
 # Print columns that are not selected
-print("Columns not selected:", not_selected_columns)
+print("\nColumns not selected:", not_selected_columns)
 
 # Filter the DataFrame to include only selected columns
 df = df[selected_columns]

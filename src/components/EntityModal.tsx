@@ -321,6 +321,14 @@ export default function EntityModal({
                 principalOrgan={entity!.un_principal_organ}
               />
             </Field>
+            {/* Headquarters */}
+            {entity!.entity_headquarters && (
+              <Field label="Headquarters">
+                <span className="font-bold text-gray-700">
+                  {entity!.entity_headquarters}
+                </span>
+              </Field>
+            )}
           </div>
         </div>
 

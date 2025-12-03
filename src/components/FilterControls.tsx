@@ -56,7 +56,7 @@ export default function FilterControls({
   // Get principal organ filter button text
   const getPrincipalOrganFilterText = () => {
     if (allPrincipalOrgansActive) {
-      return "Filter by Principal Organ";
+      return "Filter by Principal Organ or Group";
     }
     const count = activePrincipalOrgans.size;
     return `${count} Organ${count !== 1 ? "s" : ""} selected`;

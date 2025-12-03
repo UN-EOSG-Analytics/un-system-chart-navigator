@@ -39,12 +39,28 @@ export function getPrincipalOrganCount(
 
 /**
  * Helper function to get the appropriate label (singular/plural)
+ * Returns empty string for Related Organizations and Specialized Agencies
  */
 export function getPrincipalOrganLabel(
   principalOrgan: string[] | string | null,
 ): string {
+  // Check if it's Related Organizations or Specialized Agencies - no label needed
+  const organs = Array.isArray(principalOrgan)
+    ? principalOrgan
+    : principalOrgan
+      ? [principalOrgan]
+      : [];
+
+  if (
+    organs.length === 1 &&
+    (organs[0] === "Related Organizations" ||
+      organs[0] === "Specialized Agencies")
+  ) {
+    return "";
+  }
+
   const count = getPrincipalOrganCount(principalOrgan);
-  return count === 1 ? "UN Principal Organ" : "UN Principal Organs";
+  return count === 1 ? "Principal Organ" : "Principal Organs";
 }
 
 export default function PrincipalOrganField({
