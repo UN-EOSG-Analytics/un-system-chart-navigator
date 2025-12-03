@@ -2087,7 +2087,7 @@
     "un_principal_organ":[
       "General Assembly"
     ],
-    "category":"Other Entities",
+    "category":"Other Mechanisms",
     "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
@@ -2110,7 +2110,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recy7YnXXyHHd3CY4",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"IIMM",
@@ -2131,7 +2131,7 @@
     "un_principal_organ":[
       "General Assembly"
     ],
-    "category":"Other Entities",
+    "category":"Other Mechanisms",
     "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
@@ -2154,7 +2154,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recNA16uoctYIGPO4",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"IIMP",
@@ -2175,7 +2175,7 @@
     "un_principal_organ":[
       "General Assembly"
     ],
-    "category":"Other Entities",
+    "category":"Other Mechanisms",
     "subcategory":null,
     "is_ceb_member":false,
     "foundational_mandate":null,
@@ -2198,7 +2198,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reclHRkid64dk3Gjs",
-    "review_needed":true
+    "review_needed":null
   },
   {
     "entity":"ILC",

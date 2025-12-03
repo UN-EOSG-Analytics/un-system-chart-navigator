@@ -394,7 +394,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Funds and Programmes": 2,
     "Research and Training": 3,
     "Other Entities": 4,
-    "Related Organizations": 5,
+    "Other Mechanisms": 5,
     " ": 999, // Fallback for entities without category (shows section, blank header)
   },
   "Security Council": {
