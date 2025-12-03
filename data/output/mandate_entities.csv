@@ -1,5 +1,7 @@
 entity,entity_long
+ABDM,Advisory Board on Disarmament Matters
 BINUH,United Nations Integrated Office in Haiti
+Board of Auditors,Board of Auditors
 CCPCJ,United Nations Commission on Crime Prevention and Criminal Justice
 CDP,Committee for Development Policy
 CEB,United Nations System Chief Executives Board for Coordination
@@ -29,6 +31,7 @@ EO,Ethics Office
 EOSG,Executive Office of the Secretary-General
 ESCAP,Economic and Social Commission for Asia and the Pacific
 ESCWA,Economic and Social Commission for Western Asia
+Executive Board,Executive Board of the United Nations Development Programme and of the United Nations Population Fund
 FAO,Food and Agriculture Organization
 Fifth Committee,Administrative and Budgetary Committee
 First Committee,Disarmament and International Security
@@ -87,6 +90,7 @@ OSRSG-CAAC,Office of the Special Representative of the Secretary-General for Chi
 OSRSG-SVC,Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict
 OSRSG-VAC,Office of the Special Representative of the Secretary-General on Violence against Children
 OVRA,Office of the Victims' Rights Advocate
+Other Committees,
 PBSO,Peacebuilding Support Office
 PESG-Sudan,Office of the Personal Envoy of the Secretary-General for the Sudan
 PESG-WS,Personal Envoy of the Secretary-General for Western Sahara
@@ -107,6 +111,7 @@ SWEO,United Nations Sustainable Development Group System-wide Evaluation Office
 Second Committee,Economic and Financial Committee
 Sixth Committee,Legal
 StatCom,United Nations Statistical Commission
+TDB,Trade and Development Board
 Third Committee,"Social, Humanitarian & Cultural Issues"
 UN Tourism,World Tourism Organization
 UN-Habitat,United Nations Human Settlements Programme
@@ -135,12 +140,14 @@ UNGEGN,United Nations Group of Experts on Geographical Names
 UNGGIM,Committee of Experts on Global Geospatial Information Management
 UNHCR,Office of the United Nations High Commissioner for Refugees
 UNICEF,United Nations Children's Fund
+UNICEF EB,Executive Board of the United Nations Children's Fund
 UNICRI,United Nations Interregional Crime and Justice Research Institute
 UNIDIR,United Nations Institute for Disarmament Research
 UNIDO,United Nations Industrial Development Organization
 UNIFIL,United Nations Interim Force in Lebanon
 UNISFA,United Nations Interim Security Force for Abyei
 UNITAR,United Nations Institute for Training and Research
+UNJSPB,United Nations Joint Staff Pension Board
 UNLB,United Nations Logistics Base at Brindisi
 UNMHA,United Nations Mission to Support the Hudaydah Agreement
 UNMIK,United Nations Interim Administration Mission in Kosovo
@@ -164,6 +171,7 @@ UNRCCA,United Nations Regional Centre for Preventive Diplomacy for Central Asia
 UNRGID,Office of the United Nations Representative to the Geneva International Discussions
 UNRISD,United Nations Research Institute for Social Development
 UNRWA,United Nations Relief and Works Agency for Palestine Refugees in the Near East
+UNRWA AdCom,Advisory Commission on the United Nations Relief and Works Agency for Palestine Refugees in the Near East
 UNRoD,United Nations Register of Damage Caused by the Construction of the Wall in the Occupied Palestinian Territory
 UNSCO,Office of the United Nations Special Coordinator for the Middle East Peace Process
 UNSCOL,Office of the United Nations Special Coordinator for Lebanon
@@ -180,8 +188,10 @@ UNVMC,United Nations Verification Mission in Colombia
 UNYO,United Nations Youth Office
 UPU,Universal Postal Union
 WFP,World Food Programme
+WFP EB,Executive Board of the World Food Programme
 WHO,World Health Organization
 WIPO,World Intellectual Property Organization
 WMO,World Meteorological Organization
 WORLD BANK GROUP,World Bank Group
 WTO,World Trade Organization
+Working Groups,

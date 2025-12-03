@@ -1,3 +1,4 @@
+import { sortLastEntities } from "@/lib/constants";
 import { getOrdinalOrder } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import EntityContainer from "./EntitiesContainer";
@@ -25,13 +26,22 @@ export default function SubcategorySection({
 }: SubcategorySectionProps) {
   if (entities.length === 0) return null;
 
+  // Sort entities: special cases first, then apply subcategory-specific sorting
+  let sortedEntities = [...entities];
+
+  // Always sort "sortLastEntities" to the end
+  sortedEntities.sort((a, b) => {
+    const aLast = sortLastEntities.has(a.entity) ? 1 : 0;
+    const bLast = sortLastEntities.has(b.entity) ? 1 : 0;
+    return aLast - bLast;
+  });
+
   // Sort entities by ordinal for "Main Committees" (First, Second, ... Sixth)
-  const sortedEntities =
-    subcategory === "Main Committees"
-      ? [...entities].sort(
-          (a, b) => getOrdinalOrder(a.entity) - getOrdinalOrder(b.entity),
-        )
-      : entities;
+  if (subcategory === "Main Committees") {
+    sortedEntities = sortedEntities.sort(
+      (a, b) => getOrdinalOrder(a.entity) - getOrdinalOrder(b.entity),
+    );
+  }
 
   return (
     <div className="mt-2 pl-3">

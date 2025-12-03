@@ -1,4 +1,4 @@
-import { getCategoryFootnote } from "@/lib/constants";
+import { getCategoryFootnote, subcategorySortOrder } from "@/lib/constants";
 import { naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import Footnote from "./Footnote";
@@ -47,7 +47,13 @@ export default function CategorySection({
     },
     {},
   );
-  const subcategories = Object.keys(entitiesBySubcategory).sort(naturalCompare);
+  // Sort subcategories: use custom order if defined, otherwise alphabetical
+  const subcategories = Object.keys(entitiesBySubcategory).sort((a, b) => {
+    const orderA = subcategorySortOrder[a] ?? 0;
+    const orderB = subcategorySortOrder[b] ?? 0;
+    if (orderA !== orderB) return orderA - orderB;
+    return naturalCompare(a, b);
+  });
 
   return (
     <div className="px-3">

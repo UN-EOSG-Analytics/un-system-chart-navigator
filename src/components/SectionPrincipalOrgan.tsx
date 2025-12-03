@@ -70,7 +70,7 @@ export default function PrincipalOrganSection({
       >
         {/* Principal Organ Heading */}
         <div
-          className="mb-5 border-l-[6px] pt-2 pl-4 sm:pt-3 pb-2 sm:pl-4"
+          className="mb-5 border-l-[6px] pt-2 pb-2 pl-4 sm:pt-3 sm:pl-4"
           style={{
             borderColor: borderColor,
           }}
@@ -78,9 +78,7 @@ export default function PrincipalOrganSection({
           <h2 className="text-2xl font-bold text-black uppercase sm:text-2xl md:text-3xl">
             {groupLabel}
             {getCategoryFootnote(groupKey) && (
-              <Footnote
-                footnoteNumbers={getCategoryFootnote(groupKey)!}
-              />
+              <Footnote footnoteNumbers={getCategoryFootnote(groupKey)!} />
             )}
           </h2>
           {sectionHeading && (

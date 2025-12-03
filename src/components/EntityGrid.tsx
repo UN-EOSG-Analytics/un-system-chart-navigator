@@ -74,9 +74,8 @@ const EntitiesGrid = forwardRef<{
   };
 
   const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
-  const [activePrincipalOrgans, setActivePrincipalOrgans] = useState<
-    Set<string>
-  >(getInitialOrgans);
+  const [activePrincipalOrgans, setActivePrincipalOrgans] =
+    useState<Set<string>>(getInitialOrgans);
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(true);
 
   // Sync URL when filters change (after initial load)
@@ -183,9 +182,13 @@ const EntitiesGrid = forwardRef<{
 
   const handleEntityClick = (entitySlug: string) => {
     // Store current filter URL for modal to restore on close
-    const currentFilterUrl = buildFilterUrl(searchQuery, activePrincipalOrgans, null);
+    const currentFilterUrl = buildFilterUrl(
+      searchQuery,
+      activePrincipalOrgans,
+      null,
+    );
     sessionStorage.setItem("entityModalReturnUrl", currentFilterUrl);
-    
+
     // Navigate to clean entity URL
     router.replace(`/?entity=${entitySlug}`, { scroll: false });
   };

@@ -7,6 +7,30 @@
  */
 export const useLongNameOnCard = new Set(["UNDC", "UNPC"]);
 
+/**
+ * Entities that should open an external link instead of the modal.
+ * Maps entity short name to the external URL.
+ */
+export const externalLinkEntities: Record<string, string> = {
+  "Other Committees":
+    "https://www.un.org/en/ga/about/subsidiary/committees.shtml",
+  "Working Groups": "https://www.un.org/en/ga/about/subsidiary/other.shtml",
+};
+
+/**
+ * Entities that should always be sorted last within their subcategory.
+ */
+export const sortLastEntities = new Set(["Other Committees"]);
+
+/**
+ * Subcategories with custom sort order within their category.
+ * Higher values appear later. Subcategories not listed use order 0 (alphabetical first).
+ */
+export const subcategorySortOrder: Record<string, number> = {
+  "Main Committees": 998, // Second to last
+  Committees: 999, // Last
+};
+
 export interface PrincipalOrganConfig {
   label: string;
   order: number;

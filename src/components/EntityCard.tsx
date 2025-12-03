@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  externalLinkEntities,
   getEntityFootnote,
   normalizePrincipalOrgan,
   principalOrganConfigs,
@@ -46,12 +47,21 @@ const EntityCard = ({
 
   // All cards take exactly 1 grid cell for uniform appearance
 
+  // Check if this entity should open an external link instead of modal
+  const externalLink = externalLinkEntities[entity.entity];
+
   const handleClick = () => {
-    onEntityClick(entitySlug);
+    if (externalLink) {
+      window.open(externalLink, "_blank", "noopener,noreferrer");
+    } else {
+      onEntityClick(entitySlug);
+    }
   };
 
   const borderClass =
-    showReviewBorders && entity.review_needed ? "outline-2 outline-red-600" : "";
+    showReviewBorders && entity.review_needed
+      ? "outline-2 outline-red-600"
+      : "";
 
   // Generate split background for multiple organs
   const splitBackground =

@@ -36,6 +36,9 @@ print(f"Number of entities fetched: {df.shape[0]}")
 if "added_via_form" in df.columns:
     df = df[df["added_via_form"] != "TRUE"]
 
+# Filter out rows where on_display is not TRUE
+df = df[df["on_display"] == "TRUE"]
+
 # Check for duplicate entities
 duplicates = df[df["entity"].duplicated(keep=False)]["entity"]
 if not duplicates.empty:
@@ -45,9 +48,6 @@ if not duplicates.empty:
 else:
     print("All entities are unique.")
 
-
-# Filter out rows where the on_display column is False
-df = df[df["on_display"] != "FALSE"]
 
 print(f"Number of entities showing: {df.shape[0]}")
 
