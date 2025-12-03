@@ -106,7 +106,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     label: "General Assembly",
     labelLink: "https://www.un.org/ga/",
     sectionHeading: "SUBSIDIARY ORGANS",
-    sectionHeadingLink: "https://www.un.org/ga/about/subsidiary/index.shtml",
+    sectionHeadingLink: "https://www.un.org/en/ga/about/subsidiary/index.shtml",
     order: 1,
     bgColor: "bg-un-system-green",
     textColor: "text-black",
