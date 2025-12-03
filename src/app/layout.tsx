@@ -12,9 +12,74 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const siteUrl = "systemchart.un.org";
+const siteName = "UN System Chart Navigator";
+const siteTitle = "United Nations System Chart Navigator";
+const siteDescription =
+  "Interactively explore and navigate the United Nations System.";
+
 export const metadata: Metadata = {
-  title: "United Nations System Chart Navigator",
-  description: "Interactively navigate the United Nations System",
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    "United Nations",
+    "UN system",
+    "UN agencies",
+    "UN entities",
+    "UN principal organs",
+    "UN entities",
+    "UN organizations",
+    "international organizations",
+    "UN chart",
+    "UN structure",
+    "UN funds",
+    "UN programmes",
+    "UN secretariat",
+    "specialized agencies",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
+    siteName: siteName,
+    // images: [
+    //   {
+    //     url: `${siteUrl}/images/og-image.png`,
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "United Nations System Chart Navigator - Interactive visualization of the UN System",
+    //   },
+    // ],
+  },
+  //   twitter: {
+  //     card: "summary_large_image",
+  //     title: siteTitle,
+  //     description: siteDescription,
+  //     images: [`${siteUrl}/images/og-image.png`],
+  //   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    // apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
