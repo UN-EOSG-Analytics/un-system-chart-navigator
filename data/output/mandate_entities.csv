@@ -103,16 +103,12 @@ OSAA,Office of the Special Adviser on Africa
 OSACAJT,Office of the Special Adviser on Climate Action and Just Transition
 OSASG-Cyprus,Office of the Special Adviser to the Secretary-General on Cyprus
 OSASG-Genocide,Office of the Special Adviser to the Secretary-General on the Prevention of Genocide
-OSASG-PG,Office of the Special Adviser of the Secretary-General for the Prevention of Genocide
 OSC-SEA,Office of the United Nations Special Coordinator on Improving the United Nations Response to Sexual Exploitation and Abuse
 OSESG-GL,Office of the Special Envoy of the Secretary-General for the Great Lakes Region
 OSESG-Horn,Office of the Special Envoy of the Secretary-General for the Horn of Africa
 OSESG-Myanmar,Office of the Special Envoy of the Secretary-General on Myanmar
 OSESG-Syria,Office of the Special Envoy of the Secretary-General for Syria
 OSESG-Yemen,Office of the Special Envoy of the Secretary-General for Yemen
-OSRSG-CAAC,Office of the Special Representative of the Secretary-General for Children and Armed Conflict
-OSRSG-SVC,Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict
-OSRSG-VAC,Office of the Special Representative of the Secretary-General on Violence against Children
 OVRA,Office of the Victims' Rights Advocate
 Other Committees,
 PBSO,Peacebuilding Support Office
@@ -129,6 +125,9 @@ RSCE,"Regional Service Centre in Entebbe, Uganda"
 SC-RES1540,Support to the Security Council Committee established pursuant to resolution 1540 (2004) on the non-proliferation of all weapons of mass destruction
 SC-RES1718,Support to the Security Council Committee established pursuant to resolution 1718 (2006)
 SC-RES2231,Implementation of Security Council resolution 2231 (2015)
+SRSG-CAAC,Office of the Special Representative of the Secretary-General for Children and Armed Conflict
+SRSG-SVC,Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict
+SRSG-VAC,Office of the Special Representative of the Secretary-General on Violence against Children
 SWEO,United Nations Sustainable Development Group System-wide Evaluation Office
 Sanctions WG,Informal Working Group on General Security Council Sanctions Issues
 Second Committee,Economic and Financial Committee
@@ -138,6 +137,7 @@ StatCom,United Nations Statistical Commission
 TDB,Trade and Development Board
 Third Committee,"Social, Humanitarian & Cultural Issues"
 UN Tourism,World Tourism Organization
+UN Youth,United Nations Youth Office
 UN-Habitat,United Nations Human Settlements Programme
 UN-Habitat Assembly,United Nations Habitat Assembly of the United Nations Human Settlements Programme
 UN-OHRLLS,"Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States"
@@ -208,7 +208,6 @@ UNU,United Nations University
 UNU Council,Council of the United Nations University
 UNV,United Nations Volunteers
 UNVMC,United Nations Verification Mission in Colombia
-UNYO,United Nations Youth Office
 UPU,Universal Postal Union
 WFP,World Food Programme
 WFP EB,Executive Board of the World Food Programme

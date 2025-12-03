@@ -81,6 +81,8 @@ export const hideCategoryForOrgan: Set<string> = new Set([
  * Higher values appear later. Entities not listed use default alphabetical sorting.
  */
 export const entitySortOrder: Record<string, number> = {
+  // Secretariat - EOSG first
+  EOSG: -1,
   // Security Council - Standing committees and ad hoc bodies
   "Standing Committees": 1,
   "Ad Hoc Bodies": 2,
