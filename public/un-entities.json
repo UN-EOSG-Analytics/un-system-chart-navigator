@@ -30,7 +30,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -42,7 +41,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recudSf8ud6g7Mmwe",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1533 Committee",
@@ -75,7 +75,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -87,7 +86,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec8tqqm0nhvFXXuK",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1591 Committee",
@@ -120,7 +120,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -132,7 +131,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec5g6e9hYZXmJllv",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1636 Committee",
@@ -165,7 +165,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -177,7 +176,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recoMEQSUn3RGll6t",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1718 Committee",
@@ -210,7 +210,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -222,7 +221,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recHc0xHCBfoxy6F8",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1737 Committee",
@@ -255,7 +255,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -267,7 +266,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec2SCzpPsaVZnOWR",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1970 Committee",
@@ -300,7 +300,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -312,7 +311,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recXuwHUt75ThAbsS",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"1988 Committee",
@@ -345,7 +345,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -357,7 +356,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recFFckrGh0nscen7",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2048 Committee",
@@ -390,7 +390,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -402,7 +401,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reclBQSkzGGLJqHAh",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2140 Committee",
@@ -435,7 +435,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -447,7 +446,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recAfbfMJNLLOmtOk",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2206 Committee",
@@ -480,7 +480,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -492,7 +491,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rectKaccdpHMvzAJU",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2253 Committee",
@@ -525,7 +525,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -537,7 +536,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reclI9faynH4SbaKq",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2253 Ombudsperson",
@@ -570,7 +570,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -582,7 +581,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recmJId4FO8dP9CqW",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2653 Committee",
@@ -615,7 +615,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -627,7 +626,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recU88qlgr47EP76H",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"2745 Committee",
@@ -660,7 +660,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -672,7 +671,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recnha80eiPMaBb9J",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ABDM",
@@ -705,7 +705,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -717,7 +716,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec9fPHZvvVbHcnI6",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Ad Hoc Bodies",
@@ -750,7 +750,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -762,7 +761,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recNFTeF4m6WvULxS",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Al-Shabaab Committee",
@@ -795,7 +795,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -807,7 +806,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recJWLLJ4JW0cAoaM",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"BINUH",
@@ -840,7 +840,6 @@
     "head_of_entity_name":"Carlos Gabriel Ruiz Massieu Aguirre",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/carlos-massieu-aguirre-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Mr.%20Carlos%20Gabriel%20Ruiz-Massieu%20Aguirre.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-integrated-office-in-haiti\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -852,7 +851,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recSZyZHOHKDbGhJL",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Board of Auditors",
@@ -885,7 +885,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -897,7 +896,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recyjr8pDI9LC3r2t",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Boards",
@@ -930,7 +930,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -942,7 +941,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recBsHVhz5hsFzlla",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CCPCJ",
@@ -975,7 +975,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -987,7 +986,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recGEImaUu5k1LzGT",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CDP",
@@ -1020,7 +1020,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1032,7 +1031,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rectkaEeoZvO65Ahz",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CEB",
@@ -1065,7 +1065,6 @@
     "head_of_entity_name":"Maaike Jansen",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/maaike-jansen",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Maaike%20Jansen.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-system-chief-executives-board-for-coordination\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -1077,7 +1076,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recsFC6T0ZKEMEJQ1",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CEPA",
@@ -1110,7 +1110,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1122,7 +1121,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recuL2yjZA250pUB7",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CND",
@@ -1155,7 +1155,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1167,7 +1166,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recOSIBVne90WCNxx",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CNMC",
@@ -1200,7 +1200,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1212,7 +1211,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recGudYcdfjhjBzPa",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CPD",
@@ -1245,7 +1245,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1257,7 +1256,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6cVfnhr9GzX0Hk",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CSTD",
@@ -1290,7 +1290,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1302,7 +1301,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec3qTmVlDDVXw00k",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CSW",
@@ -1335,7 +1335,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1347,7 +1346,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reccQ3hjgDLMqdvzA",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CSocD",
@@ -1380,7 +1380,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1392,7 +1391,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recgjtGqf6Bc2hf6r",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CTBTO",
@@ -1425,7 +1425,6 @@
     "head_of_entity_name":"Robert Floyd",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1437,7 +1436,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recJyl1TzkSmTWUzM",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CTC",
@@ -1470,7 +1470,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -1482,7 +1481,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec20nlHWHhTwdUur",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"CTED",
@@ -1515,7 +1515,6 @@
     "head_of_entity_name":"Natalia Gherman",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/securitycouncil\/ctc\/content\/executive-director-cted",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/securitycouncil\/ctc\/sites\/www.un.org.securitycouncil.ctc\/files\/styles\/panopoly_image_full\/public\/general\/srsg_photo_1.jpg",
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -1527,7 +1526,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reccTK7EVU2sFp0uA",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":"\/images\/headshots\/CTED.png"
   },
   {
     "entity":"DA",
@@ -1560,7 +1560,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -1572,7 +1571,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recnioeNrdQNJUasl",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DCO",
@@ -1605,7 +1605,6 @@
     "head_of_entity_name":"Oscar Fern\u00e1ndez-Taranco",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/oscar-fernandez-taranco-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Fernandez-Taranco%2C%20Oscar_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/development-coordination-office\/all",
     "organizational_chart_link":"https:\/\/un-dco.org\/",
     "budget_financial_reporting_link":null,
@@ -1617,7 +1616,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reckfbfmHFmL1GR5X",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DESA",
@@ -1650,7 +1650,6 @@
     "head_of_entity_name":"Li Junhua",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/li-junhua",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Li%20Junhua.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-economic-and-social-affairs\/all",
     "organizational_chart_link":"https:\/\/www.un.org\/development\/desa\/en\/about\/organigramme",
     "budget_financial_reporting_link":"No link found",
@@ -1662,7 +1661,8 @@
     "socials_twitter":"https:\/\/x.com\/UNDESA",
     "socials_instagram":null,
     "record_id":"recOs5gBofGjKDrcE",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DGACM",
@@ -1695,7 +1695,6 @@
     "head_of_entity_name":"Movses Abelian",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/movses-abelian",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Abelian%2C%20Movses.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-for-general-assembly-and-conference-management\/all",
     "organizational_chart_link":"https:\/\/www.un.org\/dgacm\/en\/content\/structure",
     "budget_financial_reporting_link":"No link found",
@@ -1707,7 +1706,8 @@
     "socials_twitter":"https:\/\/x.com\/UNDGACM_EN",
     "socials_instagram":null,
     "record_id":"recX99f6NvxX8Ft7p",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":"\/images\/headshots\/DGACM.png"
   },
   {
     "entity":"DGC",
@@ -1740,7 +1740,6 @@
     "head_of_entity_name":"Melissa Fleming",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/melissa-fleming",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Melissa-Fleming-Official-UN-Photo-Web.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-global-communications\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/digitallibrary.un.org\/record\/4010720?ln=&v=pdf",
@@ -1752,7 +1751,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recVnkVxU48jphUJj",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DMSPC",
@@ -1785,7 +1785,6 @@
     "head_of_entity_name":"Catherine Pollard",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/catherine-pollard-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Pollard.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-management-strategy%2C-policy-and-compliance\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -1797,7 +1796,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recwv9tyo7BadQejK",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DOS",
@@ -1830,7 +1830,6 @@
     "head_of_entity_name":"Atul Khare",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/atul-khare",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Khare.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-operational-support\/all",
     "organizational_chart_link":"https:\/\/operationalsupport.un.org\/en\/organizational-structure",
     "budget_financial_reporting_link":"No link found",
@@ -1842,7 +1841,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_OpSupport",
     "socials_instagram":null,
     "record_id":"recJXM4q1qfX37JPj",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DPO",
@@ -1875,7 +1875,6 @@
     "head_of_entity_name":"Jean-Pierre Fran\u00e7ois Renaud Lacroix",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/herv%C3%A9-ladsous",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Lacroix.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-peace-operations\/all",
     "organizational_chart_link":"https:\/\/peacekeeping.un.org\/en\/department-of-peace-operations",
     "budget_financial_reporting_link":"No link found",
@@ -1887,7 +1886,8 @@
     "socials_twitter":"https:\/\/x.com\/UNPeacekeeping",
     "socials_instagram":null,
     "record_id":"recqaF7RmTPNN9VPr",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DPPA",
@@ -1920,7 +1920,6 @@
     "head_of_entity_name":"Rosemary DiCarlo",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/rosemary-dicarlo-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/rdicarlo.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-political-and-peacebuilding-affairs\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -1932,7 +1931,8 @@
     "socials_twitter":"https:\/\/x.com\/UNDPPA",
     "socials_instagram":null,
     "record_id":"recid2uT0NCwfjntt",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"DSS",
@@ -1965,7 +1965,6 @@
     "head_of_entity_name":"Gilles Michaud",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/gilles-michaud",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/813786%20-%20Gilles%20Michaud%20-%20swear-in%20ceremony%20-%2002_07_2019%20-%20Cropped.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/department-of-safety-and-security\/all",
     "organizational_chart_link":"https:\/\/www.un.org\/safety-and-security\/en\/about-us\/organisational-chart",
     "budget_financial_reporting_link":"No link found",
@@ -1977,7 +1976,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rect1MYMj5Q8pJicq",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ECA",
@@ -2010,7 +2010,6 @@
     "head_of_entity_name":"Claver Gatete",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/claver-gatete",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Claver%20Gatete%202_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-commission-for-africa\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2022,7 +2021,8 @@
     "socials_twitter":"https:\/\/x.com\/ECA_OFFICIAL",
     "socials_instagram":null,
     "record_id":"recxndYw1TgLU9w1d",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ECE",
@@ -2055,7 +2055,6 @@
     "head_of_entity_name":"Tatiana Molcean",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/tatiana-molcean",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/tatiana-molcean.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-economic-commission-for-europe\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2067,7 +2066,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recvxJhz4HZD8A7DW",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ECLAC",
@@ -2100,7 +2100,6 @@
     "head_of_entity_name":"Jos\u00e9 Manuel Salazar-Xirinachs",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/jos%C3%A9-salazar-xirinachs",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Salazar-Xirinachs_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-commission-for-latin-america-and-the-caribbean\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2112,7 +2111,8 @@
     "socials_twitter":"https:\/\/x.com\/eclac_un",
     "socials_instagram":null,
     "record_id":"recSG3XLBq8T1ODHA",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"EOSG",
@@ -2145,7 +2145,6 @@
     "head_of_entity_name":"Amina J. Mohammed",
     "head_of_entity_level":"DSG",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/dsg\/index.shtml",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/dsg_ammina_m_pp_2020.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/executive-office-of-the-secretary-general\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -2157,7 +2156,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recnPtOYKtMK71eDR",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":"\/images\/headshots\/EOSG.png"
   },
   {
     "entity":"ESCAP",
@@ -2190,7 +2190,6 @@
     "head_of_entity_name":"Armida Salsiah Alisjahbana",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/armida-alisjahbana-1",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/armida-salsiah-alisjahbana_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-and-social-commission-for-asia-and-the-pacific\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2202,7 +2201,8 @@
     "socials_twitter":"https:\/\/x.com\/UNESCAP",
     "socials_instagram":null,
     "record_id":"rec4cT8fdTPBWIdLF",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ESCWA",
@@ -2235,7 +2235,6 @@
     "head_of_entity_name":"Rola A. A. H. Dashti",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/rola-dashti",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Dashti.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/economic-and-social-commission-for-western-asia\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unescwa.org\/about\/services\/budget",
@@ -2247,7 +2246,8 @@
     "socials_twitter":"https:\/\/x.com\/UNESCWA",
     "socials_instagram":null,
     "record_id":"recRbBKnLKQ1SCqiu",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Ethics Office",
@@ -2280,7 +2280,6 @@
     "head_of_entity_name":"Juraj Strasser",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/juraj-strasser",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/D2%20Villadsen%203.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-ethics-office\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.un.org\/en\/ethics\/overview\/documents-resources.shtml",
@@ -2292,7 +2291,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recyODC2QoLjSFM7Y",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"FAO",
@@ -2325,7 +2325,6 @@
     "head_of_entity_name":"Qu Dongyu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.fao.org\/director-general\/biography",
-    "head_of_entity_headshot_link":"https:\/\/www.fao.org\/images\/dglibraries\/default-album\/dg_banner-bio.png?sfvrsn=d88f028_11",
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.fao.org\/about\/org-chart\/en\/",
     "budget_financial_reporting_link":"https:\/\/www.fao.org\/about\/strategy-programme-budget\/fao-budget\/",
@@ -2337,7 +2336,8 @@
     "socials_twitter":"https:\/\/x.com\/FAO",
     "socials_instagram":null,
     "record_id":"rec34mTr76akEumoS",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"FP-Delisting",
@@ -2370,7 +2370,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":"Other",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2382,7 +2381,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recnfDGdly4EwcAqi",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Fifth Committee",
@@ -2415,7 +2415,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2427,7 +2426,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recb1o7tJGgojo4XZ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"First Committee",
@@ -2460,7 +2460,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2472,7 +2471,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recBpBLTjYahyv6gP",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Fourth Committee",
@@ -2505,7 +2505,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2517,7 +2516,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recbADaJDd2oeY6PZ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"GoE-DRC",
@@ -2550,7 +2550,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -2562,7 +2561,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recBnzdRxwKlLAs7t",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"HLPF",
@@ -2596,7 +2596,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2608,7 +2607,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recIdB3zEg9k3LcA1",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"HRC",
@@ -2641,7 +2641,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2653,7 +2652,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recZgh2dBZQxv4CZV",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IAEA",
@@ -2686,7 +2686,6 @@
     "head_of_entity_name":"Rafael Mariano Grossi",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.iaea.org\/about\/overview\/budget",
@@ -2698,7 +2697,8 @@
     "socials_twitter":"https:\/\/x.com\/iaeaorg",
     "socials_instagram":null,
     "record_id":"recncAmoLow3joz7t",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ICAO",
@@ -2731,7 +2731,6 @@
     "head_of_entity_name":"Juan Carlos Salazar",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.icao.int\/sites\/default\/files\/Meetings\/a42\/Documents\/WP\/wp_037_en.pdf",
     "budget_financial_reporting_link":"No link found",
@@ -2743,7 +2742,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recoWyTcy03jBMarj",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ICC",
@@ -2776,7 +2776,6 @@
     "head_of_entity_name":"Judge Tomoko Akane",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/asp.icc-cpi.int\/bureau\/WorkingGroups\/budget",
@@ -2788,7 +2787,8 @@
     "socials_twitter":"https:\/\/x.com\/IntlCrimCourt",
     "socials_instagram":null,
     "record_id":"rec0bNSqNgqo95dai",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ICJ",
@@ -2821,7 +2821,6 @@
     "head_of_entity_name":"Iwasawa Yuji",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2833,7 +2832,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recOOLbZemD5LgGj4",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ICSC",
@@ -2866,7 +2866,6 @@
     "head_of_entity_name":"Larbi Djacta",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -2878,7 +2877,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recJJOi4LgzwXCf8y",
-    "review_needed":false
+    "review_needed":false,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IFAD",
@@ -2911,7 +2911,6 @@
     "head_of_entity_name":"Alvaro Lario",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.ifad.org\/documents\/d\/new-ifad.org\/ifad-organigram",
     "budget_financial_reporting_link":"no budget, but annual financial statements (https:\/\/www.ifad.org\/en\/financial-documents)",
@@ -2923,7 +2922,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recq8le2JmCvOVZUj",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IIIM",
@@ -2956,7 +2956,6 @@
     "head_of_entity_name":"Robert Petit",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/robert-petit",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Petit.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/international-impartial-and-independent-mechanism\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -2968,7 +2967,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recy7YnXXyHHd3CY4",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IIM",
@@ -3001,7 +3001,6 @@
     "head_of_entity_name":"Nicholas Koumjian",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/nicholas-koumjian",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Koumjian%202.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/independent-mechanism-for-myanmar\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -3013,7 +3012,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recNA16uoctYIGPO4",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IIMP",
@@ -3046,7 +3046,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3058,7 +3057,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reclHRkid64dk3Gjs",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ILC",
@@ -3091,7 +3091,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3103,7 +3102,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recfnGmbX8HIZ9at6",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ILO",
@@ -3136,7 +3136,6 @@
     "head_of_entity_name":"Gilbert F. Houngbo",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.ilo.org\/sites\/default\/files\/2025-01\/ILO_organizational%20chart_Jan-2025-EN.pdf",
     "budget_financial_reporting_link":"https:\/\/www.ilo.org\/about-ilo\/how-ilo-works\/organizational-structure-international-labour-office\/financial-management\/programme-and-budget",
@@ -3148,7 +3147,8 @@
     "socials_twitter":"https:\/\/x.com\/ilo",
     "socials_instagram":null,
     "record_id":"rectSWiGQEmZwFpam",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IMF",
@@ -3181,7 +3181,6 @@
     "head_of_entity_name":"Kristalina Georgieva",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.imf.org\/en\/About\/Organization-Chart",
     "budget_financial_reporting_link":"No link found",
@@ -3193,7 +3192,8 @@
     "socials_twitter":"https:\/\/x.com\/IMFNews",
     "socials_instagram":null,
     "record_id":"recLFYcap9SbigiSH",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IMO",
@@ -3226,7 +3226,6 @@
     "head_of_entity_name":"Arsenio Dominguez",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.imo.org\/en\/about\/pages\/structure.aspx",
@@ -3238,7 +3237,8 @@
     "socials_twitter":"https:\/\/x.com\/IMOHQ",
     "socials_instagram":null,
     "record_id":"rechM09wNlTVl2QJo",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IOM",
@@ -3271,7 +3271,6 @@
     "head_of_entity_name":"Amy Pope",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/governingbodies.iom.int\/financial-reports",
@@ -3283,7 +3282,8 @@
     "socials_twitter":"https:\/\/x.com\/UNmigration",
     "socials_instagram":null,
     "record_id":"recAvkx0Bp6WUtbyA",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"IRMCT",
@@ -3316,7 +3316,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3328,7 +3327,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recMit4ti1hLd4giz",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ISA",
@@ -3361,7 +3361,6 @@
     "head_of_entity_name":"Leticia Reis de Carvalho",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3373,7 +3372,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recGpY4POIb9tjpcd",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ITC",
@@ -3406,7 +3406,6 @@
     "head_of_entity_name":"Pamela Coke-Hamilton",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/pamela-coke-hamilton",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Pamela%20Rosemarie%20Coke-Hamilton.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/international-trade-centre\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.intracen.org\/about-us\/governance#scroll-to-section-budget",
@@ -3418,7 +3417,8 @@
     "socials_twitter":"https:\/\/x.com\/ITCnews",
     "socials_instagram":null,
     "record_id":"reclfZOhn467DV17Q",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ITLOS",
@@ -3451,7 +3451,6 @@
     "head_of_entity_name":"Judge Tomas Heidar",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.itlos.org\/en\/main\/general-information\/finances\/",
@@ -3463,7 +3462,8 @@
     "socials_twitter":"https:\/\/x.com\/ITLOS_TIDM",
     "socials_instagram":null,
     "record_id":"rec0JYTIt0d2UirTG",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ITU",
@@ -3496,7 +3496,6 @@
     "head_of_entity_name":"Doreen Bogdan-Martin",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/digitallibrary.un.org\/record\/829886?ln=en&v=pdf",
     "budget_financial_reporting_link":"https:\/\/www.itu.int\/en\/mediacentre\/backgrounders\/Pages\/how-is-itu-funded.aspx",
@@ -3508,7 +3507,8 @@
     "socials_twitter":"https:\/\/x.com\/ITU",
     "socials_instagram":null,
     "record_id":"recXdCZaQNk8fN6pC",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"JIU",
@@ -3541,7 +3541,6 @@
     "head_of_entity_name":"Uren Pillay",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unjiu.org\/content\/funding-and-budget",
@@ -3553,7 +3552,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recKb8UBK0ppNGHMO",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"KJSO",
@@ -3586,7 +3586,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3598,7 +3597,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"receNKXgqI5uPln2D",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"MINURSO",
@@ -3631,7 +3631,6 @@
     "head_of_entity_name":"Alexander Ivanko",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/alexander-ivanko",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Ivanko.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-mission-for-the-referendum-in-western-sahara\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3643,7 +3642,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recNkBvmVMaW1tqW3",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"MINUSCA",
@@ -3676,7 +3676,6 @@
     "head_of_entity_name":"Valentine Rugwabiza",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/valentine-rugwabiza",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Rugwabiza%2C%20Valentine.jpeg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-multidimensional-integrated-stabilization-mission-in-the-central-african-republic\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3688,7 +3687,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recSGMvnraoKPlX7M",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"MINUSMA",
@@ -3721,7 +3721,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3733,7 +3732,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recSMrnLUUB6SukYJ",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"MONUSCO",
@@ -3766,7 +3766,6 @@
     "head_of_entity_name":"Bintou Keita",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/bintou-keita-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/srsg_bintou_keita.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-organization-stabilization-mission-in-the-democratic-republic-of-the-congo\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3778,7 +3777,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recTi0QSF0WJyGvIT",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"MSC",
@@ -3811,7 +3811,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3823,7 +3822,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recEonud8DHCCvCQH",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"NGO Committee",
@@ -3856,7 +3856,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -3868,7 +3867,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec5SVGmazsf7H1JZ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OAJ",
@@ -3901,7 +3901,6 @@
     "head_of_entity_name":"Alayne Frankson-Wallace",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/alayne-frankson-wallace",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/OAJ.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-administration-of-justice\/all",
     "organizational_chart_link":"https:\/\/www.un.org\/en\/internaljustice\/oaj\/organizational-structure.shtml",
     "budget_financial_reporting_link":"No link found",
@@ -3913,7 +3912,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec9LNHf75uRnmHnM",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OCHA",
@@ -3946,7 +3946,6 @@
     "head_of_entity_name":"Tom Fletcher",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/tom-fletcher",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Fletcher%203.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-for-the-coordination-of-humanitarian-affairs\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unocha.org\/our-funding",
@@ -3958,7 +3957,8 @@
     "socials_twitter":"https:\/\/x.com\/UNOCHA",
     "socials_instagram":null,
     "record_id":"rec74fnI62TBYdoqM",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OCT",
@@ -3991,7 +3991,6 @@
     "head_of_entity_name":"Vladimir Ivanovich Voronkov",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.un.org\/counterterrorism\/office-structure",
     "budget_financial_reporting_link":"https:\/\/www.un.org\/counterterrorism\/funding-and-donors",
@@ -4003,7 +4002,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_OCT",
     "socials_instagram":null,
     "record_id":"reckHDXweiNKELYAZ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ODA",
@@ -4036,7 +4036,6 @@
     "head_of_entity_name":"Izumi Nakamitsu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/kim-won-soo-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Nakamitsu.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-for-disarmament-affairs\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/disarmament.unoda.org\/en\/our-work\/cross-cutting-issues\/financial-matters",
@@ -4048,7 +4047,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_Disarmament",
     "socials_instagram":null,
     "record_id":"rec79p1gxr2WdZATe",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ODET",
@@ -4081,7 +4081,6 @@
     "head_of_entity_name":"Amandeep Singh Gill",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/amandeep-gill",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/amandeep-singh-gill.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-for-digital-and-emerging-technologies\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4093,7 +4092,8 @@
     "socials_twitter":"https:\/\/x.com\/ODET_UN",
     "socials_instagram":null,
     "record_id":"recrho7nxX31PpMXf",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"ODPP",
@@ -4126,7 +4126,6 @@
     "head_of_entity_name":"(Vacant)",
     "head_of_entity_level":"D-1 or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4138,7 +4137,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recsrLkP0BweOawh7",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OHCHR",
@@ -4171,7 +4171,6 @@
     "head_of_entity_name":"Volker T\u00fcrk",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/volker-t%C3%BCrk-2",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Turk%2C%20Volker_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-united-nations-high-commissioner-for-human-rights\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.ohchr.org\/about-us\/funding-and-budget",
@@ -4183,7 +4182,8 @@
     "socials_twitter":"https:\/\/x.com\/UNHumanRights",
     "socials_instagram":null,
     "record_id":"recxZqYNC0k2r1gRk",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OICT",
@@ -4216,7 +4216,6 @@
     "head_of_entity_name":"Bernardo Mariano Jr.",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4228,7 +4227,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_OICT",
     "socials_instagram":null,
     "record_id":"recgMjRpIumg9wRFt",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OIOS",
@@ -4261,7 +4261,6 @@
     "head_of_entity_name":"Fatoumata Ndiaye",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/fatoumata-ndiaye-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/oios0487.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-internal-oversight-services\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4273,7 +4272,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recrMUBCbLx9uGl3Q",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OLA",
@@ -4306,7 +4306,6 @@
     "head_of_entity_name":"Elinor Jane Britt Hammarskj\u00f6ld",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/elinor-jane-hammarskj%C3%B6ld",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Hammarskj%C3%B6ld%20v3.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-legal-affairs\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4318,7 +4317,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recK6nxb3zyMzvwE8",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":"\/images\/headshots\/OLA.jpg"
   },
   {
     "entity":"OMBUD-RES1904",
@@ -4351,7 +4351,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4363,7 +4362,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recosEkpdpTaMyfPA",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OOSA",
@@ -4396,7 +4396,6 @@
     "head_of_entity_name":"Aarti Holla-Maini",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/aarti-maini",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/D2%20Aarti%20Holla%20Maini.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-outer-space-affairs\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4408,7 +4407,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec3b56aenxUD3sai",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OPCW",
@@ -4441,7 +4441,6 @@
     "head_of_entity_name":"Fernando Arias",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4453,7 +4452,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recxthOEnic68zag0",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OPEG-WS",
@@ -4486,7 +4486,6 @@
     "head_of_entity_name":"Staffan de Mistura",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/staffan-de-mistura",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/de%20Mistura%2C%20Staffan.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-personal-envoy-of-the-secretary-general-for-western-sahara\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4498,7 +4497,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recWTP7Mqw8o4zP4T",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSAA",
@@ -4531,7 +4531,6 @@
     "head_of_entity_name":"Cristina Isabel Lopes da Silva Monteiro Duarte",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/cristina-isabel-lopes-da-silva-monteiro-duarte",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Duarte.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-adviser-on-africa\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4543,7 +4542,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reck7IEYTtqoHBHCq",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSACAJT",
@@ -4576,7 +4576,6 @@
     "head_of_entity_name":"Selwin Charles Hart",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/selwin-hart",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Hart.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-adviser-on-climate-action-and-just-transition\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4588,7 +4587,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reccoUuX20wq7286K",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSASG-Cyprus",
@@ -4621,7 +4621,6 @@
     "head_of_entity_name":"Colin William Stewart",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4633,7 +4632,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec2KzmTAK9Usa6zB",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSASG-Genocide",
@@ -4666,7 +4666,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4678,7 +4677,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reccmmLoJVpdBQGLH",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSC-SEA",
@@ -4711,7 +4711,6 @@
     "head_of_entity_name":"Christian Saunders",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/christian-saunders-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/UN7142580_ee6_.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-coordinator-on-improving-the-un-response-to-sexual-exploitation-and-abuse\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4723,7 +4722,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recWmjhBsoaoB4cv2",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSE Syria",
@@ -4756,7 +4756,6 @@
     "head_of_entity_name":"Geir Otto Pedersen",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/geir-pedersen",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Pedersen%2C%20Geir.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-for-syria\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4768,7 +4767,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recarBduCii0diPVg",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OSESGY",
@@ -4801,7 +4801,6 @@
     "head_of_entity_name":"Hans Grundberg",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/hans-grundberg",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/un_photo_loey_felipe.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-for-yemen\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4813,7 +4812,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec86X5ivN9oChGqI",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"OVRA",
@@ -4846,7 +4846,6 @@
     "head_of_entity_name":"Najla Nassif Palma",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/najla-palma",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Palma.jpeg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-victims%27-rights-advocate\/all",
     "organizational_chart_link":"https:\/\/www.un.org\/preventing-sexual-exploitation-and-abuse\/sites\/www.un.org.preventing-sexual-exploitation-and-abuse\/files\/ovra_fact_sheet_2021.pdf",
     "budget_financial_reporting_link":null,
@@ -4858,7 +4857,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_OVRA",
     "socials_instagram":null,
     "record_id":"rec3CIlH9lUgRAdfw",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Other Committees",
@@ -4891,7 +4891,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4903,7 +4902,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recls5Ur71xA5qugt",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PBSO",
@@ -4936,7 +4936,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4948,7 +4947,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recHhvjPLPh2kbGnG",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PESG-Sudan",
@@ -4981,7 +4981,6 @@
     "head_of_entity_name":"Ramtane Lamamra",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -4993,7 +4992,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6b5dgcABolgwoD",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-CAR",
@@ -5026,7 +5026,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5038,7 +5037,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recyg2xLyhGOwMigv",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-Haiti",
@@ -5071,7 +5071,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5083,7 +5082,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recdrNefGS2UtJSIW",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-Libya",
@@ -5116,7 +5116,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5128,7 +5127,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recrhrAvNybRPGvmB",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-RES2713",
@@ -5161,7 +5161,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5173,7 +5172,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6sbobZJQgj0CJb",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-S.Sudan",
@@ -5206,7 +5206,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5218,7 +5217,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recI0vvX1SC9v9zJ7",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-Sudan",
@@ -5251,7 +5251,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5263,7 +5262,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recIkVEO23wDYT2Vu",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"PoE-Yemen",
@@ -5296,7 +5296,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5308,7 +5307,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recDVMzTvy4UMgY6j",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"RSCE",
@@ -5341,7 +5341,6 @@
     "head_of_entity_name":"Paulin Djomo",
     "head_of_entity_level":"D-2",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5353,7 +5352,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recPVYJ9vnq3t8ai2",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SASG-PGRP",
@@ -5386,7 +5386,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5398,7 +5397,8 @@
     "socials_twitter":"https:\/\/x.com\/UNOSAPG",
     "socials_instagram":null,
     "record_id":"receK2JnmVGbZB8AA",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SASG-SID",
@@ -5431,7 +5431,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5443,7 +5442,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recdi8mM0PoyEcyXr",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SC-RES1540",
@@ -5476,7 +5476,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5488,7 +5487,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recjs5t6N4n57Xaca",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SC-RES1718",
@@ -5521,7 +5521,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5533,7 +5532,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recyL2Lqkch7Gq8Bz",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SC-RES2231",
@@ -5566,7 +5566,6 @@
     "head_of_entity_name":"Not applicable",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5578,7 +5577,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec3jqpdCJKl0SIS3",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SESG GL",
@@ -5611,7 +5611,6 @@
     "head_of_entity_name":"Huang Xia",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/huang-xia-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/huang-xia.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-for-the-great-lakes-region-of-africa\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5623,7 +5622,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rechj1IFTcRUp2zH4",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SESG Horn of Africa",
@@ -5656,7 +5656,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5668,7 +5667,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reci5RMvEPI9ZfIKE",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SESG-MYR",
@@ -5701,7 +5701,6 @@
     "head_of_entity_name":"Julie Bishop",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/julie-bishop",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Bishop.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-envoy-of-the-secretary-general-on-myanmar\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5713,7 +5712,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recJPNSsC5a3qlvBL",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SRSG-CAAC",
@@ -5746,7 +5746,6 @@
     "head_of_entity_name":"Virginia Gamba de Potgieter",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5758,7 +5757,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"receIHZlzrc3NIg7a",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SRSG-SVC",
@@ -5791,7 +5791,6 @@
     "head_of_entity_name":"Pramila Patten",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/zainab-bangura",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Patten.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-representative-of-the-secretary-general-on-sexual-violence-in-conflict\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5803,7 +5802,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recQNuaMZcSFpXPi9",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SRSG-VAC",
@@ -5836,7 +5836,6 @@
     "head_of_entity_name":"Najat Maalla",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/najat-maalla",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/najat_3.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-special-representative-of-the-secretary-general-on-violence-against-children\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5848,7 +5847,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recTcGOgw0JgxvTQg",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"SWEO",
@@ -5881,7 +5881,6 @@
     "head_of_entity_name":"Andrea Cook",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5893,7 +5892,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec56BW3bX5ybNqUu",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Sanctions WG",
@@ -5926,7 +5926,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5938,7 +5937,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recs0CPY9cyFVCAj3",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Second Committee",
@@ -5971,7 +5971,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -5983,7 +5982,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recHFpnhzZSbUxmw5",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Sixth Committee",
@@ -6016,7 +6016,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6028,7 +6027,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec9qt58ggrQkxgjT",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Standing Committees",
@@ -6061,7 +6061,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6073,7 +6072,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec46yDEMZbEooHwE",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"StatCom",
@@ -6106,7 +6106,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6118,7 +6117,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recMfmpuLo0J0lLOi",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"TDB",
@@ -6151,7 +6151,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6163,7 +6162,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recIAqt7coUH7GEgj",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Third Committee",
@@ -6196,7 +6196,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6208,7 +6207,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recCdZmXTZ6Z7MQgI",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UN Tourism",
@@ -6241,7 +6241,6 @@
     "head_of_entity_name":"Zurab Pololikashvili",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"No link found",
@@ -6253,7 +6252,8 @@
     "socials_twitter":"https:\/\/x.com\/UNWTO",
     "socials_instagram":null,
     "record_id":"recnvjNBmhubzvWIl",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UN Youth",
@@ -6286,7 +6286,6 @@
     "head_of_entity_name":"Felipe Paullier",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/felipe-paullier",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Youth%20Affairs_Portrait.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-youth-office\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6298,7 +6297,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recMF9tGtzMfwevGl",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UN-Habitat",
@@ -6331,7 +6331,6 @@
     "head_of_entity_name":"Anacl\u00e1udia Rossbach",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/anacl%C3%A1udia-rossbach-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Rossbach_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-human-settlements-programme\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6343,7 +6342,8 @@
     "socials_twitter":"https:\/\/x.com\/UNHABITAT",
     "socials_instagram":null,
     "record_id":"recX6tEWXoIrfBpYt",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UN-Habitat Assembly",
@@ -6376,7 +6376,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6388,7 +6387,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recIphQzX8ju7uXbW",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UN-OHRLLS",
@@ -6421,7 +6421,6 @@
     "head_of_entity_name":"Rabab Fatima",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/rabab-fatima",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/rabab-fatima.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-high-representative-for-the-least-developed-countries%2C-landlocked-developing-countries-and-small-island-developing-states\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6433,7 +6432,8 @@
     "socials_twitter":"https:\/\/x.com\/UNOHRLLS",
     "socials_instagram":null,
     "record_id":"recW3R0wN2gL8MqlT",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UN-Women",
@@ -6466,7 +6466,6 @@
     "head_of_entity_name":"Sima Sami Iskandar Bahous",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/sima-bahous",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Sima%20Sami%20Bahous.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-entity-for-gender-equality-and-the-empowerment-of-women\/all",
     "organizational_chart_link":"https:\/\/www.unwomen.org\/sites\/default\/files\/2025-08\/unw_org_chart_internal_20250806.pdf",
     "budget_financial_reporting_link":"https:\/\/www.unwomen.org\/en\/executive-board\/strategic-plan-review\/financial-resources",
@@ -6478,7 +6477,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_Women",
     "socials_instagram":null,
     "record_id":"rec0erUWOFiUWydZt",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNAIDS",
@@ -6511,7 +6511,6 @@
     "head_of_entity_name":"UNAIDS Executive Director",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unaids.org\/en\/topic\/resources",
@@ -6523,7 +6522,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec5fCpr9TUieTm2n",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNAMA",
@@ -6556,7 +6556,6 @@
     "head_of_entity_name":"Roza Isakovna Otunbayeva",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/roza-otunbayeva",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Roza%20Otunbayeva.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/un-assistance-mission-in-afghanistan\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6568,7 +6567,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recAZ0pHMtrrXDjNH",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNAMI",
@@ -6601,7 +6601,6 @@
     "head_of_entity_name":"Mohamed Al Hassan",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/mohamed-al-hassan",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Al%20Hassan%202.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/un-assistance-mission-for-iraq\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6613,7 +6612,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recFM9lcLQKNpE7GL",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNAOC",
@@ -6646,7 +6646,6 @@
     "head_of_entity_name":"Miguel \u00c1ngel Moratinos Cuyaub\u00e9",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/miguel-moratinos-cuyaub%C3%A9",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/moratinos_official_web.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-alliance-of-civilizations\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6658,7 +6657,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recl1wBnKvoYenYOt",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNCCD",
@@ -6691,7 +6691,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6703,7 +6702,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec3yNuGujvDv0B5y",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNCDF",
@@ -6736,7 +6736,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6748,7 +6747,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rechT5Kq5PvgEg3ki",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNCITRAL",
@@ -6781,7 +6781,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6793,7 +6792,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recG7vLH0wjxAtosm",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNCTAD",
@@ -6826,7 +6826,6 @@
     "head_of_entity_name":"Rebeca Grynspan",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/rebeca-grynspan",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/rebeca-grynspan-mayufis.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-conference-on-trade-and-development\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6838,7 +6837,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6ytSiz63IOwWaj",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNDC",
@@ -6871,7 +6871,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6883,7 +6882,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recguLpVcwvmCQhal",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNDEF",
@@ -6916,7 +6916,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6928,7 +6927,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recOALIF5xKjV3FsS",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNDOF",
@@ -6961,7 +6961,6 @@
     "head_of_entity_name":"Anita Asmah",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/major-general-anita-asmah",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Asmah.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-disengagement-observer-force\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -6973,7 +6972,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recl37Ls73tFqUFoW",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNDP",
@@ -7006,7 +7006,6 @@
     "head_of_entity_name":"Haoliang Xu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/haoliang-xu-1",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Xu.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-development-programme\/all",
     "organizational_chart_link":"https:\/\/www.undp.org\/organizational-chart",
     "budget_financial_reporting_link":null,
@@ -7018,7 +7017,8 @@
     "socials_twitter":"https:\/\/x.com\/UNDP",
     "socials_instagram":"https:\/\/www.instagram.com\/undp\/",
     "record_id":"reciqPKthtKwAt9ko",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNDRR",
@@ -7051,7 +7051,6 @@
     "head_of_entity_name":"Kamal Kishore",
     "head_of_entity_level":"ASG",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/kamal-kishore",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Kishore%202.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-disaster-risk-reduction\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7063,7 +7062,8 @@
     "socials_twitter":"https:\/\/x.com\/UNDRR",
     "socials_instagram":null,
     "record_id":"recZT21ua2mIGNLxZ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNEA",
@@ -7096,7 +7096,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7108,7 +7107,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec6wgojs0NF9CoTw",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNEP",
@@ -7141,7 +7141,6 @@
     "head_of_entity_name":"Inger La Cour Andersen",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/inger-andersen",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/IngerAndersen-5965.jpg",
     "global_leadership_team_url":"http:\/\/un.org\/sg\/en\/global-leadership\/united-nations-environment-programme\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unep.org\/resources\/programme-work-and-budget",
@@ -7153,7 +7152,8 @@
     "socials_twitter":"https:\/\/x.com\/UNEP",
     "socials_instagram":null,
     "record_id":"rec9LNcHiHps3azcb",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNESCO",
@@ -7186,7 +7186,6 @@
     "head_of_entity_name":"Audrey Azoulay",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/unesdoc.unesco.org\/archives\/organization-charts",
     "budget_financial_reporting_link":"https:\/\/www.unesco.org\/en\/budget-strategy",
@@ -7198,7 +7197,8 @@
     "socials_twitter":"https:\/\/x.com\/UNESCO",
     "socials_instagram":null,
     "record_id":"recPpfw0tYHgLyOeq",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNFF",
@@ -7231,7 +7231,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7243,7 +7242,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recvcjFU8qzuxPqKU",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNFICYP",
@@ -7276,7 +7276,6 @@
     "head_of_entity_name":"Colin William Stewart",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/colin-stewart-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/%20Stewart-Colin.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-peacekeeping-force-in-cyprus\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7288,7 +7287,8 @@
     "socials_twitter":"https:\/\/x.com\/UN_CYPRUS",
     "socials_instagram":null,
     "record_id":"recJgMPLS2LeeUry0",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNFPA",
@@ -7321,7 +7321,6 @@
     "head_of_entity_name":"Diene Keita",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/diene-keita",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Diene%20Keita.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-population-fund\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unfpa.org\/finance-and-budget-policies",
@@ -7333,7 +7332,8 @@
     "socials_twitter":"https:\/\/x.com\/UNFPA",
     "socials_instagram":null,
     "record_id":"recEUmuDCpJgwW6nX",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNGC",
@@ -7366,7 +7366,6 @@
     "head_of_entity_name":"Sanda Ojiambo",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/sanda-ojiambo",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Sanda%20Ojiambo.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-global-compact\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7378,7 +7377,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recBFnqMRXHR63qRB",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNGEGN",
@@ -7411,7 +7411,6 @@
     "head_of_entity_name":"Pierre Jaillard",
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7423,7 +7422,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recYzCtvnl5ueVQRA",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNGGIM",
@@ -7456,7 +7456,6 @@
     "head_of_entity_name":"Ingrid Vanden Berghe, Fernand Eanes Bale, Deirdre Dalpiaz Bishop",
     "head_of_entity_level":"Not applicable",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7468,7 +7467,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recWVxWmeSLkY9pLq",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNGSC Brindisi",
@@ -7501,7 +7501,6 @@
     "head_of_entity_name":"Anton Antchev",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7513,7 +7512,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec9SsCUYENfxKzXI",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNHCR",
@@ -7546,7 +7546,6 @@
     "head_of_entity_name":"Filippo Grandi",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/filippo-grandi",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Grandi.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-un-high-commissioner-for-refugees\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unhcr.org\/us\/budget-and-expenditure",
@@ -7558,7 +7557,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recONyAkgZp8PtL2n",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNICEF",
@@ -7591,7 +7591,6 @@
     "head_of_entity_name":"Catherine Mary Russell",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/catherine-russell",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Russell.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-children%27s-fund\/all",
     "organizational_chart_link":"https:\/\/www.unicef.org\/executiveboard\/media\/21691\/file\/Integrated-Budget-MTR-Annexes.pdf",
     "budget_financial_reporting_link":"https:\/\/www.unicef.org\/executiveboard\/documents\/unicef-integrated-budget-2026-2029-srs-2025",
@@ -7603,7 +7602,8 @@
     "socials_twitter":"https:\/\/x.com\/UNICEF",
     "socials_instagram":null,
     "record_id":"recJHYfjKsCmaAsiv",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNICEF EB",
@@ -7636,7 +7636,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7648,7 +7647,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recWoppNv5MfjuSgh",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNICRI",
@@ -7681,7 +7681,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7693,7 +7692,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recd7sPvBpm8rMezZ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNIDIR",
@@ -7726,7 +7726,6 @@
     "head_of_entity_name":"Robin Geiss",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unidir.org\/who-we-are\/funding-and-support\/",
@@ -7738,7 +7737,8 @@
     "socials_twitter":"https:\/\/x.com\/UNIDIR",
     "socials_instagram":null,
     "record_id":"recDcJPvmMUbIVM71",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNIDO",
@@ -7771,7 +7771,6 @@
     "head_of_entity_name":"Gerd M\u00fcller",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.unido.org\/sites\/default\/files\/unido-publications\/2025-04\/ANNUAL%20REPORT%202024.pdf",
     "budget_financial_reporting_link":"https:\/\/www.unido.org\/resources\/policymaking-organs\/programme-and-budget-committee\/reports-programme-and-budget-committee",
@@ -7783,7 +7782,8 @@
     "socials_twitter":"https:\/\/x.com\/UNIDO",
     "socials_instagram":null,
     "record_id":"recqvDvB4CrX1b91c",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNIFIL",
@@ -7816,7 +7816,6 @@
     "head_of_entity_name":"Aroldo L\u00e1zaro S\u00e1enz",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/lieutenant-general-aroldo-l%C3%A1zaro-s%C3%A1enz",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Aroldo%20La%CC%81zaro.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-interim-force-in-lebanon\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7828,7 +7827,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recINYmYvywXyHJu5",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNISFA",
@@ -7861,7 +7861,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7873,7 +7872,8 @@
     "socials_twitter":"https:\/\/x.com\/UNISFA_1",
     "socials_instagram":null,
     "record_id":"recIBWjQCGzvMEnR2",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNITAR",
@@ -7906,7 +7906,6 @@
     "head_of_entity_name":"Michelle Gyles-McDonnough",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unitar.org\/about\/programme-budget",
@@ -7918,7 +7917,8 @@
     "socials_twitter":"https:\/\/x.com\/UNITAR",
     "socials_instagram":null,
     "record_id":"reckpBKtUMGE1GoCX",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNJSPB",
@@ -7951,7 +7951,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -7963,7 +7962,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recnd5LrmTAy4vrAM",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNMHA",
@@ -7996,7 +7996,6 @@
     "head_of_entity_name":"Mari Yamashita",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8008,7 +8007,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recceiLlGz4XetoTk",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNMIK",
@@ -8041,7 +8041,6 @@
     "head_of_entity_name":"Caroline Ziadeh",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/unmik.unmissions.org\/united-nations-resolution-1244",
     "budget_financial_reporting_link":null,
@@ -8053,7 +8052,8 @@
     "socials_twitter":"https:\/\/x.com\/UNMIKosovo",
     "socials_instagram":null,
     "record_id":"recTYrT0ED3nvKkm0",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNMISS",
@@ -8086,7 +8086,6 @@
     "head_of_entity_name":"Nicholas Haysom",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/nicholas-haysom-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Nicholas-Haysom.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/un-mission-in-south-sudan\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8098,7 +8097,8 @@
     "socials_twitter":"https:\/\/x.com\/unmissmedia",
     "socials_instagram":null,
     "record_id":"rec1iC0ulqpufwWld",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNMOGIP",
@@ -8131,7 +8131,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8143,7 +8142,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recIffj1OTiF3Tevr",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOAU",
@@ -8176,7 +8176,6 @@
     "head_of_entity_name":"Parfait Onanga-Anyanga",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/parfait-onanga-anyanga-1",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Onanga-Anyanga%2C%20Parfait_1.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-to-the-african-union\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8188,7 +8187,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec1XtwC1aZhORQYy",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOCA",
@@ -8221,7 +8221,6 @@
     "head_of_entity_name":"Abdou Abarry",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/abdou-abarry",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Abdou%20Abarry.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-regional-office-for-central-africa\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8233,7 +8232,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recQfGYFxHIaE8hHM",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNODC",
@@ -8266,7 +8266,6 @@
     "head_of_entity_name":"Ghada Fathy Ismail Waly",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8278,7 +8277,8 @@
     "socials_twitter":"https:\/\/x.com\/UNODC",
     "socials_instagram":null,
     "record_id":"recMy60x38xLtIpZz",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOG",
@@ -8311,7 +8311,6 @@
     "head_of_entity_name":"Tatiana Valovaya",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/ghada-waly",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Waly.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-on-drugs-and-crime-and-united-nations-office-at-vienna\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8323,7 +8322,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recX6jnou30u0z6yL",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOMS",
@@ -8356,7 +8356,6 @@
     "head_of_entity_name":"Shireen Dodson",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/shireen-dodson",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Dodson.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-ombudsman-and-mediation-services\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8368,7 +8367,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recf5StOJVveEzaXx",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNON",
@@ -8401,7 +8401,6 @@
     "head_of_entity_name":"Zainab Hawa Bangura",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/zainab-bangura-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Bangura.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-at-nairobi\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8413,7 +8412,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recrebLDcJecDWgxd",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOP",
@@ -8446,7 +8446,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/mptf.undp.org\/participating-organizations\/unop",
@@ -8458,7 +8457,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recqzjkhO6V9P3eMo",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOPS",
@@ -8491,7 +8491,6 @@
     "head_of_entity_name":"Jorge Moreira da Silva",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/jorge-moreira-da-silva",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Jorge_Moreira_da_Silva.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-project-services\/all",
     "organizational_chart_link":"https:\/\/content.unops.org\/documents\/libraries\/policies-2020\/executive-office-directives-and-instructions\/organizational-principles-and-governance-model\/en\/UNOPS-organigramme_EN.pdf",
     "budget_financial_reporting_link":null,
@@ -8503,7 +8502,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recZhS67PVtqOQSoF",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOSSC",
@@ -8536,7 +8536,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8548,7 +8547,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec1NeAMfma8ZyECI",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOV",
@@ -8581,7 +8581,6 @@
     "head_of_entity_name":"Ghada Fathy Ismail Waly",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8593,7 +8592,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recJM3uGFcDnnweGg",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNOWAS",
@@ -8626,7 +8626,6 @@
     "head_of_entity_name":"Leonardo Santos Sim\u00e3o",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/leonardo-sim%C3%A3o-1",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/UNOWAS%20SRSG%20Simao_0.JPG",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-office-for-west-africa-and-the-sahel\/all",
     "organizational_chart_link":"https:\/\/unowas.unmissions.org\/unowas-mandate",
     "budget_financial_reporting_link":null,
@@ -8638,7 +8637,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reckyRWzz3dnm0mTp",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNPC",
@@ -8672,7 +8672,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8684,7 +8683,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recddpx9CyJZ7GWpm",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNPFII",
@@ -8717,7 +8717,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8729,7 +8728,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recpTdlAp9s5Ag6Ri",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNRCCA",
@@ -8762,7 +8762,6 @@
     "head_of_entity_name":"Kaha Imnadze",
     "head_of_entity_level":null,
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/kaha-imnadze-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Kaha%20Imnadze_0.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-regional-centre-for-preventive-diplomacy-for-central-asia\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8774,7 +8773,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recaCElRcDsyGhlmQ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNRGID",
@@ -8807,7 +8807,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8819,7 +8818,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recOZJ5TWD7yxP5Ho",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNRISD",
@@ -8852,7 +8852,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8864,7 +8863,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recR2RJnkj1FXqvRc",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNRWA",
@@ -8897,7 +8897,6 @@
     "head_of_entity_name":"Philippe Lazzarini",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/philippe-lazzarini-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/LAZZARINI%2C%20Philippe.png",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-relief-and-works-agency-for-palestine-refugees-in-the-near-east\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/www.unrwa.org\/how-you-can-help\/how-we-spend-funds\/core-programme-budget",
@@ -8909,7 +8908,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recKgsxmdU1T4hpfd",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNRoD",
@@ -8942,7 +8942,6 @@
     "head_of_entity_name":"Leonid Frolov",
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8954,7 +8953,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recKSJlcSGDVtfFp5",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSCO",
@@ -8987,7 +8987,6 @@
     "head_of_entity_name":"Sigrid Kaag",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/sigrid-kaag",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Kaag.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-united-nations-special-coordinator-for-the-middle-east-peace-process\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -8999,7 +8998,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recj1O39nAknJLfIE",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSCOL",
@@ -9032,7 +9032,6 @@
     "head_of_entity_name":"Jeanine Hennis-Plasschaert",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/jeanine-hennis-plasschaert",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/ASG%20Hennis-Plasschaert%202.jpeg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/office-of-the-united-nations-special-coordinator-for-lebanon\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9044,7 +9043,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recH7Y3G9utGV0te7",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSMIL",
@@ -9077,7 +9077,6 @@
     "head_of_entity_name":"Hanna S. Tetteh",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/hanna-tetteh-2",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Tetteh.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-support-mission-in-libya\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9089,7 +9088,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recpQloobkwt3BPCM",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSOM",
@@ -9122,7 +9122,6 @@
     "head_of_entity_name":"James Swan",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9134,7 +9133,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recxx0qzRVPAP7aC1",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSOS",
@@ -9167,7 +9167,6 @@
     "head_of_entity_name":"Aisa Kirabo Kacyira",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9179,7 +9178,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recbbv7PT5pCrle2a",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSSC",
@@ -9212,7 +9212,6 @@
     "head_of_entity_name":"Miguel Panadero",
     "head_of_entity_level":"D-2 or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/w04.unssc.org\/financial",
@@ -9224,7 +9223,8 @@
     "socials_twitter":"https:\/\/x.com\/UNSSC",
     "socials_instagram":null,
     "record_id":"recazcd4SruQmAfvV",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNSU",
@@ -9257,7 +9257,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9269,7 +9268,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"rec1hjeJKGrlEmacY",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNTMIS",
@@ -9302,7 +9302,6 @@
     "head_of_entity_name":"James Swan",
     "head_of_entity_level":"ASG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/james-swan-0",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/USG%20Swan.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-transitional-assistance-mission-in-somalia\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9314,7 +9313,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reci6RxD6wBoTMzpi",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNTSO",
@@ -9347,7 +9347,6 @@
     "head_of_entity_name":"Patrick Gauchat",
     "head_of_entity_level":null,
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/major-general-patrick-gauchat",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Gauchat%2C%20Patrick.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-truce-supervision-organization\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9359,7 +9358,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"receOanKc4qg3gnVW",
-    "review_needed":true
+    "review_needed":true,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNU",
@@ -9392,7 +9392,6 @@
     "head_of_entity_name":"Tshilidzi Marwala",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/tshilidzi-marwala",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/unu-rector.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-university\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":"https:\/\/unu.edu\/budget-and-finance",
@@ -9404,7 +9403,8 @@
     "socials_twitter":"https:\/\/x.com\/UNUniversity",
     "socials_instagram":null,
     "record_id":"recG4RoIoiSORL27U",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNU Council",
@@ -9437,7 +9437,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9449,7 +9448,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recicuhk1aQJvckyh",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNV",
@@ -9482,7 +9482,6 @@
     "head_of_entity_name":"Toily Kurbanov",
     "head_of_entity_level":"Other",
     "head_of_entity_bio_link":"https:\/\/www.unv.org\/toily-kurbanov-unv-executive-coordinator",
-    "head_of_entity_headshot_link":"https:\/\/www.unv.org\/sites\/default\/files\/styles\/main_photo_desktop\/public\/Toily_Kurbanov-2.jpg.webp",
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9494,7 +9493,8 @@
     "socials_twitter":"https:\/\/x.com\/UNVolunteers",
     "socials_instagram":"https:\/\/www.instagram.com\/unvolunteers\/",
     "record_id":"rect4lFOJ3JsQDYxJ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UNVMC",
@@ -9527,7 +9527,6 @@
     "head_of_entity_name":"Carlos Ruiz Massieu",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/ra%C3%BAl-yamandu-rosende-rodriguez",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/Rosende%2C%20Raul.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/united-nations-verification-mission-in-colombia\/all",
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9539,7 +9538,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recLdAFBv3eX1iuCw",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"UPU",
@@ -9572,7 +9572,6 @@
     "head_of_entity_name":"Masahiko Metoki",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/bodies\/international-bureau\/organizational-structure",
     "budget_financial_reporting_link":"https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/finance#programme-and-budget",
@@ -9584,7 +9583,8 @@
     "socials_twitter":"https:\/\/x.com\/UPU_UN",
     "socials_instagram":null,
     "record_id":"recm3IxFOyV8KwuGT",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WFP",
@@ -9617,7 +9617,6 @@
     "head_of_entity_name":"Cindy H. McCain",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.un.org\/sg\/en\/content\/profiles\/cindy-mccain",
-    "head_of_entity_headshot_link":"https:\/\/www.un.org\/sg\/sites\/www.un.org.sg\/files\/smg-portrait\/cindy-mccain.jpg",
     "global_leadership_team_url":"https:\/\/www.un.org\/sg\/en\/global-leadership\/world-food-programme\/all",
     "organizational_chart_link":"https:\/\/www.wfp.org\/publications\/wfp-organigram",
     "budget_financial_reporting_link":null,
@@ -9629,7 +9628,8 @@
     "socials_twitter":"https:\/\/x.com\/WFP",
     "socials_instagram":null,
     "record_id":"recCSIo9wPQRNDSGh",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WFP EB",
@@ -9662,7 +9662,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9674,7 +9673,8 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"recnDKxtNdZNlDxTQ",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WHO",
@@ -9707,7 +9707,6 @@
     "head_of_entity_name":"Tedros Adhanom Ghebreyesus",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":"https:\/\/www.who.int\/director-general\/tedros-adhanom-ghebreyesus",
-    "head_of_entity_headshot_link":"https:\/\/cdn.who.int\/media\/images\/default-source\/people-and-partners\/directors-general\/tedros-adhanom-ghebreyesus\/tedros-adhanom-ghebreyesus.tmb-768v.jpg",
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/cdn.who.int\/media\/docs\/default-source\/documents\/about-us\/who-hq-organigramme.pdf",
     "budget_financial_reporting_link":"https:\/\/www.who.int\/about\/accountability\/budget",
@@ -9719,7 +9718,8 @@
     "socials_twitter":"https:\/\/x.com\/WHO",
     "socials_instagram":null,
     "record_id":"recmlYC8rd0jdC1O0",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WIPO",
@@ -9752,7 +9752,6 @@
     "head_of_entity_name":"Daren Tang",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/index",
     "budget_financial_reporting_link":"https:\/\/www.wipo.int\/en\/web\/about-wipo\/budget\/financial",
@@ -9764,7 +9763,8 @@
     "socials_twitter":"https:\/\/x.com\/WIPO",
     "socials_instagram":null,
     "record_id":"rec3qLxtWnB24gTMn",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WMO",
@@ -9797,7 +9797,6 @@
     "head_of_entity_name":"Abdulla Al Mandous",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/wmo.int\/about-wmo\/governance",
     "budget_financial_reporting_link":"https:\/\/wmo.int\/about-wmo\/finance-and-accountability",
@@ -9809,7 +9808,8 @@
     "socials_twitter":"https:\/\/x.com\/WMO",
     "socials_instagram":null,
     "record_id":"recAWfKIp6i3drxo5",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WORLD BANK GROUP",
@@ -9842,7 +9842,6 @@
     "head_of_entity_name":"Ajay Banga",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/thedocs.worldbank.org\/en\/doc\/404071412346998230-0090022021\/The-World-Bank-Organizational-Chart-English",
     "budget_financial_reporting_link":"https:\/\/financesone.worldbank.org\/world-bank-program-budget-and-all-funds\/DS00032",
@@ -9854,7 +9853,8 @@
     "socials_twitter":"https:\/\/x.com\/WorldBank",
     "socials_instagram":null,
     "record_id":"recZyqVrECd08Bhyu",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"WTO",
@@ -9887,7 +9887,6 @@
     "head_of_entity_name":"Ngozi Okonjo-Iweala",
     "head_of_entity_level":"USG or equivalent",
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":"https:\/\/www.wto.org\/english\/thewto_e\/whatis_e\/tif_e\/organigram_e.pdf",
     "budget_financial_reporting_link":"https:\/\/www.wto.org\/english\/thewto_e\/secre_e\/budget_e.htm",
@@ -9899,7 +9898,8 @@
     "socials_twitter":"https:\/\/x.com\/wto",
     "socials_instagram":null,
     "record_id":"recMLIDzbl1KFfbdP",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   },
   {
     "entity":"Working Groups",
@@ -9932,7 +9932,6 @@
     "head_of_entity_name":null,
     "head_of_entity_level":null,
     "head_of_entity_bio_link":null,
-    "head_of_entity_headshot_link":null,
     "global_leadership_team_url":null,
     "organizational_chart_link":null,
     "budget_financial_reporting_link":null,
@@ -9944,6 +9943,7 @@
     "socials_twitter":null,
     "socials_instagram":null,
     "record_id":"reccAzu6D8Rnj9oDw",
-    "review_needed":null
+    "review_needed":null,
+    "head_of_entity_headshot_link":null
   }
 ]

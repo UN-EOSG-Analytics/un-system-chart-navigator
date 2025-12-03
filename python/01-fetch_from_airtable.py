@@ -1,7 +1,4 @@
-# https://airtable.com/create/tokens
-
 import os
-import re
 from pathlib import Path
 from urllib.parse import quote
 
@@ -12,6 +9,7 @@ from pyairtable import Api
 # Load environment variables from .env file
 load_dotenv()
 
+# https://airtable.com/create/tokens
 api = Api(os.environ["AIRTABLE_API_KEY"])
 
 BASE_ID = os.environ["AIRTABLE_BASE_ID"]
@@ -98,7 +96,7 @@ selected_columns = [
     "head_of_entity_name",
     "head_of_entity_level",
     "head_of_entity_bio_link",
-    "head_of_entity_headshot_link",
+    "head_of_entity_headshot",
     "global_leadership_team_url",
     # Documents and resources
     "organizational_chart_link",
@@ -126,5 +124,12 @@ print("\nColumns not selected:", not_selected_columns)
 # Filter the DataFrame to include only selected columns
 df = df[selected_columns]
 
+output_path = Path("data") / "input" / "input_entities.pkl"
+df.to_pickle(output_path)
+
+# Drop head_of_entity_headshot column if it exists
+if "head_of_entity_headshot" in df.columns:
+    df = df.drop(columns=["head_of_entity_headshot"])
+    
 output_path = Path("data") / "input" / "input_entities.csv"
 df.to_csv(output_path, index=False)

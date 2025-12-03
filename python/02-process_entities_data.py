@@ -7,6 +7,9 @@ import pandas as pd
 input_path = Path("data") / "input" / "input_entities.csv"
 df = pd.read_csv(input_path)
 
+# Configuration
+HEADSHOTS_DIR = Path("public") / "images" / "headshots"
+
 
 # Wrangle ------------------------------------------------------
 
@@ -21,6 +24,31 @@ df["un_principal_organ"] = df["un_principal_organ"].apply(
     if x == "nan"
     else x
 )
+
+
+def get_local_headshot_path(entity: str) -> str | None:
+    """
+    Check if a local headshot exists for the entity and return the web path.
+    
+    Returns the path like '/images/headshots/ENTITY.png' or None if not found.
+    """
+    for ext in ["jpg", "jpeg", "png", "gif", "webp"]:
+        path = HEADSHOTS_DIR / f"{entity}.{ext}"
+        if path.exists():
+            return f"/images/headshots/{entity}.{ext}"
+    return None
+
+
+# Generate head_of_entity_headshot_link from local files
+df["head_of_entity_headshot_link"] = df["entity"].apply(get_local_headshot_path)
+
+# Count headshots found
+headshots_found = df["head_of_entity_headshot_link"].notna().sum()
+print(f"Local headshots found: {headshots_found}")
+
+# Drop the raw Airtable attachment column (not needed in output)
+if "head_of_entity_headshot" in df.columns:
+    df = df.drop(columns=["head_of_entity_headshot"])
 
 # len(df)
 
