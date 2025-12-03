@@ -1,7 +1,9 @@
 import { getCategoryFootnote } from "@/lib/constants";
+import { naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import CategoryFootnote from "./CategoryFootnote";
 import EntityContainer from "./EntitiesContainer";
+import SubcategorySection from "./SectionSubcategory";
 
 interface CategorySectionProps {
   category: string;
@@ -31,6 +33,22 @@ export default function CategorySection({
     ? "mb-1.5 text-sm font-normal text-gray-500 sm:text-base" // Smaller styling
     : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
 
+  // Group entities by subcategory
+  const entitiesWithoutSubcategory = entities.filter((e) => !e.subcategory);
+  const entitiesBySubcategory = entities.reduce(
+    (acc: Record<string, Entity[]>, entity) => {
+      if (entity.subcategory) {
+        if (!acc[entity.subcategory]) {
+          acc[entity.subcategory] = [];
+        }
+        acc[entity.subcategory].push(entity);
+      }
+      return acc;
+    },
+    {},
+  );
+  const subcategories = Object.keys(entitiesBySubcategory).sort(naturalCompare);
+
   return (
     <div className="px-3">
       <h2 className={`category-header ${headerClasses}`}>
@@ -41,13 +59,28 @@ export default function CategorySection({
           />
         )}
       </h2>
-      <EntityContainer
-        entities={entities}
-        onEntityClick={onEntityClick}
-        customBgColor={customBgColor}
-        customTextColor={customTextColor}
-        showReviewBorders={showReviewBorders}
-      />
+      {/* Entities without subcategory */}
+      {entitiesWithoutSubcategory.length > 0 && (
+        <EntityContainer
+          entities={entitiesWithoutSubcategory}
+          onEntityClick={onEntityClick}
+          customBgColor={customBgColor}
+          customTextColor={customTextColor}
+          showReviewBorders={showReviewBorders}
+        />
+      )}
+      {/* Subcategory sections */}
+      {subcategories.map((subcategory) => (
+        <SubcategorySection
+          key={subcategory}
+          subcategory={subcategory}
+          entities={entitiesBySubcategory[subcategory]}
+          onEntityClick={onEntityClick}
+          customBgColor={customBgColor}
+          customTextColor={customTextColor}
+          showReviewBorders={showReviewBorders}
+        />
+      ))}
     </div>
   );
 }

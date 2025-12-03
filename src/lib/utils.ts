@@ -57,14 +57,21 @@ export function getCssColorVarDark(bgColorClass: string): string {
 }
 
 /**
- * Compare entity names naturally, ignoring special characters like hyphens.
+ * Compare strings naturally, ignoring special characters like hyphens.
  * This ensures "UN-Women" sorts after "UNWRA" (as if it were "UNWomen").
  */
-export function naturalCompareEntities(a: string, b: string): number {
+export function naturalCompare(a: string, b: string): number {
   // Remove special characters (hyphens, underscores, etc.) for comparison
   const cleanA = a.replace(/[-_\s]/g, "").toLowerCase();
   const cleanB = b.replace(/[-_\s]/g, "").toLowerCase();
   return cleanA.localeCompare(cleanB);
+}
+
+/**
+ * Compare entity names naturally (alias for naturalCompare)
+ */
+export function naturalCompareEntities(a: string, b: string): number {
+  return naturalCompare(a, b);
 }
 
 /**

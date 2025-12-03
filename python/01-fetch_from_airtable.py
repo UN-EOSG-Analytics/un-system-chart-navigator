@@ -24,6 +24,8 @@ if records:
     data = [record["fields"] for record in records]
     df = pd.DataFrame(data)
 
+# Drop rows that are completely empty
+df = df.dropna(how="all")
 
 if len(df) < 160:
     raise ValueError(f"Expected more than 160 records, but got {len(df)}")
@@ -83,6 +85,7 @@ selected_columns = [
     # UN structure and classification
     "un_principal_organ",
     "category",
+    "subcategory",
     "is_ceb_member",
     # Mandate and registry
     "foundational_mandate",

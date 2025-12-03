@@ -5,6 +5,7 @@ export interface Entity {
   entity_description: string | null;
   entity_link: string | null;
   category: string | null;
+  subcategory: string | null;
   un_principal_organ: string[] | null;
   is_ceb_member: boolean | null;
   head_of_entity_level: string;
