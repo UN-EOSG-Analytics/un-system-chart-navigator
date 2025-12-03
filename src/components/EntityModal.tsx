@@ -295,7 +295,7 @@ export default function EntityModal({
         {entity!.entity_logo_available && (
           <EntityLogo
             entityName={entity!.entity}
-            entityLong={entity!.entity_long}
+            entityLong={entity!.entity_long ?? undefined}
             className="h-12 w-auto max-w-48 sm:h-14 lg:h-16"
           />
         )}

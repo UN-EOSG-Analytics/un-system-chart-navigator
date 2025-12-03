@@ -1,6 +1,6 @@
 export interface Entity {
   entity: string;
-  entity_long: string;
+  entity_long: string | null;
   entity_combined: string;
   entity_description: string | null;
   entity_link: string | null;

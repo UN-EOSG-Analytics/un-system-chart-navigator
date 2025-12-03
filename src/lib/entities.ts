@@ -64,7 +64,8 @@ export function getEntities(options?: {
       // Search in entity code and long name
       if (
         entity.entity.toLowerCase().includes(searchTerm) ||
-        entity.entity_long.toLowerCase().includes(searchTerm) ||
+        (entity.entity_long &&
+          entity.entity_long.toLowerCase().includes(searchTerm)) ||
         (entity.head_of_entity_name &&
           entity.head_of_entity_name.toLowerCase().includes(searchTerm))
       ) {
