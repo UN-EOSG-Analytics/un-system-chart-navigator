@@ -1,4 +1,8 @@
-import { getCategoryFootnote, subcategorySortOrder } from "@/lib/constants";
+import {
+  entitySortOrder,
+  getCategoryFootnote,
+  subcategorySortOrder,
+} from "@/lib/constants";
 import { naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import Footnote from "./Footnote";
@@ -34,7 +38,14 @@ export default function CategorySection({
     : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
 
   // Group entities by subcategory
-  const entitiesWithoutSubcategory = entities.filter((e) => !e.subcategory);
+  const entitiesWithoutSubcategory = entities
+    .filter((e) => !e.subcategory)
+    .sort((a, b) => {
+      const orderA = entitySortOrder[a.entity] ?? 0;
+      const orderB = entitySortOrder[b.entity] ?? 0;
+      if (orderA !== orderB) return orderA - orderB;
+      return naturalCompare(a.entity, b.entity);
+    });
   const entitiesBySubcategory = entities.reduce(
     (acc: Record<string, Entity[]>, entity) => {
       if (entity.subcategory) {

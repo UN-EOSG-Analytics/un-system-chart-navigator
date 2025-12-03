@@ -27,6 +27,16 @@ export const externalLinkEntities: Record<string, string> = {
 export const sortLastEntities = new Set(["Other Committees"]);
 
 /**
+ * Custom sort order for specific entities within their category.
+ * Higher values appear later. Entities not listed use default alphabetical sorting.
+ */
+export const entitySortOrder: Record<string, number> = {
+  // Security Council - Standing committees and ad hoc bodies
+  "Standing Committees": 1,
+  "Ad Hoc Bodies": 2,
+};
+
+/**
  * Subcategories with custom sort order within their category.
  * Higher values appear later. Subcategories not listed use order 0 (alphabetical first).
  */
