@@ -19,6 +19,13 @@ export const externalLinkEntities: Record<string, string> = {
     "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main1",
   "Ad Hoc Bodies":
     "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main2",
+  // Main Committees
+  "First Committee": "https://www.un.org/en/ga/first/index.shtml",
+  "Second Committee": "https://www.un.org/en/ga/second/index.shtml",
+  "Third Committee": "https://www.un.org/en/ga/third/index.shtml",
+  "Fourth Committee": "https://www.un.org/en/ga/fourth/index.shtml",
+  "Fifth Committee": "https://www.un.org/en/ga/fifth/index.shtml",
+  "Sixth Committee": "https://www.un.org/en/ga/sixth/index.shtml",
 };
 
 /**
