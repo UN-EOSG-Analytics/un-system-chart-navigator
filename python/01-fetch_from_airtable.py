@@ -40,11 +40,11 @@ if "added_via_form" in df.columns:
 df = df[df["on_display"] == "TRUE"]
 
 # Check for duplicate entities
-duplicates = df[df["entity"].duplicated(keep=False)]["entity"]
-if not duplicates.empty:
-    raise ValueError(
-        f"Duplicate entities found in the input data: {duplicates.to_list()}"
-    )
+duplicates_mask = df["entity"].duplicated(keep=False)
+if duplicates_mask.any():
+    duplicate_rows = df[duplicates_mask][["entity", "entity_long"]].drop_duplicates()
+    duplicates_info = duplicate_rows.to_string(index=False)
+    raise ValueError(f"Duplicate entities found in the input data:\n{duplicates_info}")
 else:
     print("All entities are unique.")
 
