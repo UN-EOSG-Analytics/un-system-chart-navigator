@@ -64,6 +64,15 @@ export const affiliatedEntities: Record<
 };
 
 /**
+ * Entities that should display an empty category section gap above them.
+ * This creates visual spacing with a blank category header.
+ * Only use this for entities that explicitly need to be visually separated.
+ */
+export const showEmptyCategoryGap = new Set<string>([
+  "HLPF", "UNPC"
+]);
+
+/**
  * Dual-organ entities where category/subcategory should be hidden for specific organs.
  * Key format: "entity|principalOrgan"
  * When a dual-organ entity appears in the specified organ's section, it will be
@@ -155,6 +164,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 4,
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
+    // skipCategoryLayer: true,
   },
 
   "International Court of Justice": {
@@ -430,8 +440,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     " ": 999, // Fallback for entities without category
   },
   Secretariat: {
-    "Departments and Offices": 1,
-    " ": 999, // Fallback for entities without category
+    "": 999, // Fallback for entities without category
   },
   // ICJ and Trusteeship Council use skipCategoryLayer in principalOrganConfigs
   "Related Organizations": {

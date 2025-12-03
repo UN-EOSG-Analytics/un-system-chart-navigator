@@ -3,6 +3,7 @@ import {
   entitySortOrder,
   getCategoryFootnote,
   hideCategoryForOrgan,
+  showEmptyCategoryGap,
   subcategorySortOrder,
 } from "@/lib/constants";
 import { naturalCompare } from "@/lib/utils";
@@ -33,6 +34,19 @@ export default function CategorySection({
   showReviewBorders = false,
 }: CategorySectionProps) {
   if (entities.length === 0) return null;
+
+  // Determine if this is an empty/blank category
+  const isEmptyCategory = !category.trim();
+
+  // Check if any entity in this category should force showing the empty category gap
+  const hasEntityRequiringGap = entities.some((e) =>
+    showEmptyCategoryGap.has(e.entity),
+  );
+
+  // Only show the category header if:
+  // 1. There's an actual category name, OR
+  // 2. At least one entity is configured to show the empty category gap
+  const showCategoryHeader = !isEmptyCategory || hasEntityRequiringGap;
 
   // Header styling based on smallHeaders prop
   const headerClasses = smallHeaders
@@ -103,14 +117,16 @@ export default function CategorySection({
 
   return (
     <div className="px-3">
-      <h2 className={`category-header ${headerClasses}`}>
-        {category.trim() || "\u00A0"}
-        {getCategoryFootnote(groupKey, category) && (
-          <Footnote
-            footnoteNumbers={getCategoryFootnote(groupKey, category)!}
-          />
-        )}
-      </h2>
+      {showCategoryHeader && (
+        <h2 className={`category-header ${headerClasses}`}>
+          {category.trim() || "\u00A0"}
+          {getCategoryFootnote(groupKey, category) && (
+            <Footnote
+              footnoteNumbers={getCategoryFootnote(groupKey, category)!}
+            />
+          )}
+        </h2>
+      )}
       {/* Entities without subcategory */}
       {entitiesWithoutSubcategory.length > 0 && (
         <EntityContainer
