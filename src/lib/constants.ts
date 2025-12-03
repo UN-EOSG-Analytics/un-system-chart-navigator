@@ -245,6 +245,22 @@ export function getCategoryFootnote(
 }
 
 /**
+ * Entity-specific footnotes - maps entity short names to footnote numbers
+ */
+export const entityFootnotes: Record<string, number[]> = {
+  HLPF: [9],
+};
+
+/**
+ * Get footnote numbers for a specific entity
+ * @param entityShortName - The entity's short name (e.g., "HLPF")
+ * @returns Array of footnote numbers or null if no footnotes exist
+ */
+export function getEntityFootnote(entityShortName: string): number[] | null {
+  return entityFootnotes[entityShortName] || null;
+}
+
+/**
  * Hierarchical category ordering by principal organ
  * Each principal organ has its own category order
  *

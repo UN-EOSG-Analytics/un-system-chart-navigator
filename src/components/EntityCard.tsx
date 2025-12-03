@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  getEntityFootnote,
   normalizePrincipalOrgan,
   principalOrganConfigs,
 } from "@/lib/constants";
@@ -26,6 +27,9 @@ const EntityCard = ({
   // Check if entity has multiple principal organs
   const normalizedOrgans = normalizePrincipalOrgan(entity.un_principal_organ);
   const hasMultipleOrgans = normalizedOrgans && normalizedOrgans.length > 1;
+
+  // Check for entity-specific footnotes
+  const footnoteNumbers = getEntityFootnote(entity.entity);
 
   // Use custom colors if provided, otherwise use defaults
   const bgColor = customBgColor || "bg-gray-100";
@@ -83,6 +87,11 @@ const EntityCard = ({
       >
         <span className="-mt-[1px] text-xs leading-[15px] font-medium sm:text-sm sm:leading-[15px]">
           {entity.entity}
+          {footnoteNumbers && (
+            <sup className="ml-0.5 text-[9px] sm:text-[10px]">
+              {footnoteNumbers.join(",")}
+            </sup>
+          )}
         </span>
       </button>
     </EntityTooltip>
