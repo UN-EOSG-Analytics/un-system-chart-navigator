@@ -9,6 +9,7 @@ import { Entity } from "@/types/entity";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import CategorySection from "./SectionCategory";
+import ExternalLink from "./ExternalLink";
 
 interface PrincipalOrganSectionProps {
   groupKey: string;
@@ -28,6 +29,8 @@ export default function PrincipalOrganSection({
   const organBgColor = organConfig?.bgColor || "bg-gray-300";
   const organTextColor = organConfig?.textColor || "text-black";
   const sectionHeading = organConfig?.sectionHeading || null;
+  const sectionHeadingLink = organConfig?.sectionHeadingLink || null;
+  const labelLink = organConfig?.labelLink || null;
   const borderColor = organConfig?.borderColor
     ? getCssColorVar(organConfig.borderColor)
     : getCssColorVarDark(organBgColor);
@@ -76,14 +79,32 @@ export default function PrincipalOrganSection({
           }}
         >
           <h2 className="text-2xl font-bold text-black uppercase sm:text-2xl md:text-3xl">
-            {groupLabel}
+            {labelLink ? (
+              <ExternalLink
+                href={labelLink}
+                className="font-bold text-black hover:underline"
+              >
+                {groupLabel}
+              </ExternalLink>
+            ) : (
+              groupLabel
+            )}
             {getCategoryFootnote(groupKey) && (
               <Footnote footnoteNumbers={getCategoryFootnote(groupKey)!} />
             )}
           </h2>
           {sectionHeading && (
             <h3 className="mt-1 text-lg leading-tight font-semibold text-gray-500 sm:text-lg md:text-xl">
-              {sectionHeading}
+              {sectionHeadingLink ? (
+                <ExternalLink
+                  href={sectionHeadingLink}
+                  className="font-semibold text-gray-500 hover:underline"
+                >
+                  {sectionHeading}
+                </ExternalLink>
+              ) : (
+                sectionHeading
+              )}
             </h3>
           )}
         </div>

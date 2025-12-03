@@ -46,6 +46,8 @@ export interface PrincipalOrganConfig {
   bgColor: string;
   textColor: string;
   sectionHeading?: string; // Optional higher-level heading for the organ
+  labelLink?: string; //
+  sectionHeadingLink?: string; // Optional link for the section heading
   borderColor?: string; // Optional border color override
   skipCategoryLayer?: boolean; // If true, render entities directly without category grouping
   smallCategoryHeaders?: boolean; // If true, use smaller category header styling
@@ -55,14 +57,19 @@ export interface PrincipalOrganConfig {
 export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
   "General Assembly": {
     label: "General Assembly",
+    labelLink: "https://www.un.org/ga/",
     sectionHeading: "SUBSIDIARY ORGANS",
+    sectionHeadingLink: "https://www.un.org/ga/about/subsidiary/index.shtml",
     order: 1,
     bgColor: "bg-un-system-green",
     textColor: "text-black",
   },
   "Security Council": {
     label: "Security Council",
+    labelLink: "https://main.un.org/securitycouncil/",
     sectionHeading: "SUBSIDIARY ORGANS",
+    sectionHeadingLink:
+      "https://main.un.org/securitycouncil/content/repertoire/subsidiary-organs-overview",
     order: 2,
     bgColor: "bg-un-system-red",
     textColor: "text-black",
@@ -70,14 +77,19 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
   },
   "Economic and Social Council": {
     label: "Economic and Social Council",
+    labelLink: "https://ecosoc.un.org/",
     sectionHeading: "COMMISSIONS AND OTHER SUBSIDIARY ORGANS",
+    sectionHeadingLink:
+      "https://ecosoc.un.org/about-us/ecosoc-subsidiary-bodies",
     order: 3,
     bgColor: "bg-un-system-blue",
     textColor: "text-black",
   },
   Secretariat: {
     label: "Secretariat",
+    labelLink: "https://www.un.org/about-us/secretariat",
     sectionHeading: "DEPARTMENTS AND OFFICES",
+    sectionHeadingLink: "https://www.un.org/about-us/secretariat",
     order: 4,
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
@@ -85,6 +97,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
 
   "International Court of Justice": {
     label: "International Court of Justice",
+    labelLink: "https://www.icj-cij.org/home",
     sectionHeading: "",
     order: 5,
     bgColor: "bg-un-system-purple",
@@ -93,6 +106,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
+    labelLink: "https://www.un.org/about-us/trusteeship-council",
     sectionHeading: "",
     order: 6,
     bgColor: "bg-un-system-brown",
@@ -112,6 +126,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
 
   "Specialized Agencies": {
     label: "Specialized Agencies",
+    labelLink: "https://www.un.org/about-us/specialized-agencies",
     sectionHeading: "",
     skipCategoryLayer: true,
     order: 8,
