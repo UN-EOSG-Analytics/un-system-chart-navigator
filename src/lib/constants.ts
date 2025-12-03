@@ -19,6 +19,7 @@ export const externalLinkEntities: Record<string, string> = {
     "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main1",
   "Ad Hoc Bodies":
     "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main2",
+  Boards: "https://www.un.org/en/ga/about/subsidiary/boards.shtml",
   // Main Committees
   "First Committee": "https://www.un.org/en/ga/first/index.shtml",
   "Second Committee": "https://www.un.org/en/ga/second/index.shtml",
@@ -32,6 +33,18 @@ export const externalLinkEntities: Record<string, string> = {
  * Entities that should always be sorted last within their subcategory.
  */
 export const sortLastEntities = new Set(["Other Committees"]);
+
+/**
+ * Entities for which tooltips should not be shown.
+ * These are typically link-only entities where the tooltip would be redundant.
+ */
+export const hideTooltipEntities = new Set([
+  "Other Committees",
+  "Working Groups",
+  "Standing Committees",
+  "Ad Hoc Bodies",
+  "Boards",
+]);
 
 /**
  * Entities that are affiliated with a parent entity and should:

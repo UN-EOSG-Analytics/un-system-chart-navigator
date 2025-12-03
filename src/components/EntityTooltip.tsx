@@ -1,8 +1,9 @@
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
+    Tooltip,
+    TooltipContent,
+    TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { hideTooltipEntities } from "@/lib/constants";
 import { Entity } from "@/types/entity";
 
 interface EntityTooltipProps {
@@ -14,6 +15,11 @@ export default function EntityTooltip({
   entity,
   children,
 }: EntityTooltipProps) {
+  // Skip tooltip for specified entities
+  if (hideTooltipEntities.has(entity.entity)) {
+    return <>{children}</>;
+  }
+
   return (
     <Tooltip delayDuration={50} disableHoverableContent>
       <TooltipTrigger asChild>{children}</TooltipTrigger>
@@ -29,8 +35,8 @@ export default function EntityTooltip({
           <p className="text-left text-xs leading-tight font-medium text-wrap sm:text-sm">
             {entity.entity_long} ({entity.entity})
           </p>
-          <p className="mt-1 hidden text-left text-xs text-wrap text-slate-500 sm:block">
-            Click to view entity details
+          <p className="mt-0.5 hidden text-left text-xs text-wrap text-slate-500 sm:block">
+            Click to view details
           </p>
           <p className="mt-1 text-left text-xs text-wrap text-slate-500 sm:hidden">
             Tap to view details
