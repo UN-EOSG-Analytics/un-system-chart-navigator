@@ -1,3 +1,24 @@
+/**
+ * Centralized configuration for the UN System Chart Navigator.
+ *
+ * This file serves as the single source of truth for all application settings,
+ * including:
+ * - Entity display behavior (long names, external links, tooltips)
+ * - Entity relationships (affiliated entities, dual-organ handling)
+ * - Sorting and ordering rules
+ * - Principal organ configurations (colors, labels, links)
+ * - Category and subcategory settings
+ * - Footnotes and special notations
+ *
+ * When adding new configuration:
+ * 1. Add to the appropriate section with clear JSDoc documentation
+ * 2. Use TypeScript types for type safety
+ * 3. Include examples in comments
+ * 4. Keep related settings grouped together
+ *
+ * @module constants
+ */
+
 // Centralized constants for UN System Chart Navigator ------------------------------
 // This file contains all configuration for principal organs and categories
 

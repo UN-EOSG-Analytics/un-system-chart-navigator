@@ -11,16 +11,36 @@ import { Entity } from "@/types/entity";
 import { Landmark } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+/**
+ * Props for the FilterControls component.
+ */
 interface FilterControlsProps {
+  /** Set of currently active principal organ filters */
   activePrincipalOrgans: Set<string>;
+  /** Callback to toggle a principal organ filter on/off */
   onTogglePrincipalOrgan: (organ: string) => void;
+  /** Full array of entities (used for filter options) */
   entities: Entity[];
+  /** Current search query text */
   searchQuery: string;
+  /** Callback fired when search text changes */
   onSearchChange: (query: string) => void;
+  /** Callback to reset all filters and search to default state */
   onReset: () => void;
+  /** Number of entities currently visible after filtering */
   visibleEntitiesCount: number;
 }
 
+/**
+ * Provides search and filter controls for the UN entities grid.
+ *
+ * Features:
+ * - Text search input with auto-focus
+ * - Principal organ filter dropdown with checkbox options
+ * - Reset button to clear all filters
+ * - Responsive layout (inline on desktop, stacked on mobile)
+ * - Visual indicators for active filters
+ */
 export default function FilterControls({
   activePrincipalOrgans,
   onTogglePrincipalOrgan,
@@ -79,7 +99,7 @@ export default function FilterControls({
       {/* Search + Filter Controls Row */}
       <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:gap-2">
         {/* Search Bar - Desktop Only (inline with filters) */}
-        <div className="hidden w-80 flex-shrink-0 lg:block">
+        <div className="hidden w-80 shrink-0 lg:block">
           <SearchInput
             ref={desktopSearchRef}
             id="entity-search-desktop"

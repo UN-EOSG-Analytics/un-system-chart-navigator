@@ -2,7 +2,7 @@
 
 {
     "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#5B92E5", // UN Blue
+        "titleBar.activeBackground": "#009edb", // UN Blue
         "titleBar.activeForeground": "#FFFFFF"
     },
 

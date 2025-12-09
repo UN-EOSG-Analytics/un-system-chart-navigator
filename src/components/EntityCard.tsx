@@ -12,14 +12,34 @@ import { createEntitySlug, getCssColorVar } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import EntityTooltip from "./EntityTooltip";
 
+/**
+ * Props for the EntityCard component.
+ */
 interface EntityCardProps {
+  /** The UN entity to display on the card */
   entity: Entity;
+  /** Callback fired when the card is clicked, receives the entity's slug */
   onEntityClick: (entitySlug: string) => void;
+  /** Optional custom background color class (e.g., 'bg-blue-500') */
   customBgColor?: string;
+  /** Optional custom text color class (e.g., 'text-white') */
   customTextColor?: string;
+  /** Whether to show red borders for entities needing review */
   showReviewBorders?: boolean;
 }
 
+/**
+ * Displays a single UN entity as a clickable card.
+ *
+ * Features:
+ * - Responsive sizing and hover effects
+ * - Split background gradient for dual-organ entities
+ * - External link handling for certain entities
+ * - Tooltip with entity details on hover
+ * - Optional affiliated entity subtitles (e.g., "UNDP-affiliated")
+ * - Footnote superscripts for entities with special notes
+ * />
+ */
 const EntityCard = ({
   entity,
   onEntityClick,

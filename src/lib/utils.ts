@@ -6,7 +6,18 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Create a safe, consistent slug from entity names
+/**
+ * Creates a URL-safe slug from an entity name for use in routing and identification.
+ * Normalizes special characters, spaces, and punctuation to create consistent slugs.
+ *
+ * @param entityName - The entity name to convert (e.g., "UN-Women", "UNICEF")
+ * @returns A lowercase, hyphen-separated slug (e.g., "un-women", "unicef")
+ *
+ * @example
+ * createEntitySlug("UN-Women") // Returns: "un-women"
+ * createEntitySlug("UNHCR") // Returns: "unhcr"
+ * createEntitySlug("World Bank Group") // Returns: "world-bank-group"
+ */
 export function createEntitySlug(entityName: string): string {
   return (
     entityName
@@ -21,7 +32,16 @@ export function createEntitySlug(entityName: string): string {
 }
 
 /**
- * Parse entity aliases from string format like "['RCS','UNDCO']" to array
+ * Parses entity aliases from Airtable string format to an array.
+ * Handles JSON-like string representations with single quotes.
+ *
+ * @param aliasString - String representation of aliases (e.g., "['RCS','UNDCO']")
+ * @returns Array of alias strings, or empty array if parsing fails
+ *
+ * @example
+ * parseEntityAliases("['RCS','UNDCO']") // Returns: ['RCS', 'UNDCO']
+ * parseEntityAliases(null) // Returns: []
+ * parseEntityAliases("invalid") // Returns: []
  */
 export function parseEntityAliases(
   aliasString: string | null | undefined,
@@ -41,7 +61,15 @@ export function parseEntityAliases(
 }
 
 /**
- * Convert Tailwind color class to CSS custom property
+ * Converts a Tailwind CSS color class to a CSS custom property variable.
+ * Used for accessing theme colors in inline styles and gradients.
+ *
+ * @param bgColorClass - Tailwind background color class (e.g., "bg-blue-500")
+ * @returns CSS custom property string (e.g., "var(--color-blue-500)")
+ *
+ * @example
+ * getCssColorVar("bg-blue-500") // Returns: "var(--color-blue-500)"
+ * getCssColorVar("bg-gray-100") // Returns: "var(--color-gray-100)"
  */
 export function getCssColorVar(bgColorClass: string): string {
   const colorName = bgColorClass.replace("bg-", "");
@@ -49,7 +77,14 @@ export function getCssColorVar(bgColorClass: string): string {
 }
 
 /**
- * Get the dark variant of a Tailwind color class as CSS custom property
+ * Converts a Tailwind CSS color class to its dark mode CSS custom property.
+ * Enables dark mode color theming in inline styles.
+ *
+ * @param bgColorClass - Tailwind background color class (e.g., "bg-blue-500")
+ * @returns CSS custom property string for dark variant (e.g., "var(--color-blue-500-dark)")
+ *
+ * @example
+ * getCssColorVarDark("bg-blue-500") // Returns: "var(--color-blue-500-dark)"
  */
 export function getCssColorVarDark(bgColorClass: string): string {
   const colorName = bgColorClass.replace("bg-", "");
@@ -57,8 +92,17 @@ export function getCssColorVarDark(bgColorClass: string): string {
 }
 
 /**
- * Compare strings naturally, ignoring special characters like hyphens.
- * This ensures "UN-Women" sorts after "UNWRA" (as if it were "UNWomen").
+ * Compares strings naturally by ignoring special characters for sorting.
+ * Ensures logical alphabetical order for entity names with punctuation.
+ *
+ * @param a - First string to compare
+ * @param b - Second string to compare
+ * @returns Negative if a < b, positive if a > b, 0 if equal
+ *
+ * @example
+ * naturalCompare("UN-Women", "UNWRA") // Treats as "UNWomen" vs "UNWRA"
+ * ['UN-Women', 'UNWRA', 'UNICEF'].sort(naturalCompare)
+ * // Returns: ['UNICEF', 'UNWRA', 'UN-Women']
  */
 export function naturalCompare(a: string, b: string): number {
   // Remove special characters (hyphens, underscores, etc.) for comparison
@@ -68,7 +112,14 @@ export function naturalCompare(a: string, b: string): number {
 }
 
 /**
- * Compare entity names naturally (alias for naturalCompare)
+ * Compares entity names using natural string comparison.
+ * Semantic alias for naturalCompare to improve code readability.
+ *
+ * @param a - First entity name
+ * @param b - Second entity name
+ * @returns Negative if a < b, positive if a > b, 0 if equal
+ *
+ * @see naturalCompare
  */
 export function naturalCompareEntities(a: string, b: string): number {
   return naturalCompare(a, b);
@@ -91,8 +142,16 @@ const ordinalOrder: Record<string, number> = {
 };
 
 /**
- * Get ordinal sort order from a string (e.g., "First Committee" -> 1)
- * Returns Infinity if no ordinal found (sorts to end)
+ * Extracts numeric order from ordinal text for sorting committees.
+ * Used to sort "First Committee", "Second Committee", etc. numerically.
+ *
+ * @param str - String potentially containing an ordinal word
+ * @returns Numeric position (1-10), or Infinity if no ordinal found
+ *
+ * @example
+ * getOrdinalOrder("First Committee") // Returns: 1
+ * getOrdinalOrder("Third Committee") // Returns: 3
+ * getOrdinalOrder("Other Committees") // Returns: Infinity (sorts last)
  */
 export function getOrdinalOrder(str: string): number {
   const firstWord = str.toLowerCase().split(/\s+/)[0];
@@ -100,7 +159,15 @@ export function getOrdinalOrder(str: string): number {
 }
 
 /**
- * Generate Airtable contribution form URL with prefilled entity data
+ * Generates a URL for the contribution form with entity data prefilled.
+ * Used to allow users to suggest updates to entity information.
+ *
+ * @param entity - Optional entity to prefill form with
+ * @returns URL string with query parameters for prefilled form fields
+ *
+ * @example
+ * generateContributeUrl() // Returns: "/contribute"
+ * generateContributeUrl(unicefEntity) // Returns: "/contribute?prefill_entity=UNICEF&..."
  */
 export function generateContributeUrl(entity?: Entity): string {
   const baseUrl = "/contribute";
