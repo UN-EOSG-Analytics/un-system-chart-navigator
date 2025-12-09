@@ -38,6 +38,13 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Automated data update: Refresh entities data [GitHub Actions]" || exit 0
-          git push
+          
+          # Check if there are meaningful changes (excluding pickle files)
+          if git diff --exit-code data/input/input_entities.csv data/output/ public/un-entities.* > /dev/null 2>&1; then
+            echo "No meaningful changes detected, skipping commit"
+          else
+            echo "Changes detected, committing..."
+            git add data/input/input_entities.csv data/input/input_entities.pkl data/output/ public/un-entities.*
+            git commit -m "Automated data update: Refresh entities data [GitHub Actions]"
+            git push
+          fi
