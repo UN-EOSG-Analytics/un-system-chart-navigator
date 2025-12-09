@@ -68,9 +68,7 @@ export const affiliatedEntities: Record<
  * This creates visual spacing with a blank category header.
  * Only use this for entities that explicitly need to be visually separated.
  */
-export const showEmptyCategoryGap = new Set<string>([
-  "HLPF", "UNPC"
-]);
+export const showEmptyCategoryGap = new Set<string>(["HLPF", "UNPC"]);
 
 /**
  * Dual-organ entities where category/subcategory should be hidden for specific organs.

@@ -1,7 +1,7 @@
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipTrigger,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { hideTooltipEntities } from "@/lib/constants";
 import { Entity } from "@/types/entity";

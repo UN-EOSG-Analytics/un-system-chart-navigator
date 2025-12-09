@@ -55,7 +55,7 @@ export default function PrincipalOrganSection({
       const shouldHideCategory = hideCategoryForOrgan.has(hideKey);
 
       // Use space (fallback) if category should be hidden, otherwise use entity's category
-      const category = shouldHideCategory ? " " : (entity.category || " ");
+      const category = shouldHideCategory ? " " : entity.category || " ";
       if (!acc[category]) {
         acc[category] = [];
       }
