@@ -42,7 +42,6 @@ export interface Entity {
   review_needed: boolean | null;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface EntityFilters {
   // Future filters can be added here as needed
 }
