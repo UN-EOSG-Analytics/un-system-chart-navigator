@@ -51,21 +51,28 @@ This project provides a visual, searchable interface to navigate the UN System C
 └── docs/                       # Project documentation
 ```
 
+**Key Files:**
+- [`src/lib/constants.ts`](src/lib/constants.ts) - All configuration and settings
+- [`src/lib/entities.ts`](src/lib/entities.ts) - Entity data loading and filtering
+- [`src/lib/utils.ts`](src/lib/utils.ts) - Helper functions
+- [`src/types/entity.ts`](src/types/entity.ts) - TypeScript type definitions
+- [`src/app/globals.css`](src/app/globals.css) - Global styles and theme colors
+
 ### Data Flow
 
-1. **Fetch**: `python/01-fetch_from_airtable.py` retrieves entity data from Airtable
-2. **Process**: `python/02-process_entities_data.py` cleans and enriches data
-3. **Export**: Data saved to `public/un-entities.json` for static import
-4. **Load**: `src/lib/entities.ts` imports JSON at build time
+1. **Fetch**: [`python/01-fetch_from_airtable.py`](python/01-fetch_from_airtable.py) retrieves entity data from Airtable
+2. **Process**: [`python/02-process_entities_data.py`](python/02-process_entities_data.py) cleans and enriches data
+3. **Export**: Data saved to [`public/un-entities.json`](public/un-entities.json) for static import
+4. **Load**: [`src/lib/entities.ts`](src/lib/entities.ts) imports JSON at build time
 5. **Render**: Components consume entity data through filtering functions
 
 ### Design Principles
 
-- **Global Configuration**: All settings centralized in `src/lib/constants.ts`
+- **Global Configuration**: All settings centralized in [`src/lib/constants.ts`](src/lib/constants.ts)
 - **Component Composition**: shadcn/ui base components in `components/ui/`, custom compositions in `src/components/`
 - **Type Safety**: Comprehensive TypeScript types for all entity data
 - **Static Generation**: All pages pre-rendered for optimal performance
-- **Utility-First**: Reusable helper functions in `src/lib/utils.ts`
+- **Utility-First**: Reusable helper functions in [`src/lib/utils.ts`](src/lib/utils.ts)
 
 ## Dev & Deploy
 
@@ -109,7 +116,7 @@ Or run manually from the terminal:
 bash update_data.sh
 ```
 
-This script:
+This [`update_data.sh`](update_data.sh) script:
 
 1. Fetches latest data from Airtable API
 2. Processes and enriches entity information
@@ -170,7 +177,7 @@ npm run format
 
 ### Styling
 
-Global styles and Tailwind CSS configuration are in `src/app/globals.css`:
+Global styles and Tailwind CSS configuration are in [`src/app/globals.css`](src/app/globals.css):
 
 - Custom color palette (UN System colors)
 - CSS custom properties for runtime color access
@@ -184,8 +191,8 @@ To suggest updates to entity data, use the contribution form available on each e
 ## Development Guidelines
 
 - **Tailwind CSS**: Always use Tailwind v4 syntax (consult https://tailwindcss.com/docs/)
-- **Colors**: Use colors from `src/app/globals.css` integrated into Tailwind CSS theme
+- **Colors**: Use colors from [`src/app/globals.css`](src/app/globals.css) integrated into Tailwind CSS theme
 - **Components**: Keep shadcn/ui files in `components/ui/` unchanged; compose on top in `src/components/`
-- **Configuration**: Add all settings to `src/lib/constants.ts` for easy maintenance
-- **Utilities**: Place helper functions in `src/lib/utils.ts` for reuse
+- **Configuration**: Add all settings to [`src/lib/constants.ts`](src/lib/constants.ts) for easy maintenance
+- **Utilities**: Place helper functions in [`src/lib/utils.ts`](src/lib/utils.ts) for reuse
 - **Static-First**: Remember this deploys as a static site on GitHub Pages

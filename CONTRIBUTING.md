@@ -57,6 +57,13 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
 └── data/                       # Raw and processed data
 ```
 
+**Key Files:**
+- [`src/lib/constants.ts`](src/lib/constants.ts) - Configuration hub
+- [`src/lib/entities.ts`](src/lib/entities.ts) - Data loading and filtering
+- [`src/lib/utils.ts`](src/lib/utils.ts) - Helper functions
+- [`src/types/entity.ts`](src/types/entity.ts) - TypeScript definitions
+- [`src/app/globals.css`](src/app/globals.css) - Global styles and theme
+
 ## Development Guidelines
 
 ### Code Style
@@ -64,7 +71,7 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
 - **TypeScript**: Use strict type checking
 - **Components**: Functional components with hooks
 - **Styling**: Tailwind CSS v4 utility classes
-- **Colors**: Use theme colors from `src/app/globals.css`
+- **Colors**: Use theme colors from [`src/app/globals.css`](src/app/globals.css)
 - **Imports**: Absolute paths with `@/` prefix
 
 ### Documentation Standards
@@ -105,9 +112,9 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
 
 ### Adding New Features
 
-1. **Configuration First**: Add settings to `src/lib/constants.ts`
-2. **Types Second**: Define TypeScript interfaces in `src/types/`
-3. **Utilities Third**: Create helpers in `src/lib/utils.ts`
+1. **Configuration First**: Add settings to [`src/lib/constants.ts`](src/lib/constants.ts)
+2. **Types Second**: Define TypeScript interfaces in [`src/types/`](src/types/)
+3. **Utilities Third**: Create helpers in [`src/lib/utils.ts`](src/lib/utils.ts)
 4. **Components Last**: Build UI components using established patterns
 
 ### Working with Data
@@ -128,15 +135,15 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
    bash update_data.sh
    ```
 
-3. Verify the output in `public/un-entities.json`
+3. Verify the output in [`public/un-entities.json`](public/un-entities.json)
 4. Commit the updated JSON file
 
 #### Adding New Fields
 
 1. Add the field in Airtable
-2. Update `selected_columns` in `python/01-fetch_from_airtable.py`
-3. Update the `Entity` interface in `src/types/entity.ts`
-4. Process and export with `update_data.sh`
+2. Update `selected_columns` in [`python/01-fetch_from_airtable.py`](python/01-fetch_from_airtable.py)
+3. Update the `Entity` interface in [`src/types/entity.ts`](src/types/entity.ts)
+4. Process and export with [`update_data.sh`](update_data.sh)
 
 ### Component Development
 
@@ -235,7 +242,7 @@ npx shadcn@latest diff
 
 ### Styling and Theme
 
-Global styles are defined in `src/app/globals.css`:
+Global styles are defined in [`src/app/globals.css`](src/app/globals.css):
 
 - **Custom Colors**: UN System color palette defined in `@theme`
 - **CSS Variables**: Runtime-accessible colors with light/dark variants
@@ -272,8 +279,8 @@ Before submitting a PR, ensure:
 - [ ] TypeScript types are properly defined
 - [ ] No console.log statements (except intentional)
 - [ ] Components are responsive
-- [ ] Configuration is in `constants.ts`
-- [ ] Utilities are in `utils.ts`
+- [ ] Configuration is in [`constants.ts`](src/lib/constants.ts)
+- [ ] Utilities are in [`utils.ts`](src/lib/utils.ts)
 - [ ] Tests pass (`npm run lint`, `npx tsc --noEmit`)
 - [ ] Changes work with static export
 
