@@ -11,7 +11,7 @@
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
     "python.envFile": "${workspaceFolder}/.env",
     "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.extraPaths": [ "src" ],
+    "python.analysis.extraPaths": [ "python" ],
 
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 80,
