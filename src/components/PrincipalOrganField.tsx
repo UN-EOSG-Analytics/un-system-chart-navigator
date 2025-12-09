@@ -63,53 +63,50 @@ export function getPrincipalOrganLabel(
   return count === 1 ? "Principal Organ" : "Principal Organs";
 }
 
+// Empty badge component for null cases
+const EmptyBadge = () => (
+  <span className="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-800"></span>
+);
+
 export default function PrincipalOrganField({
   principalOrgan,
   className = "",
 }: PrincipalOrganFieldProps) {
-  // Empty badge component for null cases
-  const EmptyBadge = () => (
-    <span className="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-800"></span>
-  );
+  // Parse principal organ value into array of organs
+  const parseOrgans = (value: string[] | string | null): string[] | null => {
+    if (value === null) return null;
+
+    if (typeof value === "string") {
+      // Check if it's a stringified array
+      if (value.startsWith("[") && value.endsWith("]")) {
+        try {
+          const parsed = JSON.parse(value.replace(/'/g, '"'));
+          return Array.isArray(parsed) ? parsed : [value];
+        } catch {
+          return [value];
+        }
+      }
+      return [value];
+    }
+
+    if (Array.isArray(value)) {
+      return value;
+    }
+
+    return [String(value)];
+  };
+
+  const organs = parseOrgans(principalOrgan);
 
   return (
     <div className={`flex flex-wrap gap-2 ${className}`}>
-      {(() => {
-        // Handle null case - show empty badge
-        if (principalOrgan === null) {
-          return <EmptyBadge />;
-        }
-
-        // Handle string format
-        if (typeof principalOrgan === "string") {
-          // Check if it's a stringified array
-          if (principalOrgan.startsWith("[") && principalOrgan.endsWith("]")) {
-            try {
-              const parsed = JSON.parse(principalOrgan.replace(/'/g, '"'));
-              return Array.isArray(parsed) ? (
-                parsed.map((organ: string, index: number) => (
-                  <PrincipalOrganBadge key={index} organ={organ} />
-                ))
-              ) : (
-                <PrincipalOrganBadge organ={principalOrgan} />
-              );
-            } catch {
-              return <PrincipalOrganBadge organ={principalOrgan} />;
-            }
-          }
-          return <PrincipalOrganBadge organ={principalOrgan} />;
-        }
-
-        // Handle array format
-        if (Array.isArray(principalOrgan)) {
-          return principalOrgan.map((organ: string, index: number) => (
-            <PrincipalOrganBadge key={index} organ={organ} />
-          ));
-        }
-
-        // Fallback
-        return <PrincipalOrganBadge organ={String(principalOrgan)} />;
-      })()}
+      {organs === null ? (
+        <EmptyBadge />
+      ) : (
+        organs.map((organ: string, index: number) => (
+          <PrincipalOrganBadge key={index} organ={organ} />
+        ))
+      )}
     </div>
   );
 }

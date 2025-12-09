@@ -107,18 +107,20 @@ const EntitiesGrid = forwardRef<{
       urlParamToOrgans(searchParams.get("organs")) ||
       new Set(Object.keys(principalOrganConfigs));
 
-    // Update state if URL changed externally (e.g., back/forward)
-    if (urlSearch !== searchQuery) {
-      setSearchQuery(urlSearch);
-    }
-
-    // Check if organs changed
+    // Check if URL values differ from state
+    const searchChanged = urlSearch !== searchQuery;
     const currentOrgansStr = Array.from(activePrincipalOrgans).sort().join(",");
     const urlOrgansStr = Array.from(urlOrgans).sort().join(",");
-    if (currentOrgansStr !== urlOrgansStr) {
-      setActivePrincipalOrgans(urlOrgans);
+    const organsChanged = currentOrgansStr !== urlOrgansStr;
+
+    // Update state only if values changed (happens on browser back/forward)
+    if (searchChanged || organsChanged) {
+      // Intentionally syncing URL state with React state
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (searchChanged) setSearchQuery(urlSearch);
+      if (organsChanged) setActivePrincipalOrgans(urlOrgans);
     }
-  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [searchParams, searchQuery, activePrincipalOrgans]);
 
   // Add keyboard shortcut to toggle review borders
   useEffect(() => {

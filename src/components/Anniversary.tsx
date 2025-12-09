@@ -1,7 +1,7 @@
 "use client";
 
 import { getCssColorVar } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface Confetti {
   id: number;
@@ -13,10 +13,48 @@ interface Confetti {
   rotationSpeed: number;
   size: number;
   colorClass: string;
+  borderRadius: string;
 }
 
 export default function UN80Animation() {
   const [confetti, setConfetti] = useState<Confetti[]>([]);
+
+  const triggerConfetti = useCallback(() => {
+    // UN System Chart colors using Tailwind color classes (dark variants)
+    const colorClasses = [
+      "bg-un-system-green-dark",
+      "bg-un-system-red-dark",
+      "bg-un-system-blue-dark",
+      "bg-un-system-yellow-dark",
+      "bg-un-system-purple-dark",
+    ];
+
+    const newConfetti: Confetti[] = [];
+    const confettiCount = 200;
+
+    for (let i = 0; i < confettiCount; i++) {
+      newConfetti.push({
+        id: Date.now() + i,
+        x: Math.random() * window.innerWidth,
+        y: -20 - Math.random() * 100,
+        vx: (Math.random() - 0.5) * 2,
+        vy: Math.random() * 3 + 2,
+        rotation: Math.random() * 360,
+        rotationSpeed: (Math.random() - 0.5) * 10,
+        size: Math.random() * 8 + 6,
+        colorClass:
+          colorClasses[Math.floor(Math.random() * colorClasses.length)],
+        borderRadius: Math.random() > 0.5 ? "50%" : "0%",
+      });
+    }
+
+    setConfetti(newConfetti);
+
+    // Clear confetti after they fall
+    setTimeout(() => {
+      setConfetti([]);
+    }, 5000);
+  }, []);
 
   // Listen for "80" key sequence
   useEffect(() => {
@@ -56,43 +94,7 @@ export default function UN80Animation() {
       window.removeEventListener("keydown", handleKeyPress);
       clearTimeout(timeoutId);
     };
-  }, []);
-
-  const triggerConfetti = () => {
-    // UN System Chart colors using Tailwind color classes (dark variants)
-    const colorClasses = [
-      "bg-un-system-green-dark",
-      "bg-un-system-red-dark",
-      "bg-un-system-blue-dark",
-      "bg-un-system-yellow-dark",
-      "bg-un-system-purple-dark",
-    ];
-
-    const newConfetti: Confetti[] = [];
-    const confettiCount = 200;
-
-    for (let i = 0; i < confettiCount; i++) {
-      newConfetti.push({
-        id: Date.now() + i,
-        x: Math.random() * window.innerWidth,
-        y: -20 - Math.random() * 100,
-        vx: (Math.random() - 0.5) * 2,
-        vy: Math.random() * 3 + 2,
-        rotation: Math.random() * 360,
-        rotationSpeed: (Math.random() - 0.5) * 10,
-        size: Math.random() * 8 + 6,
-        colorClass:
-          colorClasses[Math.floor(Math.random() * colorClasses.length)],
-      });
-    }
-
-    setConfetti(newConfetti);
-
-    // Clear confetti after they fall
-    setTimeout(() => {
-      setConfetti([]);
-    }, 5000);
-  };
+  }, [triggerConfetti]);
 
   // Animate confetti
   useEffect(() => {
@@ -131,7 +133,7 @@ export default function UN80Animation() {
             backgroundColor: getCssColorVar(piece.colorClass),
             opacity: 1,
             transform: `rotate(${piece.rotation}deg)`,
-            borderRadius: Math.random() > 0.5 ? "50%" : "0%",
+            borderRadius: piece.borderRadius,
           }}
         />
       ))}
