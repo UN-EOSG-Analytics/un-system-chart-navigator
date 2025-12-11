@@ -1,5 +1,6 @@
 -- UN Entities Database Schema
 -- Azure PostgreSQL Database
+
 -- Drop table if exists
 DROP TABLE IF EXISTS entities;
 
@@ -8,5 +9,5 @@ CREATE TABLE
     entities (
         entity VARCHAR(255) PRIMARY KEY,
         entity_long TEXT,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        updated_at TIMESTAMPTZ DEFAULT (CURRENT_TIMESTAMP AT TIME ZONE 'America/New_York')
     );
