@@ -1,0 +1,37 @@
+name: Push Data to PostgreSQL
+
+on:
+    push:
+        paths:
+            - "data/output/entities.csv"
+    workflow_run:
+        workflows: ["Fetch Data from Airtable"]
+        types:
+            - completed
+    workflow_dispatch: # Allows manual trigger
+
+jobs:
+    push-to-postgres:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up uv
+              uses: astral-sh/setup-uv@v6
+              with:
+                  enable-cache: true
+
+            - name: Install dependencies from lockfile
+              run: uv sync --frozen
+
+            - name: Push data to PostgreSQL
+              env:
+                  # GitHub: "settings/secrets/actions" | Repository secrets
+                  AZURE_POSTGRES_HOST: ${{ secrets.AZURE_POSTGRES_HOST }}
+                  AZURE_POSTGRES_DB: ${{ secrets.AZURE_POSTGRES_DB }}
+                  AZURE_POSTGRES_USER: ${{ secrets.AZURE_POSTGRES_USER }}
+                  AZURE_POSTGRES_PASSWORD: ${{ secrets.AZURE_POSTGRES_PASSWORD }}
+                  AZURE_POSTGRES_PORT: ${{ secrets.AZURE_POSTGRES_PORT }}
+              run: uv run python python/04-push_to_postgres.py
