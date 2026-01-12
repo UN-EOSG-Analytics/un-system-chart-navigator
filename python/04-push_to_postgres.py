@@ -45,20 +45,22 @@ connection_string = f"postgresql://{user}:{password}@{host}:{port}/{db}?sslmode=
 engine = create_engine(connection_string)
 print(f"Connected to Postgres: {host}/{db}")
 
-# Truncate and insert
+# Delete existing data and insert
 try:
     with engine.begin() as conn:
-        conn.exec_driver_sql("TRUNCATE TABLE entities;")
+        # Use DELETE instead of TRUNCATE to avoid foreign key cascade issues
+        conn.exec_driver_sql("DELETE FROM systemchart.entities;")
 
     df.to_sql(
         "entities",
         engine,
         if_exists="append",
         index=False,
+        schema="systemchart",
         method="multi",
         chunksize=1000,
     )
-    print(f"✓ Successfully pushed {len(df):,} entities to PostgreSQL")
+    print(f"✓ Successfully pushed {len(df):,} entities to systemchart.entities")
 
 except Exception as e:
     print(f"✗ Error: {e}")
