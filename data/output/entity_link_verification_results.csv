@@ -1,163 +1,225 @@
-entity,url,accessible,content_valid,content_length,has_error_indicator,status_code,status_name,error,redirect_url,column
-ASMT,https://main.un.org/securitycouncil/en/sanctions/1267/monitoring-team/work-and-mandate,True,True,195709.0,False,200.0,OK,,,entity_link
-BINUH,https://binuh.unmissions.org/,True,True,67624.0,False,200.0,OK,,https://binuh.unmissions.org/fr,entity_link
-CEB,https://unsceb.org/,True,True,40182.0,False,200.0,OK,,,entity_link
-CNMC,https://unowas.unmissions.org/cameroon-nigeria-mixed-commission,True,True,40873.0,False,200.0,OK,,,entity_link
-CTBTO,https://www.ctbto.org/,True,True,17989.0,False,200.0,OK,,,entity_link
-CTED,https://www.un.org/sc/ctc/,True,True,101104.0,False,200.0,OK,,https://www.un.org/securitycouncil/ctc/,entity_link
-DA,https://unece.org/united-nations-development-account,False,False,0.0,,403.0,Forbidden,,,entity_link
-DCO,https://un-dco.org/,True,True,11982.0,False,200.0,OK,,,entity_link
-DESA,https://www.un.org/development/desa,True,True,120856.0,False,200.0,OK,,https://www.un.org/en/desa,entity_link
-DGACM,https://www.un.org/dgacm/,True,True,73784.0,False,200.0,OK,,,entity_link
-DGC,https://www.un.org/en/sections/departments/department-global-communications/,True,True,77068.0,False,200.0,OK,,https://www.un.org/en/department-global-communications,entity_link
-DMSPC,https://www.un.org/management/,True,True,35648.0,False,200.0,OK,,,entity_link
-DOS,https://operationalsupport.un.org/,True,True,95335.0,False,200.0,OK,,https://operationalsupport.un.org/en,entity_link
-DPO,https://peacekeeping.un.org/en/department-of-peace-operations,True,True,61222.0,False,200.0,OK,,,entity_link
-DPPA,https://dppa.un.org/,True,True,44741.0,False,200.0,OK,,https://dppa.un.org/en,entity_link
-DSS,https://www.un.org/undss/,True,True,72507.0,False,200.0,OK,,https://www.un.org/safety-and-security/en,entity_link
-ECA,https://www.uneca.org/,True,True,106388.0,False,200.0,OK,,,entity_link
-ECE,https://unece.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-ECLAC,https://www.cepal.org/,True,True,169275.0,False,200.0,OK,,,entity_link
-EO,https://www.un.org/en/ethics/,True,True,28789.0,False,200.0,OK,,,entity_link
-EOSG,https://www.un.org/sg,True,True,118736.0,False,200.0,OK,,https://www.un.org/sg/en,entity_link
-ESCAP,https://www.unescap.org/,True,True,19340.0,False,200.0,OK,,,entity_link
-ESCWA,https://www.unescwa.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-FAO,https://www.fao.org/,True,False,1183557.0,True,200.0,OK,,https://www.fao.org/home/en/,entity_link
-GoE-DRC,https://main.un.org/securitycouncil/en/sanctions/1533/work-and-mandate,True,True,190523.0,False,200.0,OK,,,entity_link
-IAEA,https://www.iaea.org/,True,True,13942.0,False,200.0,OK,,,entity_link
-ICAO,https://www.icao.int/,True,True,12996.0,False,200.0,OK,,,entity_link
-ICC,https://www.icc-cpi.int/,False,False,0.0,,403.0,Forbidden,,,entity_link
-ICJ,https://www.icj-cij.org/,True,True,2185.0,False,200.0,OK,,,entity_link
-ICSC,https://icsc.un.org/,True,True,86856.0,False,200.0,OK,,,entity_link
-IFAD,https://www.ifad.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-IIIM,https://iiim.un.org/,True,True,13100.0,False,200.0,OK,,,entity_link
-IIMM,https://iimm.un.org/,True,True,26196.0,False,200.0,OK,,,entity_link
-IIMP,https://iimp.un.org/,True,True,5060.0,False,200.0,OK,,,entity_link
-ILO,https://www.ilo.org/,True,True,89843.0,False,200.0,OK,,,entity_link
-IMF,https://www.imf.org/,False,False,,,,,"Connection error: HTTPSConnectionPool(host='www.imf.org', port=443): Max retries exceeded with url: / (Caused by ReadT",,entity_link
-IMO,https://www.imo.org/,True,True,86195.0,False,200.0,OK,,,entity_link
-IOM,https://www.iom.int/,False,False,0.0,,403.0,Forbidden,,,entity_link
-ISA,https://www.isa.org.jm/,False,False,,,,,"Connection error: HTTPSConnectionPool(host='www.isa.org.jm', port=443): Max retries exceeded with url: / (Caused by SS",,entity_link
-ITC,https://intracen.org/,True,True,41793.0,False,200.0,OK,,https://www.intracen.org/,entity_link
-ITLOS,https://www.itlos.org/,True,True,5181.0,False,200.0,OK,,https://www.itlos.org/en/,entity_link
-ITU,https://www.itu.int/,True,False,100580.0,True,200.0,OK,,https://www.itu.int/en/Pages/default.aspx,entity_link
-JIU,https://www.unjiu.org/,True,True,55278.0,False,200.0,OK,,,entity_link
-MINURSO,https://minurso.unmissions.org/,True,True,47309.0,False,200.0,OK,,,entity_link
-MINUSCA,https://minusca.unmissions.org/,True,True,64824.0,False,200.0,OK,,,entity_link
-MONUSCO,https://monusco.unmissions.org/,True,True,73213.0,False,200.0,OK,,https://monusco.unmissions.org/fr,entity_link
-OAJ,https://www.un.org/en/internaljustice/oaj/,True,True,34678.0,False,200.0,OK,,,entity_link
-OCHA,https://www.unocha.org/,True,True,271686.0,False,200.0,OK,,,entity_link
-ODET,https://www.un.org/digital-emerging-technologies/,True,True,60983.0,False,200.0,OK,,,entity_link
-ODPP,,False,False,,,,,Invalid or placeholder URL,,entity_link
-OFP-Delisting,https://main.un.org/securitycouncil/en/sanctions/delisting,True,True,191706.0,False,200.0,OK,,,entity_link
-OHCHR,https://www.ohchr.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-OICT,https://unite.un.org/,True,True,67664.0,False,200.0,OK,,https://unite.un.org/en,entity_link
-OIOS,https://oios.un.org/,True,True,50588.0,False,200.0,OK,,,entity_link
-OLA,https://legal.un.org/ola/,True,True,62931.0,False,200.0,OK,,,entity_link
-OMBUD-RES1904,https://www.un.org/securitycouncil/ombudsperson,True,True,186732.0,False,200.0,OK,,https://main.un.org/securitycouncil/en/ombudsperson,entity_link
-OMS,https://www.un.org/ombudsman/,True,True,49205.0,False,200.0,OK,,,entity_link
-OOSA,https://www.unoosa.org/,True,True,86525.0,False,200.0,OK,,,entity_link
-OPCW,https://www.opcw.org/,True,True,83694.0,False,200.0,OK,,,entity_link
-OSAA,https://www.un.org/osaa/,True,True,66606.0,False,200.0,OK,,,entity_link
-OSACAJT,https://www.un.org/sg/en/global-leadership/office-of-the-special-adviser-on-climate-action-and-just-transition/all,False,False,0.0,,404.0,Not Found,,,entity_link
-OSASG-Cyprus,https://dppa.un.org/en/mission/special-adviser-cyprus,True,True,42196.0,False,200.0,OK,,,entity_link
-OSASG-PG,https://www.un.org/en/genocide-prevention/prevention-genocide-related-crimes/special-adviser,True,True,71648.0,False,200.0,OK,,,entity_link
-OSC-SEA,https://www.un.org/preventing-sexual-exploitation-and-abuse/content/un-special-coordinator-0,True,True,51213.0,False,200.0,OK,,,entity_link
-OSESG-FG,https://ourfuturegenerations.com/united-nations/,True,True,23695.0,False,200.0,OK,,,entity_link
-OSESG-GL,https://ungreatlakes.unmissions.org/,True,True,65612.0,False,200.0,OK,,,entity_link
-OSESG-Horn,https://dppa.un.org/en/mission/special-envoy-horn-of-africa,True,True,43187.0,False,200.0,OK,,,entity_link
-OSESG-Myanmar,https://dppa.un.org/en/mission/special-envoy-myanmar,True,True,41166.0,False,200.0,OK,,,entity_link
-OSESG-SCRES1559,https://dppa.un.org/en/mission/special-envoy-implementation-of-security-council-resolution-1559-2004,True,True,40553.0,False,200.0,OK,,,entity_link
-OSESG-Syria,https://specialenvoysyria.unmissions.org/,True,True,35692.0,False,200.0,OK,,,entity_link
-OSESG-Yemen,https://osesgy.unmissions.org/,True,True,54911.0,False,200.0,OK,,,entity_link
-OSRSG-CAAC,https://childrenandarmedconflict.un.org/,True,True,1013120.0,False,200.0,OK,,,entity_link
-OSRSG-SVC,https://www.un.org/sexualviolenceinconflict/,True,True,149357.0,False,200.0,OK,,,entity_link
-OSRSG-VAC,https://violenceagainstchildren.un.org/,True,True,109787.0,False,200.0,OK,,https://violenceagainstchildren.un.org/en,entity_link
-OVRA,https://www.un.org/preventing-sexual-exploitation-and-abuse/content/office-victims-rights-advocate,True,True,62055.0,False,200.0,OK,,,entity_link
-PBSO,https://www.un.org/peacebuilding/,True,True,70379.0,False,200.0,OK,,,entity_link
-PESG-Sudan,https://dppa.un.org/en/mission/personal-envoy-sudan,True,True,39222.0,False,200.0,OK,,,entity_link
-PESG-WS,https://dppa.un.org/en/mission/personal-envoy-western-sahara,True,True,40900.0,False,200.0,OK,,,entity_link
-PoE-CAR,https://www.un.org/securitycouncil/sanctions/2127/panel-of-experts/work_mandate,True,True,193575.0,False,200.0,OK,,https://main.un.org/securitycouncil/en/sanctions/2745/panel-of-experts/work_mandate,entity_link
-PoE-Haiti,https://main.un.org/securitycouncil/en/sanctions/testing/Panel%20of%20Expert/work-and-mandate,True,True,190221.0,False,200.0,OK,,https://main.un.org/securitycouncil/en/sanctions/Panel-of-Expert/work-and-mandate,entity_link
-PoE-Libya,https://www.un.org/securitycouncil/sanctions/1970/panel-experts/work_mandate,True,True,191536.0,False,200.0,OK,,https://main.un.org/securitycouncil/en/sanctions/1970/panel-experts/work_mandate,entity_link
-PoE-RES2713,https://main.un.org/securitycouncil/en/sanctions/2713/work-and-mandate,True,True,197725.0,False,200.0,OK,,,entity_link
-PoE-RES2745,https://main.un.org/securitycouncil/en/sanctions/2745/panel-of-experts/work_mandate,True,True,193575.0,False,200.0,OK,,,entity_link
-PoE-S.Sudan,https://main.un.org/securitycouncil/en/sanctions/2206/panel-of-experts/work-mandate,True,True,195255.0,False,200.0,OK,,,entity_link
-PoE-Sudan,https://www.un.org/securitycouncil/sanctions/1591/panel-of-experts/work_mandate,True,True,191383.0,False,200.0,OK,,https://main.un.org/securitycouncil/en/sanctions/1591/panel-of-experts/work_mandate,entity_link
-PoE-Yemen,https://www.un.org/securitycouncil/sanctions/2140/panel-of-experts/work-and-mandate,True,True,189726.0,False,200.0,OK,,https://main.un.org/securitycouncil/en/sanctions/2140/panel-of-experts/work-and-mandate,entity_link
-RSCE,https://rsce.unmissions.org/,True,True,58671.0,False,200.0,OK,,,entity_link
-SC-RES1540,https://www.un.org/disarmament/wmd/sc1540/,False,False,0.0,,404.0,Not Found,,https://disarmament.unoda.org/wmd/sc1540/,entity_link
-SC-RES1718,https://main.un.org/securitycouncil/en/sanctions/1718/panel_experts/work_mandate,True,True,193378.0,False,200.0,OK,,,entity_link
-SC-RES2231,https://main.un.org/securitycouncil/en/content/2231/background,True,True,199708.0,False,200.0,OK,,,entity_link
-SWEO,https://www.un.org/system-wide-evaluation-office/,True,True,80279.0,False,200.0,OK,,https://www.un.org/system-wide-evaluation-office/en,entity_link
-UN Tourism,https://www.unwto.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UN-Habitat,https://unhabitat.org/,True,True,339423.0,False,200.0,OK,,,entity_link
-UN-OHRLLS,https://www.un.org/ohrlls/,True,True,61002.0,False,200.0,OK,,,entity_link
-UN-Women,https://www.unwomen.org/,True,True,119654.0,False,200.0,OK,,https://www.unwomen.org/en,entity_link
-UNAIDS,https://www.unaids.org/en,True,True,135415.0,False,200.0,OK,,,entity_link
-UNAMA,https://unama.unmissions.org/,True,True,58231.0,False,200.0,OK,,,entity_link
-UNAMI,https://iraq.un.org/en/132447-united-nations-assistance-mission-iraq-unami,True,True,8749.0,False,200.0,OK,,,entity_link
-UNAOC,https://www.unaoc.org/,True,True,133571.0,False,200.0,OK,,,entity_link
-UNCDF,https://www.uncdf.org/,True,True,138141.0,False,200.0,OK,,,entity_link
-UNCTAD,https://unctad.org/,True,True,19712.0,False,200.0,OK,,,entity_link
-UNDOF,https://undof.unmissions.org/,True,True,48032.0,False,200.0,OK,,,entity_link
-UNDP,https://www.undp.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNDRR,https://www.undrr.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNEP,https://www.unep.org/,True,True,20516.0,False,200.0,OK,,,entity_link
-UNESCO,https://www.unesco.org/,True,True,127047.0,False,200.0,OK,,https://www.unesco.org/en,entity_link
-UNFCCC,https://unfccc.int/,True,True,357599.0,False,200.0,OK,,,entity_link
-UNFICYP,https://unficyp.unmissions.org/,True,True,60008.0,False,200.0,OK,,,entity_link
-UNFPA,https://www.unfpa.org/,True,True,212346.0,False,200.0,OK,,,entity_link
-UNGC,https://unglobalcompact.org/,True,True,23702.0,False,200.0,OK,,,entity_link
-UNGEGN,https://unstats.un.org/unsd/ungegn,True,True,43395.0,False,200.0,OK,,,entity_link
-UNGGIM,https://ggim.un.org/,True,True,50548.0,False,200.0,OK,,,entity_link
-UNHCR,https://www.unhcr.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNICEF,https://www.unicef.org/,True,True,701728.0,False,200.0,OK,,,entity_link
-UNICRI,https://unicri.org/,False,False,,,,,"Connection error: HTTPSConnectionPool(host='unicri.org', port=443): Max retries exceeded with url: / (Caused by SSLErr",,entity_link
-UNIDIR,https://www.unidir.org/,True,True,214067.0,False,200.0,OK,,https://unidir.org:443,entity_link
-UNIDO,https://www.unido.org/,True,True,17924.0,False,200.0,OK,,,entity_link
-UNIFIL,https://unifil.unmissions.org/,True,True,57383.0,False,200.0,OK,,,entity_link
-UNISFA,https://unisfa.unmissions.org/,True,True,71341.0,False,200.0,OK,,,entity_link
-UNITAR,https://unitar.org/,True,True,251900.0,False,200.0,OK,,,entity_link
-UNLB,https://www.ungsc.org/,True,True,63697.0,False,200.0,OK,,,entity_link
-UNMHA,https://dppa.un.org/en/mission/unmha-hudaydah-agreement,True,True,47858.0,False,200.0,OK,,,entity_link
-UNMIK,https://unmik.unmissions.org/,True,True,60484.0,False,200.0,OK,,,entity_link
-UNMISS,https://unmiss.unmissions.org/,True,True,62224.0,False,200.0,OK,,,entity_link
-UNMOGIP,https://unmogip.unmissions.org/,True,True,51938.0,False,200.0,OK,,,entity_link
-UNOAU,https://unoau.unmissions.org/,True,True,83503.0,False,200.0,OK,,,entity_link
-UNOCA,https://unoca.unmissions.org/,True,True,63625.0,False,200.0,OK,,,entity_link
-UNOCT,https://www.un.org/counterterrorism/,True,True,107247.0,False,200.0,OK,,,entity_link
-UNODA,https://www.un.org/disarmament/,True,True,171754.0,False,200.0,OK,,https://disarmament.unoda.org:443/en,entity_link
-UNODC,https://www.unodc.org/,True,True,99746.0,False,200.0,OK,,,entity_link
-UNOG,https://www.ungeneva.org/,True,True,57781.0,False,200.0,OK,,https://www.ungeneva.org/en,entity_link
-UNON,https://www.unon.org/,True,True,42701.0,False,200.0,OK,,,entity_link
-UNOP,https://unpartnerships.un.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNOPS,https://www.unops.org/,True,True,244711.0,False,200.0,OK,,,entity_link
-UNOSAPG,,False,False,,,,,Invalid or placeholder URL,,entity_link
-UNOSSC,https://unsouthsouth.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNOV,https://www.unvienna.org/,True,True,39166.0,False,200.0,OK,,,entity_link
-UNOWAS,https://unowas.unmissions.org/,True,True,48423.0,False,200.0,OK,,,entity_link
-UNRCCA,https://unrcca.unmissions.org/,True,True,197106.0,False,200.0,OK,,,entity_link
-UNRGID,https://dppa.un.org/en/mission/unrgid,True,True,40383.0,False,200.0,OK,,,entity_link
-UNRISD,https://www.unrisd.org/,True,True,997.0,False,200.0,OK,,,entity_link
-UNRWA,https://www.unrwa.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNRoD,http://unrod.org/,True,True,18877.0,False,200.0,OK,,,entity_link
-UNSCO,https://unsco.unmissions.org/,True,True,179890.0,False,200.0,OK,,,entity_link
-UNSCOL,https://unscol.unmissions.org/,True,True,57385.0,False,200.0,OK,,,entity_link
-UNSMIL,https://unsmil.unmissions.org/,True,True,69206.0,False,200.0,OK,,,entity_link
-UNSOM,https://unsom.unmissions.org/,True,True,57330.0,False,200.0,OK,,,entity_link
-UNSOS,https://unsos.unmissions.org/,True,True,57689.0,False,200.0,OK,,,entity_link
-UNSSC,https://www.unssc.org/,True,True,152901.0,False,200.0,OK,,,entity_link
-UNTMIS,https://dppa.un.org/en/mission/untmis,True,True,40894.0,False,200.0,OK,,,entity_link
-UNTSO,https://untso.unmissions.org/,True,True,59198.0,False,200.0,OK,,,entity_link
-UNU,https://unu.edu/,True,True,58349.0,False,200.0,OK,,,entity_link
-UNV,https://www.unv.org/,False,False,0.0,,403.0,Forbidden,,,entity_link
-UNVMC,https://colombia.unmissions.org/,True,True,59099.0,False,200.0,OK,,,entity_link
-UNYO,https://www.un.org/youthaffairs/,True,True,107908.0,False,200.0,OK,,https://www.un.org/youthaffairs/en,entity_link
-UPU,https://www.upu.int/,True,True,115506.0,False,200.0,OK,,https://www.upu.int/en/home,entity_link
-WB,https://www.worldbank.org/,True,True,45125.0,False,200.0,OK,,https://www.worldbank.org/ext/en/home,entity_link
-WFP,https://www.wfp.org/,True,True,83398.0,False,200.0,OK,,,entity_link
-WHO,https://www.who.int/,True,True,125276.0,False,200.0,OK,,,entity_link
-WIPO,https://www.wipo.int/,True,True,68933.0,False,200.0,OK,,https://www.wipo.int/portal/en/index.html,entity_link
-WMO,https://public.wmo.int/,True,True,155209.0,False,200.0,OK,,https://wmo.int,entity_link
-WTO,https://www.wto.org/,True,True,40347.0,False,200.0,OK,,,entity_link
+entity,url,accessible,content_valid,content_length,has_error_indicator,status_code,status_name,cloudflare_protected,error,redirect_url,column
+1518 Committee,https://main.un.org/securitycouncil/en/sanctions/1518,True,True,194853.0,False,200.0,OK,False,,,entity_link
+1533 Committee,https://main.un.org/securitycouncil/en/sanctions/1533,True,True,210642.0,False,200.0,OK,False,,,entity_link
+1591 Committee,https://main.un.org/securitycouncil/en/sanctions/1591,True,True,195363.0,False,200.0,OK,False,,,entity_link
+1636 Committee,https://main.un.org/securitycouncil/en/sanctions/1636,True,True,186733.0,False,200.0,OK,False,,,entity_link
+1718 Committee,https://main.un.org/securitycouncil/en/sanctions/1718,True,True,221399.0,False,200.0,OK,False,,,entity_link
+1737 Committee,https://main.un.org/securitycouncil/en/sanctions/1737,True,True,242474.0,False,200.0,OK,False,,,entity_link
+1970 Committee,https://main.un.org/securitycouncil/en/sanctions/1970,True,True,214079.0,False,200.0,OK,False,,,entity_link
+1988 Committee,https://main.un.org/securitycouncil/en/sanctions/1988,True,True,196084.0,False,200.0,OK,False,,,entity_link
+2048 Committee,https://main.un.org/securitycouncil/en/sanctions/2048,True,True,188876.0,False,200.0,OK,False,,,entity_link
+2140 Committee,https://main.un.org/securitycouncil/en/sanctions/2140,True,True,194935.0,False,200.0,OK,False,,,entity_link
+2206 Committee,https://main.un.org/securitycouncil/en/sanctions/2206,True,True,198445.0,False,200.0,OK,False,,,entity_link
+2253 Committee,https://main.un.org/securitycouncil/en/sanctions/1267/monitoring-team/work-and-mandate,True,True,196523.0,False,200.0,OK,False,,,entity_link
+2253 Ombudsperson,https://main.un.org/securitycouncil/en/ombudsperson,True,True,187546.0,False,200.0,OK,False,,,entity_link
+2653 Committee,https://main.un.org/securitycouncil/en/sanctions/2653,True,True,196316.0,False,200.0,OK,False,,,entity_link
+2745 Committee,https://main.un.org/securitycouncil/en/sanctions/2745,True,True,203778.0,False,200.0,OK,False,,,entity_link
+ABDM,https://disarmament.unoda.org/en/our-work/disarmament-bodies/advisory-board-disarmament-matters,True,True,136048.0,False,200.0,OK,False,,,entity_link
+ASMT,https://main.un.org/securitycouncil/en/sanctions/1267/monitoring-team/work-and-mandate,True,True,196523.0,False,200.0,OK,False,,,entity_link
+Ad Hoc Bodies,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+Al-Shabaab Committee,https://main.un.org/securitycouncil/en/sanctions/2713,True,True,226054.0,False,200.0,OK,False,,,entity_link
+BINUH,https://binuh.unmissions.org/,True,True,216137.0,False,200.0,OK,False,,,entity_link
+Board of Auditors,https://www.un.org/en/auditors/board/,True,True,16106.0,False,200.0,OK,False,,,entity_link
+Boards,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+CCPCJ,https://www.unodc.org/unodc/commissions/CCPCJ/index.html,True,True,29520.0,False,200.0,OK,False,,,entity_link
+CDP,https://policy.desa.un.org/our-work/committee-for-development-policy,True,True,93194.0,False,200.0,OK,False,,,entity_link
+CEB,https://unsceb.org/,True,True,38235.0,False,200.0,OK,False,,,entity_link
+CEPA,https://publicadministration.desa.un.org/intergovernmental-support/cepa,True,True,75182.0,False,200.0,OK,False,,,entity_link
+CND,https://www.unodc.org/unodc/commissions/CND/,True,True,30855.0,False,200.0,OK,False,,,entity_link
+CNMC,https://unowas.unmissions.org/cameroon-nigeria-mixed-commission,True,True,212740.0,False,200.0,OK,False,,,entity_link
+CPD,https://www.un.org/development/desa/pd/content/CPD,True,True,41310.0,False,200.0,OK,False,,,entity_link
+CSTD,https://unctad.org/topic/commission-on-science-and-technology-for-development,True,True,19258.0,False,200.0,OK,False,,,entity_link
+CSW,https://www.unwomen.org/en/how-we-work/commission-on-the-status-of-women,True,True,118868.0,False,200.0,OK,False,,,entity_link
+CSocD,https://social.desa.un.org/csocd,True,True,81651.0,False,200.0,OK,False,,,entity_link
+CTBTO,https://www.ctbto.org/,True,True,17796.0,False,200.0,OK,False,,,entity_link
+CTC,https://www.un.org/securitycouncil/ctc/,True,True,100906.0,False,200.0,OK,False,,,entity_link
+CTED,https://www.un.org/sc/ctc/,True,True,100906.0,False,200.0,OK,False,,https://www.un.org/securitycouncil/ctc/,entity_link
+DA,https://da.desa.un.org/,True,True,34932.0,False,200.0,OK,False,,,entity_link
+DCO,https://un-dco.org/,True,True,12048.0,False,200.0,OK,False,,,entity_link
+DESA,https://www.un.org/development/desa,True,True,121147.0,False,200.0,OK,False,,https://www.un.org/en/desa,entity_link
+DGACM,https://www.un.org/dgacm/,True,True,70343.0,False,200.0,OK,False,,,entity_link
+DGC,https://www.un.org/en/sections/departments/department-global-communications/,True,True,77406.0,False,200.0,OK,False,,https://www.un.org/en/department-global-communications,entity_link
+DMSPC,https://www.un.org/management/,True,True,35648.0,False,200.0,OK,False,,,entity_link
+DOS,https://operationalsupport.un.org/,True,True,91967.0,False,200.0,OK,False,,https://operationalsupport.un.org/en,entity_link
+DPO,https://peacekeeping.un.org/en/department-of-peace-operations,True,True,61222.0,False,200.0,OK,False,,,entity_link
+DPPA,https://dppa.un.org/,True,True,45315.0,False,200.0,OK,False,,https://dppa.un.org/en,entity_link
+DSS,https://www.un.org/undss/,True,True,77087.0,False,200.0,OK,False,,https://www.un.org/safety-and-security/en,entity_link
+ECA,https://www.uneca.org/,True,True,93000.0,False,200.0,OK,False,,,entity_link
+ECE,https://unece.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+ECLAC,https://www.cepal.org/,True,True,166488.0,False,200.0,OK,False,,,entity_link
+EOSG,https://www.un.org/sg,True,True,117809.0,False,200.0,OK,False,,https://www.un.org/sg/en,entity_link
+ESCAP,https://www.unescap.org/,True,True,19098.0,False,200.0,OK,False,,,entity_link
+ESCWA,https://www.unescwa.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+Ethics Office,https://www.un.org/en/ethics/,True,True,28789.0,False,200.0,OK,False,,,entity_link
+FAO,https://www.fao.org/,True,False,1192396.0,True,200.0,OK,False,,https://www.fao.org/home/en/,entity_link
+FP-Delisting,https://main.un.org/securitycouncil/en/sanctions/delisting,True,True,192585.0,False,200.0,OK,False,,,entity_link
+Fifth Committee,https://www.un.org/en/ga/fifth/index.shtml,True,True,31644.0,False,200.0,OK,False,,,entity_link
+First Committee,https://www.un.org/en/ga/first/index.shtml,True,True,31411.0,False,200.0,OK,False,,,entity_link
+Fourth Committee,https://www.un.org/en/ga/fourth/index.shtml,True,True,26816.0,False,200.0,OK,False,,,entity_link
+GoE-DRC,https://main.un.org/securitycouncil/en/sanctions/1533/work-and-mandate,True,True,191337.0,False,200.0,OK,False,,,entity_link
+HLPF,https://hlpf.un.org/,True,True,110272.0,False,200.0,OK,False,,,entity_link
+HRC,https://www.ohchr.org/en/hrbodies/hrc/home,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+IAEA,https://www.iaea.org/,True,True,14022.0,False,200.0,OK,False,,,entity_link
+ICAO,https://www.icao.int/,True,True,12657.0,False,200.0,OK,False,,,entity_link
+ICC,https://www.icc-cpi.int/,True,True,15750.0,False,200.0,OK,False,,,entity_link
+ICJ,https://www.icj-cij.org/,True,True,2224.0,False,200.0,OK,False,,,entity_link
+ICSC,https://icsc.un.org/,True,True,85750.0,False,200.0,OK,False,,,entity_link
+IFAD,https://www.ifad.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+IIIM,https://iiim.un.org/,True,True,13062.0,False,200.0,OK,False,,,entity_link
+IIMM,https://iimm.un.org/,True,True,26524.0,False,200.0,OK,False,,,entity_link
+IIMP,https://iimp.un.org/,True,True,4983.0,False,200.0,OK,False,,,entity_link
+ILC,https://legal.un.org/ilc/ilcintro.shtml,True,True,27973.0,False,200.0,OK,False,,,entity_link
+ILO,https://www.ilo.org/,True,True,89305.0,False,200.0,OK,False,,,entity_link
+IMF,https://www.imf.org/,False,False,,,,,False,"Connection error: HTTPSConnectionPool(host='www.imf.org', port=443): Max retries exceeded with url: / (Caused by ReadT",,entity_link
+IMO,https://www.imo.org/,True,True,86539.0,False,200.0,OK,False,,,entity_link
+IOM,https://www.iom.int/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+IRMCT,https://www.irmct.org/en,True,True,46273.0,False,200.0,OK,False,,,entity_link
+ISA,https://www.isa.org.jm/,True,True,152042.0,False,200.0,OK,False,,https://isa.org.jm/,entity_link
+ITC,https://intracen.org/,True,True,42752.0,False,200.0,OK,False,,https://www.intracen.org/,entity_link
+ITLOS,https://www.itlos.org/,True,True,4330.0,False,200.0,OK,False,,https://www.itlos.org/en/,entity_link
+ITU,https://www.itu.int/,True,False,99199.0,True,200.0,OK,False,,https://www.itu.int/en/Pages/default.aspx,entity_link
+JIU,https://www.unjiu.org/,True,True,54049.0,False,200.0,OK,False,,,entity_link
+KJSO,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+MINURSO,https://minurso.unmissions.org/,True,True,225410.0,False,200.0,OK,False,,,entity_link
+MINUSCA,https://minusca.unmissions.org/,True,True,61246.0,False,200.0,OK,False,,,entity_link
+MINUSMA,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+MONUSCO,https://monusco.unmissions.org/,True,True,284224.0,False,200.0,OK,False,,,entity_link
+MSC,https://main.un.org/securitycouncil/en/subsidiary/msc,True,True,182587.0,False,200.0,OK,False,,,entity_link
+NGO Committee,https://ecosoc.un.org/en/ngo/committee-on-ngos,True,True,65966.0,False,200.0,OK,False,,,entity_link
+OAJ,https://www.un.org/en/internaljustice/oaj/,True,True,34683.0,False,200.0,OK,False,,,entity_link
+OCHA,https://www.unocha.org/,True,True,273679.0,False,200.0,OK,False,,,entity_link
+OCT,https://www.un.org/counterterrorism/,True,True,217351.0,False,200.0,OK,False,,https://www.un.org/counterterrorism/en,entity_link
+ODA,https://www.un.org/disarmament/,True,True,184483.0,False,200.0,OK,False,,https://disarmament.unoda.org:443/en,entity_link
+ODET,https://www.un.org/digital-emerging-technologies/,True,True,61885.0,False,200.0,OK,False,,,entity_link
+ODPP,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+OHCHR,https://www.ohchr.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+OICT,https://unite.un.org/,True,True,65973.0,False,200.0,OK,False,,https://unite.un.org/en,entity_link
+OIOS,https://oios.un.org/,True,True,50588.0,False,200.0,OK,False,,,entity_link
+OLA,https://legal.un.org/ola/,True,True,62931.0,False,200.0,OK,False,,,entity_link
+OMBUD-RES1904,https://www.un.org/securitycouncil/ombudsperson,True,True,187546.0,False,200.0,OK,False,,https://main.un.org/securitycouncil/en/ombudsperson,entity_link
+OOSA,https://www.unoosa.org/,True,True,87842.0,False,200.0,OK,False,,,entity_link
+OPCW,https://www.opcw.org/,True,True,83391.0,False,200.0,OK,False,,,entity_link
+OSAA,https://www.un.org/osaa/,True,True,65604.0,False,200.0,OK,False,,,entity_link
+OSACAJT,https://www.un.org/sg/en/global-leadership/entity/secretariat-and-regional-commissions/office-of-the-special-adviser-climate-action-and-just-transition,True,True,60610.0,False,200.0,OK,False,,,entity_link
+OSASG-Cyprus,https://dppa.un.org/en/mission/special-adviser-cyprus,True,True,41791.0,False,200.0,OK,False,,,entity_link
+OSASG-Genocide,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+OSC-SEA,https://www.un.org/preventing-sexual-exploitation-and-abuse/content/un-special-coordinator-0,True,True,51213.0,False,200.0,OK,False,,,entity_link
+OSESG-SCRES1559,https://dppa.un.org/en/mission/special-envoy-implementation-of-security-council-resolution-1559-2004,True,True,40398.0,False,200.0,OK,False,,,entity_link
+OSESG-SYRIA,https://specialenvoysyria.unmissions.org/,True,True,220012.0,False,200.0,OK,False,,,entity_link
+OSESGY,https://osesgy.unmissions.org/,True,True,234199.0,False,200.0,OK,False,,,entity_link
+OVRA,https://www.un.org/preventing-sexual-exploitation-and-abuse/content/victims-rights-advocate,True,True,57618.0,False,200.0,OK,False,,,entity_link
+Other Committees,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+PBSO,https://www.un.org/peacebuilding/,True,True,71082.0,False,200.0,OK,False,,,entity_link
+PESG-Sudan,https://dppa.un.org/en/mission/personal-envoy-sudan,True,True,39067.0,False,200.0,OK,False,,,entity_link
+PESG-WS,https://dppa.un.org/en/mission/personal-envoy-western-sahara,True,True,40745.0,False,200.0,OK,False,,,entity_link
+PoE-CAR,https://www.un.org/securitycouncil/sanctions/2127/panel-of-experts/work_mandate,True,True,194389.0,False,200.0,OK,False,,https://main.un.org/securitycouncil/en/sanctions/2745/panel-of-experts/work_mandate,entity_link
+PoE-Haiti,https://main.un.org/securitycouncil/en/sanctions/testing/Panel%20of%20Expert/work-and-mandate,True,True,191035.0,False,200.0,OK,False,,https://main.un.org/securitycouncil/en/sanctions/Panel-of-Expert/work-and-mandate,entity_link
+PoE-Libya,https://www.un.org/securitycouncil/sanctions/1970/panel-experts/work_mandate,True,True,192350.0,False,200.0,OK,False,,https://main.un.org/securitycouncil/en/sanctions/1970/panel-experts/work_mandate,entity_link
+PoE-RES2713,https://main.un.org/securitycouncil/en/sanctions/2713/work-and-mandate,True,True,198539.0,False,200.0,OK,False,,,entity_link
+PoE-RES2745,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+PoE-S.Sudan,https://main.un.org/securitycouncil/en/sanctions/2206/panel-of-experts/work-mandate,True,True,196069.0,False,200.0,OK,False,,,entity_link
+PoE-Sudan,https://www.un.org/securitycouncil/sanctions/1591/panel-of-experts/work_mandate,True,True,192222.0,False,200.0,OK,False,,https://main.un.org/securitycouncil/en/sanctions/1591/panel-of-experts/work_mandate,entity_link
+PoE-Yemen,https://www.un.org/securitycouncil/sanctions/2140/panel-of-experts/work-and-mandate,True,True,190540.0,False,200.0,OK,False,,https://main.un.org/securitycouncil/en/sanctions/2140/panel-of-experts/work-and-mandate,entity_link
+RSCE,https://rsce.unmissions.org/,True,True,59538.0,False,200.0,OK,False,,,entity_link
+SASG-PGRP,https://www.un.org/en/genocide-prevention/,True,True,81431.0,False,200.0,OK,False,,,entity_link
+SASG-SID,https://www.un.org/en/solutions-to-internal-displacement,True,True,85342.0,False,200.0,OK,False,,,entity_link
+SC-RES1540,https://www.un.org/sc/1540/,True,True,50241.0,False,200.0,OK,False,,https://www.un.org/en/sc/1540/,entity_link
+SC-RES1718,https://main.un.org/securitycouncil/en/sanctions/1718/panel_experts/work_mandate,True,True,194192.0,False,200.0,OK,False,,,entity_link
+SC-RES2231,https://main.un.org/securitycouncil/en/content/2231/background,True,True,200522.0,False,200.0,OK,False,,,entity_link
+SESG-GL,https://ungreatlakes.unmissions.org/,True,True,232279.0,False,200.0,OK,False,,,entity_link
+SESG-Horn of Africa,https://dppa.un.org/en/mission/special-envoy-horn-of-africa,True,True,43032.0,False,200.0,OK,False,,,entity_link
+SESG-MYR,https://dppa.un.org/en/mission/special-envoy-myanmar,True,True,41011.0,False,200.0,OK,False,,,entity_link
+SRSG-CAAC,https://childrenandarmedconflict.un.org/,True,True,1014569.0,False,200.0,OK,False,,,entity_link
+SRSG-SVC,https://www.un.org/sexualviolenceinconflict/,True,True,150791.0,False,200.0,OK,False,,,entity_link
+SRSG-VAC,https://violenceagainstchildren.un.org/,True,True,100101.0,False,200.0,OK,False,,https://violenceagainstchildren.un.org/en,entity_link
+SWEO,https://www.un.org/system-wide-evaluation-office/,True,True,79502.0,False,200.0,OK,False,,https://www.un.org/system-wide-evaluation-office/en,entity_link
+Sanctions WG,https://main.un.org/securitycouncil/en/sanctions/iwg-sanctions,True,True,181174.0,False,200.0,OK,False,,,entity_link
+Second Committee,https://www.un.org/en/ga/second/index.shtml,True,True,29759.0,False,200.0,OK,False,,,entity_link
+Sixth Committee,https://www.un.org/en/ga/sixth/index.shtml,True,True,46244.0,False,200.0,OK,False,,,entity_link
+Standing Committees,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+StatCom,https://unstats.un.org/UNSDWebsite/statcom/,True,True,985.0,False,200.0,OK,False,,,entity_link
+TDB,https://unctad.org/about/trade-and-development-board,True,True,16088.0,False,200.0,OK,False,,,entity_link
+Third Committee,https://www.un.org/en/ga/third/index.shtml,True,True,27675.0,False,200.0,OK,False,,,entity_link
+UN Tourism,https://www.untourism.int/,True,True,190097.0,False,200.0,OK,False,,,entity_link
+UN Youth,https://www.un.org/youthaffairs/,True,True,90641.0,False,200.0,OK,False,,https://www.un.org/youthaffairs/en,entity_link
+UN-Habitat,https://unhabitat.org/,True,True,338314.0,False,200.0,OK,False,,,entity_link
+UN-Habitat Assembly,https://unhabitat.org/governance/un-habitat-assembly,True,True,366258.0,False,200.0,OK,False,,,entity_link
+UN-OHRLLS,https://www.un.org/ohrlls/,True,True,60658.0,False,200.0,OK,False,,,entity_link
+UN-Women,https://www.unwomen.org/,True,True,128254.0,False,200.0,OK,False,,https://www.unwomen.org/en,entity_link
+UNAIDS,https://www.unaids.org/en,True,True,134455.0,False,200.0,OK,False,,,entity_link
+UNAMA,https://unama.unmissions.org/,True,True,232174.0,False,200.0,OK,False,,,entity_link
+UNAMI,https://iraq.un.org/en/132447-united-nations-assistance-mission-iraq-unami,True,True,9501.0,False,200.0,OK,False,,,entity_link
+UNAOC,https://www.unaoc.org/,True,True,121722.0,False,200.0,OK,False,,,entity_link
+UNCCD,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+UNCDF,https://www.uncdf.org/,True,True,138281.0,False,200.0,OK,False,,,entity_link
+UNCITRAL,https://uncitral.un.org/,True,True,57221.0,False,200.0,OK,False,,,entity_link
+UNCTAD,https://unctad.org/,True,True,20047.0,False,200.0,OK,False,,,entity_link
+UNDC,https://disarmament.unoda.org/en/united-nations-disarmament-commission,True,True,133621.0,False,200.0,OK,False,,,entity_link
+UNDEF,https://www.un.org/democracyfund/,True,True,62564.0,False,200.0,OK,False,,,entity_link
+UNDOF,https://undof.unmissions.org/,True,True,226784.0,False,200.0,OK,False,,,entity_link
+UNDP,https://www.undp.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNDRR,https://www.undrr.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNEA,https://www.unep.org/environmentassembly/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNEP,https://www.unep.org/,True,True,20392.0,False,200.0,OK,False,,,entity_link
+UNESCO,https://www.unesco.org/,True,True,115553.0,False,200.0,OK,False,,https://www.unesco.org/en,entity_link
+UNFF,https://www.un.org/esa/forests/,True,True,386.0,False,200.0,OK,False,,,entity_link
+UNFICYP,https://unficyp.unmissions.org/,True,True,249654.0,False,200.0,OK,False,,,entity_link
+UNFPA,https://www.unfpa.org/,True,True,203702.0,False,200.0,OK,False,,,entity_link
+UNGC,https://unglobalcompact.org/,True,True,20680.0,False,200.0,OK,False,,,entity_link
+UNGEGN,https://unstats.un.org/unsd/ungegn,True,True,43395.0,False,200.0,OK,False,,,entity_link
+UNGGIM,https://ggim.un.org/,True,True,48676.0,False,200.0,OK,False,,,entity_link
+UNGSC Brindisi,https://www.ungsc.org/brindisi,True,True,52600.0,False,200.0,OK,False,,,entity_link
+UNHCR,https://www.unhcr.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNICEF,https://www.unicef.org/,False,False,0.0,,403.0,Forbidden,True,Cloudflare protected (403),,entity_link
+UNICEF EB,https://www.unicef.org/executiveboard/,False,False,0.0,,403.0,Forbidden,True,Cloudflare protected (403),,entity_link
+UNICRI,https://unicri.org/,False,False,,,,,False,"Connection error: HTTPSConnectionPool(host='unicri.org', port=443): Max retries exceeded with url: / (Caused by SSLErr",,entity_link
+UNIDIR,https://www.unidir.org/,True,True,227295.0,False,200.0,OK,False,,https://unidir.org:443,entity_link
+UNIDO,https://www.unido.org/,True,True,18056.0,False,200.0,OK,False,,,entity_link
+UNIFIL,https://unifil.unmissions.org/,True,True,52988.0,False,200.0,OK,False,,,entity_link
+UNISFA,https://unisfa.unmissions.org/,True,True,223350.0,False,200.0,OK,False,,,entity_link
+UNITAR,https://unitar.org/,True,True,251727.0,False,200.0,OK,False,,,entity_link
+UNJSPB,https://www.unjspf.org/governance/,True,True,41994.0,False,200.0,OK,False,,,entity_link
+UNMHA,https://dppa.un.org/en/mission/unmha-hudaydah-agreement,True,True,47703.0,False,200.0,OK,False,,,entity_link
+UNMIK,https://unmik.unmissions.org/,True,True,60628.0,False,200.0,OK,False,,,entity_link
+UNMISS,https://unmiss.unmissions.org/,True,True,233365.0,False,200.0,OK,False,,,entity_link
+UNMOGIP,https://unmogip.unmissions.org/,True,True,219837.0,False,200.0,OK,False,,,entity_link
+UNOAU,https://unoau.unmissions.org/,True,True,221947.0,False,200.0,OK,False,,,entity_link
+UNOCA,https://unoca.unmissions.org/,True,True,228856.0,False,200.0,OK,False,,,entity_link
+UNODC,https://www.unodc.org/,True,True,52692.0,False,200.0,OK,False,,,entity_link
+UNOG,https://www.ungeneva.org/,True,True,55141.0,False,200.0,OK,False,,https://www.ungeneva.org/en,entity_link
+UNOMS,https://www.un.org/ombudsman/,True,True,49211.0,False,200.0,OK,False,,,entity_link
+UNON,https://www.unon.org/,True,True,42699.0,False,200.0,OK,False,,,entity_link
+UNOP,https://unpartnerships.un.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNOPS,https://www.unops.org/,True,True,247396.0,False,200.0,OK,False,,,entity_link
+UNOSSC,https://unsouthsouth.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNOV,https://www.unvienna.org/,True,True,36490.0,False,200.0,OK,False,,,entity_link
+UNOWAS,https://unowas.unmissions.org/,True,True,227651.0,False,200.0,OK,False,,,entity_link
+UNPC,https://www.un.org/peacebuilding/commission,True,True,56342.0,False,200.0,OK,False,,,entity_link
+UNPFII,https://social.desa.un.org/issues/indigenous-peoples/unpfii,True,True,93305.0,False,200.0,OK,False,,,entity_link
+UNRCCA,https://unrcca.unmissions.org/,True,True,230237.0,False,200.0,OK,False,,,entity_link
+UNRGID,https://dppa.un.org/en/mission/unrgid,True,True,40228.0,False,200.0,OK,False,,,entity_link
+UNRISD,https://www.unrisd.org/,True,True,997.0,False,200.0,OK,False,,,entity_link
+UNRWA,https://www.unrwa.org/,False,False,0.0,,403.0,Forbidden,True,Cloudflare protected (403),,entity_link
+UNRoD,http://unrod.org/,True,True,18878.0,False,200.0,OK,False,,,entity_link
+UNSCO,https://unsco.unmissions.org/,True,True,214557.0,False,200.0,OK,False,,,entity_link
+UNSCOL,https://unscol.unmissions.org/,True,True,215544.0,False,200.0,OK,False,,,entity_link
+UNSMIL,https://unsmil.unmissions.org/,True,True,241894.0,False,200.0,OK,False,,,entity_link
+UNSOM,https://unsom.unmissions.org/,True,True,205877.0,False,200.0,OK,False,,,entity_link
+UNSOS,https://unsos.unmissions.org/,True,True,58023.0,False,200.0,OK,False,,,entity_link
+UNSSC,https://www.unssc.org/,True,True,152008.0,False,200.0,OK,False,,,entity_link
+UNSU,,False,False,,,,,False,Invalid or placeholder URL,,entity_link
+UNTMIS,https://dppa.un.org/en/mission/untmis,True,True,40739.0,False,200.0,OK,False,,,entity_link
+UNTSO,https://untso.unmissions.org/,True,True,52996.0,False,200.0,OK,False,,,entity_link
+UNU,https://unu.edu/,True,True,60895.0,False,200.0,OK,False,,,entity_link
+UNU Council,https://unu.edu/about/unu-council,True,True,54276.0,False,200.0,OK,False,,,entity_link
+UNV,https://www.unv.org/,False,False,0.0,,403.0,Forbidden,False,,,entity_link
+UNVMC,https://colombia.unmissions.org/,True,True,227754.0,False,200.0,OK,False,,,entity_link
+UPU,https://www.upu.int/,True,True,113766.0,False,200.0,OK,False,,https://www.upu.int/en/home,entity_link
+WFP,https://www.wfp.org/,True,True,82753.0,False,200.0,OK,False,,,entity_link
+WFP EB,https://executiveboard.wfp.org/,True,True,47531.0,False,200.0,OK,False,,,entity_link
+WHO,https://www.who.int/,True,True,126770.0,False,200.0,OK,False,,,entity_link
+WIPO,https://www.wipo.int/,True,True,69905.0,False,200.0,OK,False,,https://www.wipo.int/portal/en/index.html,entity_link
+WMO,https://public.wmo.int/,True,True,155366.0,False,200.0,OK,False,,https://wmo.int,entity_link
+WORLD BANK GROUP,https://www.worldbank.org/,True,True,44022.0,False,200.0,OK,False,,https://www.worldbank.org/ext/en/home,entity_link
+WTO,https://www.wto.org/,True,True,43851.0,False,200.0,OK,False,,,entity_link
+Working Groups,,False,False,,,,,False,Invalid or placeholder URL,,entity_link

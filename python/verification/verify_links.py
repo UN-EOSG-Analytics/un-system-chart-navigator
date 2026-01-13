@@ -187,6 +187,7 @@ def verify_link(session: requests.Session, url: str, delay: float = 0.5) -> Dict
         "has_error_indicator": None,
         "error": None,
         "redirect_url": None,
+        "cloudflare_protected": False,
     }
 
     # Skip obviously invalid URLs
@@ -210,14 +211,32 @@ def verify_link(session: requests.Session, url: str, delay: float = 0.5) -> Dict
 
         result["status_code"] = response.status_code
         result["status_name"] = get_status_name(response.status_code)
-        result["accessible"] = response.status_code == 200
 
         # Check if we were redirected
         if response.url != url:
             result["redirect_url"] = response.url
 
+        # Detect Cloudflare protection
+        if response.status_code == 403:
+            # Check for Cloudflare indicators in response
+            response_text = response.text.lower()
+            cloudflare_indicators = [
+                "cloudflare",
+                "cf-ray",
+                "checking your browser",
+                "ddos protection",
+                "ray id",
+            ]
+            if any(indicator in response_text for indicator in cloudflare_indicators):
+                result["cloudflare_protected"] = True
+                result["error"] = "Cloudflare protected (403)"
+
+        # Consider 2xx and 3xx as accessible
+        if 200 <= response.status_code < 400:
+            result["accessible"] = True
+
         # If accessible, check content quality
-        if result["accessible"]:
+        if result["accessible"] and response.status_code == 200:
             content_info = check_content_quality(response)
             result["content_valid"] = content_info["content_valid"]
             result["content_length"] = content_info["content_length"]
@@ -285,6 +304,16 @@ def verify_entity_links(
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Verify entity links")
+    parser.add_argument(
+        "--screenshots",
+        action="store_true",
+        help="Take screenshots of entity pages (requires Playwright)",
+    )
+    args = parser.parse_args()
+
     input_path = Path("public") / "un-entities.json"
     with open(input_path, "r", encoding="utf-8") as f:
         entities_json = json.load(f)
@@ -292,7 +321,9 @@ if __name__ == "__main__":
     df = pd.DataFrame(entities_json)
 
     # Verify primary entity links
-    results = verify_entity_links(df, "entity_link", take_screenshots=True)
+    print(f"Verifying {len(df)} entity links...")
+    print(f"Screenshots: {'enabled' if args.screenshots else 'disabled'}")
+    results = verify_entity_links(df, "entity_link", take_screenshots=args.screenshots)
 
     # Reorder columns to put entity and url first
     column_order = [
@@ -304,22 +335,51 @@ if __name__ == "__main__":
         "has_error_indicator",
         "status_code",
         "status_name",
+        "cloudflare_protected",
         "error",
         "redirect_url",
-        "screenshot_taken",
-        "screenshot_path",
-        "screenshot_error",
-        "column",
     ]
+    
+    # Add screenshot columns if they exist
+    if args.screenshots:
+        column_order.extend(["screenshot_taken", "screenshot_path", "screenshot_error"])
+    
+    column_order.append("column")
+    
     # Only include columns that exist
     column_order = [col for col in column_order if col in results.columns]
     results = results[column_order]
+
+    # Print summary
+    print(f"\n{'='*60}")
+    print("VERIFICATION SUMMARY")
+    print(f"{'='*60}")
+    print(f"Total entities: {len(results)}")
+    print(f"Accessible: {results['accessible'].sum()} ({results['accessible'].sum()/len(results)*100:.1f}%)")
+    print(f"Inaccessible: {(~results['accessible']).sum()} ({(~results['accessible']).sum()/len(results)*100:.1f}%)")
+    
+    # Count Cloudflare-protected sites
+    cloudflare_count = (results['status_code'] == 403).sum()
+    if cloudflare_count > 0:
+        print(f"🔒 Cloudflare/403 Protected: {cloudflare_count}")
+    
+    # Show some examples of inaccessible sites
+    inaccessible = results[~results['accessible']]
+    if len(inaccessible) > 0:
+        print(f"\nInaccessible sites:")
+        for _, row in inaccessible.head(5).iterrows():
+            status = f"{row['status_code']} {row['status_name']}" if pd.notna(row['status_code']) else row['error']
+            print(f"  - {row['entity']}: {status}")
+        if len(inaccessible) > 5:
+            print(f"  ... and {len(inaccessible) - 5} more")
+    print(f"{'='*60}\n")
 
     # Save results
     output_path = Path("data") / "output" / "entity_link_verification_results.csv"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     results.to_csv(output_path, index=False)
-    print(f"\nDetailed results saved to: {output_path}\n")
+    print(f"📄 CSV saved to: {output_path}")
 
     output_path = Path("public") / "entity_link_verification_results.json"
     results.to_json(output_path, orient="records", indent=2)
+    print(f"📄 JSON saved to: {output_path}")
