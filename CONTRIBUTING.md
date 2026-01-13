@@ -238,6 +238,8 @@ npx next --version
 
 # Check for shadcn/ui component updates
 npx shadcn@latest diff
+
+node --version
 ```
 
 ### Styling and Theme
