@@ -15,6 +15,7 @@ entity,entity_long
 2653 Committee,Security Council Committee established pursuant to resolution 2653 (2022) concerning Haiti
 2745 Committee,Security Council Committee pursuant to resolution 2745 (2024)
 ABDM,Advisory Board on Disarmament Matters
+ASMT,"Analytical Support and Sanctions Monitoring Team pursuant to resolutions 1526 (2004) and 2253 (2015) concerning Islamic State in Iraq and the Levant (ISIL) (Da’esh), Al-Qaida and the Taliban and associated individuals and entities"
 Ad Hoc Bodies,
 Al-Shabaab Committee,Security Council Committee pursuant to resolution 2713 (2023) concerning Al-Shabaab
 BINUH,United Nations Integrated Office in Haiti
@@ -65,7 +66,7 @@ ICJ,International Court of Justice
 ICSC,International Civil Service Commission
 IFAD,International Fund for Agricultural Development
 IIIM,"International, Impartial and Independent Mechanism to Assist in the Investigation and Prosecution of Persons Responsible for the Most Serious Crimes under International Law Committed in the Syrian Arab Republic since March 2011"
-IIM,Independent Investigative Mechanism for Myanmar
+IIMM,Independent Investigative Mechanism for Myanmar
 IIMP,Independent Institution on Missing Persons in the Syrian Arab Republic
 ILC,International Law Commission
 ILO,International Labor Organization
@@ -98,22 +99,24 @@ OLA,Office of Legal Affairs
 OMBUD-RES1904,Office of the Ombudsperson established pursuant to Security Council resolution 1904 (2009)
 OOSA,Office for Outer Space Affairs
 OPCW,Organisation for the Prohibition of Chemical Weapons
-OPEG-WS,Personal Envoy of the Secretary-General for Western Sahara
 OSAA,Office of the Special Adviser on Africa
 OSACAJT,Office of the Special Adviser on Climate Action and Just Transition
 OSASG-Cyprus,Office of the Special Adviser to the Secretary-General on Cyprus
 OSASG-Genocide,Office of the Special Adviser to the Secretary-General on the Prevention of Genocide
 OSC-SEA,Office of the Special Coordinator on Improving the UN Response to Sexual Exploitation and Abuse
-OSE Syria,Office of the Special Envoy of the Secretary-General for Syria
+OSESG-SCRES1559,Office of the Special Envoy of the Secretary-General for the implementation of Security Council resolution 1559 (2004)
+OSESG-SYRIA,Office of the Special Envoy of the Secretary-General for Syria
 OSESGY,Office of the Special Envoy of the Secretary-General for Yemen
 OVRA,Office of the Victims' Rights Advocate
 Other Committees,
 PBSO,Peacebuilding Support Office
 PESG-Sudan,Office of the Personal Envoy of the Secretary-General for the Sudan
+PESG-WS,Personal Envoy of the Secretary-General for Western Sahara
 PoE-CAR,Panel of Experts on the Central African Republic
 PoE-Haiti,Panel of Experts on Haiti
 PoE-Libya,Panel of Experts on Libya
 PoE-RES2713,Panel of Experts pursuant to resolution 2713 (2023)
+PoE-RES2745,Panel of Experts pursuant to resolution 2745 (2024)
 PoE-S.Sudan,Panel of Experts on South Sudan
 PoE-Sudan,Panel of Experts on the Sudan
 PoE-Yemen,Panel of Experts on Yemen
@@ -123,8 +126,8 @@ SASG-SID,Office of the Special Adviser to the Secretary-General on Solutions to 
 SC-RES1540,Support to the Security Council Committee established pursuant to resolution 1540 (2004) on the non-proliferation of all weapons of mass destruction
 SC-RES1718,Support to the Security Council Committee established pursuant to resolution 1718 (2006)
 SC-RES2231,Implementation of Security Council resolution 2231 (2015)
-SESG GL,Office of the Special Envoy of the Secretary-General for the Great Lakes Region
-SESG Horn of Africa,Office of the Special Envoy of the Secretary-General for the Horn of Africa
+SESG-GL,Office of the Special Envoy of the Secretary-General for the Great Lakes Region
+SESG-Horn of Africa,Office of the Special Envoy of the Secretary-General for the Horn of Africa
 SESG-MYR,Office of the Special Envoy of the Secretary-General on Myanmar
 SRSG-CAAC,Office of the Special Representative of the Secretary-General for Children and Armed Conflict
 SRSG-SVC,Office of the Special Representative of the Secretary-General on Sexual Violence in Conflict
