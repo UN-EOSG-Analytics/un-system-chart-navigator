@@ -36,7 +36,7 @@ TABLE_ID = os.environ["AIRTABLE_TABLE_ID"]
 
 # Fetch all records from the 'API ALL' view
 table = api.table(BASE_ID, TABLE_ID)
-records = table.all(view="API ALL")
+records = table.all()
 
 if records:
     data = [record["fields"] for record in records]
