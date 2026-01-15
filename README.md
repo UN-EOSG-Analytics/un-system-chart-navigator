@@ -199,3 +199,7 @@ To suggest updates or additions to entity data, use the [contribution form](http
 - **Configuration**: Add all settings to [`src/lib/constants.ts`](src/lib/constants.ts) for easy maintenance
 - **Utilities**: Place helper functions in [`src/lib/utils.ts`](src/lib/utils.ts) for reuse
 - **Static-First**: Remember this deploys as a static site on GitHub Pages
+
+## Read more
+
+See the Wiki [here](https://github.com/UN-EOSG-Analytics/un-system-chart-navigator/wiki).
