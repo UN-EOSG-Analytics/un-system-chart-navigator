@@ -1,8 +1,16 @@
 import json
 import re
+from pathlib import Path
+from time import sleep
 
+from tqdm import tqdm
 import pandas as pd
+import requests
+from joblib.memory import Memory
 from utils import parse_amount
+from rich import print
+
+memory = Memory(location=".cache", verbose=0)
 
 SDG_SHORT_TITLES = {
     1: "No Poverty",
@@ -102,3 +110,56 @@ for sdg_num in range(1, 18):
 
 with open("public/sdg-expenses.json", "w") as f:
     json.dump(sdg_expenses, f, indent=2)
+
+get = memory.cache(requests.get)
+map = {}
+for id in range(500):
+    res = get(f"https://api.uninfo.org/v1.0/workspace/{id}")
+    if not res.text:
+        continue
+    data = res.json()
+    countries = [country["name"] for country in data["countries"]]
+    for country in countries:
+        map[country] = id
+
+Path("data/processed/workspace_ids.json").write_text(
+    json.dumps(map, indent=2, ensure_ascii=False)
+)
+
+data = []
+for country, id in tqdm(list(map.items())):
+    workspace = get(f"https://api.uninfo.org/v1.0/workspace/{id}").json()
+    if len(workspace["countries"]) > 1:
+        print(f"{country} has shared workspace, skipping for now")
+    items = get(
+        "https://api.uninfo.org/v1.0/planEntity/finance/overview",
+        params={
+            "financeYears": 2025,
+            "grouping": "sdg",
+            "workspaceIds": id,
+            "year": 2025,
+        },
+    ).json()
+    for item in items:
+        res_req = [
+            m["total"]
+            for m in item["metrics"]
+            if m["metricName"] == "Total Required Resources"
+        ]
+        res_req = res_req[0] if res_req else None
+        res_avl = [
+            m["total"]
+            for m in item["metrics"]
+            if m["metricName"] == "Total Available Resources"
+        ]
+        res_avl = res_avl[0] if res_avl else None
+        entry = {
+            "country": country,
+            "sdg": item["id"],
+            "resources_required": res_req,
+            "resources_available": res_avl,
+        }
+        data.append(entry)
+Path("data/processed/resources_by_country_and_sdg.json").write_text(
+    json.dumps(data, indent=2, ensure_ascii=False)
+)

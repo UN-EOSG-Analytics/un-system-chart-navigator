@@ -1,0 +1,297 @@
+{
+  "results": [
+    {
+      "id": 176591,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "1_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-29T18:25:50.233Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18349,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869082,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": null,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T18:25:50.246+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 176591
+      }
+    },
+    {
+      "id": 176315,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "7_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-28T14:34:01.141Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18354,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869123,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": 622,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T18:49:51.489+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 176315
+      }
+    },
+    {
+      "id": 176311,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "5_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-28T14:08:05.177Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18352,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869121,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": 622,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T18:48:59.3+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 176311
+      }
+    },
+    {
+      "id": 174622,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "8_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-14T16:13:39.139Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18355,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869124,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": 622,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T18:50:03.963+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 174622
+      }
+    },
+    {
+      "id": 174621,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "6_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-14T16:10:52.449Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18353,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869122,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": 622,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T18:49:34.002+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 174621
+      }
+    },
+    {
+      "id": 174619,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "4_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-14T16:02:55.951Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18351,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869254,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": 622,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T20:26:23.119+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 174619
+      }
+    },
+    {
+      "id": 174618,
+      "parentId": null,
+      "planId": 3103,
+      "composedReference": "2_SVundefined",
+      "latestTaggedVersion": true,
+      "latestVersion": true,
+      "versionTags": [
+        "1.0",
+        "public"
+      ],
+      "createdAt": "2024-11-14T15:54:59.356Z",
+      "updatedAt": "2025-01-21T22:40:55.733Z",
+      "deletedAt": null,
+      "entityPrototypeId": 18350,
+      "parent": null,
+      "locations": [],
+      "planEntitySdgs": [],
+      "planEntityVersion": {
+        "id": 869111,
+        "code": "undefined",
+        "description": "",
+        "name": "",
+        "startDate": null,
+        "endDate": null,
+        "value": {},
+        "order": null,
+        "lastUpdatedById": 622,
+        "latestTaggedVersion": true,
+        "latestVersion": true,
+        "versionTags": [
+          "1.0",
+          "public"
+        ],
+        "nameI18n": {},
+        "createdAt": "2024-11-29T18:41:26.918+00:00",
+        "updatedAt": "2025-01-21T22:40:55.73332+00:00",
+        "deletedAt": null,
+        "planEntityId": 174618
+      }
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "limit": 50,
+    "pages": 1,
+    "total": 7
+  }
+}
