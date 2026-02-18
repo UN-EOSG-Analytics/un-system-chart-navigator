@@ -248,3 +248,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 .github/prompts/
+# next-agents-md
+.next-docs/

@@ -20,43 +20,45 @@ import os
 from pathlib import Path
 from urllib.parse import quote
 
-import pandas as pd
+from api.airtable import fetch_airtable_table
 from dotenv import load_dotenv
-from pyairtable import Api
 
 # Load environment variables from .env file
 load_dotenv()
 
-# Initialize Airtable API connection
-# https://airtable.com/create/tokens
-api = Api(os.environ["AIRTABLE_API_KEY"])
+df = fetch_airtable_table(os.environ["AIRTABLE_TABLE_ID"])
 
-BASE_ID = os.environ["AIRTABLE_BASE_ID"]
-TABLE_ID = os.environ["AIRTABLE_TABLE_ID"]
-
-# Fetch all records from the 'API ALL' view
-table = api.table(BASE_ID, TABLE_ID)
-records = table.all()
-
-if records:
-    data = [record["fields"] for record in records]
-    df = pd.DataFrame(data)
-
-# Drop rows that are completely empty
+# Drop rows that are completely empty (in case of accidentially added empty rows in Airtable)
 df = df.dropna(how="all")
 
-# Sanity check: ensure we have a reasonable number of entities
-if len(df) < 160:
-    raise ValueError(f"\nExpected more than 160 records, but got {len(df)}")
-
-print(f"\nNumber of entities fetched: {df.shape[0]}")
+# Drop rows where entity OR entity_long is NA
+# FIXME: check special cases (e.g., Boards etc.)
+df = df.dropna(subset=["entity", "entity_long"])
 
 # Filter out rows where 'added_via_form' is True (user submissions pending review)
 if "added_via_form" in df.columns:
     df = df[df["added_via_form"] != "TRUE"]
 
-# Filter out rows where on_display is not TRUE (hidden entities)
-df = df[df["on_display"] == "TRUE"]
+# Sanity check: ensure we have a reasonable number of entities
+if len(df) < 200:
+    raise ValueError(f"\nExpected more than 200 records, but got {len(df)}")
+
+print(f"\nNumber of entities fetched: {len(df)}")
+
+# Sort by entity for consistent ordering
+df = df.sort_values("entity").reset_index(drop=True)
+
+###
+
+# Export CSV with just entity and entity_long for quick reference
+entity_ref_path = Path("data") / "output" / "entity_reference.csv"
+df[["entity", "entity_long"]].to_csv(entity_ref_path, index=False)
+print(f"✓ Entity reference exported to CSV: {entity_ref_path}")
+
+###
+
+
+# FIXME: move over to other script, make fetch raw fetch
 
 # Check for duplicate entities (data integrity validation)
 duplicates_mask = df["entity"].duplicated(keep=False)
@@ -134,6 +136,7 @@ selected_columns = [
     # Misc
     "record_id",
     "review_needed",
+    "on_display",
 ]
 
 # Compare with all available columns (for debugging)
@@ -147,8 +150,9 @@ print("\nColumns not selected:", not_selected_columns)
 df = df[selected_columns]
 
 # Export raw data with all fields (including attachments) for backup
-output_path = Path("data") / "input" / "input_entities.pkl"
-df.to_pickle(output_path)
+output_path = Path("data") / "input" / "input_entities.parquet"
+df.to_parquet(output_path)
+print(f"✓ Raw data exported to Parquet: {output_path}")
 
 # Drop head_of_entity_headshot column (large attachment field) before CSV export
 if "head_of_entity_headshot" in df.columns:
@@ -157,3 +161,4 @@ if "head_of_entity_headshot" in df.columns:
 # Export to CSV for next processing step
 output_path = Path("data") / "input" / "input_entities.csv"
 df.to_csv(output_path, index=False)
+print(f"✓ Raw data exported to CSV: {output_path}")

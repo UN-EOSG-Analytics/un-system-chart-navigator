@@ -8,16 +8,17 @@ import {
 import Link from "next/link";
 import { FileEdit } from "lucide-react";
 
-interface HeaderProps {
-  onTitleClick: () => void;
-}
+export default function Header() {
+  const handleTitleClick = () => {
+    // Navigate to home and reset filters
+    window.location.href = "/";
+  };
 
-export default function Header({ onTitleClick }: HeaderProps) {
   return (
     <div className="flex items-center justify-between gap-2 sm:gap-4">
       <h1 className="text-left">
         <button
-          onClick={onTitleClick}
+          onClick={handleTitleClick}
           className="group inline-flex cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-0 border-none bg-transparent p-0 text-left transition-all duration-200 sm:gap-x-2"
           aria-label="Reset filters and return to home view"
         >
@@ -48,7 +49,7 @@ export default function Header({ onTitleClick }: HeaderProps) {
         href="/contribute"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-0.5 flex h-8 flex-shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:mt-1 sm:px-3"
+        className="mt-0.5 flex h-8 shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:mt-1 sm:px-3"
         aria-label="Contribute to the UN System Chart"
       >
         <FileEdit className="h-4 w-4 text-un-blue" />

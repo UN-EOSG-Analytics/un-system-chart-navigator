@@ -9,15 +9,8 @@ import {
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import { naturalCompareEntities } from "@/lib/utils";
-import { useRouter, useSearchParams } from "next/navigation";
-import {
-  forwardRef,
-  useCallback,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
+import { useRouter } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 import FilterControls from "./FilterControls";
 import PrincipalOrganSection from "./SectionPrincipalOrgan";
 
@@ -52,21 +45,22 @@ function buildFilterUrl(
   return parts.length > 0 ? `/?${parts.join("&")}` : "/";
 }
 
-const EntitiesGrid = forwardRef<{
-  handleReset: () => void;
-  toggleGroup: (groupKey: string) => void;
-}>((props, ref) => {
+export default function EntitiesGrid() {
   const entities = getAllEntities();
   const router = useRouter();
-  const searchParams = useSearchParams();
 
-  // Track if we've initialized from URL to prevent loops
-  const initializedFromUrl = useRef(false);
-
-  // Initialize state from URL params or defaults
-  const getInitialSearch = () => searchParams.get("q") || "";
+  // Initialize state from URL params or defaults (read once on mount)
+  const getInitialSearch = () => {
+    if (typeof window === "undefined") return "";
+    const params = new URLSearchParams(window.location.search);
+    return params.get("q") || "";
+  };
   const getInitialOrgans = () => {
-    const organsParam = searchParams.get("organs");
+    if (typeof window === "undefined") {
+      return new Set(Object.keys(principalOrganConfigs));
+    }
+    const params = new URLSearchParams(window.location.search);
+    const organsParam = params.get("organs");
     return (
       urlParamToOrgans(organsParam) ||
       new Set(Object.keys(principalOrganConfigs))
@@ -78,49 +72,55 @@ const EntitiesGrid = forwardRef<{
     useState<Set<string>>(getInitialOrgans);
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(true);
 
+  // Debounce timer for URL updates
+  const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+
   // Sync URL when filters change (after initial load)
-  const updateUrl = useCallback(
+  // Using native history API to avoid Next.js re-renders
+  const updateUrl = useCallback((query: string, organs: Set<string>) => {
+    // Don't include entity param - filters are separate from modal
+    const newUrl = buildFilterUrl(query, organs, null);
+    window.history.replaceState(null, "", newUrl);
+  }, []);
+
+  // Debounced URL update for search - longer delay to avoid any jank
+  const debouncedUpdateUrl = useCallback(
     (query: string, organs: Set<string>) => {
-      // Don't include entity param - filters are separate from modal
-      const newUrl = buildFilterUrl(query, organs, null);
-      router.replace(newUrl, { scroll: false });
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
+      }
+      debounceTimerRef.current = setTimeout(() => {
+        updateUrl(query, organs);
+      }, 800); // 800ms debounce delay - only update URL after user stops typing
     },
-    [router],
+    [updateUrl],
   );
 
-  // Handle URL changes (back/forward navigation, direct URL changes)
+  // Cleanup debounce timer on unmount
   useEffect(() => {
-    // Skip the first run since we initialize from URL already
-    if (!initializedFromUrl.current) {
-      initializedFromUrl.current = true;
-      return;
-    }
+    return () => {
+      if (debounceTimerRef.current) {
+        clearTimeout(debounceTimerRef.current);
+      }
+    };
+  }, []);
 
-    // Skip URL sync when entity modal is open - the modal manages its own URL
-    // and we don't want to reset filters when navigating to /?entity=xyz
-    if (searchParams.get("entity")) {
-      return;
-    }
+  // Handle browser back/forward navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      const urlSearch = params.get("q") || "";
+      const urlOrgans =
+        urlParamToOrgans(params.get("organs")) ||
+        new Set(Object.keys(principalOrganConfigs));
 
-    const urlSearch = searchParams.get("q") || "";
-    const urlOrgans =
-      urlParamToOrgans(searchParams.get("organs")) ||
-      new Set(Object.keys(principalOrganConfigs));
+      setSearchQuery(urlSearch);
+      setActivePrincipalOrgans(urlOrgans);
+    };
 
-    // Check if URL values differ from state
-    const searchChanged = urlSearch !== searchQuery;
-    const currentOrgansStr = Array.from(activePrincipalOrgans).sort().join(",");
-    const urlOrgansStr = Array.from(urlOrgans).sort().join(",");
-    const organsChanged = currentOrgansStr !== urlOrgansStr;
-
-    // Update state only if values changed (happens on browser back/forward)
-    if (searchChanged || organsChanged) {
-      // Intentionally syncing URL state with React state
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      if (searchChanged) setSearchQuery(urlSearch);
-      if (organsChanged) setActivePrincipalOrgans(urlOrgans);
-    }
-  }, [searchParams, searchQuery, activePrincipalOrgans]);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   // Add keyboard shortcut to toggle review borders
   useEffect(() => {
@@ -146,13 +146,9 @@ const EntitiesGrid = forwardRef<{
     return () => window.removeEventListener("keydown", handleKeyPress);
   }, []);
 
-  const toggleGroup = () => {
-    // No-op: system grouping removed, keeping for backward compatibility
-  };
-
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
-    updateUrl(query, activePrincipalOrgans);
+    debouncedUpdateUrl(query, activePrincipalOrgans);
   };
 
   const togglePrincipalOrgan = (organKey: string) => {
@@ -205,11 +201,6 @@ const EntitiesGrid = forwardRef<{
   const handleFilterReset = () => {
     handleReset();
   };
-
-  useImperativeHandle(ref, () => ({
-    handleReset,
-    toggleGroup,
-  }));
 
   // Filter and sort entities
   const visibleEntities = (
@@ -368,8 +359,4 @@ const EntitiesGrid = forwardRef<{
       )}
     </div>
   );
-});
-
-EntitiesGrid.displayName = "EntitiesGrid";
-
-export default EntitiesGrid;
+}

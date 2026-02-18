@@ -29,12 +29,11 @@ df = df.sort_values("entity")
 
 # Parse un_principal_organ from string representation to list
 # Airtable exports arrays as string literals like "['General Assembly']"
-df["un_principal_organ"] = df["un_principal_organ"].astype(str)
 df["un_principal_organ"] = df["un_principal_organ"].apply(
     lambda x: ast.literal_eval(x)
-    if x.startswith("[") and x.endswith("]")
+    if isinstance(x, str) and x.startswith("[") and x.endswith("]")
     else None
-    if x == "nan"
+    if pd.isna(x)
     else x
 )
 
@@ -80,6 +79,12 @@ if "head_of_entity_headshot" in df.columns:
 # Export to data directory (for reference)
 output_path = Path("data") / "output" / "entities.csv"
 df.to_csv(output_path, index=False)
+
+
+################
+
+# Filter out rows where on_display is not TRUE (hidden entities)
+df = df[df["on_display"] == "True"]
 
 # Export to public directory (for Next.js static site)
 output_path = Path("public") / "un-entities.csv"

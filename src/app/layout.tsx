@@ -1,5 +1,6 @@
 import { AnimatedCornerLogo } from "@/components/AnimatedCornerLogo";
 import ModalHandler from "@/components/EntityModalHandler";
+import Footer from "@/components/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -92,6 +93,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col px-4 antialiased sm:px-6 md:px-10 lg:px-12 xl:px-16">
         <AnimatedCornerLogo />
         {children}
+        <Footer />
         <Suspense fallback={null}>
           <ModalHandler />
         </Suspense>
