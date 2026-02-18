@@ -145,8 +145,16 @@ export default function DevPage() {
     return filtered;
   }, [searchTerm, filterStatus, sortField, sortDirection]);
 
-  const getStatusBadge = (statusCode: number, statusName: string) => {
+  const getStatusBadge = (statusCode: number | null, statusName: string | null) => {
     let className = "font-mono border-0";
+
+    if (statusCode === null) {
+      return (
+        <Badge className={className + " bg-gray-100 text-gray-500"}>
+          {statusName}
+        </Badge>
+      );
+    }
 
     if (statusCode >= 200 && statusCode < 300) {
       className += " bg-green-100 text-green-700";
