@@ -1,0 +1,182 @@
+[
+  {
+    "entity":"FAO",
+    "entity_long":"Food and Agriculture Organization",
+    "governing_bodies":"- Conference\n- Council\n- Council Committees\n- Technical Committees\n- Regional Conferences\n",
+    "intergov_bodies_link":"-  <https:\/\/www.fao.org\/governing-bodies\/en>\n",
+    "secretariats":"- Conference contact: [fao-conference@fao.org](mailto:fao-conference@fao.org)\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"ICAO",
+    "entity_long":"International Civil Aviation Organization",
+    "governing_bodies":"- Assembly\n- Council\n- Committees of the Conference\n",
+    "intergov_bodies_link":"- <https:\/\/www.icao.int\/icao-assembly>\n- <https:\/\/www.icao.int\/icao-council>\n- <https:\/\/www.icao.int\/committees-conference>\n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"IFAD",
+    "entity_long":"International Fund for Agricultural Development",
+    "governing_bodies":"- Governing Council\n- Executive Board\n",
+    "intergov_bodies_link":"- <https:\/\/www.ifad.org\/en\/governing-bodies>\n",
+    "secretariats":"- Languages, Publications and Conference Management: <https:\/\/www.icao.int\/languages-publications-and-conference-management>\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"ILO",
+    "entity_long":"International Labor Organization",
+    "governing_bodies":"- Governing Body of the International Labour Office\n",
+    "intergov_bodies_link":"- <https:\/\/www.ilo.org\/ilo-governing-body>\n",
+    "secretariats":"- Participation, credentials and registration of speakers: [governingbody@ilo.org](mailto:governingbody@ilo.org)\n- Amendments, comments and general inquiries: [reloff@ilo.org](mailto:reloff@ilo.org)\n- Prepared statements for interpreters: [interpreterspeeches@ilo.org](mailto:interpreterspeeches@ilo.org)\n- Meeting reservation: [cmu@ilo.org](mailto:cmu@ilo.org)\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"IMF",
+    "entity_long":"International Monetary Fund",
+    "governing_bodies":"- Board of Governors\n- Executive Board\n",
+    "intergov_bodies_link":"- <https:\/\/www.imf.org\/en\/about\/factsheets\/sheets\/2022\/how-the-imf-makes-decisions> \n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"IMO",
+    "entity_long":"International Maritime Organization",
+    "governing_bodies":"- Assembly\n- Council\n- Five Main Committees\n",
+    "intergov_bodies_link":"- <https:\/\/www.imo.org\/en\/about\/pages\/structure.aspx> \n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"ITU",
+    "entity_long":"International Telecommunication Union",
+    "governing_bodies":"- Plenipotentiary Conference\n- Council\n",
+    "intergov_bodies_link":"- <https:\/\/www.itu.int\/hub\/membership\/how-we-are-governed\/>\n",
+    "secretariats":"- Council contact: [gbs@itu.int](mailto:gbs@itu.int)\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"UN Tourism",
+    "entity_long":"World Tourism Organization",
+    "governing_bodies":"- General Assembly\n- Regional Commissions\n- Executive Council\n- Committees\n",
+    "intergov_bodies_link":"- <https:\/\/www.untourism.int\/structure>\n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"UNESCO",
+    "entity_long":"United Nations Educational, Scientific and Cultural Organization",
+    "governing_bodies":"- General Conference\n- Executive Board\n",
+    "intergov_bodies_link":"- <https:\/\/www.unesco.org\/en\/legal-affairs\/governing-bodies>\n",
+    "secretariats":"- <https:\/\/www.unesco.org\/en\/general-conference\/secretariat>\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"UNIDO",
+    "entity_long":"United Nations Industrial Development Organization",
+    "governing_bodies":"- General Conference\n- Industrial Development Board\n",
+    "intergov_bodies_link":"- <https:\/\/www.unido.org\/who-we-are\/structure>\n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"UPU",
+    "entity_long":"Universal Postal Union",
+    "governing_bodies":"- Congress\n- Council of Administration\n- Postal Operations Council\n",
+    "intergov_bodies_link":"- <https:\/\/www.upu.int\/en\/universal-postal-union\/about-upu\/bodies>\n",
+    "secretariats":"- Contact to Council of Administration: [ca.secretariat@upu.int](mailto:ca.secretariat@upu.int)\n- Contact to Postal Operations Council: [poc.secretariat@upu.int](http:\/\/poc.secretariat@upu.int)\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"WHO",
+    "entity_long":"World Health Organization",
+    "governing_bodies":"- World Health Assembly\n- Executive Board\n",
+    "intergov_bodies_link":"- <https:\/\/www.who.int\/about\/governance\/executive-board>\n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"WIPO",
+    "entity_long":"World Intellectual Property Organization",
+    "governing_bodies":"- General Assembly\n- Coordination Committee\n",
+    "intergov_bodies_link":"- <https:\/\/www.wipo.int\/en\/web\/assemblies> \n",
+    "secretariats":"- Diplomatic Engagement and Assemblies Affairs Division: <https:\/\/www.wipo.int\/en\/web\/about-wipo\/activities-by-unit\/details?id=1018> \n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"WMO",
+    "entity_long":"World Meteorological Organization",
+    "governing_bodies":"- World Meteorological Congress\n- Executive Council\n",
+    "intergov_bodies_link":"- <https:\/\/wmo.int\/about-wmo\/governance>\n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":"World Bank",
+    "entity_long":"World Bank",
+    "governing_bodies":"- Board of Governors\n",
+    "intergov_bodies_link":"- <https:\/\/www.worldbank.org\/en\/about\/leadership\/governors> \n",
+    "secretariats":"To be updated\n",
+    "order":null,
+    "system_grouping":"Specialized Agencies"
+  },
+  {
+    "entity":null,
+    "entity_long":null,
+    "governing_bodies":"Trusteeship Council\n",
+    "intergov_bodies_link":"- <https:\/\/www.un.org\/en\/about-us\/trusteeship-council>\n",
+    "secretariats":"The Council suspended its activities in 1994, when Palau, the last of the original 11 trust territories, gained its independence.\n",
+    "order":"5",
+    "system_grouping":null
+  },
+  {
+    "entity":null,
+    "entity_long":null,
+    "governing_bodies":"Economic and Social Council (ECOSOC)\n",
+    "intergov_bodies_link":"- <https:\/\/ecosoc.un.org\/en>\n",
+    "secretariats":"- <https:\/\/ecosoc.un.org\/en\/about-us\/contact>\n",
+    "order":"3",
+    "system_grouping":null
+  },
+  {
+    "entity":null,
+    "entity_long":null,
+    "governing_bodies":"General Assembly (GA)\n",
+    "intergov_bodies_link":"- <https:\/\/www.un.org\/en\/ga\/>\n",
+    "secretariats":"- <https:\/\/www.un.org\/en\/ga\/about\/secretariat.shtml>\n",
+    "order":"1",
+    "system_grouping":null
+  },
+  {
+    "entity":null,
+    "entity_long":null,
+    "governing_bodies":"International Court of Justice (ICJ)\n",
+    "intergov_bodies_link":"- [https:\/\/www.icj-cij.org](https:\/\/www.icj-cij.orghttps:\/\/www.icj-cij.org)\n",
+    "secretariats":"- <https:\/\/www.icj-cij.org\/contact-the-court>\n- [information@icj-cij.org](mailto:information@icj-cij.org)\n",
+    "order":"4",
+    "system_grouping":null
+  },
+  {
+    "entity":null,
+    "entity_long":null,
+    "governing_bodies":"Security Council (SC)\n",
+    "intergov_bodies_link":"- <https:\/\/main.un.org\/securitycouncil\/en>\n",
+    "secretariats":"- <https:\/\/main.un.org\/securitycouncil\/en\/content\/secretariat-branch>\n",
+    "order":"2",
+    "system_grouping":null
+  }
+]
