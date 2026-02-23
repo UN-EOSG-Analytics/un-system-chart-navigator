@@ -228,6 +228,14 @@ npx shadcn --version
 npx next --version
 ```
 
+### Updating AI Agent Docs
+
+[`AGENTS.md`](AGENTS.md) contains a Next.js documentation index used by AI coding agents. Regenerate it after Next.js upgrades:
+
+```bash
+npx @next/codemod@canary agents-md
+```
+
 ### Styling and Theme
 
 Global styles are defined in [`src/app/globals.css`](src/app/globals.css):

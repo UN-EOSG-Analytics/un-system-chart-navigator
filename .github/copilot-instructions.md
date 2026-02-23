@@ -49,6 +49,8 @@ pnpm typecheck    # TypeScript check (no emit)
 pnpm lint         # ESLint on src/
 pnpm format       # Prettier on src/
 
+npx @next/codemod@canary agents-md  # Regenerate AGENTS.md with latest Next.js docs index
+
 ./update_data.sh  # Full data refresh: Airtable → un-entities.json (uses `uv` for Python)
 # Optional extras:
 uv run python/03-download_headshots.py [--force]
