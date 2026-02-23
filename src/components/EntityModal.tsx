@@ -208,7 +208,7 @@ export default function EntityModal({
       rel="noopener noreferrer"
       className="-ml-1 flex touch-manipulation items-center gap-3 rounded-lg py-2 pr-3 pl-2 text-un-blue transition-opacity duration-200 hover:bg-un-blue/10"
     >
-      <Icon size={18} className="flex-shrink-0" />
+      <Icon size={18} className="shrink-0" />
       <span className="text-base sm:text-lg">{label}</span>
     </a>
   );
@@ -255,7 +255,7 @@ export default function EntityModal({
             href={generateContributeUrl(entity)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-8 w-full flex-shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:px-3"
+            className="shrink-0s-center flex h-8 w-full justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:px-3"
             aria-label={`Contribute information about ${entity.entity}`}
           >
             <FileEdit className="h-4 w-4" />
@@ -360,7 +360,7 @@ export default function EntityModal({
                       if (hasPhoto) {
                         return (
                           <div className="ml-0.5 flex items-start gap-4">
-                            <div className="relative h-20 w-16 flex-shrink-0 overflow-hidden rounded-xl bg-gray-100">
+                            <div className="shrink-0flow-hidden relative h-20 w-16 rounded-xl bg-gray-100">
                               <Image
                                 src={entity!.head_of_entity_headshot_link!}
                                 alt={`Portrait of ${entity!.head_of_entity_name}`}
@@ -376,7 +376,7 @@ export default function EntityModal({
                                 }}
                               />
                             </div>
-                            <div className="flex min-h-[5rem] flex-col justify-center">
+                            <div className="flex min-h-20 flex-col justify-center">
                               <div>
                                 {/* Temporarily disabled link */}
                                 {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
@@ -672,7 +672,7 @@ export default function EntityModal({
                 .filter((line) => line.trim())
                 .map((line, index) => (
                   <div key={index} className="flex items-start">
-                    <span className="mr-2 flex-shrink-0 text-gray-400">•</span>
+                    <span className="mr-2 shrink-0 text-gray-400">•</span>
                     <span>{line.replace(/^-\s*/, "").trim()}</span>
                   </div>
                 ))}
@@ -693,7 +693,7 @@ export default function EntityModal({
     >
       <div
         ref={modalRef}
-        className={`h-full w-full bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-2/3 sm:min-w-[400px] md:w-1/2 lg:w-1/3 lg:min-w-[500px] ${entity ? "overflow-y-auto" : ""} ${
+        className={`h-full w-full bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-2/3 sm:min-w-100 md:w-1/2 lg:w-1/3 lg:min-w-125 ${entity ? "overflow-y-auto" : ""} ${
           isVisible && !isClosing ? "translate-x-0" : "translate-x-full"
         }`}
         onTouchStart={onTouchStart}

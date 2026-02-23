@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/tooltip";
 import { hideTooltipEntities } from "@/lib/constants";
 import { Entity } from "@/types/entity";
+import { useState, useRef } from "react";
 
 interface EntityTooltipProps {
   entity: Entity;
@@ -15,14 +16,37 @@ export default function EntityTooltip({
   entity,
   children,
 }: EntityTooltipProps) {
+  const [open, setOpen] = useState(false);
+  const blockedRef = useRef(false);
+
   // Skip tooltip for specified entities
   if (hideTooltipEntities.has(entity.entity)) {
     return <>{children}</>;
   }
 
+  const handlePointerDown = () => {
+    // Immediately close and block tooltip from reopening during/after click.
+    // Without this, router.replace() in handleEntityClick triggers a re-render
+    // that resets Radix hover state, causing a visible open→close→open flicker.
+    setOpen(false);
+    blockedRef.current = true;
+    setTimeout(() => {
+      blockedRef.current = false;
+    }, 600);
+  };
+
   return (
-    <Tooltip delayDuration={50} disableHoverableContent>
-      <TooltipTrigger asChild>{children}</TooltipTrigger>
+    <Tooltip
+      open={open}
+      onOpenChange={(v) => {
+        if (!blockedRef.current) setOpen(v);
+      }}
+      delayDuration={500}
+      disableHoverableContent
+    >
+      <TooltipTrigger asChild onPointerDown={handlePointerDown}>
+        {children}
+      </TooltipTrigger>
       <TooltipContent
         side="top"
         sideOffset={8}

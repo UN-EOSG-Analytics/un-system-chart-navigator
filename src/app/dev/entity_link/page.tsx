@@ -145,7 +145,10 @@ export default function DevPage() {
     return filtered;
   }, [searchTerm, filterStatus, sortField, sortDirection]);
 
-  const getStatusBadge = (statusCode: number | null, statusName: string | null) => {
+  const getStatusBadge = (
+    statusCode: number | null,
+    statusName: string | null,
+  ) => {
     let className = "font-mono border-0";
 
     if (statusCode === null) {
@@ -350,7 +353,7 @@ export default function DevPage() {
                           className="flex items-center gap-1 text-un-blue hover:underline"
                         >
                           <span className="block truncate">{item.url}</span>
-                          <ExternalLink className="h-3 w-3 flex-shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
+                          <ExternalLink className="h-3 w-3 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" />
                         </a>
                       </TableCell>
                       <TableCell className="whitespace-nowrap">
@@ -398,7 +401,7 @@ export default function DevPage() {
                             <span className="block truncate">
                               {item.redirect_url}
                             </span>
-                            <ExternalLink className="h-3 w-3 flex-shrink-0" />
+                            <ExternalLink className="h-3 w-3  " />
                           </a>
                         ) : (
                           <span className="text-sm text-gray-500">-</span>
