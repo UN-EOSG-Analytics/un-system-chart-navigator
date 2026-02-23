@@ -23,12 +23,19 @@ This project provides a visual, searchable interface to navigate the UN System C
 
 ### Tech Stack
 
-- **Framework**: Next.js(Static Site Generation)
-- **Styling**: Tailwind CSS v4
-- **UI Components**: shadcn/ui
-- **Database**: Airtable API
-- **Data Processing**: Python (`uv` for package management)
-- **Deployment**: GitHub Pages (static export)
+| Layer           | Technology                                        |
+| --------------- | ------------------------------------------------- |
+| Framework       | Next.js 16 (App Router, `output: "export"`)       |
+| Language        | TypeScript 5, React 19                            |
+| Styling         | Tailwind CSS v4                                   |
+| UI primitives   | shadcn/ui (Radix UI)                              |
+| Icons           | lucide-react                                      |
+| Font            | Roboto (via `next/font/google`)                   |
+| Package manager | pnpm (workspaces)                                 |
+| Data source     | Airtable API                                      |
+| Data pipeline   | Python (`uv`) — pandas, python-dotenv, sqlalchemy |
+| Database        | Azure PostgreSQL (shared, read by other UN apps)  |
+| Deployment      | GitHub Pages (static)                             |
 
 ### Directory Structure
 
@@ -62,10 +69,10 @@ This project provides a visual, searchable interface to navigate the UN System C
 ### Data Flow
 
 1. **Fetch**: [`python/01-fetch_from_airtable.py`](python/01-fetch_from_airtable.py) retrieves entity data from Airtable
-2. **Process**: [`python/02-process_entities_data.py`](python/02-process_entities_data.py) cleans and enriches data
-3. **Export**: Data saved to [`public/un-entities.json`](public/un-entities.json) for static import
-4. **Load**: [`src/lib/entities.ts`](src/lib/entities.ts) imports JSON at build time
-5. **Render**: Components consume entity data through filtering functions
+2. **Process**: [`python/02-process_entities_data.py`](python/02-process_entities_data.py) cleans and enriches data → outputs `public/un-entities.json`
+3. **Load**: [`src/lib/entities.ts`](src/lib/entities.ts) imports JSON at build time (no runtime API calls)
+4. **Render**: Components consume pre-filtered entity arrays
+5. **Push** *(optional)*: [`python/04-push_to_postgres.py`](python/04-push_to_postgres.py) syncs entity list to Azure PostgreSQL (read by other UN apps)
 
 ### Design Principles
 
@@ -77,31 +84,39 @@ This project provides a visual, searchable interface to navigate the UN System C
 
 ## Dev & Deploy
 
-1. **Install Dependencies**  
-   Run the following command to install all required dependencies:
+1. **Install Dependencies**
 
    ```bash
-   npm install
+   pnpm install
    ```
 
-2. **Run Development Server**  
-   Start the development server with:
+2. **Run Development Server**
 
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
    The application will be available at `http://localhost:3000`.
 
-3. **Build for Production**  
-   To create a production build, use:
+3. **Build for Production**
+
    ```bash
-   npm run build
+   pnpm build
+   ```
+
+   Outputs a static export to `out/`. Note: the build currently also runs a password-protection step (`scripts/encrypt-site.js`) for pre-release staging — this will be removed before public launch.
+
+4. **Type check / Lint / Format**
+
+   ```bash
+   pnpm typecheck
+   pnpm lint
+   pnpm format
    ```
 
 ## Data
 
-Entity data is fetched from Airtable and processed with Python scripts.
+Entity data is fetched from Airtable and processed with Python scripts. **Never edit `public/un-entities.json` manually** — always regenerate via scripts.
 
 ### Quick Update
 
@@ -111,24 +126,36 @@ You can run the data update process in VS Code using the built-in task:
 2. Type "Tasks: Run Task"
 3. Select "Update Data"
 
-Or run manually from the terminal:
+Or run manually:
 
-```shell
-bash update_data.sh
+```bash
+./update_data.sh
 ```
 
-This [`update_data.sh`](update_data.sh) script:
+This runs scripts 01 and 02 in sequence (Airtable fetch → process → `public/un-entities.json`).
 
-1. Fetches latest data from Airtable API
-2. Processes and enriches entity information
-3. Downloads headshots for entity leaders
-4. Exports to JSON format for static site
+| Script                        | Input                           | Output                                              |
+| ----------------------------- | ------------------------------- | --------------------------------------------------- |
+| `01-fetch_from_airtable.py`   | Airtable API                    | `data/input/input_entities.csv`                     |
+| `02-process_entities_data.py` | `data/input/input_entities.csv` | `public/un-entities.json`, `public/un-entities.csv` |
+| `03-download_headshots.py`    | entity data                     | `public/images/headshots/`                          |
+| `04-push_to_postgres.py`      | `data/output/entities.csv`      | Azure PostgreSQL `systemchart.entities`             |
+
+Scripts 03 and 04 are optional and run separately:
+
+```bash
+uv run python/03-download_headshots.py [--force]
+uv run python/04-push_to_postgres.py              # push to shared Azure PostgreSQL
+uv run python/04-push_to_postgres.py --allow-delete  # also remove deleted entities (caution)
+```
+
+> ⚠️ `04-push_to_postgres.py` writes to a shared Azure PostgreSQL database read by other UN applications. Do not rename columns or use `--allow-delete` without checking downstream dependencies.
 
 ### Python Environment
 
-- Uses `uv` for fast package management
-- Run scripts with: `uv run python <script_name>.py`
-- Install packages with: `uv add <package_name>`
+- Uses `uv` for package management — never run scripts with plain `python`
+- Run scripts with: `uv run python/<script>.py`
+- Install packages with: `uv add <package>`
 
 ## GitHub Actions
 
@@ -140,40 +167,22 @@ This [`update_data.sh`](update_data.sh) script:
 ### Code Quality
 
 ```bash
-npm run lint
-npx eslint . --ext .js,.jsx,.ts,.tsx
-npx tsc --noEmit
+pnpm lint
+pnpm typecheck
 ```
 
 ### Updating Dependencies
 
 ```bash
-# Check for outdated packages
-npm outdated
-
-# Update all dependencies to latest versions
-npm update
-
-# Update specific package
-npm update <package-name>
-
-# Update to latest major versions (use with caution)
-npx npm-check-updates -u
-npm install
-```
-
-### Version Checking
-
-```bash
-npx shadcn --version
-npx next --version
-npx shadcn@latest diff
+pnpm outdated
+pnpm update
+npx shadcn@latest diff  # check for shadcn/ui component updates
 ```
 
 ### Formatting
 
 ```bash
-npm run format
+pnpm format
 ```
 
 ### Styling
@@ -193,12 +202,13 @@ To suggest updates or additions to entity data, use the [contribution form](http
 
 ## Development Guidelines
 
-- **Tailwind CSS**: Always use Tailwind v4 syntax (consult https://tailwindcss.com/docs/)
-- **Colors**: Use colors from [`src/app/globals.css`](src/app/globals.css) integrated into Tailwind CSS theme
-- **Components**: Keep shadcn/ui files in `components/ui/` unchanged; compose on top in `src/components/`
-- **Configuration**: Add all settings to [`src/lib/constants.ts`](src/lib/constants.ts) for easy maintenance
-- **Utilities**: Place helper functions in [`src/lib/utils.ts`](src/lib/utils.ts) for reuse
-- **Static-First**: Remember this deploys as a static site on GitHub Pages
+- **Package manager**: Use `pnpm`. Never use `npm` or `yarn`.
+- **Tailwind CSS v4**: Use Tailwind utility classes. Custom theme tokens (e.g., `bg-un-blue`) are defined in [`src/app/globals.css`](src/app/globals.css) under `@theme`.
+- **Colors**: Always use CSS variable tokens — never hardcode hex values in components.
+- **Components**: Keep `components/ui/` files unchanged; compose on top in `src/components/`.
+- **Configuration**: Add all display/behaviour settings to [`src/lib/constants.ts`](src/lib/constants.ts).
+- **Utilities**: Place helper functions in [`src/lib/utils.ts`](src/lib/utils.ts).
+- **Static-First**: No server-side logic. Everything must work as a static export on GitHub Pages.
 
 ## Read more
 

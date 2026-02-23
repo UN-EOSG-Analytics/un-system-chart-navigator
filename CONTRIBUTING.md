@@ -6,7 +6,8 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en) (for [Next.js](https://nextjs.org/docs))
+- [Node.js](https://nodejs.org/en) ≥ 18.17
+- [pnpm](https://pnpm.io/installation) (package manager — do not use npm or yarn)
 - Python with [`uv`](https://docs.astral.sh/uv/getting-started/installation/) package manager
 - [Git](https://git-scm.com/)
 
@@ -22,19 +23,19 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
 2. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. Set up environment variables (for data fetching):
 
    ```bash
    cp .env.example .env
-   # Add your Airtable API credentials
+   # Fill in your Airtable API credentials and Azure PostgreSQL details
    ```
 
 4. Run the development server:
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 ## Project Structure
@@ -132,7 +133,7 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
    **Option B: Manual Terminal Command**
 
    ```bash
-   bash update_data.sh
+   ./update_data.sh
    ```
 
 3. Verify the output in [`public/un-entities.json`](public/un-entities.json)
@@ -177,13 +178,13 @@ export function CustomButton({ children }) {
 #### Type Checking
 
 ```bash
-npx tsc --noEmit
+pnpm typecheck
 ```
 
 #### Linting
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
 ### Git Workflow
@@ -205,41 +206,26 @@ npm run lint
    git push origin feature/your-feature-name
    ```
 
-## Maintenance Tasks
+### Maintenance Tasks
 
 ### Updating Dependencies
 
 ```bash
 # Check for outdated packages
-npm outdated
+pnpm outdated
 
-# Update all dependencies (respects semver ranges)
-npm update
+# Update dependencies
+pnpm update
 
-# Update specific package
-npm update <package-name>
-
-# Interactive update to latest versions
-npx npm-check-updates -i
-
-# Update all to latest (use with caution)
-npx npm-check-updates -u
-npm install
+# Check for shadcn/ui component updates
+npx shadcn@latest diff
 ```
 
 ### Checking Tool Versions
 
 ```bash
-# Check shadcn/ui version
 npx shadcn --version
-
-# Check Next.js version
 npx next --version
-
-# Check for shadcn/ui component updates
-npx shadcn@latest diff
-
-node --version
 ```
 
 ### Styling and Theme
@@ -261,13 +247,13 @@ When adding new colors:
 
 The site deploys automatically to GitHub Pages when changes are pushed to `main`:
 
-1. GitHub Actions runs `npm run build`
-2. Static files are exported and published
+1. GitHub Actions runs `pnpm build`
+2. Static files are exported to `out/` and published
 3. Available at https://systemchart.un.org via CNAME
 
 ## Getting Help
 
-- Check existing documentation and resourcesØ in `/docs`
+- Check existing documentation and resources in `/docs`
 - Review code comments and JSDoc
 - Look at similar implementations in the codebase
 - Open an issue for questions or bugs
@@ -283,7 +269,7 @@ Before submitting a PR, ensure:
 - [ ] Components are responsive
 - [ ] Configuration is in [`constants.ts`](src/lib/constants.ts)
 - [ ] Utilities are in [`utils.ts`](src/lib/utils.ts)
-- [ ] Tests pass (`npm run lint`, `npx tsc --noEmit`)
+- [ ] Tests pass (`pnpm lint`, `pnpm typecheck`)
 - [ ] Changes work with static export
 
 ## Resources
