@@ -13,7 +13,7 @@ const roboto = Roboto({
   display: "swap",
 });
 
-const siteUrl = "systemchart.un.org";
+const siteUrl = "https://systemchart.un.org";
 const siteName = "UN System Chart Navigator";
 const siteTitle = "United Nations System Chart Navigator";
 const siteDescription =
@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     "UN agencies",
     "UN entities",
     "UN principal organs",
-    "UN entities",
     "UN organizations",
     "international organizations",
     "UN chart",

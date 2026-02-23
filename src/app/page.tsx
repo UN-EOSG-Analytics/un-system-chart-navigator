@@ -1,5 +1,3 @@
-"use client";
-
 import Anniversary from "@/components/Anniversary";
 import EntitiesGrid from "@/components/EntityGrid";
 import ExplainerText from "@/components/ExplainerText";
