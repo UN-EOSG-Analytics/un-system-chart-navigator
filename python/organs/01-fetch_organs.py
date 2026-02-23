@@ -27,7 +27,7 @@ df = df[
     ]
 ]
 
-output_path = Path("public/data/organ_contacts.json")
+output_path = Path("data/output/organ_contacts.json")
 output_path.parent.mkdir(parents=True, exist_ok=True)
 df.to_json(output_path, orient="records", indent=2)
 
