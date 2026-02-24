@@ -55,9 +55,6 @@ entity_ref_path = Path("data") / "output" / "entity_reference.csv"
 df[["entity", "entity_long"]].to_csv(entity_ref_path, index=False)
 print(f"✓ Entity reference exported to CSV: {entity_ref_path}")
 
-###
-
-
 # FIXME: move over to other script, make fetch raw fetch
 
 # Check for duplicate entities (data integrity validation)
