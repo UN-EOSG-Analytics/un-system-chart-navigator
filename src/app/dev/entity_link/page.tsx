@@ -401,7 +401,7 @@ export default function DevPage() {
                             <span className="block truncate">
                               {item.redirect_url}
                             </span>
-                            <ExternalLink className="h-3 w-3  " />
+                            <ExternalLink className="h-3 w-3" />
                           </a>
                         ) : (
                           <span className="text-sm text-gray-500">-</span>

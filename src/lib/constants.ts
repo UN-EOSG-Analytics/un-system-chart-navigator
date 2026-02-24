@@ -23,6 +23,70 @@
 // This file contains all configuration for principal organs and categories
 
 /**
+ * Minimal shape for display-only placeholder entities.
+ * Only the fields needed for card rendering and placement are required.
+ * Cast to `Entity` when merging into the entity list (see `entities.ts`).
+ */
+export interface PlaceholderEntity {
+  entity: string;
+  entity_link: string;
+  un_principal_organ: string[];
+  category: string;
+  subcategory: string | null;
+}
+
+/**
+ * Display-only placeholder entities that are NOT real UN entities and should
+ * never appear in the dataset (Airtable, PostgreSQL, CSV exports).
+ *
+ * These represent groups of sub-bodies shown on the chart as link cards
+ * pointing to an external index page.
+ *
+ * Merged into the full entity list at runtime in `entities.ts`.
+ */
+export const placeholderEntities: PlaceholderEntity[] = [
+  // General Assembly — Intergovernmental and Expert Bodies
+  {
+    entity: "Working Groups",
+    entity_link: "https://www.un.org/en/ga/about/subsidiary/other.shtml",
+    un_principal_organ: ["General Assembly"],
+    category: "Intergovernmental and Expert Bodies",
+    subcategory: "Standing Committees and other bodies",
+  },
+  {
+    entity: "Other Committees",
+    entity_link: "https://www.un.org/en/ga/about/subsidiary/committees.shtml",
+    un_principal_organ: ["General Assembly"],
+    category: "Intergovernmental and Expert Bodies",
+    subcategory: "Standing Committees and other bodies",
+  },
+  {
+    entity: "Boards",
+    entity_link: "https://www.un.org/en/ga/about/subsidiary/boards.shtml",
+    un_principal_organ: ["General Assembly"],
+    category: "Intergovernmental and Expert Bodies",
+    subcategory: "Standing Committees and other bodies",
+  },
+  // Security Council — Standing committees and ad hoc bodies
+  {
+    entity: "Standing Committees",
+    entity_link:
+      "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main1",
+    un_principal_organ: ["Security Council"],
+    category: "Standing committees and ad hoc bodies",
+    subcategory: null,
+  },
+  {
+    entity: "Ad Hoc Bodies",
+    entity_link:
+      "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main2",
+    un_principal_organ: ["Security Council"],
+    category: "Standing committees and ad hoc bodies",
+    subcategory: null,
+  },
+];
+
+/**
  * Entities that should display their long name on the card instead of the short name.
  * Use for entities where the acronym is not well-known.
  */
@@ -31,24 +95,25 @@ export const useLongNameOnCard = new Set(["UNDC", "UNPC"]);
 /**
  * Entities that should open an external link instead of the modal.
  * Maps entity short name to the external URL.
+ *
+ * - Placeholder entities (Working Groups, Boards, etc.): link is derived
+ *   from `placeholderEntities[].entity_link` — keep in sync.
+ * - Main Committees (First–Sixth): real Airtable entities whose cards should
+ *   open the corresponding GA page directly.
  */
-export const externalLinkEntities: Record<string, string> = {
-  "Other Committees":
-    "https://www.un.org/en/ga/about/subsidiary/committees.shtml",
-  "Working Groups": "https://www.un.org/en/ga/about/subsidiary/other.shtml",
-  "Standing Committees":
-    "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main1",
-  "Ad Hoc Bodies":
-    "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main2",
-  Boards: "https://www.un.org/en/ga/about/subsidiary/boards.shtml",
-  // Main Committees
-  "First Committee": "https://www.un.org/en/ga/first/index.shtml",
-  "Second Committee": "https://www.un.org/en/ga/second/index.shtml",
-  "Third Committee": "https://www.un.org/en/ga/third/index.shtml",
-  "Fourth Committee": "https://www.un.org/en/ga/fourth/index.shtml",
-  "Fifth Committee": "https://www.un.org/en/ga/fifth/index.shtml",
-  "Sixth Committee": "https://www.un.org/en/ga/sixth/index.shtml",
-};
+export const externalLinkEntities: Record<string, string> = Object.fromEntries([
+  // Derived from placeholderEntities — link cards for groups of sub-bodies
+  ...placeholderEntities
+    .filter((e) => e.entity_link)
+    .map((e) => [e.entity, e.entity_link!]),
+  // Main Committees (real Airtable entities, external-link behaviour only)
+  ["First Committee", "https://www.un.org/en/ga/first/index.shtml"],
+  ["Second Committee", "https://www.un.org/en/ga/second/index.shtml"],
+  ["Third Committee", "https://www.un.org/en/ga/third/index.shtml"],
+  ["Fourth Committee", "https://www.un.org/en/ga/fourth/index.shtml"],
+  ["Fifth Committee", "https://www.un.org/en/ga/fifth/index.shtml"],
+  ["Sixth Committee", "https://www.un.org/en/ga/sixth/index.shtml"],
+]);
 
 /**
  * Entities that should always be sorted last within their subcategory.
@@ -57,15 +122,11 @@ export const sortLastEntities = new Set(["Other Committees"]);
 
 /**
  * Entities for which tooltips should not be shown.
- * These are typically link-only entities where the tooltip would be redundant.
+ * Automatically includes all placeholder entities (they have no meaningful tooltip data).
  */
-export const hideTooltipEntities = new Set([
-  "Other Committees",
-  "Working Groups",
-  "Standing Committees",
-  "Ad Hoc Bodies",
-  "Boards",
-]);
+export const hideTooltipEntities = new Set(
+  placeholderEntities.map((e) => e.entity),
+);
 
 /**
  * Entities that are affiliated with a parent entity and should:

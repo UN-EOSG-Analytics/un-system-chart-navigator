@@ -70,7 +70,7 @@ export default function EntitiesGrid() {
   const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
   const [activePrincipalOrgans, setActivePrincipalOrgans] =
     useState<Set<string>>(getInitialOrgans);
-  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(true);
+  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(false);
 
   // Debounce timer for URL updates
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);

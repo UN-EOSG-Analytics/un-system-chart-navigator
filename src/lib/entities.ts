@@ -1,5 +1,6 @@
 import { Entity, EntityFilters } from "@/types/entity";
 import entitiesData from "../../public/un-entities.json";
+import { placeholderEntities } from "./constants";
 import { createEntitySlug, parseEntityAliases } from "./utils";
 
 /**
@@ -44,12 +45,15 @@ function parseUnPrincipalOrgan(value: unknown): string[] | null {
  * This is loaded once at module initialization (~180KB JSON file).
  * Use this for operations requiring the full dataset.
  */
-export const entities = (entitiesData as Record<string, unknown>[]).map(
-  (entity) => ({
+export const entities: Entity[] = [
+  ...((entitiesData as Record<string, unknown>[]).map((entity) => ({
     ...entity,
     un_principal_organ: parseUnPrincipalOrgan(entity.un_principal_organ),
-  }),
-) as Entity[];
+  })) as Entity[]),
+  // Hardcoded display-only placeholders — not in Airtable or the dataset.
+  // Cast via unknown: only the fields used for rendering are present.
+  ...(placeholderEntities as unknown as Entity[]),
+];
 
 /**
  * Pre-computed map of entity slugs to entity objects for O(1) lookups.
