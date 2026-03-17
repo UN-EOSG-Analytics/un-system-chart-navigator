@@ -23,15 +23,15 @@ export default function Header() {
           className="group inline-flex cursor-pointer flex-wrap items-center gap-x-1.5 gap-y-0 border-none bg-transparent p-0 text-left transition-all duration-200 sm:gap-x-2"
           aria-label="Reset filters and return to home view"
         >
-          <span className="text-2xl leading-tight font-bold whitespace-nowrap text-foreground transition-colors group-hover:text-un-blue sm:text-4xl lg:text-5xl">
+          <span className="text-[1.65rem] leading-none font-bold whitespace-nowrap text-foreground transition-colors group-hover:text-un-blue sm:text-[2.25rem] lg:text-[2.7rem]">
             UN System
           </span>
-          <span className="text-2xl leading-tight font-normal whitespace-nowrap text-foreground transition-colors group-hover:text-un-blue sm:text-4xl lg:text-5xl">
+          <span className="text-[1.65rem] leading-none font-normal whitespace-nowrap text-foreground transition-colors group-hover:text-un-blue sm:text-[2.25rem] lg:text-[2.7rem]">
             Chart
           </span>
           <Tooltip delayDuration={300}>
             <TooltipTrigger asChild>
-              <sup className="-ml-0.5 cursor-help text-xs font-normal text-gray-600 transition-colors group-hover:text-un-blue sm:mt-4 sm:text-base lg:text-lg">
+              <sup className="-ml-0.5 cursor-help text-[10px] font-normal text-gray-600 transition-colors group-hover:text-un-blue sm:mt-2.5 sm:text-[13px] lg:text-sm">
                 alpha
               </sup>
             </TooltipTrigger>

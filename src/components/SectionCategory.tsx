@@ -1,8 +1,10 @@
 import {
   affiliatedEntities,
+  categoryOverrideForOrgan,
   entitySortOrder,
   hideCategoryForOrgan,
   showEmptyCategoryGap,
+  subcategoryOverrideForOrgan,
   subcategorySortOrder,
 } from "@/lib/constants";
 import { getCategoryFootnote, naturalCompare } from "@/lib/utils";
@@ -71,7 +73,11 @@ export default function CategorySection({
       // Check if this entity should hide its category/subcategory for this organ
       const hideKey = `${e.entity}|${groupKey}`;
       const shouldHideSubcategory = hideCategoryForOrgan.has(hideKey);
-      return !e.subcategory || shouldHideSubcategory;
+      const subcategoryOverride = subcategoryOverrideForOrgan[hideKey];
+      const effectiveSubcategory =
+        subcategoryOverride !== undefined ? subcategoryOverride : e.subcategory;
+
+      return !effectiveSubcategory || shouldHideSubcategory;
     })
     .sort((a, b) => {
       // First check custom entity sort order
@@ -95,12 +101,21 @@ export default function CategorySection({
       // Check if this entity should hide its category/subcategory for this organ
       const hideKey = `${entity.entity}|${groupKey}`;
       const shouldHideSubcategory = hideCategoryForOrgan.has(hideKey);
+      const categoryOverride = categoryOverrideForOrgan[hideKey];
+      const subcategoryOverride = subcategoryOverrideForOrgan[hideKey];
+      const effectiveCategory = categoryOverride || entity.category || " ";
+      const effectiveSubcategory =
+        subcategoryOverride !== undefined ? subcategoryOverride : entity.subcategory;
 
-      if (entity.subcategory && !shouldHideSubcategory) {
-        if (!acc[entity.subcategory]) {
-          acc[entity.subcategory] = [];
+      if (
+        effectiveCategory === category &&
+        effectiveSubcategory &&
+        !shouldHideSubcategory
+      ) {
+        if (!acc[effectiveSubcategory]) {
+          acc[effectiveSubcategory] = [];
         }
-        acc[entity.subcategory].push(entity);
+        acc[effectiveSubcategory].push(entity);
       }
       return acc;
     },

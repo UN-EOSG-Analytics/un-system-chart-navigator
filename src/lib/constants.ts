@@ -94,6 +94,22 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "Committees",
     subcategory: null,
   },
+  {
+    entity: "Working Groups",
+    entity_link:
+      "https://main.un.org/securitycouncil/en/content/repertoire/working-groups",
+    un_principal_organ: ["Security Council"],
+    category: "Working Groups",
+    subcategory: null,
+  },
+  {
+    entity: "Investigative Bodies",
+    entity_link:
+      "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
+    un_principal_organ: ["Security Council"],
+    category: "Investigative Bodies",
+    subcategory: null,
+  },
 ];
 
 /**
@@ -116,6 +132,8 @@ export const externalLinkEntities: Record<string, string> = Object.fromEntries([
   ...placeholderEntities
     .filter((e) => e.entity_link)
     .map((e) => [e.entity, e.entity_link!]),
+  ["IRMCT", "https://www.irmct.org/"],
+  ["UNPC", "https://www.un.org/peacebuilding/content/about-the-commission"],
   // Main Committees (real Airtable entities, external-link behaviour only)
   ["First Committee", "https://www.un.org/en/ga/first/index.shtml"],
   ["Second Committee", "https://www.un.org/en/ga/second/index.shtml"],
@@ -156,6 +174,14 @@ export const affiliatedEntities: Record<
 };
 
 /**
+ * Optional subtitle text shown directly on specific cards.
+ * Use this for display-only annotations that should not affect sorting or grouping.
+ */
+export const entityCardSubtitles: Record<string, string> = {
+  "Investigative Bodies": "TBD",
+};
+
+/**
  * Entities that should display an empty category section gap above them.
  * This creates visual spacing with a blank category header.
  * Only use this for entities that explicitly need to be visually separated.
@@ -163,17 +189,28 @@ export const affiliatedEntities: Record<
 export const showEmptyCategoryGap = new Set<string>(["HLPF", "UNPC"]);
 
 /**
+ * Organ-specific display category overrides for entities that should be grouped
+ * differently depending on where they appear.
+ * Key format: "entity|principalOrgan"
+ */
+export const categoryOverrideForOrgan: Record<string, string> = {
+  "UNPC|Security Council": "Peacebuilding Commission",
+};
+
+/**
+ * Organ-specific display subcategory overrides.
+ * Use `null` to suppress the subcategory layer for that organ.
+ * Key format: "entity|principalOrgan"
+ */
+export const subcategoryOverrideForOrgan: Record<string, string | null> = {
+  "UNPC|Security Council": null,
+};
+
+/**
  * Dual-organ entities where category/subcategory should be hidden for specific organs.
  * Key format: "entity|principalOrgan"
- * When a dual-organ entity appears in the specified organ's section, it will be
- * rendered without category/subcategory grouping (appears at the root level).
- *
- * Use case: UNPC reports to both GA and SC, but should only show its category
- * ("Intergovernmental and Expert Bodies" / "Commissions") when displayed under GA.
  */
-export const hideCategoryForOrgan: Set<string> = new Set([
-  "UNPC|Security Council",
-]);
+export const hideCategoryForOrgan: Set<string> = new Set([]);
 
 /**
  * Category groups that should be omitted from the rendered chart.
@@ -226,6 +263,7 @@ export interface PrincipalOrganConfig {
   borderColor?: string; // Optional border color override
   skipCategoryLayer?: boolean; // If true, render entities directly without category grouping
   smallCategoryHeaders?: boolean; // If true, use smaller category header styling
+  defaultCollapsed?: boolean; // If true, start with the organ section collapsed
 }
 
 // NOTE: keys here need to match entity.un_principal_organ
@@ -238,6 +276,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 1,
     bgColor: "bg-un-system-green",
     textColor: "text-black",
+    defaultCollapsed: true,
   },
   "Security Council": {
     label: "Security Council",
@@ -249,6 +288,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-red",
     textColor: "text-black",
     smallCategoryHeaders: true,
+    defaultCollapsed: true,
   },
   "Economic and Social Council": {
     label: "Economic and Social Council",
@@ -259,6 +299,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 3,
     bgColor: "bg-un-system-blue",
     textColor: "text-black",
+    defaultCollapsed: true,
   },
   Secretariat: {
     label: "Secretariat",
@@ -268,6 +309,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     order: 4,
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
+    defaultCollapsed: true,
     // skipCategoryLayer: true,
   },
 
@@ -279,6 +321,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
     skipCategoryLayer: true,
+    defaultCollapsed: true,
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
@@ -288,6 +331,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-brown",
     textColor: "text-black",
     skipCategoryLayer: true,
+    defaultCollapsed: true,
   },
 
   "Related Organizations": {
@@ -298,6 +342,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-gray-300",
     borderColor: "un-system-gray-dark",
     textColor: "text-black",
+    defaultCollapsed: true,
   },
 
   "Specialized Agencies": {
@@ -310,6 +355,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-gray-300",
     borderColor: "un-system-gray-dark",
     textColor: "text-black",
+    defaultCollapsed: true,
   },
 
   //   Other: {
@@ -429,8 +475,12 @@ export const categoryOrderByPrincipalOrgan: Record<
   },
   "Security Council": {
     Committees: 1,
-    "International Residual Mechanism for Criminal Tribunals": 2,
-    "Peacekeeping operations and special political missions": 3,
+    "Working Groups": 2,
+    "Investigative Bodies": 3,
+    Tribunals: 4,
+    "Special advisers, envoys and representatives": 5,
+    "Peacebuilding Commission": 6,
+    "Peacekeeping operations and special political missions": 7,
     " ": 999, // Fallback for entities without category
   },
   "Economic and Social Council": {

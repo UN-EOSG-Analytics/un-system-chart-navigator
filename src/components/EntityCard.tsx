@@ -2,6 +2,7 @@
 
 import {
   affiliatedEntities,
+  entityCardSubtitles,
   externalLinkEntities,
   principalOrganConfigs,
   useLongNameOnCard,
@@ -72,7 +73,8 @@ const EntityCard = ({
   const hasLongDisplayName = (displayName?.length ?? 0) > 22;
 
   // Check if entity has an affiliated subtitle
-  const affiliatedSubtitle = affiliatedEntities[entity.entity]?.subtitle;
+  const cardSubtitle =
+    entityCardSubtitles[entity.entity] ?? affiliatedEntities[entity.entity]?.subtitle;
 
   // All cards take exactly 1 grid cell for uniform appearance
 
@@ -136,9 +138,9 @@ const EntityCard = ({
             </sup>
           )}
         </span>
-        {affiliatedSubtitle && (
+        {cardSubtitle && (
           <span className="text-[8px] leading-tight text-gray-600 opacity-80 sm:text-[9px]">
-            {affiliatedSubtitle}
+            {cardSubtitle}
           </span>
         )}
       </button>

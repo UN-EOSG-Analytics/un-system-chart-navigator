@@ -81,9 +81,9 @@ export default function FilterControls({
   };
 
   return (
-    <div className="mb-4 flex flex-col gap-3 lg:mb-10">
+    <div className="mb-3 flex flex-col gap-2 lg:mb-5">
       {/* Search Bar - Mobile/Tablet Only (separate) */}
-      <div className="mt-2 lg:hidden">
+      <div className="mt-1 lg:hidden">
         <SearchInput
           ref={mobileSearchRef}
           id="entity-search"
@@ -95,9 +95,9 @@ export default function FilterControls({
       </div>
 
       {/* Search + Filter Controls Row */}
-      <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:gap-2">
+      <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
         {/* Search Bar - Desktop Only (inline with filters) */}
-        <div className="hidden w-80 shrink-0 lg:block">
+        <div className="hidden w-72 shrink-0 lg:block">
           <SearchInput
             ref={desktopSearchRef}
             id="entity-search-desktop"
@@ -129,13 +129,13 @@ export default function FilterControls({
         {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
 
         {/* Entity Count - Desktop: aligned right on same row */}
-        <div className="hidden text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 lg:ml-auto lg:block lg:pb-2">
+        <div className="hidden text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 lg:ml-auto lg:block">
           Showing {visibleEntitiesCount} entities
         </div>
       </div>
 
       {/* Entity Count - Mobile: Always visible below search */}
-      <div className="text-left text-base whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:text-right lg:hidden">
+      <div className="text-left text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:text-right lg:hidden">
         Showing {visibleEntitiesCount} entities
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 
-interface ExternalLinkProps {
+interface ExternalLinkProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: React.ReactNode;
   className?: string;
@@ -10,6 +11,7 @@ export default function ExternalLink({
   href,
   children,
   className,
+  ...props
 }: ExternalLinkProps) {
   return (
     <a
@@ -20,6 +22,7 @@ export default function ExternalLink({
         "font-bold text-un-blue transition-all hover:underline",
         className,
       )}
+      {...props}
     >
       {children}
     </a>

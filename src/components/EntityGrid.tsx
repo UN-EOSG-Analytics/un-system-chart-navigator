@@ -341,7 +341,7 @@ export default function EntitiesGrid() {
           </p>
         </div>
       ) : (
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-5">
           {sortedGroupKeys.map((groupKey) => {
             const entitiesInGroup = groupedEntities[groupKey] || [];
 

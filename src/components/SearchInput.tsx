@@ -48,7 +48,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           {ariaLabel}
         </label>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-          <Search className="h-4 w-4 text-un-blue" aria-hidden="true" />
+          <Search className="h-3.5 w-3.5 text-un-blue" aria-hidden="true" />
         </div>
         <input
           ref={ref}
@@ -59,7 +59,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          className={`block h-10 w-full touch-manipulation rounded-lg border py-2 pr-3 pl-10 text-base transition-colors focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none ${
+          className={`block h-9 w-full touch-manipulation rounded-md border py-1.5 pr-3 pl-9 text-sm transition-colors focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none ${
             hasValue
               ? "border-un-blue bg-un-blue/10 text-un-blue placeholder-un-blue"
               : isActive
