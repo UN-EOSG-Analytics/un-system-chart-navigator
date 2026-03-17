@@ -56,6 +56,9 @@ uv run python/03-download_headshots.py [--force]
 uv run python/verification/verify_links.py
 ```
 
+- install and update packages in `package.json` via CLI not file edits
+
+
 > The `main` branch only handles the website and its data pipeline (Airtable → JSON).
 
 **Python tooling uses `uv`** (not pip/venv). Never run Python scripts with plain `python`.
@@ -92,6 +95,7 @@ When changing entity display behavior, always use `constants.ts` — never hardc
 - `affiliatedEntities` — child entities that sort after a parent entity (e.g., UNCDF/UNV after UNDP)
 - `hideCategoryForOrgan` — hide category/subcategory for dual-organ entities in specific sections (key format: `"ENTITY|Principal Organ"`)
 - `principalOrganConfigs` — colors, labels, and links for each UN principal organ section
+- `placeholderEntities` — **display-only fake cards** (e.g., "Working Groups") not in Airtable/DB, merged into the entity list at runtime in `entities.ts`. Use these for group link cards pointing to external index pages.
 
 ## Styling Conventions
 
@@ -112,6 +116,8 @@ Design language: **clean, modern, minimal**. When adding or editing UI, follow t
 - **`components/ui/`** — shadcn/ui primitives; use `npx shadcn@latest diff` to check for upstream updates
 - Entity cards use `entity.entity` (acronym) as the React `key`, not an ID field
 - `parseUnPrincipalOrgan()` in `entities.ts` normalizes Airtable's inconsistent array/string/JSON-string formats on load — always expect `string[] | null` downstream
+- **Import alias**: `@/` resolves to `src/` — e.g., `import { Entity } from "@/types/entity"`, `import { cn } from "@/lib/utils"`
+- **`src/lib/utils.ts`**: shared helpers — `cn()` (clsx + twMerge), `createEntitySlug()`, `getCssColorVar()`, `normalizePrincipalOrgan()` — prefer these over ad-hoc implementations
 
 ## Python Data Pipeline
 

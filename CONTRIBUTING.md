@@ -230,11 +230,11 @@ npx next --version
 
 ### Updating AI Agent Docs
 
-[`AGENTS.md`](AGENTS.md) contains a Next.js documentation index used by AI coding agents. Regenerate it after Next.js upgrades:
+[`AGENTS.md`](AGENTS.md) contains a Next.js documentation index used by AI coding agents. 
 
-```bash
-npx @next/codemod@canary agents-md
-```
+### MCP Server
+- https://nextjs.org/docs/app/guides/mcp
+- https://ui.shadcn.com/docs/mcp
 
 ### Styling and Theme
 
