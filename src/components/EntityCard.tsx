@@ -69,6 +69,8 @@ const EntityCard = ({
     ? entity.entity_long
     : entity.entity;
 
+  const hasLongDisplayName = (displayName?.length ?? 0) > 22;
+
   // Check if entity has an affiliated subtitle
   const affiliatedSubtitle = affiliatedEntities[entity.entity]?.subtitle;
 
@@ -120,15 +122,13 @@ const EntityCard = ({
     <EntityTooltip entity={entity}>
       <button
         onClick={handleClick}
-        // Spacing constraints: Equal top/bottom margins for 1-line and 2-line text
-        // Math: h-[50px] - (2 lines × 15px line-height) = 20px remaining → py-[10px] each
-        // Fixed line-height prevents spacing conflicts; -mt-px compensates for font's internal top spacing
-        // top-left aligned
-        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-12.5 w-full animate-in cursor-pointer touch-manipulation flex-col items-start justify-start rounded-lg px-3 py-2.5 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-100 sm:h-13.75 sm:py-[12.5px]`}
+        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-12.5 w-full animate-in cursor-pointer touch-manipulation flex-col items-start rounded-lg px-3 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-100 sm:h-13.75 ${hasLongDisplayName ? "justify-center py-2 sm:py-2.5" : "justify-start py-2.5 sm:py-[12.5px]"}`}
         style={splitBackground ? { background: splitBackground } : undefined}
         aria-label={`View details for ${entity.entity_long}`}
       >
-        <span className="-mt-px text-xs leading-3.75 font-medium sm:text-sm sm:leading-3.75">
+        <span
+          className={`max-w-full font-medium ${hasLongDisplayName ? "text-balance text-[11px] leading-[1.05] sm:text-[13px]" : "-mt-px text-xs leading-3.75 sm:text-sm sm:leading-3.75"}`}
+        >
           {displayName}
           {footnoteNumbers && (
             <sup className="ml-0.5 text-[9px] sm:text-[10px]">
