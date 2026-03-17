@@ -77,21 +77,21 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "Intergovernmental and Expert Bodies",
     subcategory: "Standing Committees and other bodies",
   },
-  // Security Council — Standing committees and ad hoc bodies
+  // Security Council — committee rollup links
   {
-    entity: "Standing Committees",
+    entity: "Standing and Ad hoc Committees",
     entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main1",
+      "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees",
     un_principal_organ: ["Security Council"],
-    category: "Standing committees and ad hoc bodies",
+    category: "Committees",
     subcategory: null,
   },
   {
-    entity: "Ad Hoc Bodies",
+    entity: "Sanctions and Other Committees",
     entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees#main2",
+      "https://main.un.org/securitycouncil/en/content/repertoire/sanctions-and-other-committees",
     un_principal_organ: ["Security Council"],
-    category: "Standing committees and ad hoc bodies",
+    category: "Committees",
     subcategory: null,
   },
 ];
@@ -100,7 +100,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
  * Entities that should display their long name on the card instead of the short name.
  * Use for entities where the acronym is not well-known.
  */
-export const useLongNameOnCard = new Set(["UNDC", "UNPC"]);
+export const useLongNameOnCard = new Set(["UNDC", "UNPC", "CTC", "MSC"]);
 
 /**
  * Entities that should open an external link instead of the modal.
@@ -176,15 +176,29 @@ export const hideCategoryForOrgan: Set<string> = new Set([
 ]);
 
 /**
+ * Category groups that should be omitted from the rendered chart.
+ * Use this when a group is intentionally represented by a higher-level link card
+ * instead of displaying each underlying entity individually.
+ */
+export const hiddenDisplayCategoryGroups = [
+  {
+    principalOrgan: "Security Council",
+    category: "Sanctions Committees",
+  },
+] as const;
+
+/**
  * Custom sort order for specific entities within their category.
  * Higher values appear later. Entities not listed use default alphabetical sorting.
  */
 export const entitySortOrder: Record<string, number> = {
   // Secretariat - EOSG first
   EOSG: -1,
-  // Security Council - Standing committees and ad hoc bodies
-  "Standing Committees": 1,
-  "Ad Hoc Bodies": 2,
+  // Security Council - Committees
+  MSC: -4,
+  CTC: -3,
+  "Standing and Ad hoc Committees": -2,
+  "Sanctions and Other Committees": -1,
 };
 
 /**
@@ -414,12 +428,9 @@ export const categoryOrderByPrincipalOrgan: Record<
     " ": 999, // Fallback for entities without category (shows section, blank header)
   },
   "Security Council": {
-    "Counter-Terrorism Committee": 1,
+    Committees: 1,
     "International Residual Mechanism for Criminal Tribunals": 2,
-    "Military Staff Committee": 3,
-    "Peacekeeping operations and special political missions": 4,
-    "Standing committees and ad hoc bodies": 5,
-    "Sanctions Committees": 6,
+    "Peacekeeping operations and special political missions": 3,
     " ": 999, // Fallback for entities without category
   },
   "Economic and Social Council": {

@@ -1,6 +1,6 @@
 import { Entity, EntityFilters } from "@/types/entity";
 import entitiesData from "../../public/un-entities.json";
-import { placeholderEntities } from "./constants";
+import { hiddenDisplayCategoryGroups, placeholderEntities } from "./constants";
 import { createEntitySlug, parseEntityAliases } from "./utils";
 
 /**
@@ -36,6 +36,14 @@ function parseUnPrincipalOrgan(value: unknown): string[] | null {
   return null;
 }
 
+function shouldHideEntityFromDisplay(entity: Entity): boolean {
+  return hiddenDisplayCategoryGroups.some(
+    ({ principalOrgan, category }) =>
+      entity.category === category &&
+      entity.un_principal_organ?.includes(principalOrgan),
+  );
+}
+
 /**
  * Pre-loaded array of all UN System entities.
  * Data is imported from un-entities.json at build time for optimal performance.
@@ -46,10 +54,15 @@ function parseUnPrincipalOrgan(value: unknown): string[] | null {
  * Use this for operations requiring the full dataset.
  */
 export const entities: Entity[] = [
-  ...((entitiesData as Record<string, unknown>[]).map((entity) => ({
-    ...entity,
-    un_principal_organ: parseUnPrincipalOrgan(entity.un_principal_organ),
-  })) as Entity[]),
+  ...((entitiesData as Record<string, unknown>[])
+    .map(
+      (entity) =>
+        ({
+          ...entity,
+          un_principal_organ: parseUnPrincipalOrgan(entity.un_principal_organ),
+        }) as Entity,
+    )
+    .filter((entity) => !shouldHideEntityFromDisplay(entity)) as Entity[]),
   // Hardcoded display-only placeholders — not in Airtable or the dataset.
   // Cast via unknown: only the fields used for rendering are present.
   ...(placeholderEntities as unknown as Entity[]),
