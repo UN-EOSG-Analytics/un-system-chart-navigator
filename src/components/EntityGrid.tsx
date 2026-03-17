@@ -1,14 +1,14 @@
 "use client";
 
-import {
-  normalizePrincipalOrgan,
-  organsToUrlParam,
-  principalOrganConfigs,
-  urlParamToOrgans,
-} from "@/lib/constants";
+import { principalOrganConfigs } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
-import { naturalCompareEntities } from "@/lib/utils";
+import {
+  naturalCompareEntities,
+  normalizePrincipalOrgan,
+  organsToUrlParam,
+  urlParamToOrgans,
+} from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import FilterControls from "./FilterControls";

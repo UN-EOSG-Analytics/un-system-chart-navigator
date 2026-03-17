@@ -3,12 +3,15 @@
 import {
   affiliatedEntities,
   externalLinkEntities,
-  getEntityFootnote,
-  normalizePrincipalOrgan,
   principalOrganConfigs,
   useLongNameOnCard,
 } from "@/lib/constants";
-import { createEntitySlug, getCssColorVar } from "@/lib/utils";
+import {
+  createEntitySlug,
+  getCssColorVar,
+  getEntityFootnote,
+  normalizePrincipalOrgan,
+} from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import EntityTooltip from "./EntityTooltip";
 

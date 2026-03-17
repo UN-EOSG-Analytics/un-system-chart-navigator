@@ -1,11 +1,14 @@
 import {
   categoryOrderByPrincipalOrgan,
-  getCategoryFootnote,
-  getSortedCategories,
   hideCategoryForOrgan,
   principalOrganConfigs,
 } from "@/lib/constants";
-import { getCssColorVar, getCssColorVarDark } from "@/lib/utils";
+import {
+  getCategoryFootnote,
+  getCssColorVar,
+  getCssColorVarDark,
+  getSortedCategories,
+} from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";

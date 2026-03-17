@@ -3,10 +3,8 @@
 import FilterDropdown from "@/components/FilterDropdown";
 import ResetButton from "@/components/ResetButton";
 import SearchInput from "@/components/SearchInput";
-import {
-  getSortedPrincipalOrgans,
-  principalOrganConfigs,
-} from "@/lib/constants";
+import { principalOrganConfigs } from "@/lib/constants";
+import { getSortedPrincipalOrgans } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import { Landmark } from "lucide-react";
 import { useEffect, useRef, useState } from "react";

@@ -1,4 +1,13 @@
 import { Entity } from "@/types/entity";
+import {
+  categoryFootnotes,
+  categoryOrderByPrincipalOrgan,
+  entityFootnotes,
+  type PrincipalOrganConfig,
+  principalOrganConfigs,
+  principalOrganSlugs,
+  slugToPrincipalOrgan,
+} from "@/lib/constants";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -254,4 +263,134 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("review_needed", entity.review_needed);
 
   return `${baseUrl}?${params.toString()}`;
+}
+
+// ============================================================================
+// FUNCTIONS MOVED FROM constants.ts
+// ============================================================================
+
+/**
+ * Convert principal organ keys to URL-friendly slugs
+ */
+export function organsToUrlParam(organs: Set<string>): string | null {
+  const allOrgans = Object.keys(principalOrganConfigs);
+  // Don't include param if all organs are selected (default state)
+  if (organs.size === allOrgans.length) return null;
+  // Don't include param if no organs selected (edge case)
+  if (organs.size === 0) return null;
+
+  const slugs = Array.from(organs)
+    .map((organ) => principalOrganSlugs[organ])
+    .filter(Boolean)
+    .sort(); // Sort for consistent URLs
+
+  return slugs.join(",");
+}
+
+/**
+ * Parse URL param back to principal organ keys
+ */
+export function urlParamToOrgans(param: string | null): Set<string> | null {
+  if (!param) return null;
+
+  const slugs = param.split(",").filter(Boolean);
+  const organs = slugs
+    .map((slug) => slugToPrincipalOrgan[slug.toLowerCase()])
+    .filter(Boolean);
+
+  // If no valid organs found, return null (will use default)
+  if (organs.length === 0) return null;
+
+  return new Set(organs);
+}
+
+/**
+ * Get all principal organs sorted by their order
+ */
+export function getSortedPrincipalOrgans(): Array<
+  [string, PrincipalOrganConfig]
+> {
+  return Object.entries(principalOrganConfigs).sort(
+    ([, a], [, b]) => a.order - b.order,
+  );
+}
+
+/**
+ * Get label for a principal organ
+ */
+export function getPrincipalOrganLabel(organ: string | null): string {
+  if (!organ) return "Other";
+  return principalOrganConfigs[organ]?.label || organ;
+}
+
+/**
+ * Normalize principal organ value (handle arrays and null)
+ * Returns an array of principal organs, or null if none
+ */
+export function normalizePrincipalOrgan(
+  organ: string[] | string | null,
+): string[] | null {
+  if (!organ) return null;
+  if (Array.isArray(organ)) {
+    return organ.length > 0 ? organ : null;
+  }
+  return [organ];
+}
+
+/**
+ * Get footnote numbers for a category within a principal organ context
+ * @param principalOrgan - The principal organ context
+ * @param category - The category name (optional - if omitted, returns organ-level footnotes)
+ * @returns Array of footnote numbers or null if no footnotes exist
+ */
+export function getCategoryFootnote(
+  principalOrgan: string | null,
+  category?: string,
+): number[] | null {
+  if (!principalOrgan) return null;
+
+  // If no category provided, look for organ-level footnotes
+  if (!category) {
+    return categoryFootnotes[principalOrgan] || null;
+  }
+
+  // Look for category-level footnotes
+  const key = `${principalOrgan}|${category}`;
+  return categoryFootnotes[key] || null;
+}
+
+/**
+ * Get footnote numbers for a specific entity
+ * @param entityShortName - The entity's short name (e.g., "HLPF")
+ * @returns Array of footnote numbers or null if no footnotes exist
+ */
+export function getEntityFootnote(entityShortName: string): number[] | null {
+  return entityFootnotes[entityShortName] || null;
+}
+
+/**
+ * Get all categories sorted by their order within a principal organ context
+ * @param categories - Array of category names to sort
+ * @param principalOrgan - The principal organ context for hierarchical sorting
+ * @returns Sorted array of category names
+ */
+export function getSortedCategories(
+  categories: string[],
+  principalOrgan: string | null,
+): string[] {
+  return categories.sort((a, b) => {
+    let orderA = 999;
+    let orderB = 999;
+
+    if (principalOrgan && categoryOrderByPrincipalOrgan[principalOrgan]) {
+      orderA = categoryOrderByPrincipalOrgan[principalOrgan][a] ?? 999;
+      orderB = categoryOrderByPrincipalOrgan[principalOrgan][b] ?? 999;
+    }
+
+    if (orderA !== orderB) {
+      return orderA - orderB;
+    }
+    // Fallback to alphabetical if same order or not configured
+    return a.localeCompare(b);
+  });
 }

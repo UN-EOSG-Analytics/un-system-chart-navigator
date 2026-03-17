@@ -1,12 +1,11 @@
 import {
   affiliatedEntities,
   entitySortOrder,
-  getCategoryFootnote,
   hideCategoryForOrgan,
   showEmptyCategoryGap,
   subcategorySortOrder,
 } from "@/lib/constants";
-import { naturalCompare } from "@/lib/utils";
+import { getCategoryFootnote, naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
