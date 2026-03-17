@@ -5,6 +5,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { featureFlags } from "@/lib/constants";
 import Link from "next/link";
 import { FileEdit } from "lucide-react";
 
@@ -45,16 +46,18 @@ export default function Header() {
           </Tooltip>
         </button>
       </h1>
-      <Link
-        href="/contribute"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-0.5 flex h-8 shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:mt-1 sm:px-3"
-        aria-label="Contribute to the UN System Chart"
-      >
-        <FileEdit className="h-4 w-4 text-un-blue" />
-        <span>Contribute</span>
-      </Link>
+      {featureFlags.contribute && (
+        <Link
+          href="/contribute"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-0.5 flex h-8 shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:mt-1 sm:px-3"
+          aria-label="Contribute to the UN System Chart"
+        >
+          <FileEdit className="h-4 w-4 text-un-blue" />
+          <span>Contribute</span>
+        </Link>
+      )}
     </div>
   );
 }

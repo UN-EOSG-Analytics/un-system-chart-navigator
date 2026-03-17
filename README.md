@@ -193,8 +193,6 @@ Global styles and Tailwind CSS configuration are in [`src/app/globals.css`](src/
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for detailed information on how to get started.
 
-To suggest updates or additions to entity data, use the [contribution form](https://systemchart.un.org/contribute/) or the edit button available on each entity's page. Submissions will be submitted to our Airtable database for peer-review.
-
 ## Development Guidelines
 
 - **Package manager**: Use `pnpm`. Never use `npm` or `yarn`.

@@ -36,6 +36,16 @@ export interface PlaceholderEntity {
 }
 
 /**
+ * Application feature flags.
+ *
+ * Keep staged or optional UI behind explicit flags here so components can
+ * consistently reference a single source of truth.
+ */
+export const featureFlags = {
+  contribute: false,
+} as const;
+
+/**
  * Display-only placeholder entities that are NOT real UN entities and should
  * never appear in the dataset (Airtable, PostgreSQL, CSV exports).
  *

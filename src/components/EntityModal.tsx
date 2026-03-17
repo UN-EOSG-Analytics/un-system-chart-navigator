@@ -6,6 +6,7 @@ import PrincipalOrganField, {
 } from "@/components/PrincipalOrganField";
 import CloseButton from "@/components/CloseButton";
 import ShareButton from "@/components/ShareButton";
+import { featureFlags } from "@/lib/constants";
 import { generateContributeUrl } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import {
@@ -251,16 +252,18 @@ export default function EntityModal({
             <ShareButton />
             <CloseButton onClick={handleClose} />
           </div>
-          <Link
-            href={generateContributeUrl(entity)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0s-center flex h-8 w-full justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:px-3"
-            aria-label={`Contribute information about ${entity.entity}`}
-          >
-            <FileEdit className="h-4 w-4" />
-            <span>Needs edit?</span>
-          </Link>
+          {featureFlags.contribute && (
+            <Link
+              href={generateContributeUrl(entity)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-8 w-full shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:px-3"
+              aria-label={`Contribute information about ${entity.entity}`}
+            >
+              <FileEdit className="h-4 w-4" />
+              <span>Needs edit?</span>
+            </Link>
+          )}
         </div>
       </div>
     );
@@ -645,20 +648,21 @@ export default function EntityModal({
           );
         })()}
 
-        {/* Contribution Prompt */}
-        <div className="mt-8 mr-2 -ml-1 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3">
-          <p className="text-sm leading-relaxed text-gray-700">
-            Notice something incorrect or have information to add?{" "}
-            <a
-              href={generateContributeUrl(entity!)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-un-blue underline decoration-1 underline-offset-2 hover:text-un-blue/80"
-            >
-              Let us know.
-            </a>
-          </p>
-        </div>
+        {featureFlags.contribute && (
+          <div className="mt-8 mr-2 -ml-1 rounded-lg border border-gray-200 bg-gray-50 px-5 py-3">
+            <p className="text-sm leading-relaxed text-gray-700">
+              Notice something incorrect or have information to add?{" "}
+              <a
+                href={generateContributeUrl(entity!)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-un-blue underline decoration-1 underline-offset-2 hover:text-un-blue/80"
+              >
+                Let us know.
+              </a>
+            </p>
+          </div>
+        )}
 
         {/* Footnotes */}
         {entity!.entity_footnotes && entity!.entity_footnotes.trim() !== "" && (
