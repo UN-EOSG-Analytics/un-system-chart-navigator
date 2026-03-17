@@ -14,8 +14,7 @@ Interactive static site explorer for UN System entities — [systemchart.un.org]
 | Font            | Roboto (via `next/font/google`)                   |
 | Package manager | pnpm (workspaces)                                 |
 | Data source     | Airtable API                                      |
-| Data pipeline   | Python (`uv`) — pandas, python-dotenv, sqlalchemy |
-| Database        | Azure PostgreSQL (shared, read by other UN apps)  |
+| Data pipeline   | Python (`uv`) — pandas, python-dotenv             |
 | Deployment      | GitHub Pages (static)                             |
 
 ## Architecture Overview
@@ -24,7 +23,7 @@ Interactive static site explorer for UN System entities — [systemchart.un.org]
 
 **Data flow (read-only at runtime):**
 
-1. Python scripts fetch from Airtable → process → `public/un-entities.json` + push to Azure PostgreSQL
+1. Python scripts fetch from Airtable → process → `public/un-entities.json`
 2. [`src/lib/entities.ts`](../src/lib/entities.ts) imports JSON statically at build time
 3. React components consume pre-filtered entity arrays — no API calls in the browser
 4. Built site is exported to `out/` and deployed to GitHub Pages
@@ -54,10 +53,10 @@ npx @next/codemod@canary agents-md  # Regenerate AGENTS.md with latest Next.js d
 ./update_data.sh  # Full data refresh: Airtable → un-entities.json (uses `uv` for Python)
 # Optional extras:
 uv run python/03-download_headshots.py [--force]
-uv run python/04-push_to_postgres.py              # Push entity list to Azure PostgreSQL
-uv run python/04-push_to_postgres.py --allow-delete  # Also remove deleted entities (caution)
 uv run python/verification/verify_links.py
 ```
+
+> The `main` branch only handles the website and its data pipeline (Airtable → JSON).
 
 **Python tooling uses `uv`** (not pip/venv). Never run Python scripts with plain `python`.
 
@@ -68,11 +67,6 @@ PYTHONPATH=./python
 AIRTABLE_API_KEY=       # from https://airtable.com/create/tokens
 AIRTABLE_BASE_ID=
 AIRTABLE_TABLE_ID=
-AZURE_POSTGRES_HOST=    # Azure PostgreSQL host
-AZURE_POSTGRES_PORT=5432
-AZURE_POSTGRES_DB=
-AZURE_POSTGRES_USER=
-AZURE_POSTGRES_PASSWORD=
 ```
 
 ## URL State & Navigation Pattern
@@ -121,18 +115,17 @@ Design language: **clean, modern, minimal**. When adding or editing UI, follow t
 
 ## Python Data Pipeline
 
-Scripts run in numbered order via `./update_data.sh`; `04-push_to_postgres.py` is separate (not called by the shell script):
+Scripts run in numbered order via `./update_data.sh`:
 
 | Script                        | Input                           | Output                                              |
 | ----------------------------- | ------------------------------- | --------------------------------------------------- |
 | `01-fetch_from_airtable.py`   | Airtable API                    | `data/input/input_entities.csv`                     |
 | `02-process_entities_data.py` | `data/input/input_entities.csv` | `public/un-entities.json`, `public/un-entities.csv` |
 | `03-download_headshots.py`    | entity data                     | `public/images/headshots/`                          |
-| `04-push_to_postgres.py`      | `data/output/entities.csv`      | Azure PostgreSQL `systemchart.entities`             |
 
-## PostgreSQL Database — Handle With Care
+## PostgreSQL Database — Separate Branch
 
-`04-push_to_postgres.py` pushes the canonical entity list (`entity`, `entity_long`) to the shared **Azure PostgreSQL** database (`systemchart.entities`). This database is read by **other UN applications** — do not rename columns, change the schema, or run `--allow-delete` without confirming no downstream app depends on the affected rows. Schema is defined in [`sql/entities_schema.sql`](../sql/entities_schema.sql).
+PostgreSQL ingestion lives on the **`database` branch**. The `main` branch does not interact with Azure PostgreSQL. For DB-related work, switch to the `database` branch.
 
 ## Build & Deploy
 

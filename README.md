@@ -33,8 +33,7 @@ This project provides a visual, searchable interface to navigate the UN System C
 | Font            | Roboto (via `next/font/google`)                   |
 | Package manager | pnpm (workspaces)                                 |
 | Data source     | Airtable API                                      |
-| Data pipeline   | Python (`uv`) — pandas, python-dotenv, sqlalchemy |
-| Database        | Azure PostgreSQL (shared, read by other UN apps)  |
+| Data pipeline   | Python (`uv`) — pandas, python-dotenv             |
 | Deployment      | GitHub Pages (static)                             |
 
 ### Directory Structure
@@ -72,7 +71,8 @@ This project provides a visual, searchable interface to navigate the UN System C
 2. **Process**: [`python/02-process_entities_data.py`](python/02-process_entities_data.py) cleans and enriches data → outputs `public/un-entities.json`
 3. **Load**: [`src/lib/entities.ts`](src/lib/entities.ts) imports JSON at build time (no runtime API calls)
 4. **Render**: Components consume pre-filtered entity arrays
-5. **Push** *(optional)*: [`python/04-push_to_postgres.py`](python/04-push_to_postgres.py) syncs entity list to Azure PostgreSQL (read by other UN apps)
+
+> **PostgreSQL ingestion** (`04-push_to_postgres.py`) has been moved to the [`database` branch](https://github.com/UN-EOSG-Analytics/un-system-chart-navigator/tree/database). The `main` branch only handles the website and its data pipeline (Airtable → JSON).
 
 ### Design Principles
 
@@ -139,17 +139,12 @@ This runs scripts 01 and 02 in sequence (Airtable fetch → process → `public/
 | `01-fetch_from_airtable.py`   | Airtable API                    | `data/input/input_entities.csv`                     |
 | `02-process_entities_data.py` | `data/input/input_entities.csv` | `public/un-entities.json`, `public/un-entities.csv` |
 | `03-download_headshots.py`    | entity data                     | `public/images/headshots/`                          |
-| `04-push_to_postgres.py`      | `data/output/entities.csv`      | Azure PostgreSQL `systemchart.entities`             |
 
-Scripts 03 and 04 are optional and run separately:
+Script 03 is optional and runs separately:
 
 ```bash
 uv run python/03-download_headshots.py [--force]
-uv run python/04-push_to_postgres.py              # push to shared Azure PostgreSQL
-uv run python/04-push_to_postgres.py --allow-delete  # also remove deleted entities (caution)
 ```
-
-> ⚠️ `04-push_to_postgres.py` writes to a shared Azure PostgreSQL database read by other UN applications. Do not rename columns or use `--allow-delete` without checking downstream dependencies.
 
 ### Python Environment
 
@@ -212,4 +207,5 @@ To suggest updates or additions to entity data, use the [contribution form](http
 
 ## Read more
 
-See the Wiki [here](https://github.com/UN-EOSG-Analytics/un-system-chart-navigator/wiki).
+- See the GitHub Wiki [here](https://github.com/UN-EOSG-Analytics/un-system-chart-navigator/wiki).
+- And the [DeepWiki](https://deepwiki.com/UN-EOSG-Analytics/un-system-chart-navigator)

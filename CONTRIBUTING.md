@@ -30,7 +30,7 @@ Thank you for your interest in contributing to the UN System Chart Navigator! Th
 
    ```bash
    cp .env.example .env
-   # Fill in your Airtable API credentials and Azure PostgreSQL details
+   # Fill in your Airtable API credentials
    ```
 
 4. Run the development server:
