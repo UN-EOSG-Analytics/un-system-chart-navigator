@@ -2424,7 +2424,10 @@
     "entity_logo_available":null,
     "entity_careers_page":null,
     "entity_headquarters":null,
-    "un_principal_organ":"General Assembly, Economic and Social Council",
+    "un_principal_organ":[
+      "General Assembly",
+      "Economic and Social Council"
+    ],
     "category":null,
     "subcategory":null,
     "is_ceb_member":null,
@@ -8229,7 +8232,10 @@
     "entity_logo_available":null,
     "entity_careers_page":null,
     "entity_headquarters":null,
-    "un_principal_organ":"General Assembly, Security Council",
+    "un_principal_organ":[
+      "General Assembly",
+      "Security Council"
+    ],
     "category":"Intergovernmental and Expert Bodies",
     "subcategory":"Commissions",
     "is_ceb_member":null,
