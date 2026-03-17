@@ -10,10 +10,10 @@ This script:
 The JSON output is used by the Next.js frontend for static site generation.
 """
 
-import ast
 from pathlib import Path
 
 import pandas as pd
+from utils import parse_airtable_list_literal
 
 # Load data from csv file (fetched from Airtable)
 input_path = Path("data") / "input" / "input_entities.csv"
@@ -21,7 +21,7 @@ df = pd.read_csv(input_path)
 
 # Configuration
 HEADSHOTS_DIR = Path("public") / "images" / "headshots"
-
+HEADSHOTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Wrangle ------------------------------------------------------
 
@@ -29,13 +29,7 @@ df = df.sort_values("entity")
 
 # Parse un_principal_organ from string representation to list
 # Airtable exports arrays as string literals like "['General Assembly']"
-df["un_principal_organ"] = df["un_principal_organ"].apply(
-    lambda x: ast.literal_eval(x)
-    if isinstance(x, str) and x.startswith("[") and x.endswith("]")
-    else None
-    if pd.isna(x)
-    else x
-)
+df["un_principal_organ"] = df["un_principal_organ"].apply(parse_airtable_list_literal)
 
 
 def get_local_headshot_path(entity: str) -> str | None:

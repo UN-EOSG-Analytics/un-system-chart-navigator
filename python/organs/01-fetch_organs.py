@@ -23,7 +23,7 @@ df = df[
         "intergov_bodies_link",
         "secretariats",
         "order",
-        "system_grouping"
+        "system_grouping",
     ]
 ]
 

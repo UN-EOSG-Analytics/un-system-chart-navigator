@@ -1,7 +1,8 @@
-import ast
 from pathlib import Path
 
 import pandas as pd
+
+from utils import parse_airtable_list_literal
 
 data_folder = Path("data")
 
@@ -9,10 +10,7 @@ data_folder = Path("data")
 csv_path = data_folder / "input" / "input_entities.csv"
 df = pd.read_csv(csv_path)
 
-df["un_principal_organ"] = df["un_principal_organ"].astype(str)
-df["un_principal_organ"] = df["un_principal_organ"].apply(
-    lambda x: ast.literal_eval(x) if x.startswith("[") and x.endswith("]") else x
-)
+df["un_principal_organ"] = df["un_principal_organ"].apply(parse_airtable_list_literal)
 
 # Include empty values in the counts
 df["un_principal_organ"] = df["un_principal_organ"].replace("nan", None)

@@ -35,7 +35,9 @@ def parse_airtable_attachment(attachment_data) -> dict | None:
 
     Returns dict with 'url', 'filename', and 'extension' or None if invalid.
     """
-    if attachment_data is None or (isinstance(attachment_data, float) and pd.isna(attachment_data)):
+    if attachment_data is None or (
+        isinstance(attachment_data, float) and pd.isna(attachment_data)
+    ):
         return None
 
     try:

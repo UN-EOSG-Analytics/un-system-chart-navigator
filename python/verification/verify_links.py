@@ -339,40 +339,48 @@ if __name__ == "__main__":
         "error",
         "redirect_url",
     ]
-    
+
     # Add screenshot columns if they exist
     if args.screenshots:
         column_order.extend(["screenshot_taken", "screenshot_path", "screenshot_error"])
-    
+
     column_order.append("column")
-    
+
     # Only include columns that exist
     column_order = [col for col in column_order if col in results.columns]
     results = results[column_order]
 
     # Print summary
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("VERIFICATION SUMMARY")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
     print(f"Total entities: {len(results)}")
-    print(f"Accessible: {results['accessible'].sum()} ({results['accessible'].sum()/len(results)*100:.1f}%)")
-    print(f"Inaccessible: {(~results['accessible']).sum()} ({(~results['accessible']).sum()/len(results)*100:.1f}%)")
-    
+    print(
+        f"Accessible: {results['accessible'].sum()} ({results['accessible'].sum() / len(results) * 100:.1f}%)"
+    )
+    print(
+        f"Inaccessible: {(~results['accessible']).sum()} ({(~results['accessible']).sum() / len(results) * 100:.1f}%)"
+    )
+
     # Count Cloudflare-protected sites
-    cloudflare_count = (results['status_code'] == 403).sum()
+    cloudflare_count = (results["status_code"] == 403).sum()
     if cloudflare_count > 0:
         print(f"🔒 Cloudflare/403 Protected: {cloudflare_count}")
-    
+
     # Show some examples of inaccessible sites
-    inaccessible = results[~results['accessible']]
+    inaccessible = results[~results["accessible"]]
     if len(inaccessible) > 0:
         print(f"\nInaccessible sites:")
         for _, row in inaccessible.head(5).iterrows():
-            status = f"{row['status_code']} {row['status_name']}" if pd.notna(row['status_code']) else row['error']
+            status = (
+                f"{row['status_code']} {row['status_name']}"
+                if pd.notna(row["status_code"])
+                else row["error"]
+            )
             print(f"  - {row['entity']}: {status}")
         if len(inaccessible) > 5:
             print(f"  ... and {len(inaccessible) - 5} more")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     # Save results
     output_path = Path("data") / "output" / "entity_link_verification_results.csv"
