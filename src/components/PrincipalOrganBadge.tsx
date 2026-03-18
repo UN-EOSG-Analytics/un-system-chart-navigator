@@ -61,15 +61,14 @@ export default function PrincipalOrganBadge({
 
   // Get colors from principal organ config
   const organConfig = principalOrganConfigs[organ];
-  const bgColor = organConfig?.bgColor || "bg-gray-200";
-  const textColor = organConfig?.textColor || "text-gray-800";
+  const bgColor = organConfig?.bgColor || "bg-gray-100";
 
   const badgeClasses = `
-        inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium
-        ${bgColor} ${textColor}
+        inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-normal text-gray-700
+        ${bgColor}
         ${
           isClickable
-            ? "hover:opacity-80 cursor-pointer transition-all duration-200"
+            ? "hover:opacity-75 cursor-pointer transition-all duration-200"
             : ""
         }
         ${className}
