@@ -45,7 +45,6 @@ export default function FilterControls({
   searchQuery,
   onSearchChange,
   onReset,
-  visibleEntitiesCount,
 }: FilterControlsProps) {
   const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] =
     useState(false);
@@ -74,9 +73,9 @@ export default function FilterControls({
   };
 
   return (
-    <div className="mb-3 mt-2 flex flex-col gap-2 lg:mb-5 lg:mt-3">
+    <div className="mb-4 mt-5 lg:mb-6">
       <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
-        <div className="w-full lg:w-72 lg:shrink-0">
+        <div className="w-full lg:max-w-sm lg:flex-1">
           <SearchInput
             ref={searchRef}
             id="entity-search"

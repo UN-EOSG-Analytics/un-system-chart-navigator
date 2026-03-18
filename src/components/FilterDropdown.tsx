@@ -1,11 +1,13 @@
 "use client";
+// CANONICAL CONTROL STYLE — all interactive controls in this project must match this component.
+// See also: SearchInput.tsx
 
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Check, ChevronDown, ChevronUp } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface FilterOption {
@@ -61,22 +63,16 @@ export default function FilterDropdown({
     <Popover open={open} onOpenChange={onOpenChange}>
       <PopoverTrigger asChild>
         <button
-          className={`relative flex h-9 w-full touch-manipulation items-center gap-2.5 rounded-md border px-3 text-sm transition-colors lg:w-72 lg:flex-shrink-0 ${
-            isFiltered
-              ? "border-un-blue bg-un-blue/10 text-un-blue hover:border-un-blue"
-              : "border-gray-200 bg-white text-gray-500 hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue"
+          className={`relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 ${
+            isFiltered || open
+              ? "border-un-blue bg-un-blue/5 text-un-blue"
+              : "border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"
           } `}
           aria-label={ariaLabel}
         >
-          <div className="flex-shrink-0 text-un-blue">{icon}</div>
+          <div className="shrink-0">{icon}</div>
           <span className="flex-1 truncate text-left">{triggerText}</span>
-          <div className="ml-auto flex-shrink-0">
-            {open ? (
-              <ChevronUp className="h-3.5 w-3.5" />
-            ) : (
-              <ChevronDown className="h-3.5 w-3.5" />
-            )}
-          </div>
+          <ChevronDown className={`ml-1 h-4 w-4 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
         </button>
       </PopoverTrigger>
       <PopoverContent
@@ -98,11 +94,11 @@ export default function FilterDropdown({
               >
                 {option.color && (
                   <div
-                    className={`${option.color} h-4 w-4 flex-shrink-0 rounded`}
+                    className={`${option.color} h-4 w-4 shrink-0 rounded`}
                   ></div>
                 )}
                 {option.icon && (
-                  <div className="flex-shrink-0">{option.icon}</div>
+                  <div className="shrink-0">{option.icon}</div>
                 )}
                 <span className="flex-1 text-[13px]">
                   {option.label}
@@ -110,7 +106,7 @@ export default function FilterDropdown({
                     <span className="opacity-60"> ({option.count})</span>
                   )}
                 </span>
-                <div className="flex h-4 w-4 flex-shrink-0 items-center justify-center">
+                <div className="flex h-4 w-4 shrink-0 items-center justify-center">
                   {showCheckmark && <Check className="h-4 w-4 text-un-blue" />}
                 </div>
               </button>

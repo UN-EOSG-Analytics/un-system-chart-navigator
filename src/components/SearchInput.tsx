@@ -1,4 +1,6 @@
 "use client";
+// CANONICAL CONTROL STYLE — all interactive controls in this project must match this component.
+// See also: FilterDropdown.tsx
 
 import { Search } from "lucide-react";
 import { forwardRef, useState } from "react";
@@ -16,39 +18,20 @@ interface SearchInputProps {
   ariaLabel: string;
 }
 
-/**
- * SearchInput - A reusable search input component
- *
- * Wraps the native input element with consistent styling and behavior
- * for search functionality in the UN System Chart Navigator.
- */
 const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
-  (
-    {
-      value,
-      onChange,
-      placeholder = "Search for UN entities...",
-      id,
-      ariaLabel,
-    },
-    ref,
-  ) => {
+  ({ value, onChange, placeholder = "Search for UN entities...", id, ariaLabel }, ref) => {
     const [isFocused, setIsFocused] = useState(false);
-    const [isHovered, setIsHovered] = useState(false);
     const hasValue = value.trim().length > 0;
-    const isActive = isFocused || hasValue || isHovered;
+    const isActive = isFocused || hasValue;
 
     return (
-      <div
-        className="relative w-full"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <label htmlFor={id} className="sr-only">
-          {ariaLabel}
-        </label>
+      <div className="group relative w-full">
+        <label htmlFor={id} className="sr-only">{ariaLabel}</label>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-          <Search className="h-3.5 w-3.5 text-un-blue" aria-hidden="true" />
+          <Search
+            className={`h-4 w-4 transition-colors ${isActive ? "text-un-blue" : "text-slate-400 group-hover:text-un-blue"}`}
+            aria-hidden="true"
+          />
         </div>
         <input
           ref={ref}
@@ -59,12 +42,10 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          className={`block h-9 w-full touch-manipulation rounded-md border py-1.5 pr-3 pl-9 text-sm transition-colors focus:border-un-blue focus:ring-1 focus:ring-un-blue focus:outline-none ${
-            hasValue
-              ? "border-un-blue bg-un-blue/10 text-un-blue placeholder-un-blue"
-              : isActive
-                ? "border-un-blue bg-white text-un-blue placeholder-un-blue"
-                : "border-gray-200 bg-white text-gray-700 placeholder-gray-500"
+          className={`block h-10 w-full touch-manipulation rounded-lg border px-3 pl-9 text-sm transition-colors focus:outline-none ${
+            isActive
+              ? "border-un-blue bg-un-blue/5 text-un-blue placeholder-un-blue/50"
+              : "border-slate-300 bg-white text-slate-400 placeholder-slate-400 hover:border-un-blue hover:text-un-blue hover:placeholder-un-blue/70"
           }`}
           aria-label={ariaLabel}
         />
