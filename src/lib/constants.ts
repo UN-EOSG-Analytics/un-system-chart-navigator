@@ -194,6 +194,7 @@ export const showEmptyCategoryGap = new Set<string>(["HLPF", "UNPC"]);
  * Key format: "entity|principalOrgan"
  */
 export const categoryOverrideForOrgan: Record<string, string> = {
+  "UNPC|General Assembly": " ",
   "UNPC|Security Council": "Peacebuilding Commission",
 };
 

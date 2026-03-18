@@ -236,7 +236,7 @@ export default function PrincipalOrganSection({
 
         {/* Content */}
         {!headingOnly && isExpanded && (
-          <div id={contentId} className="px-6 pb-6 sm:px-8 sm:pb-8">
+          <div id={contentId} className="px-4 pb-4 sm:px-6 sm:pb-5">
             {skipCategoryLayer || !hasDefinedCategories ? (
               <EntityContainer
                 entities={entities}
@@ -246,7 +246,7 @@ export default function PrincipalOrganSection({
                 showReviewBorders={showReviewBorders}
               />
             ) : (
-              <div className="space-y-4">
+              <div className="space-y-2.5">
                 {sortedCategories.map((category) => (
                   <CategorySection
                     key={category}

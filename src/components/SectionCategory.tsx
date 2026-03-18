@@ -51,8 +51,8 @@ export default function CategorySection({
 
   // Header styling based on smallHeaders prop
   const headerClasses = smallHeaders
-    ? "mb-1.5 text-sm font-normal text-gray-500 sm:text-base" // Smaller styling
-    : "mb-2 text-base font-medium text-gray-500 sm:text-lg"; // Default styling
+    ? "mb-1 text-xs font-normal text-gray-500 sm:text-sm" // Smaller styling
+    : "mb-1.5 text-sm font-medium text-gray-500 sm:text-base"; // Default styling
 
   /**
    * Get sort key for entities, handling affiliated entities that should follow their parent.
@@ -132,7 +132,7 @@ export default function CategorySection({
   });
 
   return (
-    <div className="px-3">
+    <div className="px-2">
       {showCategoryHeader && (
         <h2 className={`category-header ${headerClasses}`}>
           {category.trim() || "\u00A0"}

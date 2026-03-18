@@ -125,7 +125,7 @@ const EntityCard = ({
     <EntityTooltip entity={entity}>
       <button
         onClick={handleClick}
-        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-12.5 w-full animate-in cursor-pointer touch-manipulation flex-col items-start rounded-lg px-3 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-100 sm:h-13.75 ${hasLongDisplayName ? "justify-center py-2 sm:py-2.5" : "justify-start py-2.5 sm:py-[12.5px]"}`}
+        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-8.5 w-full animate-in cursor-pointer touch-manipulation flex-col items-start rounded-lg px-2.5 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-100 sm:h-9.5 ${hasLongDisplayName ? "justify-center py-1 sm:py-1.5" : "justify-start py-1.5 sm:py-2"}`}
         style={splitBackground ? { background: splitBackground } : undefined}
         aria-label={`View details for ${entity.entity_long}`}
       >
