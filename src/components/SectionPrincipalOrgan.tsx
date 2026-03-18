@@ -62,6 +62,7 @@ export default function PrincipalOrganSection({
 
   // Check if this organ should skip the category layer entirely (from config)
   const skipCategoryLayer = organConfig?.skipCategoryLayer === true;
+  const noCollapse = organConfig?.noCollapse === true;
   const smallCategoryHeaders = organConfig?.smallCategoryHeaders === true;
   const headingOnly = organConfig?.headingOnly === true;
   const [isExpanded, setIsExpanded] = useState(
@@ -191,13 +192,14 @@ export default function PrincipalOrganSection({
       >
         {/* Principal Organ Heading */}
         <div
-          role={headingOnly ? undefined : "button"}
-          tabIndex={headingOnly ? undefined : 0}
-          aria-controls={headingOnly ? undefined : contentId}
-          aria-expanded={headingOnly ? undefined : isExpanded}
-          onClick={headingOnly ? undefined : handleHeadingClick}
-          onKeyDown={headingOnly ? undefined : handleHeadingKeyDown}
-          className={`group mb-2 flex items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly ? "" : "cursor-pointer hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"}`}
+          role={headingOnly || noCollapse ? undefined : "button"}
+          tabIndex={headingOnly || noCollapse ? undefined : 0}
+          aria-controls={headingOnly || noCollapse ? undefined : contentId}
+          aria-expanded={headingOnly || noCollapse ? undefined : isExpanded}
+          onClick={headingOnly || noCollapse ? undefined : handleHeadingClick}
+          onKeyDown={headingOnly || noCollapse ? undefined : handleHeadingKeyDown}
+          title={headingOnly || noCollapse ? undefined : isExpanded ? "Click to collapse" : "Click to expand"}
+          className={`group mb-2 flex items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : " cursor-pointer hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"}`}
           style={{
             borderColor: borderColor,
           }}
@@ -236,15 +238,17 @@ export default function PrincipalOrganSection({
             )}
           </div>
 
-          {!headingOnly && (
-            <div className="flex h-8 w-8 shrink-0 items-center justify-center self-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-transform duration-200 group-hover:scale-105">
-              <span className="sr-only">
-                {isExpanded ? "Collapse section" : "Expand section"}
-              </span>
-              <ChevronDown
-                className={`h-3.5 w-3.5 transition-transform duration-200 ${isExpanded ? "rotate-180" : "rotate-0"}`}
-                aria-hidden="true"
-              />
+          {!headingOnly && !noCollapse && (
+            <div className="flex shrink-0 items-center gap-1.5 self-center">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-[transform,box-shadow] duration-200 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)]">
+                <span className="sr-only">
+                  {isExpanded ? "Collapse section" : "Expand section"}
+                </span>
+                <ChevronDown
+                  className={`h-3.5 w-3.5 transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}
+                  aria-hidden="true"
+                />
+              </div>
             </div>
           )}
         </div>

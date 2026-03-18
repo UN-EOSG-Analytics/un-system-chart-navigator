@@ -265,6 +265,7 @@ export interface PrincipalOrganConfig {
   skipCategoryLayer?: boolean; // If true, render entities directly without category grouping
   smallCategoryHeaders?: boolean; // If true, use smaller category header styling
   defaultCollapsed?: boolean; // If true, start with the organ section collapsed
+  noCollapse?: boolean; // If true, always show chips without a collapse toggle
   headingOnly?: boolean; // If true, render as a static heading bar with no collapse, chips, or content
 }
 
@@ -340,11 +341,11 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     label: "Related Organizations",
     sectionHeading: "",
     skipCategoryLayer: true,
+    noCollapse: true,
     order: 7,
     bgColor: "bg-gray-300",
     borderColor: "un-system-gray-dark",
     textColor: "text-black",
-    defaultCollapsed: true,
   },
 
   "Specialized Agencies": {
@@ -352,6 +353,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     labelLink: "https://www.un.org/about-us/specialized-agencies",
     sectionHeading: "",
     skipCategoryLayer: true,
+    noCollapse: true,
     order: 8,
     // bgColor: "bg-un-system-gray",
     bgColor: "bg-gray-300",
