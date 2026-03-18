@@ -19,7 +19,13 @@ import {
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import { ChevronDown } from "lucide-react";
-import { KeyboardEvent, MouseEvent, useState } from "react";
+import {
+  KeyboardEvent,
+  MouseEvent,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import CategorySection from "./SectionCategory";
@@ -99,7 +105,18 @@ export default function PrincipalOrganSection({
     .filter((entity) => !placeholderEntityNames.has(entity.entity))
     .sort((left, right) => naturalCompareEntities(left.entity, right.entity));
 
-  const toggleExpanded = () => setIsExpanded((prev) => !prev);
+  // FLIP animation refs
+  const chipRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
+  const savedPositions = useRef<Map<string, DOMRect>>(new Map());
+
+  const toggleExpanded = () => {
+    // Snapshot current positions before state change
+    savedPositions.current = new Map();
+    chipRefs.current.forEach((el, key) => {
+      savedPositions.current.set(key, el.getBoundingClientRect());
+    });
+    setIsExpanded((prev) => !prev);
+  };
 
   const handleHeadingClick = () => {
     toggleExpanded();
@@ -115,6 +132,26 @@ export default function PrincipalOrganSection({
   const stopTogglePropagation = (event: MouseEvent<HTMLAnchorElement>) => {
     event.stopPropagation();
   };
+
+  // FLIP: after render, invert & play
+  useLayoutEffect(() => {
+    if (savedPositions.current.size === 0) return;
+    chipRefs.current.forEach((el, key) => {
+      const oldRect = savedPositions.current.get(key);
+      if (!oldRect) return;
+      const newRect = el.getBoundingClientRect();
+      const dx = oldRect.left - newRect.left;
+      const dy = oldRect.top - newRect.top;
+      if (dx === 0 && dy === 0) return;
+      el.style.transition = "none";
+      el.style.transform = `translate(${dx}px, ${dy}px)`;
+      requestAnimationFrame(() => {
+        el.style.transition = "transform 300ms ease";
+        el.style.transform = "";
+      });
+    });
+    savedPositions.current = new Map();
+  }, [isExpanded]);
 
   const getCollapsedChipBackground = (entity: Entity) => {
     const normalizedOrgans = normalizePrincipalOrgan(entity.un_principal_organ);
@@ -160,7 +197,7 @@ export default function PrincipalOrganSection({
           aria-expanded={headingOnly ? undefined : isExpanded}
           onClick={headingOnly ? undefined : handleHeadingClick}
           onKeyDown={headingOnly ? undefined : handleHeadingKeyDown}
-          className={`group mb-2 flex items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly ? "" : " cursor-pointer hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"}`}
+          className={`group mb-2 flex items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly ? "" : "cursor-pointer hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"}`}
           style={{
             borderColor: borderColor,
           }}
@@ -212,40 +249,34 @@ export default function PrincipalOrganSection({
           )}
         </div>
 
-        {!headingOnly && !isExpanded && collapsedPreviewEntities.length > 0 && (
-          <div className="border-l-[6px] border-transparent px-3 pb-2.5 sm:px-3.5 sm:pb-3">
-            <div className="flex flex-wrap gap-0.75 sm:gap-1">
-              {collapsedPreviewEntities.map((entity) => (
-                <EntityTooltip key={entity.entity} entity={entity}>
-                  <button
-                    type="button"
-                    onClick={() => onEntityClick(createEntitySlug(entity.entity))}
-                    className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] transition-all hover:scale-[1.05] hover:brightness-90 hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] sm:px-3 sm:py-1.25 sm:text-[11px]`}
-                    aria-label={`View details for ${entity.entity_long || entity.entity}`}
-                    style={{
-                      background: getCollapsedChipBackground(entity),
-                    }}
-                  >
-                    {entity.entity}
-                  </button>
-                </EntityTooltip>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Content */}
-        {!headingOnly && isExpanded && (
-          <div id={contentId} className="px-4 pb-4 sm:px-6 sm:pb-5">
+        {!headingOnly && (
+          <div
+            id={contentId}
+            className="border-l-[6px] border-transparent px-3 pb-3 sm:px-3.5 sm:pb-4"
+          >
             {skipCategoryLayer || !hasDefinedCategories ? (
-              <EntityContainer
-                entities={entities}
-                onEntityClick={onEntityClick}
-                customBgColor={organBgColor}
-                customTextColor={organTextColor}
-                showReviewBorders={showReviewBorders}
-              />
-            ) : (
+              <div className="flex flex-wrap gap-1 sm:gap-1.5">
+                {collapsedPreviewEntities.map((entity) => (
+                  <EntityTooltip key={entity.entity} entity={entity}>
+                    <button
+                      ref={(el) => {
+                        if (el) chipRefs.current.set(entity.entity, el);
+                        else chipRefs.current.delete(entity.entity);
+                      }}
+                      type="button"
+                      onClick={() =>
+                        onEntityClick(createEntitySlug(entity.entity))
+                      }
+                      className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3 sm:py-1.25 sm:text-[11px]`}
+                      aria-label={`View details for ${entity.entity_long || entity.entity}`}
+                      style={{ background: getCollapsedChipBackground(entity) }}
+                    >
+                      {entity.entity}
+                    </button>
+                  </EntityTooltip>
+                ))}
+              </div>
+            ) : isExpanded ? (
               <div className="space-y-2.5">
                 {sortedCategories.map((category) => (
                   <CategorySection
@@ -258,7 +289,30 @@ export default function PrincipalOrganSection({
                     customTextColor={organTextColor}
                     smallHeaders={smallCategoryHeaders}
                     showReviewBorders={showReviewBorders}
+                    chipRefs={chipRefs.current}
                   />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-wrap gap-0.75 sm:gap-1">
+                {collapsedPreviewEntities.map((entity) => (
+                  <EntityTooltip key={entity.entity} entity={entity}>
+                    <button
+                      ref={(el) => {
+                        if (el) chipRefs.current.set(entity.entity, el);
+                        else chipRefs.current.delete(entity.entity);
+                      }}
+                      type="button"
+                      onClick={() =>
+                        onEntityClick(createEntitySlug(entity.entity))
+                      }
+                      className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3 sm:py-1.25 sm:text-[11px]`}
+                      aria-label={`View details for ${entity.entity_long || entity.entity}`}
+                      style={{ background: getCollapsedChipBackground(entity) }}
+                    >
+                      {entity.entity}
+                    </button>
+                  </EntityTooltip>
                 ))}
               </div>
             )}

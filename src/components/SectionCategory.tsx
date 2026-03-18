@@ -22,6 +22,7 @@ interface CategorySectionProps {
   customTextColor?: string;
   smallHeaders?: boolean;
   showReviewBorders?: boolean;
+  chipRefs?: Map<string, HTMLButtonElement>;
 }
 
 export default function CategorySection({
@@ -33,6 +34,7 @@ export default function CategorySection({
   customTextColor,
   smallHeaders = false,
   showReviewBorders = false,
+  chipRefs,
 }: CategorySectionProps) {
   if (entities.length === 0) return null;
 
@@ -151,6 +153,7 @@ export default function CategorySection({
           customBgColor={customBgColor}
           customTextColor={customTextColor}
           showReviewBorders={showReviewBorders}
+          chipRefs={chipRefs}
         />
       )}
       {/* Subcategory sections */}
@@ -163,6 +166,7 @@ export default function CategorySection({
           customBgColor={customBgColor}
           customTextColor={customTextColor}
           showReviewBorders={showReviewBorders}
+          chipRefs={chipRefs}
         />
       ))}
     </div>

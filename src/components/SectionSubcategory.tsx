@@ -10,6 +10,7 @@ interface SubcategorySectionProps {
   customBgColor?: string;
   customTextColor?: string;
   showReviewBorders?: boolean;
+  chipRefs?: Map<string, HTMLButtonElement>;
 }
 
 /**
@@ -38,6 +39,7 @@ export default function SubcategorySection({
   customBgColor,
   customTextColor,
   showReviewBorders = false,
+  chipRefs,
 }: SubcategorySectionProps) {
   if (entities.length === 0) return null;
 
@@ -85,6 +87,7 @@ export default function SubcategorySection({
         customBgColor={customBgColor}
         customTextColor={customTextColor}
         showReviewBorders={showReviewBorders}
+        chipRefs={chipRefs}
       />
     </div>
   );
