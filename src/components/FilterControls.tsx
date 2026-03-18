@@ -81,48 +81,48 @@ export default function FilterControls({
   return (
     <div className="fixed top-14 right-0 left-0 z-30 bg-linear-to-b from-white from-55% to-transparent px-4 pt-3 pb-10 sm:px-6 md:px-10 lg:px-12 xl:px-16">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
-        <div className="w-full lg:max-w-sm lg:flex-1">
-          <SearchInput
-            ref={searchRef}
-            id="entity-search"
-            value={searchQuery}
-            onChange={onSearchChange}
-            placeholder="Search for UN entities..."
-            ariaLabel="Search for UN entities by keyword"
+        {/* Left: search + filter + reset */}
+        <div className="flex flex-1 items-center gap-2">
+          <div className="w-full lg:max-w-sm lg:flex-1">
+            <SearchInput
+              ref={searchRef}
+              id="entity-search"
+              value={searchQuery}
+              onChange={onSearchChange}
+              placeholder="Search for UN entities..."
+              ariaLabel="Search for UN entities by keyword"
+            />
+          </div>
+          <FilterDropdown
+            open={isPrincipalOrganPopoverOpen}
+            onOpenChange={setIsPrincipalOrganPopoverOpen}
+            icon={<Landmark className="h-4 w-4" />}
+            triggerText={getPrincipalOrganFilterText()}
+            isFiltered={!allPrincipalOrgansActive}
+            allActive={allPrincipalOrgansActive}
+            options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
+              key: organKey,
+              label: config.label,
+            }))}
+            selectedKeys={activePrincipalOrgans}
+            onToggle={onTogglePrincipalOrgan}
+            ariaLabel="Filter entities by principal organ"
           />
-        </div>
-
-        <FilterDropdown
-          open={isPrincipalOrganPopoverOpen}
-          onOpenChange={setIsPrincipalOrganPopoverOpen}
-          icon={<Landmark className="h-4 w-4" />}
-          triggerText={getPrincipalOrganFilterText()}
-          isFiltered={!allPrincipalOrgansActive}
-          allActive={allPrincipalOrgansActive}
-          options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
-            key: organKey,
-            label: config.label,
-          }))}
-          selectedKeys={activePrincipalOrgans}
-          onToggle={onTogglePrincipalOrgan}
-          ariaLabel="Filter entities by principal organ"
-        />
-
-        <div className="flex items-center gap-2 lg:ml-auto">
-          <button
-            onClick={onToggleExpandAll}
-            className="relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"
-            aria-label={allExpanded === true ? "Collapse all sections" : "Expand all sections"}
-          >
-            {allExpanded === true
-              ? <Shrink className="h-4 w-4 shrink-0" />
-              : <Expand className="h-4 w-4 shrink-0" />
-            }
-            <span>{allExpanded === true ? "Collapse all" : "Expand all"}</span>
-          </button>
-
           {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
         </div>
+
+        {/* Right: expand all */}
+        <button
+          onClick={onToggleExpandAll}
+          className="relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"
+          aria-label={allExpanded === true ? "Collapse all sections" : "Expand all sections"}
+        >
+          {allExpanded === true
+            ? <Shrink className="h-4 w-4 shrink-0" />
+            : <Expand className="h-4 w-4 shrink-0" />
+          }
+          <span>{allExpanded === true ? "Collapse all" : "Expand all"}</span>
+        </button>
       </div>
     </div>
   );
