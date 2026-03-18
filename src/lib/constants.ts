@@ -247,9 +247,6 @@ export const subcategorySortOrder: Record<string, number> = {
   // General Assembly - Main Committees
   "Main Committees": 998, // Second to last
   Committees: 999, // Last
-  // Security Council - Peacekeeping operations and special political missions
-  "Peacekeeping Operations": 1,
-  "Special Political Missions (SPMs)": 2,
   Other: 999, // Last
 };
 
@@ -484,7 +481,8 @@ export const categoryOrderByPrincipalOrgan: Record<
     Tribunals: 4,
     "Special advisers, envoys and representatives": 5,
     "Peacebuilding Commission": 6,
-    "Peacekeeping operations and special political missions": 7,
+    "Peacekeeping Operations": 7,
+    "Special Political Missions (SPMs)": 8,
     " ": 999, // Fallback for entities without category
   },
   "Economic and Social Council": {
