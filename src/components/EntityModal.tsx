@@ -1,33 +1,31 @@
 "use client";
 
+import CloseButton from "@/components/CloseButton";
 import EntityLogo from "@/components/EntityLogo";
 import PrincipalOrganField, {
-  getPrincipalOrganLabel,
+    getPrincipalOrganLabel,
 } from "@/components/PrincipalOrganField";
-import CloseButton from "@/components/CloseButton";
 import ShareButton from "@/components/ShareButton";
 import { featureFlags } from "@/lib/constants";
 import { generateContributeUrl } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import {
-  BarChart3,
-  Book,
-  Briefcase,
-  Database,
-  DollarSign,
-  Eye,
-  FileEdit,
-  Globe,
-  Instagram,
-  Linkedin,
-  Network,
-  Newspaper,
-  Palette,
-  ScrollText,
-  Target,
+    BarChart3,
+    Book,
+    Briefcase,
+    Database,
+    DollarSign,
+    Eye,
+    Globe,
+    Instagram,
+    Linkedin,
+    Network,
+    Newspaper,
+    Palette,
+    ScrollText,
+    Target,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 // Custom X (Twitter) icon component to match lucide-react style
@@ -150,14 +148,14 @@ export default function EntityModal({
 
   // Reusable subheader component
   const SubHeader = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="mb-3 text-lg font-normal tracking-wider text-gray-900 uppercase sm:text-xl">
+    <h3 className="mb-3 text-sm font-semibold tracking-widest text-gray-700 uppercase">
       {children}
     </h3>
   );
 
   // Reusable field label component
   const FieldLabel = ({ children }: { children: React.ReactNode }) => (
-    <span className="text-sm font-normal tracking-wide text-gray-600 uppercase">
+    <span className="text-xs font-medium tracking-widest text-gray-400 uppercase">
       {children}
     </span>
   );
@@ -237,35 +235,20 @@ export default function EntityModal({
     }
 
     return (
-      <div className="flex items-start justify-between gap-4">
-        <h2
-          className={`flex-1 leading-tight font-bold text-gray-900 ${
-            (entity.entity + ": " + entity.entity_long).length > 60
-              ? "text-xl sm:text-2xl lg:text-2xl"
-              : "text-2xl sm:text-3xl lg:text-3xl"
-          }`}
-        >
-          {entity.entity}: {entity.entity_long}
-        </h2>
-        <div className="flex flex-col items-end gap-1">
-          <div className="flex items-center gap-1.5">
-            <ShareButton />
-            <CloseButton onClick={handleClose} />
-          </div>
-          {featureFlags.contribute && (
-            <Link
-              href={generateContributeUrl(entity)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-8 w-full shrink-0 items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-colors hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue sm:px-3"
-              aria-label={`Contribute information about ${entity.entity}`}
-            >
-              <FileEdit className="h-4 w-4" />
-              <span>Needs edit?</span>
-            </Link>
-          )}
+      <>
+        <div className="pr-20">
+          <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase">
+            {entity.entity}
+          </span>
+          <h2 className="text-2xl font-bold leading-tight text-gray-900">
+            {entity.entity_long}
+          </h2>
         </div>
-      </div>
+        <div className="absolute top-4 right-6 flex items-center gap-1.5">
+          <ShareButton />
+          <CloseButton onClick={handleClose} />
+        </div>
+      </>
     );
   };
 
@@ -336,53 +319,54 @@ export default function EntityModal({
         </div>
 
         {/* Leadership — hidden, do not remove */}
-        {false && (() => {
-          // Check if there's any actual displayable leadership information
-          const hasName =
-            entity!.head_of_entity_name &&
-            entity!.head_of_entity_name !== "Not applicable";
-          const hasLevel =
-            entity!.head_of_entity_level &&
-            entity!.head_of_entity_level !== "Not applicable";
+        {false &&
+          (() => {
+            // Check if there's any actual displayable leadership information
+            const hasName =
+              entity!.head_of_entity_name &&
+              entity!.head_of_entity_name !== "Not applicable";
+            const hasLevel =
+              entity!.head_of_entity_level &&
+              entity!.head_of_entity_level !== "Not applicable";
 
-          // Only show the section if there's at least a name or level to display
-          if (!hasName && !hasLevel) {
-            return null;
-          }
+            // Only show the section if there's at least a name or level to display
+            if (!hasName && !hasLevel) {
+              return null;
+            }
 
-          return (
-            <div>
-              <SubHeader>Leadership</SubHeader>
-              <div className="space-y-4">
-                {hasName && (
-                  <Field label="">
-                    {(() => {
-                      // Temporarily hidden until headshot links are fixed
-                      const hasPhoto = false; // entity!.head_of_entity_headshot_link && entity!.head_of_entity_headshot_link.trim() !== '';
+            return (
+              <div>
+                <SubHeader>Leadership</SubHeader>
+                <div className="space-y-4">
+                  {hasName && (
+                    <Field label="">
+                      {(() => {
+                        // Temporarily hidden until headshot links are fixed
+                        const hasPhoto = false; // entity!.head_of_entity_headshot_link && entity!.head_of_entity_headshot_link.trim() !== '';
 
-                      if (hasPhoto) {
-                        return (
-                          <div className="ml-0.5 flex items-start gap-4">
-                            <div className="shrink-0flow-hidden relative h-20 w-16 rounded-xl bg-gray-100">
-                              <Image
-                                src={entity!.head_of_entity_headshot_link!}
-                                alt={`Portrait of ${entity!.head_of_entity_name}`}
-                                fill
-                                className="object-cover object-top"
-                                unoptimized={true}
-                                onError={(e) => {
-                                  console.log(
-                                    "Image failed to load:",
-                                    entity!.head_of_entity_headshot_link,
-                                  );
-                                  e.currentTarget.style.display = "none";
-                                }}
-                              />
-                            </div>
-                            <div className="flex min-h-20 flex-col justify-center">
-                              <div>
-                                {/* Temporarily disabled link */}
-                                {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
+                        if (hasPhoto) {
+                          return (
+                            <div className="ml-0.5 flex items-start gap-4">
+                              <div className="shrink-0flow-hidden relative h-20 w-16 rounded-xl bg-gray-100">
+                                <Image
+                                  src={entity!.head_of_entity_headshot_link!}
+                                  alt={`Portrait of ${entity!.head_of_entity_name}`}
+                                  fill
+                                  className="object-cover object-top"
+                                  unoptimized={true}
+                                  onError={(e) => {
+                                    console.log(
+                                      "Image failed to load:",
+                                      entity!.head_of_entity_headshot_link,
+                                    );
+                                    e.currentTarget.style.display = "none";
+                                  }}
+                                />
+                              </div>
+                              <div className="flex min-h-20 flex-col justify-center">
+                                <div>
+                                  {/* Temporarily disabled link */}
+                                  {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
                                                                     <a
                                                                         href={entity!.head_of_entity_bio_link}
                                                                         target="_blank"
@@ -392,27 +376,27 @@ export default function EntityModal({
                                                                         {entity!.head_of_entity_name}
                                                                     </a>
                                                                 ) : ( */}
-                                <span className="block text-base leading-relaxed font-semibold text-un-blue">
-                                  {entity!.head_of_entity_name}
-                                </span>
-                                {/* )} */}
-                                {entity!.head_of_entity_title_specific &&
-                                  entity!.head_of_entity_title_specific !==
-                                    "Not applicable" && (
-                                    <div className="text-base leading-tight text-gray-500">
-                                      {entity!.head_of_entity_title_specific}
-                                    </div>
-                                  )}
+                                  <span className="block text-base leading-relaxed font-semibold text-un-blue">
+                                    {entity!.head_of_entity_name}
+                                  </span>
+                                  {/* )} */}
+                                  {entity!.head_of_entity_title_specific &&
+                                    entity!.head_of_entity_title_specific !==
+                                      "Not applicable" && (
+                                      <div className="text-base leading-tight text-gray-500">
+                                        {entity!.head_of_entity_title_specific}
+                                      </div>
+                                    )}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        );
-                      } else {
-                        // No photo - content shifts up to align with label but maintains consistent indent
-                        return (
-                          <div className="ml-0.5">
-                            {/* Temporarily disabled link */}
-                            {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
+                          );
+                        } else {
+                          // No photo - content shifts up to align with label but maintains consistent indent
+                          return (
+                            <div className="ml-0.5">
+                              {/* Temporarily disabled link */}
+                              {/* {entity!.head_of_entity_bio_link && entity!.head_of_entity_bio_link.startsWith('https') ? (
                                                             <a
                                                                 href={entity!.head_of_entity_bio_link}
                                                                 target="_blank"
@@ -422,32 +406,32 @@ export default function EntityModal({
                                                                 {entity!.head_of_entity_name}
                                                             </a>
                                                         ) : ( */}
-                            <span className="block text-base leading-relaxed font-semibold text-un-blue">
-                              {entity!.head_of_entity_name}
-                            </span>
-                            {/* )} */}
-                            {entity!.head_of_entity_title_specific &&
-                              entity!.head_of_entity_title_specific !==
-                                "Not applicable" && (
-                                <div className="text-base leading-tight text-gray-500">
-                                  {entity!.head_of_entity_title_specific}
-                                </div>
-                              )}
-                          </div>
-                        );
-                      }
-                    })()}
-                  </Field>
-                )}
-                {hasLevel && (
-                  <Field label="">
-                    <Badge>{entity!.head_of_entity_level}</Badge>
-                  </Field>
-                )}
+                              <span className="block text-base leading-relaxed font-semibold text-un-blue">
+                                {entity!.head_of_entity_name}
+                              </span>
+                              {/* )} */}
+                              {entity!.head_of_entity_title_specific &&
+                                entity!.head_of_entity_title_specific !==
+                                  "Not applicable" && (
+                                  <div className="text-base leading-tight text-gray-500">
+                                    {entity!.head_of_entity_title_specific}
+                                  </div>
+                                )}
+                            </div>
+                          );
+                        }
+                      })()}
+                    </Field>
+                  )}
+                  {hasLevel && (
+                    <Field label="">
+                      <Badge>{entity!.head_of_entity_level}</Badge>
+                    </Field>
+                  )}
+                </div>
               </div>
-            </div>
-          );
-        })()}
+            );
+          })()}
 
         {/* Links */}
         {(() => {
@@ -706,7 +690,7 @@ export default function EntityModal({
       >
         {/* Header */}
         <div
-          className={`border-b border-gray-300 px-5 pt-3 pb-2 sm:px-7 sm:pt-4 sm:pb-3 ${entity ? "sticky top-0 bg-white" : ""}`}
+          className={`relative border-b border-gray-200 px-6 py-4 ${entity ? "sticky top-0 bg-white" : ""}`}
         >
           {renderHeader()}
         </div>

@@ -38,7 +38,7 @@ export default function ShareButton() {
       <PopoverTrigger asChild>
         <button
           onClick={handleShare}
-          className={`flex h-8 flex-shrink-0 cursor-pointer items-center justify-start gap-2 rounded-md border border-gray-200 bg-white px-2 text-sm font-normal text-gray-500 transition-all duration-200 hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue focus:ring-2 focus:ring-gray-300 focus:outline-none sm:px-3`}
+          className={`flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center rounded-md border border-gray-200 bg-white text-sm font-normal text-gray-500 transition-all duration-200 hover:border-un-blue hover:bg-un-blue/10 hover:text-un-blue focus:ring-2 focus:ring-gray-300 focus:outline-none`}
           aria-label="Share entity"
         >
           {isCopied ? (
@@ -46,7 +46,6 @@ export default function ShareButton() {
           ) : (
             <Share2 className="h-4 w-4" />
           )}
-          <span className="hidden sm:inline">Share</span>
         </button>
       </PopoverTrigger>
       <PopoverContent
