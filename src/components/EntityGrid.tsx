@@ -84,12 +84,16 @@ export default function EntitiesGrid() {
   const [activePrincipalOrgans, setActivePrincipalOrgans] =
     useState<Set<string>>(getInitialOrgans);
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(false);
-  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(getInitialExpanded);
+  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(
+    getInitialExpanded,
+  );
 
   // Debounce timer for URL updates
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
   const allExpandedRef = useRef(allExpanded);
-  useEffect(() => { allExpandedRef.current = allExpanded; }, [allExpanded]);
+  useEffect(() => {
+    allExpandedRef.current = allExpanded;
+  }, [allExpanded]);
 
   // Sync URL when filters change (after initial load)
   // Using native history API to avoid Next.js re-renders
@@ -142,8 +146,7 @@ export default function EntitiesGrid() {
       const urlOrgans =
         urlParamToOrgans(params.get("organs")) ||
         new Set(Object.keys(principalOrganConfigs));
-      const urlExpanded =
-        params.get("expand") === "true" ? true : undefined;
+      const urlExpanded = params.get("expand") === "true" ? true : undefined;
 
       setSearchQuery(urlSearch);
       setActivePrincipalOrgans(urlOrgans);

@@ -57,7 +57,7 @@ export const featureFlags = {
 export const placeholderEntities: PlaceholderEntity[] = [
   // General Assembly — Intergovernmental and Expert Bodies
   {
-    entity: "Working Groups",
+    entity: "Other Working Groups",
     entity_link: "https://www.un.org/en/ga/about/subsidiary/other.shtml",
     un_principal_organ: ["General Assembly"],
     category: "Intergovernmental and Expert Bodies",

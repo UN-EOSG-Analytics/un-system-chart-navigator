@@ -206,9 +206,17 @@ export default function PrincipalOrganSection({
           aria-controls={headingOnly || noCollapse ? undefined : contentId}
           aria-expanded={headingOnly || noCollapse ? undefined : isExpanded}
           onClick={headingOnly || noCollapse ? undefined : handleHeadingClick}
-          onKeyDown={headingOnly || noCollapse ? undefined : handleHeadingKeyDown}
-          title={headingOnly || noCollapse ? undefined : isExpanded ? "Click to collapse" : "Click to expand"}
-          className={`group mb-2 flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : " cursor-pointer"}`}
+          onKeyDown={
+            headingOnly || noCollapse ? undefined : handleHeadingKeyDown
+          }
+          title={
+            headingOnly || noCollapse
+              ? undefined
+              : isExpanded
+                ? "Click to collapse"
+                : "Click to expand"
+          }
+          className={`group mb-2 flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : "cursor-pointer"}`}
           style={{
             borderColor: borderColor,
           }}
@@ -253,10 +261,11 @@ export default function PrincipalOrganSection({
                 <span className="sr-only">
                   {isExpanded ? "Collapse section" : "Expand section"}
                 </span>
-                {isExpanded
-                  ? <Minimize2 className="h-3.5 w-3.5" aria-hidden="true" />
-                  : <Maximize2 className="h-3.5 w-3.5" aria-hidden="true" />
-                }
+                {isExpanded ? (
+                  <Minimize2 className="h-3.5 w-3.5" aria-hidden="true" />
+                ) : (
+                  <Maximize2 className="h-3.5 w-3.5" aria-hidden="true" />
+                )}
               </div>
             </div>
           )}
@@ -278,9 +287,14 @@ export default function PrincipalOrganSection({
                       }}
                       type="button"
                       onClick={() => {
-                        const externalLink = entity.entity_link ?? externalLinkEntities[entity.entity];
+                        const externalLink =
+                          externalLinkEntities[entity.entity];
                         if (externalLink) {
-                          window.open(externalLink, "_blank", "noopener,noreferrer");
+                          window.open(
+                            externalLink,
+                            "_blank",
+                            "noopener,noreferrer",
+                          );
                         } else {
                           onEntityClick(createEntitySlug(entity.entity));
                         }
@@ -322,9 +336,14 @@ export default function PrincipalOrganSection({
                       }}
                       type="button"
                       onClick={() => {
-                        const externalLink = entity.entity_link ?? externalLinkEntities[entity.entity];
+                        const externalLink =
+                          externalLinkEntities[entity.entity];
                         if (externalLink) {
-                          window.open(externalLink, "_blank", "noopener,noreferrer");
+                          window.open(
+                            externalLink,
+                            "_blank",
+                            "noopener,noreferrer",
+                          );
                         } else {
                           onEntityClick(createEntitySlug(entity.entity));
                         }

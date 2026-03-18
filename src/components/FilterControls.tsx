@@ -120,13 +120,18 @@ export default function FilterControls({
         {/* Right: expand all */}
         <button
           onClick={onToggleExpandAll}
-          className={`relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 ${allExpanded === true ? "border-un-blue text-un-blue bg-white hover:bg-un-blue/5" : "border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"}`}
-          aria-label={allExpanded === true ? "Collapse all sections" : "Expand all sections"}
-        >
-          {allExpanded === true
-            ? <Shrink className="h-4 w-4 shrink-0" />
-            : <Expand className="h-4 w-4 shrink-0" />
+          className={`relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 ${allExpanded === true ? "border-un-blue bg-white text-un-blue hover:bg-un-blue/5" : "border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"}`}
+          aria-label={
+            allExpanded === true
+              ? "Collapse all sections"
+              : "Expand all sections"
           }
+        >
+          {allExpanded === true ? (
+            <Shrink className="h-4 w-4 shrink-0" />
+          ) : (
+            <Expand className="h-4 w-4 shrink-0" />
+          )}
           <span>{allExpanded === true ? "Collapse all" : "Expand all"}</span>
         </button>
       </div>
