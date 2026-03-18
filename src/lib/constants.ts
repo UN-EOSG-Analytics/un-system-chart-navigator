@@ -102,14 +102,6 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "Working Groups",
     subcategory: null,
   },
-  {
-    entity: "Investigative Bodies",
-    entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
-    un_principal_organ: ["Security Council"],
-    category: "Investigative Bodies",
-    subcategory: null,
-  },
 ];
 
 /**
@@ -177,9 +169,7 @@ export const affiliatedEntities: Record<
  * Optional subtitle text shown directly on specific cards.
  * Use this for display-only annotations that should not affect sorting or grouping.
  */
-export const entityCardSubtitles: Record<string, string> = {
-  "Investigative Bodies": "TBD",
-};
+export const entityCardSubtitles: Record<string, string> = {};
 
 /**
  * Entities that should display an empty category section gap above them.
@@ -477,9 +467,8 @@ export const categoryOrderByPrincipalOrgan: Record<
   "Security Council": {
     Committees: 1,
     "Working Groups": 2,
-    "Investigative Bodies": 3,
-    Tribunals: 4,
-    "Special advisers, envoys and representatives": 5,
+    Tribunals: 3,
+    "Special Advisers, Envoys and Representatives": 5,
     "Peacebuilding Commission": 6,
     "Peacekeeping Operations": 7,
     "Special Political Missions (SPMs)": 8,
