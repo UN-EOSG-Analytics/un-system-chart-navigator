@@ -23,6 +23,8 @@ interface FilterControlsProps {
   searchQuery: string;
   /** Callback fired when search text changes */
   onSearchChange: (query: string) => void;
+  /** Callback fired when Enter is pressed in the search input */
+  onSearchEnter?: () => void;
   /** Callback to reset all filters and search to default state */
   onReset: () => void;
   /** Number of entities currently visible after filtering */
@@ -48,6 +50,7 @@ export default function FilterControls({
   onTogglePrincipalOrgan,
   searchQuery,
   onSearchChange,
+  onSearchEnter,
   onReset,
   allExpanded,
   onToggleExpandAll,
@@ -89,6 +92,7 @@ export default function FilterControls({
               id="entity-search"
               value={searchQuery}
               onChange={onSearchChange}
+              onEnter={onSearchEnter}
               placeholder="Search for UN entities..."
               ariaLabel="Search for UN entities by keyword"
             />
@@ -108,7 +112,9 @@ export default function FilterControls({
             onToggle={onTogglePrincipalOrgan}
             ariaLabel="Filter entities by principal organ"
           />
-          {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
+          <div className={isResetNeeded ? "contents" : "invisible"}>
+            <ResetButton onClick={onReset} showLabel={true} />
+          </div>
         </div>
 
         {/* Right: expand all */}

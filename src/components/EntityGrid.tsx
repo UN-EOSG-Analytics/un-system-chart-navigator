@@ -4,6 +4,7 @@ import { principalOrganConfigs } from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import {
+  createEntitySlug,
   naturalCompareEntities,
   normalizePrincipalOrgan,
   organsToUrlParam,
@@ -180,6 +181,12 @@ export default function EntitiesGrid() {
   };
 
   const handleEntityClick = (entitySlug: string) => {
+    // Cancel any pending debounced URL update — it would strip ?entity= from the URL
+    if (debounceTimerRef.current) {
+      clearTimeout(debounceTimerRef.current);
+      debounceTimerRef.current = null;
+    }
+
     // Store current filter URL for modal to restore on close
     const currentFilterUrl = buildFilterUrl(
       searchQuery,
@@ -331,6 +338,11 @@ export default function EntitiesGrid() {
         entities={entities}
         searchQuery={searchQuery}
         onSearchChange={handleSearchChange}
+        onSearchEnter={() => {
+          if (visibleEntities.length === 1) {
+            handleEntityClick(createEntitySlug(visibleEntities[0].entity));
+          }
+        }}
         onReset={handleFilterReset}
         visibleEntitiesCount={visibleEntities.length}
         allExpanded={allExpanded}

@@ -10,6 +10,8 @@ interface SearchInputProps {
   value: string;
   /** Callback when search value changes */
   onChange: (value: string) => void;
+  /** Callback when Enter is pressed */
+  onEnter?: () => void;
   /** Placeholder text */
   placeholder?: string;
   /** HTML id for the input */
@@ -23,6 +25,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     {
       value,
       onChange,
+      onEnter,
       placeholder = "Search for UN entities...",
       id,
       ariaLabel,
@@ -42,6 +45,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           <Search
             className={`h-4 w-4 transition-colors ${isActive ? "text-un-blue" : "text-slate-400 group-hover:text-un-blue"}`}
             aria-hidden="true"
+            suppressHydrationWarning
           />
         </div>
         <input
@@ -51,6 +55,8 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter") e.preventDefault(); }}
+          onKeyUp={(e) => { if (e.key === "Enter" && onEnter) onEnter(); }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           className={`block h-10 w-full touch-manipulation rounded-lg border px-3 pl-9 text-sm transition-colors focus:outline-none ${
@@ -59,6 +65,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
               : "border-slate-300 bg-white text-slate-400 placeholder-slate-400 hover:border-un-blue hover:text-un-blue hover:placeholder-un-blue/70"
           }`}
           aria-label={ariaLabel}
+          suppressHydrationWarning
         />
       </div>
     );
