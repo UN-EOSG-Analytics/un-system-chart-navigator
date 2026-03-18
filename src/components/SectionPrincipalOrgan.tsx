@@ -3,6 +3,7 @@
 import {
   categoryOverrideForOrgan,
   categoryOrderByPrincipalOrgan,
+  externalLinkEntities,
   hideCategoryForOrgan,
   placeholderEntities,
   principalOrganConfigs,
@@ -276,9 +277,14 @@ export default function PrincipalOrganSection({
                         else chipRefs.current.delete(entity.entity);
                       }}
                       type="button"
-                      onClick={() =>
-                        onEntityClick(createEntitySlug(entity.entity))
-                      }
+                      onClick={() => {
+                        const externalLink = externalLinkEntities[entity.entity];
+                        if (externalLink) {
+                          window.open(externalLink, "_blank", "noopener,noreferrer");
+                        } else {
+                          onEntityClick(createEntitySlug(entity.entity));
+                        }
+                      }}
                       className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3 sm:py-1.25 sm:text-[11px]`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
@@ -315,9 +321,14 @@ export default function PrincipalOrganSection({
                         else chipRefs.current.delete(entity.entity);
                       }}
                       type="button"
-                      onClick={() =>
-                        onEntityClick(createEntitySlug(entity.entity))
-                      }
+                      onClick={() => {
+                        const externalLink = externalLinkEntities[entity.entity];
+                        if (externalLink) {
+                          window.open(externalLink, "_blank", "noopener,noreferrer");
+                        } else {
+                          onEntityClick(createEntitySlug(entity.entity));
+                        }
+                      }}
                       className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3 sm:py-1.25 sm:text-[11px]`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}

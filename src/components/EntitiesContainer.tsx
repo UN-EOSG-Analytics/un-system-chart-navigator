@@ -1,4 +1,4 @@
-import { principalOrganConfigs } from "@/lib/constants";
+import { externalLinkEntities, principalOrganConfigs } from "@/lib/constants";
 import {
   createEntitySlug,
   getCssColorVar,
@@ -55,7 +55,14 @@ export default function EntityContainer({
               else chipRefs?.delete(entity.entity);
             }}
             type="button"
-            onClick={() => onEntityClick(createEntitySlug(entity.entity))}
+            onClick={() => {
+              const externalLink = externalLinkEntities[entity.entity];
+              if (externalLink) {
+                window.open(externalLink, "_blank", "noopener,noreferrer");
+              } else {
+                onEntityClick(createEntitySlug(entity.entity));
+              }
+            }}
             className={`${customBgColor} ${customTextColor} tracking-0 cursor-pointer rounded-full px-3 py-1.25 text-[11px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3.5 sm:py-1.5 sm:text-xs`}
             aria-label={`View details for ${entity.entity_long || entity.entity}`}
             style={{ background: getChipBackground(entity) }}
