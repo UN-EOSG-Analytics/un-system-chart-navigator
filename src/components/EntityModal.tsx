@@ -310,7 +310,7 @@ export default function EntityModal({
             {/* Headquarters */}
             {entity!.entity_headquarters && (
               <Field label="Headquarters">
-                <span className="font-bold text-gray-700">
+                <span className="text-sm text-gray-900">
                   {entity!.entity_headquarters}
                 </span>
               </Field>
