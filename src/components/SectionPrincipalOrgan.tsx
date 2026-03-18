@@ -18,10 +18,11 @@ import {
   normalizePrincipalOrgan,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
-import { ChevronDown } from "lucide-react";
+import { Maximize2, Minimize2 } from "lucide-react";
 import {
   KeyboardEvent,
   MouseEvent,
+  useEffect,
   useLayoutEffect,
   useRef,
   useState,
@@ -41,6 +42,7 @@ interface PrincipalOrganSectionProps {
   entities: Entity[];
   onEntityClick: (entitySlug: string) => void;
   showReviewBorders?: boolean;
+  forceExpanded?: boolean;
 }
 
 export default function PrincipalOrganSection({
@@ -48,6 +50,7 @@ export default function PrincipalOrganSection({
   entities,
   onEntityClick,
   showReviewBorders = false,
+  forceExpanded,
 }: PrincipalOrganSectionProps) {
   const organConfig = principalOrganConfigs[groupKey];
   const groupLabel = organConfig?.label || groupKey;
@@ -68,6 +71,10 @@ export default function PrincipalOrganSection({
   const [isExpanded, setIsExpanded] = useState(
     organConfig?.defaultCollapsed !== true,
   );
+
+  useEffect(() => {
+    if (forceExpanded !== undefined) setIsExpanded(forceExpanded);
+  }, [forceExpanded]);
   const contentId = `principal-organ-${principalOrganSlugs[groupKey] || groupKey.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 
   // Check if categories are defined for this organ
@@ -186,6 +193,7 @@ export default function PrincipalOrganSection({
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4">
       <div
+        className="relative"
         style={{
           background: `linear-gradient(to bottom, color-mix(in srgb, ${getCssColorVar(organBgColor)} 15%, transparent), color-mix(in srgb, ${getCssColorVar(organBgColor)} 20%, transparent))`,
         }}
@@ -199,7 +207,7 @@ export default function PrincipalOrganSection({
           onClick={headingOnly || noCollapse ? undefined : handleHeadingClick}
           onKeyDown={headingOnly || noCollapse ? undefined : handleHeadingKeyDown}
           title={headingOnly || noCollapse ? undefined : isExpanded ? "Click to collapse" : "Click to expand"}
-          className={`group mb-2 flex items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : " cursor-pointer hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"}`}
+          className={`group mb-2 flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : " cursor-pointer"}`}
           style={{
             borderColor: borderColor,
           }}
@@ -239,15 +247,15 @@ export default function PrincipalOrganSection({
           </div>
 
           {!headingOnly && !noCollapse && (
-            <div className="flex shrink-0 items-center gap-1.5 self-center">
+            <div className="absolute top-3 right-3 sm:top-3.5 sm:right-3.5">
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-[transform,box-shadow] duration-200 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)]">
                 <span className="sr-only">
                   {isExpanded ? "Collapse section" : "Expand section"}
                 </span>
-                <ChevronDown
-                  className={`h-3.5 w-3.5 transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}
-                  aria-hidden="true"
-                />
+                {isExpanded
+                  ? <Minimize2 className="h-3.5 w-3.5" aria-hidden="true" />
+                  : <Maximize2 className="h-3.5 w-3.5" aria-hidden="true" />
+                }
               </div>
             </div>
           )}

@@ -6,7 +6,7 @@ import SearchInput from "@/components/SearchInput";
 import { principalOrganConfigs } from "@/lib/constants";
 import { getSortedPrincipalOrgans } from "@/lib/utils";
 import { Entity } from "@/types/entity";
-import { Landmark } from "lucide-react";
+import { Expand, Landmark, Shrink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 /**
@@ -27,6 +27,10 @@ interface FilterControlsProps {
   onReset: () => void;
   /** Number of entities currently visible after filtering */
   visibleEntitiesCount: number;
+  /** Whether all sections are currently expanded */
+  allExpanded?: boolean;
+  /** Callback to toggle expand/collapse all sections */
+  onToggleExpandAll: () => void;
 }
 
 /**
@@ -45,6 +49,8 @@ export default function FilterControls({
   searchQuery,
   onSearchChange,
   onReset,
+  allExpanded,
+  onToggleExpandAll,
 }: FilterControlsProps) {
   const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] =
     useState(false);
@@ -102,7 +108,21 @@ export default function FilterControls({
           ariaLabel="Filter entities by principal organ"
         />
 
-        {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
+        <div className="flex items-center gap-2 lg:ml-auto">
+          <button
+            onClick={onToggleExpandAll}
+            className="relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"
+            aria-label={allExpanded === true ? "Collapse all sections" : "Expand all sections"}
+          >
+            {allExpanded === true
+              ? <Shrink className="h-4 w-4 shrink-0" />
+              : <Expand className="h-4 w-4 shrink-0" />
+            }
+            <span>{allExpanded === true ? "Collapse all" : "Expand all"}</span>
+          </button>
+
+          {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
+        </div>
       </div>
     </div>
   );

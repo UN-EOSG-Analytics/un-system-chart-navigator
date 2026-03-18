@@ -71,6 +71,7 @@ export default function EntitiesGrid() {
   const [activePrincipalOrgans, setActivePrincipalOrgans] =
     useState<Set<string>>(getInitialOrgans);
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(false);
+  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(undefined);
 
   // Debounce timer for URL updates
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -332,6 +333,8 @@ export default function EntitiesGrid() {
         onSearchChange={handleSearchChange}
         onReset={handleFilterReset}
         visibleEntitiesCount={visibleEntities.length}
+        allExpanded={allExpanded}
+        onToggleExpandAll={() => setAllExpanded((prev) => prev !== true)}
       />
 
       {visibleEntities.length === 0 ? (
@@ -352,6 +355,7 @@ export default function EntitiesGrid() {
                 entities={entitiesInGroup}
                 onEntityClick={handleEntityClick}
                 showReviewBorders={showReviewBorders}
+                forceExpanded={allExpanded}
               />
             );
           })}
