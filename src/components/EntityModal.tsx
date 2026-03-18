@@ -335,8 +335,8 @@ export default function EntityModal({
           </div>
         </div>
 
-        {/* Leadership */}
-        {(() => {
+        {/* Leadership — hidden, do not remove */}
+        {false && (() => {
           // Check if there's any actual displayable leadership information
           const hasName =
             entity!.head_of_entity_name &&
