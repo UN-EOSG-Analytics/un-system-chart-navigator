@@ -278,7 +278,7 @@ export default function PrincipalOrganSection({
                       }}
                       type="button"
                       onClick={() => {
-                        const externalLink = externalLinkEntities[entity.entity];
+                        const externalLink = entity.entity_link ?? externalLinkEntities[entity.entity];
                         if (externalLink) {
                           window.open(externalLink, "_blank", "noopener,noreferrer");
                         } else {
@@ -322,7 +322,7 @@ export default function PrincipalOrganSection({
                       }}
                       type="button"
                       onClick={() => {
-                        const externalLink = externalLinkEntities[entity.entity];
+                        const externalLink = entity.entity_link ?? externalLinkEntities[entity.entity];
                         if (externalLink) {
                           window.open(externalLink, "_blank", "noopener,noreferrer");
                         } else {

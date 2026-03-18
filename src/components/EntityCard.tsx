@@ -80,7 +80,7 @@ const EntityCard = ({
   // All cards take exactly 1 grid cell for uniform appearance
 
   // Check if this entity should open an external link instead of modal
-  const externalLink = externalLinkEntities[entity.entity];
+  const externalLink = entity.entity_link ?? externalLinkEntities[entity.entity];
 
   const handleClick = () => {
     if (externalLink) {
