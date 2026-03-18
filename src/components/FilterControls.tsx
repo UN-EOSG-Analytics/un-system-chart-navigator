@@ -50,18 +50,11 @@ export default function FilterControls({
   const [isPrincipalOrganPopoverOpen, setIsPrincipalOrganPopoverOpen] =
     useState(false);
 
-  // Refs for search inputs
-  const mobileSearchRef = useRef<HTMLInputElement>(null);
-  const desktopSearchRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
   // Auto-focus search input on mount
   useEffect(() => {
-    // Focus desktop search on larger screens, mobile on smaller
-    if (window.innerWidth >= 1024) {
-      desktopSearchRef.current?.focus();
-    } else {
-      mobileSearchRef.current?.focus();
-    }
+    searchRef.current?.focus();
   }, []);
 
   // Check if all principal organs are active
@@ -81,26 +74,12 @@ export default function FilterControls({
   };
 
   return (
-    <div className="mb-3 flex flex-col gap-2 lg:mb-5">
-      {/* Search Bar - Mobile/Tablet Only (separate) */}
-      <div className="mt-1 lg:hidden">
-        <SearchInput
-          ref={mobileSearchRef}
-          id="entity-search"
-          value={searchQuery}
-          onChange={onSearchChange}
-          placeholder="Search for UN entities..."
-          ariaLabel="Search for UN entities by keyword"
-        />
-      </div>
-
-      {/* Search + Filter Controls Row */}
+    <div className="mb-3 mt-2 flex flex-col gap-2 lg:mb-5 lg:mt-3">
       <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
-        {/* Search Bar - Desktop Only (inline with filters) */}
-        <div className="hidden w-72 shrink-0 lg:block">
+        <div className="w-full lg:w-72 lg:shrink-0">
           <SearchInput
-            ref={desktopSearchRef}
-            id="entity-search-desktop"
+            ref={searchRef}
+            id="entity-search"
             value={searchQuery}
             onChange={onSearchChange}
             placeholder="Search for UN entities..."
@@ -108,7 +87,6 @@ export default function FilterControls({
           />
         </div>
 
-        {/* Principal Organ Filter Popover */}
         <FilterDropdown
           open={isPrincipalOrganPopoverOpen}
           onOpenChange={setIsPrincipalOrganPopoverOpen}
@@ -125,19 +103,8 @@ export default function FilterControls({
           ariaLabel="Filter entities by principal organ"
         />
 
-        {/* Reset Button - only show when there's something to reset */}
         {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
-
-        {/* Entity Count - Desktop: aligned right on same row */}
-        {/* <div className="hidden text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 lg:ml-auto lg:block">
-          Showing {visibleEntitiesCount} entities
-        </div> */}
       </div>
-
-      {/* Entity Count - Mobile: Always visible below search */}
-      {/* <div className="text-left text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:text-right lg:hidden">
-        Showing {visibleEntitiesCount} entities
-      </div> */}
     </div>
   );
 }
