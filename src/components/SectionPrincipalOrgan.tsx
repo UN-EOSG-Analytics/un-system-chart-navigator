@@ -56,6 +56,7 @@ export default function PrincipalOrganSection({
   // Check if this organ should skip the category layer entirely (from config)
   const skipCategoryLayer = organConfig?.skipCategoryLayer === true;
   const smallCategoryHeaders = organConfig?.smallCategoryHeaders === true;
+  const headingOnly = organConfig?.headingOnly === true;
   const [isExpanded, setIsExpanded] = useState(
     organConfig?.defaultCollapsed !== true,
   );
@@ -152,13 +153,13 @@ export default function PrincipalOrganSection({
       >
         {/* Principal Organ Heading */}
         <div
-          role="button"
-          tabIndex={0}
-          aria-controls={contentId}
-          aria-expanded={isExpanded}
-          onClick={handleHeadingClick}
-          onKeyDown={handleHeadingKeyDown}
-          className="group mb-2 flex cursor-pointer items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)] sm:mb-2.5 sm:px-3.5 sm:py-2.5"
+          role={headingOnly ? undefined : "button"}
+          tabIndex={headingOnly ? undefined : 0}
+          aria-controls={headingOnly ? undefined : contentId}
+          aria-expanded={headingOnly ? undefined : isExpanded}
+          onClick={headingOnly ? undefined : handleHeadingClick}
+          onKeyDown={headingOnly ? undefined : handleHeadingKeyDown}
+          className={`group mb-2 flex items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly ? "" : " cursor-pointer hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"}`}
           style={{
             borderColor: borderColor,
           }}
@@ -197,18 +198,20 @@ export default function PrincipalOrganSection({
             )}
           </div>
 
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center self-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-transform duration-200 group-hover:scale-105">
-            <span className="sr-only">
-              {isExpanded ? "Collapse section" : "Expand section"}
-            </span>
-            <ChevronDown
-              className={`h-3.5 w-3.5 transition-transform duration-200 ${isExpanded ? "rotate-180" : "rotate-0"}`}
-              aria-hidden="true"
-            />
-          </div>
+          {!headingOnly && (
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center self-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-transform duration-200 group-hover:scale-105">
+              <span className="sr-only">
+                {isExpanded ? "Collapse section" : "Expand section"}
+              </span>
+              <ChevronDown
+                className={`h-3.5 w-3.5 transition-transform duration-200 ${isExpanded ? "rotate-180" : "rotate-0"}`}
+                aria-hidden="true"
+              />
+            </div>
+          )}
         </div>
 
-        {!isExpanded && collapsedPreviewEntities.length > 0 && (
+        {!headingOnly && !isExpanded && collapsedPreviewEntities.length > 0 && (
           <div className="px-3 pb-2.5 sm:px-3.5 sm:pb-3">
             <div className="flex flex-wrap gap-0.75 sm:gap-1">
               {collapsedPreviewEntities.map((entity) => (
@@ -230,7 +233,7 @@ export default function PrincipalOrganSection({
         )}
 
         {/* Content */}
-        {isExpanded && (
+        {!headingOnly && isExpanded && (
           <div id={contentId} className="px-6 pb-6 sm:px-8 sm:pb-8">
             {skipCategoryLayer || !hasDefinedCategories ? (
               <EntityContainer

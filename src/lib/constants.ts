@@ -264,6 +264,7 @@ export interface PrincipalOrganConfig {
   skipCategoryLayer?: boolean; // If true, render entities directly without category grouping
   smallCategoryHeaders?: boolean; // If true, use smaller category header styling
   defaultCollapsed?: boolean; // If true, start with the organ section collapsed
+  headingOnly?: boolean; // If true, render as a static heading bar with no collapse, chips, or content
 }
 
 // NOTE: keys here need to match entity.un_principal_organ
@@ -321,7 +322,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-purple",
     textColor: "text-black",
     skipCategoryLayer: true,
-    defaultCollapsed: true,
+    headingOnly: true,
   },
   "Trusteeship Council": {
     label: "Trusteeship Council",
@@ -331,7 +332,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-brown",
     textColor: "text-black",
     skipCategoryLayer: true,
-    defaultCollapsed: true,
+    headingOnly: true,
   },
 
   "Related Organizations": {

@@ -71,7 +71,7 @@ export default function DataDownloadBar() {
     <div className="w-full bg-white py-3 sm:py-4 md:py-6 lg:py-8 xl:py-10">
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex items-start gap-2 text-base">
-          <p className="text-gray-600">As of November 2025</p>
+          <p className="text-gray-600">As of March 2026</p>
           <span className="text-gray-400">|</span>
           <div className="relative" ref={downloadRef}>
             <button
