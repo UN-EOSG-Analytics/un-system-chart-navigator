@@ -24,6 +24,7 @@ import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import CategorySection from "./SectionCategory";
 import ExternalLink from "./ExternalLink";
+import EntityTooltip from "./EntityTooltip";
 
 const placeholderEntityNames = new Set(
   placeholderEntities.map((entity) => entity.entity),
@@ -212,21 +213,22 @@ export default function PrincipalOrganSection({
         </div>
 
         {!headingOnly && !isExpanded && collapsedPreviewEntities.length > 0 && (
-          <div className="px-3 pb-2.5 sm:px-3.5 sm:pb-3">
+          <div className="border-l-[6px] border-transparent px-3 pb-2.5 sm:px-3.5 sm:pb-3">
             <div className="flex flex-wrap gap-0.75 sm:gap-1">
               {collapsedPreviewEntities.map((entity) => (
-                <button
-                  key={entity.entity}
-                  type="button"
-                  onClick={() => onEntityClick(createEntitySlug(entity.entity))}
-                  className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2 py-0.75 text-[9px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] transition-transform hover:scale-[1.02] hover:shadow-[0_6px_12px_rgba(0,0,0,0.06)] sm:px-2.5 sm:text-[10px]`}
-                  aria-label={`View details for ${entity.entity_long || entity.entity}`}
-                  style={{
-                    background: getCollapsedChipBackground(entity),
-                  }}
-                >
-                  {entity.entity}
-                </button>
+                <EntityTooltip key={entity.entity} entity={entity}>
+                  <button
+                    type="button"
+                    onClick={() => onEntityClick(createEntitySlug(entity.entity))}
+                    className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] transition-all hover:scale-[1.05] hover:brightness-90 hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] sm:px-3 sm:py-1.25 sm:text-[11px]`}
+                    aria-label={`View details for ${entity.entity_long || entity.entity}`}
+                    style={{
+                      background: getCollapsedChipBackground(entity),
+                    }}
+                  >
+                    {entity.entity}
+                  </button>
+                </EntityTooltip>
               ))}
             </div>
           </div>

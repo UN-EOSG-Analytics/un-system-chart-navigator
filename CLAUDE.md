@@ -4,18 +4,18 @@ Interactive static site explorer for UN System entities — [systemchart.un.org]
 
 ## Tech Stack
 
-| Layer           | Technology                                        |
-| --------------- | ------------------------------------------------- |
-| Framework       | Next.js 16 (App Router, `output: "export"`)       |
-| Language        | TypeScript 5, React 19                            |
-| Styling         | Tailwind CSS v4                                   |
-| UI primitives   | shadcn/ui (Radix UI)                              |
-| Icons           | lucide-react                                      |
-| Font            | Roboto (via `next/font/google`)                   |
-| Package manager | pnpm (workspaces)                                 |
-| Data source     | Airtable API                                      |
-| Data pipeline   | Python (`uv`) — pandas, python-dotenv             |
-| Deployment      | GitHub Pages (static)                             |
+| Layer           | Technology                                  |
+| --------------- | ------------------------------------------- |
+| Framework       | Next.js 16 (App Router, `output: "export"`) |
+| Language        | TypeScript 5, React 19                      |
+| Styling         | Tailwind CSS v4                             |
+| UI primitives   | shadcn/ui (Radix UI)                        |
+| Icons           | lucide-react                                |
+| Font            | Roboto (via `next/font/google`)             |
+| Package manager | pnpm (workspaces)                           |
+| Data source     | Airtable API                                |
+| Data pipeline   | Python (`uv`) — pandas, python-dotenv       |
+| Deployment      | GitHub Pages (static)                       |
 
 ## Architecture Overview
 
@@ -57,7 +57,6 @@ uv run python/verification/verify_links.py
 ```
 
 - install and update packages in `package.json` via CLI not file edits
-
 
 > The `main` branch only handles the website and its data pipeline (Airtable → JSON).
 
