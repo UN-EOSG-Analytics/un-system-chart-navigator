@@ -24,6 +24,7 @@ function buildFilterUrl(
   searchQuery: string,
   activePrincipalOrgans: Set<string>,
   currentEntityParam: string | null,
+  allExpanded?: boolean | undefined,
 ): string {
   const parts: string[] = [];
 
@@ -41,6 +42,11 @@ function buildFilterUrl(
   const organsParam = organsToUrlParam(activePrincipalOrgans);
   if (organsParam) {
     parts.push(`organs=${organsParam}`);
+  }
+
+  // Add expanded param if all sections are expanded
+  if (allExpanded === true) {
+    parts.push("expand=true");
   }
 
   return parts.length > 0 ? `/?${parts.join("&")}` : "/";
@@ -68,20 +74,28 @@ export default function EntitiesGrid() {
     );
   };
 
+  const getInitialExpanded = () => {
+    if (typeof window === "undefined") return undefined;
+    const params = new URLSearchParams(window.location.search);
+    return params.get("expand") === "true" ? true : undefined;
+  };
+
   const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
   const [activePrincipalOrgans, setActivePrincipalOrgans] =
     useState<Set<string>>(getInitialOrgans);
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(false);
-  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(undefined);
+  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(getInitialExpanded);
 
   // Debounce timer for URL updates
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const allExpandedRef = useRef(allExpanded);
+  useEffect(() => { allExpandedRef.current = allExpanded; }, [allExpanded]);
 
   // Sync URL when filters change (after initial load)
   // Using native history API to avoid Next.js re-renders
   const updateUrl = useCallback((query: string, organs: Set<string>) => {
     // Don't include entity param - filters are separate from modal
-    const newUrl = buildFilterUrl(query, organs, null);
+    const newUrl = buildFilterUrl(query, organs, null, allExpandedRef.current);
     window.history.replaceState(null, "", newUrl);
   }, []);
 
@@ -107,6 +121,19 @@ export default function EntitiesGrid() {
     };
   }, []);
 
+  // Sync allExpanded to URL immediately when it changes
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const newUrl = buildFilterUrl(
+      searchQuery,
+      activePrincipalOrgans,
+      params.get("entity"),
+      allExpanded,
+    );
+    window.history.replaceState(null, "", newUrl);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allExpanded]);
+
   // Handle browser back/forward navigation
   useEffect(() => {
     const handlePopState = () => {
@@ -115,9 +142,12 @@ export default function EntitiesGrid() {
       const urlOrgans =
         urlParamToOrgans(params.get("organs")) ||
         new Set(Object.keys(principalOrganConfigs));
+      const urlExpanded =
+        params.get("expand") === "true" ? true : undefined;
 
       setSearchQuery(urlSearch);
       setActivePrincipalOrgans(urlOrgans);
+      setAllExpanded(urlExpanded);
     };
 
     window.addEventListener("popstate", handlePopState);
