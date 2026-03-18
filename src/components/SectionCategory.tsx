@@ -105,7 +105,9 @@ export default function CategorySection({
       const subcategoryOverride = subcategoryOverrideForOrgan[hideKey];
       const effectiveCategory = categoryOverride || entity.category || " ";
       const effectiveSubcategory =
-        subcategoryOverride !== undefined ? subcategoryOverride : entity.subcategory;
+        subcategoryOverride !== undefined
+          ? subcategoryOverride
+          : entity.subcategory;
 
       if (
         effectiveCategory === category &&

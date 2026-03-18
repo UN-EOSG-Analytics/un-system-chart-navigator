@@ -93,9 +93,9 @@ export default function PrincipalOrganSection({
     Object.keys(categorizedEntities),
     groupKey,
   );
-  const collapsedPreviewEntities = entities.filter(
-    (entity) => !placeholderEntityNames.has(entity.entity),
-  ).sort((left, right) => naturalCompareEntities(left.entity, right.entity));
+  const collapsedPreviewEntities = entities
+    .filter((entity) => !placeholderEntityNames.has(entity.entity))
+    .sort((left, right) => naturalCompareEntities(left.entity, right.entity));
 
   const toggleExpanded = () => setIsExpanded((prev) => !prev);
 
@@ -158,7 +158,7 @@ export default function PrincipalOrganSection({
           aria-expanded={isExpanded}
           onClick={handleHeadingClick}
           onKeyDown={handleHeadingKeyDown}
-          className="group mb-2 flex cursor-pointer items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 select-none transition-[background-color,transform,box-shadow] duration-200 hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)] sm:mb-2.5 sm:px-3.5 sm:py-2.5"
+          className="group mb-2 flex cursor-pointer items-start justify-between gap-2.5 border-l-[6px] bg-white/10 px-3 py-2 transition-[background-color,transform,box-shadow] duration-200 select-none hover:bg-white/24 hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)] sm:mb-2.5 sm:px-3.5 sm:py-2.5"
           style={{
             borderColor: borderColor,
           }}
@@ -216,7 +216,7 @@ export default function PrincipalOrganSection({
                   key={entity.entity}
                   type="button"
                   onClick={() => onEntityClick(createEntitySlug(entity.entity))}
-                  className={`${organBgColor} ${organTextColor} cursor-pointer rounded-full px-2 py-0.75 text-[9px] leading-none font-medium tracking-0 shadow-[0_3px_8px_rgba(0,0,0,0.03)] transition-transform hover:scale-[1.02] hover:shadow-[0_6px_12px_rgba(0,0,0,0.06)] sm:px-2.5 sm:text-[10px]`}
+                  className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full px-2 py-0.75 text-[9px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] transition-transform hover:scale-[1.02] hover:shadow-[0_6px_12px_rgba(0,0,0,0.06)] sm:px-2.5 sm:text-[10px]`}
                   aria-label={`View details for ${entity.entity_long || entity.entity}`}
                   style={{
                     background: getCollapsedChipBackground(entity),

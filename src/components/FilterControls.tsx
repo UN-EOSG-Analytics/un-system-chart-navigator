@@ -73,8 +73,8 @@ export default function FilterControls({
   };
 
   return (
-    <div className="mb-4 mt-5 lg:mb-6">
-      <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
+    <div className="fixed top-14 right-0 left-0 z-30 bg-linear-to-b from-white from-55% to-transparent px-4 pt-3 pb-10 sm:px-6 md:px-10 lg:px-12 xl:px-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
         <div className="w-full lg:max-w-sm lg:flex-1">
           <SearchInput
             ref={searchRef}

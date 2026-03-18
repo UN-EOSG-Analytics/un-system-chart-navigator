@@ -72,7 +72,9 @@ export default function FilterDropdown({
         >
           <div className="shrink-0">{icon}</div>
           <span className="flex-1 truncate text-left">{triggerText}</span>
-          <ChevronDown className={`ml-1 h-4 w-4 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
+          <ChevronDown
+            className={`ml-1 h-4 w-4 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+          />
         </button>
       </PopoverTrigger>
       <PopoverContent
@@ -97,9 +99,7 @@ export default function FilterDropdown({
                     className={`${option.color} h-4 w-4 shrink-0 rounded`}
                   ></div>
                 )}
-                {option.icon && (
-                  <div className="shrink-0">{option.icon}</div>
-                )}
+                {option.icon && <div className="shrink-0">{option.icon}</div>}
                 <span className="flex-1 text-[13px]">
                   {option.label}
                   {option.count !== undefined && (

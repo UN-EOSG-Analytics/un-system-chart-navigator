@@ -74,7 +74,8 @@ const EntityCard = ({
 
   // Check if entity has an affiliated subtitle
   const cardSubtitle =
-    entityCardSubtitles[entity.entity] ?? affiliatedEntities[entity.entity]?.subtitle;
+    entityCardSubtitles[entity.entity] ??
+    affiliatedEntities[entity.entity]?.subtitle;
 
   // All cards take exactly 1 grid cell for uniform appearance
 
@@ -129,7 +130,7 @@ const EntityCard = ({
         aria-label={`View details for ${entity.entity_long}`}
       >
         <span
-          className={`max-w-full font-medium ${hasLongDisplayName ? "text-balance text-[11px] leading-[1.05] sm:text-[13px]" : "-mt-px text-xs leading-3.75 sm:text-sm sm:leading-3.75"}`}
+          className={`max-w-full font-medium ${hasLongDisplayName ? "text-[11px] leading-[1.05] text-balance sm:text-[13px]" : "-mt-px text-xs leading-3.75 sm:text-sm sm:leading-3.75"}`}
         >
           {displayName}
           {footnoteNumbers && (

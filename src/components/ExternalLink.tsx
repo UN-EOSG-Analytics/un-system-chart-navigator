@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 
-interface ExternalLinkProps
-  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface ExternalLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   children: React.ReactNode;
   className?: string;

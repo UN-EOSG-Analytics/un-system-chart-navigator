@@ -19,14 +19,25 @@ interface SearchInputProps {
 }
 
 const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
-  ({ value, onChange, placeholder = "Search for UN entities...", id, ariaLabel }, ref) => {
+  (
+    {
+      value,
+      onChange,
+      placeholder = "Search for UN entities...",
+      id,
+      ariaLabel,
+    },
+    ref,
+  ) => {
     const [isFocused, setIsFocused] = useState(false);
     const hasValue = value.trim().length > 0;
     const isActive = isFocused || hasValue;
 
     return (
       <div className="group relative w-full">
-        <label htmlFor={id} className="sr-only">{ariaLabel}</label>
+        <label htmlFor={id} className="sr-only">
+          {ariaLabel}
+        </label>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
           <Search
             className={`h-4 w-4 transition-colors ${isActive ? "text-un-blue" : "text-slate-400 group-hover:text-un-blue"}`}

@@ -12,7 +12,7 @@ export default function Header() {
         <h1 className="min-w-0 flex-1 text-left">
           <Link
             href="/"
-            className="group inline-flex min-w-0 items-center gap-2.5 translate-y-1 transition-colors duration-200 sm:gap-3"
+            className="group inline-flex min-w-0 translate-y-1 items-center gap-2.5 transition-colors duration-200 sm:gap-3"
             aria-label="Reset filters and return to home view"
           >
             <Image
