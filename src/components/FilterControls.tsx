@@ -129,15 +129,15 @@ export default function FilterControls({
         {isResetNeeded && <ResetButton onClick={onReset} showLabel={true} />}
 
         {/* Entity Count - Desktop: aligned right on same row */}
-        <div className="hidden text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 lg:ml-auto lg:block">
+        {/* <div className="hidden text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 lg:ml-auto lg:block">
           Showing {visibleEntitiesCount} entities
-        </div>
+        </div> */}
       </div>
 
       {/* Entity Count - Mobile: Always visible below search */}
-      <div className="text-left text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:text-right lg:hidden">
+      {/* <div className="text-left text-sm whitespace-nowrap text-gray-400 transition-opacity duration-500 sm:text-right lg:hidden">
         Showing {visibleEntitiesCount} entities
-      </div>
+      </div> */}
     </div>
   );
 }
