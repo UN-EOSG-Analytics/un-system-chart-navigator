@@ -63,6 +63,9 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           }}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          spellCheck={false}
+          autoCorrect="off"
+          autoCapitalize="off"
           className={`block h-10 w-full touch-manipulation rounded-lg border px-3 pl-9 text-sm transition-colors focus:outline-none ${
             isActive
               ? "border-un-blue bg-un-blue/5 text-un-blue placeholder-un-blue/50"

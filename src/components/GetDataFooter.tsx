@@ -1,7 +1,14 @@
 "use client";
 
 import { footnoteDefinitions } from "@/lib/constants";
-import { Check, Download, FileJson, FileText, Link } from "lucide-react";
+import {
+  Check,
+  ChevronDown,
+  Download,
+  FileJson,
+  FileText,
+  Link,
+} from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Toast } from "./Toast";
 
@@ -12,6 +19,9 @@ export default function DataDownloadBar() {
   const [showCopiedToast, setShowCopiedToast] = useState<boolean>(false);
   const [showDownloadToast, setShowDownloadToast] = useState<boolean>(false);
   const [downloadedFormat, setDownloadedFormat] = useState<string>("");
+  const [notesExpanded, setNotesExpanded] = useState<boolean>(
+    () => typeof window !== "undefined" && window.innerWidth >= 640,
+  );
   const downloadRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -84,7 +94,7 @@ export default function DataDownloadBar() {
               <Download size={16} />
             </button>
             {showDownloadOptions && (
-              <div className="absolute bottom-full -left-1 z-10 mb-1 min-w-[140px] rounded-lg bg-white px-1.5 py-1.5 shadow-lg">
+              <div className="absolute bottom-full -left-1 z-10 mb-1 min-w-35 rounded-lg bg-white px-1.5 py-1.5 shadow-lg">
                 <div className="mb-1 flex items-stretch">
                   <a
                     href="/un-entities.json"
@@ -167,24 +177,36 @@ export default function DataDownloadBar() {
           Chart does not include all offices or entities of the United Nations
           system.
         </p>
-        <div className="mt-3 border-t border-gray-200 pt-3">
-          <h3 className="mb-1 text-xs font-semibold text-gray-600">Notes:</h3>
-          <div className="max-w-5xl space-y-0.5 text-sm leading-tight text-gray-500">
-            {Object.entries(footnoteDefinitions)
-              .sort(([a], [b]) => Number(a) - Number(b))
-              .map(([num, text]) => (
-                <div
-                  key={num}
-                  className="flex text-xs leading-snug text-gray-500"
-                >
-                  <strong className="w-3 flex-shrink-0 font-semibold">
-                    {num}
-                  </strong>
-                  <span className="flex-1">{text}</span>
-                </div>
-              ))}
-          </div>
-        </div>
+        <button
+          onClick={() => setNotesExpanded((prev) => !prev)}
+          className="mt-3 flex w-full flex-col items-start text-left"
+          aria-expanded={notesExpanded}
+        >
+          <span className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-800">
+            Footnotes
+            <ChevronDown
+              size={13}
+              className={`transition-transform duration-200 ${notesExpanded ? "rotate-180" : ""}`}
+            />
+          </span>
+          {notesExpanded && (
+            <div className="mt-2 max-w-5xl space-y-0.5">
+              {Object.entries(footnoteDefinitions)
+                .sort(([a], [b]) => Number(a) - Number(b))
+                .map(([num, text]) => (
+                  <div
+                    key={num}
+                    className="flex text-xs leading-snug text-gray-500"
+                  >
+                    <strong className="w-3 shrink-0 font-semibold">
+                      {num}
+                    </strong>
+                    <span className="flex-1">{text}</span>
+                  </div>
+                ))}
+            </div>
+          )}
+        </button>
       </div>
     </div>
   );

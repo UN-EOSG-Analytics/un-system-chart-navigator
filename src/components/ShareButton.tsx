@@ -17,8 +17,8 @@ export default function ShareButton() {
     const url = window.location.href;
 
     try {
-      await navigator.clipboard.writeText(url);
       setIsCopied(true);
+      await navigator.clipboard.writeText(url);
 
       // Close popover after 2 seconds
       setTimeout(() => {
@@ -55,7 +55,7 @@ export default function ShareButton() {
         sideOffset={4}
       >
         <p className="text-sm">
-          {isCopied ? "Copied!" : "Copy link to entity"}
+          {isCopied ? "Copied link to entity" : "Copy link to entity"}
         </p>
       </PopoverContent>
     </Popover>

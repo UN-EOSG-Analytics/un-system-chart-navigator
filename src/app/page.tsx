@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Header />
       <Anniversary />
-      <main className="w-full grow pt-34 pb-3 sm:pb-4 md:pb-5 lg:pb-6 xl:pb-8">
+      <main className="w-full grow pt-32 pb-3 sm:pt-34 sm:pb-4 md:pb-5 lg:pb-6 xl:pb-8">
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-2.5 sm:gap-3.5">
           <Suspense fallback={<div className="min-h-screen"></div>}>
             <EntitiesGrid />

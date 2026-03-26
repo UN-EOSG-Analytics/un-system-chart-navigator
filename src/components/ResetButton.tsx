@@ -14,7 +14,7 @@ export default function ResetButton({
   return (
     <button
       onClick={onClick}
-      className={`flex shrink-0 items-center justify-center gap-1.5 rounded-md border border-gray-300 bg-gray-200 text-xs font-normal text-gray-600 transition-colors hover:border-gray-400 hover:bg-gray-300 hover:text-gray-800 ${showLabel ? "h-9 px-2.5" : "h-9 w-9"} ${className} `}
+      className={`flex shrink-0 items-center justify-center gap-1.5 rounded-lg border border-slate-300 bg-white text-sm text-slate-400 transition-colors hover:border-un-blue hover:text-un-blue ${showLabel ? "h-10 px-3" : "h-10 w-10"} ${className} `}
       aria-label="Clear filters and search"
       title="Clear filters and search"
     >

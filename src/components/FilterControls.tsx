@@ -60,9 +60,11 @@ export default function FilterControls({
 
   const searchRef = useRef<HTMLInputElement>(null);
 
-  // Auto-focus search input on mount
+  // Auto-focus search input on mount — desktop only (prevents keyboard popup on mobile)
   useEffect(() => {
-    searchRef.current?.focus();
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      searchRef.current?.focus();
+    }
   }, []);
 
   // Check if all principal organs are active
@@ -83,44 +85,41 @@ export default function FilterControls({
 
   return (
     <div className="fixed top-14 right-0 left-0 z-30 bg-linear-to-b from-white from-55% to-transparent px-4 pt-3 pb-10 sm:px-6 md:px-10 lg:px-12 xl:px-16">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 lg:flex-row lg:items-center lg:gap-2">
-        {/* Left: search + filter + reset */}
-        <div className="flex flex-1 items-center gap-2">
-          <div className="w-full lg:max-w-sm lg:flex-1">
-            <SearchInput
-              ref={searchRef}
-              id="entity-search"
-              value={searchQuery}
-              onChange={onSearchChange}
-              onEnter={onSearchEnter}
-              placeholder="Search for UN entities..."
-              ariaLabel="Search for UN entities by keyword"
-            />
-          </div>
-          <FilterDropdown
-            open={isPrincipalOrganPopoverOpen}
-            onOpenChange={setIsPrincipalOrganPopoverOpen}
-            icon={<Landmark className="h-4 w-4" />}
-            triggerText={getPrincipalOrganFilterText()}
-            isFiltered={!allPrincipalOrgansActive}
-            allActive={allPrincipalOrgansActive}
-            options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
-              key: organKey,
-              label: config.label,
-            }))}
-            selectedKeys={activePrincipalOrgans}
-            onToggle={onTogglePrincipalOrgan}
-            ariaLabel="Filter entities by principal organ"
+      <div className="mx-auto flex w-full max-w-7xl items-center gap-2 lg:gap-2">
+        {/* Search — primary, takes all available space */}
+        <div className="min-w-0 flex-1 lg:max-w-sm">
+          <SearchInput
+            ref={searchRef}
+            id="entity-search"
+            value={searchQuery}
+            onChange={onSearchChange}
+            onEnter={onSearchEnter}
+            placeholder="Search for UN entities..."
+            ariaLabel="Search for UN entities by keyword"
           />
-          <div className={isResetNeeded ? "contents" : "invisible"}>
-            <ResetButton onClick={onReset} showLabel={true} />
-          </div>
         </div>
 
-        {/* Right: expand all */}
+        {/* Filter — secondary, icon-only on mobile */}
+        <FilterDropdown
+          open={isPrincipalOrganPopoverOpen}
+          onOpenChange={setIsPrincipalOrganPopoverOpen}
+          icon={<Landmark className="h-4 w-4" />}
+          triggerText={getPrincipalOrganFilterText()}
+          isFiltered={!allPrincipalOrgansActive}
+          allActive={allPrincipalOrgansActive}
+          options={getSortedPrincipalOrgans().map(([organKey, config]) => ({
+            key: organKey,
+            label: config.label,
+          }))}
+          selectedKeys={activePrincipalOrgans}
+          onToggle={onTogglePrincipalOrgan}
+          ariaLabel="Filter entities by principal organ"
+        />
+
+        {/* Expand all — secondary, icon-only on mobile */}
         <button
           onClick={onToggleExpandAll}
-          className={`relative flex h-10 w-full touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors lg:w-auto lg:shrink-0 ${allExpanded === true ? "border-un-blue bg-white text-un-blue hover:bg-un-blue/5" : "border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"}`}
+          className={`relative flex h-10 shrink-0 touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors ${allExpanded === true ? "border-un-blue bg-white text-un-blue hover:bg-un-blue/5" : "border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"}`}
           aria-label={
             allExpanded === true
               ? "Collapse all sections"
@@ -132,8 +131,15 @@ export default function FilterControls({
           ) : (
             <Expand className="h-4 w-4 shrink-0" />
           )}
-          <span>{allExpanded === true ? "Collapse all" : "Expand all"}</span>
+          <span className="hidden sm:inline">
+            {allExpanded === true ? "Collapse all" : "Expand all"}
+          </span>
         </button>
+
+        {/* Reset — only when needed */}
+        <div className={isResetNeeded ? "contents" : "invisible"}>
+          <ResetButton onClick={onReset} showLabel={false} />
+        </div>
       </div>
     </div>
   );

@@ -3,27 +3,27 @@
 import CloseButton from "@/components/CloseButton";
 import EntityLogo from "@/components/EntityLogo";
 import PrincipalOrganField, {
-    getPrincipalOrganLabel,
+  getPrincipalOrganLabel,
 } from "@/components/PrincipalOrganField";
 import ShareButton from "@/components/ShareButton";
 import { featureFlags } from "@/lib/constants";
 import { generateContributeUrl } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import {
-    BarChart3,
-    Book,
-    Briefcase,
-    Database,
-    DollarSign,
-    Eye,
-    Globe,
-    Instagram,
-    Linkedin,
-    Network,
-    Newspaper,
-    Palette,
-    ScrollText,
-    Target,
+  BarChart3,
+  Book,
+  Briefcase,
+  Database,
+  DollarSign,
+  Eye,
+  Globe,
+  Instagram,
+  Linkedin,
+  Network,
+  Newspaper,
+  Palette,
+  ScrollText,
+  Target,
 } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -240,7 +240,7 @@ export default function EntityModal({
           <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase">
             {entity.entity}
           </span>
-          <h2 className="text-2xl font-bold leading-tight text-gray-900">
+          <h2 className="text-2xl leading-tight font-bold text-gray-900">
             {entity.entity_long}
           </h2>
         </div>
