@@ -74,7 +74,13 @@ export default function PrincipalOrganSection({
   );
 
   useEffect(() => {
-    if (forceExpanded !== undefined) setIsExpanded(forceExpanded);
+    if (forceExpanded !== undefined) {
+      savedPositions.current = new Map();
+      chipRefs.current.forEach((el, key) => {
+        savedPositions.current.set(key, el.getBoundingClientRect());
+      });
+      setIsExpanded(forceExpanded);
+    }
   }, [forceExpanded]);
   const contentId = `principal-organ-${principalOrganSlugs[groupKey] || groupKey.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 
