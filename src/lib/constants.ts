@@ -102,6 +102,38 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "Working Groups",
     subcategory: null,
   },
+  {
+    entity: "Commissions and Investigative Bodies",
+    entity_link:
+      "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
+    un_principal_organ: ["Security Council"],
+    category: "Commissions and Investigative Bodies",
+    subcategory: null,
+  },
+  {
+    entity: "Groups and Panels",
+    entity_link:
+      "https://main.un.org/securitycouncil/content/repertoire/groups-and-panels",
+    un_principal_organ: ["Security Council"],
+    category: "Groups and Panels",
+    subcategory: null,
+  },
+  {
+    entity: "Representatives, Mediators, Coordinators, and Good Offices",
+    entity_link:
+      "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
+    un_principal_organ: ["Security Council"],
+    category: "Representatives, Mediators, Coordinators, and Good Offices",
+    subcategory: null,
+  },
+  {
+    entity: "International Tribunals",
+    entity_link:
+      "https://main.un.org/securitycouncil/content/repertoire/international-tribunals",
+    un_principal_organ: ["Security Council"],
+    category: "International Tribunals",
+    subcategory: null,
+  },
 ];
 
 /**
@@ -407,6 +439,26 @@ export const footnoteDefinitions: Record<number, string> = {
 };
 
 /**
+ * Category links - maps categories to external URLs shown as a link icon next to the heading
+ * Key format: "PrincipalOrgan|Category"
+ * Value is the URL to link to
+ */
+export const categoryLinks: Record<string, string> = {
+  "Security Council|Peacekeeping Operations":
+    "https://www.unmissions.org/#block-views-missions-peacekeeping-missions",
+  "Security Council|Special Political Missions and Other Political Presences":
+    "https://www.unmissions.org/#block-views-missions-political-missions",
+  "Security Council|Commissions and Investigative Bodies":
+    "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
+  "Security Council|Groups and Panels":
+    "https://main.un.org/securitycouncil/content/repertoire/groups-and-panels",
+  "Security Council|Representatives, Mediators, Coordinators, and Good Offices":
+    "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
+  "Security Council|International Tribunals":
+    "https://main.un.org/securitycouncil/content/repertoire/international-tribunals",
+};
+
+/**
  * Category footnotes - maps categories to footnote numbers
  * Key format: "PrincipalOrgan|Category"
  * Value is an array of footnote numbers that apply to this category
@@ -465,13 +517,15 @@ export const categoryOrderByPrincipalOrgan: Record<
     " ": 999, // Fallback for entities without category (shows section, blank header)
   },
   "Security Council": {
-    Committees: 1,
-    "Working Groups": 2,
-    Tribunals: 3,
-    "Special Advisers, Envoys and Representatives": 5,
-    "Peacebuilding Commission": 6,
-    "Peacekeeping Operations": 7,
-    "Special Political Missions (SPMs)": 8,
+    "Commissions and Investigative Bodies": 1,
+    Committees: 2,
+    "Groups and Panels": 3,
+    "International Tribunals": 4,
+    "Peacekeeping Operations": 5,
+    "Special Political Missions and Other Political Presences": 6,
+    "Representatives, Mediators, Coordinators, and Good Offices": 7,
+    "Working Groups": 8,
+    "Peacebuilding Commission": 10,
     " ": 999, // Fallback for entities without category
   },
   "Economic and Social Council": {
@@ -480,7 +534,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "Other Bodies": 3,
     "Research and Training": 4,
     "Specialized Agencies": 5,
-    " ": 999, // Fallback for entities without category
+    TBD: 999, // Fallback for entities without category
   },
   Secretariat: {
     "": 999, // Fallback for entities without category

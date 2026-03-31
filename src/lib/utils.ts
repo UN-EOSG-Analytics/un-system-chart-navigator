@@ -1,6 +1,7 @@
 import { Entity } from "@/types/entity";
 import {
   categoryFootnotes,
+  categoryLinks,
   categoryOrderByPrincipalOrgan,
   entityFootnotes,
   type PrincipalOrganConfig,
@@ -357,6 +358,21 @@ export function getCategoryFootnote(
   // Look for category-level footnotes
   const key = `${principalOrgan}|${category}`;
   return categoryFootnotes[key] || null;
+}
+
+/**
+ * Get external link URL for a category heading within a principal organ context
+ * @param principalOrgan - The principal organ context
+ * @param category - The category name
+ * @returns URL string or null if no link is configured
+ */
+export function getCategoryLink(
+  principalOrgan: string | null,
+  category: string,
+): string | null {
+  if (!principalOrgan) return null;
+  const key = `${principalOrgan}|${category}`;
+  return categoryLinks[key] || null;
 }
 
 /**

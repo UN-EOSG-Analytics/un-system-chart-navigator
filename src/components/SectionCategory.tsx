@@ -7,7 +7,11 @@ import {
   subcategoryOverrideForOrgan,
   subcategorySortOrder,
 } from "@/lib/constants";
-import { getCategoryFootnote, naturalCompare } from "@/lib/utils";
+import {
+  getCategoryFootnote,
+  getCategoryLink,
+  naturalCompare,
+} from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
@@ -137,7 +141,18 @@ export default function CategorySection({
     <div className="px-2">
       {showCategoryHeader && (
         <h2 className={`category-header ${headerClasses}`}>
-          {category.trim() || "\u00A0"}
+          {getCategoryLink(groupKey, category) ? (
+            <a
+              href={getCategoryLink(groupKey, category)!}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              {category.trim() || "\u00A0"}
+            </a>
+          ) : (
+            category.trim() || "\u00A0"
+          )}
           {getCategoryFootnote(groupKey, category) && (
             <Footnote
               footnoteNumbers={getCategoryFootnote(groupKey, category)!}
