@@ -41,7 +41,7 @@ export default function EntityTooltip({
       onOpenChange={(v) => {
         if (!blockedRef.current) setOpen(v);
       }}
-      delayDuration={500}
+      delayDuration={200}
       disableHoverableContent
     >
       <TooltipTrigger asChild onPointerDown={handlePointerDown}>
