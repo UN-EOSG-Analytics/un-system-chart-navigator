@@ -1,15 +1,20 @@
 "use client";
 
 import { featureFlags } from "@/lib/constants";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { appHeader } from "@/lib/styles";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { FileEdit } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="fixed top-0 right-0 left-0 z-40 border-b border-slate-200 bg-white/95 px-4 backdrop-blur-sm sm:px-6 md:px-10 lg:px-12 xl:px-16">
-      <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between gap-3">
+    <div className={appHeader.bar}>
+      <div className={appHeader.inner}>
         <h1 className="min-w-0 flex-1 text-left">
           <Link
             href="/"
@@ -25,23 +30,18 @@ export default function Header() {
               className="h-auto w-20 shrink-0 sm:w-22"
             />
             <span className="flex min-w-0 flex-wrap items-center gap-x-1.5 gap-y-0 text-slate-950 sm:gap-x-2">
-              <span className="text-[1.25rem] leading-none font-bold tracking-[-0.05em] text-slate-950 transition-colors group-hover:text-un-blue sm:text-[1.8rem]">
-                System Chart
-              </span>
-              <span className="text-[1.25rem] leading-none font-light tracking-[-0.05em] text-slate-950 transition-colors group-hover:text-un-blue sm:text-[1.8rem]">
-                Navigator
-              </span>
+              <span className={appHeader.titleBold}>System Chart</span>
+              <span className={appHeader.titleLight}>Navigator</span>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <span className="self-start cursor-default rounded border border-un-blue/30 bg-un-blue/8 px-1.5 py-0.5 text-[0.6rem] font-semibold tracking-widest text-un-blue uppercase">
-                    Preview
-                  </span>
+                  <span className={appHeader.previewBadge}>Preview</span>
                 </TooltipTrigger>
                 <TooltipContent
                   side="right"
-                  className="max-w-70 border border-slate-200 bg-white text-center text-slate-500 shadow-sm text-left"
+                  className="max-w-70 border border-slate-200 bg-white text-center text-slate-500 shadow-sm"
                 >
-                  This is an early public preview. Content and features may change and are not authoritative.
+                  This is an early public preview. Content and features may
+                  change and are not authoritative.
                 </TooltipContent>
               </Tooltip>
             </span>

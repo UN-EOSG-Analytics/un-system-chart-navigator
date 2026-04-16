@@ -17,6 +17,7 @@ import { RefObject } from "react";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import SubcategorySection from "./SectionSubcategory";
+import { categorySection } from "@/lib/styles";
 
 interface CategorySectionProps {
   category: string;
@@ -58,8 +59,8 @@ export default function CategorySection({
 
   // Header styling based on smallHeaders prop
   const headerClasses = smallHeaders
-    ? "mb-1 text-xs font-normal text-gray-500 sm:text-sm" // Smaller styling
-    : "mb-1.5 text-sm font-medium text-gray-500 sm:text-base"; // Default styling
+    ? categorySection.headerSmall
+    : categorySection.header;
 
   /**
    * Get sort key for entities, handling affiliated entities that should follow their parent.

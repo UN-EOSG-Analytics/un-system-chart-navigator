@@ -32,6 +32,7 @@ import Footnote from "./Footnote";
 import CategorySection from "./SectionCategory";
 import ExternalLink from "./ExternalLink";
 import EntityTooltip from "./EntityTooltip";
+import { entityChip, organSection } from "@/lib/styles";
 
 const placeholderEntityNames = new Set(
   placeholderEntities.map((entity) => entity.entity),
@@ -198,7 +199,7 @@ export default function PrincipalOrganSection({
   };
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4">
+    <div className={organSection.wrapper}>
       <div
         className="relative"
         style={{
@@ -222,13 +223,13 @@ export default function PrincipalOrganSection({
                 ? "Click to collapse"
                 : "Click to expand"
           }
-          className={`group flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : "cursor-pointer"}`}
+          className={`${organSection.headingRow}${headingOnly || noCollapse ? "" : "cursor-pointer"}`}
           style={{
             borderColor: borderColor,
           }}
         >
           <div className="min-w-0 flex-1">
-            <h2 className="text-lg font-bold text-black uppercase sm:text-[1.45rem] md:text-[1.7rem]">
+            <h2 className={organSection.title}>
               {labelLink ? (
                 <ExternalLink
                   href={labelLink}
@@ -245,7 +246,7 @@ export default function PrincipalOrganSection({
               )}
             </h2>
             {sectionHeading && (
-              <h3 className="mt-0.5 text-sm leading-tight font-semibold text-gray-500 sm:text-[15px] md:text-base">
+              <h3 className={organSection.subtitle}>
                 {sectionHeadingLink ? (
                   <ExternalLink
                     href={sectionHeadingLink}
@@ -262,8 +263,8 @@ export default function PrincipalOrganSection({
           </div>
 
           {!headingOnly && !noCollapse && (
-            <div className="absolute top-3 right-3 sm:top-3.5 sm:right-3.5">
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-[transform,box-shadow] duration-200 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)]">
+            <div className={organSection.collapseButtonWrapper}>
+              <div className={organSection.collapseButton}>
                 <span className="sr-only">
                   {isExpanded ? "Collapse section" : "Expand section"}
                 </span>
@@ -280,11 +281,11 @@ export default function PrincipalOrganSection({
         {!headingOnly && (
           <div
             id={contentId}
-            className="border-l-[6px] px-3 pb-3 sm:px-3.5 sm:pb-4"
+            className={`${organSection.contentBorder} ${organSection.content}`}
             style={{ borderColor: borderColor }}
           >
             {skipCategoryLayer || !hasDefinedCategories ? (
-              <div className="flex flex-wrap gap-1 sm:gap-1.5">
+              <div className={organSection.skipCategoryChipRow}>
                 {collapsedPreviewEntities.map((entity) => (
                   <EntityTooltip key={entity.entity} entity={entity}>
                     <button
@@ -306,7 +307,7 @@ export default function PrincipalOrganSection({
                           onEntityClick(createEntitySlug(entity.entity));
                         }
                       }}
-                      className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full border border-black/10 px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 active:scale-95 active:opacity-70 sm:px-3 sm:py-1.25 sm:text-[11px]`}
+                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder}`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >
@@ -316,7 +317,7 @@ export default function PrincipalOrganSection({
                 ))}
               </div>
             ) : isExpanded ? (
-              <div className="space-y-2.5">
+              <div className={organSection.categorySpacing}>
                 {sortedCategories.map((category) => (
                   <CategorySection
                     key={category}
@@ -333,7 +334,7 @@ export default function PrincipalOrganSection({
                 ))}
               </div>
             ) : (
-              <div className="flex flex-wrap gap-0.75 sm:gap-1">
+              <div className={organSection.collapsedChipRow}>
                 {collapsedPreviewEntities.map((entity) => (
                   <EntityTooltip key={entity.entity} entity={entity}>
                     <button
@@ -355,7 +356,7 @@ export default function PrincipalOrganSection({
                           onEntityClick(createEntitySlug(entity.entity));
                         }
                       }}
-                      className={`${organBgColor} ${organTextColor} tracking-0 cursor-pointer rounded-full border border-black/10 px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 active:scale-95 active:opacity-70 sm:px-3 sm:py-1.25 sm:text-[11px]`}
+                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder}`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >

@@ -7,6 +7,7 @@ import { principalOrganConfigs } from "@/lib/constants";
 import { getSortedPrincipalOrgans } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import { Expand, FileText, Landmark, Shrink } from "lucide-react";
+import { filterControls } from "@/lib/styles";
 import { useEffect, useRef, useState } from "react";
 
 /**
@@ -84,8 +85,8 @@ export default function FilterControls({
   };
 
   return (
-    <div className="fixed top-14 right-0 left-0 z-30 bg-linear-to-b from-white from-55% to-transparent px-4 pt-3 pb-10 sm:px-6 md:px-10 lg:px-12 xl:px-16">
-      <div className="mx-auto flex w-full max-w-7xl items-center gap-2 lg:gap-2">
+    <div className={filterControls.bar}>
+      <div className={filterControls.inner}>
         {/* Search — primary, takes all available space */}
         <div className="min-w-0 flex-1 lg:max-w-sm">
           <SearchInput
@@ -119,7 +120,7 @@ export default function FilterControls({
         {/* Expand all — secondary, icon-only on mobile */}
         <button
           onClick={onToggleExpandAll}
-          className={`relative flex h-10 shrink-0 touch-manipulation items-center gap-2 rounded-lg border px-3 text-sm transition-colors ${allExpanded === true ? "border-un-blue bg-white text-un-blue hover:bg-un-blue/5" : "border-slate-300 bg-white text-slate-400 hover:border-un-blue hover:text-un-blue"}`}
+          className={`${filterControls.iconButton} ${allExpanded === true ? filterControls.iconButtonActive : filterControls.iconButtonInactive}`}
           aria-label={
             allExpanded === true
               ? "Collapse all sections"
@@ -146,11 +147,13 @@ export default function FilterControls({
           href="https://www.un.org/en/delegate/page/un-system-chart"
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-auto flex h-10 shrink-0 touch-manipulation items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-400 transition-colors hover:border-un-blue hover:text-un-blue"
+          className={`ml-auto ${filterControls.iconButton} ${filterControls.iconButtonInactive}`}
           aria-label="View PDF version of the UN System Chart"
         >
           <FileText className="h-4 w-4 shrink-0" />
-          <span className="hidden sm:inline whitespace-nowrap">See PDF version →</span>
+          <span className="hidden whitespace-nowrap sm:inline">
+            See PDF version →
+          </span>
         </a>
       </div>
     </div>

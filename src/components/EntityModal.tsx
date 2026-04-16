@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { entityModal } from "@/lib/styles";
 
 // Custom X (Twitter) icon component to match lucide-react style
 const XTwitterIcon = ({
@@ -148,23 +149,17 @@ export default function EntityModal({
 
   // Reusable subheader component
   const SubHeader = ({ children }: { children: React.ReactNode }) => (
-    <h3 className="mb-3 text-sm font-semibold tracking-widest text-gray-700 uppercase">
-      {children}
-    </h3>
+    <h3 className={entityModal.subHeader}>{children}</h3>
   );
 
   // Reusable field label component
   const FieldLabel = ({ children }: { children: React.ReactNode }) => (
-    <span className="text-xs font-medium tracking-widest text-gray-400 uppercase">
-      {children}
-    </span>
+    <span className={entityModal.fieldLabel}>{children}</span>
   );
 
   // Reusable badge/chip component
   const Badge = ({ children }: { children: React.ReactNode }) => (
-    <span className="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-medium text-gray-800">
-      {children}
-    </span>
+    <span className={entityModal.badge}>{children}</span>
   );
 
   // Reusable field value wrapper component
@@ -205,7 +200,7 @@ export default function EntityModal({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="-ml-1 flex touch-manipulation items-center gap-3 rounded-lg py-2 pr-3 pl-2 text-un-blue transition-opacity duration-200 hover:bg-un-blue/10"
+      className={entityModal.linkItem}
     >
       <Icon size={18} className="shrink-0" />
       <span className="text-base sm:text-lg">{label}</span>
@@ -237,12 +232,8 @@ export default function EntityModal({
     return (
       <>
         <div className="pr-20">
-          <span className="text-xs font-semibold tracking-widest text-gray-400 uppercase">
-            {entity.entity}
-          </span>
-          <h2 className="text-2xl leading-tight font-bold text-gray-900">
-            {entity.entity_long}
-          </h2>
+          <span className={entityModal.acronym}>{entity.entity}</span>
+          <h2 className={entityModal.title}>{entity.entity_long}</h2>
         </div>
         <div className="absolute top-4 right-6 flex items-center gap-1.5">
           <ShareButton />
@@ -276,7 +267,7 @@ export default function EntityModal({
 
     // Full entity content - only if entity exists
     return (
-      <div className="space-y-6 px-5 pt-4 pb-6 sm:px-7 sm:pt-5 sm:pb-8">
+      <div className={entityModal.body}>
         {/* Logo */}
         {entity!.entity_logo_available && (
           <EntityLogo
@@ -674,23 +665,19 @@ export default function EntityModal({
   // Single modal wrapper with dynamic content
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-end bg-black/50 transition-all duration-300 ease-out ${
-        isVisible && !isClosing ? "opacity-100" : "opacity-0"
-      }`}
+      className={`${entityModal.backdrop} ${isVisible && !isClosing ? "opacity-100" : "opacity-0"}`}
       onClick={handleBackdropClick}
     >
       <div
         ref={modalRef}
-        className={`h-full w-full bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-2/3 sm:min-w-100 md:w-1/2 lg:w-1/3 lg:min-w-125 ${entity ? "overflow-y-auto" : ""} ${
-          isVisible && !isClosing ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`${entityModal.panel} ${entity ? "overflow-y-auto" : ""} ${isVisible && !isClosing ? "translate-x-0" : "translate-x-full"}`}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
         {/* Header */}
         <div
-          className={`relative border-b border-gray-200 px-6 py-4 ${entity ? "sticky top-0 bg-white" : ""}`}
+          className={`${entityModal.header} ${entity ? "sticky top-0 bg-white" : ""}`}
         >
           {renderHeader()}
         </div>

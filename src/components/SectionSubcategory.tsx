@@ -3,6 +3,7 @@ import { getOrdinalOrder, naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import { RefObject } from "react";
 import EntityContainer from "./EntitiesContainer";
+import { subcategorySection } from "@/lib/styles";
 
 interface SubcategorySectionProps {
   subcategory: string;
@@ -78,8 +79,8 @@ export default function SubcategorySection({
   }
 
   return (
-    <div className="mt-2">
-      <h3 className="mb-1 text-xs font-normal text-gray-400 sm:text-sm">
+    <div className={subcategorySection.wrapper}>
+      <h3 className={subcategorySection.header}>
         {subcategory.trim() || "\u00A0"}
       </h3>
       <EntityContainer

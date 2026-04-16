@@ -7,6 +7,7 @@ import {
 import { Entity } from "@/types/entity";
 import { RefObject } from "react";
 import EntityTooltip from "./EntityTooltip";
+import { entityChip } from "@/lib/styles";
 
 interface EntityGridProps {
   entities: Entity[];
@@ -47,7 +48,7 @@ export default function EntityContainer({
   chipRefs,
 }: EntityGridProps) {
   return (
-    <div className="flex flex-wrap gap-1 sm:gap-1.5">
+    <div className={entityChip.container}>
       {entities.map((entity) => (
         <EntityTooltip key={entity.entity} entity={entity}>
           <button
@@ -64,7 +65,7 @@ export default function EntityContainer({
                 onEntityClick(createEntitySlug(entity.entity));
               }
             }}
-            className={`${customBgColor} ${customTextColor} tracking-0 cursor-pointer rounded-full px-3 py-1.25 text-[11px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3.5 sm:py-1.5 sm:text-xs`}
+            className={`${customBgColor} ${customTextColor} ${entityChip.base}`}
             aria-label={`View details for ${entity.entity_long || entity.entity}`}
             style={{ background: getChipBackground(entity) }}
           >

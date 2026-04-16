@@ -15,6 +15,7 @@ import {
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import EntityTooltip from "./EntityTooltip";
+import { entityCard } from "@/lib/styles";
 
 /**
  * Props for the EntityCard component.
@@ -125,24 +126,22 @@ const EntityCard = ({
     <EntityTooltip entity={entity}>
       <button
         onClick={handleClick}
-        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} flex h-8.5 w-full animate-in cursor-pointer touch-manipulation flex-col items-start rounded-lg px-2.5 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-100 sm:h-9.5 ${hasLongDisplayName ? "justify-center py-1 sm:py-1.5" : "justify-start py-1.5 sm:py-2"}`}
+        className={`${!splitBackground ? bgColor : ""} ${textColor} ${borderClass} ${entityCard.base} ${hasLongDisplayName ? entityCard.positionLong : entityCard.positionNormal}`}
         style={splitBackground ? { background: splitBackground } : undefined}
         aria-label={`View details for ${entity.entity_long}`}
       >
         <span
-          className={`max-w-full font-medium ${hasLongDisplayName ? "text-[11px] leading-[1.05] text-balance sm:text-[13px]" : "-mt-px text-xs leading-3.75 sm:text-sm sm:leading-3.75"}`}
+          className={`max-w-full ${hasLongDisplayName ? entityCard.nameLong : entityCard.nameNormal}`}
         >
           {displayName}
           {footnoteNumbers && (
-            <sup className="ml-0.5 text-[9px] sm:text-[10px]">
+            <sup className={entityCard.footnote}>
               {footnoteNumbers.join(",")}
             </sup>
           )}
         </span>
         {cardSubtitle && (
-          <span className="text-[8px] leading-tight text-gray-600 opacity-80 sm:text-[9px]">
-            {cardSubtitle}
-          </span>
+          <span className={entityCard.subtitle}>{cardSubtitle}</span>
         )}
       </button>
     </EntityTooltip>

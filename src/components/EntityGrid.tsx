@@ -13,6 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import FilterControls from "./FilterControls";
+import { layout } from "@/lib/styles";
 import PrincipalOrganSection from "./SectionPrincipalOrgan";
 
 /**
@@ -383,13 +384,13 @@ export default function EntitiesGrid() {
       />
 
       {visibleEntities.length === 0 ? (
-        <div className="py-20 text-left">
-          <p className="text-lg text-gray-500">
+        <div className={layout.emptyState}>
+          <p className={layout.emptyStateText}>
             No entities match the current filters.
           </p>
         </div>
       ) : (
-        <div className="space-y-4 sm:space-y-5">
+        <div className={layout.organSectionSpacing}>
           {sortedGroupKeys.map((groupKey) => {
             const entitiesInGroup = groupedEntities[groupKey] || [];
 
