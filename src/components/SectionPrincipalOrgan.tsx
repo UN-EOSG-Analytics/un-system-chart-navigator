@@ -222,7 +222,7 @@ export default function PrincipalOrganSection({
                 ? "Click to collapse"
                 : "Click to expand"
           }
-          className={`group mb-2 flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:mb-2.5 sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : "cursor-pointer"}`}
+          className={`group flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:px-3.5 sm:py-2.5${headingOnly || noCollapse ? "" : "cursor-pointer"}`}
           style={{
             borderColor: borderColor,
           }}
@@ -280,7 +280,8 @@ export default function PrincipalOrganSection({
         {!headingOnly && (
           <div
             id={contentId}
-            className="border-l-[6px] border-transparent px-3 pb-3 sm:px-3.5 sm:pb-4"
+            className="border-l-[6px] px-3 pb-3 sm:px-3.5 sm:pb-4"
+            style={{ borderColor: borderColor }}
           >
             {skipCategoryLayer || !hasDefinedCategories ? (
               <div className="flex flex-wrap gap-1 sm:gap-1.5">
