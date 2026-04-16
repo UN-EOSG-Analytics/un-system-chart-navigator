@@ -6,7 +6,7 @@ import SearchInput from "@/components/SearchInput";
 import { principalOrganConfigs } from "@/lib/constants";
 import { getSortedPrincipalOrgans } from "@/lib/utils";
 import { Entity } from "@/types/entity";
-import { Expand, Landmark, Shrink } from "lucide-react";
+import { Expand, FileText, Landmark, Shrink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 /**
@@ -140,6 +140,18 @@ export default function FilterControls({
         <div className={isResetNeeded ? "contents" : "invisible"}>
           <ResetButton onClick={onReset} showLabel={false} />
         </div>
+
+        {/* PDF Version link — right-aligned */}
+        <a
+          href="https://www.un.org/en/delegate/page/un-system-chart"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-auto flex h-10 shrink-0 touch-manipulation items-center gap-2 rounded-lg border border-slate-300 bg-white px-3 text-sm text-slate-400 transition-colors hover:border-un-blue hover:text-un-blue"
+          aria-label="View PDF version of the UN System Chart"
+        >
+          <FileText className="h-4 w-4 shrink-0" />
+          <span className="hidden sm:inline whitespace-nowrap">See PDF version →</span>
+        </a>
       </div>
     </div>
   );
