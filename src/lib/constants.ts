@@ -118,14 +118,14 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "Groups and Panels",
     subcategory: null,
   },
-  {
-    entity: "Representatives, Mediators, Coordinators, and Good Offices",
-    entity_link:
-      "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
-    un_principal_organ: ["Security Council"],
-    category: "Representatives, Mediators, Coordinators, and Good Offices",
-    subcategory: null,
-  },
+//   {
+//     entity: "Representatives, Mediators, Coordinators, and Good Offices",
+//     entity_link:
+//       "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
+//     un_principal_organ: ["Security Council"],
+//     category: "Representatives, Mediators, Coordinators, and Good Offices",
+//     subcategory: null,
+//   },
   {
     entity: "International Tribunals",
     entity_link:
@@ -452,8 +452,8 @@ export const categoryLinks: Record<string, string> = {
     "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
   "Security Council|Groups and Panels":
     "https://main.un.org/securitycouncil/content/repertoire/groups-and-panels",
-  "Security Council|Representatives, Mediators, Coordinators, and Good Offices":
-    "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
+//   "Security Council|Representatives, Mediators, Coordinators, and Good Offices":
+//     "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
   "Security Council|International Tribunals":
     "https://main.un.org/securitycouncil/content/repertoire/international-tribunals",
 };
@@ -523,7 +523,7 @@ export const categoryOrderByPrincipalOrgan: Record<
     "International Tribunals": 4,
     "Peacekeeping Operations": 5,
     "Special Political Missions and Other Political Presences": 6,
-    "Representatives, Mediators, Coordinators, and Good Offices": 7,
+    // "Representatives, Mediators, Coordinators, and Good Offices": 7,
     "Working Groups": 8,
     "Peacebuilding Commission": 10,
     " ": 999, // Fallback for entities without category
