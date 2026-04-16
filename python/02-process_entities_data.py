@@ -106,12 +106,13 @@ df = df[
         "foundational_mandate",
         "entity_mandate_registry",
         "entity_custom_mandate_registry",
-        "head_of_entity_title_general",
-        "head_of_entity_title_specific",
-        "head_of_entity_name",
-        "head_of_entity_level",
-        "head_of_entity_bio_link",
-        "global_leadership_team_url",
+        # "head_of_entity_title_general",
+        # "head_of_entity_title_specific",
+        # "head_of_entity_name",
+        # "head_of_entity_level",
+        # "head_of_entity_bio_link",
+        # "head_of_entity_headshot_link",
+        # "global_leadership_team_url",
         "organizational_chart_link",
         "budget_financial_reporting_link",
         "results_framework_link",
@@ -121,10 +122,9 @@ df = df[
         "socials_linkedin",
         "socials_twitter",
         "socials_instagram",
-        "record_id",
-        "review_needed",
+        # "record_id",
+        # "review_needed",
         # "on_display",  # redundant: always "True" after filtering above; not used by frontend
-        "head_of_entity_headshot_link",
     ]
 ]
 
