@@ -89,6 +89,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={roboto.className}>
+      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+      {/* <head><script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script></head> */}
       <body className="flex min-h-screen flex-col px-4 antialiased sm:px-6 md:px-10 lg:px-12 xl:px-16">
         <AnimatedCornerLogo />
         {children}
