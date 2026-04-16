@@ -132,7 +132,7 @@ export default function FilterControls({
           ) : (
             <Expand className="h-4 w-4 shrink-0" />
           )}
-          <span className="hidden sm:inline">
+          <span className="hidden lg:inline">
             {allExpanded === true ? "Collapse all" : "Expand all"}
           </span>
         </button>
@@ -151,7 +151,7 @@ export default function FilterControls({
           aria-label="View PDF version of the UN System Chart"
         >
           <FileText className="h-4 w-4 shrink-0" />
-          <span className="hidden whitespace-nowrap sm:inline">
+          <span className="hidden whitespace-nowrap lg:inline">
             See PDF version →
           </span>
         </a>
