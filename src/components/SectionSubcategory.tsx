@@ -78,7 +78,7 @@ export default function SubcategorySection({
   }
 
   return (
-    <div className="mt-2 pl-3">
+    <div className="mt-2">
       <h3 className="mb-1 text-xs font-normal text-gray-400 sm:text-sm">
         {subcategory.trim() || "\u00A0"}
       </h3>

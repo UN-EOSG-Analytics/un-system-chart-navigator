@@ -139,7 +139,7 @@ export default function CategorySection({
   });
 
   return (
-    <div className="px-2">
+    <div>
       {showCategoryHeader && (
         <h2 className={`category-header ${headerClasses}`}>
           {getCategoryLink(groupKey, category) ? (
