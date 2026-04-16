@@ -13,6 +13,7 @@ import {
   naturalCompare,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
+import { RefObject } from "react";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
 import SubcategorySection from "./SectionSubcategory";
@@ -26,7 +27,7 @@ interface CategorySectionProps {
   customTextColor?: string;
   smallHeaders?: boolean;
   showReviewBorders?: boolean;
-  chipRefs?: Map<string, HTMLButtonElement>;
+  chipRefs?: RefObject<Map<string, HTMLButtonElement>>;
 }
 
 export default function CategorySection({

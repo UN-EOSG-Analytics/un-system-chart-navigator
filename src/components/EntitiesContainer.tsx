@@ -5,6 +5,7 @@ import {
   normalizePrincipalOrgan,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
+import { RefObject } from "react";
 import EntityTooltip from "./EntityTooltip";
 
 interface EntityGridProps {
@@ -13,7 +14,7 @@ interface EntityGridProps {
   customBgColor?: string;
   customTextColor?: string;
   showReviewBorders?: boolean;
-  chipRefs?: Map<string, HTMLButtonElement>;
+  chipRefs?: RefObject<Map<string, HTMLButtonElement>>;
 }
 
 function getChipBackground(entity: Entity): string | undefined {
@@ -51,8 +52,8 @@ export default function EntityContainer({
         <EntityTooltip key={entity.entity} entity={entity}>
           <button
             ref={(el) => {
-              if (el) chipRefs?.set(entity.entity, el);
-              else chipRefs?.delete(entity.entity);
+              if (el) chipRefs?.current.set(entity.entity, el);
+              else chipRefs?.current.delete(entity.entity);
             }}
             type="button"
             onClick={() => {

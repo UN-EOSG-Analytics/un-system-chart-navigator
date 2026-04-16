@@ -29,7 +29,6 @@ import {
   useState,
 } from "react";
 import Footnote from "./Footnote";
-import EntityContainer from "./EntitiesContainer";
 import CategorySection from "./SectionCategory";
 import ExternalLink from "./ExternalLink";
 import EntityTooltip from "./EntityTooltip";
@@ -75,10 +74,11 @@ export default function PrincipalOrganSection({
 
   useEffect(() => {
     if (forceExpanded !== undefined) {
-      savedPositions.current = new Map();
+      savedPositions.current.clear();
       chipRefs.current.forEach((el, key) => {
         savedPositions.current.set(key, el.getBoundingClientRect());
       });
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsExpanded(forceExpanded);
     }
   }, [forceExpanded]);
@@ -126,7 +126,7 @@ export default function PrincipalOrganSection({
 
   const toggleExpanded = () => {
     // Snapshot current positions before state change
-    savedPositions.current = new Map();
+    savedPositions.current.clear();
     chipRefs.current.forEach((el, key) => {
       savedPositions.current.set(key, el.getBoundingClientRect());
     });
@@ -165,7 +165,7 @@ export default function PrincipalOrganSection({
         el.style.transform = "";
       });
     });
-    savedPositions.current = new Map();
+    savedPositions.current.clear();
   }, [isExpanded]);
 
   const getCollapsedChipBackground = (entity: Entity) => {
@@ -327,7 +327,7 @@ export default function PrincipalOrganSection({
                     customTextColor={organTextColor}
                     smallHeaders={smallCategoryHeaders}
                     showReviewBorders={showReviewBorders}
-                    chipRefs={chipRefs.current}
+                    chipRefs={chipRefs}
                   />
                 ))}
               </div>

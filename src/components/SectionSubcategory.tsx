@@ -1,6 +1,7 @@
 import { affiliatedEntities, sortLastEntities } from "@/lib/constants";
 import { getOrdinalOrder, naturalCompare } from "@/lib/utils";
 import { Entity } from "@/types/entity";
+import { RefObject } from "react";
 import EntityContainer from "./EntitiesContainer";
 
 interface SubcategorySectionProps {
@@ -10,7 +11,7 @@ interface SubcategorySectionProps {
   customBgColor?: string;
   customTextColor?: string;
   showReviewBorders?: boolean;
-  chipRefs?: Map<string, HTMLButtonElement>;
+  chipRefs?: RefObject<Map<string, HTMLButtonElement>>;
 }
 
 /**
