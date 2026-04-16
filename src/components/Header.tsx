@@ -1,6 +1,7 @@
 "use client";
 
 import { featureFlags } from "@/lib/constants";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { FileEdit } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,6 +31,19 @@ export default function Header() {
               <span className="text-[1.25rem] leading-none font-light tracking-[-0.05em] text-slate-950 transition-colors group-hover:text-un-blue sm:text-[1.8rem]">
                 Navigator
               </span>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span className="self-start cursor-default rounded border border-un-blue/30 bg-un-blue/8 px-1.5 py-0.5 text-[0.6rem] font-semibold tracking-widest text-un-blue uppercase">
+                    Preview
+                  </span>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="max-w-70 border border-slate-200 bg-white text-center text-slate-500 shadow-sm text-left"
+                >
+                  This is an early public preview. Content and features may change and are not authoritative.
+                </TooltipContent>
+              </Tooltip>
             </span>
           </Link>
         </h1>
