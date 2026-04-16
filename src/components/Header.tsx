@@ -7,7 +7,13 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { FileEdit } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { BookOpen, FileEdit, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -47,18 +53,44 @@ export default function Header() {
             </span>
           </Link>
         </h1>
-        {featureFlags.contribute && (
-          <Link
-            href="/contribute"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-8.5 shrink-0 items-center justify-start gap-2 rounded-md border border-slate-200 bg-white px-3 text-sm font-medium text-slate-600 transition-colors hover:border-un-blue hover:text-un-blue"
-            aria-label="Contribute to the UN System Chart"
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button
+              className="flex h-8.5 w-8.5 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-500 transition-colors hover:border-un-blue hover:text-un-blue"
+              aria-label="Open menu"
+            >
+              <Menu className="h-4 w-4" />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="end"
+            sideOffset={8}
+            className="w-44 rounded-md border border-slate-200 bg-white p-1 shadow-md"
           >
-            <FileEdit className="h-4 w-4 text-un-blue" />
-            <span>Contribute</span>
-          </Link>
-        )}
+            <DropdownMenuItem asChild>
+              <Link
+                href="/methodology"
+                className="cursor-pointer rounded-sm px-3 py-2 text-sm font-normal text-slate-600 transition-colors hover:bg-un-blue/5 hover:text-un-blue"
+              >
+                <BookOpen className="h-4 w-4 text-slate-400" />
+                Methodology
+              </Link>
+            </DropdownMenuItem>
+            {featureFlags.contribute && (
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/contribute"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer rounded-sm px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-un-blue/5 hover:text-un-blue"
+                >
+                  <FileEdit className="h-4 w-4 text-un-blue" />
+                  Contribute
+                </Link>
+              </DropdownMenuItem>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );
