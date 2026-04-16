@@ -6,6 +6,7 @@ import {
   ChevronDown,
   Download,
   FileJson,
+  FileSpreadsheet,
   FileText,
   Link,
 } from "lucide-react";
@@ -126,7 +127,7 @@ export default function DataDownloadBar() {
                     )}
                   </button>
                 </div>
-                <div className="flex items-stretch">
+                <div className="mb-1 flex items-stretch">
                   <a
                     href="/un-entities.csv"
                     download={`${
@@ -151,6 +152,37 @@ export default function DataDownloadBar() {
                     aria-label="Copy link to CSV file"
                   >
                     {copiedFormat === "csv" ? (
+                      <Check size={14} className="text-green-600" />
+                    ) : (
+                      <Link size={14} />
+                    )}
+                  </button>
+                </div>
+                <div className="flex items-stretch">
+                  <a
+                    href="/un-entities.xlsx"
+                    download={`${
+                      new Date().toISOString().split("T")[0]
+                    }_un-entities.xlsx`}
+                    onClick={() => handleDownload("Excel")}
+                    className="flex flex-1 items-center gap-2 rounded-lg py-2 pr-1 pl-2 text-sm text-gray-600 transition-all hover:bg-gray-50 hover:text-un-blue"
+                    title="Download Excel"
+                  >
+                    <FileSpreadsheet size={16} />
+                    Excel
+                  </a>
+                  <button
+                    onClick={() =>
+                      handleCopyLink(
+                        "xlsx",
+                        `${window.location.origin}/un-entities.xlsx`,
+                      )
+                    }
+                    className="flex w-8 items-center justify-center rounded-lg text-gray-600 transition-all outline-none hover:bg-gray-50 hover:text-un-blue focus:outline-none"
+                    title="Copy link to Excel"
+                    aria-label="Copy link to Excel file"
+                  >
+                    {copiedFormat === "xlsx" ? (
                       <Check size={14} className="text-green-600" />
                     ) : (
                       <Link size={14} />

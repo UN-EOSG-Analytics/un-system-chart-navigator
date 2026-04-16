@@ -133,6 +133,10 @@ df = df[
 output_path = Path("public") / "un-entities.csv"
 df.to_csv(output_path, index=False)
 
+# Excel export
+output_path = Path("public") / "un-entities.xlsx"
+df.to_excel(output_path, index=False, engine="openpyxl")
+
 # JSON export (primary format for Next.js import)
 output_path = Path("public") / "un-entities.json"
 df.to_json(output_path, orient="records", indent=2)
