@@ -53,7 +53,7 @@ export default function Header() {
             </span>
           </Link>
         </h1>
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
           <DropdownMenuTrigger asChild>
             <button
               className="flex h-8.5 w-8.5 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-500 transition-colors hover:border-un-blue hover:text-un-blue"
