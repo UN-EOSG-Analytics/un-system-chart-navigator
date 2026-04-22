@@ -1,6 +1,5 @@
 "use client";
 // CANONICAL CONTROL STYLE — all interactive controls in this project must match this component.
-// See also: FilterDropdown.tsx
 
 import { Search } from "lucide-react";
 import { forwardRef, useState } from "react";

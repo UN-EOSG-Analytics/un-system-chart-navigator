@@ -7,8 +7,6 @@ import {
   createEntitySlug,
   naturalCompareEntities,
   normalizePrincipalOrgan,
-  organsToUrlParam,
-  urlParamToOrgans,
 } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -16,40 +14,17 @@ import FilterControls from "./FilterControls";
 import { layout } from "@/lib/styles";
 import PrincipalOrganSection from "./SectionPrincipalOrgan";
 
-/**
- * Build URL with current filter state
- * Preserves entity param if present, only adds non-default filter params
- * Uses manual string building to avoid URLSearchParams encoding commas
- */
 function buildFilterUrl(
   searchQuery: string,
-  activePrincipalOrgans: Set<string>,
   currentEntityParam: string | null,
   allExpanded?: boolean | undefined,
 ): string {
   const parts: string[] = [];
-
-  // Preserve entity param if present
-  if (currentEntityParam) {
+  if (currentEntityParam)
     parts.push(`entity=${encodeURIComponent(currentEntityParam)}`);
-  }
-
-  // Add search query if not empty
-  if (searchQuery.trim()) {
+  if (searchQuery.trim())
     parts.push(`q=${encodeURIComponent(searchQuery.trim())}`);
-  }
-
-  // Add organs param if not all selected (commas don't need encoding)
-  const organsParam = organsToUrlParam(activePrincipalOrgans);
-  if (organsParam) {
-    parts.push(`organs=${organsParam}`);
-  }
-
-  // Add expanded param if all sections are expanded
-  if (allExpanded === true) {
-    parts.push("expand=true");
-  }
-
+  if (allExpanded === true) parts.push("expand=true");
   return parts.length > 0 ? `/?${parts.join("&")}` : "/";
 }
 
@@ -63,17 +38,6 @@ export default function EntitiesGrid() {
     const params = new URLSearchParams(window.location.search);
     return params.get("q") || "";
   };
-  const getInitialOrgans = () => {
-    if (typeof window === "undefined") {
-      return new Set(Object.keys(principalOrganConfigs));
-    }
-    const params = new URLSearchParams(window.location.search);
-    const organsParam = params.get("organs");
-    return (
-      urlParamToOrgans(organsParam) ||
-      new Set(Object.keys(principalOrganConfigs))
-    );
-  };
 
   const getInitialExpanded = () => {
     if (typeof window === "undefined") return undefined;
@@ -82,8 +46,6 @@ export default function EntitiesGrid() {
   };
 
   const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
-  const [activePrincipalOrgans, setActivePrincipalOrgans] =
-    useState<Set<string>>(getInitialOrgans);
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(false);
   const [allExpanded, setAllExpanded] = useState<boolean | undefined>(
     getInitialExpanded,
@@ -96,23 +58,15 @@ export default function EntitiesGrid() {
     allExpandedRef.current = allExpanded;
   }, [allExpanded]);
 
-  // Sync URL when filters change (after initial load)
-  // Using native history API to avoid Next.js re-renders
-  const updateUrl = useCallback((query: string, organs: Set<string>) => {
-    // Don't include entity param - filters are separate from modal
-    const newUrl = buildFilterUrl(query, organs, null, allExpandedRef.current);
+  const updateUrl = useCallback((query: string) => {
+    const newUrl = buildFilterUrl(query, null, allExpandedRef.current);
     window.history.replaceState(null, "", newUrl);
   }, []);
 
-  // Debounced URL update for search - longer delay to avoid any jank
   const debouncedUpdateUrl = useCallback(
-    (query: string, organs: Set<string>) => {
-      if (debounceTimerRef.current) {
-        clearTimeout(debounceTimerRef.current);
-      }
-      debounceTimerRef.current = setTimeout(() => {
-        updateUrl(query, organs);
-      }, 800); // 800ms debounce delay - only update URL after user stops typing
+    (query: string) => {
+      if (debounceTimerRef.current) clearTimeout(debounceTimerRef.current);
+      debounceTimerRef.current = setTimeout(() => updateUrl(query), 800);
     },
     [updateUrl],
   );
@@ -126,12 +80,10 @@ export default function EntitiesGrid() {
     };
   }, []);
 
-  // Sync allExpanded to URL immediately when it changes
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const newUrl = buildFilterUrl(
       searchQuery,
-      activePrincipalOrgans,
       params.get("entity"),
       allExpanded,
     );
@@ -139,19 +91,11 @@ export default function EntitiesGrid() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allExpanded]);
 
-  // Handle browser back/forward navigation
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
-      const urlSearch = params.get("q") || "";
-      const urlOrgans =
-        urlParamToOrgans(params.get("organs")) ||
-        new Set(Object.keys(principalOrganConfigs));
-      const urlExpanded = params.get("expand") === "true" ? true : undefined;
-
-      setSearchQuery(urlSearch);
-      setActivePrincipalOrgans(urlOrgans);
-      setAllExpanded(urlExpanded);
+      setSearchQuery(params.get("q") || "");
+      setAllExpanded(params.get("expand") === "true" ? true : undefined);
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -184,34 +128,7 @@ export default function EntitiesGrid() {
 
   const handleSearchChange = (query: string) => {
     setSearchQuery(query);
-    debouncedUpdateUrl(query, activePrincipalOrgans);
-  };
-
-  const togglePrincipalOrgan = (organKey: string) => {
-    setActivePrincipalOrgans((prev) => {
-      const allOrgans = Object.keys(principalOrganConfigs);
-      const allActive = prev.size === allOrgans.length;
-
-      let newOrgans: Set<string>;
-
-      if (allActive) {
-        newOrgans = new Set([organKey]);
-      } else {
-        newOrgans = new Set(prev);
-        if (newOrgans.has(organKey)) {
-          newOrgans.delete(organKey);
-          if (newOrgans.size === 0) {
-            newOrgans = new Set(allOrgans);
-          }
-        } else {
-          newOrgans.add(organKey);
-        }
-      }
-
-      // Update URL with new organs
-      updateUrl(searchQuery, newOrgans);
-      return newOrgans;
-    });
+    debouncedUpdateUrl(query);
   };
 
   const handleEntityClick = (entitySlug: string) => {
@@ -221,12 +138,7 @@ export default function EntitiesGrid() {
       debounceTimerRef.current = null;
     }
 
-    // Store current filter URL for modal to restore on close
-    const currentFilterUrl = buildFilterUrl(
-      searchQuery,
-      activePrincipalOrgans,
-      null,
-    );
+    const currentFilterUrl = buildFilterUrl(searchQuery, null);
     sessionStorage.setItem("entityModalReturnUrl", currentFilterUrl);
 
     // Navigate to clean entity URL
@@ -235,57 +147,35 @@ export default function EntitiesGrid() {
 
   const handleReset = () => {
     setSearchQuery("");
-    setActivePrincipalOrgans(new Set(Object.keys(principalOrganConfigs)));
-    // Clear filters from URL (modal handles its own URL separately)
     router.replace("/", { scroll: false });
   };
 
-  const handleFilterReset = () => {
-    handleReset();
-  };
-
-  // Filter and sort entities
   const visibleEntities = (
     searchQuery.trim() ? searchEntities(searchQuery) : entities
-  )
-    .filter((entity: Entity) => {
-      // Filter by principal organ - check if ANY of entity's organs is in active set
-      const normalizedOrgans = normalizePrincipalOrgan(
-        entity.un_principal_organ,
-      );
+  ).sort((a: Entity, b: Entity) => {
+    // Sort by principal organ order, then alphabetically
+    const aNormalized = normalizePrincipalOrgan(a.un_principal_organ);
+    const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
 
-      if (!normalizedOrgans || normalizedOrgans.length === 0) {
-        // Entity has no principal organ - check if "Other" is active
-        return activePrincipalOrgans.has("Other");
-      }
+    // Get primary organ for each entity (first one if array)
+    const aOrgan = aNormalized?.[0] || "Other";
+    const bOrgan = bNormalized?.[0] || "Other";
 
-      // Check if any of the entity's organs is in the active set
-      return normalizedOrgans.some((organ) => activePrincipalOrgans.has(organ));
-    })
-    .sort((a: Entity, b: Entity) => {
-      // Sort by principal organ order, then alphabetically
-      const aNormalized = normalizePrincipalOrgan(a.un_principal_organ);
-      const bNormalized = normalizePrincipalOrgan(b.un_principal_organ);
+    if (aOrgan !== bOrgan) {
+      const aConfig = principalOrganConfigs[aOrgan || ""];
+      const bConfig = principalOrganConfigs[bOrgan || ""];
+      const orderA = aConfig?.order ?? 999;
+      const orderB = bConfig?.order ?? 999;
+      return orderA - orderB;
+    }
 
-      // Get primary organ for each entity (first one if array)
-      const aOrgan = aNormalized?.[0] || "Other";
-      const bOrgan = bNormalized?.[0] || "Other";
-
-      if (aOrgan !== bOrgan) {
-        const aConfig = principalOrganConfigs[aOrgan || ""];
-        const bConfig = principalOrganConfigs[bOrgan || ""];
-        const orderA = aConfig?.order ?? 999;
-        const orderB = bConfig?.order ?? 999;
-        return orderA - orderB;
-      }
-
-      // Within the same organ, sort alphabetically but put "Other" at the end
-      const aIsOther = a.entity === "Other";
-      const bIsOther = b.entity === "Other";
-      if (aIsOther && !bIsOther) return 1;
-      if (!aIsOther && bIsOther) return -1;
-      return naturalCompareEntities(a.entity, b.entity);
-    });
+    // Within the same organ, sort alphabetically but put "Other" at the end
+    const aIsOther = a.entity === "Other";
+    const bIsOther = b.entity === "Other";
+    if (aIsOther && !bIsOther) return 1;
+    if (!aIsOther && bIsOther) return -1;
+    return naturalCompareEntities(a.entity, b.entity);
+  });
 
   // Group entities by principal organ
   // When filtering, entities appear only in their filtered organ(s)
@@ -301,30 +191,10 @@ export default function EntitiesGrid() {
         }
         acc["Other"].push(entity);
       } else {
-        // Determine which organs to show entity in
-        const allOrgans = Object.keys(principalOrganConfigs);
-        const isFilterActive = activePrincipalOrgans.size < allOrgans.length;
-
-        if (isFilterActive) {
-          // When filtering: only show in active filtered organs
-          const organsToShow = normalized.filter((organ) =>
-            activePrincipalOrgans.has(organ),
-          );
-          organsToShow.forEach((organ) => {
-            if (!acc[organ]) {
-              acc[organ] = [];
-            }
-            acc[organ].push(entity);
-          });
-        } else {
-          // When showing all: show in all entity's organs
-          normalized.forEach((organ) => {
-            if (!acc[organ]) {
-              acc[organ] = [];
-            }
-            acc[organ].push(entity);
-          });
-        }
+        normalized.forEach((organ) => {
+          if (!acc[organ]) acc[organ] = [];
+          acc[organ].push(entity);
+        });
       }
 
       return acc;
@@ -332,44 +202,23 @@ export default function EntitiesGrid() {
     {},
   );
 
-  // Get sorted group keys by principal organ
   const sortedGroupKeys = (() => {
-    const allOrgans = Object.keys(principalOrganConfigs);
-    const isFilterActive = activePrincipalOrgans.size < allOrgans.length;
     const isSearchActive = searchQuery.trim() !== "";
-
-    if (isFilterActive || isSearchActive) {
-      // When filtering or searching: only show organs that have entities
-      const organsWithEntities = Object.keys(groupedEntities);
-      return organsWithEntities.sort((a, b) => {
-        const aConfig = principalOrganConfigs[a];
-        const bConfig = principalOrganConfigs[b];
-        const orderA = aConfig?.order ?? 999;
-        const orderB = bConfig?.order ?? 999;
-        return orderA - orderB;
-      });
-    } else {
-      // When showing all: include all principal organs, even those without entities
-      const organsWithEntities = Object.keys(groupedEntities);
-      const allOrganKeys = Array.from(
-        new Set([...allOrgans, ...organsWithEntities]),
-      );
-      return allOrganKeys.sort((a, b) => {
-        const aConfig = principalOrganConfigs[a];
-        const bConfig = principalOrganConfigs[b];
-        const orderA = aConfig?.order ?? 999;
-        const orderB = bConfig?.order ?? 999;
-        return orderA - orderB;
-      });
-    }
+    const allOrgans = Object.keys(principalOrganConfigs);
+    const organsWithEntities = Object.keys(groupedEntities);
+    const keys = isSearchActive
+      ? organsWithEntities
+      : Array.from(new Set([...allOrgans, ...organsWithEntities]));
+    return keys.sort((a, b) => {
+      const orderA = principalOrganConfigs[a]?.order ?? 999;
+      const orderB = principalOrganConfigs[b]?.order ?? 999;
+      return orderA - orderB;
+    });
   })();
 
   return (
     <div className="w-full">
       <FilterControls
-        activePrincipalOrgans={activePrincipalOrgans}
-        onTogglePrincipalOrgan={togglePrincipalOrgan}
-        entities={entities}
         searchQuery={searchQuery}
         onSearchChange={handleSearchChange}
         onSearchEnter={() => {
@@ -377,8 +226,7 @@ export default function EntitiesGrid() {
             handleEntityClick(createEntitySlug(visibleEntities[0].entity));
           }
         }}
-        onReset={handleFilterReset}
-        visibleEntitiesCount={visibleEntities.length}
+        onReset={handleReset}
         allExpanded={allExpanded}
         onToggleExpandAll={() => setAllExpanded((prev) => prev !== true)}
       />

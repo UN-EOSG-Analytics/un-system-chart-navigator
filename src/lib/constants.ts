@@ -411,13 +411,6 @@ export const principalOrganSlugs: Record<string, string> = {
   Other: "other",
 };
 
-/**
- * Reverse mapping: slug -> principal organ key
- */
-export const slugToPrincipalOrgan: Record<string, string> = Object.fromEntries(
-  Object.entries(principalOrganSlugs).map(([organ, slug]) => [slug, organ]),
-);
-
 // ============================================================================
 // CATEGORIES
 // ============================================================================

@@ -4,10 +4,7 @@ import {
   categoryLinks,
   categoryOrderByPrincipalOrgan,
   entityFootnotes,
-  type PrincipalOrganConfig,
   principalOrganConfigs,
-  principalOrganSlugs,
-  slugToPrincipalOrgan,
 } from "@/lib/constants";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -264,56 +261,6 @@ export function generateContributeUrl(entity?: Entity): string {
   addParam("review_needed", entity.review_needed);
 
   return `${baseUrl}?${params.toString()}`;
-}
-
-// ============================================================================
-// FUNCTIONS MOVED FROM constants.ts
-// ============================================================================
-
-/**
- * Convert principal organ keys to URL-friendly slugs
- */
-export function organsToUrlParam(organs: Set<string>): string | null {
-  const allOrgans = Object.keys(principalOrganConfigs);
-  // Don't include param if all organs are selected (default state)
-  if (organs.size === allOrgans.length) return null;
-  // Don't include param if no organs selected (edge case)
-  if (organs.size === 0) return null;
-
-  const slugs = Array.from(organs)
-    .map((organ) => principalOrganSlugs[organ])
-    .filter(Boolean)
-    .sort(); // Sort for consistent URLs
-
-  return slugs.join(",");
-}
-
-/**
- * Parse URL param back to principal organ keys
- */
-export function urlParamToOrgans(param: string | null): Set<string> | null {
-  if (!param) return null;
-
-  const slugs = param.split(",").filter(Boolean);
-  const organs = slugs
-    .map((slug) => slugToPrincipalOrgan[slug.toLowerCase()])
-    .filter(Boolean);
-
-  // If no valid organs found, return null (will use default)
-  if (organs.length === 0) return null;
-
-  return new Set(organs);
-}
-
-/**
- * Get all principal organs sorted by their order
- */
-export function getSortedPrincipalOrgans(): Array<
-  [string, PrincipalOrganConfig]
-> {
-  return Object.entries(principalOrganConfigs).sort(
-    ([, a], [, b]) => a.order - b.order,
-  );
 }
 
 /**
