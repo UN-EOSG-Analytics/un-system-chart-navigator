@@ -75,7 +75,7 @@ export const organSection = {
     "text-base leading-tight font-bold text-black uppercase sm:text-[1.25rem] md:text-[1.45rem]",
   /** h3 — sectionHeading from principalOrganConfigs (e.g. "SUBSIDIARY ORGANS"), rendered inside the heading row above the content area */
   subtitle:
-    "text-sm leading-tight font-semibold text-gray-500 sm:text-[15px] md:text-base",
+    "text-xs font-medium tracking-widest text-gray-400 uppercase sm:text-sm",
   /** Collapse/expand icon button wrapper (absolute positioned) */
   collapseButtonWrapper: "absolute top-3 right-3 sm:top-3.5 sm:right-3.5",
   /** Collapse/expand icon button */
@@ -105,7 +105,7 @@ export const categorySection = {
    * handled by subcategorySection.wrapper for the first subcategory, and
    * by the flex gap on the CategorySection wrapper for direct chip rows.
    */
-  header: "text-sm font-medium text-gray-500 sm:text-base",
+  header: "text-sm font-normal text-gray-700",
   /** Compact variant — enabled per-organ via `smallCategoryHeaders` config */
   headerSmall: "mb-1 text-xs font-normal text-gray-500 sm:text-sm",
 };
@@ -120,7 +120,7 @@ export const subcategorySection = {
    */
   wrapper: "mt-2",
   /** h3 subcategory label — spacing below pushes chips away from the label */
-  header: "mb-1 text-xs font-normal text-gray-400 sm:text-sm",
+  header: "mb-1 text-xs font-normal text-gray-400",
 };
 
 // ─── Entity chip (small round pill shown in EntitiesContainer) ───────────────
