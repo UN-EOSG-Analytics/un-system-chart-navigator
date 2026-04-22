@@ -16,8 +16,8 @@ This project provides a visual, searchable interface to navigate the UN System C
 
 ## Resources
 
-- https://www.un.org/en/delegate/page/un-system-chart
-- https://www.un.org/un80-initiative/en/shifting-paradigms-1
+- https://www.un.org/delegate/page/un-system-chart
+- https://www.un.org/un80-initiative/shifting-paradigms-1
 
 ## Project Architecture
 

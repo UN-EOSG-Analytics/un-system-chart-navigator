@@ -58,21 +58,21 @@ export const placeholderEntities: PlaceholderEntity[] = [
   // General Assembly — Intergovernmental and Expert Bodies
   {
     entity: "Other Working Groups",
-    entity_link: "https://www.un.org/en/ga/about/subsidiary/other.shtml",
+    entity_link: "https://www.un.org/en/ga/about/subsidiary/other.shtml", // only EN available
     un_principal_organ: ["General Assembly"],
     category: "Intergovernmental and Expert Bodies",
     subcategory: "Standing Committees and other bodies",
   },
   {
     entity: "Other Committees",
-    entity_link: "https://www.un.org/en/ga/about/subsidiary/committees.shtml",
+    entity_link: "https://www.un.org/en/ga/about/subsidiary/committees.shtml", // only EN available
     un_principal_organ: ["General Assembly"],
     category: "Intergovernmental and Expert Bodies",
     subcategory: "Standing Committees and other bodies",
   },
   {
     entity: "Boards",
-    entity_link: "https://www.un.org/en/ga/about/subsidiary/boards.shtml",
+    entity_link: "https://www.un.org/en/ga/about/subsidiary/boards.shtml", // only EN available
     un_principal_organ: ["General Assembly"],
     category: "Intergovernmental and Expert Bodies",
     subcategory: "Standing Committees and other bodies",
@@ -81,7 +81,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Standing and Ad hoc Committees",
     entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/standing-and-ad-hoc-committees",
+      "https://main.un.org/securitycouncil/content/repertoire/standing-and-ad-hoc-committees",
     un_principal_organ: ["Security Council"],
     category: "Committees",
     subcategory: null,
@@ -89,7 +89,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Sanctions and Other Committees",
     entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/sanctions-and-other-committees",
+      "https://main.un.org/securitycouncil/content/repertoire/sanctions-and-other-committees",
     un_principal_organ: ["Security Council"],
     category: "Committees",
     subcategory: null,
@@ -97,7 +97,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Working Groups",
     entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/working-groups",
+      "https://main.un.org/securitycouncil/content/repertoire/working-groups",
     un_principal_organ: ["Security Council"],
     category: "Working Groups",
     subcategory: null,
@@ -105,7 +105,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Commissions and Investigative Bodies",
     entity_link:
-      "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
+      "https://main.un.org/securitycouncil/content/repertoire/commissions-and-investigative-bodies",
     un_principal_organ: ["Security Council"],
     category: "Commissions and Investigative Bodies",
     subcategory: null,
@@ -159,6 +159,7 @@ export const externalLinkEntities: Record<string, string> = Object.fromEntries([
   ["IRMCT", "https://www.irmct.org/"],
   ["UNPC", "https://www.un.org/peacebuilding/content/about-the-commission"],
   // Main Committees (real Airtable entities, external-link behaviour only)
+  // only EN available
   ["First Committee", "https://www.un.org/en/ga/first/index.shtml"],
   ["Second Committee", "https://www.un.org/en/ga/second/index.shtml"],
   ["Third Committee", "https://www.un.org/en/ga/third/index.shtml"],
@@ -294,7 +295,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     label: "General Assembly",
     labelLink: "https://www.un.org/ga/",
     sectionHeading: "SUBSIDIARY ORGANS",
-    sectionHeadingLink: "https://www.un.org/en/ga/about/subsidiary/index.shtml",
+    sectionHeadingLink: "https://www.un.org/en/ga/about/subsidiary/index.shtml", // only EN available
     order: 1,
     bgColor: "bg-un-system-green",
     textColor: "text-black",
@@ -442,7 +443,7 @@ export const categoryLinks: Record<string, string> = {
   "Security Council|Special Political Missions and Other Political Presences":
     "https://www.unmissions.org/#block-views-missions-political-missions",
   "Security Council|Commissions and Investigative Bodies":
-    "https://main.un.org/securitycouncil/en/content/repertoire/commissions-and-investigative-bodies",
+    "https://main.un.org/securitycouncil/content/repertoire/commissions-and-investigative-bodies",
   "Security Council|Groups and Panels":
     "https://main.un.org/securitycouncil/content/repertoire/groups-and-panels",
   //   "Security Council|Representatives, Mediators, Coordinators, and Good Offices":

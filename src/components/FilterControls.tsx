@@ -76,7 +76,7 @@ export default function FilterControls({
 
         {/* PDF Version link — right-aligned */}
         <a
-          href="https://www.un.org/en/delegate/page/un-system-chart"
+          href="https://www.un.org/delegate/page/un-system-chart"
           target="_blank"
           rel="noopener noreferrer"
           className={`ml-auto ${filterControls.iconButton} ${filterControls.iconButtonInactive}`}

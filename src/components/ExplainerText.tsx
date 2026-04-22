@@ -6,7 +6,7 @@ export default function ExplainerText() {
       The <strong>UN System Chart</strong> intends to provide a graphical
       reflection of the functional organization of the United Nations system and
       is for informational purposes only. The print version is available{" "}
-      <ExternalLink href="https://www.un.org/en/delegate/page/un-system-chart">
+      <ExternalLink href="https://www.un.org/delegate/page/un-system-chart">
         here
       </ExternalLink>
       .

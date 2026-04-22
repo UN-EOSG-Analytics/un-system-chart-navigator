@@ -41,15 +41,15 @@ export default function MethodologyPage() {
             {[
               {
                 label: "UN System page",
-                href: "https://www.un.org/en/about-us/un-system",
+                href: "https://www.un.org/about-us/un-system",
               },
               {
                 label: "Leadership by entity",
-                href: "https://www.un.org/sg/en/content/global-leadership",
+                href: "https://www.un.org/sg/content/global-leadership",
               },
               {
                 label: "UN System Chart PDF",
-                href: "https://www.un.org/en/delegate/page/un-system-chart",
+                href: "https://www.un.org/delegate/page/un-system-chart",
               },
               {
                 label: "Proposed programme budget 2026",
@@ -83,7 +83,7 @@ export default function MethodologyPage() {
             Entities are organized by their relationship to one or more of the
             six{" "}
             <a
-              href="https://www.un.org/en/about-us/main-bodies"
+              href="https://www.un.org/about-us/main-bodies"
               target="_blank"
               rel="noopener noreferrer"
               className="text-un-blue hover:underline"
