@@ -73,7 +73,7 @@ export const organSection = {
   /** h2 — principal organ name (e.g. "General Assembly") */
   title:
     "text-base leading-tight font-bold text-black uppercase sm:text-[1.25rem] md:text-[1.45rem]",
-  /** h3 — optional section sub-heading (e.g. Charter article link) */
+  /** h3 — sectionHeading from principalOrganConfigs (e.g. "SUBSIDIARY ORGANS"), rendered inside the heading row above the content area */
   subtitle:
     "text-sm leading-tight font-semibold text-gray-500 sm:text-[15px] md:text-base",
   /** Collapse/expand icon button wrapper (absolute positioned) */
@@ -83,21 +83,29 @@ export const organSection = {
     "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/80 bg-white/80 text-gray-700 shadow-[0_6px_14px_rgba(0,0,0,0.05)] backdrop-blur-sm transition-[transform,box-shadow] duration-200 group-hover:scale-110 group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.10)]",
   /** Left accent border on the content area */
   contentBorder: "border-l-[6px]",
-  /** Content area padding */
-  content: "px-3 pb-3 sm:px-3.5 sm:pb-4",
-  /** Vertical spacing between category subsections */
+  /**
+   * Content area below the heading row (padding only — no top by design historically).
+   * pt controls the gap between the sectionHeading subtitle (e.g. "SUBSIDIARY ORGANS")
+   * and the first row of chips/categories. Keep pt in sync with subcategorySection.wrapper (mt-2).
+   */
+  content: "px-3 pt-2 pb-3 sm:px-3.5 sm:pb-4",
+  /** Vertical spacing between sibling category blocks within an expanded organ */
   categorySpacing: "space-y-2.5",
-  /** Chip row when section is collapsed (tighter gap) */
+  /** Chip row used when the section is collapsed (preview mode, tighter gap) */
   collapsedChipRow: "flex flex-wrap gap-0.75 sm:gap-1",
-  /** Chip row when skipCategoryLayer is set (slightly looser) */
+  /** Chip row used when skipCategoryLayer is set — no category headers, slightly looser gap */
   skipCategoryChipRow: "flex flex-wrap gap-1 sm:gap-1.5",
 };
 
 // ─── Category section (h2 within a principal organ) ──────────────────────────
 
 export const categorySection = {
-  /** Default category header — most organs */
-  header: "mb-1.5 text-sm font-medium text-gray-500 sm:text-base",
+  /**
+   * Category label (e.g. "Funds & Programmes"). Spacing below the label is
+   * handled by subcategorySection.wrapper for the first subcategory, and
+   * by the flex gap on the CategorySection wrapper for direct chip rows.
+   */
+  header: "text-sm font-medium text-gray-500 sm:text-base",
   /** Compact variant — enabled per-organ via `smallCategoryHeaders` config */
   headerSmall: "mb-1 text-xs font-normal text-gray-500 sm:text-sm",
 };
@@ -105,9 +113,13 @@ export const categorySection = {
 // ─── Subcategory section (h3 nested within a category) ───────────────────────
 
 export const subcategorySection = {
-  /** Outer wrapper — adds top spacing to separate from previous sibling */
+  /**
+   * Top spacing that separates this subcategory from the previous sibling
+   * (either the category chip row or another subcategory). Keep in sync with
+   * organSection.content pt value so indentation levels feel consistent.
+   */
   wrapper: "mt-2",
-  /** h3 subcategory label */
+  /** h3 subcategory label — spacing below pushes chips away from the label */
   header: "mb-1 text-xs font-normal text-gray-400 sm:text-sm",
 };
 
