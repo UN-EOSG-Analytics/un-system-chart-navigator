@@ -439,9 +439,9 @@ export const footnoteDefinitions: Record<number, string> = {
  */
 export const categoryLinks: Record<string, string> = {
   "Security Council|Peacekeeping Operations":
-    "https://www.unmissions.org/#block-views-missions-peacekeeping-missions",
+    "https://www.unmissions.org/",
   "Security Council|Special Political Missions and Other Political Presences":
-    "https://www.unmissions.org/#block-views-missions-political-missions",
+    "https://www.unmissions.org/",
   "Security Council|Commissions and Investigative Bodies":
     "https://main.un.org/securitycouncil/content/repertoire/commissions-and-investigative-bodies",
   "Security Council|Groups and Panels":
