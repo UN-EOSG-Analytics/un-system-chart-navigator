@@ -72,10 +72,10 @@ export const organSection = {
     "group flex items-start border-l-[6px] bg-white/10 px-3 py-2 select-none sm:px-3.5 sm:py-2.5",
   /** h2 — principal organ name (e.g. "General Assembly") */
   title:
-    "text-base leading-tight font-bold text-black uppercase sm:text-[1.25rem] md:text-[1.45rem]",
+    "text-base leading-tight font-bold tracking-normal text-black uppercase sm:text-[1.25rem] md:text-[1.45rem]",
   /** h3 — sectionHeading from principalOrganConfigs (e.g. "SUBSIDIARY ORGANS"), rendered inside the heading row above the content area */
   subtitle:
-    "text-xs font-medium tracking-widest text-gray-400 uppercase sm:text-sm",
+    "text-xs font-medium tracking-norma; text-gray-400 uppercase sm:text-sm",
   /** Collapse/expand icon button wrapper (absolute positioned) */
   collapseButtonWrapper: "absolute top-3 right-3 sm:top-3.5 sm:right-3.5",
   /** Collapse/expand icon button */
@@ -105,7 +105,7 @@ export const categorySection = {
    * handled by subcategorySection.wrapper for the first subcategory, and
    * by the flex gap on the CategorySection wrapper for direct chip rows.
    */
-  header: "text-sm font-normal text-gray-700",
+  header: "text-sm font-normal tracking-normal text-gray-700",
   /** Compact variant — enabled per-organ via `smallCategoryHeaders` config */
   headerSmall: "mb-1 text-xs font-normal text-gray-500 sm:text-sm",
 };
