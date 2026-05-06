@@ -323,6 +323,9 @@ export default function PrincipalOrganSection({
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >
                       {entity.entity}
+                      {externalLinkEntities[entity.entity] && (
+                        <ExternalLinkIcon className="ml-[0.2em] inline-block align-middle -translate-y-[0.1em] h-[0.75em] w-[0.75em] shrink-0" aria-hidden="true" />
+                      )}
                     </button>
                   </EntityTooltip>
                 ))}
@@ -372,6 +375,9 @@ export default function PrincipalOrganSection({
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >
                       {entity.entity}
+                      {externalLinkEntities[entity.entity] && (
+                        <ExternalLinkIcon className="ml-[0.2em] inline-block align-middle -translate-y-[0.1em] h-[0.75em] w-[0.75em] shrink-0" aria-hidden="true" />
+                      )}
                     </button>
                   </EntityTooltip>
                 ))}

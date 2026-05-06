@@ -5,6 +5,7 @@ import {
   normalizePrincipalOrgan,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
+import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 import { RefObject } from "react";
 import EntityTooltip from "./EntityTooltip";
 import { entityChip } from "@/lib/styles";
@@ -70,6 +71,9 @@ export default function EntityContainer({
             style={{ background: getChipBackground(entity) }}
           >
             {entity.entity}
+            {externalLinkEntities[entity.entity] && (
+              <ExternalLinkIcon className="ml-[0.2em] inline-block align-middle -translate-y-[0.1em] h-[0.75em] w-[0.75em] shrink-0" aria-hidden="true" />
+            )}
           </button>
         </EntityTooltip>
       ))}
