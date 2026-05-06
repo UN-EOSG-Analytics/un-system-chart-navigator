@@ -131,6 +131,7 @@ selected_columns = [
     "record_id",
     "review_needed",
     "on_display",
+    "is_on_pdf",
 ]
 
 # Compare with all available columns (for debugging)

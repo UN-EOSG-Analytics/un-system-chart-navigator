@@ -31,7 +31,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"BINUH",
@@ -65,7 +66,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"Board of Auditors",
@@ -99,7 +101,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"CCPCJ",
@@ -133,7 +136,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CDP",
@@ -167,7 +171,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CEB",
@@ -201,7 +206,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"CEPA",
@@ -235,7 +241,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CND",
@@ -269,7 +276,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CPD",
@@ -303,7 +311,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CSTD",
@@ -337,7 +346,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CSW",
@@ -371,7 +381,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CSocD",
@@ -405,7 +416,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CTBTO",
@@ -439,7 +451,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/ctbto\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"CTC",
@@ -473,7 +486,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DA",
@@ -507,7 +521,8 @@
     "transparency_portal_link":"https:\/\/da.desa.un.org\/project-view-public",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"DCO",
@@ -541,7 +556,8 @@
     "transparency_portal_link":"https:\/\/unsdg.un.org\/SPTF",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DESA",
@@ -575,7 +591,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-department-of-economic-and-social-affairs",
     "socials_twitter":"https:\/\/x.com\/UNDESA",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DGACM",
@@ -609,7 +626,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UNDGACM_EN",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DGC",
@@ -643,7 +661,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DMSPC",
@@ -677,7 +696,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DOS",
@@ -711,7 +731,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UN_OpSupport",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DPO",
@@ -745,7 +766,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-department-of-peace-operations\/",
     "socials_twitter":"https:\/\/x.com\/UNPeacekeeping",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DPPA",
@@ -779,7 +801,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-dppa\/",
     "socials_twitter":"https:\/\/x.com\/UNDPPA",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"DSS",
@@ -813,7 +836,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-department-of-safety-and-security\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ECA",
@@ -847,7 +871,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-economic-commission-for-africa\/",
     "socials_twitter":"https:\/\/x.com\/ECA_OFFICIAL",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ECE",
@@ -881,7 +906,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-economic-commission-for-europe\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ECLAC",
@@ -915,7 +941,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/eclac\/",
     "socials_twitter":"https:\/\/x.com\/eclac_un",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"EOSG",
@@ -949,7 +976,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ESCAP",
@@ -983,7 +1011,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unescap\/",
     "socials_twitter":"https:\/\/x.com\/UNESCAP",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ESCWA",
@@ -1017,7 +1046,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unescwa",
     "socials_twitter":"https:\/\/x.com\/UNESCWA",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"Ethics Office",
@@ -1051,7 +1081,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"FAO",
@@ -1085,7 +1116,8 @@
     "transparency_portal_link":"https:\/\/www.fao.org\/transparency\/en",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/fao",
     "socials_twitter":"https:\/\/x.com\/FAO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"Fifth Committee",
@@ -1119,7 +1151,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"First Committee",
@@ -1153,7 +1186,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"Fourth Committee",
@@ -1187,7 +1221,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"HLPF",
@@ -1224,7 +1259,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"HRC",
@@ -1258,7 +1294,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"IAEA",
@@ -1292,7 +1329,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/iaea",
     "socials_twitter":"https:\/\/x.com\/iaeaorg",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ICAO",
@@ -1326,7 +1364,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-civil-aviation-organization\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ICC",
@@ -1360,7 +1399,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-criminal-court",
     "socials_twitter":"https:\/\/x.com\/IntlCrimCourt",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ICJ",
@@ -1394,7 +1434,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/cour-internationale-de-justice-international-court-of-justice\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ICSC",
@@ -1428,7 +1469,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-civil-service-commission",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"IFAD",
@@ -1462,7 +1504,8 @@
     "transparency_portal_link":"https:\/\/www.ifad.org\/en\/operations-dashboard",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-fund-for-agricultural-development\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"IIIM",
@@ -1496,7 +1539,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-impartial-and-independent-mechanism-syria",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"IIMM",
@@ -1530,7 +1574,8 @@
     "transparency_portal_link":"https:\/\/open.un.org\/un-secretariat-financials\/expenses",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"IIMP",
@@ -1564,7 +1609,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"ILC",
@@ -1598,7 +1644,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ILO",
@@ -1632,7 +1679,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-labour-organization\/",
     "socials_twitter":"https:\/\/x.com\/ilo",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"IMF",
@@ -1666,7 +1714,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-monetary-fund\/",
     "socials_twitter":"https:\/\/x.com\/IMFNews",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"IMO",
@@ -1700,7 +1749,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-maritime-organization\/",
     "socials_twitter":"https:\/\/x.com\/IMOHQ",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"IOM",
@@ -1734,7 +1784,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-organization-for-migration-iom\/",
     "socials_twitter":"https:\/\/x.com\/UNmigration",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ISA",
@@ -1768,7 +1819,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-seabed-authority\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ITC",
@@ -1802,7 +1854,8 @@
     "transparency_portal_link":"https:\/\/open.intracen.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-trade-centre\/",
     "socials_twitter":"https:\/\/x.com\/ITCnews",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ITLOS",
@@ -1836,7 +1889,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/ITLOS_TIDM",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ITU",
@@ -1870,7 +1924,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/international-telecommunication-union\/",
     "socials_twitter":"https:\/\/x.com\/ITU",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"JIU",
@@ -1904,7 +1959,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-joint-inspection-unit",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"MINURSO",
@@ -1938,7 +1994,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"MINUSCA",
@@ -1972,7 +2029,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"MONUSCO",
@@ -2006,7 +2064,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-organization-stabilization-mission-in-the-democratic-republic-of-the-congo",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"MSC",
@@ -2040,7 +2099,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"NGO Committee",
@@ -2074,7 +2134,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OAJ",
@@ -2108,7 +2169,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"OCHA",
@@ -2142,7 +2204,8 @@
     "transparency_portal_link":"https:\/\/fts.unocha.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-ocha\/",
     "socials_twitter":"https:\/\/x.com\/UNOCHA",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OCT",
@@ -2176,7 +2239,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-counter-terrorism\/",
     "socials_twitter":"https:\/\/x.com\/UN_OCT",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ODA",
@@ -2210,7 +2274,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-for-disarmament-affairs\/",
     "socials_twitter":"https:\/\/x.com\/UN_Disarmament",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ODET",
@@ -2244,7 +2309,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/ODET_UN",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"ODPP",
@@ -2278,7 +2344,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"OHCHR",
@@ -2312,7 +2379,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/office-of-the-united-nations-high-commissioner-for-human-rights-ohchr\/",
     "socials_twitter":"https:\/\/x.com\/UNHumanRights",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OICT",
@@ -2346,7 +2414,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-oict",
     "socials_twitter":"https:\/\/x.com\/UN_OICT",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"OIOS",
@@ -2380,7 +2449,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/office-of-internal-oversight-services-oios",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OLA",
@@ -2414,7 +2484,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-legal-affairs",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OOSA",
@@ -2448,7 +2519,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-for-outer-space-affairs\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OPCW",
@@ -2482,7 +2554,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/opcw\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OSAA",
@@ -2516,7 +2589,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-office-of-the-special-adviser-on-africa-osaa\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OSACAJT",
@@ -2550,7 +2624,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"OSASG-Cyprus",
@@ -2584,7 +2659,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OSC-SEA",
@@ -2618,7 +2694,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"OSESG-SYRIA",
@@ -2652,7 +2729,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OSESGY",
@@ -2686,7 +2764,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"OVRA",
@@ -2720,7 +2799,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UN_OVRA",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"PBSO",
@@ -2754,41 +2834,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
-  },
-  {
-    "entity":"PoE-RES2745",
-    "entity_long":"Panel of Experts pursuant to resolution 2745 (2024)",
-    "entity_combined":"Panel of Experts pursuant to resolution 2745 (2024) (PoE-RES2745)",
-    "entity_aliases":null,
-    "entity_description":null,
-    "entity_footnotes":null,
-    "entity_link":"https:\/\/main.un.org\/securitycouncil\/en\/sanctions\/2745\/panel-of-experts\/work_mandate",
-    "entity_wikipedia_page":null,
-    "entity_news_page":null,
-    "entity_branding_page":null,
-    "entity_data_page":null,
-    "entity_logo_page":null,
-    "entity_logo_url":null,
-    "entity_logo_available":null,
-    "entity_careers_page":null,
-    "entity_headquarters":null,
-    "un_principal_organ":null,
-    "category":null,
-    "subcategory":null,
-    "is_ceb_member":null,
-    "foundational_mandate":null,
-    "entity_mandate_registry":null,
-    "entity_custom_mandate_registry":null,
-    "organizational_chart_link":null,
-    "budget_financial_reporting_link":null,
-    "results_framework_link":null,
-    "strategic_plan_link":null,
-    "annual_reports_link":null,
-    "transparency_portal_link":null,
-    "socials_linkedin":null,
-    "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"SASG-PGRP",
@@ -2822,7 +2869,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":"https:\/\/x.com\/UNOSAPG",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"SASG-SID",
@@ -2856,7 +2904,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"SESG-GL",
@@ -2890,7 +2939,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"SRSG-CAAC",
@@ -2924,7 +2974,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"SRSG-SVC",
@@ -2958,7 +3009,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"SRSG-VAC",
@@ -2992,7 +3044,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"SWEO",
@@ -3026,7 +3079,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"Second Committee",
@@ -3060,7 +3114,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"Sixth Committee",
@@ -3094,7 +3149,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"StatCom",
@@ -3128,7 +3184,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"TDB",
@@ -3162,7 +3219,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"Third Committee",
@@ -3196,7 +3254,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UN Tourism",
@@ -3230,7 +3289,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unwto\/",
     "socials_twitter":"https:\/\/x.com\/UNWTO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UN Youth",
@@ -3264,7 +3324,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-youth-affairs",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UN-Habitat",
@@ -3298,7 +3359,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-habitat\/",
     "socials_twitter":"https:\/\/x.com\/UNHABITAT",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UN-Habitat Assembly",
@@ -3332,7 +3394,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UN-OHRLLS",
@@ -3366,7 +3429,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-ohrlls\/",
     "socials_twitter":"https:\/\/x.com\/UNOHRLLS",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UN-Women",
@@ -3400,7 +3464,8 @@
     "transparency_portal_link":"https:\/\/data.unwomen.org\/data-portal",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-women\/",
     "socials_twitter":"https:\/\/x.com\/UN_Women",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNAIDS",
@@ -3434,7 +3499,8 @@
     "transparency_portal_link":"https:\/\/open.unaids.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unaids\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNAMA",
@@ -3468,7 +3534,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNAOC",
@@ -3502,7 +3569,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-alliance-of-civilizations\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNCCD",
@@ -3536,7 +3604,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNCDF",
@@ -3570,7 +3639,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNCITRAL",
@@ -3604,7 +3674,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNCTAD",
@@ -3638,7 +3709,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unctad\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNDC",
@@ -3672,7 +3744,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNDEF",
@@ -3706,7 +3779,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNDOF",
@@ -3740,7 +3814,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNDP",
@@ -3774,7 +3849,43 @@
     "transparency_portal_link":"https:\/\/open.undp.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-development-programme\/",
     "socials_twitter":"https:\/\/x.com\/UNDP",
-    "socials_instagram":"https:\/\/www.instagram.com\/undp\/"
+    "socials_instagram":"https:\/\/www.instagram.com\/undp\/",
+    "is_on_pdf":true
+  },
+  {
+    "entity":"UNDP UNFPA UNOPS EB",
+    "entity_long":"Executive Board of UNDP, UNFPA and UNOPS",
+    "entity_combined":"Executive Board of UNDP, UNFPA and UNOPS (UNDP UNFPA UNOPS EB)",
+    "entity_aliases":null,
+    "entity_description":null,
+    "entity_footnotes":null,
+    "entity_link":"https:\/\/www.unfpa.org\/executive-board",
+    "entity_wikipedia_page":null,
+    "entity_news_page":null,
+    "entity_branding_page":null,
+    "entity_data_page":null,
+    "entity_logo_page":null,
+    "entity_logo_url":null,
+    "entity_logo_available":null,
+    "entity_careers_page":null,
+    "entity_headquarters":null,
+    "un_principal_organ":"General Assembly",
+    "category":"Intergovernmental and Expert Bodies",
+    "subcategory":"Boards",
+    "is_ceb_member":null,
+    "foundational_mandate":null,
+    "entity_mandate_registry":null,
+    "entity_custom_mandate_registry":null,
+    "organizational_chart_link":null,
+    "budget_financial_reporting_link":null,
+    "results_framework_link":null,
+    "strategic_plan_link":null,
+    "annual_reports_link":null,
+    "transparency_portal_link":null,
+    "socials_linkedin":null,
+    "socials_twitter":null,
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNDRR",
@@ -3808,7 +3919,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-for-disaster-risk-reduction-undrr\/",
     "socials_twitter":"https:\/\/x.com\/UNDRR",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNEA",
@@ -3842,7 +3954,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNEP",
@@ -3876,7 +3989,8 @@
     "transparency_portal_link":"https:\/\/open.unep.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-environment-programme\/",
     "socials_twitter":"https:\/\/x.com\/UNEP",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNESCO",
@@ -3910,7 +4024,8 @@
     "transparency_portal_link":"https:\/\/core.unesco.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unesco\/",
     "socials_twitter":"https:\/\/x.com\/UNESCO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNFF",
@@ -3944,7 +4059,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNFICYP",
@@ -3978,7 +4094,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UN_CYPRUS",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNFPA",
@@ -4012,7 +4129,8 @@
     "transparency_portal_link":"https:\/\/www.unfpa.org\/data\/transparency-portal",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-population-fund-unfpa\/",
     "socials_twitter":"https:\/\/x.com\/UNFPA",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNGC",
@@ -4046,7 +4164,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-global-compact\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNGEGN",
@@ -4080,7 +4199,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNGGIM",
@@ -4114,7 +4234,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNHCR",
@@ -4148,7 +4269,8 @@
     "transparency_portal_link":"https:\/\/reporting.unhcr.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unhcr\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNICEF",
@@ -4182,7 +4304,8 @@
     "transparency_portal_link":"https:\/\/open.unicef.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unicef\/",
     "socials_twitter":"https:\/\/x.com\/UNICEF",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNICEF EB",
@@ -4216,7 +4339,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNICRI",
@@ -4250,7 +4374,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNIDIR",
@@ -4284,7 +4409,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unidir",
     "socials_twitter":"https:\/\/x.com\/UNIDIR",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNIDO",
@@ -4318,7 +4444,8 @@
     "transparency_portal_link":"https:\/\/open.unido.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unido\/",
     "socials_twitter":"https:\/\/x.com\/UNIDO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNIFIL",
@@ -4352,7 +4479,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNISFA",
@@ -4386,7 +4514,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":"https:\/\/x.com\/UNISFA_1",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNITAR",
@@ -4420,7 +4549,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unitar",
     "socials_twitter":"https:\/\/x.com\/UNITAR",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNJSPB",
@@ -4454,7 +4584,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNMIK",
@@ -4488,7 +4619,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unmik",
     "socials_twitter":"https:\/\/x.com\/UNMIKosovo",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNMISS",
@@ -4522,7 +4654,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unmiss\/",
     "socials_twitter":"https:\/\/x.com\/unmissmedia",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNMOGIP",
@@ -4556,7 +4689,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOAU",
@@ -4590,7 +4724,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOCA",
@@ -4624,7 +4759,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNODC",
@@ -4658,7 +4794,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-on-drugs-and-crime-unodc\/",
     "socials_twitter":"https:\/\/x.com\/UNODC",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOG",
@@ -4692,7 +4829,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-at-geneva\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOMS",
@@ -4726,7 +4864,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNON",
@@ -4760,7 +4899,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-at-nairobi-unon\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOP",
@@ -4794,7 +4934,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOPS",
@@ -4828,7 +4969,8 @@
     "transparency_portal_link":"https:\/\/data.unops.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unops\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOSSC",
@@ -4862,7 +5004,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOV",
@@ -4896,7 +5039,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-office-at-vienna\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNOWAS",
@@ -4930,7 +5074,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNPC",
@@ -4967,7 +5112,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNPFII",
@@ -5001,7 +5147,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNRCCA",
@@ -5035,7 +5182,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/un-regional-center-for-preventive-diplomacy-for-central-asia-unrcca-",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNRISD",
@@ -5069,7 +5217,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNRWA",
@@ -5103,7 +5252,8 @@
     "transparency_portal_link":"https:\/\/open.unrwa.org\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/unrwa",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNSCO",
@@ -5137,7 +5287,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNSCOL",
@@ -5171,7 +5322,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNSMIL",
@@ -5205,7 +5357,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-support-mission-in-libya",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNSOH",
@@ -5239,7 +5392,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNSSC",
@@ -5273,7 +5427,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-system-staff-college\/",
     "socials_twitter":"https:\/\/x.com\/UNSSC",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNSU",
@@ -5307,7 +5462,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNTMIS",
@@ -5341,7 +5497,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNTSO",
@@ -5375,7 +5532,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"Not found.",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNU",
@@ -5409,7 +5567,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-university\/",
     "socials_twitter":"https:\/\/x.com\/UNUniversity",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UNU Council",
@@ -5443,7 +5602,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"UNV",
@@ -5477,7 +5637,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-volunteers\/",
     "socials_twitter":"https:\/\/x.com\/UNVolunteers",
-    "socials_instagram":"https:\/\/www.instagram.com\/unvolunteers\/"
+    "socials_instagram":"https:\/\/www.instagram.com\/unvolunteers\/",
+    "is_on_pdf":true
   },
   {
     "entity":"UNVMC",
@@ -5511,7 +5672,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/united-nations-verification-mission-in-colombia\/",
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"UPU",
@@ -5545,7 +5707,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/universal-postal-union\/",
     "socials_twitter":"https:\/\/x.com\/UPU_UN",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"WFP",
@@ -5579,7 +5742,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-food-programme\/",
     "socials_twitter":"https:\/\/x.com\/WFP",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"WFP EB",
@@ -5613,7 +5777,8 @@
     "transparency_portal_link":null,
     "socials_linkedin":null,
     "socials_twitter":null,
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":false
   },
   {
     "entity":"WHO",
@@ -5647,7 +5812,8 @@
     "transparency_portal_link":"https:\/\/open.who.int\/",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-health-organization\/",
     "socials_twitter":"https:\/\/x.com\/WHO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"WIPO",
@@ -5681,7 +5847,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-intellectual-property-organization-wipo\/",
     "socials_twitter":"https:\/\/x.com\/WIPO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"WMO",
@@ -5715,7 +5882,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-meteorological-organization\/",
     "socials_twitter":"https:\/\/x.com\/WMO",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"WORLD BANK GROUP",
@@ -5749,7 +5917,8 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-bank\/",
     "socials_twitter":"https:\/\/x.com\/WorldBank",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   },
   {
     "entity":"WTO",
@@ -5783,6 +5952,7 @@
     "transparency_portal_link":"Not found",
     "socials_linkedin":"https:\/\/www.linkedin.com\/company\/world-trade-organization\/",
     "socials_twitter":"https:\/\/x.com\/wto",
-    "socials_instagram":null
+    "socials_instagram":null,
+    "is_on_pdf":true
   }
 ]

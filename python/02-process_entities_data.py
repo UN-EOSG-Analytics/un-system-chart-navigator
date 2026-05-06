@@ -122,6 +122,7 @@ df = df[
         "socials_linkedin",
         "socials_twitter",
         "socials_instagram",
+        "is_on_pdf"
         # "record_id",
         # "review_needed",
         # "on_display",  # redundant: always "True" after filtering above; not used by frontend
