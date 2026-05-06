@@ -149,10 +149,9 @@ export default function CategorySection({
               href={getCategoryLink(groupKey, category)!}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-[0.2em] hover:underline"
+              className="hover:underline"
             >
               {category.trim() || "\u00A0"}
-              <ExternalLinkIcon className="h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.05em] text-[color-mix(in_srgb,currentColor_50%,white)]" aria-hidden="true" />
             </a>
           ) : (
             category.trim() || "\u00A0"
@@ -160,6 +159,12 @@ export default function CategorySection({
           {getCategoryFootnote(groupKey, category) && (
             <Footnote
               footnoteNumbers={getCategoryFootnote(groupKey, category)!}
+            />
+          )}
+          {getCategoryLink(groupKey, category) && (
+            <ExternalLinkIcon
+              className="ml-[0.15em] inline-block h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.1em] align-middle"
+              aria-hidden="true"
             />
           )}
         </h2>

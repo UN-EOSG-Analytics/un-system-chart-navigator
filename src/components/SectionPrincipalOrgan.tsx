@@ -19,7 +19,11 @@ import {
   normalizePrincipalOrgan,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
-import { Maximize2, Minimize2 } from "lucide-react";
+import {
+  ExternalLink as ExternalLinkIcon,
+  Maximize2,
+  Minimize2,
+} from "lucide-react";
 import {
   KeyboardEvent,
   MouseEvent,
@@ -234,7 +238,7 @@ export default function PrincipalOrganSection({
                 <ExternalLink
                   href={labelLink}
                   className="font-bold text-black hover:underline"
-                  iconClassName="h-[0.6em] w-[0.6em]"
+                  icon={false}
                   onClick={stopTogglePropagation}
                 >
                   {groupLabel}
@@ -244,6 +248,12 @@ export default function PrincipalOrganSection({
               )}
               {getCategoryFootnote(groupKey) && (
                 <Footnote footnoteNumbers={getCategoryFootnote(groupKey)!} />
+              )}
+              {labelLink && (
+                <ExternalLinkIcon
+                  className="ml-[0.15em] inline-block h-[0.6em] w-[0.6em] shrink-0 -translate-y-[0.15em] align-middle"
+                  aria-hidden="true"
+                />
               )}
             </h2>
             {sectionHeading && (

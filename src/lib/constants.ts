@@ -438,8 +438,7 @@ export const footnoteDefinitions: Record<number, string> = {
  * Value is the URL to link to
  */
 export const categoryLinks: Record<string, string> = {
-  "Security Council|Peacekeeping Operations":
-    "https://www.unmissions.org/",
+  "Security Council|Peacekeeping Operations": "https://www.unmissions.org/",
   "Security Council|Special Political Missions and Other Political Presences":
     "https://www.unmissions.org/",
   "Security Council|Commissions and Investigative Bodies":

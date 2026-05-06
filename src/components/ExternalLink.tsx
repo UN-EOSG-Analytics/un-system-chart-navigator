@@ -32,7 +32,10 @@ export default function ExternalLink({
       {children}
       {icon && (
         <ExternalLinkIcon
-          className={cn("h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.05em] text-[color-mix(in_srgb,currentColor_50%,white)]", iconClassName)}
+          className={cn(
+            "h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.1em]",
+            iconClassName,
+          )}
           aria-hidden="true"
         />
       )}

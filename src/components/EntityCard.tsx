@@ -141,7 +141,10 @@ const EntityCard = ({
             </sup>
           )}
           {externalLink && (
-            <ExternalLinkIcon className="ml-0.5 inline-block h-2.5 w-2.5 shrink-0 -translate-y-px text-[color-mix(in_srgb,currentColor_50%,white)]" aria-hidden="true" />
+            <ExternalLinkIcon
+              className="ml-0.5 inline-block h-2.5 w-2.5 shrink-0 -translate-y-[0.1em] align-middle"
+              aria-hidden="true"
+            />
           )}
         </span>
         {cardSubtitle && (
