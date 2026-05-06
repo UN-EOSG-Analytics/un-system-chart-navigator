@@ -21,9 +21,6 @@ export default function DataDownloadBar() {
   const [showDownloadToast, setShowDownloadToast] = useState<boolean>(false);
   const [downloadedFormat, setDownloadedFormat] = useState<string>("");
   const [notesExpanded, setNotesExpanded] = useState<boolean>(false);
-  useEffect(() => {
-    if (window.innerWidth >= 640) setNotesExpanded(true);
-  }, []);
   const downloadRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
