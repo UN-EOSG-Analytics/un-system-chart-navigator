@@ -13,6 +13,7 @@ import {
   naturalCompare,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
+import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 import { RefObject } from "react";
 import Footnote from "./Footnote";
 import EntityContainer from "./EntitiesContainer";
@@ -148,9 +149,10 @@ export default function CategorySection({
               href={getCategoryLink(groupKey, category)!}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline"
+              className="inline-flex items-center gap-[0.2em] hover:underline"
             >
               {category.trim() || "\u00A0"}
+              <ExternalLinkIcon className="h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.05em] text-[color-mix(in_srgb,currentColor_50%,white)]" aria-hidden="true" />
             </a>
           ) : (
             category.trim() || "\u00A0"

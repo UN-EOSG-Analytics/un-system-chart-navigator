@@ -234,6 +234,7 @@ export default function PrincipalOrganSection({
                 <ExternalLink
                   href={labelLink}
                   className="font-bold text-black hover:underline"
+                  iconClassName="h-[0.6em] w-[0.6em]"
                   onClick={stopTogglePropagation}
                 >
                   {groupLabel}
@@ -307,7 +308,7 @@ export default function PrincipalOrganSection({
                           onEntityClick(createEntitySlug(entity.entity));
                         }
                       }}
-                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder}`}
+                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder} ${!entity.is_on_pdf ? "hidden sm:block" : ""}`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >
@@ -356,7 +357,7 @@ export default function PrincipalOrganSection({
                           onEntityClick(createEntitySlug(entity.entity));
                         }
                       }}
-                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder}`}
+                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder} ${!entity.is_on_pdf ? "hidden sm:block" : ""}`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >

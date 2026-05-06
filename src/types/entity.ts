@@ -85,6 +85,8 @@ export interface Entity {
   record_id: string;
   /** Flag indicating if entity data needs review/verification */
   review_needed: boolean | null;
+  /** Whether this entity appears on the printed PDF chart */
+  is_on_pdf: boolean | null;
 }
 
 /**

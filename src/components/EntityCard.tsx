@@ -14,6 +14,7 @@ import {
   normalizePrincipalOrgan,
 } from "@/lib/utils";
 import { Entity } from "@/types/entity";
+import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 import EntityTooltip from "./EntityTooltip";
 import { entityCard } from "@/lib/styles";
 
@@ -138,6 +139,9 @@ const EntityCard = ({
             <sup className={entityCard.footnote}>
               {footnoteNumbers.join(",")}
             </sup>
+          )}
+          {externalLink && (
+            <ExternalLinkIcon className="ml-0.5 inline-block h-2.5 w-2.5 shrink-0 -translate-y-px text-[color-mix(in_srgb,currentColor_50%,white)]" aria-hidden="true" />
           )}
         </span>
         {cardSubtitle && (
