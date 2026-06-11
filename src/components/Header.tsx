@@ -13,7 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { BookOpen, FileEdit, Menu } from "lucide-react";
+import { BookOpen, FileEdit, Info, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -67,6 +67,15 @@ export default function Header() {
             sideOffset={8}
             className="w-44 rounded-md border border-slate-200 bg-white p-1 shadow-md"
           >
+            <DropdownMenuItem asChild>
+              <Link
+                href="/about"
+                className="cursor-pointer rounded-sm px-3 py-2 text-sm font-normal text-slate-600 transition-colors hover:bg-un-blue/5 hover:text-un-blue"
+              >
+                <Info className="h-4 w-4 text-slate-400" />
+                About
+              </Link>
+            </DropdownMenuItem>
             <DropdownMenuItem asChild>
               <Link
                 href="/methodology"
