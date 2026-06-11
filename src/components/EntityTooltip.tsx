@@ -3,7 +3,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { hideTooltipEntities } from "@/lib/constants";
+import { chipTooltips, hideTooltipEntities } from "@/lib/constants";
 import { Entity } from "@/types/entity";
 import { useState, useRef } from "react";
 
@@ -19,8 +19,11 @@ export default function EntityTooltip({
   const [open, setOpen] = useState(false);
   const blockedRef = useRef(false);
 
-  // Skip tooltip for specified entities
-  if (hideTooltipEntities.has(entity.entity)) {
+  // Custom tooltip text overrides the default "long name (acronym)" content.
+  const customTooltip = chipTooltips[entity.entity];
+
+  // Skip tooltip for specified entities (unless a custom tooltip is defined)
+  if (hideTooltipEntities.has(entity.entity) && !customTooltip) {
     return <>{children}</>;
   }
 
@@ -57,7 +60,7 @@ export default function EntityTooltip({
       >
         <div className="p-1">
           <p className="text-left text-xs leading-tight font-medium text-wrap sm:text-sm">
-            {entity.entity_long} ({entity.entity})
+            {customTooltip ?? `${entity.entity_long} (${entity.entity})`}
           </p>
           <p className="mt-0.5 hidden text-left text-xs text-wrap text-slate-500 sm:block">
             Click to view details

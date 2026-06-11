@@ -3,11 +3,13 @@
 import {
   categoryOverrideForOrgan,
   categoryOrderByPrincipalOrgan,
+  chipDisplayNames,
   externalLinkEntities,
   hideCategoryForOrgan,
   placeholderEntities,
   principalOrganConfigs,
   principalOrganSlugs,
+  sortLastEntities,
 } from "@/lib/constants";
 import {
   createEntitySlug,
@@ -124,6 +126,15 @@ export default function PrincipalOrganSection({
   const collapsedPreviewEntities = entities
     .filter((entity) => !placeholderEntityNames.has(entity.entity))
     .sort((left, right) => naturalCompareEntities(left.entity, right.entity));
+
+  // Entities shown in the flat (skipCategoryLayer) chip row, with
+  // "sortLastEntities" pinned to the end regardless of alphabetical order.
+  const skipLayerEntities = [...entities].sort((left, right) => {
+    const leftLast = sortLastEntities.has(left.entity) ? 1 : 0;
+    const rightLast = sortLastEntities.has(right.entity) ? 1 : 0;
+    if (leftLast !== rightLast) return leftLast - rightLast;
+    return naturalCompareEntities(left.entity, right.entity);
+  });
 
   // FLIP animation refs
   const chipRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
@@ -297,7 +308,7 @@ export default function PrincipalOrganSection({
           >
             {skipCategoryLayer || !hasDefinedCategories ? (
               <div className={organSection.skipCategoryChipRow}>
-                {collapsedPreviewEntities.map((entity) => (
+                {skipLayerEntities.map((entity) => (
                   <EntityTooltip key={entity.entity} entity={entity}>
                     <button
                       ref={(el) => {
@@ -322,7 +333,7 @@ export default function PrincipalOrganSection({
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >
-                      {entity.entity}
+                      {chipDisplayNames[entity.entity] ?? entity.entity}
                       {externalLinkEntities[entity.entity] && (
                         <ExternalLinkIcon className="ml-[0.2em] inline-block align-middle -translate-y-[0.1em] h-[0.75em] w-[0.75em] shrink-0" aria-hidden="true" />
                       )}

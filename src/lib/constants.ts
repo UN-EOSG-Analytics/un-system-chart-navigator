@@ -143,7 +143,46 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "Other Bodies and Committees",
     subcategory: null,
   },
+  // Secretariat — "Other" rollup link (displayed as "Other" via chipDisplayNames)
+  {
+    entity: "Secretariat Other",
+    entity_link: "https://www.un.org/en/about-us/secretariat",
+    un_principal_organ: ["Secretariat"],
+    category: "",
+    subcategory: null,
+  },
+  // Related Organizations — "Other" rollup link (displayed as "Other" via chipDisplayNames)
+  {
+    entity: "Other Related Organizations",
+    entity_link: "https://www.un.org/en/about-us/un-system",
+    un_principal_organ: ["Related Organizations"],
+    category: " ",
+    subcategory: null,
+  },
 ];
+
+/**
+ * Display-label overrides for chips whose internal `entity` id differs from the
+ * text shown on the card. Use when two placeholder chips need the same visible
+ * label (e.g. "Other") but must stay distinct in `externalLinkEntities` and
+ * other entity-name-keyed maps.
+ */
+export const chipDisplayNames: Record<string, string> = {
+  "Secretariat Other": "Other",
+  "Other Related Organizations": "Other",
+};
+
+/**
+ * Custom hover-tooltip text for chips, keyed by internal `entity` id.
+ * Use for placeholder chips whose visible label is abbreviated (e.g. "Other")
+ * and would otherwise have no tooltip. Entities listed here are exempted from
+ * `hideTooltipEntities` below.
+ */
+export const chipTooltips: Record<string, string> = {
+  "Other Related Organizations": "Other Related Organizations",
+  "Other": "Other Bodies and Committees",
+  "Secretariat Other": "Other Departments and Offices",
+};
 
 /**
  * Entities that should display their long name on the card instead of the short name.
@@ -180,14 +219,21 @@ export const externalLinkEntities: Record<string, string> = Object.fromEntries([
 /**
  * Entities that should always be sorted last within their subcategory.
  */
-export const sortLastEntities = new Set(["Other Committees", "Other"]);
+export const sortLastEntities = new Set([
+  "Other Committees",
+  "Other",
+  "Secretariat Other",
+  "Other Related Organizations",
+]);
 
 /**
  * Entities for which tooltips should not be shown.
  * Automatically includes all placeholder entities (they have no meaningful tooltip data).
  */
 export const hideTooltipEntities = new Set(
-  placeholderEntities.map((e) => e.entity),
+  placeholderEntities
+    .map((e) => e.entity)
+    .filter((name) => !(name in chipTooltips)),
 );
 
 /**
@@ -473,7 +519,7 @@ export const categoryFootnotes: Record<string, number[]> = {
   "General Assembly|Funds and Programmes": [1],
   "Economic and Social Council|Regional Commissions": [6],
   "Economic and Social Council|Specialized Agencies": [1, 3],
-  "Economic and Social Council|Other Bodies and Committees": [8],
+//   "Economic and Social Council|Other Bodies and Committees": [8],
   "Secretariat|Departments and Offices": [7],
   "Other|Related Organizations": [3],
 };
