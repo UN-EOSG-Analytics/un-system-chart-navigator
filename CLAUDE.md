@@ -58,6 +58,8 @@ uv run python/verification/verify_links.py
 
 - install and update packages in `package.json` via CLI not file edits
 
+> **Before any Next.js work**, read the relevant doc in `node_modules/next/dist/docs/` ([AGENTS.md](../AGENTS.md) rule) — this is Next.js 16 and training data lags the bundled docs.
+
 > The `main` branch only handles the website and its data pipeline (Airtable → JSON).
 
 **Python tooling uses `uv`** (not pip/venv). Never run Python scripts with plain `python`.
