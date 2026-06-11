@@ -1,5 +1,9 @@
 # TODO
 
+- add a ABOUT page, explain reasoning, link to resolution
+- check review border for OLA
+
+
 ## Nice to Have
 
 - [ ] **Add OG image**
