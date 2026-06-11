@@ -343,7 +343,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     bgColor: "bg-un-system-yellow",
     textColor: "text-black",
     defaultCollapsed: true,
-    // skipCategoryLayer: true,
+    skipCategoryLayer: true,
   },
 
   "International Court of Justice": {
