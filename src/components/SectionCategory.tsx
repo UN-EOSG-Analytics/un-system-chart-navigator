@@ -4,6 +4,7 @@ import {
   entitySortOrder,
   hideCategoryForOrgan,
   showEmptyCategoryGap,
+  sortLastEntities,
   subcategoryOverrideForOrgan,
   subcategorySortOrder,
 } from "@/lib/constants";
@@ -89,6 +90,11 @@ export default function CategorySection({
       return !effectiveSubcategory || shouldHideSubcategory;
     })
     .sort((a, b) => {
+      // "sortLastEntities" always go to the end, regardless of the sort below
+      const aLast = sortLastEntities.has(a.entity) ? 1 : 0;
+      const bLast = sortLastEntities.has(b.entity) ? 1 : 0;
+      if (aLast !== bLast) return aLast - bLast;
+
       // First check custom entity sort order
       const orderA = entitySortOrder[a.entity] ?? 0;
       const orderB = entitySortOrder[b.entity] ?? 0;

@@ -48,21 +48,22 @@ export default function SubcategorySection({
   // Sort entities: special cases first, then apply subcategory-specific sorting
   let sortedEntities = [...entities];
 
-  // Always sort "sortLastEntities" to the end
-  sortedEntities.sort((a, b) => {
-    const aLast = sortLastEntities.has(a.entity) ? 1 : 0;
-    const bLast = sortLastEntities.has(b.entity) ? 1 : 0;
-    return aLast - bLast;
-  });
+  // "sortLastEntities" always go to the end, regardless of the sort below
+  const lastRank = (entity: string) => (sortLastEntities.has(entity) ? 1 : 0);
 
   // Sort entities by ordinal for "Main Committees" (First, Second, ... Sixth)
   if (subcategory === "Main Committees") {
-    sortedEntities = sortedEntities.sort(
-      (a, b) => getOrdinalOrder(a.entity) - getOrdinalOrder(b.entity),
-    );
+    sortedEntities = sortedEntities.sort((a, b) => {
+      const lastCompare = lastRank(a.entity) - lastRank(b.entity);
+      if (lastCompare !== 0) return lastCompare;
+      return getOrdinalOrder(a.entity) - getOrdinalOrder(b.entity);
+    });
   } else {
     // Apply affiliated entity sorting (UNDP-affiliated entities after UNDP)
     sortedEntities = sortedEntities.sort((a, b) => {
+      const lastCompare = lastRank(a.entity) - lastRank(b.entity);
+      if (lastCompare !== 0) return lastCompare;
+
       const [parentA, isAffiliatedA, nameA] = getAffiliatedSortKey(a.entity);
       const [parentB, isAffiliatedB, nameB] = getAffiliatedSortKey(b.entity);
 

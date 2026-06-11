@@ -134,6 +134,15 @@ export const placeholderEntities: PlaceholderEntity[] = [
     category: "International Tribunals",
     subcategory: null,
   },
+  // Economic and Social Council — "Other" rollup link for remaining subsidiary bodies
+  {
+    entity: "Other",
+    entity_link:
+      "https://ecosoc.un.org/en/about-us/ecosoc-subsidiary-bodies#adhoc_bodies",
+    un_principal_organ: ["Economic and Social Council"],
+    category: "Other Bodies and Committees",
+    subcategory: null,
+  },
 ];
 
 /**
@@ -171,7 +180,7 @@ export const externalLinkEntities: Record<string, string> = Object.fromEntries([
 /**
  * Entities that should always be sorted last within their subcategory.
  */
-export const sortLastEntities = new Set(["Other Committees"]);
+export const sortLastEntities = new Set(["Other Committees", "Other"]);
 
 /**
  * Entities for which tooltips should not be shown.
@@ -267,7 +276,8 @@ export const entitySortOrder: Record<string, number> = {
  * Higher values appear later. Subcategories not listed use order 0 (alphabetical first).
  */
 export const subcategorySortOrder: Record<string, number> = {
-  // General Assembly - Main Committees
+  // General Assembly - Intergovernmental and Expert Bodies
+  Commissions: -1, // First
   "Main Committees": 998, // Second to last
   Committees: 999, // Last
   Other: 999, // Last
@@ -463,7 +473,7 @@ export const categoryFootnotes: Record<string, number[]> = {
   "General Assembly|Funds and Programmes": [1],
   "Economic and Social Council|Regional Commissions": [6],
   "Economic and Social Council|Specialized Agencies": [1, 3],
-  "Economic and Social Council|Other Bodies": [8],
+  "Economic and Social Council|Other Bodies and Committees": [8],
   "Secretariat|Departments and Offices": [7],
   "Other|Related Organizations": [3],
 };
@@ -524,7 +534,7 @@ export const categoryOrderByPrincipalOrgan: Record<
   "Economic and Social Council": {
     "Functional Commissions": 1,
     "Regional Commissions": 2,
-    "Other Bodies": 3,
+    "Other Bodies and Committees": 3,
     "Research and Training": 4,
     "Specialized Agencies": 5,
     TBD: 999, // Fallback for entities without category
