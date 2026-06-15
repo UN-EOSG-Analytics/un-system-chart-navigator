@@ -32,6 +32,23 @@ df = df.sort_values("entity")
 df["un_principal_organ"] = df["un_principal_organ"].apply(parse_airtable_list_literal)
 
 
+def parse_review_needed(value) -> bool | None:
+    """Normalize Airtable's "TRUE"/"FALSE"/blank review flag to bool | None.
+
+    Exported as a real JSON boolean so the frontend can rely on truthiness —
+    the raw string "FALSE" would otherwise be truthy in JavaScript.
+    """
+    text = str(value).strip().upper()
+    if text == "TRUE":
+        return True
+    if text == "FALSE":
+        return False
+    return None
+
+
+df["review_needed"] = df["review_needed"].apply(parse_review_needed)
+
+
 def get_local_headshot_path(entity: str) -> str | None:
     """
     Check if a local headshot exists for the entity and return the web path.
@@ -122,9 +139,9 @@ df = df[
         "socials_linkedin",
         "socials_twitter",
         "socials_instagram",
-        "is_on_pdf"
+        "is_on_pdf",
+        "review_needed",
         # "record_id",
-        # "review_needed",
         # "on_display",  # redundant: always "True" after filtering above; not used by frontend
     ]
 ]

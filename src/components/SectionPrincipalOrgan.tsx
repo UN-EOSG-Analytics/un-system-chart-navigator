@@ -184,6 +184,11 @@ export default function PrincipalOrganSection({
     savedPositions.current.clear();
   }, [isExpanded]);
 
+  const getReviewBorderClass = (entity: Entity) =>
+    showReviewBorders && entity.review_needed
+      ? "outline-2 outline-red-600"
+      : "";
+
   const getCollapsedChipBackground = (entity: Entity) => {
     const normalizedOrgans = normalizePrincipalOrgan(entity.un_principal_organ);
 
@@ -329,7 +334,7 @@ export default function PrincipalOrganSection({
                           onEntityClick(createEntitySlug(entity.entity));
                         }
                       }}
-                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder} ${!entity.is_on_pdf ? "hidden sm:block" : ""}`}
+                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder} ${getReviewBorderClass(entity)} ${!entity.is_on_pdf ? "hidden sm:block" : ""}`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >
@@ -381,7 +386,7 @@ export default function PrincipalOrganSection({
                           onEntityClick(createEntitySlug(entity.entity));
                         }
                       }}
-                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder} ${!entity.is_on_pdf ? "hidden sm:block" : ""}`}
+                      className={`${organBgColor} ${organTextColor} ${entityChip.withBorder} ${getReviewBorderClass(entity)} ${!entity.is_on_pdf ? "hidden sm:block" : ""}`}
                       aria-label={`View details for ${entity.entity_long || entity.entity}`}
                       style={{ background: getCollapsedChipBackground(entity) }}
                     >

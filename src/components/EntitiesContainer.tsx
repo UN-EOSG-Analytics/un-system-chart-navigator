@@ -50,6 +50,7 @@ export default function EntityContainer({
   onEntityClick,
   customBgColor = "bg-gray-200",
   customTextColor = "text-black",
+  showReviewBorders = false,
   chipRefs,
 }: EntityGridProps) {
   return (
@@ -70,7 +71,11 @@ export default function EntityContainer({
                 onEntityClick(createEntitySlug(entity.entity));
               }
             }}
-            className={`${customBgColor} ${customTextColor} ${entityChip.base}`}
+            className={`${customBgColor} ${customTextColor} ${entityChip.base} ${
+              showReviewBorders && entity.review_needed
+                ? "outline-2 outline-red-600"
+                : ""
+            }`}
             aria-label={`View details for ${entity.entity_long || entity.entity}`}
             style={{ background: getChipBackground(entity) }}
           >

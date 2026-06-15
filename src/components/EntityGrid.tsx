@@ -46,7 +46,7 @@ export default function EntitiesGrid() {
   };
 
   const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
-  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(false);
+  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(true);
   const [allExpanded, setAllExpanded] = useState<boolean | undefined>(
     getInitialExpanded,
   );
