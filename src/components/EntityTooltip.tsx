@@ -3,7 +3,13 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { chipTooltips, hideTooltipEntities } from "@/lib/constants";
+import {
+  affiliatedEntities,
+  chipTooltips,
+  hideTooltipEntities,
+  principalOrganConfigs,
+} from "@/lib/constants";
+import { getCssColorVarDark, normalizePrincipalOrgan } from "@/lib/utils";
 import { Entity } from "@/types/entity";
 import { useState, useRef } from "react";
 
@@ -21,6 +27,16 @@ export default function EntityTooltip({
 
   // Custom tooltip text overrides the default "long name (acronym)" content.
   const customTooltip = chipTooltips[entity.entity];
+
+  // Affiliation label (e.g. "UNDP-affiliated") shown for subsidiary entities,
+  // tinted with the dark variant of the entity's organ color (matching the chip).
+  const affiliationLabel = affiliatedEntities[entity.entity]?.subtitle;
+  const organBgColor =
+    principalOrganConfigs[normalizePrincipalOrgan(entity.un_principal_organ)?.[0] ?? ""]
+      ?.bgColor;
+  const affiliationColor = organBgColor
+    ? getCssColorVarDark(organBgColor)
+    : undefined;
 
   // Skip tooltip for specified entities (unless a custom tooltip is defined)
   if (hideTooltipEntities.has(entity.entity) && !customTooltip) {
@@ -62,6 +78,14 @@ export default function EntityTooltip({
           <p className="text-left text-xs leading-tight font-medium text-wrap sm:text-sm">
             {customTooltip ?? `${entity.entity_long} (${entity.entity})`}
           </p>
+          {affiliationLabel && (
+            <p
+              className="mt-0.5 text-left text-[11px] font-medium text-wrap uppercase"
+              style={{ color: affiliationColor }}
+            >
+              {affiliationLabel}
+            </p>
+          )}
           <p className="mt-0.5 hidden text-left text-xs text-wrap text-slate-500 sm:block">
             Click to view details
           </p>

@@ -185,12 +185,6 @@ export const chipTooltips: Record<string, string> = {
 };
 
 /**
- * Entities that should display their long name on the card instead of the short name.
- * Use for entities where the acronym is not well-known.
- */
-export const useLongNameOnCard = new Set(["UNDC", "UNPC", "CTC", "MSC"]);
-
-/**
  * Entities that should open an external link instead of the modal.
  * Maps entity short name to the external URL.
  *
@@ -252,12 +246,6 @@ export const affiliatedEntities: Record<
   UNV: { parent: "UNDP", subtitle: "UNDP-affiliated" },
   UNOSSC: { parent: "UNDP", subtitle: "UNDP-affiliated" },
 };
-
-/**
- * Optional subtitle text shown directly on specific cards.
- * Use this for display-only annotations that should not affect sorting or grouping.
- */
-export const entityCardSubtitles: Record<string, string> = {};
 
 /**
  * Entities that should display an empty category section gap above them.

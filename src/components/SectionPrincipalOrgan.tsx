@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  affiliatedEntities,
   categoryOverrideForOrgan,
   categoryOrderByPrincipalOrgan,
   chipDisplayNames,
@@ -193,6 +194,11 @@ export default function PrincipalOrganSection({
     const normalizedOrgans = normalizePrincipalOrgan(entity.un_principal_organ);
 
     if (!normalizedOrgans || normalizedOrgans.length <= 1) {
+      // Affiliated entities get a lighter shade of the organ color so they
+      // read as subordinate to the parent they sort after.
+      if (affiliatedEntities[entity.entity]) {
+        return `color-mix(in srgb, ${getCssColorVar(organBgColor)} 55%, white)`;
+      }
       return undefined;
     }
 

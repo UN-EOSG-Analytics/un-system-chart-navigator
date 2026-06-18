@@ -7,7 +7,7 @@
  * Hierarchy:
  *   appHeader → filterControls → layout
  *   organSection → categorySection → subcategorySection
- *   entityChip | entityCard
+ *   entityChip
  *   entityModal
  */
 
@@ -130,7 +130,7 @@ export const entityChip = {
    * Standard chip — used in expanded category views (EntitiesContainer).
    * Color classes (`customBgColor`, `customTextColor`) are applied separately.
    */
-  base: "tracking-0 cursor-pointer rounded-full px-3 py-1.25 text-[11px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3.5 sm:py-1.5 sm:text-xs",
+  base: "tracking-0 cursor-pointer px-3 py-1.25 text-[11px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3.5 sm:py-1.5 sm:text-xs",
   /**
    * Bordered chip variant — used in collapsed organ preview rows.
    * Slightly smaller padding and adds a faint border.
@@ -139,27 +139,6 @@ export const entityChip = {
     "tracking-0 cursor-pointer rounded-full border border-black/10 px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 active:scale-95 active:opacity-70 sm:px-3 sm:py-1.25 sm:text-[11px]",
   /** Flex row that wraps chips */
   container: "flex flex-wrap gap-1 sm:gap-1.5",
-};
-
-// ─── Entity card (rectangular card in expanded grid) ─────────────────────────
-
-export const entityCard = {
-  /** Base button styles shared by all cards */
-  base: "flex h-8.5 w-full animate-in cursor-pointer touch-manipulation flex-col items-start rounded-lg px-2.5 text-left fade-in slide-in-from-bottom-4 hover:scale-105 hover:shadow-md active:scale-100 sm:h-9.5",
-  /** Vertical alignment when name fits on one line (≤22 chars) */
-  positionNormal: "justify-start py-1.5 sm:py-2",
-  /** Vertical alignment when name wraps (>22 chars) */
-  positionLong: "justify-center py-1 sm:py-1.5",
-  /** Primary name text — single-line */
-  nameNormal:
-    "-mt-px text-xs leading-3.75 font-medium sm:text-sm sm:leading-3.75",
-  /** Primary name text — long / wrapping */
-  nameLong:
-    "text-[11px] leading-[1.05] text-balance font-medium sm:text-[13px]",
-  /** Footnote superscript */
-  footnote: "ml-0.5 text-[9px] sm:text-[10px]",
-  /** Affiliated-entity or custom subtitle below the name */
-  subtitle: "text-[8px] leading-tight text-gray-600 opacity-80 sm:text-[9px]",
 };
 
 // ─── Entity modal (slide-over panel) ─────────────────────────────────────────

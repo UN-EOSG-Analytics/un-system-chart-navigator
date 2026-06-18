@@ -91,9 +91,9 @@ window.history.replaceState({}, "", buildFilterUrl(searchQuery, activePrincipalO
 
 When changing entity display behavior, always use `constants.ts` — never hardcode in components:
 
-- `useLongNameOnCard` — Set of entity acronyms that show full name on card (e.g., `"UNDC"`)
+- `chipDisplayNames` — display-label overrides for chips whose visible text differs from the internal `entity` id
 - `externalLinkEntities` — entities that open an external URL instead of the modal
-- `affiliatedEntities` — child entities that sort after a parent entity (e.g., UNCDF/UNV after UNDP)
+- `affiliatedEntities` — child entities that sort after (and render as a lighter shade of) a parent entity, with a `subtitle` shown in the hover tooltip (e.g., UNCDF/UNV/UNOSSC after UNDP)
 - `hideCategoryForOrgan` — hide category/subcategory for dual-organ entities in specific sections (key format: `"ENTITY|Principal Organ"`)
 - `principalOrganConfigs` — colors, labels, and links for each UN principal organ section
 - `placeholderEntities` — **display-only fake cards** (e.g., "Working Groups") not in Airtable/DB, merged into the entity list at runtime in `entities.ts`. Use these for group link cards pointing to external index pages.
