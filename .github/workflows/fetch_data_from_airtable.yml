@@ -44,7 +44,7 @@ jobs:
             echo "No meaningful changes detected, skipping commit"
           else
             echo "Changes detected, committing..."
-            git add data/input/input_entities.csv data/input/input_entities.pkl data/output/ public/un-entities.*
+            git add data/input/input_entities.csv data/input/input_entities.pkl data/output/ public/un-entities.* public/un-entities-meta.json
             git commit -m "Automated data update: Refresh entities data [GitHub Actions]"
             git push
           fi

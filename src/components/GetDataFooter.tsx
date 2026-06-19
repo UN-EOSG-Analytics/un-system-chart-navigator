@@ -1,6 +1,7 @@
 "use client";
 
 import { footnoteDefinitions } from "@/lib/constants";
+import meta from "../../public/un-entities-meta.json";
 import {
   Check,
   ChevronDown,
@@ -12,6 +13,16 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Toast } from "./Toast";
+
+// Parse at local midnight (not bare "YYYY-MM-DD", which is UTC) so the rendered
+// calendar date is identical for every user worldwide.
+const lastUpdated = new Date(
+  meta.last_updated + "T00:00:00",
+).toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
 
 export default function DataDownloadBar() {
   const [showDownloadOptions, setShowDownloadOptions] =
@@ -80,7 +91,7 @@ export default function DataDownloadBar() {
     <div className="w-full bg-white py-3 sm:py-4 md:py-6 lg:py-8 xl:py-10">
       <div className="mx-auto w-full max-w-7xl">
         <div className="flex items-start gap-2 text-base">
-          <p className="text-gray-600">As of March 2026</p>
+          <p className="text-gray-600">Last updated: {lastUpdated}</p>
           <span className="text-gray-400">|</span>
           <div className="relative" ref={downloadRef}>
             <button

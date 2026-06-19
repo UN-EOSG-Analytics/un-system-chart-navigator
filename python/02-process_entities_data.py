@@ -10,6 +10,8 @@ This script:
 The JSON output is used by the Next.js frontend for static site generation.
 """
 
+import datetime
+import json
 from pathlib import Path
 
 import pandas as pd
@@ -157,7 +159,22 @@ df.to_excel(output_path, index=False, engine="openpyxl")
 
 # JSON export (primary format for Next.js import)
 output_path = Path("public") / "un-entities.json"
-df.to_json(output_path, orient="records", indent=2)
+meta_path = Path("public") / "un-entities-meta.json"
+
+# Stamp the "last updated" date only when the entity data actually changes.
+# Comparing the freshly generated JSON against the committed file means the
+# date tracks real content changes, not merely when the pipeline last ran.
+new_json = df.to_json(orient="records", indent=2)
+old_json = output_path.read_text() if output_path.exists() else None
+
+today = datetime.date.today().isoformat()
+if old_json == new_json and meta_path.exists():
+    last_updated = json.loads(meta_path.read_text()).get("last_updated", today)
+else:
+    last_updated = today
+
+output_path.write_text(new_json)
+meta_path.write_text(json.dumps({"last_updated": last_updated}, indent=2) + "\n")
 
 
 # Export for other pages -----------------------------------
