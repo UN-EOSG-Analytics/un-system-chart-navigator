@@ -589,3 +589,9 @@ export const categoryOrderByPrincipalOrgan: Record<
   //     " ": 999, // Fallback for entities without category
   //   },
 };
+
+/**
+ * Whether the "review needed" red ring highlights are shown by default.
+ * Toggle at runtime with the R key. Set to false to hide them on initial load.
+ */
+export const defaultShowReviewBorders = false;
