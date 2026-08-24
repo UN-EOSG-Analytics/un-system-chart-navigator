@@ -91,8 +91,13 @@ export const organSection = {
   content: "px-3 pt-2 pb-3 sm:px-3.5 sm:pb-4",
   /** Vertical spacing between sibling category blocks within an expanded organ */
   categorySpacing: "space-y-2.5",
-  /** Chip row used when the section is collapsed (preview mode, tighter gap) */
-  collapsedChipRow: "flex flex-wrap gap-0.75 sm:gap-1",
+  /**
+   * Chip row used when the section is collapsed (preview mode, tighter gap).
+   * The mobile gap is 4px, not 3px, on purpose: chips are 20px tall, so a 3px
+   * gap puts adjacent rows 23px apart centre-to-centre and misses WCAG 2.2
+   * 2.5.8's 24px spacing exception by 1px. 4px lands exactly on it.
+   */
+  collapsedChipRow: "flex flex-wrap gap-1",
   /** Chip row used when skipCategoryLayer is set — no category headers, slightly looser gap */
   skipCategoryChipRow: "flex flex-wrap gap-1 sm:gap-1.5",
 };
@@ -130,13 +135,13 @@ export const entityChip = {
    * Standard chip — used in expanded category views (EntitiesContainer).
    * Color classes (`customBgColor`, `customTextColor`) are applied separately.
    */
-  base: "tracking-0 cursor-pointer px-3 py-1.25 text-[11px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 sm:px-3.5 sm:py-1.5 sm:text-xs",
+  base: "tracking-0 cursor-pointer touch-manipulation px-3 py-1.25 text-[11px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 active:scale-95 active:opacity-70 sm:px-3.5 sm:py-1.5 sm:text-xs",
   /**
    * Bordered chip variant — used in collapsed organ preview rows.
    * Slightly smaller padding and adds a faint border.
    */
   withBorder:
-    "tracking-0 cursor-pointer rounded-full border border-black/10 px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 active:scale-95 active:opacity-70 sm:px-3 sm:py-1.25 sm:text-[11px]",
+    "tracking-0 cursor-pointer touch-manipulation rounded-full border border-black/10 px-2.5 py-1 text-[10px] leading-none font-medium shadow-[0_3px_8px_rgba(0,0,0,0.03)] hover:scale-[1.05] hover:shadow-[0_6px_14px_rgba(0,0,0,0.12)] hover:brightness-90 active:scale-95 active:opacity-70 sm:px-3 sm:py-1.25 sm:text-[11px]",
   /** Flex row that wraps chips */
   container: "flex flex-wrap gap-1 sm:gap-1.5",
 };
@@ -149,7 +154,7 @@ export const entityModal = {
     "fixed inset-0 z-50 flex items-center justify-end bg-black/50 transition-all duration-300 ease-out",
   /** Side panel */
   panel:
-    "h-full w-full bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-2/3 sm:min-w-100 md:w-1/2 lg:w-1/3 lg:min-w-125",
+    "h-full w-full overscroll-contain bg-white shadow-2xl transition-transform duration-300 ease-out sm:w-2/3 sm:min-w-100 md:w-1/2 lg:w-1/3 lg:min-w-125",
   /** Sticky header bar inside the panel */
   header: "relative border-b border-gray-200 px-6 py-4",
   /** Small entity acronym label above the title (e.g. "UNICEF") */

@@ -20,6 +20,8 @@
     - Tooling that imports the compiler API?
 - check ESLint 9 → 10 -- NOPE!- 
 
+- check - Experiments (use with caution): ✓ optimizeCss
+
 ---
 
 # ISSUES

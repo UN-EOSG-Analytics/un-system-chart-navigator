@@ -13,7 +13,7 @@ export default function AboutPage() {
       <div className="mb-10">
         <Link
           href="/"
-          className="text-sm font-medium text-un-blue hover:underline"
+          className="-my-2 inline-flex min-h-11 touch-manipulation items-center text-sm font-medium text-un-blue hover:underline"
         >
           ← Back to Chart
         </Link>

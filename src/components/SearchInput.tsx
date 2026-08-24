@@ -65,7 +65,7 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
           spellCheck={false}
           autoCorrect="off"
           autoCapitalize="off"
-          className={`block h-10 w-full touch-manipulation rounded-lg border px-3 pl-9 text-sm transition-colors focus:outline-none ${
+          className={`block h-10 w-full touch-manipulation rounded-lg border px-3 pl-9 text-base transition-colors focus:outline-none sm:text-sm ${
             isActive
               ? "border-un-blue bg-un-blue/5 text-un-blue placeholder-un-blue/50"
               : "border-slate-300 bg-white text-slate-400 placeholder-slate-400 hover:border-un-blue hover:text-un-blue hover:placeholder-un-blue/70"
