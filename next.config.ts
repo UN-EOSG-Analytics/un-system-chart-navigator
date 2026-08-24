@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  cacheComponents: true,
   output: "export",
   trailingSlash: true,
   reactStrictMode: true,
@@ -12,6 +13,9 @@ const nextConfig: NextConfig = {
     optimizeCss: true,
   },
   allowedDevOrigins: ["127.0.0.1"],
+  logging: {
+    browserToTerminal: true,
+  },
 };
 
 export default nextConfig;

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+// TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+export const instant = false;
+
 export const metadata: Metadata = {
   title: "About",
   description:
@@ -28,15 +32,13 @@ export default function AboutPage() {
 
       <div className="space-y-10 text-slate-700">
         <section>
-          <h2 className="mb-3 text-lg font-semibold text-slate-900">
-            Purpose
-          </h2>
+          <h2 className="mb-3 text-lg font-semibold text-slate-900">Purpose</h2>
           <p className="leading-relaxed">
             The UN System Chart Navigator is an interactive way to explore the
             entities that make up the United Nations system — their place within
-            the principal organs and how they relate to one
-            another. It is designed to make a complex landscape easier to
-            understand for delegates, staff, researchers, and the public.
+            the principal organs and how they relate to one another. It is
+            designed to make a complex landscape easier to understand for
+            delegates, staff, researchers, and the public.
           </p>
         </section>
 
@@ -53,8 +55,8 @@ export default function AboutPage() {
             >
               A/RES/80/251
             </a>{" "}
-            on 31 March 2026. It requests the development of &ldquo;digital tools
-            and portals … to support a system-wide perspective and enhance
+            on 31 March 2026. It requests the development of &ldquo;digital
+            tools and portals … to support a system-wide perspective and enhance
             coherence across the United Nations system.&rdquo;
           </p>
           <p className="leading-relaxed">

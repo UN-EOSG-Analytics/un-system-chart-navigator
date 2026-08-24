@@ -16,6 +16,7 @@ Interactive static site explorer for UN System entities — [systemchart.un.org]
 | Data source     | Airtable API                                |
 | Data pipeline   | Python (`uv`) — pandas, python-dotenv       |
 | Deployment      | GitHub Pages (static)                       |
+| Agent tooling   | `next-devtools` MCP, `agent-browser` CLI    |
 
 ## Architecture Overview
 
@@ -48,8 +49,6 @@ pnpm typecheck    # TypeScript check (no emit)
 pnpm lint         # ESLint on src/
 pnpm format       # Prettier on src/
 
-npx @next/codemod@canary agents-md  # Regenerate AGENTS.md with latest Next.js docs index
-
 ./update_data.sh  # Full data refresh: Airtable → un-entities.json (uses `uv` for Python)
 # Optional extras:
 uv run python/03-download_headshots.py [--force]
@@ -71,6 +70,49 @@ PYTHONPATH=./python
 AIRTABLE_API_KEY=       # from https://airtable.com/create/tokens
 AIRTABLE_BASE_ID=
 AIRTABLE_TABLE_ID=
+```
+
+## Agent Tooling (Development Only)
+
+Set up per the Next.js [AI agents guide](https://nextjs.org/docs/app/guides/ai-agents). None of it is a runtime dependency — it doesn't affect the static export, CI, or the deployed site.
+
+**Framework knowledge comes from the bundled docs** (`node_modules/next/dist/docs/`, version-matched to the installed `next`), not from skills — see the `<!-- BEGIN:nextjs-agent-rules -->` block in [AGENTS.md](../AGENTS.md), which this file imports via `@AGENTS.md` on its last line. That block is **hand-maintained on 16.2.x** (no `next dev` generator ships in this version); from Next 16.3+ `next dev` upserts it, so keep project-specific instructions **outside** the markers. The `next-best-practices` skill (`vercel-labs/next-skills`) was dropped as superseded by the bundled docs. Skills are for multi-step *workflows* (e.g. `npx skills add vercel/next.js --skill next-dev-loop`), not for framework lookups.
+
+### Next.js MCP — `next-devtools`
+
+Next.js 16 ships a built-in MCP endpoint at `/_next/mcp` inside the dev server. [`.mcp.json`](../.mcp.json) registers the [`next-devtools-mcp`](https://github.com/vercel/next-devtools-mcp) bridge that discovers it ([guide](https://nextjs.org/docs/app/guides/mcp), mirrored at `node_modules/next/dist/docs/01-app/02-guides/mcp.md`).
+
+**`pnpm dev` must be running** — the bridge proxies to the live dev server; with nothing on the port, tool calls come back empty.
+
+Tools (the set tracks the installed Next version): `get_errors` (build + runtime + type errors), `get_logs`, `get_routes`, `get_page_metadata`, `get_project_metadata`, `get_server_action_by_id` — plus a Next.js knowledge base and upgrade/codemod helpers. Newer releases add `get_compilation_issues` / `compile_route`; check what the server actually advertises rather than assuming.
+
+- Prefer `get_errors` over asking what broke, or over running a full `pnpm build` just to surface a failure.
+- Browser `console.*` output reaches the dev terminal via `logging.browserToTerminal` in [next.config.ts](../next.config.ts); the same stream is on disk at `.next/dev/logs/next-development.log`.
+- `.next/dev/lock` holds the running dev server's `pid`, `port`, and `appUrl` — **read it and reuse that server** instead of starting a second one (Next 16.3+ additionally makes a second `next dev` print the existing URL and PID rather than spawning a duplicate).
+- The server is **project-scoped** in `.mcp.json`, so each contributor approves it once, and a newly registered server only loads in a fresh agent session.
+
+### Browser automation — `agent-browser`
+
+[vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) — the browser's view (DOM, console, network, Web Vitals) as structured text. Installed **globally** (`npm i -g agent-browser`), deliberately not a `package.json` dependency.
+
+**Start here:** `agent-browser skills get core --full` — the usage guide ships version-matched with the CLI; read it instead of guessing commands from `--help`. `agent-browser skills list` shows specialized ones (`dogfood` for exploratory testing, etc.).
+
+```bash
+agent-browser open http://localhost:3000 --enable react-devtools
+agent-browser snapshot                     # accessibility tree with @refs (best for agents)
+agent-browser read                         # agent-readable page text
+agent-browser console / errors             # client-side logs and page errors
+agent-browser click <sel|@ref>             # interact
+agent-browser react tree|inspect <id>|suspense   # component tree (needs the flag above)
+agent-browser a11y                         # axe-core audit
+agent-browser screenshot out.png           # visual check
+agent-browser close --all                  # tear down sessions
+```
+
+Verify UI changes against the running dev server rather than reasoning about JSX alone. Since **all interactive state lives in URL params** (see below), any view opens directly instead of being clicked into:
+
+```bash
+agent-browser open "http://localhost:3000/?q=unicef&organs=GA&entity=unicef"
 ```
 
 ## URL State & Navigation Pattern
@@ -137,3 +179,5 @@ PostgreSQL ingestion lives on the **`database` branch**. The `main` branch does 
 ## Build & Deploy
 
 Production site is a **static export** (`out/`) deployed to **GitHub Pages**. `pnpm build` runs `next build` then `node scripts/encrypt-site.js` — the encrypt step is **pre-release only** (password-protects the staging build) and will be removed before public launch.
+
+@AGENTS.md

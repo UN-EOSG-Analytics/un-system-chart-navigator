@@ -2,6 +2,7 @@
 
 - check review border for OLA
 - add llms.txt
+- fix lint
 
 
 ## Nice to Have
@@ -17,5 +18,5 @@
 - check typescript version bump
     - tsconfig options
     - Tooling that imports the compiler API?
-- check ESLint 9 → 10
+- check ESLint 9 → 10 -- NOPE!
 - 

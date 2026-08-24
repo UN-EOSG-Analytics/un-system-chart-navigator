@@ -346,7 +346,10 @@ export default function PrincipalOrganSection({
                     >
                       {chipDisplayNames[entity.entity] ?? entity.entity}
                       {externalLinkEntities[entity.entity] && (
-                        <ExternalLinkIcon className="ml-[0.2em] inline-block align-middle -translate-y-[0.1em] h-[0.75em] w-[0.75em] shrink-0" aria-hidden="true" />
+                        <ExternalLinkIcon
+                          className="ml-[0.2em] inline-block h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.1em] align-middle"
+                          aria-hidden="true"
+                        />
                       )}
                     </button>
                   </EntityTooltip>
@@ -398,7 +401,10 @@ export default function PrincipalOrganSection({
                     >
                       {entity.entity}
                       {externalLinkEntities[entity.entity] && (
-                        <ExternalLinkIcon className="ml-[0.2em] inline-block align-middle -translate-y-[0.1em] h-[0.75em] w-[0.75em] shrink-0" aria-hidden="true" />
+                        <ExternalLinkIcon
+                          className="ml-[0.2em] inline-block h-[0.75em] w-[0.75em] shrink-0 -translate-y-[0.1em] align-middle"
+                          aria-hidden="true"
+                        />
                       )}
                     </button>
                   </EntityTooltip>

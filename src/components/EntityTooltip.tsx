@@ -32,8 +32,9 @@ export default function EntityTooltip({
   // tinted with the dark variant of the entity's organ color (matching the chip).
   const affiliationLabel = affiliatedEntities[entity.entity]?.subtitle;
   const organBgColor =
-    principalOrganConfigs[normalizePrincipalOrgan(entity.un_principal_organ)?.[0] ?? ""]
-      ?.bgColor;
+    principalOrganConfigs[
+      normalizePrincipalOrgan(entity.un_principal_organ)?.[0] ?? ""
+    ]?.bgColor;
   const affiliationColor = organBgColor
     ? getCssColorVarDark(organBgColor)
     : undefined;

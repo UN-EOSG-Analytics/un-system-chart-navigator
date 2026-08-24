@@ -1,6 +1,9 @@
 "use client";
 
-import { principalOrganConfigs, defaultShowReviewBorders } from "@/lib/constants";
+import {
+  principalOrganConfigs,
+  defaultShowReviewBorders,
+} from "@/lib/constants";
 import { getAllEntities, searchEntities } from "@/lib/entities";
 import { Entity } from "@/types/entity";
 import {
@@ -46,7 +49,9 @@ export default function EntitiesGrid() {
   };
 
   const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
-  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(defaultShowReviewBorders);
+  const [showReviewBorders, setShowReviewBorders] = useState<boolean>(
+    defaultShowReviewBorders,
+  );
   const [allExpanded, setAllExpanded] = useState<boolean | undefined>(
     getInitialExpanded,
   );

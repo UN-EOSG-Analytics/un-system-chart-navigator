@@ -180,7 +180,7 @@ export const chipDisplayNames: Record<string, string> = {
  */
 export const chipTooltips: Record<string, string> = {
   "Other Related Organizations": "Other Related Organizations",
-  "Other": "Other Bodies and Committees",
+  Other: "Other Bodies and Committees",
   "Secretariat Other": "Other Departments and Offices",
 };
 
@@ -507,7 +507,7 @@ export const categoryFootnotes: Record<string, number[]> = {
   "General Assembly|Funds and Programmes": [1],
   "Economic and Social Council|Regional Commissions": [6],
   "Economic and Social Council|Specialized Agencies": [1, 3],
-//   "Economic and Social Council|Other Bodies and Committees": [8],
+  //   "Economic and Social Council|Other Bodies and Committees": [8],
   "Secretariat|Departments and Offices": [7],
   "Other|Related Organizations": [3],
 };

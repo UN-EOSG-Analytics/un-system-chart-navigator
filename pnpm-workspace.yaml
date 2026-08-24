@@ -1,7 +1,12 @@
 allowBuilds:
   sharp: false
   unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@types/react-dom@19.2.5'
 onlyBuiltDependencies:
   - msw
   - sharp
   - unrs-resolver
+overrides:
+  '@types/react': 19.2.18
+  '@types/react-dom': 19.2.5

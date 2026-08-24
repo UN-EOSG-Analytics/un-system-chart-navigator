@@ -3,5 +3,8 @@
     "allow": [
       "Bash(pnpm typecheck:*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "next-devtools"
+  ]
 }
