@@ -20,3 +20,9 @@ dependencies = [
     "sqlalchemy>=2.0.45",
     "tqdm>=4.67.1",
 ]
+
+[tool.uv]
+# Pin the uv toolchain itself so CI and local dev can't drift across a minor
+# release. setup-uv reads this and installs the newest matching version;
+# local uv exits with an error if it falls outside the range.
+required-version = ">=0.12.5,<0.13"

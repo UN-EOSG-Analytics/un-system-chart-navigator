@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # Keeps `uses:` pins in .github/workflows/ current — opens a PR when a new
+  # major of actions/checkout, astral-sh/setup-uv, etc. is released.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci"
