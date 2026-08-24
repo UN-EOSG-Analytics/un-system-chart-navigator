@@ -49,3 +49,36 @@ test.describe("?entity= route matrix", () => {
     ).toHaveValue("health");
   });
 });
+
+test.describe("URL params hydrate without mismatching the static HTML", () => {
+  // Regression: EntityGrid seeded useState from window.location.search, so the
+  // prerendered HTML (no params) disagreed with the first client render and
+  // React threw a hydration mismatch. Against out/ that arrives as a minified
+  // uncaught pageerror, never a console message — so assert on pageerror.
+  for (const url of [
+    "/?expand=true",
+    "/?entity=unicef&q=unicef&expand=true",
+  ]) {
+    test(`no page error on ${url}`, async ({ page }) => {
+      const pageErrors: string[] = [];
+      page.on("pageerror", (error) => pageErrors.push(error.message));
+      await page.goto(url);
+      await expect(
+        page.getByRole("button", { name: "Collapse all sections" }),
+      ).toBeVisible();
+      expect(pageErrors).toEqual([]);
+    });
+  }
+
+  test("?expand=true survives the post-hydration URL rewrite", async ({
+    page,
+  }) => {
+    await page.goto("/?entity=unicef&q=unicef&expand=true");
+    await expect(page.getByText(/United Nations Children/i)).toBeVisible();
+    const search = await page.evaluate(() => window.location.search);
+    const params = new URLSearchParams(search);
+    expect(params.get("entity")).toBe("unicef");
+    expect(params.get("q")).toBe("unicef");
+    expect(params.get("expand")).toBe("true");
+  });
+});

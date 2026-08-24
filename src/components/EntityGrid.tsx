@@ -35,26 +35,25 @@ export default function EntitiesGrid() {
   const entities = getAllEntities();
   const router = useRouter();
 
-  // Initialize state from URL params or defaults (read once on mount)
-  const getInitialSearch = () => {
-    if (typeof window === "undefined") return "";
-    const params = new URLSearchParams(window.location.search);
-    return params.get("q") || "";
-  };
-
-  const getInitialExpanded = () => {
-    if (typeof window === "undefined") return undefined;
-    const params = new URLSearchParams(window.location.search);
-    return params.get("expand") === "true" ? true : undefined;
-  };
-
-  const [searchQuery, setSearchQuery] = useState<string>(getInitialSearch);
+  // State starts at the server-rendered defaults; URL params are applied after
+  // mount so the first client render matches the static HTML (no hydration mismatch).
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [showReviewBorders, setShowReviewBorders] = useState<boolean>(
     defaultShowReviewBorders,
   );
-  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(
-    getInitialExpanded,
-  );
+  const [allExpanded, setAllExpanded] = useState<boolean | undefined>(undefined);
+  const [hydrated, setHydrated] = useState(false);
+
+  // Read URL params once, after hydration
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    // Deliberate post-hydration sync: the static export has no request URL, so
+    // params can only be read here, after the first client render.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSearchQuery(params.get("q") || "");
+    setAllExpanded(params.get("expand") === "true" ? true : undefined);
+    setHydrated(true);
+  }, []);
 
   // Debounce timer for URL updates
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -86,6 +85,7 @@ export default function EntitiesGrid() {
   }, []);
 
   useEffect(() => {
+    if (!hydrated) return;
     const params = new URLSearchParams(window.location.search);
     const newUrl = buildFilterUrl(
       searchQuery,
@@ -94,7 +94,7 @@ export default function EntitiesGrid() {
     );
     window.history.replaceState(null, "", newUrl);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [allExpanded]);
+  }, [allExpanded, hydrated]);
 
   useEffect(() => {
     const handlePopState = () => {
