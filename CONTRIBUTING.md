@@ -211,6 +211,8 @@ pnpm lint
 ### Updating Dependencies
 
 ```bash
+corepack use pnpm@latest
+
 # Check for outdated packages
 pnpm outdated
 

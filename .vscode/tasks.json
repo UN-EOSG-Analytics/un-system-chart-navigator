@@ -64,6 +64,11 @@
             "command": "pnpm outdated",
             "problemMatcher": [ ] },
         {
+            "label": "update [pnpm]",
+            "type": "shell",
+            "command": "pnpm update",
+            "problemMatcher": [ ] },
+        {
             "label": "diff [shadcn]",
             "type": "shell",
             "command": "npx shadcn@latest diff",
