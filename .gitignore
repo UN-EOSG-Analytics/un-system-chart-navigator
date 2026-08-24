@@ -257,3 +257,8 @@ __marimo__/
 .next-docs/
 
 docs/BRIEFING.md
+
+# playwright
+/test-results/
+/playwright-report/
+/blob-report/

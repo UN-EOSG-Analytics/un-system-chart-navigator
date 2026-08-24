@@ -162,7 +162,13 @@ export const getAllEntities = () => entities;
  * getEntityBySlug('invalid') // Returns null
  */
 export const getEntityBySlug = (slug: string): Entity | null => {
-  const decodedSlug = decodeURIComponent(slug).toLowerCase();
+  let decodedSlug: string;
+  try {
+    decodedSlug = decodeURIComponent(slug).toLowerCase();
+  } catch {
+    // Malformed percent-encoding (e.g. "?entity=%E0%A4%A") is just a miss
+    return null;
+  }
   return entitySlugMap.get(decodedSlug) || null;
 };
 

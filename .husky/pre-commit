@@ -1,0 +1,4 @@
+# Chained with && on purpose: husky v9 runs this file with no `set -e`, so
+# separate lines would let a failing typecheck fall through and the hook would
+# exit with only the last command's status.
+pnpm typecheck && pnpm lint && pnpm test

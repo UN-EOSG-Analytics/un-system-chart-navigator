@@ -47,24 +47,33 @@ export function createEntitySlug(entityName: string): string {
  *
  * @example
  * parseEntityAliases("['RCS','UNDCO']") // Returns: ['RCS', 'UNDCO']
+ * parseEntityAliases("RCS") // Returns: ['RCS']
+ * parseEntityAliases("RCS, UNDCO") // Returns: ['RCS', 'UNDCO']
  * parseEntityAliases(null) // Returns: []
- * parseEntityAliases("invalid") // Returns: []
  */
 export function parseEntityAliases(
   aliasString: string | null | undefined,
 ): string[] {
   if (!aliasString || typeof aliasString !== "string") return [];
 
+  // Legacy Airtable list-literal form: "['RCS','UNDCO']"
   try {
     const parsed = JSON.parse(aliasString.replace(/'/g, '"'));
     if (Array.isArray(parsed)) {
       return parsed.filter((alias) => typeof alias === "string");
     }
+    // Valid JSON but not a list (null, 123, true) — structured data, not aliases.
+    // Without this, "null" would fall through and yield a bogus ["null"].
+    return [];
   } catch {
-    // Silently skip invalid formats
+    // Not JSON at all — fall through to the plain-text form below.
   }
 
-  return [];
+  // Current form (cell_format="string" in python/api/airtable.py): "RCS" or "RCS, UNDCO"
+  return aliasString
+    .split(",")
+    .map((alias) => alias.trim())
+    .filter(Boolean);
 }
 
 /**

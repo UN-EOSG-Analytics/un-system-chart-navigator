@@ -1,11 +1,10 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import EntityModal from "./EntityModal";
 import { getEntityBySlug } from "@/lib/entities";
-import { Entity } from "@/types/entity";
-import { isEntityAlias, resolveEntityAlias } from "@/lib/entityAliases";
+import { resolveEntityAlias } from "@/lib/entityAliases";
 
 // Session storage key for return URL (set by EntitiesGrid before opening modal)
 const RETURN_URL_KEY = "entityModalReturnUrl";
@@ -14,54 +13,39 @@ export default function ModalHandler() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const entitySlug = searchParams.get("entity");
-  const [entity, setEntity] = useState<Entity | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+
+  // Canonical URL form is a lowercase, non-alias slug (SEO best practice).
+  // `resolveEntityAlias` already returns lowercase for known aliases; the extra
+  // `toLowerCase()` covers canonical slugs typed in the wrong case.
+  const canonicalSlug = entitySlug
+    ? resolveEntityAlias(entitySlug).toLowerCase()
+    : null;
+  const needsRedirect = canonicalSlug !== null && canonicalSlug !== entitySlug;
+
+  // Entity lookup is a synchronous map read over statically imported JSON, so
+  // it is derived during render rather than mirrored into state via an effect.
+  // Looking up the *canonical* slug means the modal renders correct content even
+  // if the URL redirect below never lands (EntityGrid's own history.replaceState
+  // can clobber it), instead of hanging on a skeleton or flashing "Not Found".
+  const entity = canonicalSlug ? getEntityBySlug(canonicalSlug) : null;
+  const notFound = canonicalSlug !== null && !entity;
+
+  // Attempts to canonicalize the URL, preserving other params (`q`, `expand`).
+  // NOTE: this currently has no observable effect — EntityGrid's mount effect
+  // (EntityGrid.tsx:88-96) rewrites the URL via history.replaceState and wins,
+  // so the address bar can keep a non-canonical slug. Rendering does not depend
+  // on it; it becomes live again if that clobber is fixed.
+  useEffect(() => {
+    if (!needsRedirect || canonicalSlug === null) return;
+    const params = new URLSearchParams(window.location.search);
+    params.set("entity", canonicalSlug);
+    // Replace without scrolling to avoid a page jump; the updated param re-renders this component.
+    router.replace(`/?${params.toString()}`, { scroll: false });
+  }, [needsRedirect, canonicalSlug, router]);
 
   useEffect(() => {
-    // If there's no entity param, clear state
-    if (!entitySlug) {
-      setEntity(null);
-      setError(null);
-      setLoading(false);
-      return;
-    }
-
-    // Canonicalize to lowercase for consistent URLs (SEO best practice)
-    const lowercaseSlug = entitySlug.toLowerCase();
-    if (entitySlug !== lowercaseSlug) {
-      router.replace(`/?entity=${lowercaseSlug}`, { scroll: false });
-      return;
-    }
-
-    // If the provided slug is an alias, replace the URL with the canonical entity
-    // This runs in the client, so it's suitable for static deployments (GitHub Pages)
-    if (isEntityAlias(entitySlug)) {
-      const canonical = resolveEntityAlias(entitySlug);
-      // Replace URL without scrolling to avoid page jump; this will update `entitySlug` and re-run this effect
-      router.replace(`/?entity=${canonical}`, { scroll: false });
-      return;
-    }
-
-    setLoading(true);
-    setError(null);
-
-    try {
-      const foundEntity = getEntityBySlug(entitySlug);
-
-      if (!foundEntity) {
-        console.warn(`Entity "${entitySlug}" not found`);
-        setError("Entity not found");
-      } else {
-        setEntity(foundEntity);
-      }
-    } catch (err) {
-      console.error("Error loading entity:", err);
-      setError("Failed to load entity");
-    } finally {
-      setLoading(false);
-    }
-  }, [entitySlug, router]);
+    if (notFound) console.warn(`Entity "${entitySlug}" not found`);
+  }, [notFound, entitySlug]);
 
   const handleClose = () => {
     // Get stored return URL and clear it
@@ -73,11 +57,6 @@ export default function ModalHandler() {
   // Don't render anything if no entity slug
   if (!entitySlug) return null;
 
-  return (
-    <EntityModal
-      entity={error ? null : entity}
-      onClose={handleClose}
-      loading={loading}
-    />
-  );
+  // Never loading: the lookup above is synchronous, so there is no pending state.
+  return <EntityModal entity={entity} onClose={handleClose} loading={false} />;
 }

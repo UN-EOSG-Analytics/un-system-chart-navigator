@@ -350,7 +350,7 @@ export const principalOrganConfigs: Record<string, PrincipalOrganConfig> = {
     labelLink: "https://main.un.org/securitycouncil/",
     sectionHeading: "SUBSIDIARY ORGANS",
     sectionHeadingLink:
-      "https://main.un.org/securitycouncil/content/repertoire/subsidiary-organs-overview",
+      "https://main.un.org/securitycouncil/en/other-subsidiary-organs",
     order: 2,
     bgColor: "bg-un-system-red",
     textColor: "text-black",

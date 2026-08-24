@@ -4,6 +4,8 @@
 - add llms.txt
 - fix lint
 
+- fix the about and methodology page headers
+- add feedback button
 
 ## Nice to Have
 
@@ -20,3 +22,15 @@
     - Tooling that imports the compiler API?
 - check ESLint 9 → 10 -- NOPE!
 - 
+
+
+---
+
+# ISSUES
+
+- The redirect effect is inert — kept it with a comment recording exactly that, since it becomes live again if the EntityGrid clobber is fixed.
+- Hydration mismatch in EntitiesGrid/FilterControls, from getInitialSearch() reading window.location.search during useState init. Not in this component's tree.
+
+
+Two notes: loading={false} makes EntityModal's skeleton branches (lines 261, 297) unreachable — dead code now, but removing them means changing EntityModal's props, which I left alone.
+

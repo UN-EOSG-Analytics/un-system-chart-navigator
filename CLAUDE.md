@@ -35,7 +35,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `output: "export"` + `images.unoptimized` — no server runtime. The repo has no middleware, no route handlers, and no server actions; don't add any.
 - `trailingSlash: true` — routes are emitted as `/about/`; keep internal links consistent with that.
-- `cacheComponents: true` — Next 16 Cache Components. Per `node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/cacheComponents.md`, PPR is now the default (`experimental.ppr` removed) and client-side navigation keeps previously visited routes **mounted** via React `<Activity>` instead of unmounting them. PPR's streaming half is moot under static export — the mount behavior is the part that bites. Read that doc plus `01-app/02-guides/preserving-ui-state.md` before debugging state that unexpectedly survives navigation (modals, dropdowns, form inputs).
+- **No `cacheComponents`.** It is fundamentally incompatible with `output: "export"` — enabling it fails the build with `Invariant: PPR cannot be enabled in export mode`. It was briefly enabled (commit `db6ab8e`) along with `export const instant = false` opt-outs in every route, which broke the production build until both were removed. GitHub Pages static export is non-negotiable here, so do not re-add `cacheComponents`, `export const instant`, or any route segment config (`export const dynamic`/`revalidate`) that depends on it.
 - `logging.browserToTerminal: true` — see the agent tooling section below.
 
 ## Key Files
@@ -66,7 +66,10 @@ uv run python/verification/verify_links.py
 ```
 
 - install and update packages in `package.json` via CLI not file edits (pnpm only — never npm or yarn)
-- **No test framework in this repo.** Verification = `pnpm typecheck` + `pnpm lint` + exercising the running dev server with `agent-browser` (below).
+- **Tests:** `pnpm test` (Vitest — unit tests for `src/lib` helpers in `tests/`) and `pnpm test:e2e` (Playwright — URL-level route matrix in `e2e/`, run against the real static export).
+- **Two-track verification loop.** *Discover* with `agent-browser` against `pnpm dev` — it gives the a11y tree, React tree, and Suspense inspection that Playwright doesn't. Then *pin* every bug you find as a Vitest or Playwright case before closing it. Expect the two tools to describe the same bug differently: `agent-browser` sees dev-mode React (StrictMode double-fires effects, hydration errors print in full), while Playwright sees `out/` (no double-invoke, hydration failures arrive as minified uncaught `pageerror`s, not console messages).
+- `.husky/pre-commit` runs `pnpm typecheck && pnpm lint && pnpm test` (~5s). Playwright is deliberately excluded — it needs a full `next build`.
+- **Playwright must never use `pnpm build`** — that chains `scripts/encrypt-site.js`, which staticrypts every HTML file in `out/`. Use `pnpm build:test` (plain `next build`), which is what `playwright.config.ts` invokes.
 - Routine dependency, pnpm, and shadcn/ui maintenance commands live in [docs/MAINTENANCE.md](docs/MAINTENANCE.md).
 
 > **Before any Next.js work**, read the relevant doc in `node_modules/next/dist/docs/` ([AGENTS.md](AGENTS.md) rule) — this is Next.js 16 and training data lags the bundled docs.
