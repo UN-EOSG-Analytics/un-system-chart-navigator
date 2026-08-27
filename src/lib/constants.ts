@@ -81,7 +81,8 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Standing and Ad hoc Committees",
     entity_link:
-      "https://main.un.org/securitycouncil/content/repertoire/standing-and-ad-hoc-committees",
+      "https://main.un.org/securitycouncil/en/content/committees-working-groups-and-ad-hoc-bodies",
+    //   "https://main.un.org/securitycouncil/content/repertoire/standing-and-ad-hoc-committees",
     un_principal_organ: ["Security Council"],
     category: "Committees",
     subcategory: null,
@@ -89,7 +90,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Sanctions and Other Committees",
     entity_link:
-      "https://main.un.org/securitycouncil/content/repertoire/sanctions-and-other-committees",
+      "https://main.un.org/securitycouncil/en/sanctions/information",
     un_principal_organ: ["Security Council"],
     category: "Committees",
     subcategory: null,
@@ -129,7 +130,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "International Tribunals",
     entity_link:
-      "https://main.un.org/securitycouncil/content/repertoire/international-tribunals",
+      "https://main.un.org/securitycouncil/en/other-subsidiary-organs",
     un_principal_organ: ["Security Council"],
     category: "International Tribunals",
     subcategory: null,
