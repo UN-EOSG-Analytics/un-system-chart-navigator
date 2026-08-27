@@ -98,7 +98,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Working Groups",
     entity_link:
-      "https://main.un.org/securitycouncil/content/repertoire/working-groups",
+      "https://main.un.org/securitycouncil/en/other-subsidiary-organs",
     un_principal_organ: ["Security Council"],
     category: "Working Groups",
     subcategory: null,
@@ -114,7 +114,7 @@ export const placeholderEntities: PlaceholderEntity[] = [
   {
     entity: "Groups and Panels",
     entity_link:
-      "https://main.un.org/securitycouncil/content/repertoire/groups-and-panels",
+      "https://main.un.org/securitycouncil/en/other-subsidiary-organs",
     un_principal_organ: ["Security Council"],
     category: "Groups and Panels",
     subcategory: null,
@@ -489,7 +489,7 @@ export const categoryLinks: Record<string, string> = {
   "Security Council|Commissions and Investigative Bodies":
     "https://main.un.org/securitycouncil/content/repertoire/commissions-and-investigative-bodies",
   "Security Council|Groups and Panels":
-    "https://main.un.org/securitycouncil/content/repertoire/groups-and-panels",
+    "https://main.un.org/securitycouncil/en/other-subsidiary-organs",
   //   "Security Council|Representatives, Mediators, Coordinators, and Good Offices":
   //     "https://main.un.org/securitycouncil/content/repertoire/representatives-mediators-coordinators-and-good-offices",
   "Security Council|International Tribunals":
