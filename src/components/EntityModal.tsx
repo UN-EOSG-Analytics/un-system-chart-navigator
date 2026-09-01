@@ -387,7 +387,7 @@ export default function EntityModal({
                         if (hasPhoto) {
                           return (
                             <div className="ml-0.5 flex items-start gap-4">
-                              <div className="shrink-0flow-hidden relative h-20 w-16 rounded-xl bg-gray-100">
+                              <div className="shrink-0 overflow-hidden relative h-20 w-16 rounded-xl bg-gray-100">
                                 <Image
                                   src={entity!.head_of_entity_headshot_link!}
                                   alt={`Portrait of ${entity!.head_of_entity_name}`}

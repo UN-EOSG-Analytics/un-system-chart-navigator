@@ -8,9 +8,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    optimizeCss: true,
-  },
   allowedDevOrigins: ["127.0.0.1"],
   logging: {
     browserToTerminal: true,
