@@ -35,7 +35,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `output: "export"` + `images.unoptimized` — no server runtime. The repo has no middleware, no route handlers, and no server actions; don't add any.
 - `trailingSlash: true` — routes are emitted as `/about/`; keep internal links consistent with that.
-- **No `cacheComponents`.** It is fundamentally incompatible with `output: "export"` — enabling it fails the build with `Invariant: PPR cannot be enabled in export mode`. It was briefly enabled (commit `db6ab8e`) along with `export const instant = false` opt-outs in every route, which broke the production build until both were removed. GitHub Pages static export is non-negotiable here, so do not re-add `cacheComponents`, `export const instant`, or any route segment config (`export const dynamic`/`revalidate`) that depends on it.
+- **No `cacheComponents`.** It is fundamentally incompatible with `output: "export"` — enabling it fails the build with `Invariant: PPR cannot be enabled in export mode`. GitHub Pages static export is a fixed requirement, so leave out `cacheComponents`, `export const instant`, and any route segment config (`export const dynamic`/`revalidate`) that depends on it.
 - `logging.browserToTerminal: true` — see the agent tooling section below.
 
 ## Key Files
@@ -122,10 +122,12 @@ agent-browser screenshot out.png           # visual check
 agent-browser close --all                  # tear down sessions
 ```
 
+These bare commands suit quick one-off checks. For the edit/verify loop, follow the [`next-dev-loop` skill](.claude/skills/next-dev-loop/SKILL.md): it derives a worktree-scoped session id and passes `--session "$SESSION" --restore` on every command, so state is saved and parallel checkouts don't collide.
+
 Verify UI changes against the running dev server rather than reasoning about JSX alone. Since **all interactive state lives in URL params** (see below), any view opens directly instead of being clicked into:
 
 ```bash
-agent-browser open "http://localhost:3000/?q=unicef&organs=GA&entity=unicef"
+agent-browser open "http://localhost:3000/?q=unicef&expand=true&entity=unicef"
 ```
 
 ## URL State & Navigation Pattern
@@ -133,13 +135,13 @@ agent-browser open "http://localhost:3000/?q=unicef&organs=GA&entity=unicef"
 All interactive state lives in URL params — no global state store:
 
 - `?q=unicef` — search query
-- `?organs=GA,SC` — active principal organ filter (comma-separated, unencoded)
+- `?expand=true` — all sections expanded (omitted when false)
 - `?entity=unicef` — open entity modal (lowercase slug)
 
-`EntityModalHandler` reads `?entity=` via `useSearchParams`, resolves aliases, and renders `EntityModal`. `EntityGrid` manages search/filter state and syncs to URL using the **native history API** (not `router.push`) to avoid Next.js re-renders:
+`EntityModalHandler` reads `?entity=` via `useSearchParams`, resolves aliases, and renders `EntityModal`. `EntityGrid` manages search and expand state and syncs to URL using the **native history API** (not `router.push`) to avoid Next.js re-renders:
 
 ```ts
-window.history.replaceState({}, "", buildFilterUrl(searchQuery, activePrincipalOrgans, ...));
+window.history.replaceState(null, "", buildFilterUrl(searchQuery, entityParam, allExpanded));
 ```
 
 ## Configuration Patterns in `constants.ts`
